@@ -2,13 +2,19 @@
 
 Personal setup for new machines + keyboards
 
+# Editor
+
+- ~/.vimrc
+- Install Vundle: `git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
+- :BundleInstall
+
 # Keyboards
 
 ## Common
 
 - [Karabiner](https://pqrs.org/osx/karabiner/index.html.en) "Key Repeat":
-    - Delay until repeat: 50ms
-    - Key Repeat: 30ms
+    - Delay until repeat: 30ms
+    - Key Repeat: 20ms
 
 ## For Pok3r
 
