@@ -24,5 +24,5 @@ Personal setup for new machines + keyboards
 
 ## For MacBook keyboard
 
-- [Karabiner](https://pqrs.org/osx/karabiner/index.html.en): private.xml for vim-like arrow keys
+- [Karabiner](https://pqrs.org/osx/karabiner/index.html.en): [private.xml](https://github.com/trevordmiller/trevordmiller/blob/master/karabiner/private.xml) for vim-like arrow keys
 - [Seil](https://pqrs.org/osx/karabiner/seil.html.en): caps lock -> fn
