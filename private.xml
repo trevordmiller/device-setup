@@ -1,0 +1,17 @@
+<!-- KEYCODES -->
+<!-- https://github.com/tekezo/Karabiner/blob/master/src/bridge/generator/keycode/data/KeyCode.data -->
+
+<?xml version="1.0"?>
+<root>
+  <item>
+    <name>!CUSTOM - Arrow Keys</name>
+    <identifier>trevordmiller</identifier>
+    <autogen>--KeyToKey-- KeyCode::FN, KeyCode::VK_MODIFIER_EXTRA1</autogen>
+
+    <!-- arrow navigation -->
+    <autogen>--KeyToKey-- KeyCode::H, ModifierFlag::EXTRA1, KeyCode::CURSOR_LEFT</autogen>
+    <autogen>--KeyToKey-- KeyCode::J, ModifierFlag::EXTRA1, KeyCode::CURSOR_DOWN</autogen>
+    <autogen>--KeyToKey-- KeyCode::K, ModifierFlag::EXTRA1, KeyCode::CURSOR_UP</autogen>
+    <autogen>--KeyToKey-- KeyCode::L, ModifierFlag::EXTRA1, KeyCode::CURSOR_RIGHT</autogen>
+  </item>
+</root>

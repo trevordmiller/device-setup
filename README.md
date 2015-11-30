@@ -1,4 +1,4 @@
-# trevordmiller-setup
+# trevordmiller
 
 Personal setup for new machines + keyboards
 
