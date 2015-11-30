@@ -6,9 +6,9 @@ Personal setup for new machines + keyboards
 
 ## Common
 
-- [Karabiner](https://pqrs.org/osx/karabiner/index.html.en) Parameters:
-    - Delay until repeat: 500ms
-    - Key Repeat: 150ms
+- [Karabiner](https://pqrs.org/osx/karabiner/index.html.en) "Key Repeat":
+    - Delay until repeat: 50ms
+    - Key Repeat: 30ms
 
 ## For Pok3r
 
