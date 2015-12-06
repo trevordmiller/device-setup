@@ -6,13 +6,13 @@ Personal setup for new machines. Cherry-picking from Time Machine should be the 
 
 # Shell
 
-- ZSH + [~/.zshrc]() + [pure theme](https://github.com/sindresorhus/pure)
+- ZSH + symlink [~/.zshrc]()
 
 ---
 
 # Editor
 
-- [~/.vimrc]()
+- symlink [~/.vimrc]()
 - Install Vundle: `git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
 - :BundleInstall
 
@@ -85,7 +85,7 @@ Personal setup for new machines. Cherry-picking from Time Machine should be the 
     ```
 - iTerm2 + [???]()
 - Chrome
-- Slate + [~/.slate]()
+- Slate + symlink [~/.slate]()
 - Anki
 - Sketch (Mac app store)
 - Skitch (Mac app store)
