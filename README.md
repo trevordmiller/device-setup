@@ -6,7 +6,6 @@ Personal setup for new machines. Cherry-picking from Time Machine should be the 
 
 # Shell
 
-- Bash default
 - symlink [~/.bash_profile]() to auto `source` `.bashrc`
 - symlink [~/.bashrc]()
 
@@ -70,7 +69,7 @@ Personal setup for new machines. Cherry-picking from Time Machine should be the 
 
 ---
 
-# Software
+# Downloads
 
 - Git + symlink `~/.gitconfig`
 - Node + n + `n stable`
