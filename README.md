@@ -53,12 +53,18 @@ Personal setup for new machines. Cherry-picking from Time Machine should be the 
 
 # OS Config
 
+- Time Machine backups
 - Show hidden files: `defaults write com.apple.finder AppleShowAllFiles YES`, then `option + right click` finder icon and relaunch
 - Set screenshot folder: `defaults write com.apple.screencapture location ~/Pictures/Screenshots/`, then `killall SystemUIServer`
 - Turn on "Find My Mac"
 - Turn on "Do Not Disturb" schedule
 - Notification center match iPhone + Notification center keyboard shortcut
 - Automatically hide Dock
+- internet accounts like Facebook, Twitter etc.
+- Reminders + iCloud
+- Calendar + iCloud
+- Mail + iCloud
+- Messages + iCloud
 
 ---
 
@@ -80,10 +86,6 @@ Personal setup for new machines. Cherry-picking from Time Machine should be the 
 - iTerm2 + [???]()
 - Chrome
 - Slate + [~/.slate]()
-- Reminders + iCloud
-- Calendar + iCloud
-- Mail + iCloud
-- Messages + iCloud
 - Anki
 - Sketch (Mac app store)
 - Skitch (Mac app store)
