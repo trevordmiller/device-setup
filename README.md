@@ -6,8 +6,9 @@ Personal setup for new machines. Cherry-picking from Time Machine should be the 
 
 # Shell
 
-- ZSH + symlink [~/.zshrc]()
-- oh-my-zsh + symlink [~/.oh-my-zsh]()
+- Bash default
+- symlink [~/.bash_profile]() to auto `source` `.bashrc`
+- symlink [~/.bashrc]()
 
 ---
 
