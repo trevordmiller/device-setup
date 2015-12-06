@@ -72,18 +72,22 @@ Personal setup for new machines. Cherry-picking from Time Machine should be the 
 # Software
 
 - Git + git config
+
     ```
     $ git config --global user.name "John Doe"
     $ git config --global user.email johndoe@example.com
     ```
+
 - Node + n + `n stable`
 - npm + npm config:
+
     ```
     $ npm config set init.author.name "John Doe"
     $ npm config set init.author.email johndoe@example.com
     $ npm config set init.author.url http://johndoe.com
     $ npm config set init.license MIT
     ```
+
 - iTerm2 + [???]()
 - Chrome
 - Slate + symlink [~/.slate]()
