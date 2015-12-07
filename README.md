@@ -6,7 +6,7 @@ _Personal setup for new machines_
 
 # Home directory
 
-- **Clone this repo into `~/projects/`**
+- **Clone this repo:** inside `~/projects/`
 - **Symlink dotfiles to `~`:** `~/projects/trevordmiller-settings/dotfiles/bootstrap.sh`
 - **Install Vim plugins:** clone [Vundle](https://github.com/VundleVim/Vundle.vim), then `:BundleInstall`
 
@@ -37,17 +37,17 @@ _Personal setup for new machines_
 
 # Downloads
 
-- [Karabiner](https://pqrs.org/osx/karabiner/index.html.en)
+- [Karabiner](https://pqrs.org/osx/karabiner/index.html.en) + update `private.xml` with `~/projects/trevordmiller-settings/karabiner/private.xml`
 - [Seil](https://pqrs.org/osx/karabiner/seil.html.en)
 - Git latest
-- Node (n + `n latest`)
+- Node (`n` + `n latest`)
 - npm (`npm install npm@latest -g`)
-- `npm install -g `global npm packages
+- `npm install -g` global npm packages
     - `parallelshell`
     - `browsersync`
 - iTerm2 + link settings to `~/projects/trevordmiller-settings/iterm`
 - Chrome
-- Slate + symlink [~/.slate]()
+- Slate
 - Anki
 - Sketch (Mac app store)
 - Skitch (Mac app store)
