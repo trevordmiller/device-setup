@@ -1,4 +1,4 @@
-dotfilesDirectoryPath=~/projects/trevordmiller-settings/dotfiles
+dotfilesDirectoryPath=~/projects/settings/dotfiles
 files=".bash_profile .bashrc .gitconfig .npmrc .slate .vimrc"
 
 echo "Changing to the $dotfilesDirectoryPath directory"
