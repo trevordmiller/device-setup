@@ -37,6 +37,8 @@ _Personal setup for new machines_
 
 # Downloads
 
+- [Homebrew](http://brew.sh/), then:
+    - `brew install bash-completion`
 - [Karabiner](https://pqrs.org/osx/karabiner/index.html.en), then:
     - Update `private.xml` with `~/projects/trevordmiller-settings/karabiner/private.xml`
     - "Key Repeat" settings:
