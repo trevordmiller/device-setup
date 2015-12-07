@@ -74,6 +74,9 @@ Personal setup for new machines. Cherry-picking from Time Machine should be the 
 - Git + symlink `~/.gitconfig`
 - Node + n + `n stable`
 - npm + symlink `~/.npmrc`
+- `npm install -g `Global npm packages normally placed in projects' package.json
+    - `parallelshell`
+    - `browsersync`
 - iTerm2 + [???]()
 - Chrome
 - Slate + symlink [~/.slate]()
