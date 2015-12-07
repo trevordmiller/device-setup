@@ -38,7 +38,7 @@ _Personal setup for new machines_
 # Downloads
 
 - [Karabiner](https://pqrs.org/osx/karabiner/index.html.en), then:
-    - Update `private.xml` with `~/projects/trevordmiller-settings/karabiner/private.xml
+    - Update `private.xml` with `~/projects/trevordmiller-settings/karabiner/private.xml`
     - "Key Repeat" settings:
         - Delay until repeat: 30ms
         - Key Repeat: 20ms
