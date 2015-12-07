@@ -7,7 +7,7 @@ _Personal setup for new machines_
 # Home directory
 
 - **Clone this repo:** inside `~/projects/`
-- **Symlink dotfiles to `~`:** `~/projects/trevordmiller-settings/dotfiles/bootstrap.sh`
+- **Run script to symlink dotfiles to home directory:** `~/projects/trevordmiller-settings/dotfiles/bootstrap.sh`
 - **Install Vim plugins:** clone [Vundle](https://github.com/VundleVim/Vundle.vim), then `:BundleInstall`
 
 ---
