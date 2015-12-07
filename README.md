@@ -6,15 +6,15 @@ _Personal setup for new machines_
 
 # Home directory
 
-- Clone: this repo into `~/projects/`
-- Symlink dotfiles to `~`: `~/projects/trevordmiller-settings/dotfiles/bootstrap.sh`
-- Install Vim plugins: clone [Vundle](https://github.com/VundleVim/Vundle.vim), then `:BundleInstall`
+- **Clone this repo into `~/projects/`**
+- **Symlink dotfiles to `~`:** `~/projects/trevordmiller-settings/dotfiles/bootstrap.sh`
+- **Install Vim plugins:** clone [Vundle](https://github.com/VundleVim/Vundle.vim), then `:BundleInstall`
 
 ---
 
 # Automator
 
-- iCloud automator apps
+- Restore iCloud automator apps
 
 ---
 
