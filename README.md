@@ -27,7 +27,7 @@ _Personal setup for new machines_
 - Turn on "Do Not Disturb" schedule
 - Notification center match iPhone + Notification center keyboard shortcut
 - Automatically hide Dock
-- internet accounts like Facebook, Twitter etc.
+- Internet accounts like Facebook, Twitter etc.
 - Reminders + iCloud
 - Calendar + iCloud
 - Mail + iCloud
@@ -51,7 +51,7 @@ _Personal setup for new machines_
     - Install latest (since Node doesn't ship with latest npm)
     - Install `parallelshell` and `browsersync` as global npm packages
 - iTerm2, then:
-    - + link settings to `~/projects/trevordmiller-settings/iterm`
+    - link settings folder to `~/projects/trevordmiller-settings/iterm`
 - Chrome
 - Slate
 - Anki
