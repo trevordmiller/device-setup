@@ -1,0 +1,110 @@
+#############################################################################
+# SLATE CONFIG
+# https://github.com/jigish/slate
+#############################################################################
+
+
+# ---------------------------------------------------------------------------
+# GENERAL CONFIG
+# ---------------------------------------------------------------------------
+
+config defaultToCurrentScreen true
+config resizePercentOf screenSize
+
+
+# ---------------------------------------------------------------------------
+# VARIABLES
+# ---------------------------------------------------------------------------
+
+alias full move screenOriginX;screenOriginY screenSizeX;screenSizeY
+alias lefthalf move screenOriginX;screenOriginY screenSizeX/2;screenSizeY
+alias righthalf move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY
+alias tophalf move screenOriginX;screenOriginY screenSizeX;screenSizeY/2
+alias bottomhalf move screenOriginX;screenOriginY+screenSizeY/2 screenSizeX;screenSizeY/2
+alias topleft corner top-left resize:screenSizeX/2;screenSizeY/5*4
+alias topright corner top-right resize:screenSizeX/2;screenSizeY/5*4
+alias bottomleft corner bottom-left resize:screenSizeX/2;screenSizeY/5
+alias bottomright corner bottom-right resize:screenSizeX/2;screenSizeY/5
+alias lefttwothird move screenOriginX;screenOriginY screenSizeX/3*2;screenSizeY
+alias leftthird move screenOriginX;screenOriginY screenSizeX/3;screenSizeY
+alias righttwothird move screenOriginX+screenSizeX/3;screenOriginY screenSizeX/3*2;screenSizeY
+alias rightthird move screenOriginX+screenSizeX/3*2;screenOriginY screenSizeX/3;screenSizeY
+
+
+# ---------------------------------------------------------------------------
+# LAYOUT 1: ONE SCREEN, FULL
+# ---------------------------------------------------------------------------
+
+layout layout1 'Calendar':REPEAT ${full}
+layout layout1 'Reminders':REPEAT ${full}
+layout layout1 'Finder':REPEAT ${full}
+layout layout1 'Mail':REPEAT ${full}
+layout layout1 'Messages':REPEAT ${full}
+layout layout1 'Slack':REPEAT ${full}
+layout layout1 'Tweetbot':REPEAT ${full}
+layout layout1 'Spotify':REPEAT ${full}
+layout layout1 'Anki':REPEAT ${full}
+layout layout1 'Photos':REPEAT ${full}
+layout layout1 'Preview':REPEAT ${full}
+layout layout1 'Sketch':REPEAT ${full}
+layout layout1 'Google Chrome':REPEAT ${full}
+layout layout1 'Google Chrome Canary':REPEAT ${full}
+layout layout1 'Safari':REPEAT ${full}
+layout layout1 'Firefox':REPEAT ${full}
+layout layout1 'Simulator':REPEAT ${full}
+layout layout1 'iTerm':REPEAT ${full}
+layout layout1 'Atom':REPEAT ${full}
+layout layout1 'ScreenFlow':REPEAT ${full}
+
+
+# ---------------------------------------------------------------------------
+# LAYOUT 2: ONE SCREEN, SPLIT
+# ---------------------------------------------------------------------------
+
+# LEFT SIDE
+layout layout2 'Finder':REPEAT ${leftthird}
+layout layout2 'Preview':REPEAT ${leftthird}
+layout layout2 'Google Chrome':REPEAT ${leftthird}
+layout layout2 'Google Chrome Canary':REPEAT ${leftthird}
+layout layout2 'Safari':REPEAT ${leftthird}
+layout layout2 'Firefox':REPEAT ${leftthird}
+layout layout2 'Simulator':REPEAT ${leftthird}
+
+# RIGHT SIDE
+layout layout2 'iTerm':REPEAT ${righttwothird}
+layout layout2 'ScreenFlow':REPEAT ${righttwothird}
+
+
+# ---------------------------------------------------------------------------
+# DEFAULT LAYOUTS
+# ---------------------------------------------------------------------------
+
+# When only one screen is available, default to layout1
+default layout1 count:1
+
+# When two screens are available, default to layout1
+default layout1 count:2
+
+
+# ---------------------------------------------------------------------------
+# BINDINGS
+# ---------------------------------------------------------------------------
+
+// FOCUS
+bind h:ctrl,alt,cmd  focus left
+bind j:ctrl,alt,cmd  focus down
+bind k:ctrl,alt,cmd  focus up
+bind l:ctrl,alt,cmd  focus right
+
+// LAYOUTS
+bind 1:ctrl,alt,cmd layout layout1
+bind 2:ctrl,alt,cmd layout layout2
+
+// SINGLES
+bind 4:ctrl,alt,cmd  ${full}
+bind 5:ctrl,alt,cmd  ${lefthalf}
+bind 6:ctrl,alt,cmd  ${righthalf}
+bind 7:ctrl,alt,cmd  ${lefttwothird}
+bind 8:ctrl,alt,cmd  ${righttwothird}
+bind 9:ctrl,alt,cmd  ${leftthird}
+bind 0:ctrl,alt,cmd  ${rightthird}

@@ -1,0 +1,9 @@
+[user]
+	name = Trevor D. Miller
+	email = trevordmiller@icloud.com
+[push]
+	default = simple
+[alias]
+  clog = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset% %C(magenta)% an%Creset' --abbrev-commit --date=relative
+[core]
+	editor = vim
