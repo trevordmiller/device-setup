@@ -1,6 +1,6 @@
 # trevordmiller
 
-Personal setup for new machines. Cherry-picking from Time Machine should be the easiest backup option, but this serves as a back-up/documentation.
+_Personal setup for new machines_
 
 ---
 
