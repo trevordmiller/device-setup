@@ -37,15 +37,21 @@ _Personal setup for new machines_
 
 # Downloads
 
-- [Karabiner](https://pqrs.org/osx/karabiner/index.html.en) + update `private.xml` with `~/projects/trevordmiller-settings/karabiner/private.xml`
-- [Seil](https://pqrs.org/osx/karabiner/seil.html.en)
+- [Karabiner](https://pqrs.org/osx/karabiner/index.html.en), then:
+    - Update `private.xml` with `~/projects/trevordmiller-settings/karabiner/private.xml
+    - "Key Repeat" settings:
+        - Delay until repeat: 30ms
+        - Key Repeat: 20ms
+    - "Change f1...f12"
+- [Seil](https://pqrs.org/osx/karabiner/seil.html.en), then:
+    - caps lock -> fn
 - Git latest
-- Node (`n` + `n latest`)
-- npm (`npm install npm@latest -g`)
-- `npm install -g` global npm packages
-    - `parallelshell`
-    - `browsersync`
-- iTerm2 + link settings to `~/projects/trevordmiller-settings/iterm`
+- Node + npm, then:
+    - `n` + `n latest`)
+    - Install latest (since Node doesn't ship with latest npm)
+    - Install `parallelshell` and `browsersync` as global npm packages
+- iTerm2, then:
+    - + link settings to `~/projects/trevordmiller-settings/iterm`
 - Chrome
 - Slate
 - Anki
@@ -58,17 +64,10 @@ _Personal setup for new machines_
 
 ---
 
-# Keyboards
+# Hardware
 
-## Common
+## Pok3r Keyboard
 
-- Karabiner "Key Repeat":
-    - Delay until repeat: 30ms
-    - Key Repeat: 20ms
-
-## For Pok3r
-
-- Karabiner: "Change f1...f12"
 - DIP switch 3: On (caps lock to fn)
 - Programming layer (Fn+R_Ctrl to start/stop recording)
   - VIM like HJKL
@@ -77,8 +76,3 @@ _Personal setup for new machines_
     - Up: FN + K then: FN + I then: PN
     - Right: already works ;)
     - Home: FN + I then: FN + H then: PN
-
-## For MacBook keyboard
-
-- Karabiner: [private.xml](https://github.com/trevordmiller/trevordmiller/blob/master/karabiner/private.xml) for vim-like arrow keys
-- Seil: caps lock -> fn
