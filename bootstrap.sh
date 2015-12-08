@@ -1,5 +1,5 @@
 dotfilesDirectoryPath=~/projects/settings/dotfiles
-files=".bash_profile .bashrc .gitconfig .npmrc .slate .vimrc"
+files=".bash_profile .git-completion.bash .gitconfig .npmrc .slate .vimrc"
 
 echo "Changing to the $dotfilesDirectoryPath directory"
 cd $dotfilesDirectoryPath
@@ -11,7 +11,4 @@ for file in $files; do
 done
 echo "...done"
 
-echo "Sourcing .bashrc and .vimrc"
-source ~/.bashrc
-source ~/.vimrc
-echo "...done"
+echo "Restart shell to see changes"

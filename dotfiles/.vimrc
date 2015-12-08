@@ -36,6 +36,9 @@ let g:jsx_ext_required = 0
 " CORE SETTINGS
 " ====================================
 
+" TIMEOUTS
+set timeoutlen=1000 ttimeoutlen=10
+
 " SWAP FILES
 set noswapfile
 
