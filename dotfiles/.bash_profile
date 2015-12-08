@@ -1,10 +1,13 @@
-# DEPENDENCIES
-source ~/.git-prompt.sh
+# GIT AUTOCOMPLETE
 source ~/.git-completion.sh
+
+# GIT PROMPT
+source ~/.git-prompt.sh
+export GIT_PS1_SHOWDIRTYSTATE=1
 
 # CUSTOM PROMPT
 WORKING_DIRECTORY="\W"
-GIT_BRANCH='$(__git_ps1 " (%s)")]'
+GIT_BRANCH='$(__git_ps1 "[%s]")'
 ACCESS="\$"
 COLOR_BASE="\[$(tput sgr0)\]"
 COLOR_CYAN="\[$(tput setaf 6)\]"
