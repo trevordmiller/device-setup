@@ -46,7 +46,7 @@ _Personal setup for new machines_
 - [Seil](https://pqrs.org/osx/karabiner/seil.html.en), then:
     - caps lock -> fn
 - Git latest
-- [Node + npm](https://nodejs.org, then:
+- [Node + npm](https://nodejs.org), then:
     - `n` + `n latest`)
     - Install latest (since Node doesn't ship with latest npm)
     - Install `parallelshell` and `browsersync` as global npm packages
