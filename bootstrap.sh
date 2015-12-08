@@ -1,5 +1,5 @@
 dotfilesDirectoryPath=~/projects/settings/dotfiles
-files=".bash_profile .git-completion.bash .gitconfig .npmrc .slate .vimrc"
+files=".bash_profile .git-prompt.sh .git-completion.sh .gitconfig .vimrc .npmrc .slate"
 
 echo "Changing to the $dotfilesDirectoryPath directory"
 cd $dotfilesDirectoryPath
