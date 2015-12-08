@@ -26,9 +26,11 @@ filetype plugin indent on
 " =====================================
 
 " CTRL P
+" Index from initial directory opened with vim
 let g:ctrlp_working_path_mode = 0
 
 " JSX
+" Use JSX plugin on .js files
 let g:jsx_ext_required = 0
 
 
