@@ -22,6 +22,6 @@ function personalDev {
 }
 export -f personalDev
 function domoDev {
-  parallelshell 'npm start' 'mocha ./src/**/*Test.js --compilers js:babel/register --watch --reporter min' 'browser-sync start --proxy "localhost:3000" --files "src/**.*" --port 4000 --ui-port 4001 --no-open'
+  parallelshell 'npm start' 'npm run test:unit --watch --reporter min' 'browser-sync start --proxy "localhost:3000" --files "src/**.*" --port 4000 --ui-port 4001 --no-open'
 }
 export -f domoDev
