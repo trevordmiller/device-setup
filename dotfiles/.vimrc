@@ -83,5 +83,5 @@ set cursorline
 set number
 
 " GOTO FILE
-" Allow use of `gf` with file imports that don't have an explicit extension
+" Allow use of `gf` with file imports that don't have an extension
 set suffixesadd+=.js
