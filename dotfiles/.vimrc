@@ -38,8 +38,10 @@ let g:jsx_ext_required = 0
 " CORE SETTINGS
 " ====================================
 
-" TIMEOUTS
-set timeoutlen=1000 ttimeoutlen=10
+" THEME 
+syntax enable
+colorscheme base16-ocean
+set background=dark
 
 " SWAP FILES
 set noswapfile
@@ -60,9 +62,6 @@ set wildignore+=*.png,*.jpg,*.gif
 set wildignore+=*.pdf
 set wildignore+=*DS_Store*
 
-" GF
-set suffixesadd+=.js
-
 " SPLITS
 set splitright
 nnoremap <C-J> <C-W><C-J>
@@ -70,16 +69,19 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-" STYLE
-syntax enable
-colorscheme base16-ocean
-set background=dark
-set nowrap
-set cursorline
-set number
+" TABS
 set backspace=indent,eol,start
 set smarttab
 set expandtab
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
+
+" LINES
+set nowrap
+set cursorline
+set number
+
+" GOTO FILE
+" Allow use of `gf` with file imports that don't have an explicit extension
+set suffixesadd+=.js
