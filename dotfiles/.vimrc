@@ -10,9 +10,9 @@ call vundle#begin()
 
 " GITHUB PLUGINS
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'wikitopian/hardmode'
 Plugin 'tpope/vim-vinegar'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'Olical/vim-enmasse'
 Plugin 'elzr/vim-json'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
@@ -26,10 +26,6 @@ filetype plugin on
 " =====================================
 " PLUGIN SETTINGS
 " =====================================
-
-" HARDMODE
-" Enable hardmode by default
-autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 
 " CTRLP
 " Index from initial directory opened with vim
