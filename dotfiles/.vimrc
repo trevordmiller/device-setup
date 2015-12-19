@@ -10,6 +10,7 @@ call vundle#begin()
 
 " GITHUB PLUGINS
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'wikitopian/hardmode'
 Plugin 'tpope/vim-vinegar'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'elzr/vim-json'
@@ -26,11 +27,15 @@ filetype plugin on
 " PLUGIN SETTINGS
 " =====================================
 
-" CTRL P
+" HARDMODE
+" Enable hardmode by default
+autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
+
+" CTRLP
 " Index from initial directory opened with vim
 let g:ctrlp_working_path_mode = 0
 
-" JSX
+" VIM-JSX
 " Use JSX plugin on .js files
 let g:jsx_ext_required = 0
 
