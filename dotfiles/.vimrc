@@ -58,7 +58,6 @@ nnoremap <C-H> <C-W><C-H>
 " LINES
 set nowrap
 set number
-set cursorline
 
 " GOTO FILE
 " Allow use of `gf` with file imports that don't have an extension
