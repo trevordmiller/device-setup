@@ -55,6 +55,7 @@ _Personal setup for new machines_
 - Chrome
 - [Slate](https://github.com/jigish/slate)
 - [Anki](http://ankisrs.net/)
+- [Anki code syntax highlighting](https://ankiweb.net/shared/info/1463041493)
 - [Sketch](https://www.sketchapp.com/)
 - Skitch (Mac app store)
 - Slack (Mac app store)
