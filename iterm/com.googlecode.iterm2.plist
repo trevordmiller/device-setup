@@ -20,6 +20,8 @@
 	<false/>
 	<key>CheckTestRelease</key>
 	<true/>
+	<key>CloseBookmarksWindowAfterOpening</key>
+	<true/>
 	<key>ClosingHotkeySwitchesSpaces</key>
 	<true/>
 	<key>CommandSelection</key>
@@ -1342,7 +1344,7 @@
 	<key>HideScrollbar</key>
 	<false/>
 	<key>HideTab</key>
-	<false/>
+	<true/>
 	<key>HighlightTabLabels</key>
 	<false/>
 	<key>HotKeyBookmark</key>
@@ -1360,7 +1362,7 @@
 	<key>IRMemory</key>
 	<integer>4</integer>
 	<key>JobName</key>
-	<false/>
+	<true/>
 	<key>LeftCommand</key>
 	<integer>7</integer>
 	<key>LeftOption</key>
@@ -1406,11 +1408,11 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>3200 33 1920 641 2560 0 2560 1440 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>2119 427 924 485 1920 0 1920 1080 </string>
+	<string>2119 428 924 485 1920 0 1920 1080 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1920 4 1920 1076 1920 0 1920 1080 </string>
+	<string>1920 4 1913 1076 1920 0 1920 1080 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>0 8 1914 1072 0 0 1920 1080 </string>
+	<string>2560 0 2560 1440 2560 0 2560 1440 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1974,11 +1976,11 @@
 			<key>Name</key>
 			<string>Default</string>
 			<key>Non Ascii Font</key>
-			<string>RobotoMono-Light 18</string>
+			<string>Monaco 18</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>RobotoMono-Light 18</string>
+			<string>Monaco 18</string>
 			<key>Option Key Sends</key>
 			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>
@@ -2031,7 +2033,7 @@
 			<key>Silence Bell</key>
 			<false/>
 			<key>Smart Cursor Color</key>
-			<true/>
+			<false/>
 			<key>Smart Selection Rules</key>
 			<array>
 				<dict>
@@ -2725,11 +2727,11 @@
 			<key>Name</key>
 			<string>Screencast - Scripts</string>
 			<key>Non Ascii Font</key>
-			<string>RobotoMono-Light 24</string>
+			<string>Monaco 24</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>RobotoMono-Light 24</string>
+			<string>Monaco 24</string>
 			<key>Option Key Sends</key>
 			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>
@@ -2782,7 +2784,7 @@
 			<key>Silence Bell</key>
 			<false/>
 			<key>Smart Cursor Color</key>
-			<true/>
+			<false/>
 			<key>Smart Selection Rules</key>
 			<array>
 				<dict>
@@ -3476,11 +3478,11 @@
 			<key>Name</key>
 			<string>Screencast - Vim</string>
 			<key>Non Ascii Font</key>
-			<string>RobotoMono-Light 24</string>
+			<string>Monaco 24</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>RobotoMono-Light 24</string>
+			<string>Monaco 24</string>
 			<key>Option Key Sends</key>
 			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>
@@ -3533,7 +3535,7 @@
 			<key>Silence Bell</key>
 			<false/>
 			<key>Smart Cursor Color</key>
-			<true/>
+			<false/>
 			<key>Smart Selection Rules</key>
 			<array>
 				<dict>
@@ -4215,11 +4217,11 @@
 			<key>Name</key>
 			<string>Domo - Scripts</string>
 			<key>Non Ascii Font</key>
-			<string>RobotoMono-Light 18</string>
+			<string>Monaco 18</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>RobotoMono-Light 18</string>
+			<string>Monaco 18</string>
 			<key>Option Key Sends</key>
 			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>
@@ -4272,7 +4274,7 @@
 			<key>Silence Bell</key>
 			<false/>
 			<key>Smart Cursor Color</key>
-			<true/>
+			<false/>
 			<key>Smart Selection Rules</key>
 			<array>
 				<dict>
@@ -4954,11 +4956,11 @@
 			<key>Name</key>
 			<string>Domo - Vim</string>
 			<key>Non Ascii Font</key>
-			<string>RobotoMono-Light 18</string>
+			<string>Monaco 18</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>RobotoMono-Light 18</string>
+			<string>Monaco 18</string>
 			<key>Option Key Sends</key>
 			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>
@@ -5011,7 +5013,7 @@
 			<key>Silence Bell</key>
 			<false/>
 			<key>Smart Cursor Color</key>
-			<true/>
+			<false/>
 			<key>Smart Selection Rules</key>
 			<array>
 				<dict>
@@ -5138,7 +5140,7 @@
 	<key>NoSyncTimeOfLastPromo</key>
 	<real>463964586.25273299</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>472157234.67388099</real>
+	<real>473109458.45326298</real>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -5203,13 +5205,13 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2015-12-18T18:47:10Z</date>
+	<date>2015-12-29T18:56:49Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
 	<false/>
 	<key>ShowBookmarkName</key>
-	<true/>
+	<false/>
 	<key>ShowPaneTitles</key>
 	<true/>
 	<key>SmartPlacement</key>
