@@ -31,12 +31,12 @@ source ~/.git-completion.sh
 # =====================================
 
 function screencastScripts {
-  parallelshell 'npm run dev' 'browser-sync start --server "dist" --files "src/**.*" --port 4000 --ui-port 4001 --no-open'
+  killall node ; parallelshell 'npm run dev' 'browser-sync start --server "dist" --files "src/**.*" --port 4000 --ui-port 4001 --no-open'
 }
 export -f screencastScripts
 
 function domoScripts {
-  parallelshell 'npm start' 'npm run test:unit --watch' 'browser-sync start --proxy "localhost:3000" --files "src/**.*" --port 4000 --ui-port 4001 --no-open'
+  killall node ; parallelshell 'npm start' 'npm run test:unit --watch' 'browser-sync start --proxy "localhost:3000" --files "src/**.*" --port 4000 --ui-port 4001 --no-open'
 }
 export -f domoScripts
 
