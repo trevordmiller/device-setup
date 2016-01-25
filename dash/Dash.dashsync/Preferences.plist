@@ -87,7 +87,7 @@
 		<dict/>
 	</dict>
 	<key>annotationsAreShown</key>
-	<true/>
+	<false/>
 	<key>docsets</key>
 	<dict>
 		<key>keywords</key>
@@ -97,10 +97,55 @@
 	<dict>
 		<key>installed</key>
 		<dict>
+			<key>http://kapeli.com/feeds/Bash.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2016-01-25T21:38:36Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/CSS.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2016-01-25T21:40:09Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/HTML.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2016-01-25T21:42:17Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/JavaScript.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2016-01-25T21:39:51Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/Lo-Dash.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2016-01-25T21:39:31Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/Man_Pages.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2016-01-25T21:39:18Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/Mocha.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2016-01-25T21:43:18Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/NodeJS.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2016-01-25T21:43:28Z</date>
+			</dict>
 			<key>http://kapeli.com/feeds/React.xml</key>
 			<dict>
 				<key>date</key>
 				<date>2016-01-25T20:53:34Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/Vim.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2016-01-25T21:44:16Z</date>
 			</dict>
 		</dict>
 		<key>uninstalled</key>
