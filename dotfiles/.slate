@@ -44,6 +44,7 @@ alias rightthird move screenOriginX+screenSizeX/3*2;screenOriginY screenSizeX/3;
 layout layout1 'Calendar':REPEAT ${screen1}
 layout layout1 'Todoist':REPEAT ${screen1}
 layout layout1 'Finder':REPEAT ${screen1}
+layout layout1 'Dash':REPEAT ${screen1}
 layout layout1 'Mail':REPEAT ${screen1}
 layout layout1 'Messages':REPEAT ${screen1}
 layout layout1 'Slack':REPEAT ${screen1}
