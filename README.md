@@ -57,6 +57,8 @@ _Personal setup for new machines_
 - [Anki](http://ankisrs.net/)
 - [Anki code syntax highlighting](https://ankiweb.net/shared/info/1463041493)
 - [Sketch](https://www.sketchapp.com/)
+- Todoist (Mac app store)
+- Dash (Mac app store)
 - Skitch (Mac app store)
 - Slack (Mac app store)
 - Tweetbot (Mac app store)
