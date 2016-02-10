@@ -16,6 +16,8 @@
 	<integer>1</integer>
 	<key>AskAboutOutdatedKeyMappingForGuid520BD311-D175-4363-A0EC-257DF215D96F</key>
 	<false/>
+	<key>AskAboutOutdatedKeyMappingForGuid8C3666F6-821B-49D8-A266-70D375533A98</key>
+	<false/>
 	<key>AutoHideTmuxClientSession</key>
 	<false/>
 	<key>CheckTestRelease</key>
@@ -1408,9 +1410,9 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>3200 33 1920 641 2560 0 2560 1440 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>3576 602 924 485 2560 0 2560 1440 </string>
+	<string>0 415 924 485 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>2560 0 2560 1440 2560 0 2560 1440 </string>
+	<string>0 92 1433 808 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>2560 14 2555 1426 2560 0 2560 1440 </string>
 	<key>New Bookmarks</key>
@@ -3454,11 +3456,11 @@
 			<key>Name</key>
 			<string>Domo - Builds</string>
 			<key>Non Ascii Font</key>
-			<string>Monaco 18</string>
+			<string>Monaco 14</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>Monaco 18</string>
+			<string>Monaco 14</string>
 			<key>Option Key Sends</key>
 			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>
@@ -4193,11 +4195,11 @@
 			<key>Name</key>
 			<string>Domo - Unit Tests</string>
 			<key>Non Ascii Font</key>
-			<string>Monaco 18</string>
+			<string>Monaco 14</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>Monaco 18</string>
+			<string>Monaco 14</string>
 			<key>Option Key Sends</key>
 			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>
