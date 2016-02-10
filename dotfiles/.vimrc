@@ -41,6 +41,9 @@ let g:jsx_ext_required = 0
 " CORE SETTINGS
 " ====================================
 
+" GENERAL MAPPINGS
+nmap K <nop>
+
 " SWAP FILES
 set noswapfile
 
