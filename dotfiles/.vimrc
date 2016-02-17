@@ -44,6 +44,9 @@ let g:jsx_ext_required = 0
 " GENERAL MAPPINGS
 nmap K <nop>
 
+" CLIPBOARD
+set clipboard=unnamed
+
 " SWAP FILES
 set noswapfile
 

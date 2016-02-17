@@ -1324,7 +1324,7 @@
 	<key>DimBackgroundWindows</key>
 	<false/>
 	<key>DimInactiveSplitPanes</key>
-	<false/>
+	<true/>
 	<key>DimOnlyText</key>
 	<false/>
 	<key>DisableFullscreenTransparency</key>
@@ -1412,7 +1412,7 @@
 	<key>NSWindow Frame Preferences</key>
 	<string>2560 955 924 485 2560 0 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>2560 0 3563 1440 2560 0 2560 1440 </string>
+	<string>2560 4 2560 1436 2560 0 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>2560 14 2555 1426 2560 0 2560 1440 </string>
 	<key>New Bookmarks</key>
@@ -4379,7 +4379,7 @@
 	<key>NoSyncTimeOfLastPromo</key>
 	<real>463964586.25273299</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>476735878.33739603</real>
+	<real>476822279.32104403</real>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -4444,7 +4444,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-02-09T18:37:55Z</date>
+	<date>2016-02-10T18:37:55Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
@@ -4456,7 +4456,7 @@
 	<key>SmartPlacement</key>
 	<false/>
 	<key>SplitPaneDimmingAmount</key>
-	<real>0.40000000596046448</real>
+	<real>0.23819111287593842</real>
 	<key>SwitchTabModifier</key>
 	<integer>4</integer>
 	<key>SwitchWindowModifier</key>

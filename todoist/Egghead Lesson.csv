@@ -1,0 +1,45 @@
+TYPE,CONTENT,PRIORITY,INDENT,AUTHOR,RESPONSIBLE,DATE,DATE_LANG
+task,{Some Lesson Name},4,1,Trevor (6558887),,,en
+,,,,,,,
+task,Validate idea,4,2,Trevor (6558887),,,en
+note," [[file {""file_type"":""application\/octet-stream"",""file_name"":""Egghead Instructor Onboarding"",""file_underlying_type"":""application\/vnd.google-apps.document"",""file_url"":""https:\/\/docs.google.com\/document\/d\/15CAilPKcm_dpRFptwkE3VAJrii32fJGAXwDluwPoMLk\/edit?usp=drive_web""}]]",,,Trevor (6558887),,,
+,,,,,,,
+task,Create code example,4,2,Trevor (6558887),,,en
+note,JSBin || GitHub repo with npm —save-exact dependencies,,,Trevor (6558887),,,
+,,,,,,,
+task,Recording prep,4,2,Trevor (6558887),,,en
+,,,,,,,
+task,“Screencast” workflow,4,3,Trevor (6558887),,,en
+,,,,,,,
+task,Source code on 2nd monitor,4,3,Trevor (6558887),,,en
+,,,,,,,
+task,Turn off noise,4,3,Trevor (6558887),,,en
+,,,,,,,
+task,"Turn on “Do Not Disturb""",4,3,Trevor (6558887),,,en
+,,,,,,,
+task,"Turn on “Caffeine""",4,3,Trevor (6558887),,,en
+,,,,,,,
+task,"Set “RDM” to “1280 x 720 HiDPI""",4,3,Trevor (6558887),,,en
+,,,,,,,
+task,Full-screen editor + [command line || browser],4,3,Trevor (6558887),,,en
+,,,,,,,
+task,24pt font size,4,3,Trevor (6558887),,,en
+,,,,,,,
+task,Record chunks,4,2,Trevor (6558887),,,en
+,,,,,,,
+task,{some chunk},4,3,Trevor (6558887),,,en
+,,,,,,,
+task,Submit,4,2,Trevor (6558887),,,en
+,,,,,,,
+task,"“Mix to mono""",4,3,Trevor (6558887),,,en
+,,,,,,,
+task,Cut the fat,4,3,Trevor (6558887),,,en
+,,,,,,,
+task,"Export “Customized""",4,3,Trevor (6558887),,,en
+,,,,,,,
+task,Upload to https://egghead.io (egghead.io),4,3,Trevor (6558887),,,en
+,,,,,,,
+task,Restore,4,2,Trevor (6558887),,,en
+,,,,,,,
+task,"Set RDM to ""1440 x 900 HiDPI” || “1280 x 720 HiDPI""",4,3,Trevor (6558887),,,en
+,,,,,,,
