@@ -1,3 +1,6 @@
+#!/bin/sh
+
+
 # ==================================================================
 # COMMAND LINE PACKAGES (WITH HOMEBREW)
 # ==================================================================
@@ -15,18 +18,19 @@ brew install haskell-stack
 # ==================================================================
 
 brew tap caskroom/cask
-brew cask install karabiner
-brew cask install seil
-brew cask install slate
-brew cask install iterm2
-brew cask install google-chrome
 brew cask install anki
+brew cask install dash
+brew cask install google-chrome
+brew cask install google-photos-backup
+brew cask install iterm2
+brew cask install karabiner
+brew cask install screenflow
+brew cask install seil
 brew cask install sketch
 brew cask install skitch
-brew cask install spotify
 brew cask install slack
-brew cask install dash
-brew cask install screenflow
+brew cask install slate
+brew cask install spotify
 
 
 # ==================================================================

@@ -23,7 +23,7 @@ _Personal setup for new machines_
 - Notification center widgets (calendar and tasks)
 - Notification center keyboard shortcut
 - Sync iCloud account
-- Add Internet accounts like (Google, Facebook, Twitter)
+- Add Internet accounts (Google, Facebook, Twitter)
 
 ## 3rd Party Stuff
 
@@ -45,6 +45,7 @@ _Most 3rd party packages, graphical app installs, and settings were configured a
 - Update Dash settings:
   - Sync settings to `~/projects/settings/dash/Dash.dashsync`
   - Sync snippets to `~/projects/settings/dash/snippets.dash`
+- Update Google Photos Backup to run automatically
 
 ---
 
