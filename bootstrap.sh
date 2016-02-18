@@ -17,6 +17,7 @@ brew install haskell-stack
 # GRAPHICAL APPS (WITH HOMEBREW CASK)
 # ==================================================================
 
+# Install Homebrew Cask, then use it to install OSX graphical apps
 brew tap caskroom/cask
 brew cask install anki
 brew cask install dash
