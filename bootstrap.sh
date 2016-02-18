@@ -66,6 +66,7 @@ defaults write com.apple.finder AppleShowAllFiles YES
 # Set screenshot output folder
 defaults write com.apple.screencapture location ~/Downloads/
 
+
 # ==================================================================
 # END
 # ==================================================================
