@@ -1,6 +1,6 @@
-" =====================================
-" VUNDLE
-" =====================================
+" ==================================================================
+" PLUGINS (WITH VUNDLE)
+" ==================================================================
 
 " VUNDLE SETUP START
 set nocompatible
@@ -24,9 +24,9 @@ call vundle#end()
 filetype plugin on
 
 
-" =====================================
+" ==================================================================
 " PLUGIN SETTINGS
-" =====================================
+" ==================================================================
 
 " CTRLP
 " Index from initial directory opened with vim
@@ -37,14 +37,16 @@ let g:ctrlp_working_path_mode = 0
 let g:jsx_ext_required = 0
 
 
-" =====================================
+" ==================================================================
 " CORE SETTINGS
-" ====================================
+" ==================================================================
 
 " GENERAL MAPPINGS
+" Get rid of mapping I accidently hit a lot that I don't need
 nmap K <nop>
 
 " CLIPBOARD
+" Automatically yank and paste from clipboard register ("*)
 set clipboard=unnamed
 
 " SWAP FILES

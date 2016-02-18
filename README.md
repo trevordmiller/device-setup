@@ -1,72 +1,50 @@
-# trevordmiller
+# trevordmiller/settings
 
 _Personal setup for new machines_
 
 ---
 
-# Home directory
+# Automatic
 
 - Create the `~/projects` directory and clone this repo into it
-- Run `. ~/projects/settings/bootstrap.sh` script to symlink dotfiles to home directory
-- Install [Vundle](https://github.com/VundleVim/Vundle.vim), then `:BundleInstall` to install Vim plugins
+- Run `. ~/projects/settings/bootstrap.sh` script to symlink and install all the things
 
 ---
 
-# Automator
+# Manual
 
-- Restore iCloud automator apps
+## OSX Native App Settings
 
----
-
-# OS Config
-
-- Time Machine backups
-- Show hidden files: `defaults write com.apple.finder AppleShowAllFiles YES`, then `option + right click` finder icon and relaunch
-- Set screenshot folder: `defaults write com.apple.screencapture location ~/Pictures/Screenshots/`, then `killall SystemUIServer`
+- Automatically hide Dock and menu bar
+- Restore iCloud automator apps to dock
+- Set up Time Machine backups
 - Turn on "Find My Mac"
 - Turn on "Do Not Disturb" schedule
-- Notification center match iPhone + Notification center keyboard shortcut
-- Automatically hide Dock
-- Internet accounts like Facebook, Twitter etc.
-- Reminders + iCloud
-- Calendar + iCloud
-- Mail + iCloud
-- Messages + iCloud
+- Notification center widgets (calendar and tasks)
+- Notification center keyboard shortcut
+- Sync iCloud account
+- Add Internet accounts like (Google, Facebook, Twitter)
 
----
+## 3rd Party Stuff
 
-# Downloads
+_Most 3rd party packages, graphical app installs, and settings were configured automatically by the `bootstrap.sh` script ^ - these are just the extra items that need to be done manually after that_
 
-- [Homebrew](http://brew.sh/)
-- Homebrew packages (`brew install {package}`)
-  - `haskell-stack`
-- [Karabiner](https://pqrs.org/osx/karabiner/index.html.en), then:
-    - Update `private.xml` with `~/projects/trevordmiller-settings/karabiner/private.xml`
-    - "Key Repeat" settings:
+- Download Todoist (Mac app store)
+- Download Tweetbot (Mac app store)
+- [Download RDM](http://cl.ly/2A441v222i33/download/RDM.tar.gz)
+- Update Karabiner settings:
+    - Link `private.xml` with `~/projects/settings/karabiner/private.xml`
+    - "Key Repeat":
         - Delay until repeat: 200ms
         - Key Repeat: 20ms
     - "Change f1...f12"
-- [Seil](https://pqrs.org/osx/karabiner/seil.html.en), then:
-    - caps lock -> fn
-- Git latest
-- [Node + npm](https://nodejs.org), then:
-    - `n` + `n latest`)
-    - Install latest (since Node doesn't ship with latest npm)
-    - Install `parallelshell` and `browsersync` as global npm packages
-- [iTerm2](https://www.iterm2.com/), then:
-    - link settings folder to `~/projects/trevordmiller-settings/iterm`
-- Chrome
-- [Slate](https://github.com/jigish/slate)
-- [Anki](http://ankisrs.net/)
-- [Anki code syntax highlighting](https://ankiweb.net/shared/info/1463041493)
-- [Sketch](https://www.sketchapp.com/)
-- Todoist (Mac app store)
-- Dash (Mac app store)
-- Skitch (Mac app store)
-- Slack (Mac app store)
-- Tweetbot (Mac app store)
-- Spotify (Mac app store)
-- All [Egghead gear setup apps and settings](https://trello.com/c/Emwk89vh/158-gear-setup), including Screenflow (Mac app store)
+- Update Seil settings:
+  - CAPS lock set to fn
+- Update iTerm2 settings:
+  - Sync settings to `~/projects/settings/iterm`
+- Update Dash settings:
+  - Sync settings to `~/projects/settings/dash/Dash.dashsync`
+  - Sync snippets to `~/projects/settings/dash/snippets.dash`
 
 ---
 
