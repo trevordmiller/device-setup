@@ -8,12 +8,19 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" GITHUB PLUGINS
+" PLUGIN MANAGEMENT
 Plugin 'VundleVim/Vundle.vim'
+
+" EXTEND NETRW
 Plugin 'tpope/vim-vinegar'
+
+" FUZZY FILE NAVIGATION
 Plugin 'ctrlpvim/ctrlp.vim'
+
+" QUICKFIX LIST BULK EDIT
 Plugin 'Olical/vim-enmasse'
-Plugin 'rizzatti/dash.vim'
+
+" EXTEND LANGUAGES
 Plugin 'elzr/vim-json'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
