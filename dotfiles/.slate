@@ -57,6 +57,7 @@ layout layout1 'Simulator':REPEAT ${screen1}
 
 # RIGHT MONITOR
 layout layout1 'iTerm':REPEAT ${screen2}
+layout layout1 'iTerm2':REPEAT ${screen2}
 
 
 # ==================================================================
