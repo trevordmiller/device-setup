@@ -24,6 +24,8 @@ Plugin 'Olical/vim-enmasse'
 Plugin 'elzr/vim-json'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
+
+" COLOR SCHEME
 Plugin 'chriskempson/base16-vim'
 
 " VUNDLE SETUP END
