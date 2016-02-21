@@ -54,6 +54,9 @@ let g:jsx_ext_required = 0
 " Get rid of mapping I accidently hit a lot that I don't need
 nmap K <nop>
 
+" MODE SWITCH SPEED
+set timeoutlen=1000 ttimeoutlen=10
+
 " CLIPBOARD
 " Automatically yank and paste from clipboard register ("*)
 set clipboard=unnamed
@@ -72,6 +75,12 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+" CURSOR MODES
+" Specific to iTerm2
+let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+let &t_SR = "\<Esc>]50;CursorShape=2\x7"
+let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
 " LINES
 set cursorline
