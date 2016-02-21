@@ -9,7 +9,7 @@ cd ~/
 
 # Install Homebrew, then use it to install OSX packages
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-packages="bash git vim node haskell-stack"
+packages="git vim node haskell-stack"
 for package in $packages; do
   brew install $package
 done
