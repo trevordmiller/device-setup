@@ -16,6 +16,8 @@
 	<integer>1</integer>
 	<key>AskAboutOutdatedKeyMappingForGuid520BD311-D175-4363-A0EC-257DF215D96F</key>
 	<false/>
+	<key>AskAboutOutdatedKeyMappingForGuid7420F51F-DCFA-4FD7-B67A-6ADE62DABEE6</key>
+	<false/>
 	<key>AskAboutOutdatedKeyMappingForGuid8C3666F6-821B-49D8-A266-70D375533A98</key>
 	<false/>
 	<key>AutoHideTmuxClientSession</key>
@@ -1414,9 +1416,9 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>3200 565 1920 507 2560 0 2560 1440 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>2560 984 606 456 2560 0 2560 1440 </string>
+	<string>0 961 606 456 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>2560 13 2551 1427 2560 0 2560 1440 </string>
+	<string>2560 21 2551 1396 2560 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>2560 14 2555 1426 2560 0 2560 1440 </string>
 	<key>New Bookmarks</key>
@@ -4464,7 +4466,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-02-22T16:52:54Z</date>
+	<date>2016-02-24T17:45:58Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
