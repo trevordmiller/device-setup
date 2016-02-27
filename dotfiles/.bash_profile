@@ -6,17 +6,17 @@ set -o vi
 
 
 # ==================================================================
-# HOMEBREW PACKAGES ACCESS
+# PATH
 # ==================================================================
 
+# HOMEBREW
 export PATH="/usr/local/bin:$PATH"
 
-
-# ==================================================================
-# PROJECT NPM PACKAGES ACCESS
-# ==================================================================
-
+# PROJECT NPM PACKAGES
 export PATH="./node_modules/.bin:$PATH"
+
+# HASKELL DEVTOOLS + GCH
+export PATH="~/.stack/programs/x86_64-osx/ghc-7.10.3/bin/ghc:~/.local/bin:$PATH"
 
 
 # ==================================================================

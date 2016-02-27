@@ -4,6 +4,18 @@ cd ~/
 
 
 # ==================================================================
+# COMMAND LINE PACKAGES (WITH HOMEBREW)
+# ==================================================================
+
+# Install Homebrew, then use it to install OSX packages
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+packages="git vim node ghc haskell-stack"
+for package in $packages; do
+  brew install $package
+done
+
+
+# ==================================================================
 # COMMAND LINE PACKAGES (WITH NPM)
 # ==================================================================
 
@@ -11,15 +23,11 @@ npm install -g eslint_d
 
 
 # ==================================================================
-# COMMAND LINE PACKAGES (WITH HOMEBREW)
+# COMMAND LINE PACKAGES (WITH STACK)
 # ==================================================================
 
-# Install Homebrew, then use it to install OSX packages
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-packages="git vim node haskell-stack"
-for package in $packages; do
-  brew install $package
-done
+stack setup
+stack install hdevtools
 
 
 # ==================================================================
@@ -53,6 +61,13 @@ done
 # Install Vundle, then use it to install Vim plugins
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
+
+
+# ==================================================================
+# OSX SYSTEM SETTINGS
+# ==================================================================
+
+
 
 
 # ==================================================================

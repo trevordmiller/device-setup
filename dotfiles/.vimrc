@@ -28,6 +28,7 @@ Plugin 'mxw/vim-jsx'
 " LINTING
 Plugin 'scrooloose/syntastic'
 Plugin 'salomvary/vim-eslint-compiler'
+Plugin 'bitc/vim-hdevtools'
 
 " COLOR SCHEME
 Plugin 'chriskempson/base16-vim'
