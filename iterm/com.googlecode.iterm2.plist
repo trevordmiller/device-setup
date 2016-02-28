@@ -32,6 +32,10 @@
 	<true/>
 	<key>Control</key>
 	<integer>1</integer>
+	<key>Coprocess MRU</key>
+	<array>
+		<string>echo vim /Users/trevormiller/projects/domo/DomoWeb/DomoWeb/mobile-web/src/bootstrap.js</string>
+	</array>
 	<key>CopyLastNewline</key>
 	<false/>
 	<key>CopySelection</key>
@@ -1416,9 +1420,9 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>3200 565 1920 507 2560 0 2560 1440 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>0 961 606 456 0 0 2560 1417 </string>
+	<string>0 610 606 456 0 0 1920 1080 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>2560 21 2551 1396 2560 0 2560 1417 </string>
+	<string>1920 0 1913 1080 1920 0 1920 1080 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>2560 14 2555 1426 2560 0 2560 1440 </string>
 	<key>New Bookmarks</key>
@@ -2026,11 +2030,11 @@
 			<key>Semantic History</key>
 			<dict>
 				<key>action</key>
-				<string>best editor</string>
+				<string>coprocess</string>
 				<key>editor</key>
 				<string>com.sublimetext.3</string>
 				<key>text</key>
-				<string></string>
+				<string>echo vim \1</string>
 			</dict>
 			<key>Send Code When Idle</key>
 			<false/>
@@ -2765,11 +2769,11 @@
 			<key>Semantic History</key>
 			<dict>
 				<key>action</key>
-				<string>best editor</string>
+				<string>coprocess</string>
 				<key>editor</key>
 				<string>com.sublimetext.3</string>
 				<key>text</key>
-				<string></string>
+				<string>echo vim \1</string>
 			</dict>
 			<key>Send Code When Idle</key>
 			<false/>
@@ -3504,11 +3508,11 @@
 			<key>Semantic History</key>
 			<dict>
 				<key>action</key>
-				<string>best editor</string>
+				<string>coprocess</string>
 				<key>editor</key>
 				<string>com.sublimetext.3</string>
 				<key>text</key>
-				<string></string>
+				<string>echo vim \1</string>
 			</dict>
 			<key>Send Code When Idle</key>
 			<false/>
@@ -4243,11 +4247,11 @@
 			<key>Semantic History</key>
 			<dict>
 				<key>action</key>
-				<string>best editor</string>
+				<string>coprocess</string>
 				<key>editor</key>
 				<string>com.sublimetext.3</string>
 				<key>text</key>
-				<string></string>
+				<string>echo vim \1</string>
 			</dict>
 			<key>Send Code When Idle</key>
 			<false/>
@@ -4380,6 +4384,10 @@
 			<string>~/projects/domo/DomoWeb/DomoWeb/mobile-web/</string>
 		</dict>
 	</array>
+	<key>NoSyncDoNotWarnBeforeMultilinePaste</key>
+	<true/>
+	<key>NoSyncDoNotWarnBeforeMultilinePaste_selection</key>
+	<integer>0</integer>
 	<key>NoSyncHaveShownPromoWithId_4</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesCopy</key>
@@ -4466,7 +4474,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-02-24T17:45:58Z</date>
+	<date>2016-02-28T21:26:52Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
