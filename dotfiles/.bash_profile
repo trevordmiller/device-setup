@@ -1,5 +1,5 @@
 # ==================================================================
-# VI STYLE EDITING
+# VI BINDINGS
 # ==================================================================
 
 set -o vi
@@ -9,32 +9,29 @@ set -o vi
 # PATH
 # ==================================================================
 
-# HOMEBREW
-export PATH="/usr/local/bin:$PATH"
+# VARIABLES
+HOMEBREW_PATH="/usr/local/bin"
+NPM_PATH="./node_modules/.bin"
+GHC_PATH="~/.stack/programs/x86_64-osx/ghc-7.10.3/bin/ghc"
+HASKELL_DEVTOOLS_PATH="~/.local/bin"
 
-# PROJECT NPM PACKAGES
-export PATH="./node_modules/.bin:$PATH"
-
-# HASKELL DEVTOOLS + GCH
-export PATH="~/.stack/programs/x86_64-osx/ghc-7.10.3/bin/ghc:~/.local/bin:$PATH"
+# PATH ADDITIONS
+export PATH="$HOMEBREW_PATH:$NPM_PATH:$GHC_PATH:$HASKELL_DEVTOOLS_PATH:$PATH"
 
 
 # ==================================================================
-# CUSTOM PROMPT
+# PROMPT
 # ==================================================================
 
-# DIRECTORY
-WORKING_DIRECTORY="\W"
-
-# UTILITY
-PROMPT_SYMBOL="\$"
-
-# GIT PROMPT
+# DEPENDENCIES
+source ~/.git-completion.sh
 source ~/.git-prompt.sh
 export GIT_PS1_SHOWDIRTYSTATE=1
-GIT_BRANCH='$(__git_ps1 "[%s]")'
 
-# COLORS
+# VARIABLES
+WORKING_DIRECTORY="\W"
+PROMPT_SYMBOL="\$"
+GIT_BRANCH='$(__git_ps1 "[%s]")'
 COLOR_BASE="\[$(tput sgr0)\]"
 COLOR_BLACK="\[$(tput setaf 0)\]"
 COLOR_RED="\[$(tput setaf 1)\]"
@@ -47,8 +44,5 @@ COLOR_WHITE="\[$(tput setaf 7)\]"
 COLOR_ORANGE="\[$(tput setaf 9)\]"
 COLOR_VIOLET="\[$(tput setaf 13)\]"
 
-# PROMPT
+# CUSTOM PS1
 export PS1="$COLOR_CYAN$WORKING_DIRECTORY$COLOR_ORANGE$GIT_BRANCH$COLOR_CYAN$PROMPT_SYMBOL$COLOR_BASE "
-
-# GIT COMPLETION
-source ~/.git-completion.sh
