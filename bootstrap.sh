@@ -1,40 +1,33 @@
 #!/bin/sh
 
-cd ~/
-
 
 # ==================================================================
-# COMMAND LINE PACKAGES (WITH HOMEBREW)
+# COMMAND LINE PACKAGES 
 # ==================================================================
 
-# Install Homebrew, then use it to install OSX packages
+# HOMEBREW
+# Install Homebrew, then use it to install packages
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 packages="git vim node ghc haskell-stack"
 for package in $packages; do
   brew install $package
 done
 
-
-# ==================================================================
-# COMMAND LINE PACKAGES (WITH NPM)
-# ==================================================================
-
+# NPM
 npm install -g eslint_d
 
-
-# ==================================================================
-# COMMAND LINE PACKAGES (WITH STACK)
-# ==================================================================
-
+# STACK
+cd ~/
 stack setup
 stack install hdevtools
 
 
 # ==================================================================
-# GRAPHICAL APPS (WITH HOMEBREW CASK)
+# GRAPHICAL APPS
 # ==================================================================
 
-# Install Homebrew Cask, then use it to install OSX graphical apps
+# CASK
+# Open Brew tap for Cask, then use Cask to install graphical apps
 brew tap caskroom/cask
 apps="anki dash google-chrome google-photos-backup iterm2 karabiner screenflow seil sketch skitch slack slate spotify"
 for app in $apps; do
@@ -55,7 +48,7 @@ done
 
 
 # ==================================================================
-# VIM PLUGINS (WITH VUNDLE)
+# VIM PLUGINS
 # ==================================================================
 
 # Install Vundle, then use it to install Vim plugins
@@ -64,14 +57,7 @@ vim +PluginInstall +qall
 
 
 # ==================================================================
-# OSX SYSTEM SETTINGS
-# ==================================================================
-
-
-
-
-# ==================================================================
-# OSX SYSTEM SETTINGS
+# SYSTEM SETTINGS
 # ==================================================================
 
 # Show hidden files

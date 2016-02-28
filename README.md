@@ -32,7 +32,7 @@ _Most 3rd party packages, graphical app installs, and settings were configured a
 - Download Todoist (Mac app store)
 - Download Tweetbot (Mac app store)
 - [Download RDM](http://cl.ly/2A441v222i33/download/RDM.tar.gz)
-- Update Karabiner settings:
+- Sync and update Karabiner settings:
     - Link `private.xml` with `~/projects/settings/karabiner/private.xml`
     - "Key Repeat":
         - Delay until repeat: 200ms
@@ -40,9 +40,9 @@ _Most 3rd party packages, graphical app installs, and settings were configured a
     - "Change f1...f12"
 - Update Seil settings:
   - CAPS lock set to fn
-- Update iTerm2 settings:
+- Sync iTerm2 settings:
   - Sync settings to `~/projects/settings/iterm`
-- Update Dash settings:
+- Sync Dash settings:
   - Sync settings to `~/projects/settings/dash/Dash.dashsync`
   - Sync snippets to `~/projects/settings/dash/snippets.dash`
 - Update Google Photos Backup to run automatically
