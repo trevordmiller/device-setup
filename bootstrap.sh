@@ -41,7 +41,7 @@ done
 
 # Create dotfile symlinks in home directory
 dotfilesDirectoryPath=~/projects/settings/dotfiles
-dotfiles=".bash_profile .git-prompt.sh .git-completion.sh .gitconfig .vimrc .npmrc .slate"
+dotfiles=".bash_profile .vimrc .git-prompt.sh .git-completion.sh .gitconfig .npmrc .ghci .slate"
 for file in $dotfiles; do
   ln -s $dotfilesDirectoryPath/$file ~/$file
 done
