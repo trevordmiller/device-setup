@@ -34,6 +34,8 @@
 	<integer>1</integer>
 	<key>Coprocess MRU</key>
 	<array>
+		<string>echo vim /Users/trevormiller/projects/domo/DomoWeb/DomoWeb/mobile-web/src/handlers/Buzz/BuzzNewChatHandler/BuzzNewChatHandler.js</string>
+		<string>vim /Users/trevormiller/projects/domo/DomoWeb/DomoWeb/mobile-web/src/handlers/Buzz/BuzzNewChatHandler/BuzzNewChatHandler.js</string>
 		<string>echo vim /Users/trevormiller/projects/haskell-programming-exercises/Ch2</string>
 		<string>echo vim /Users/trevormiller/projects/domo/DomoWeb/DomoWeb/mobile-web/src/bootstrap.js</string>
 	</array>
@@ -1421,9 +1423,9 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>3200 565 1920 507 2560 0 2560 1440 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>0 434 606 456 0 0 1440 900 </string>
+	<string>0 961 606 456 0 0 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 23 1440 877 0 0 1440 900 </string>
+	<string>2560 783 905 652 2560 0 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>2560 14 2555 1426 2560 0 2560 1440 </string>
 	<key>New Bookmarks</key>
@@ -4475,7 +4477,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-02-29T21:26:58Z</date>
+	<date>2016-03-01T21:26:58Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
