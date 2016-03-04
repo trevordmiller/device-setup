@@ -20,14 +20,17 @@ Plugin 'ctrlpvim/ctrlp.vim'
 " QUICKFIX LIST BULK EDIT
 Plugin 'Olical/vim-enmasse'
 
-" EXTEND LANGUAGES
-Plugin 'elzr/vim-json'
-Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
-
 " LINTING
 Plugin 'scrooloose/syntastic'
+
+" JAVASCRIPT/JSX
+Plugin 'elzr/vim-json'
+Plugin 'pangloss/vim-javascript'
 Plugin 'salomvary/vim-eslint-compiler'
+Plugin 'mxw/vim-jsx'
+
+" HASKELL
+Plugin 'itchyny/vim-haskell-indent'
 Plugin 'bitc/vim-hdevtools'
 
 " COLOR SCHEME
@@ -138,5 +141,6 @@ set wildignore+=npm-debug.log
 set wildignore+=*.zip
 set wildignore+=*.png,*.jpg,*.gif
 set wildignore+=*.pdf
-set wildignore+=*DS_Store*
 set wildignore+=*.swp
+set wildignore+=*DS_Store*
+set wildignore+=.hdevtools.sock

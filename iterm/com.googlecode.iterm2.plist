@@ -1425,7 +1425,7 @@
 	<key>NSWindow Frame Preferences</key>
 	<string>0 961 606 456 0 0 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>2560 783 905 652 2560 0 2560 1440 </string>
+	<string>2560 13 2551 1427 2560 0 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>2560 14 2555 1426 2560 0 2560 1440 </string>
 	<key>New Bookmarks</key>
@@ -2157,6 +2157,8 @@
 			<key>Use Bright Bold</key>
 			<true/>
 			<key>Use Canonical Parser</key>
+			<false/>
+			<key>Use Cursor Guide</key>
 			<false/>
 			<key>Use Italic Font</key>
 			<true/>
@@ -4477,7 +4479,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-03-01T21:26:58Z</date>
+	<date>2016-03-02T21:27:00Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
