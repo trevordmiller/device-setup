@@ -1421,11 +1421,13 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>3200 565 1920 507 2560 0 2560 1440 </string>
+	<string>1920 393 1280 373 1920 360 1280 720 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>0 961 606 456 0 0 2560 1440 </string>
+	<string>0 969 606 456 0 0 2560 1440 </string>
+	<key>NSWindow Frame SUUpdateAlert</key>
+	<string>2560 818 700 622 2560 0 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>2560 13 2551 1427 2560 0 2560 1440 </string>
+	<string>0 783 890 652 0 0 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>2560 14 2555 1426 2560 0 2560 1440 </string>
 	<key>New Bookmarks</key>
@@ -3157,7 +3159,7 @@
 			<key>Idle Code</key>
 			<integer>0</integer>
 			<key>Initial Text</key>
-			<string></string>
+			<string>eslint_d stop &amp;&amp; eslint_d start</string>
 			<key>Jobs to Ignore</key>
 			<array>
 				<string>rlogin</string>
@@ -4479,7 +4481,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-03-02T21:27:00Z</date>
+	<date>2016-04-13T19:31:26Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
@@ -6908,6 +6910,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>2.9.20160206</string>
+	<string>2.9.20160313</string>
 </dict>
 </plist>
