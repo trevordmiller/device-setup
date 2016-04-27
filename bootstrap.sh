@@ -1,4 +1,7 @@
-#!/bin/sh
+#!/bin/bash
+
+# Unofficial Bash strict mode
+set -euo pipefail
 
 
 # ==================================================================
@@ -8,10 +11,13 @@
 # HOMEBREW
 # Install Homebrew, then use it to install packages
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-packages="git vim node ghc haskell-stack"
+packages="git vim node n ghc haskell-stack"
 for package in $packages; do
   brew install $package
 done
+
+# N
+n stable
 
 # NPM
 npm install -g eslint_d
