@@ -1,7 +1,9 @@
 #!/bin/bash
 
+# Bash strict mode
+set -euo pipefail
+
 function osx_system_settings {
-  set -euo pipefail
 
   # Show hidden files
   defaults write com.apple.finder AppleShowAllFiles YES
@@ -12,7 +14,6 @@ function osx_system_settings {
 
 
 function command_line_packages {
-  set -euo pipefail
 
   # Install Homebrew
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -31,7 +32,6 @@ function command_line_packages {
 }
 
 function dotfiles {
-  set -euo pipefail
 
   # Create dotfile symlinks in home directory
   for file in $1; do
@@ -40,7 +40,6 @@ function dotfiles {
 }
 
 function vim_plugins {
-  set -euo pipefail
 
   # Install Vundle
   git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
@@ -50,7 +49,6 @@ function vim_plugins {
 }
 
 function graphical_apps {
-  set -euo pipefail
 
   # Open Brew tap for Cask
   brew tap caskroom/cask
@@ -68,3 +66,5 @@ function bootstrap {
   vim_plugins
   graphical_apps "anki dash google-chrome google-photos-backup iterm2 karabiner screenflow seil sketch skitch slack slate spotify"
 }
+
+bootstrap
