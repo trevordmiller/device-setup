@@ -1,73 +1,70 @@
 #!/bin/bash
 
-# Unofficial Bash strict mode
-set -euo pipefail
+function osx_system_settings {
+  set -euo pipefail
+
+  # Show hidden files
+  defaults write com.apple.finder AppleShowAllFiles YES
+
+  # Set screenshot output folder
+  defaults write com.apple.screencapture location ~/Downloads/
+}
 
 
-# ==================================================================
-# COMMAND LINE PACKAGES 
-# ==================================================================
+function command_line_packages {
+  set -euo pipefail
 
-# HOMEBREW
-# Install Homebrew, then use it to install packages
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-packages="git vim node n ghc haskell-stack"
-for package in $packages; do
-  brew install $package
-done
+  # Install Homebrew
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-# N
-n stable
+  # Use Homebrew to install command line packages
+  for package in $1; do
+    brew install $package
+  done
 
-# NPM
-npm install -g eslint_d
+  # Package specific setup
+  n stable
+  cd ~/
+  stack setup
+  stack install hdevtools
+  npm install -g eslint_d
+}
 
-# STACK
-cd ~/
-stack setup
-stack install hdevtools
+function dotfiles {
+  set -euo pipefail
 
+  # Create dotfile symlinks in home directory
+  for file in $1; do
+    ln -s $2/$file ~/$file
+  done
+}
 
-# ==================================================================
-# GRAPHICAL APPS
-# ==================================================================
+function vim_plugins {
+  set -euo pipefail
 
-# CASK
-# Open Brew tap for Cask, then use Cask to install graphical apps
-brew tap caskroom/cask
-apps="anki dash google-chrome google-photos-backup iterm2 karabiner screenflow seil sketch skitch slack slate spotify"
-for app in $apps; do
-  brew cask install $app
-done
+  # Install Vundle
+  git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
+  # Use Vundle to install Vim plugins
+  vim +PluginInstall +qall
+}
 
-# ==================================================================
-# DOTFILES
-# ==================================================================
+function graphical_apps {
+  set -euo pipefail
 
-# Create dotfile symlinks in home directory
-dotfilesDirectoryPath=~/projects/settings/dotfiles
-dotfiles=".bash_profile .vimrc .git-prompt.sh .git-completion.sh .gitconfig .npmrc .ghci .slate"
-for file in $dotfiles; do
-  ln -s $dotfilesDirectoryPath/$file ~/$file
-done
+  # Open Brew tap for Cask
+  brew tap caskroom/cask
 
+  # Use Cask to install graphical apps
+  for app in $1; do
+    brew cask install $app
+  done
+}
 
-# ==================================================================
-# VIM PLUGINS
-# ==================================================================
-
-# Install Vundle, then use it to install Vim plugins
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-vim +PluginInstall +qall
-
-
-# ==================================================================
-# SYSTEM SETTINGS
-# ==================================================================
-
-# Show hidden files
-defaults write com.apple.finder AppleShowAllFiles YES
-
-# Set screenshot output folder
-defaults write com.apple.screencapture location ~/Downloads/
+function bootstrap {
+  osx_system_settings
+  command_line_packages "git vim node n ghc haskell-stack"
+  dotfiles ".bash_profile .vimrc .git-prompt.sh .git-completion.sh .gitconfig .npmrc .ghci .slate" ~/projects/settings/dotfiles 
+  vim_plugins
+  graphical_apps "anki dash google-chrome google-photos-backup iterm2 karabiner screenflow seil sketch skitch slack slate spotify"
+}

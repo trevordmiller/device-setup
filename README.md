@@ -7,7 +7,7 @@ _Personal setup for new machines_
 # Automatic
 
 - Create the `~/projects` directory and clone this repo into it
-- Run `. ~/projects/settings/bootstrap.sh` script to symlink and install all the things
+- Run `source ~/projects/settings/bootstrap.sh` then `bootstrap` to symlink and install all the things
 
 ---
 
