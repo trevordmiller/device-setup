@@ -23,6 +23,9 @@ Plugin 'Olical/vim-enmasse'
 " LINTING
 Plugin 'scrooloose/syntastic'
 
+" HTML
+Plugin 'othree/html5.vim'
+
 " JAVASCRIPT/JSX
 Plugin 'elzr/vim-json'
 Plugin 'pangloss/vim-javascript'
