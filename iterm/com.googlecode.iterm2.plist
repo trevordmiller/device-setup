@@ -5138,6 +5138,8 @@
 	<integer>0</integer>
 	<key>NoSyncHaveShownPromoWithId_4</key>
 	<true/>
+	<key>NoSyncInstallationId</key>
+	<string>CF1A0E22-B915-4A58-8A64-4D0F1AA1EC19</string>
 	<key>NoSyncNeverRemindPrefsChangesCopy</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
@@ -5215,16 +5217,18 @@
 	<integer>8</integer>
 	<key>RightOption</key>
 	<integer>3</integer>
+	<key>SUAutomaticallyUpdate</key>
+	<true/>
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/testing3.xml</string>
+	<string>https://iterm2.com/appcasts/testing3.xml?shard=57</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-04-15T23:01:36Z</date>
+	<date>2016-05-04T17:21:06Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
@@ -5232,7 +5236,7 @@
 	<key>ShowBookmarkName</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
-	<false/>
+	<true/>
 	<key>ShowPaneTitles</key>
 	<false/>
 	<key>SmartPlacement</key>
@@ -7653,6 +7657,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>2.9.20160313</string>
+	<string>2.9.20160426</string>
 </dict>
 </plist>
