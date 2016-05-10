@@ -1,6 +1,7 @@
 [user]
 	name = Trevor D. Miller
 	email = trevordmiller@icloud.com
+	useconfigonly = true
 [push]
 	default = simple
 [core]
