@@ -36,6 +36,9 @@ Plugin 'mxw/vim-jsx'
 Plugin 'itchyny/vim-haskell-indent'
 Plugin 'bitc/vim-hdevtools'
 
+" EXTEND %
+Plugin 'tmhedberg/matchit'
+
 " COLOR SCHEME
 Plugin 'chriskempson/base16-vim'
 
