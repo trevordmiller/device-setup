@@ -64,7 +64,7 @@ function bootstrap {
   command_line_packages "git vim node n ghc haskell-stack"
   dotfiles ".bash_profile .vimrc .git-prompt.sh .git-completion.sh .gitconfig .npmrc .ghci .slate" ~/projects/settings/dotfiles 
   vim_plugins
-  graphical_apps "anki dash google-chrome google-photos-backup iterm2 karabiner screenflow seil sketch skitch slack slate spotify flux"
+  graphical_apps "anki dash google-chrome google-photos-backup iterm2 karabiner screenflow seil sketch skitch slack slate spotify flux near-lock"
 }
 
 bootstrap
