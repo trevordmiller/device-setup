@@ -72,7 +72,7 @@ let g:syntastic_javascript_eslint_exec = 'eslint_d'
 " ==================================================================
 
 " GENERAL MAPPINGS
-" Get rid of mapping I accidently hit a lot that I don't need
+" Get rid of mapping I accidently hit a lot
 nmap K <nop>
 
 " MODE SWITCH SPEED
