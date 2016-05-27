@@ -30,6 +30,7 @@ _Personal setup for new machines_
 _Most 3rd party packages, graphical app installs, and settings were configured automatically by the `bootstrap.sh` script ^ - these are just the extra items that need to be done manually after that_
 
 - Download Todoist (Mac app store)
+- Download iMovie (Mac app store)
 - [Download RDM](http://cl.ly/2A441v222i33/download/RDM.tar.gz)
 - Sync and update Karabiner settings:
     - Link `private.xml` with `~/projects/settings/karabiner/private.xml`
