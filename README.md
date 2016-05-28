@@ -15,6 +15,7 @@ _Personal setup for new machines_
 
 ## OSX Native App Settings
 
+- Finder sidebar should only have two items in it: `~/projects` and `~/Downloads`
 - Automatically hide Dock and menu bar
 - Restore iCloud automator apps to dock
 - Set up Time Machine backups
