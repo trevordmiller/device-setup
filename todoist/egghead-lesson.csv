@@ -17,7 +17,9 @@ task,Turn off noise,4,3,Trevor (6558887),,,en
 ,,,,,,,
 task,"Turn on “Do Not Disturb""",4,3,Trevor (6558887),,,en
 ,,,,,,,
-task,Turn off f.lux,4,3,Trevor (6558887),,,en
+task,Turn off F.lux,4,3,Trevor (6558887),,,en
+,,,,,,,
+task,Turn off Near Lock,4,3,Trevor (6558887),,,en
 ,,,,,,,
 task,"Set “RDM” to “1280 x 720 HiDPI""",4,3,Trevor (6558887),,,en
 ,,,,,,,
