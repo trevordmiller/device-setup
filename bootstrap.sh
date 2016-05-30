@@ -7,9 +7,11 @@ function osx_system_settings {
 
   # Show hidden files
   defaults write com.apple.finder AppleShowAllFiles YES
+  killall Finder
 
   # Set screenshot output folder
-  defaults write com.apple.screencapture location ~/Downloads/
+  defaults write com.apple.screencapture location ~/projects/temp/
+  killall SystemUIServer
 }
 
 
