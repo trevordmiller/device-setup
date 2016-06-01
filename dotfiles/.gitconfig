@@ -6,5 +6,6 @@
 	default = simple
 [core]
 	editor = vim
+	excludesfile = /Users/trevormiller/.gitignore_global
 [help]
 	autocorrect = 1
