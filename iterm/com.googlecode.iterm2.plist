@@ -34,6 +34,7 @@
 	<integer>1</integer>
 	<key>Coprocess MRU</key>
 	<array>
+		<string>echo vim /Users/trevormiller/projects/domo/DomoWeb/DomoWeb/mobile-web/src/components/LockedPrompt.js</string>
 		<string>echo vim /Users/trevormiller/projects/domo/DomoWeb/DomoWeb/mobile-web/src/handlers/Buzz/BuzzNewChatHandler/BuzzNewChatHandler.js</string>
 		<string>vim /Users/trevormiller/projects/domo/DomoWeb/DomoWeb/mobile-web/src/handlers/Buzz/BuzzNewChatHandler/BuzzNewChatHandler.js</string>
 		<string>echo vim /Users/trevormiller/projects/haskell-programming-exercises/Ch2</string>
@@ -1423,11 +1424,11 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>1920 393 1280 373 1920 360 1280 720 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>0 615 606 456 0 0 1920 1080 </string>
+	<string>0 976 606 456 0 0 2560 1440 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>2560 818 700 622 2560 0 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1920 0 1913 1080 1920 0 1920 1080 </string>
+	<string>2560 0 2560 1440 2560 0 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>2560 14 2555 1426 2560 0 2560 1440 </string>
 	<key>New Bookmarks</key>
@@ -5228,7 +5229,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-05-04T17:21:06Z</date>
+	<date>2016-05-31T21:44:42Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
@@ -7657,6 +7658,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>2.9.20160426</string>
+	<string>2.9.20160523</string>
 </dict>
 </plist>
