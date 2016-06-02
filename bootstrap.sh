@@ -10,7 +10,7 @@ function osx_system_settings {
   killall Finder
 
   # Set screenshot output folder
-  defaults write com.apple.screencapture location ~/projects/temp/
+  defaults write com.apple.screencapture location ~/Downloads
   killall SystemUIServer
 }
 
