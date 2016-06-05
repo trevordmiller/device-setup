@@ -1,5 +1,5 @@
 TYPE,CONTENT,PRIORITY,INDENT,AUTHOR,RESPONSIBLE,DATE,DATE_LANG
-task,{Some Lesson Name},4,1,Trevor (6558887),,,en
+task,{<how do I>{Something} with/in {tool}},4,1,Trevor (6558887),,,en
 ,,,,,,,
 task,Validate idea,4,2,Trevor (6558887),,,en
 note," [[file {""file_type"":""application\/octet-stream"",""file_name"":""Egghead Instructor Onboarding"",""file_underlying_type"":""application\/vnd.google-apps.document"",""file_url"":""https:\/\/docs.google.com\/document\/d\/15CAilPKcm_dpRFptwkE3VAJrii32fJGAXwDluwPoMLk\/edit?usp=drive_web""}]]",,,Trevor (6558887),,,
