@@ -42,6 +42,9 @@ Plugin 'tmhedberg/matchit'
 " COLOR SCHEME
 Plugin 'chriskempson/base16-vim'
 
+" STAT TRACKING
+Plugin 'wakatime/vim-wakatime'
+
 " VUNDLE SETUP END
 call vundle#end()
 filetype plugin on
