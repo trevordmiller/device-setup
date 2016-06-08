@@ -34,6 +34,7 @@
 	<integer>1</integer>
 	<key>Coprocess MRU</key>
 	<array>
+		<string>echo vim /Users/trevormiller/projects/domo/DomoWeb/DomoWeb/mobile-web/src/handlers/Buzz/BuzzChannelHandler/web_modules/components/BuzzNewHuddleModal/index.js</string>
 		<string>echo vim /Users/trevormiller/projects/domo/DomoWeb/DomoWeb/mobile-web/src/components/LockedPrompt.js</string>
 		<string>echo vim /Users/trevormiller/projects/domo/DomoWeb/DomoWeb/mobile-web/src/handlers/Buzz/BuzzNewChatHandler/BuzzNewChatHandler.js</string>
 		<string>vim /Users/trevormiller/projects/domo/DomoWeb/DomoWeb/mobile-web/src/handlers/Buzz/BuzzNewChatHandler/BuzzNewChatHandler.js</string>
@@ -1354,7 +1355,7 @@
 	<key>HideMenuBarInFullscreen</key>
 	<true/>
 	<key>HideScrollbar</key>
-	<false/>
+	<true/>
 	<key>HideTab</key>
 	<true/>
 	<key>HideTabNumber</key>
@@ -1410,7 +1411,7 @@
 		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
 		hAErATGG
 		</data>
-		<string>322</string>
+		<string>307</string>
 	</array>
 	<key>NSTableView Hidden Columns KeyBingingTable</key>
 	<array/>
@@ -1428,7 +1429,7 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>2560 818 700 622 2560 0 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>2560 0 2560 1440 2560 0 2560 1440 </string>
+	<string>2560 8 2555 1432 2560 0 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>2560 14 2555 1426 2560 0 2560 1440 </string>
 	<key>New Bookmarks</key>
@@ -5229,7 +5230,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-05-31T21:44:42Z</date>
+	<date>2016-06-07T20:43:26Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
@@ -5237,7 +5238,7 @@
 	<key>ShowBookmarkName</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
-	<true/>
+	<false/>
 	<key>ShowPaneTitles</key>
 	<false/>
 	<key>SmartPlacement</key>
@@ -7658,6 +7659,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>2.9.20160523</string>
+	<string>3.0.0</string>
 </dict>
 </plist>
