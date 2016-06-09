@@ -48,6 +48,7 @@ _Most 3rd party packages, graphical app installs, and settings were configured a
   - Sync settings to `~/projects/settings/dash/Dash.dashsync`
   - Sync snippets to `~/projects/settings/dash/snippets.dash`
 - Update Google Photos Backup to run automatically
+- Grant "Security & Privacy" control permissions to Automator, Dash, Karabiner, RescueTime, and Slate
 
 ---
 
