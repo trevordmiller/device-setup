@@ -42,6 +42,9 @@ Plugin 'tmhedberg/matchit'
 " COLOR SCHEME
 Plugin 'chriskempson/base16-vim'
 
+" HARD MODE
+Plugin 'takac/vim-hardtime'
+
 " STAT TRACKING
 Plugin 'wakatime/vim-wakatime'
 
@@ -68,6 +71,9 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_javascript_eslint_exec = 'eslint_d'
+
+" HARD MODE
+let g:hardtime_default_on = 1
 
 
 " ==================================================================
