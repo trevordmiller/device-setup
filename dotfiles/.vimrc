@@ -74,7 +74,9 @@ let g:syntastic_javascript_eslint_exec = 'eslint_d'
 
 " HARD MODE
 let g:hardtime_default_on = 1
-
+let g:list_of_normal_keys = ["h", "j", "k", "l", "+", "<UP>", "<DOWN>", "<LEFT>", "<RIGHT>"]
+let g:list_of_visual_keys = ["h", "j", "k", "l", "+", "<UP>", "<DOWN>", "<LEFT>", "<RIGHT>"]
+let g:list_of_disabled_keys = ["<UP>", "<DOWN>", "<LEFT>", "<RIGHT>"]
 
 " ==================================================================
 " CORE SETTINGS
