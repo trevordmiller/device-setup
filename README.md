@@ -4,9 +4,15 @@ _Personal setup for new machines_
 
 ---
 
+# Setup
+
+- Set up SSH keys
+- Create the `~/projects` directory and clone this repo into it
+
+---
+
 # Automatic
 
-- Create the `~/projects` directory and clone this repo into it
 - Run `. ~/projects/settings/bootstrap.sh` to set up all the things
 
 ---
