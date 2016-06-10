@@ -1437,7 +1437,7 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>2560 818 700 622 2560 0 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1920 28 1913 1052 1920 0 1920 1080 </string>
+	<string>1920 3 1913 1077 1920 0 1920 1080 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>2560 14 2555 1426 2560 0 2560 1440 </string>
 	<key>New Bookmarks</key>
@@ -1624,7 +1624,7 @@
 				<real>1</real>
 			</dict>
 			<key>Badge Text</key>
-			<string>Branch: \(user.gitBranch)</string>
+			<string></string>
 			<key>Blend</key>
 			<real>0.30000001192092896</real>
 			<key>Blink Allowed</key>
