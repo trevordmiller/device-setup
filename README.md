@@ -44,6 +44,7 @@ _Most 3rd party packages, graphical app installs, and settings were configured a
   - CAPS lock set to fn
 - Sync iTerm2 settings:
   - Sync settings to `~/projects/settings/iterm`
+  - Download and install the `Base16 iTerm2 Ocean Dark` color theme
 - Sync Dash settings:
   - Sync settings to `~/projects/settings/dash/Dash.dashsync`
   - Sync snippets to `~/projects/settings/dash/snippets.dash`
