@@ -91,7 +91,10 @@
 	<key>docsets</key>
 	<dict>
 		<key>keywords</key>
-		<dict/>
+		<dict>
+			<key>~/Library/Application Support/Dash/DocSets/Man_Pages/Man Pages.docset</key>
+			<string>man:</string>
+		</dict>
 	</dict>
 	<key>feeds</key>
 	<dict>
