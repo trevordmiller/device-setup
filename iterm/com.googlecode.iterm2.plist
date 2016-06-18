@@ -1437,7 +1437,7 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>2560 818 700 622 2560 0 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>2560 21 2551 1419 2560 0 2560 1440 </string>
+	<string>0 428 890 652 0 0 1920 1080 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>2560 13 2551 1427 2560 0 2560 1440 </string>
 	<key>New Bookmarks</key>
@@ -2785,7 +2785,7 @@
 			<key>Mouse Reporting</key>
 			<true/>
 			<key>Name</key>
-			<string>Demo</string>
+			<string>Egghead</string>
 			<key>Non Ascii Font</key>
 			<string>Monaco 32</string>
 			<key>Non-ASCII Anti Aliased</key>
@@ -2963,7 +2963,7 @@
 			<key>Window Type</key>
 			<integer>0</integer>
 			<key>Working Directory</key>
-			<string>~/projects/</string>
+			<string>~/projects/personal/eggheadio/</string>
 		</dict>
 		<dict>
 			<key>ASCII Anti Aliased</key>
@@ -5322,7 +5322,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-06-11T19:35:25Z</date>
+	<date>2016-06-18T16:32:04Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
@@ -7751,7 +7751,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.0.1</string>
+	<string>3.0.2</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
