@@ -24,13 +24,14 @@ _Personal setup for new machines_
 - Finder sidebar should only have two items in it: `~/projects` and `~/Downloads`
 - Automatically hide Dock and menu bar
 - Restore iCloud automator apps to dock
-- Set up Time Machine backups
 - Turn on "Find My Mac"
 - Turn on "Do Not Disturb" schedule
 - Notification center widgets (calendar and tasks)
 - Notification center keyboard shortcut
 - Sync iCloud account
 - Add Internet accounts (Google, Facebook, Twitter)
+- Set up local Google Drive sync and ensure it is backing up correctly
+- Set up work and home Time Machine backups and ensure they work correctly
 
 ## 3rd Party Stuff
 
