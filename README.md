@@ -39,6 +39,7 @@ _Most 3rd party packages, graphical app installs, and settings were configured a
 
 - Download Todoist (Mac app store)
 - Download iMovie (Mac app store)
+- Download Docker for Mac [docker.com](https://docker.com) - unless Homebrew is caught up then update Homebrew `bootstrap.sh`
 - [Download RDM](http://cl.ly/2A441v222i33/download/RDM.tar.gz)
 - Add WakaTime API key to `~/.wakatime.cfg`
 - Sync and update Karabiner settings:
