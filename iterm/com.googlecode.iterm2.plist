@@ -1363,6 +1363,13 @@
 			<key>Text</key>
 			<string></string>
 		</dict>
+		<key>0x66-0x140000</key>
+		<dict>
+			<key>Action</key>
+			<integer>23</integer>
+			<key>Text</key>
+			<string></string>
+		</dict>
 		<key>0x6b-0x100000</key>
 		<dict>
 			<key>Action</key>
@@ -1541,11 +1548,11 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>1920 393 1280 373 1920 360 1280 720 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>0 982 606 456 0 0 2560 1440 </string>
+	<string>1920 623 606 456 1920 0 1920 1080 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>2560 818 700 622 2560 0 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>2560 13 2551 1427 2560 0 2560 1440 </string>
+	<string>0 412 890 652 0 0 1920 1080 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>2560 13 2551 1427 2560 0 2560 1440 </string>
 	<key>New Bookmarks</key>
@@ -1812,7 +1819,7 @@
 			<key>Idle Code</key>
 			<integer>0</integer>
 			<key>Initial Text</key>
-			<string></string>
+			<string>clear</string>
 			<key>Jobs to Ignore</key>
 			<array>
 				<string>rlogin</string>
@@ -2137,7 +2144,7 @@
 			<key>Mouse Reporting</key>
 			<true/>
 			<key>Name</key>
-			<string>Default</string>
+			<string>default</string>
 			<key>Non Ascii Font</key>
 			<string>Monaco 18</string>
 			<key>Non-ASCII Anti Aliased</key>
@@ -2568,7 +2575,7 @@
 			<key>Idle Code</key>
 			<integer>0</integer>
 			<key>Initial Text</key>
-			<string></string>
+			<string>clear</string>
 			<key>Jobs to Ignore</key>
 			<array>
 				<string>rlogin</string>
@@ -2893,7 +2900,7 @@
 			<key>Mouse Reporting</key>
 			<true/>
 			<key>Name</key>
-			<string>Egghead</string>
+			<string>egghead</string>
 			<key>Non Ascii Font</key>
 			<string>Monaco 32</string>
 			<key>Non-ASCII Anti Aliased</key>
@@ -3320,7 +3327,7 @@
 			<key>Idle Code</key>
 			<integer>0</integer>
 			<key>Initial Text</key>
-			<string>npm run start</string>
+			<string>clear &amp;&amp; npm run start</string>
 			<key>Jobs to Ignore</key>
 			<array>
 				<string>rlogin</string>
@@ -3645,7 +3652,7 @@
 			<key>Mouse Reporting</key>
 			<true/>
 			<key>Name</key>
-			<string>Domo - Builds</string>
+			<string>domo-builds</string>
 			<key>Non Ascii Font</key>
 			<string>Monaco 18</string>
 			<key>Non-ASCII Anti Aliased</key>
@@ -4072,7 +4079,7 @@
 			<key>Idle Code</key>
 			<integer>0</integer>
 			<key>Initial Text</key>
-			<string>eslint_d stop &amp;&amp; eslint_d start</string>
+			<string>clear &amp;&amp; eslint_d stop &amp;&amp; eslint_d start &amp;&amp; clear</string>
 			<key>Jobs to Ignore</key>
 			<array>
 				<string>rlogin</string>
@@ -4397,7 +4404,7 @@
 			<key>Mouse Reporting</key>
 			<true/>
 			<key>Name</key>
-			<string>Domo - Main</string>
+			<string>domo-main</string>
 			<key>Non Ascii Font</key>
 			<string>Monaco 18</string>
 			<key>Non-ASCII Anti Aliased</key>
@@ -4824,7 +4831,7 @@
 			<key>Idle Code</key>
 			<integer>0</integer>
 			<key>Initial Text</key>
-			<string>npm run test:unit:watch</string>
+			<string>clear &amp;&amp; npm run test:unit:watch</string>
 			<key>Jobs to Ignore</key>
 			<array>
 				<string>rlogin</string>
@@ -5149,7 +5156,7 @@
 			<key>Mouse Reporting</key>
 			<true/>
 			<key>Name</key>
-			<string>Domo - Unit Tests</string>
+			<string>domo-tests</string>
 			<key>Non Ascii Font</key>
 			<string>Monaco 18</string>
 			<key>Non-ASCII Anti Aliased</key>
@@ -5426,11 +5433,11 @@
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/testing3.xml?shard=57</string>
+	<string>https://iterm2.com/appcasts/testing.xml?shard=57</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-06-27T16:19:47Z</date>
+	<date>2016-07-02T19:03:31Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
@@ -7859,7 +7866,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.0.3</string>
+	<string>3.0.4</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
