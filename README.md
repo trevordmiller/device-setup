@@ -7,13 +7,13 @@ _Personal setup for new machines_
 # Setup
 
 - Set up SSH keys
-- Create the `~/projects` directory and clone this repo into it
+- Install Google Drive and clone this repo into the `~/Google\ Drive/` directory if it doesn't already exist
 
 ---
 
 # Automatic
 
-- Run `. ~/projects/settings/bootstrap.sh` to set up all the things
+- Run `. ~/Google\ Drive/settings/bootstrap.sh` to set up all the things
 
 ---
 
@@ -21,7 +21,8 @@ _Personal setup for new machines_
 
 ## OSX Native App Settings
 
-- Finder sidebar should only have two items in it: `~/projects` and `~/Downloads`
+- Finder sidebar should only have two items in it: `~/Google\ Drive` and `~/Downloads`
+- Set up local Google Drive sync and ensure it is backing up correctly
 - Automatically hide Dock and menu bar
 - Restore iCloud automator apps to dock
 - Turn on "Find My Mac"
@@ -29,8 +30,7 @@ _Personal setup for new machines_
 - Notification center widgets (calendar and tasks)
 - Notification center keyboard shortcut
 - Sync iCloud account
-- Add Internet accounts (Google, Facebook, Twitter)
-- Set up local Google Drive sync and ensure it is backing up correctly
+- Add Internet accounts (Facebook, Twitter)
 - Set up work and home Time Machine backups and ensure they work correctly
 
 ## 3rd Party Stuff
@@ -43,7 +43,7 @@ _Most 3rd party packages, graphical app installs, and settings were configured a
 - [Download RDM](http://cl.ly/2A441v222i33/download/RDM.tar.gz)
 - Add WakaTime API key to `~/.wakatime.cfg`
 - Sync and update Karabiner settings:
-    - Link `private.xml` with `~/projects/settings/karabiner/private.xml`
+    - Link `private.xml` with `~/Google\ Drive/settings/karabiner/private.xml`
     - "Key Repeat":
         - Delay until repeat: 200ms
         - Key Repeat: 20ms
@@ -51,11 +51,11 @@ _Most 3rd party packages, graphical app installs, and settings were configured a
 - Update Seil settings:
   - CAPS lock set to fn
 - Sync iTerm2 settings:
-  - Sync settings to `~/projects/settings/iterm`
+  - Sync settings to `~/Google\ Drive/settings/iterm`
   - Download and install the `Base16 iTerm2 Ocean Dark` color theme
 - Sync Dash settings:
-  - Sync settings to `~/projects/settings/dash/Dash.dashsync`
-  - Sync snippets to `~/projects/settings/dash/snippets.dash`
+  - Sync settings to `~/Google\ Drive/settings/dash/Dash.dashsync`
+  - Sync snippets to `~/Google\ Drive/settings/dash/snippets.dash`
 - Update Google Photos Backup to run automatically
 - Grant "Security & Privacy" control permissions to Automator, Dash, Karabiner, RescueTime, and Slate
 
