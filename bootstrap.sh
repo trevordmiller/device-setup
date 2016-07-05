@@ -64,7 +64,7 @@ function graphical_apps {
 function bootstrap {
   osx_system_settings
   command_line_packages "git vim node n ghc haskell-stack youtube-dl"
-  dotfiles ".bash_profile .vimrc .git-prompt.sh .git-completion.sh .gitconfig_global .gitconfig .npmrc .ghci .eslintrc .slate" ~/Google Drive/settings/dotfiles 
+  dotfiles ".bash_profile .vimrc .git-prompt.sh .git-completion.sh .gitignore .gitconfig .npmrc .ghci .eslintrc .slate" ~/Google Drive/settings/dotfiles 
   vim_plugins
   graphical_apps "anki dash google-chrome google-drive google-photos-backup iterm2 karabiner screenflow seil sketch skitch slack slate spotify flux near-lock rescuetime"
 }

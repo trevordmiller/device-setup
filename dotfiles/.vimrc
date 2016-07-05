@@ -160,3 +160,4 @@ set wildignore+=*.pdf
 set wildignore+=*.swp
 set wildignore+=*DS_Store*
 set wildignore+=.hdevtools.sock
+set wildignore+=Icon
