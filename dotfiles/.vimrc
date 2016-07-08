@@ -138,6 +138,7 @@ set indentkeys+=O,o
 set laststatus=2
 
 " SEARCH
+set incsearch
 set ignorecase
 set smartcase
 set wrapscan
