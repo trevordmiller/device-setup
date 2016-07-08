@@ -32,10 +32,6 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'salomvary/vim-eslint-compiler'
 Plugin 'mxw/vim-jsx'
 
-" HASKELL
-Plugin 'itchyny/vim-haskell-indent'
-Plugin 'bitc/vim-hdevtools'
-
 " EXTEND %
 Plugin 'tmhedberg/matchit'
 

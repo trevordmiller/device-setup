@@ -12,11 +12,9 @@ set -o vi
 # VARIABLES
 HOMEBREW_PATH="/usr/local/bin"
 NPM_PATH="./node_modules/.bin"
-GHC_PATH="$HOME/.stack/programs/x86_64-osx/ghc-7.10.3/bin/ghc"
-HASKELL_DEVTOOLS_PATH="$HOME/.local/bin"
 
 # PATH ADDITIONS
-export PATH="$HOMEBREW_PATH:$NPM_PATH:$GHC_PATH:$HASKELL_DEVTOOLS_PATH:$PATH"
+export PATH="$HOMEBREW_PATH:$NPM_PATH:$PATH"
 
 
 # ==================================================================
