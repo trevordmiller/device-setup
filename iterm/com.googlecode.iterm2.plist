@@ -1534,7 +1534,7 @@
 		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
 		hAErATGG
 		</data>
-		<string>322</string>
+		<string>307</string>
 	</array>
 	<key>NSTableView Hidden Columns KeyBingingTable</key>
 	<array/>
@@ -1548,11 +1548,11 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>1920 393 1280 373 1920 360 1280 720 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>0 443 606 456 0 0 1440 900 </string>
+	<string>0 982 606 456 0 0 2560 1440 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>2560 818 700 622 2560 0 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 229 890 652 0 0 1440 900 </string>
+	<string>2560 13 2551 1427 2560 0 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>3 416 890 652 0 0 1920 1080 </string>
 	<key>New Bookmarks</key>
@@ -3654,11 +3654,11 @@
 			<key>Name</key>
 			<string>domo-builds</string>
 			<key>Non Ascii Font</key>
-			<string>Monaco 18</string>
+			<string>Monaco 14</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>Monaco 18</string>
+			<string>Monaco 14</string>
 			<key>Option Key Sends</key>
 			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>
@@ -5158,11 +5158,11 @@
 			<key>Name</key>
 			<string>domo-tests</string>
 			<key>Non Ascii Font</key>
-			<string>Monaco 18</string>
+			<string>Monaco 14</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>Monaco 18</string>
+			<string>Monaco 14</string>
 			<key>Option Key Sends</key>
 			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>
@@ -5437,7 +5437,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-07-03T20:04:40Z</date>
+	<date>2016-07-07T18:15:07Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
@@ -5445,7 +5445,7 @@
 	<key>ShowBookmarkName</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
-	<false/>
+	<true/>
 	<key>ShowPaneTitles</key>
 	<false/>
 	<key>SmartPlacement</key>
