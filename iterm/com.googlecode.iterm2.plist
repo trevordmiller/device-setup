@@ -1534,7 +1534,7 @@
 		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
 		hAErATGG
 		</data>
-		<string>307</string>
+		<string>322</string>
 	</array>
 	<key>NSTableView Hidden Columns KeyBingingTable</key>
 	<array/>
@@ -1548,11 +1548,11 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>1920 393 1280 373 1920 360 1280 720 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>0 982 606 456 0 0 2560 1440 </string>
+	<string>0 426 796 473 0 0 1440 900 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>2560 818 700 622 2560 0 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>2560 126 2549 1314 2560 0 2560 1440 </string>
+	<string>237 75 810 602 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>3 416 890 652 0 0 1920 1080 </string>
 	<key>New Bookmarks</key>
@@ -5366,7 +5366,7 @@
 	<key>NoSyncTimeOfLastPromoDownload</key>
 	<real>477598409.49918097</real>
 	<key>OnlyWhenMoreTabs</key>
-	<true/>
+	<false/>
 	<key>OpenArrangementAtStartup</key>
 	<false/>
 	<key>OpenBookmark</key>
@@ -5419,7 +5419,7 @@
 	<key>Print In Black And White</key>
 	<true/>
 	<key>PromptOnQuit</key>
-	<true/>
+	<false/>
 	<key>QuitWhenAllWindowsClosed</key>
 	<false/>
 	<key>RightCommand</key>
@@ -5437,7 +5437,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-07-08T18:15:15Z</date>
+	<date>2016-07-11T17:02:25Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
