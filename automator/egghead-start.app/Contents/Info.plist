@@ -32,11 +32,11 @@
 	<key>CFBundleIconFile</key>
 	<string>AutomatorApplet</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.apple.automator.egghead</string>
+	<string>com.apple.automator.egghead-start</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>egghead</string>
+	<string>egghead-start</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
