@@ -35,6 +35,7 @@ alias rightthird move screenOriginX+screenSizeX/3*2;screenOriginY screenSizeX/3;
 # ==================================================================
 
 # LEFT MONITOR
+layout layout1 '1Password 6':REPEAT ${screen1}
 layout layout1 'Calendar':REPEAT ${screen1}
 layout layout1 'Todoist':REPEAT ${screen1}
 layout layout1 'Finder':REPEAT ${screen1}
