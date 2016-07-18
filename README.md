@@ -32,6 +32,7 @@ _Personal setup for new machines_
 - Sync iCloud account
 - Add Internet accounts (Facebook, Twitter)
 - Set up work and home Time Machine backups and ensure they work correctly
+- Set up "Text Message Forwarding" with Apple account and iPhone
 
 ## 3rd Party Stuff
 
