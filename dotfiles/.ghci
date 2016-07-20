@@ -1,2 +1,0 @@
-:set prompt "\ESC[1;35m%s\n\ESC[0;35mλ> \ESC[m"
-:set -Wall -fno-warn-type-defaults
