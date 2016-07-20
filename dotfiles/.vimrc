@@ -27,7 +27,6 @@ Plugin 'scrooloose/syntastic'
 Plugin 'othree/html5.vim'
 
 " JAVASCRIPT/JSX
-Plugin 'elzr/vim-json'
 Plugin 'pangloss/vim-javascript'
 Plugin 'salomvary/vim-eslint-compiler'
 Plugin 'mxw/vim-jsx'
