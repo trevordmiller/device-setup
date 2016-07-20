@@ -1,49 +1,40 @@
 " ==================================================================
-" PLUGINS (WITH VUNDLE)
+" PLUGINS
 " ==================================================================
 
-" VUNDLE SETUP START
+" PLUGIN SYSTEM SETUP START
 set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" PLUGIN MANAGEMENT
+" PLUGIN SYSTEM
 Plugin 'VundleVim/Vundle.vim'
 
-" EXTEND NETRW
+" PROJECT NAVIGATION
 Plugin 'tpope/vim-vinegar'
-
-" FUZZY FILE NAVIGATION
 Plugin 'ctrlpvim/ctrlp.vim'
 
-" QUICKFIX LIST BULK EDIT
+" PROJECT FIND & REPLACE
 Plugin 'Olical/vim-enmasse'
 
-" LINTING
+" SYNTAX CHECKING
 Plugin 'scrooloose/syntastic'
 
-" HTML
+" LANGUAGE EXTENSIONS
 Plugin 'othree/html5.vim'
-
-" JAVASCRIPT/JSX
 Plugin 'pangloss/vim-javascript'
 Plugin 'salomvary/vim-eslint-compiler'
 Plugin 'mxw/vim-jsx'
-
-" EXTEND %
 Plugin 'tmhedberg/matchit'
 
-" COLOR SCHEME
-Plugin 'chriskempson/base16-vim'
-
-" HARD MODE
-Plugin 'takac/vim-hardtime'
-
-" STAT TRACKING
+" TIME TRACKING
 Plugin 'wakatime/vim-wakatime'
 
-" VUNDLE SETUP END
+" AESTHETICS
+Plugin 'chriskempson/base16-vim'
+
+" PLUGIN SYSTEM SETUP END
 call vundle#end()
 filetype plugin on
 
@@ -53,12 +44,7 @@ filetype plugin on
 " ==================================================================
 
 " CTRLP
-" Index from initial directory opened with vim
 let g:ctrlp_working_path_mode = 0
-
-" VIM-JSX
-" Use JSX plugin on .js files
-let g:jsx_ext_required = 0
 
 " SYNTASTIC
 let g:syntastic_check_on_open = 1
@@ -67,58 +53,32 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_javascript_eslint_exec = 'eslint_d'
 
-" HARD MODE
-let g:hardtime_default_on = 1
-let g:list_of_normal_keys = ["h", "j", "k", "l", "+", "<UP>", "<DOWN>", "<LEFT>", "<RIGHT>"]
-let g:list_of_visual_keys = ["h", "j", "k", "l", "+", "<UP>", "<DOWN>", "<LEFT>", "<RIGHT>"]
-let g:list_of_disabled_keys = ["<UP>", "<DOWN>", "<LEFT>", "<RIGHT>"]
+" VIM-JSX
+let g:jsx_ext_required = 0
+
+
+" ==================================================================
+" ITERM SETTINGS
+" ==================================================================
+
+" CURSOR MODES
+let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+let &t_SR = "\<Esc>]50;CursorShape=2\x7"
+let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+
 
 " ==================================================================
 " CORE SETTINGS
 " ==================================================================
 
-" GENERAL MAPPINGS
-" Get rid of mapping I accidently hit a lot
-nmap K <nop>
-
-" MODE SWITCH SPEED
-set timeoutlen=1000 ttimeoutlen=10
-
-" CLIPBOARD
-" Automatically yank and paste from clipboard register ("*)
-set clipboard=unnamed
-
-" SWAP FILES
-set noswapfile
-
-" SYNTAX COLOR
-syntax enable
-set background=dark
-colorscheme base16-ocean
-
-" SPLITS
-set splitright
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
-
-" CURSOR MODES
-" Specific to iTerm2
-let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-let &t_SR = "\<Esc>]50;CursorShape=2\x7"
-let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+" MODES
+set timeoutlen=1000
+set ttimeoutlen=10
 
 " LINES
 set cursorline
 set nowrap
 set number
-
-" GOTO FILE
-" Allow use of `gf` with file imports that don't have an extension
-set suffixesadd+=.js
-
-" SCROLLOFF
 set scrolloff=5
 
 " TABS
@@ -133,26 +93,47 @@ set autoindent
 set smartindent
 set indentkeys+=O,o
 
-" STATUSLINE
-set laststatus=2
-
 " SEARCH
 set incsearch
 set ignorecase
 set smartcase
 set wrapscan
 
+" STATUS LINE
+set laststatus=2
+
+" WINDOW SPLITS
+set splitright
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" SWAP FILES
+set noswapfile
+
+" GOTO FILES
+set suffixesadd+=.js
+
 " WILD MENU
 set wildmenu
-set wildignore+=*/.git/*
-set wildignore+=*/cache/*
-set wildignore+=*/compiled/*
-set wildignore+=*/dist/*
-set wildignore+=*/node_modules/*
-set wildignore+=npm-debug.log
 set wildignore+=*.zip
 set wildignore+=*.png,*.jpg,*.gif
 set wildignore+=*.pdf
 set wildignore+=*.swp
+set wildignore+=*/.git/*
 set wildignore+=*DS_Store*
 set wildignore+=Icon
+set wildignore+=*/node_modules/*
+set wildignore+=npm-debug.log
+set wildignore+=*/cache/*
+set wildignore+=*/compiled/*
+set wildignore+=*/dist/*
+
+" CLIPBOARD
+set clipboard=unnamed
+
+" AESTHETICS
+syntax enable
+set background=dark
+colorscheme base16-ocean
