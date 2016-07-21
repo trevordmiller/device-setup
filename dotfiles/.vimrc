@@ -90,8 +90,6 @@ set indentkeys+=O,o
 
 " SEARCH
 set incsearch
-set ignorecase
-set smartcase
 set wrapscan
 
 " STATUS LINE
