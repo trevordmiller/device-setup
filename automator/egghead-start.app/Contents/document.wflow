@@ -1050,7 +1050,7 @@ end run</string>
 				<key>ActionName</key>
 				<string>Run AppleScript</string>
 				<key>ActionNameComment</key>
-				<string>Make iTerm fullscreen</string>
+				<string>Fullscreen iTerm</string>
 				<key>ActionParameters</key>
 				<dict>
 					<key>source</key>
