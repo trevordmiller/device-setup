@@ -28,9 +28,6 @@ function command_line_packages {
   # Package specific setup
   n stable
   npm install -g eslint_d
-  cd ~/
-  stack setup
-  stack install hdevtools
 }
 
 function dotfiles {
