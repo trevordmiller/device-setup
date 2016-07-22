@@ -15,7 +15,7 @@ function osx_system_settings {
 }
 
 
-function command_line_packages {
+function homebrew_packages {
 
   # Install Homebrew
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -24,11 +24,14 @@ function command_line_packages {
   for package in $1; do
     brew install $package
   done
+}
 
-  # Package specific setup
-  n stable
-  npm install -g eslint_d
-  npm install -g create-react-app
+function npm_packages {
+
+  # Use npm to install command line packages
+  for package in $1; do
+    npm install -g $package
+  done
 }
 
 function dotfiles {
@@ -50,22 +53,26 @@ function vim_plugins {
 
 function graphical_apps {
 
-  # Open Brew tap for Cask
+  # Use Homebrew Cask to install graphical apps
   brew tap caskroom/cask
-
-  # Use Cask to install graphical apps
   for app in $1; do
     brew cask install $app
   done
 }
 
 function bootstrap {
+
+  # Install all the things
   osx_system_settings
-  command_line_packages "bash git n node vim youtube-dl"
+  homebrew_packages "bash git n node vim youtube-dl"
+  npm_packages "eslint_d"
   dotfiles ".bash_profile .vimrc .git-prompt.sh .git-completion.sh .gitignore .gitconfig .npmrc .ghci .eslintrc .slate" ~/Google Drive/settings/dotfiles 
   vim_plugins
   graphical_apps "1password anki dash google-chrome google-drive google-photos-backup iterm2 karabiner screenflow seil sketch skitch slack slate spotify flux rescuetime iexplorer"
+
+  # Configure what was installed
+  n stable
 }
 
-# Run
+# Init
 bootstrap
