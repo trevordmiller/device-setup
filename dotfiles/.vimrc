@@ -70,6 +70,9 @@ let g:jsx_ext_required = 0
 set timeoutlen=1000
 set ttimeoutlen=10
 
+" KEYWORDS
+set iskeyword+=-
+
 " LINES
 set cursorline
 set nowrap
