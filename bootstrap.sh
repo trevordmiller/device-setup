@@ -28,6 +28,7 @@ function command_line_packages {
   # Package specific setup
   n stable
   npm install -g eslint_d
+  npm install -g create-react-app
 }
 
 function dotfiles {
