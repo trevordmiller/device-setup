@@ -190,7 +190,7 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>COMMAND_STRING</key>
-					<string>node killall</string>
+					<string>killall node</string>
 					<key>CheckedForUserDefaultShell</key>
 					<true/>
 					<key>inputMethod</key>
@@ -300,8 +300,6 @@
 						<string>4</string>
 					</dict>
 				</dict>
-				<key>conversionLabel</key>
-				<integer>0</integer>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
@@ -798,40 +796,40 @@ end run</string>
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>3AE7E86A-DBD8-407D-A0B5-AE03BA392F42</key>
+		<key>05F90FFD-F39A-4CFB-ACC7-076362EFADC3</key>
 		<dict>
 			<key>from</key>
-			<string>5BF3C43A-F925-4D6F-903A-D9EFB88F6144 - 5BF3C43A-F925-4D6F-903A-D9EFB88F6144</string>
-			<key>to</key>
-			<string>5C85920F-E6B6-4F05-BAF5-34A057EF525D - 5C85920F-E6B6-4F05-BAF5-34A057EF525D</string>
-		</dict>
-		<key>46E1323B-6785-4CB2-9896-1071C9A18776</key>
-		<dict>
-			<key>from</key>
-			<string>6A186097-36C7-4DF6-ADFD-3920A2005D21 - 6A186097-36C7-4DF6-ADFD-3920A2005D21</string>
-			<key>to</key>
 			<string>53B84CED-3729-4968-8738-304FA6DB3293 - 53B84CED-3729-4968-8738-304FA6DB3293</string>
+			<key>to</key>
+			<string>0EA46C9E-0C36-41DA-94D7-7FE4B378E84F - 0EA46C9E-0C36-41DA-94D7-7FE4B378E84F</string>
 		</dict>
-		<key>A8B0E499-FBFB-480E-BBD9-10D9A1ADFC0C</key>
+		<key>40E228BD-6107-46CB-9797-4EF8F6D4E699</key>
 		<dict>
 			<key>from</key>
 			<string>0EA46C9E-0C36-41DA-94D7-7FE4B378E84F - 0EA46C9E-0C36-41DA-94D7-7FE4B378E84F</string>
 			<key>to</key>
 			<string>8EFAFE28-C8E7-40BC-8084-6C4F6FBC5DE3 - 8EFAFE28-C8E7-40BC-8084-6C4F6FBC5DE3</string>
 		</dict>
-		<key>B9A6E16B-EA32-41DC-ADD2-A7622D287C99</key>
+		<key>74F22EED-9E85-496E-AE5B-DDCC7888033A</key>
+		<dict>
+			<key>from</key>
+			<string>5BF3C43A-F925-4D6F-903A-D9EFB88F6144 - 5BF3C43A-F925-4D6F-903A-D9EFB88F6144</string>
+			<key>to</key>
+			<string>5C85920F-E6B6-4F05-BAF5-34A057EF525D - 5C85920F-E6B6-4F05-BAF5-34A057EF525D</string>
+		</dict>
+		<key>90B3EF18-84EC-4299-AED0-4C997380F4CD</key>
 		<dict>
 			<key>from</key>
 			<string>5C85920F-E6B6-4F05-BAF5-34A057EF525D - 5C85920F-E6B6-4F05-BAF5-34A057EF525D</string>
 			<key>to</key>
 			<string>6A186097-36C7-4DF6-ADFD-3920A2005D21 - 6A186097-36C7-4DF6-ADFD-3920A2005D21</string>
 		</dict>
-		<key>D9093A6D-E506-486D-B44E-739F7EE5BE7C</key>
+		<key>A5575F15-39E9-4FDC-AEE5-43952717456A</key>
 		<dict>
 			<key>from</key>
-			<string>53B84CED-3729-4968-8738-304FA6DB3293 - 53B84CED-3729-4968-8738-304FA6DB3293</string>
+			<string>6A186097-36C7-4DF6-ADFD-3920A2005D21 - 6A186097-36C7-4DF6-ADFD-3920A2005D21</string>
 			<key>to</key>
-			<string>0EA46C9E-0C36-41DA-94D7-7FE4B378E84F - 0EA46C9E-0C36-41DA-94D7-7FE4B378E84F</string>
+			<string>53B84CED-3729-4968-8738-304FA6DB3293 - 53B84CED-3729-4968-8738-304FA6DB3293</string>
 		</dict>
 	</dict>
 	<key>workflowMetaData</key>
