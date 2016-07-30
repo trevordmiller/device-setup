@@ -1,48 +1,32 @@
 # trevordmiller/settings
 
-_Personal setup for new machines_
+_Personal device settings_
 
 ---
 
-# Setup
+# Desktop (macOS)
 
-- Set up SSH keys
-- Install Google Drive and clone this repo into the `~/Google\ Drive/` directory if it doesn't already exist
+## Automatic
+- Add GitHub SSH key
+- Install Google Drive
+- Clone this repo into the `~/Google\ Drive/` directory
+- Run the bootstrap script: `. ~/Google\ Drive/settings/bootstrap.sh`
 
----
-
-# Automatic
-
-- Run `. ~/Google\ Drive/settings/bootstrap.sh` to set up all the things
-
----
-
-# Manual
-
-## OSX Native App Settings
-
-- Finder sidebar should only have two items in it: `~/Google\ Drive` and `~/Downloads`
-- Set up local Google Drive sync and ensure it is backing up correctly
-- Automatically hide Dock and menu bar
-- Restore iCloud automator apps to dock
-- Turn on "Find My Mac"
+## Manual
+_Most things are automatically set up - these are the few outstanding manual items_
+- Install Todoist (Mac Store Only)
+- Install RDM [(online only](http://cl.ly/2A441v222i33/download/RDM.tar.gz)
+- Add accounts (iCloud, Facebook, Twitter)
+- Set up "Text Message Forwarding" with Apple account
 - Turn on "Do Not Disturb" schedule
-- Notification center widgets (calendar and tasks)
-- Notification center keyboard shortcut
-- Sync iCloud account
-- Add Internet accounts (Facebook, Twitter)
+- Turn on "Find My Mac"
+- Automatically hide Dock and menu bar
+- Add Notification center keyboard shortcut
+- Grant "Security & Privacy" control permissions
+- Finder sidebar should only have two items in it: `~/Google\ Drive` and `~/Downloads`
 - Set up work and home Time Machine backups and ensure they work correctly
-- Set up "Text Message Forwarding" with Apple account and iPhone
-
-## 3rd Party Stuff
-
-_Most 3rd party packages, graphical app installs, and settings were configured automatically by the `bootstrap.sh` script ^ - these are just the extra items that need to be done manually after that_
-
-- Download Todoist (Mac app store)
-- Download iMovie (Mac app store)
-- Download Docker for Mac [docker.com](https://docker.com) - unless Homebrew is caught up then update Homebrew `bootstrap.sh`
-- [Download RDM](http://cl.ly/2A441v222i33/download/RDM.tar.gz)
-- Add WakaTime API key to `~/.wakatime.cfg`
+- Set up local Google Drive sync and ensure it is backing up correctly
+- Configure Google Photos Backup to run automatically
 - Sync and update Karabiner settings:
     - Link `private.xml` with `~/Google\ Drive/settings/karabiner/private.xml`
     - "Key Repeat":
@@ -57,15 +41,13 @@ _Most 3rd party packages, graphical app installs, and settings were configured a
 - Sync Dash settings:
   - Sync settings to `~/Google\ Drive/settings/dash/Dash.dashsync`
   - Sync snippets to `~/Google\ Drive/settings/dash/snippets.dash`
-- Update Google Photos Backup to run automatically
-- Grant "Security & Privacy" control permissions to Automator, Dash, Karabiner, RescueTime, and Slate
+- Add WakaTime API key to `~/.wakatime.cfg`
 
 ---
 
-# Hardware
+# Keyboard (Pok3r)
 
-## Pok3r Keyboard
-
+# Manual
 - DIP switch 3: On (caps lock to fn)
 - Programming layer (Fn+R_Ctrl to start/stop recording)
   - VIM like HJKL
@@ -74,3 +56,51 @@ _Most 3rd party packages, graphical app installs, and settings were configured a
     - Up: FN + K then: FN + I then: PN
     - Right: already works ;)
     - Home: FN + I then: FN + H then: PN
+
+---
+
+## Mobile (iOS)
+
+# Manual
+- Add accounts
+  - iCloud
+  - Facebook
+  - Twitter
+- Set up "Text Message Forwarding" with Apple account
+- Turn on "Do Not Disturb" schedule
+- Turn on "Find My iPhone"
+- Install and configure apps
+  - Main
+    - Todoist
+    - _Calendar_
+    - _Mail_
+    - Google Drive
+    - _Health_
+    - MyFitnessPal
+    - Sleep Cycle
+    - Google Maps
+    - Spotify
+    - Gospel Library
+    - Anki
+    - _iBooks_
+    - Buffer
+    - Mint
+    - _Messages_
+    - _Phone_
+    - _Facetime_
+    - Photos
+    - YouTube
+    - Chrome
+    - _Settings_
+  - Background
+    - 1Password
+    - _Clock_
+      - Set alarms
+    - _Camera_
+    - _Contacts_
+    - _Find iPhone_
+    - Google Photos
+    - IF
+    - Nest
+    - Hidrate
+    - QS Access
