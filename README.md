@@ -52,7 +52,7 @@ _Most 3rd party packages, graphical app installs, and settings were configured a
 - Update Seil settings:
   - CAPS lock set to fn
 - Sync iTerm2 settings:
-  - Sync settings to `~/Google\ Drive/settings/iterm`
+  - Sync settings and color scheme with `~/Google\ Drive/settings/iterm` folder
   - Download and install the `Base16 iTerm2 Ocean Dark` color theme
 - Sync Dash settings:
   - Sync settings to `~/Google\ Drive/settings/dash/Dash.dashsync`
