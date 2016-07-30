@@ -47,8 +47,6 @@ _Most things are automatically set up with the bootstrap script - these are the 
 
 # Keyboard (Pok3r)
 
-# Manual
-
 - CAPS lock to FN (DIP switch 3 on)
 - Programming layer (Fn+R_Ctrl to start/stop recording)
   - VIM like HJKL
@@ -60,9 +58,7 @@ _Most things are automatically set up with the bootstrap script - these are the 
 
 ---
 
-## Mobile (iOS)
-
-# Manual
+# Mobile (iOS)
 
 - Account system logins (iCloud, Facebook, Twitter)
 - "Text Message Forwarding" (on)
