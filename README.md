@@ -71,6 +71,7 @@ _Most things are automatically set up with the bootstrap script - these are the 
 - "Restrictions" (on)
 - Auto brightness (on)
 - "Night Shift" schedule (8pm - 8am)
+- Install 1Password for app logins
 - Install and configure apps
   - Home screen
     - Todoist
@@ -83,9 +84,9 @@ _Most things are automatically set up with the bootstrap script - these are the 
     - Google Maps
     - Spotify
     - Gospel Library
-      - Sync with LDS account data
+      - LDS account data sync
     - Anki
-      - Sync with Anki web data
+      - Anki web data sync
     - _iBooks_
     - Buffer
     - Mint
@@ -99,11 +100,12 @@ _Most things are automatically set up with the bootstrap script - these are the 
   - Background folder
     - 1Password
     - _Clock_
-      - Set alarms
+      - Alarms (7am)
     - _Camera_
     - _Contacts_
     - _Find iPhone_
     - Google Photos
+      - Backup size (`Original`)
     - IF
     - Nest
     - Hidrate
