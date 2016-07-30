@@ -6,54 +6,51 @@ _Personal device settings_
 
 # Desktop (macOS)
 
+## Dependencies
+0. GitHub SSH key
+0. Google Drive install
+0. Clone this repo into the `~/Google\ Drive/` directory
+
 ## Automatic
-- Add GitHub SSH key
-- Install Google Drive
-- Clone this repo into the `~/Google\ Drive/` directory
-- Run the bootstrap script: `. ~/Google\ Drive/settings/bootstrap.sh`
+0. Run the bootstrap script (`. ~/Google\ Drive/settings/bootstrap.sh`)
 
 ## Manual
 _Most things are automatically set up - these are the few outstanding manual items_
-- Install Todoist (Mac Store Only)
-- Add accounts (iCloud, Facebook, Twitter)
-- Set up "Text Message Forwarding" with Apple account
-- Turn on "Do Not Disturb" schedule
-- Turn on "Find My Mac"
-- Automatically hide Dock and menu bar
-- Add Notification center keyboard shortcut
-- Grant "Security & Privacy" control permissions
-- Finder sidebar should only have two items in it: `~/Google\ Drive` and `~/Downloads`
-- Set up work and home Time Machine backups and ensure they work correctly
-- Set up local Google Drive sync and ensure it is backing up correctly
-- Configure Google Photos Backup to run automatically
-- Sync and update Karabiner settings:
-    - Link `private.xml` with `~/Google\ Drive/settings/karabiner/private.xml`
-    - "Key Repeat":
-        - Delay until repeat: 200ms
-        - Key Repeat: 20ms
-    - "Change f1...f12"
-- Update Seil settings:
-  - CAPS lock set to fn
-- Sync iTerm2 settings:
-  - Sync settings and color scheme with `~/Google\ Drive/settings/iterm` folder
-  - Download and install the `Base16 iTerm2 Ocean Dark` color theme
-- Sync Dash settings:
-  - Sync settings to `~/Google\ Drive/settings/dash/Dash.dashsync`
-  - Sync snippets to `~/Google\ Drive/settings/dash/snippets.dash`
-- Add WakaTime API key to `~/.wakatime.cfg`
+0. Todoist install (Mac Store Only)
+0. Account system logins (iCloud, Facebook, Twitter)
+0. "Text Message Forwarding" (on)
+0. "Do Not Disturb" schedule (10pm - 7am)
+0. "Find My Mac" (on)
+0. Dock auto hide (on)
+0. Menu Bar auto hide (on)
+0. Default browser (Chrome)
+0. Notification center keyboard shortcut (`⌘⌥⌃n`)
+0. "Security & Privacy" control permissions (on)
+0. Finder sidebar condense (`Google Drive`, `Downloads`, `AirDrop`)
+0. Google Photos Backup size (`Original`)
+0. Time Machine discs (`backup-home`, `backup-work`)
+0. Karabiner setting sync (`private.xml` with `~/Google\ Drive/settings/karabiner/private.xml`)
+0. Key repeat spacing (`Key repeat` to `20ms` in Karabiner)
+0. Key repeat delay (`Delay until repeat` to `200ms` in Karabiner)
+0. FN + media key use (`Change f1...f12` in Karabiner)
+0. Caps lock -> FN (CAPS lock to FN in Seil)
+0. iTerm settings and color scheme sync (`~/Google\ Drive/settings/iterm` folder)
+0. Dash settings and snippet sync (`~/Google\ Drive/settings/dash/` folder)
+0. WakaTime config (add API key to `~/.wakatime.cfg`)
+0. Backups working in background (Google Drive, Google Photos Backup, Time Machine external drives)
 
 ---
 
 # Keyboard (Pok3r)
 
 # Manual
-- DIP switch 3: On (caps lock to fn)
-- Programming layer (Fn+R_Ctrl to start/stop recording)
+0. CAPS lock to FN (DIP switch 3 on)
+0. Programming layer (Fn+R_Ctrl to start/stop recording)
   - VIM like HJKL
     - Left: FN + H then: FN + J then: PN
     - Down: FN + J then: FN + K then: PN
     - Up: FN + K then: FN + I then: PN
-    - Right: already works ;)
+    - Right: already works
     - Home: FN + I then: FN + H then: PN
 
 ---
@@ -61,15 +58,15 @@ _Most things are automatically set up - these are the few outstanding manual ite
 ## Mobile (iOS)
 
 # Manual
-- Add accounts
-  - iCloud
-  - Facebook
-  - Twitter
-- Set up "Text Message Forwarding" with Apple account
-- Turn on "Do Not Disturb" schedule
-- Turn on "Find My iPhone"
-- Install and configure apps
-  - Main
+0. Account system logins (iCloud, Facebook, Twitter)
+0. "Text Message Forwarding" (on)
+0. "Do Not Disturb" schedule (10pm - 7am)
+0. "Find My Phone" (on)
+0. "Restrictions" (on)
+0. Auto brightness (on)
+0. "Night Shift" schedule (8pm - 8am)
+0. Install and configure apps
+  - Home screen
     - Todoist
     - _Calendar_
     - _Mail_
@@ -80,7 +77,9 @@ _Most things are automatically set up - these are the few outstanding manual ite
     - Google Maps
     - Spotify
     - Gospel Library
+      - Sync with LDS account data
     - Anki
+      - Sync with Anki web data
     - _iBooks_
     - Buffer
     - Mint
@@ -91,7 +90,7 @@ _Most things are automatically set up - these are the few outstanding manual ite
     - YouTube
     - Chrome
     - _Settings_
-  - Background
+  - Background folder
     - 1Password
     - _Clock_
       - Set alarms
