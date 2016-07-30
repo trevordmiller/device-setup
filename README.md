@@ -15,7 +15,6 @@ _Personal device settings_
 ## Manual
 _Most things are automatically set up - these are the few outstanding manual items_
 - Install Todoist (Mac Store Only)
-- Install RDM [(online only](http://cl.ly/2A441v222i33/download/RDM.tar.gz)
 - Add accounts (iCloud, Facebook, Twitter)
 - Set up "Text Message Forwarding" with Apple account
 - Turn on "Do Not Disturb" schedule

@@ -68,7 +68,7 @@ function bootstrap {
   npm_packages "ava create-react-app eslint eslint_d"
   dotfiles ".bash_profile .vimrc .git-prompt.sh .git-completion.sh .gitignore .gitconfig .npmrc .ghci .eslintrc .slate" ~/Google Drive/settings/dotfiles 
   vim_plugins
-  graphical_apps "1password anki dash google-chrome google-drive google-photos-backup iterm2 karabiner screenflow seil sketch skitch slack slate spotify flux rescuetime iexplorer"
+  graphical_apps "1password anki dash google-chrome google-drive google-photos-backup iterm2 karabiner screenflow seil sketch skitch slack slate spotify switchresx flux rescuetime iexplorer"
 
   # Configure what was installed
   n stable
