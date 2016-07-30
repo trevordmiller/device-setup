@@ -7,15 +7,19 @@ _Personal device settings_
 # Desktop (macOS)
 
 ## Dependencies
+
 0. GitHub SSH key
 0. Google Drive install
 0. Clone this repo into the `~/Google\ Drive/` directory
 
 ## Automatic
+
 0. Run the bootstrap script (`. ~/Google\ Drive/settings/bootstrap.sh`)
 
 ## Manual
-_Most things are automatically set up - these are the few outstanding manual items_
+
+_Most things are automatically set up with the bootstrap script - these are the few outstanding manual items_
+
 0. Todoist install (Mac Store Only)
 0. Account system logins (iCloud, Facebook, Twitter)
 0. "Text Message Forwarding" (on)
@@ -44,6 +48,7 @@ _Most things are automatically set up - these are the few outstanding manual ite
 # Keyboard (Pok3r)
 
 # Manual
+
 0. CAPS lock to FN (DIP switch 3 on)
 0. Programming layer (Fn+R_Ctrl to start/stop recording)
   - VIM like HJKL
@@ -58,6 +63,7 @@ _Most things are automatically set up - these are the few outstanding manual ite
 ## Mobile (iOS)
 
 # Manual
+
 0. Account system logins (iCloud, Facebook, Twitter)
 0. "Text Message Forwarding" (on)
 0. "Do Not Disturb" schedule (10pm - 7am)
