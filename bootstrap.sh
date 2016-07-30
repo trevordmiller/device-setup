@@ -60,6 +60,15 @@ function graphical_apps {
   done
 }
 
+function fonts {
+
+  # Use Homebrew Cask to install fonts
+  brew tap caskroom/fonts
+  for font in $1; do
+    brew cask install $font
+  done
+}
+
 function bootstrap {
 
   # Install all the things
@@ -69,6 +78,7 @@ function bootstrap {
   dotfiles ".bash_profile .vimrc .git-prompt.sh .git-completion.sh .gitignore .gitconfig .npmrc .ghci .eslintrc .slate" ~/Google Drive/settings/dotfiles 
   vim_plugins
   graphical_apps "1password anki dash google-chrome google-drive google-photos-backup iterm2 karabiner screenflow seil sketch skitch slack slate spotify switchresx flux rescuetime iexplorer"
+  fonts "font-fira-mono"
 
   # Configure what was installed
   n stable
