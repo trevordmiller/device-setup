@@ -122,9 +122,12 @@ set wildignore+=*DS_Store*
 set wildignore+=Icon
 set wildignore+=*/node_modules/*
 set wildignore+=npm-debug.log
-set wildignore+=*/cache/*
-set wildignore+=*/compiled/*
+set wildignore+=.eslintcache
+set wildignore+=*/build/*
+set wildignore+=*/lib/*
 set wildignore+=*/dist/*
+set wildignore+=*/compiled/*
+set wildignore+=*/cache/*
 
 " CLIPBOARD
 set clipboard=unnamed
