@@ -81,7 +81,7 @@ function bootstrap {
   fonts "font-fira-mono"
 
   # Configure what was installed
-  n stable
+  n latest
 }
 
 # Init
