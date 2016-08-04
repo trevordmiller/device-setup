@@ -42,6 +42,13 @@ _Most things are automatically set up with the bootstrap script - these are the 
 - Dash settings and snippet sync (`~/Google\ Drive/settings/dash/` folder)
 - WakaTime config (add API key to `~/.wakatime.cfg`)
 - Backups working in background (Google Drive, Google Photos Backup, Time Machine external drives)
+- Chrome extensions
+  - 1Password
+  - Todoist
+  - Buffer
+  - Grammarly
+  - React DevTools
+  - Redux DevTools
 
 ---
 
