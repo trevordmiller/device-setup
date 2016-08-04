@@ -528,9 +528,9 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>2560 818 700 622 2560 0 2560 1440 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>2168 526 796 473 1920 0 1920 1080 </string>
+	<string>2949 772 918 512 2560 0 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1920 18 1920 1062 1920 0 1920 1080 </string>
+	<string>2560 6 2560 1434 2560 0 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>2 466 810 602 0 0 1920 1080 </string>
 	<key>New Bookmarks</key>
@@ -1678,7 +1678,7 @@
 			<key>Idle Code</key>
 			<integer>0</integer>
 			<key>Initial Text</key>
-			<string>clear &amp;&amp; eslint_d stop &amp;&amp; eslint_d start &amp;&amp; clear</string>
+			<string>clear</string>
 			<key>Jobs to Ignore</key>
 			<array>
 				<string>rlogin</string>
@@ -4654,6 +4654,8 @@
 			<true/>
 			<key>Use Italic Font</key>
 			<true/>
+			<key>Use Non-ASCII Font</key>
+			<false/>
 			<key>Vertical Spacing</key>
 			<real>1</real>
 			<key>Visual Bell</key>
@@ -4764,7 +4766,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-07-30T19:29:02Z</date>
+	<date>2016-08-03T16:21:31Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
