@@ -132,7 +132,7 @@
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>529.000000:322.000000</string>
+				<string>521.500000:322.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Quit All Applications.action/Contents/Resources/English.lproj/main.nib</string>
 			</dict>
@@ -190,8 +190,8 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>COMMAND_STRING</key>
-					<string>killall node
-killall phantomjs</string>
+					<string>killall node || true
+killall phantomjs || true</string>
 					<key>CheckedForUserDefaultShell</key>
 					<true/>
 					<key>inputMethod</key>
@@ -304,7 +304,7 @@ killall phantomjs</string>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>529.000000:505.000000</string>
+				<string>521.500000:505.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/English.lproj/main.nib</string>
 			</dict>
@@ -408,7 +408,7 @@ end run</string>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>529.000000:751.000000</string>
+				<string>521.500000:751.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -579,7 +579,7 @@ end run</string>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>529.000000:934.000000</string>
+				<string>521.500000:934.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/English.lproj/main.nib</string>
 			</dict>
@@ -747,12 +747,10 @@ end run</string>
 						<string>4</string>
 					</dict>
 				</dict>
-				<key>conversionLabel</key>
-				<integer>0</integer>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>529.000000:1117.000000</string>
+				<string>521.500000:1117.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/English.lproj/main.nib</string>
 			</dict>
@@ -856,7 +854,7 @@ end run</string>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>529.000000:1363.000000</string>
+				<string>521.500000:1363.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -960,7 +958,7 @@ end run</string>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>529.000000:1609.000000</string>
+				<string>521.500000:1609.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -970,47 +968,47 @@ end run</string>
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>2182E30C-8D33-46D6-937E-07135EC1C64B</key>
-		<dict>
-			<key>from</key>
-			<string>5C85920F-E6B6-4F05-BAF5-34A057EF525D - 5C85920F-E6B6-4F05-BAF5-34A057EF525D</string>
-			<key>to</key>
-			<string>6A186097-36C7-4DF6-ADFD-3920A2005D21 - 6A186097-36C7-4DF6-ADFD-3920A2005D21</string>
-		</dict>
-		<key>4A86F896-CA95-40FF-AF2A-38AA8EC7CE94</key>
+		<key>352283BF-4359-4E87-B763-7A9376D62772</key>
 		<dict>
 			<key>from</key>
 			<string>6A186097-36C7-4DF6-ADFD-3920A2005D21 - 6A186097-36C7-4DF6-ADFD-3920A2005D21</string>
 			<key>to</key>
 			<string>53B84CED-3729-4968-8738-304FA6DB3293 - 53B84CED-3729-4968-8738-304FA6DB3293</string>
 		</dict>
-		<key>8B76E65D-75DE-4F0B-ADCF-51013E79227C</key>
+		<key>3C88B38F-AB93-42B6-9489-54655FD150AC</key>
 		<dict>
 			<key>from</key>
 			<string>0BF82690-3889-4947-98B7-645BD631EF53 - 0BF82690-3889-4947-98B7-645BD631EF53</string>
 			<key>to</key>
 			<string>0EA46C9E-0C36-41DA-94D7-7FE4B378E84F - 0EA46C9E-0C36-41DA-94D7-7FE4B378E84F</string>
 		</dict>
-		<key>BAEEA755-931E-44F1-A063-2FEC8B72E190</key>
-		<dict>
-			<key>from</key>
-			<string>5BF3C43A-F925-4D6F-903A-D9EFB88F6144 - 5BF3C43A-F925-4D6F-903A-D9EFB88F6144</string>
-			<key>to</key>
-			<string>5C85920F-E6B6-4F05-BAF5-34A057EF525D - 5C85920F-E6B6-4F05-BAF5-34A057EF525D</string>
-		</dict>
-		<key>D7B3CD40-B097-4C98-A6E0-5643FA11B55B</key>
+		<key>6053F541-751B-4F3C-BEF9-425A6110F179</key>
 		<dict>
 			<key>from</key>
 			<string>53B84CED-3729-4968-8738-304FA6DB3293 - 53B84CED-3729-4968-8738-304FA6DB3293</string>
 			<key>to</key>
 			<string>0BF82690-3889-4947-98B7-645BD631EF53 - 0BF82690-3889-4947-98B7-645BD631EF53</string>
 		</dict>
-		<key>EA0255E8-624E-4C6C-870B-D88CC4FC9998</key>
+		<key>6EAD705D-1A5A-441A-8640-1BD9B481729E</key>
 		<dict>
 			<key>from</key>
 			<string>0EA46C9E-0C36-41DA-94D7-7FE4B378E84F - 0EA46C9E-0C36-41DA-94D7-7FE4B378E84F</string>
 			<key>to</key>
 			<string>8EFAFE28-C8E7-40BC-8084-6C4F6FBC5DE3 - 8EFAFE28-C8E7-40BC-8084-6C4F6FBC5DE3</string>
+		</dict>
+		<key>7E7B4774-5651-4987-97BD-FC51AEB08260</key>
+		<dict>
+			<key>from</key>
+			<string>5C85920F-E6B6-4F05-BAF5-34A057EF525D - 5C85920F-E6B6-4F05-BAF5-34A057EF525D</string>
+			<key>to</key>
+			<string>6A186097-36C7-4DF6-ADFD-3920A2005D21 - 6A186097-36C7-4DF6-ADFD-3920A2005D21</string>
+		</dict>
+		<key>A3C6A4CB-E4DB-44AD-B72A-F70239595258</key>
+		<dict>
+			<key>from</key>
+			<string>5BF3C43A-F925-4D6F-903A-D9EFB88F6144 - 5BF3C43A-F925-4D6F-903A-D9EFB88F6144</string>
+			<key>to</key>
+			<string>5C85920F-E6B6-4F05-BAF5-34A057EF525D - 5C85920F-E6B6-4F05-BAF5-34A057EF525D</string>
 		</dict>
 	</dict>
 	<key>workflowMetaData</key>
