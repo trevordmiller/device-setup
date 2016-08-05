@@ -528,11 +528,11 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>2560 818 700 622 2560 0 2560 1440 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>2949 772 918 512 2560 0 2560 1440 </string>
+	<string>389 750 918 495 0 0 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>2560 6 2560 1434 2560 0 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>2 466 810 602 0 0 1920 1080 </string>
+	<string>235 -66 2556 1431 0 0 2560 1440 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -4121,7 +4121,7 @@
 			<key>Custom Command</key>
 			<string>No</string>
 			<key>Custom Directory</key>
-			<string>Yes</string>
+			<string>Recycle</string>
 			<key>Default Bookmark</key>
 			<string>No</string>
 			<key>Disable Printing</key>
@@ -4477,7 +4477,7 @@
 			<key>Mouse Reporting</key>
 			<true/>
 			<key>Name</key>
-			<string>egghead</string>
+			<string>demo</string>
 			<key>Non Ascii Font</key>
 			<string>FiraMono-Regular 32</string>
 			<key>Non-ASCII Anti Aliased</key>
@@ -4663,7 +4663,7 @@
 			<key>Window Type</key>
 			<integer>0</integer>
 			<key>Working Directory</key>
-			<string>~/Google Drive/personal/eggheadio/</string>
+			<string></string>
 		</dict>
 	</array>
 	<key>NoSyncCommandHistoryHasEverBeenUsed</key>
@@ -4766,7 +4766,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-08-03T16:21:31Z</date>
+	<date>2016-08-04T16:21:36Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
