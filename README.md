@@ -111,5 +111,4 @@ _Most things are automatically set up with the bootstrap script - these are the 
       - Backup size (`Original`)
     - IF
     - Nest
-    - Hidrate
     - QS Access
