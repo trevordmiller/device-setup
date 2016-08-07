@@ -44,7 +44,7 @@
 		<key>positionOfDivider</key>
 		<real>781</real>
 		<key>savedFrame</key>
-		<string>0 37 1920 1043 0 0 1920 1080 </string>
+		<string>1920 37 1920 1043 1920 0 1920 1080 </string>
 		<key>selectedTab</key>
 		<string>result</string>
 	</dict>
