@@ -27,6 +27,8 @@ _Most things are automatically set up with the bootstrap script - these are the 
 - "Find My Mac" (on)
 - Dock auto hide (on)
 - Menu Bar auto hide (on)
+- Prevent computer from sleeping automatically when dislpay is off (on)
+- Power adapter, turn display off after (never)
 - Default browser (Chrome)
 - Notification center keyboard shortcut (`⌘⌥⌃n`)
 - "Security & Privacy" control permissions (on)
