@@ -23,7 +23,9 @@ _Most things are automatically set up with the bootstrap script - these are the 
 - Todoist install (Mac Store Only)
 - Account system logins (iCloud, Facebook, Twitter)
 - "Text Message Forwarding" (on)
-- "Do Not Disturb" schedule (10pm - 7am)
+- "Do Not Disturb" when display is sleeping (on)
+- "Do Not Disturb" when mirroring to TVs and projectors (on)
+- "Do Not Disturb" allow repeated calls (on)
 - "Find My Mac" (on)
 - Dock auto hide (on)
 - Menu Bar auto hide (on)
@@ -32,6 +34,9 @@ _Most things are automatically set up with the bootstrap script - these are the 
 - Default browser (Chrome)
 - Notification center keyboard shortcut (`⌘⌥⌃n`)
 - "Security & Privacy" control permissions (on)
+- "Glass" sound for alerts
+- Alert volume (full)
+- "Popcorn" sound for messages
 - Finder sidebar condense (`Google Drive`, `Downloads`, `AirDrop`)
 - Google Photos Backup size (`Original`)
 - Time Machine discs (`backup-home`, `backup-work`)
@@ -72,6 +77,7 @@ _Most things are automatically set up with the bootstrap script - these are the 
 - Account system logins (iCloud, Facebook, Twitter)
 - "Text Message Forwarding" (on)
 - "Do Not Disturb" schedule (10pm - 7am)
+- "Do Not Disturb" allow favorites (on)
 - "Find My Phone" (on)
 - "Restrictions" (on)
 - Auto brightness (on)
