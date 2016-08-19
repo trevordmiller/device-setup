@@ -54,7 +54,6 @@ function vim_plugins {
 function graphical_apps {
 
   # Use Homebrew Cask to install graphical apps
-  brew tap caskroom/cask
   for app in $1; do
     brew cask install $app
   done
