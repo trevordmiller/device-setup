@@ -73,7 +73,7 @@ function bootstrap {
 
   # Install all the things
   osx_system_settings
-  homebrew_packages "bash git n node vim"
+  homebrew_packages "bash git heroku n node vim"
   npm_packages "create-react-app eslint eslint_d eslint-plugin-react"
   dotfiles ".bash_profile .vimrc .git-prompt.sh .git-completion.sh .gitignore .gitconfig .npmrc .eslintrc .slate" ~/Google Drive/settings/dotfiles 
   vim_plugins
