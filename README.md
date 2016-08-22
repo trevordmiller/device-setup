@@ -8,7 +8,6 @@ _Personal device settings_
 
 ## Dependencies
 
-- GitHub SSH key
 - Google Drive install
 - Clone this repo into the `~/Google\ Drive/` directory
 
