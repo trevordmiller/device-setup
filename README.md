@@ -53,6 +53,7 @@ _Most things are automatically set up with the bootstrap script - these are the 
   - Todoist
   - Buffer
   - Grammarly
+  - JSON Formatter
   - React DevTools
   - Redux DevTools
 
