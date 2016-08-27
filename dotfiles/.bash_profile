@@ -1,36 +1,22 @@
 # ==================================================================
-# VI BINDINGS
-# ==================================================================
-
-set -o vi
-
-
-# ==================================================================
 # PATH
 # ==================================================================
 
-# VARIABLES
 SCRIPTS_PATH="$HOME/Google Drive/settings/scripts"
 HOMEBREW_PATH="/usr/local/bin"
-NPM_PATH="./node_modules/.bin"
-
-# PATH ADDITIONS
-export PATH="$SCRIPTS_PATH:$HOMEBREW_PATH:$NPM_PATH:$PATH"
+PROJECT_NPM_PATH="./node_modules/.bin"
+export PATH="$PATH:$SCRIPTS_PATH:$HOMEBREW_PATH:$PROJECT_NPM_PATH"
 
 
 # ==================================================================
 # PROMPT
 # ==================================================================
 
-# DEPENDENCIES
-source ~/.git-completion.sh
-source ~/.git-prompt.sh
-export GIT_PS1_SHOWDIRTYSTATE=1
-
-# VARIABLES
+# SYMBOLS
 WORKING_DIRECTORY="\W"
 PROMPT_SYMBOL="\$"
-GIT_BRANCH='$(__git_ps1 "[%s]")'
+
+# COLOR
 COLOR_BASE="\[$(tput sgr0)\]"
 COLOR_BLACK="\[$(tput setaf 0)\]"
 COLOR_RED="\[$(tput setaf 1)\]"
@@ -43,5 +29,18 @@ COLOR_WHITE="\[$(tput setaf 7)\]"
 COLOR_ORANGE="\[$(tput setaf 9)\]"
 COLOR_VIOLET="\[$(tput setaf 13)\]"
 
-# OUTPUT
+# GIT
+source ~/.git-completion.sh
+source ~/.git-prompt.sh
+export GIT_PS1_SHOWDIRTYSTATE=1
+GIT_BRANCH='$(__git_ps1 "[%s]")'
+
+# RENDER
 export PS1="$COLOR_CYAN$WORKING_DIRECTORY$COLOR_YELLOW$GIT_BRANCH$COLOR_CYAN$PROMPT_SYMBOL$COLOR_BASE "
+
+
+# ==================================================================
+# VI BINDINGS
+# ==================================================================
+
+set -o vi
