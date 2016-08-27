@@ -50,6 +50,7 @@ _Most things are automatically set up with the bootstrap script - these are the 
 - Backups working in background (Google Drive, Google Photos Backup, Time Machine external drives)
 - Chrome extensions
   - 1Password
+  - Privacy.com
   - Todoist
   - Buffer
   - Grammarly
