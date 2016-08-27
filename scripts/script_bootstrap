@@ -72,7 +72,7 @@ function bootstrap {
   osx_system_settings
   homebrew_packages "bash git heroku n node vim"
   npm_packages "create-react-app eslint eslint_d eslint-plugin-react"
-  dotfiles ".bash_profile .vimrc .git-prompt.sh .git-completion.sh .gitignore .gitconfig .npmrc .eslintrc .slate" ~/Google Drive/settings/dotfiles 
+  dotfiles ".bash_profile .bashrc .vimrc .git-prompt.sh .git-completion.sh .gitignore .gitconfig .npmrc .eslintrc .slate" ~/Google Drive/settings/dotfiles 
   vim_plugins
   graphical_apps "1password anki dash google-chrome google-drive google-photos-backup iterm2 karabiner screenflow seil sketch skitch slack slate spotify switchresx flux rescuetime iexplorer"
   fonts "font-fira-mono"
