@@ -135,5 +135,6 @@ set clipboard=unnamed
 
 " AESTHETICS
 syntax enable
-set background=dark
+set t_Co=256
+set termguicolors
 colorscheme base16-ocean
