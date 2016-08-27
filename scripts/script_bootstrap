@@ -1,6 +1,4 @@
 #!/bin/bash
-
-# Bash strict mode
 set -euo pipefail
 
 function osx_system_settings {

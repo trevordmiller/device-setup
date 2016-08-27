@@ -13,11 +13,11 @@ _Personal device settings_
 
 ## Automatic
 
-- Run the bootstrap script (`. ~/Google\ Drive/settings/bootstrap.sh`)
+- Run the bootstrap script (`. ~/Google\ Drive/settings/scripts/script_bootstrap.sh`)
 
 ## Manual
 
-_Most things are automatically set up with the bootstrap script - these are the few outstanding manual items_
+_Most things are automatically set up with the bootstrap script ^, but these are the few outstanding manual items_
 
 - Todoist install (Mac Store Only)
 - Account system logins (iCloud, Facebook, Twitter)

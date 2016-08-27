@@ -10,11 +10,12 @@ set -o vi
 # ==================================================================
 
 # VARIABLES
+SCRIPTS_PATH="$HOME/Google Drive/settings/scripts"
 HOMEBREW_PATH="/usr/local/bin"
 NPM_PATH="./node_modules/.bin"
 
 # PATH ADDITIONS
-export PATH="$HOMEBREW_PATH:$NPM_PATH:$PATH"
+export PATH="$SCRIPTS_PATH:$HOMEBREW_PATH:$NPM_PATH:$PATH"
 
 
 # ==================================================================
@@ -44,22 +45,3 @@ COLOR_VIOLET="\[$(tput setaf 13)\]"
 
 # OUTPUT
 export PS1="$COLOR_CYAN$WORKING_DIRECTORY$COLOR_YELLOW$GIT_BRANCH$COLOR_CYAN$PROMPT_SYMBOL$COLOR_BASE "
-
-
-# ==================================================================
-# FUNCTIONS
-# ==================================================================
-
-script_software_update () {
-  echo "Updating Homebrew packages and Cask graphical apps"
-  brew update && brew upgrade
-  echo "Updating Node"
-  n latest
-  echo "Updating npm packages"
-  npm update -g
-  echo "Updating Vim plugins"
-  vim +PluginInstall +PluginClean +qall
-  echo "Updating Mac"
-  sudo softwareupdate -iva
-  echo "Software update complete!"
-}

@@ -1,0 +1,81 @@
+#!/usr/bin/env osascript
+
+-- ==================================================================
+-- PROGRESS
+-- ==================================================================
+
+set progress description to "Quit All"
+set progress total steps to 3
+property progressSteps : 0
+on updateProgress(description)
+	delay 1
+	set progress additional description to description
+	set progressSteps to progressSteps + 1
+	set progress completed steps to progressSteps
+end updateProgress
+
+
+-- ==================================================================
+-- CLEAN
+-- ==================================================================
+
+updateProgress("Cleaning directories")
+
+-- Delete contents of Downloads folder
+do shell script "rm -rf ~/Downloads/*"
+
+-- Delete all extra node_modules folders
+do shell script "find ~/'Google Drive' -name 'node_modules' -type d -exec rm -r '{}' ';' || true"
+
+-- Empty trash
+tell application "Finder"
+	empty the trash
+end tell
+
+
+-- ==================================================================
+-- EJECT
+-- ==================================================================
+
+updateProgress("Ejecting devices")
+
+-- Eject plugged-in devices
+try
+	tell application "Finder"
+		eject the disks
+	end tell
+on error
+	display dialog ("Error: A device couldn't be ejected!") buttons {"Ok"} with icon caution
+end try
+
+
+-- ==================================================================
+-- QUIT
+-- ==================================================================
+
+updateProgress("Quitting processes and apps")
+
+-- Kill running processes
+set processes to {"node", "phantomjs"}
+repeat with process in processes
+	do shell script "killall " & process & " || true"
+end repeat
+
+-- Close running applications
+tell application "System Events" to set the visible of every process to true
+set white_list to {"Finder"}
+try
+	tell application "Finder"
+		set process_list to the name of every process whose visible is true
+	end tell
+	repeat with i from 1 to (number of items in process_list)
+		set this_process to item i of the process_list
+		if this_process is not in white_list then
+			tell application this_process
+				quit
+			end tell
+		end if
+	end repeat
+on error
+	display dialog ("Error: An app couldn't be closed!") buttons {"Ok"} with icon caution
+end try

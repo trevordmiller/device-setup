@@ -1,0 +1,74 @@
+#!/usr/bin/env osascript
+
+-- ==================================================================
+-- PROGRESS
+-- ==================================================================
+
+set progress description to "Domo"
+set progress total steps to 2
+property progressSteps : 0
+on updateProgress(description)
+	delay 1
+	set progress additional description to description
+	set progressSteps to progressSteps + 1
+	set progress completed steps to progressSteps
+end updateProgress
+
+
+-- ==================================================================
+-- START
+-- ==================================================================
+
+updateProgress("Starting apps and processes")
+
+-- Open native apps
+set nativeApps to {"Todoist", "iTerm", "Google Chrome", "Calendar", "Spotify", "Messages", "Mail", "Dash"}
+repeat with nativeApp in nativeApps
+	run application nativeApp
+end repeat
+
+-- Open web apps
+set webApps to {"https://domo.demo.domo.com", "https://domo.okta.com/home/jira_onprem/0oa1moe1d0joaWP4P0x7/3549", "http://localhost:3000"}
+repeat with webApp in webApps
+	do shell script "open " & webApp
+end repeat
+
+
+-- ==================================================================
+-- CONFIGURE
+-- ==================================================================
+
+updateProgress("Configuring settings")
+
+-- Open terminal/editor window arrangment
+delay 1
+tell application "iTerm"
+	activate
+	tell application "System Events"
+		keystroke "r" using {command down, shift down}
+	end tell
+end tell
+
+-- Run window manager
+delay 1
+tell application "System Events"
+	key code 18 using {command down, option down, control down}
+end tell
+
+-- Fullscreen terminal/editor
+delay 1
+tell application "iTerm" to activate
+tell application "System Events"
+	key code 36 using {command down}
+end tell
+
+-- Open Dev Tools
+delay 1
+tell application "Google Chrome" to activate
+set devToolsTabs to {1, 3}
+repeat with devToolsTab in devToolsTabs
+	tell application "Google Chrome" to set active tab index of first window to devToolsTab
+	tell application "System Events"
+		keystroke "i" using {command down, option down}
+	end tell
+end repeat

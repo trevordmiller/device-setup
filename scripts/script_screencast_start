@@ -1,0 +1,94 @@
+#!/usr/bin/env osascript
+
+-- ==================================================================
+-- PROGRESS
+-- ==================================================================
+
+set progress description to "Screencast Start"
+set progress total steps to 3
+property progressSteps : 0
+on updateProgress(description)
+	delay 1
+	set progress additional description to description
+	set progressSteps to progressSteps + 1
+	set progress completed steps to progressSteps
+end updateProgress
+
+
+-- ==================================================================
+-- QUIT
+-- ==================================================================
+
+updateProgress("Quitting apps and processes")
+
+-- Quit native apps
+set nativeApps to {"Flux"}
+repeat with nativeApp in nativeApps
+	tell application nativeApp to quit
+end repeat
+
+
+-- ==================================================================
+-- START
+-- ==================================================================
+
+updateProgress("Starting apps and processes")
+
+-- Open native apps
+set nativeApps to {"Google Chrome", "SwitchResX Daemon", "ScreenFlow", "Todoist", "iTerm"}
+repeat with nativeApp in nativeApps
+	run application nativeApp
+end repeat
+
+-- Open web apps
+set webApps to {"https://github.com/trevordmiller?tab=repositories"}
+repeat with webApp in webApps
+	do shell script "open " & webApp
+end repeat
+
+
+-- ==================================================================
+-- CONFIGURE
+-- ==================================================================
+
+updateProgress("Configuring settings")
+
+-- Switch second monitor's screen resolution to 1280x720 HiDPI
+delay 1
+tell application "SwitchResX Daemon"
+	set res to modes of display 2 whose (width = 1280 and height = 720 and definition = 2)
+	set current mode of display 2 to first item of res
+end tell
+
+-- Open terminal/editor profile
+delay 1
+tell application "iTerm"
+	create window with profile "demo"
+end tell
+
+-- Run window manager
+delay 1
+tell application "System Events"
+	key code 18 using {command down, option down, control down}
+end tell
+
+-- Fullscreen terminal/editor
+delay 1
+tell application "iTerm" to activate
+tell application "System Events"
+	key code 36 using {command down}
+end tell
+
+-- Turn off notifications
+delay 1
+tell application "System Events"
+	tell application process "SystemUIServer"
+		try
+			key down option
+			click menu bar item "Notification Center" of menu bar 2
+			key up option
+		on error
+			key up option
+		end try
+	end tell
+end tell
