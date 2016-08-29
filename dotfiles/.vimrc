@@ -32,7 +32,7 @@ Plugin 'tmhedberg/matchit'
 Plugin 'wakatime/vim-wakatime'
 
 " AESTHETICS
-Plugin 'chriskempson/base16-vim'
+Plugin 'joshdick/onedark.vim'
 
 " PLUGIN SYSTEM SETUP END
 call vundle#end()
@@ -101,10 +101,10 @@ set laststatus=2
 
 " WINDOW SPLITS
 set splitright
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
+nnoremap <c-h> <c-w>h
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-l> <c-w>l
 
 " SWAP FILES
 set noswapfile
@@ -134,7 +134,6 @@ set wildignore+=*/cache/*
 set clipboard=unnamed
 
 " AESTHETICS
-syntax enable
-set t_Co=256
 set termguicolors
-colorscheme base16-ocean
+syntax on
+colorscheme onedark

@@ -22,7 +22,7 @@ end updateProgress
 updateProgress("Starting apps and processes")
 
 -- Open native apps
-set nativeApps to {"Todoist", "iTerm", "Google Chrome", "Calendar", "Spotify", "Messages", "Mail", "Dash"}
+set nativeApps to {"Todoist", "HyperTerm", "Google Chrome", "Calendar", "Spotify", "Messages", "Mail", "Dash"}
 repeat with nativeApp in nativeApps
 	run application nativeApp
 end repeat
@@ -40,14 +40,8 @@ end repeat
 
 updateProgress("Configuring settings")
 
--- Open terminal/editor window arrangment
-delay 1
-tell application "iTerm"
-	activate
-	tell application "System Events"
-		keystroke "r" using {command down, shift down}
-	end tell
-end tell
+-- Open terminal/editor session
+do shell script "script_tmux_domo"
 
 -- Run window manager
 delay 1
@@ -57,9 +51,9 @@ end tell
 
 -- Fullscreen terminal/editor
 delay 1
-tell application "iTerm" to activate
+tell application "HyperTerm" to activate
 tell application "System Events"
-	key code 36 using {command down}
+	keystroke "f" using {command down, control down}
 end tell
 
 -- Open Dev Tools

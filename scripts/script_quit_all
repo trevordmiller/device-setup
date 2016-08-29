@@ -61,6 +61,9 @@ repeat with process in processes
 	do shell script "killall " & process & " || true"
 end repeat
 
+-- Kill tmux sessions and windows
+tmux kill-server
+
 -- Close running applications
 tell application "System Events" to set the visible of every process to true
 set white_list to {"Finder"}

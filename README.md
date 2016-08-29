@@ -44,7 +44,6 @@ _Most things are automatically set up with the bootstrap script ^, but these are
 - Key repeat delay (`Delay until repeat` to `200ms` in Karabiner)
 - FN + media key use (`Change f1...f12` in Karabiner)
 - Caps lock -> FN (CAPS lock to FN in Seil)
-- iTerm settings and color scheme sync (`~/Google\ Drive/settings/iterm` folder)
 - Dash settings and snippet sync (`~/Google\ Drive/settings/dash/` folder)
 - WakaTime config (add API key to `~/.wakatime.cfg`)
 - Backups working in background (Google Drive, Google Photos Backup, Time Machine external drives)

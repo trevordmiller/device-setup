@@ -62,7 +62,7 @@ end tell
 updateProgress("Quitting apps and processes")
 
 -- Quit native apps
-set nativeApps to {"Google Chrome", "SwitchResX Daemon", "ScreenFlow", "Todoist", "iTerm"}
+set nativeApps to {"Google Chrome", "SwitchResX Daemon", "ScreenFlow", "Todoist"}
 repeat with nativeApp in nativeApps
 	tell application nativeApp to quit
 end repeat
