@@ -28,8 +28,8 @@ do shell script "rm -rf ~/Downloads/*"
 do shell script "find ~/'Google Drive' -name 'node_modules' -type d -exec rm -r '{}' ';' || true"
 
 -- Empty trash
-tell application "Finder"
-	empty the trash
+tell application "Finder" 
+  empty the trash
 end tell
 
 
@@ -62,7 +62,7 @@ repeat with process in processes
 end repeat
 
 -- Kill tmux sessions and windows
-tmux kill-server
+do shell script "tmux kill-server"
 
 -- Close running applications
 tell application "System Events" to set the visible of every process to true
