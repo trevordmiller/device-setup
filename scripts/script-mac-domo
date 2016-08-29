@@ -41,7 +41,7 @@ end repeat
 updateProgress("Configuring settings")
 
 -- Open terminal/editor session
-do shell script "script_tmux_domo"
+do shell script "script-tmux-domo"
 
 -- Run window manager
 delay 1

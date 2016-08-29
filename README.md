@@ -13,7 +13,7 @@ _Personal device settings_
 
 ## Automatic
 
-- Run the bootstrap script (`. ~/Google\ Drive/settings/scripts/script_bootstrap.sh`)
+- Run the bootstrap script (`. ~/Google\ Drive/settings/scripts/script-bash-bootstrap`)
 
 ## Manual
 
