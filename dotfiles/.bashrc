@@ -40,7 +40,9 @@ export PS1="$COLOR_CYAN$WORKING_DIRECTORY$COLOR_YELLOW$GIT_BRANCH$COLOR_CYAN$PRO
 
 
 # ==================================================================
-# VI BINDINGS
+# VIM
 # ==================================================================
 
+export VISUAL=vim
+export EDITOR="$VISUAL"
 set -o vi
