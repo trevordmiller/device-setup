@@ -1,6 +1,10 @@
 #!/bin/bash
 set -euo pipefail
 
+function shell {
+  chsh -s /bin/bash
+}
+
 function hidden_files {
   defaults write com.apple.finder AppleShowAllFiles YES
   killall Finder
@@ -49,6 +53,7 @@ function vim_plugins {
   vim +PluginInstall +qall
 }
 
+shell
 hidden_files
 screenshots
 homebrew_packages "bash git heroku n node tmux vim"
