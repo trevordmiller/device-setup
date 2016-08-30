@@ -26,8 +26,6 @@ COLOR_BLUE="\[$(tput setaf 4)\]"
 COLOR_MAGENTA="\[$(tput setaf 5)\]"
 COLOR_CYAN="\[$(tput setaf 6)\]"
 COLOR_WHITE="\[$(tput setaf 7)\]"
-COLOR_ORANGE="\[$(tput setaf 9)\]"
-COLOR_VIOLET="\[$(tput setaf 13)\]"
 
 # GIT
 source ~/.git-completion.sh
@@ -36,7 +34,7 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 GIT_BRANCH='$(__git_ps1 "[%s]")'
 
 # RENDER
-export PS1="$COLOR_CYAN$WORKING_DIRECTORY$COLOR_YELLOW$GIT_BRANCH$COLOR_CYAN$PROMPT_SYMBOL$COLOR_BASE "
+export PS1="$COLOR_CYAN$WORKING_DIRECTORY$COLOR_BLUE$GIT_BRANCH$COLOR_CYAN$PROMPT_SYMBOL$COLOR_BASE "
 
 
 # ==================================================================
