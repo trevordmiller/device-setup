@@ -1,0 +1,18 @@
+#!/usr/bin/env osascript
+
+set nativeApps to {"Flux"}
+repeat with nativeApp in nativeApps
+	run application nativeApp
+end repeat
+
+delay 1
+tell application "SwitchResX Daemon"
+	set current mode of display 2 to mode 1 of display 2
+end tell
+
+do shell script "script-donotdisturb-reset"
+
+set nativeApps to {"Google Chrome", "SwitchResX Daemon", "ScreenFlow", "Todoist"}
+repeat with nativeApp in nativeApps
+	tell application nativeApp to quit
+end repeat

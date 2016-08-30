@@ -1,0 +1,59 @@
+#!/bin/bash
+set -euo pipefail
+
+function hidden_files {
+  defaults write com.apple.finder AppleShowAllFiles YES
+  killall Finder
+}
+
+function screenshots {
+  defaults write com.apple.screencapture location ~/Downloads
+  killall SystemUIServer
+}
+
+function homebrew_packages {
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  for package in $1; do
+    brew install $package
+  done
+}
+
+function graphical_apps {
+  for app in $1; do
+    brew cask install $app
+  done
+}
+
+function fonts {
+  brew tap caskroom/fonts
+  for font in $1; do
+    brew cask install $font
+  done
+}
+
+function npm_packages {
+  for package in $1; do
+    npm install -g $package
+  done
+  n latest
+}
+
+function symlink_dotfiles {
+  for file in $1; do
+    ln -s $2/$file ~/$file
+  done
+}
+
+function vim_plugins {
+  git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+  vim +PluginInstall +qall
+}
+
+hidden_files
+screenshots
+homebrew_packages "bash git heroku n node tmux vim"
+graphical_apps "1password anki dash google-chrome google-drive google-photos-backup hyperterm karabiner screenflow seil sketch skitch slack slate spotify switchresx flux rescuetime iexplorer"
+fonts "font-fira-mono"
+npm_packages "create-react-app eslint eslint_d eslint-plugin-react"
+symlink_dotfiles ".bash_profile .bashrc .vimrc .git-prompt.sh .git-completion.sh .gitignore .gitconfig .hyperterm.js .npmrc .eslintrc .slate .tmux.conf" ~/Google Drive/settings/dotfiles 
+vim_plugins

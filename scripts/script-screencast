@@ -1,0 +1,36 @@
+#!/usr/bin/env osascript
+
+set nativeApps to {"Flux"}
+repeat with nativeApp in nativeApps
+	tell application nativeApp to quit
+end repeat
+
+set nativeApps to {"Google Chrome", "SwitchResX Daemon", "ScreenFlow", "Todoist", "/Applications/HyperTerm.app"}
+repeat with nativeApp in nativeApps
+	run application nativeApp
+end repeat
+
+set webApps to {"https://github.com/trevordmiller?tab=repositories"}
+repeat with webApp in webApps
+	do shell script "open " & webApp
+end repeat
+
+delay 1
+tell application "SwitchResX Daemon"
+	set res to modes of display 2 whose (width = 1280 and height = 720 and definition = 2)
+	set current mode of display 2 to first item of res
+end tell
+
+do shell script "script-windows"
+
+tell application "/Applications/HyperTerm.app" to activate
+do shell script "script-fullscreen"
+
+tell application "/Applications/HyperTerm.app" to activate
+repeat 10 times
+  tell application "System Events"
+    key code 69 using {command down}
+  end tell
+end repeat
+
+do shell script "script-donotdisturb"

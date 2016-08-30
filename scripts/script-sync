@@ -1,26 +1,5 @@
 #!/usr/bin/env osascript
 
--- ==================================================================
--- PROGRESS
--- ==================================================================
-
-set progress description to "Daily Sync"
-set progress total steps to 2
-property progressSteps : 0
-on updateProgress(description)
-	delay 1
-	set progress additional description to description
-	set progressSteps to progressSteps + 1
-	set progress completed steps to progressSteps
-end updateProgress
-
-
--- ==================================================================
--- START
--- ==================================================================
-
-updateProgress("Starting apps and processes")
-
 on getTodayApps(core, other, work, background)
 	set today to weekday of (current date)
 	if (today = Sunday) then
@@ -32,7 +11,6 @@ on getTodayApps(core, other, work, background)
 	end if
 end getTodayApps
 
--- Open native apps
 set core to {"Todoist", "Calendar", "Messages", "Mail"}
 set other to {"Photos", "Anki", "Spotify", "Slack"}
 set work to {}
@@ -42,7 +20,6 @@ repeat with nativeApp in nativeApps
 	run application nativeApp
 end repeat
 
--- Open web apps
 set core to {"http://www.apple.com/ios/health", "https://myfitnesspal.com"}
 set other to {"https://www.rescuetime.com/dashboard", "https://wakatime.com/dashboard", "https://www.mint.com", "https://www.egghead.io", "https://www.codewars.com", "https://buffer.com", "https://www.youtube.com/feed/subscriptions", "https://facebook.com", "https://twitter.com"}
 set work to {"https://domo.demo.domo.com/inbox", "https://domo.domo.com/inbox", "https://domo.okta.com/home/jira_onprem/0oa1moe1d0joaWP4P0x7/3549", "https://git.empdev.domo.com/pulls?utf8=%E2%9C%93&q=is%3Aopen+is%3Apr+label%3A%22mobile-web%22", "https://app.getsentry.com/domo-mobile-web/mobileweb"}
@@ -52,18 +29,5 @@ repeat with webApp in webApps
 	do shell script "open " & webApp
 end repeat
 
-
--- ==================================================================
--- CONFIGURE
--- ==================================================================
-
-updateProgress("Configuring settings")
-
--- Turn off WiFi
-do shell script "networksetup -setairportpower en0 off"
-
--- Run window manager
-delay 1
-tell application "System Events"
-	key code 18 using {command down, option down, control down}
-end tell
+do shell script "script-ethernet"
+do shell script "script-windows"

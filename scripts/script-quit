@@ -1,0 +1,31 @@
+#!/usr/bin/env osascript
+
+do shell script "script-clean"
+
+try
+	tell application "Finder"
+		eject the disks
+	end tell
+on error
+	display dialog ("Error ejecting devices!")
+end try
+
+do shell script "script-kill"
+
+tell application "System Events" to set the visible of every process to true
+set white_list to {"Finder", "/Applications/HyperTerm.app"}
+try
+	tell application "Finder"
+		set process_list to the name of every process whose visible is true
+	end tell
+	repeat with i from 1 to (number of items in process_list)
+		set this_process to item i of the process_list
+		if this_process is not in white_list then
+			tell application this_process
+				quit
+			end tell
+		end if
+	end repeat
+on error
+	display dialog ("Error quitting apps!")
+end try

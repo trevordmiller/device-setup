@@ -1,0 +1,4 @@
+#!/bin/bash
+set -euo pipefail
+
+networksetup -setairportpower en0 off
