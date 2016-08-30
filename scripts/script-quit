@@ -13,7 +13,7 @@ end try
 do shell script "script-kill"
 
 tell application "System Events" to set the visible of every process to true
-set white_list to {"Finder", "/Applications/HyperTerm.app"}
+set white_list to {"Finder", "Todoist", "/Applications/HyperTerm.app", "Google Drive", "Google Photos Backup", "Seil", "Karabiner", "Slate", "Flux", "RescueTime"}
 try
 	tell application "Finder"
 		set process_list to the name of every process whose visible is true
