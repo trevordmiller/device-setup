@@ -2,10 +2,38 @@
 	name = Trevor D. Miller
 	email = trevordmiller@icloud.com
 	useconfigonly = true
+[github]
+  user = trevordmiller
 [push]
 	default = simple
 [core]
 	editor = vim
 	excludesfile = /Users/trevormiller/.gitignore
+[log]
+  date = relative
 [help]
 	autocorrect = 1
+[color]
+  ui = true
+  pager = true
+  status = auto
+  diff = auto
+  branch = auto
+  showbranch = auto
+  interactive = auto
+[color "status"]
+  added = cyan
+  changed = red
+  untracked = yellow
+[color "diff"]
+  plain = normal
+	meta = yellow
+  func = blue
+	frag = magenta
+	old = red
+	new = cyan
+  commit = green
+[color "branch"]
+  remote = blue
+	local = green
+  current = magenta
