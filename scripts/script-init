@@ -48,6 +48,10 @@ function symlink_dotfiles {
   done
 }
 
+function symlink_syncfiles {
+  ln -s ~/Google\ Drive/settings/syncfiles/en.utf-8.add ~/.vim/spell/
+}
+
 function vim_plugins {
   git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
   vim +PluginInstall +qall
@@ -61,4 +65,5 @@ graphical_apps "1password anki dash google-chrome google-drive google-photos-bac
 fonts "font-fira-mono"
 npm_packages "create-react-app eslint eslint_d eslint-plugin-react"
 symlink_dotfiles ".bash_profile .bashrc .vimrc .git-prompt.sh .git-completion.sh .gitignore .gitconfig .hyperterm.js .npmrc .eslintrc .slate .tmux.conf" ~/Google Drive/settings/dotfiles 
+symlink_syncfiles
 vim_plugins

@@ -132,6 +132,14 @@ set wildignore+=*/cache/*
 " CLIPBOARD
 set clipboard=unnamed
 
+" SPELLCHECK
+set spelllang=en
+set complete+=kspell
+set spellfile=$HOME/Google\ Drive/vim/spell/en.utf-8.add
+autocmd BufRead,BufNewFile *.md setlocal spell
+autocmd BufRead,BufNewFile *.txt setlocal spell
+autocmd FileType gitcommit setlocal spell
+
 " AESTHETICS
 set termguicolors
 syntax on
