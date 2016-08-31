@@ -77,7 +77,6 @@ set iskeyword+=-
 set cursorline
 set nowrap
 set number
-set relativenumber
 set scrolloff=5
 
 " TABS
