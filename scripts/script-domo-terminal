@@ -1,10 +1,5 @@
 #!/bin/bash
 set -euo pipefail
 
-script-kill
 cd $HOME/Google\ Drive/domo/DomoWeb/DomoWeb/mobile-web/
-tmux new-session -d 'vim'
-tmux split-window -v -p 25 'npm run start'
-tmux split-window -h 'npm run test:unit:watch'
-tmux select-pane -t 0
-tmux attach-session -d 
+script-terminal-triple
