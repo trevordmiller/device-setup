@@ -46,3 +46,12 @@ set -o vi
 
 export VISUAL=vim
 export EDITOR="$VISUAL"
+
+
+# ==================================================================
+# ALIASES
+# ==================================================================
+
+alias ls='ls -G'
+alias grep='grep --color=always'
+alias less='less -R'
