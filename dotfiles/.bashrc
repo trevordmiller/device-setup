@@ -36,11 +36,13 @@ GIT_BRANCH='$(__git_ps1 "[%s]")'
 # RENDER
 export PS1="$COLOR_CYAN$WORKING_DIRECTORY$COLOR_MAGENTA$GIT_BRANCH$COLOR_CYAN$PROMPT_SYMBOL$COLOR_BASE "
 
+# VI BINDINGS
+set -o vi
+
 
 # ==================================================================
-# VIM
+# EDITOR
 # ==================================================================
 
 export VISUAL=vim
 export EDITOR="$VISUAL"
-set -o vi
