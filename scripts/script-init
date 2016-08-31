@@ -62,7 +62,7 @@ hidden_files
 screenshots
 homebrew_packages "bash git heroku n node tmux vim"
 graphical_apps "1password anki dash google-chrome google-drive google-photos-backup hyperterm karabiner screenflow seil sketch skitch slack slate spotify switchresx flux rescuetime iexplorer"
-fonts "font-fira-mono"
+fonts "font-fira-mono font-quicksand"
 npm_packages "create-react-app eslint eslint_d eslint-plugin-react"
 symlink_dotfiles ".bash_profile .bashrc .vimrc .git-prompt.sh .git-completion.sh .gitignore .gitconfig .hyperterm.js .npmrc .eslintrc .slate .tmux.conf" ~/Google Drive/settings/dotfiles 
 symlink_syncfiles
