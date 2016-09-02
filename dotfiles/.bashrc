@@ -17,15 +17,9 @@ WORKING_DIRECTORY="\W"
 PROMPT_SYMBOL="\$"
 
 # COLOR
-COLOR_BASE="\[$(tput sgr0)\]"
-COLOR_BLACK="\[$(tput setaf 0)\]"
-COLOR_RED="\[$(tput setaf 1)\]"
-COLOR_GREEN="\[$(tput setaf 2)\]"
-COLOR_YELLOW="\[$(tput setaf 3)\]"
-COLOR_BLUE="\[$(tput setaf 4)\]"
-COLOR_MAGENTA="\[$(tput setaf 5)\]"
-COLOR_CYAN="\[$(tput setaf 6)\]"
-COLOR_WHITE="\[$(tput setaf 7)\]"
+COLOR_YELLOW=$'\e[33m'
+COLOR_CYAN=$'\e[36m'
+COLOR_RESET=$'\e[0m'
 
 # GIT
 source ~/.git-completion.sh
@@ -34,7 +28,7 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 GIT_BRANCH='$(__git_ps1 "[%s]")'
 
 # RENDER
-export PS1="$COLOR_CYAN$WORKING_DIRECTORY$COLOR_MAGENTA$GIT_BRANCH$COLOR_CYAN$PROMPT_SYMBOL$COLOR_BASE "
+export PS1="${COLOR_CYAN}$WORKING_DIRECTORY${COLOR_RESET}${COLOR_YELLOW}$GIT_BRANCH${COLOR_RESET}${COLOR_CYAN}$PROMPT_SYMBOL${COLOR_RESET} "
 
 # VI BINDINGS
 set -o vi
