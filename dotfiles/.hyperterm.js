@@ -22,13 +22,15 @@ const echo = {
   },
 };
 
+const fontFamily = '"Fira Mono", monospace';
+
 module.exports = {
   plugins: [
   ],
   config: {
+    fontFamily,
     padding: '17px',
     fontSize: 17,
-    fontFamily: '"Fira Mono", monospace',
     cursorShape: 'BLOCK',
     cursorColor: echo.bright.white,
     foregroundColor: echo.normal.white,
@@ -55,6 +57,29 @@ module.exports = {
     termCSS: `
       .cursor-node {
         opacity: 0.5 !important;
+      }
+    `,
+    css: `
+      .tab_first {
+        margin-left: 0 !important;
+      }
+      .tab_tab {
+        background-color: ${echo.decoration.medium} !important;
+      }
+      .tab_tab.tab_active {
+        background-color: ${echo.normal.black} !important;
+        border: none !important;
+      }
+      .tab_tab.tab_active::before {
+        border: none !important;
+      }
+      .tab_text {
+        border: none !important;
+      }
+      .tabs_title,
+      .tab_textInner {
+        font-size: 14px !important;
+        font-weight: bold !important;
       }
     `,
   },
