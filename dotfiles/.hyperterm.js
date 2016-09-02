@@ -30,7 +30,7 @@ module.exports = {
     fontSize: 17,
     fontFamily: '"Fira Mono", monospace',
     cursorShape: 'BLOCK',
-    cursorColor: echo.normal.white,
+    cursorColor: echo.bright.white,
     foregroundColor: echo.normal.white,
     backgroundColor: echo.normal.black,
     borderColor: echo.normal.black,
@@ -52,5 +52,10 @@ module.exports = {
       lightCyan: echo.normal.cyan,
       lightWhite: echo.bright.white,
     },
+    termCSS: `
+      .cursor-node {
+        opacity: 0.5 !important;
+      }
+    `,
   },
 };
