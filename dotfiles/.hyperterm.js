@@ -1,4 +1,4 @@
-const echo = {
+const nova = {
   normal: {
     black: '#445660',
     red: '#DF8C8C',
@@ -32,27 +32,27 @@ module.exports = {
     padding: '17px',
     fontSize: 17,
     cursorShape: 'BLOCK',
-    cursorColor: echo.bright.white,
-    foregroundColor: echo.normal.white,
-    backgroundColor: echo.normal.black,
-    borderColor: echo.normal.black,
+    cursorColor: nova.bright.white,
+    foregroundColor: nova.normal.white,
+    backgroundColor: nova.normal.black,
+    borderColor: nova.normal.black,
     colors: {
-      black: echo.normal.black,
-      red: echo.normal.red,
-      green: echo.normal.green,
-      yellow: echo.normal.yellow,
-      blue: echo.normal.blue,
-      magenta: echo.normal.magenta,
-      cyan: echo.normal.cyan,
-      white: echo.normal.white,
-      lightBlack: echo.bright.black,
-      lightRed: echo.bright.red,
-      lightGreen: echo.normal.green,
-      lightYellow: echo.normal.yellow,
-      lightBlue: echo.normal.blue,
-      lightMagenta: echo.bright.magenta,
-      lightCyan: echo.normal.cyan,
-      lightWhite: echo.bright.white,
+      black: nova.normal.black,
+      red: nova.normal.red,
+      green: nova.normal.green,
+      yellow: nova.normal.yellow,
+      blue: nova.normal.blue,
+      magenta: nova.normal.magenta,
+      cyan: nova.normal.cyan,
+      white: nova.normal.white,
+      lightBlack: nova.bright.black,
+      lightRed: nova.bright.red,
+      lightGreen: nova.normal.green,
+      lightYellow: nova.normal.yellow,
+      lightBlue: nova.normal.blue,
+      lightMagenta: nova.bright.magenta,
+      lightCyan: nova.normal.cyan,
+      lightWhite: nova.bright.white,
     },
     termCSS: `
       .cursor-node {
@@ -64,10 +64,10 @@ module.exports = {
         margin-left: 0 !important;
       }
       .tab_tab {
-        background-color: ${echo.decoration.medium} !important;
+        background-color: ${nova.decoration.medium} !important;
       }
       .tab_tab.tab_active {
-        background-color: ${echo.normal.black} !important;
+        background-color: ${nova.normal.black} !important;
         border: none !important;
       }
       .tab_tab.tab_active::before {
