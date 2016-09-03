@@ -1,7 +1,7 @@
 {
   "extends": "eslint:recommended",
   "rules": {
-    "semi": 2,
+    "semi": [2, "never"],
     "no-shadow": 2,
     "default-case": 2,
     "eqeqeq": 2,
