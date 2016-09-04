@@ -8,4 +8,4 @@ module.exports = {
     fontSize: 17,
     cursorShape: 'BLOCK',
   },
-};
+}
