@@ -34,7 +34,7 @@ Plugin 'mxw/vim-jsx'
 Plugin 'wakatime/vim-wakatime'
 
 " AESTHETICS
-Plugin 'joshdick/onedark.vim'
+" nova plugin coming soon, developing with symlink to ~/.vim/colors/nova.vim for now
 
 " PLUGIN SYSTEM SETUP END
 call vundle#end()
@@ -145,6 +145,4 @@ autocmd BufRead,BufNewFile *.txt setlocal spell
 autocmd FileType gitcommit setlocal spell
 
 " AESTHETICS
-set termguicolors
-syntax on
-colorscheme onedark
+colorscheme nova
