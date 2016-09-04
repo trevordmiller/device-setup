@@ -20,13 +20,15 @@ Plugin 'Olical/vim-enmasse'
 
 " SYNTAX CHECKING
 Plugin 'scrooloose/syntastic'
+Plugin 'salomvary/vim-eslint-compiler'
 
-" LANGUAGE EXTENSIONS
+" MOTION EXTENSIONS
+Plugin 'tmhedberg/matchit'
+
+" SYNTAX GROUP EXTENSIONS
 Plugin 'othree/html5.vim'
 Plugin 'pangloss/vim-javascript'
-Plugin 'salomvary/vim-eslint-compiler'
 Plugin 'mxw/vim-jsx'
-Plugin 'tmhedberg/matchit'
 
 " TIME TRACKING
 Plugin 'wakatime/vim-wakatime'
