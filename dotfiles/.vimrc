@@ -78,6 +78,8 @@ set iskeyword+=-
 " LINES
 set cursorline
 set nowrap
+set textwidth=0
+set wrapmargin=0
 set number
 set scrolloff=5
 
