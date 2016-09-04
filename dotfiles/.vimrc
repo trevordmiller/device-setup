@@ -113,9 +113,6 @@ nnoremap <c-l> <c-w>l
 " SWAP FILES
 set noswapfile
 
-" GOTO FILES
-set suffixesadd+=.js
-
 " WILD MENU
 set wildmenu
 set wildignore+=*.zip
