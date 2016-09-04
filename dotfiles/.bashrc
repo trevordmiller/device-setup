@@ -17,9 +17,9 @@ WORKING_DIRECTORY="\W"
 PROMPT_SYMBOL="\$"
 
 # COLOR
-COLOR_YELLOW=$'\e[33m'
-COLOR_CYAN=$'\e[36m'
-COLOR_RESET=$'\e[0m'
+COLOR_YELLOW=$"\e[33m"
+COLOR_CYAN=$"\e[36m"
+COLOR_RESET=$"\e[0m"
 
 # GIT
 source ~/.git-completion.sh
