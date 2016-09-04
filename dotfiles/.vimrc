@@ -24,6 +24,7 @@ Plugin 'salomvary/vim-eslint-compiler'
 
 " MOTION EXTENSIONS
 Plugin 'tmhedberg/matchit'
+Plugin 'moll/vim-node'
 
 " SYNTAX GROUP EXTENSIONS
 Plugin 'othree/html5.vim'
