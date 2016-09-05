@@ -35,7 +35,7 @@ Plugin 'mxw/vim-jsx'
 Plugin 'wakatime/vim-wakatime'
 
 " AESTHETICS
-" nova plugin coming soon, developing with symlink to ~/.vim/colors/nova.vim for now
+Plugin 'trevordmiller/nova-vim'
 
 " PLUGIN SYSTEM SETUP END
 call vundle#end()
