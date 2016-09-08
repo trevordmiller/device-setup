@@ -3,6 +3,6 @@ set -euo pipefail
 
 script-kill
 tmux new-session -d
-tmux split-window -v -p 25
+tmux split-window -v -p 33
 tmux select-pane -t 0
 tmux attach-session -d 
