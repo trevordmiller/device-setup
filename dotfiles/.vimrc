@@ -50,6 +50,7 @@ filetype plugin on
 let g:netrw_liststyle = 0
 let g:netrw_sort_by = 'name'
 let g:netrw_sort_direction = 'normal'
+let g:netrw_localrmdir='rm -r'
 
 " CTRLP
 let g:ctrlp_working_path_mode = 0
