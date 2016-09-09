@@ -37,6 +37,9 @@ Plugin 'wakatime/vim-wakatime'
 " AESTHETICS
 Plugin 'trevordmiller/nova-vim'
 
+" COLORSCHEME CREATION
+Plugin 'gerw/vim-HiLinkTrace'
+
 " PLUGIN SYSTEM SETUP END
 call vundle#end()
 filetype plugin on
