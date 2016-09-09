@@ -47,5 +47,5 @@ export EDITOR="$VISUAL"
 # ==================================================================
 
 alias ls="ls -G"
-alias grep="grep --color=always"
+alias grep="grep --color=auto"
 alias less="less -R"
