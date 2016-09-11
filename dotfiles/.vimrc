@@ -28,6 +28,7 @@ Plugin 'moll/vim-node'
 
 " SYNTAX GROUP EXTENSIONS
 Plugin 'othree/html5.vim'
+Plugin 'hail2u/vim-css3-syntax'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 
