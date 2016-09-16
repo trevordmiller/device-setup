@@ -1,0 +1,108 @@
+--- ESSENTIAL ---
+
+INIT
+If app, create-react-app {project}
+# Make repo on GitHub + include README, Node gitignore, and MIT license
+$ git clone {url} && cd {project}
+$ npm init
+$ $EDITOR index.js # hello world
+$ node index.js
+
+BUILD
+$ $EDITOR index.js # `module.exports = {api}` or `exports.{api}`
+
+PUBLISH
+
+github pages
+/docs folder + repo settings turn on
+
+npm:
+# Update README
+$ npm adduser # if never published before; `npm config ls` to check; should see at npmjs.org/~{username}
+$ git add -A && git commit
+$ git tag v1.0.0 || npm version [maj/min/patch]
+$ npm publish # if CD isn't set up
+$ git push && git push --tags
+
+USE
+Node native: const someModule = require('{module-name}')
+or
+Module bundler/build step: import someModule from 'module-name'
+
+--- SUGAR ---
+
+REDUCE INSTALLED FILES
+package.json "files" property should contain only needed install files
+
+LINT
+$ npm install -D eslint
+$ eslint --init
+$ $EDITOR package.json # "lint": "eslint .", "prepublish": "npm run lint"
+
+TEST
+$ npm install -D jest-cli
+$ $EDITOR package.json # "test": "jest", "test:watch": "jest ?", "prepublish": "npm run lint && npm test", "jest": {
+    "testEnvironment": "node"
+  }
+$ $EDITOR eslint config # env.jest = true
+$ $EDITOR test.js # {moduleName} = require('{module-name}'
+$ npm test
+
+CI
+# "Add new repo" on travis UI or CLI https://github.com/travis-ci/travis.rb?
+$ $EDITOR .travis.yml
+^ PUBLISH
+# Travis status badge
+
+CD
+# install CLI with ruby `gem install travis`
+travis setup npm
+[![Build Status](https://travis-ci.org/{username}/{project}.svg?branch=master)](https://travis-ci.org/{username}/{project})
+
+DEPLOY
+now
+OR https://egghead.io/lessons/node-js-deploy-node-js-on-docker
+
+USE APIS
+fetch
+https://embed.plnkr.co/lYp9LI://embed.plnkr.co/lYp9LI/
+
+MASTER PROTECTION
+- Protected branches: master
+- Required status checks: travic CI passing build
+
+MY WORKFLOW
+$ script-scaffold-module ^
+$ script-terminal-double
+    $ $EDITOR
+    $ npm test:watch
+^ PUBLISH
+
+ADD COMPONENTS
+
+ADD APP STATE
+setState at first, Redux when needed
+
+ADD MOBILE FIRST STYLES
+
+ADD DATABASE
+Rebase/Horizon or PostgresSQL like talk from React Rally
+
+ADD ROUTING
+React router
+
+ADD LINTING
+eslint --init
+
+ADD UNIT TESTS
+jest
+
+ADD SNAPSHOT TESTS
+
+ADD PWA
+Web app manifest
+App icons
+
+PRODUCTION SETTINGS
+install your packages with the added --production flag. The --production flag installs your dependencies, ignoring your devDependencies. This ensures that your development tooling and packages won’t go into the production environment.
+Additionally, you can set your NODE_ENV environment variable to production to ensure that your project’s devDependencies are never installed.ffline with service workers

@@ -22,18 +22,20 @@
   showbranch = auto
   interactive = auto
 [color "status"]
+  header = white
+  branch = cyan
+  untracked = cyan
   added = cyan
   changed = red
-  untracked = yellow
 [color "diff"]
   plain = normal
-	meta = yellow
+	meta = blue
   func = blue
-	frag = magenta
+	frag = blue
 	old = red
 	new = cyan
-  commit = green
+  commit = cyan
 [color "branch"]
-  remote = blue
-	local = green
-  current = magenta
+  remote = magenta
+	local = blue
+  current = cyan
