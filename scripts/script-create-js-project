@@ -39,6 +39,8 @@ $ npm install -D eslint
 $ eslint --init
 $ $EDITOR package.json # "lint": "eslint .", "prepublish": "npm run lint"
 
+extends my personal eslint
+
 TEST
 $ npm install -D jest-cli
 $ $EDITOR package.json # "test": "jest", "test:watch": "jest ?", "prepublish": "npm run lint && npm test", "jest": {
@@ -47,6 +49,9 @@ $ $EDITOR package.json # "test": "jest", "test:watch": "jest ?", "prepublish": "
 $ $EDITOR eslint config # env.jest = true
 $ $EDITOR test.js # {moduleName} = require('{module-name}'
 $ npm test
+
+logic tests
+snapshot tests
 
 CI
 # "Add new repo" on travis UI or CLI https://github.com/travis-ci/travis.rb?
@@ -70,6 +75,7 @@ https://embed.plnkr.co/lYp9LI://embed.plnkr.co/lYp9LI/
 MASTER PROTECTION
 - Protected branches: master
 - Required status checks: travic CI passing build
+- Required reviews / approval
 
 MY WORKFLOW
 $ script-scaffold-module ^
@@ -106,3 +112,73 @@ App icons
 PRODUCTION SETTINGS
 install your packages with the added --production flag. The --production flag installs your dependencies, ignoring your devDependencies. This ensures that your development tooling and packages won’t go into the production environment.
 Additionally, you can set your NODE_ENV environment variable to production to ensure that your project’s devDependencies are never installed.ffline with service workers
+
+
+
+EXTERNAL RE-USABLE NPM-INSTALLABLE SCRIPTS
+
+// package.json
+...
+  "scripts": {
+    "test": "scripts/test",
+    "test:watch": "scripts/test-watch",
+    "lint": "scripts/lint"
+  }
+...
+
+# scripts/test
+#!/bin/bash
+jest "$@"
+# chmod +x %
+
+# scripts/test-watch
+#!/bin/bash
+npm test -- --watch
+# chmod +x %
+
+# scripts/lint
+#!/bin/bash
+eslint --cache --fix .
+# chmod +x %
+
+
+
+
+
+
+GITHUB
+Turn on full status check
+
+
+
+
+
+npm version patch && npm publish && git push --follow-tags
+
+
+
+
+
+
+Travis
+
+language: node_js
+node_js:
+  - "node"
+  - "6"
+deploy:
+  provider: {npm | GH Pages | now}
+  email: trevordmiller@icloud.com
+  api_key:
+    secure: OvK6xwe4Lqu+FDSeqPgUIN/cLk8XEaPrbusBZrmqEEf86g6M3g8pUNmbCIihbYVQY4E8tFNasrMHZXylaehAu0EaFjwwui+F/GHn2NtjdP8CbF8iX+c0dF3dSzipoXyaKJ5K6J63H9Z4zWQFFAA72nBtlka9u8GkSuIV+wxhUdM4aNzc3xMgSgPP69VH0hh8J89Ve2NA333PHwvdCHtCTwc7vrO82KBjFSHY2dOe1tg7Dh5S8UXMoFWLwXZ35T5p7TLBHufHa1Pv6G1IPa5QPRRLcNUSAsQBxgaimz0uPCko9xQnCzYAAtchFdRARrOYvO3T7ivfv8unfzQe6Wayrj07UyVnI+8afZPVBUSN2qn1UViHzuuSNAhL9xtGjz9O2Xp/MPJ7TOHiRFssDbIffqfnOZMfzaIJg5W+auHAKaWSM+8u7ewKOB0XQubTIAIqEdECuIaTXsMTDosLsZ5U3gFZJYB5xizDnWSbnqzutGfxiexlYEFLMyvz0mO4WrtsYuDYNkzuVon2//fCcqdrJp4mormrnjcuQzS3yvLh5so8XMiTkerNgiy7WTKMP6hPtEMOnZM4Tbm8lte6Wtyzx2/C6QzZn80nTFjmKnQ2aeQ66LGiKNQfdSe8iqgdUkxrHXOX84pOTgd4yR50bWz0WUBeYRk8oUChBaG/atix4ao=
+  [skip_cleanup: true] # Docs / App (deploying CI artifacts)
+  on:
+    repo: {github repo like trevordmiller/nova-colors}
+    branch: master
+    # Tags overrides branch; how to let PRs tag?
+    tags: true
+
+
+
+
+http://blog.npmjs.org/post/118810260230/building-a-simple-command-line-tool-with-npm
