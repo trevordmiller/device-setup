@@ -39,3 +39,5 @@
   remote = magenta
 	local = blue
   current = cyan
+[commit]
+	verbose = true
