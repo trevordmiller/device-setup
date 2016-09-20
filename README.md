@@ -53,9 +53,6 @@ _Most things are automatically set up with the bootstrap script ^, but these are
 - Backups working in background (Google Drive, Google Photos Backup, Time Machine external drives)
 - Chrome extensions
   - 1Password
-  - Privacy.com
-  - Todoist
-  - Buffer
   - Grammarly
   - JSON Formatter
   - React DevTools
@@ -94,7 +91,6 @@ _Most things are automatically set up with the bootstrap script ^, but these are
     - _Mail_
     - Google Drive
     - _Health_
-    - MyFitnessPal
     - Sleep Cycle
     - Google Maps
     - Spotify
