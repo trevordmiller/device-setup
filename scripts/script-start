@@ -21,7 +21,7 @@ repeat with nativeApp in nativeApps
 end repeat
 
 set core to {"http://www.apple.com/ios/health"}
-set other to {"https://www.rescuetime.com/dashboard", "https://wakatime.com/dashboard", "https://www.mint.com", "https://www.egghead.io", "https://www.codewars.com", "https://buffer.com", "https://www.youtube.com/feed/subscriptions", "https://www.youtube.com/playlist?list=WL", "https://facebook.com", "https://twitter.com", "https://github.com", "https://github.com/issues", "https://github.com/pulls", "https://github.com/trevordmiller"}
+set other to {"https://www.rescuetime.com/dashboard", "https://wakatime.com/dashboard", "https://www.mint.com", "https://www.egghead.io", "https://www.codewars.com", "https://buffer.com", "https://www.youtube.com/feed/subscriptions", "https://www.youtube.com/playlist?list=WL", "https://facebook.com", "https://twitter.com", "https://github.com", "https://github.com/pulls?utf8=%E2%9C%93&q=is%3Aopen+is%3Apr+user%3Atrevordmiller+", "https://github.com/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+user%3Atrevordmiller+", "https://github.com/issues", "https://github.com/pulls", "https://github.com/trevordmiller", "https://secure.gaug.es/dashboard#/gauges/57e2132b4b2ffa03c5001224"}
 set work to {"https://domo.demo.domo.com/inbox", "https://domo.domo.com/inbox", "https://domo.okta.com/home/jira_onprem/0oa1moe1d0joaWP4P0x7/3549", "https://git.empdev.domo.com/pulls?utf8=%E2%9C%93&q=is%3Aopen+is%3Apr+label%3A%22mobile-web%22", "https://app.getsentry.com/domo-mobile-web/mobileweb"}
 set background to {}
 set webApps to getTodayApps(core, other, work, background)
