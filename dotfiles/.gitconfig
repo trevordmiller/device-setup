@@ -57,7 +57,7 @@
   HEAD = blue
 [color "interactive"]
   prompt = red
-  header = red special
+  header = red bold
   error = red
   help = black bold
 [color "grep"]
