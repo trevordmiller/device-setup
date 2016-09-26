@@ -13,7 +13,7 @@ end getTodayApps
 
 set core to {"Todoist", "Calendar", "Messages", "Mail"}
 set other to {"Photos", "Anki", "Spotify", "Slack"}
-set work to {}
+set work to {"Slack"}
 set background to {"Google Drive", "Google Photos Backup", "Flux", "Slate", "Seil", "Karabiner"}
 set nativeApps to getTodayApps(core, other, work, background)
 repeat with nativeApp in nativeApps
