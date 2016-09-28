@@ -1,5 +1,5 @@
 #!/bin/bash
 set -euo pipefail
 
-cd $HOME/Google\ Drive/domo/DomoWeb/DomoWeb/mobile-web/
+cd $HOME/Google\ Drive/work/DomoWeb/DomoWeb/mobile-web/
 script-terminal-triple
