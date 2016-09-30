@@ -148,4 +148,5 @@ autocmd BufRead,BufNewFile *.txt setlocal spell
 autocmd FileType gitcommit setlocal spell
 
 " AESTHETICS
+set termguicolors
 colorscheme nova
