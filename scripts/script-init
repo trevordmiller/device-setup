@@ -71,6 +71,6 @@ graphical_apps "1password anki dash google-chrome google-drive google-photos-bac
 fonts "font-fira-mono font-quicksand"
 npm_packages "create-react-app eslint eslint_d eslint-plugin-react"
 ruby_packages "travis"
-symlink_dotfiles ".bash_profile .bashrc .vimrc .git-prompt.sh .git-completion.sh .gitignore .gitconfig .hyperterm.js .npmrc .eslintrc.js .slate .tmux.conf" ~/Google Drive/settings/dotfiles 
+symlink_dotfiles ".bash_profile .bashrc .vimrc .git-prompt.sh .git-completion.sh .gitignore .gitconfig .hyperterm.js .hyperterm.demo.js .npmrc .eslintrc.js .slate .tmux.conf" ~/Google Drive/settings/dotfiles 
 symlink_syncfiles
 vim_plugins

@@ -3,7 +3,7 @@ module.exports = {
     'hyperterm-one-light'
   ],
   config: {
-    fontFamily: '"Fira Mono", monospace',
+    fontFamily: '"Monaco", monospace',
     padding: '17px',
     fontSize: 30,
     cursorShape: 'BLOCK',

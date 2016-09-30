@@ -41,6 +41,9 @@ Plugin 'trevordmiller/nova-vim'
 " PLUGIN CREATION
 Plugin 'tpope/vim-scriptease'
 
+" DEMOS
+Plugin 'rakr/vim-one'
+
 " PLUGIN SYSTEM SETUP END
 call vundle#end()
 filetype plugin on
