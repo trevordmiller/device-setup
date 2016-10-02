@@ -7,5 +7,10 @@ module.exports = {
     padding: '17px',
     fontSize: 30,
     cursorShape: 'BLOCK',
+    css: `
+      .tabs_nav {
+        display: none;
+      }
+    `,
   },
 }
