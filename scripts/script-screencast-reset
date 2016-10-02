@@ -7,7 +7,7 @@ end repeat
 
 delay 1
 tell application "SwitchResX Daemon"
-	set current mode of display 2 to mode 1 of display 2
+	set current mode of display 1 to mode 1 of display 1
 end tell
 
 do shell script "script-donotdisturb-reset"
