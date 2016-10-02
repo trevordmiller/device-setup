@@ -30,6 +30,6 @@ do shell script "script-fullscreen"
 
 do shell script "cd $HOME/Google\\ Drive/personal/eggheadio"
 
-do shell script "vim -c 'set background=light' -c 'colorscheme one'"
+do shell script "vim -c 'set background=light' -c 'colorscheme one' -c 'set laststatus=0' 'set noshowmode'"
 
 do shell script "script-donotdisturb"
