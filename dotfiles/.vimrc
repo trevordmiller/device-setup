@@ -37,9 +37,6 @@ Plugin 'wakatime/vim-wakatime'
 " AESTHETICS
 Plugin 'trevordmiller/nova-vim'
 
-" PLUGIN CREATION
-Plugin 'tpope/vim-scriptease'
-
 " DEMOS
 Plugin 'rakr/vim-one'
 

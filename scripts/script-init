@@ -67,7 +67,7 @@ shell
 hidden_files
 screenshots
 homebrew_packages "bash git heroku n node tmux vim"
-graphical_apps "1password anki dash google-chrome google-drive google-photos-backup hyperterm karabiner screenflow seil sketch skitch slack slate spotify switchresx flux rescuetime iexplorer"
+graphical_apps "1password anki dash google-chrome google-drive google-photos-backup hyperterm karabiner screenflow seil sketch slack slate spotify switchresx flux rescuetime"
 fonts "font-fira-mono font-quicksand"
 npm_packages "create-react-app eslint eslint-plugin-react"
 ruby_packages "travis"
