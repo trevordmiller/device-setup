@@ -19,8 +19,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'Olical/vim-enmasse'
 
 " SYNTAX CHECKING
-Plugin 'scrooloose/syntastic'
-Plugin 'salomvary/vim-eslint-compiler'
+Plugin 'w0rp/ale'
 
 " MOTION EXTENSIONS
 Plugin 'tmhedberg/matchit'
@@ -62,12 +61,12 @@ let g:netrw_localrmdir='rm -r'
 " CTRLP
 let g:ctrlp_working_path_mode = 0
 
-" SYNTASTIC
-let g:syntastic_check_on_open = 1
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_javascript_eslint_exec = 'eslint_d'
+" ALE
+let g:ale_lint_on_enter = 0
+let g:ale_lint_delay = 0
+let g:ale_linters = {
+\  'javascript': ['eslint'],
+\}
 
 " VIM-JSX
 let g:jsx_ext_required = 0
