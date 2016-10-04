@@ -2,7 +2,7 @@
 # PATH
 # ==================================================================
 
-SCRIPTS_PATH="$HOME/Google Drive/settings/scripts"
+SCRIPTS_PATH="$HOME/drive/settings/scripts"
 HOMEBREW_PATH="/usr/local/bin"
 PROJECT_NPM_PATH="./node_modules/.bin"
 export PATH="$PATH:$SCRIPTS_PATH:$HOMEBREW_PATH:$PROJECT_NPM_PATH"

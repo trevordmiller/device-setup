@@ -12,7 +12,7 @@ end tell
 
 do shell script "script-donotdisturb-reset"
 
-do shell script "ln -sf $HOME/Google\\ Drive/settings/dotfiles/.hyperterm.js $HOME/.hyperterm.js"
+do shell script "ln -sf $HOME/drive/settings/dotfiles/.hyperterm.js $HOME/.hyperterm.js"
 
 set nativeApps to {"Google Chrome", "SwitchResX Daemon", "ScreenFlow", "Todoist", "/Applications/HyperTerm.app"}
 repeat with nativeApp in nativeApps

@@ -1,5 +1,5 @@
 #!/bin/bash
 set -euo pipefail
 
-cd $HOME/Google\ Drive/personal/nova
+cd $HOME/drive/personal/nova
 script-terminal-double
