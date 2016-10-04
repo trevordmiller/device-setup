@@ -64,6 +64,7 @@ let g:ale_lint_delay = 0
 let g:ale_linters = {
 \  'javascript': ['eslint'],
 \  'sh': ['shellcheck'],
+\  'json': ['jsonlint'],
 \}
 
 " VIM-JSX
