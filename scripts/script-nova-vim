@@ -1,4 +1,0 @@
-#!/bin/bash
-set -euo pipefail
-
-ln -s $HOME/drive/personal/nova/nova-vim/colors/nova.vim ~/.vim/colors/nova.vim
