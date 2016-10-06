@@ -5,7 +5,7 @@ repeat with nativeApp in nativeApps
 	tell application nativeApp to quit
 end repeat
 
-do shell script "ln -sf $HOME/drive/settings/dotfiles/.hyperterm.demo.js $HOME/.hyperterm.js"
+do shell script "script-demo"
 
 set nativeApps to {"Google Chrome", "SwitchResX Daemon", "ScreenFlow", "Todoist", "/Applications/HyperTerm.app"}
 repeat with nativeApp in nativeApps
@@ -29,7 +29,5 @@ tell application "/Applications/HyperTerm.app" to activate
 do shell script "script-fullscreen"
 
 do shell script "cd $HOME/drive/personal/eggheadio"
-
-do shell script "vim -c 'set background=light' -c 'colorscheme one' -c 'set laststatus=0' 'set noshowmode'"
 
 do shell script "script-donotdisturb"
