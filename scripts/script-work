@@ -15,7 +15,7 @@ do shell script "script-windows"
 tell application "/Applications/HyperTerm.app" to activate
 do shell script "script-fullscreen"
 
-delay 1
+delay 3
 tell application "Google Chrome" to activate
 set devToolsTabs to {1, 3}
 repeat with devToolsTab in devToolsTabs

@@ -5,7 +5,7 @@ repeat with nativeApp in nativeApps
 	run application nativeApp
 end repeat
 
-delay 1
+delay 3
 tell application "SwitchResX Daemon"
 	set current mode of display 1 to mode 1 of display 1
 end tell

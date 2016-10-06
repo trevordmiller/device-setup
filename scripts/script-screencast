@@ -17,7 +17,7 @@ repeat with webApp in webApps
 	do shell script "open " & webApp
 end repeat
 
-delay 1
+delay 3
 tell application "SwitchResX Daemon"
 	set res to modes of display 1 whose (width = 1280 and height = 720 and definition = 2)
 	set current mode of display 1 to first item of res
