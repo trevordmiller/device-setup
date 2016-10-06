@@ -7,5 +7,6 @@ module.exports = {
     padding: '17px',
     fontSize: 17,
     cursorShape: 'BLOCK',
+    windowSize: [1280, 720],
   },
 }

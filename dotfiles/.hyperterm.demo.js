@@ -7,6 +7,7 @@ module.exports = {
     padding: '17px',
     fontSize: 30,
     cursorShape: 'BLOCK',
+    windowSize: [1280, 720],
     css: `
       .tabs_nav {
         display: none;
