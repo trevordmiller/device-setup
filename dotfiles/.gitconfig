@@ -32,14 +32,14 @@
   nobranch = red
   unmerged = red
   untracked = cyan
-  added = cyan
-  changed = red
+  added = green
+  changed = red bold
 [color "diff"]
   meta = red bold
   frag = black bold
   func = blue
   old = red strike
-  new = cyan
+  new = green
   commit = blue
   whitespace = red
   context = normal
@@ -63,7 +63,7 @@
 [color "grep"]
   context = normal
   match = cyan
-  filename = blue 
+  filename = blue
   function = blue
   selected = normal
   separator = red bold
