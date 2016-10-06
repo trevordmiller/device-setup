@@ -1,0 +1,12 @@
+#!/bin/bash
+set -euo pipefail
+
+sed -i "" "s/fontSize: 17/fontSize: 30/" "$HOME/drive/settings/dotfiles/.hyperterm.js"
+sed -i "" "s/nova-hyperterm/hyperterm-one-light/" "$HOME/drive/settings/dotfiles/.hyperterm.js"
+
+vimrcRules=("set laststatus=0" "set noshowmode" "set background=light" "colorscheme one")
+for vimrcRule in "${vimrcRules[@]}"; do
+  echo "$vimrcRule" >> "$HOME/drive/settings/dotfiles/.vimrc"
+done
+
+clear
