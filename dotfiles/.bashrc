@@ -33,6 +33,9 @@ export PS1="${COLOR_PURPOSE_IDENTIFIER}$WORKING_DIRECTORY${COLOR_RESET}${COLOR_P
 # VI BINDINGS
 set -o vi
 
+# DEFAULT DIRECTORY
+cd ~/drive
+
 
 # ==================================================================
 # EDITOR
