@@ -62,6 +62,7 @@ $ $EDITOR .travis.yml
 CD
 # install CLI with ruby `gem install travis`
 travis setup npm
+Or if already setup other than encrypted npm authToken, run travis encrypt {npmrcAuthToken} --add deploy.api_key
 [![Build Status](https://travis-ci.org/{username}/{project}.svg?branch=master)](https://travis-ci.org/{username}/{project})
 
 DEPLOY
