@@ -29,5 +29,4 @@ repeat with webApp in webApps
 	do shell script "open " & webApp
 end repeat
 
-do shell script "script-ethernet"
 do shell script "script-windows"
