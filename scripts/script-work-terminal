@@ -1,5 +1,0 @@
-#!/bin/bash
-set -euo pipefail
-
-cd $HOME/drive/work/DomoWeb/DomoWeb/mobile-web/
-script-terminal-triple

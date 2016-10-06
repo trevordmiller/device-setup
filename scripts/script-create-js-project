@@ -80,7 +80,7 @@ MASTER PROTECTION
 
 MY WORKFLOW
 $ script-scaffold-module ^
-$ script-terminal-double
+$ script-split
     $ $EDITOR
     $ npm test:watch
 ^ PUBLISH
