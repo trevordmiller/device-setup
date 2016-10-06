@@ -1,6 +1,6 @@
 #!/usr/bin/env osascript
 
-set nativeApps to {"Todoist", "HyperTerm", "Google Chrome", "Calendar", "Spotify", "Messages", "Mail", "Slack", "Dash"}
+set nativeApps to {"Todoist", "/Applications/HyperTerm.app", "Google Chrome", "Calendar", "Spotify", "Messages", "Mail", "Slack", "Dash"}
 repeat with nativeApp in nativeApps
 	run application nativeApp
 end repeat
