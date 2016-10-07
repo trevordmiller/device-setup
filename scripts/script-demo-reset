@@ -3,4 +3,5 @@ set -euo pipefail
 
 git checkout ~/drive/settings/dotfiles/{.hyperterm.js,.vimrc}
 
+sleep 3
 clear

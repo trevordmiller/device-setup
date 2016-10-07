@@ -12,3 +12,6 @@ vimrcRules=(
 for vimrcRule in "${vimrcRules[@]}"; do
   echo "$vimrcRule" >> "$HOME/drive/settings/dotfiles/.vimrc"
 done
+
+sleep 3
+clear
