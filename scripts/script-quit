@@ -1,16 +1,8 @@
 #!/usr/bin/env osascript
 
-do shell script "script-clean"
-
-try
-	tell application "Finder"
-		eject the disks
-	end tell
-on error errorMesssage
-	display dialog ("Error ejecting devices: " & errorMessage)
-end try
-
 do shell script "script-kill"
+
+do shell script "script-clean"
 
 tell application "System Events" to set the visible of every process to true
 set white_list to {"Finder", "HyperTerm"}

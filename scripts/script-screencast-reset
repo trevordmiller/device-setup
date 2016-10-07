@@ -1,10 +1,5 @@
 #!/usr/bin/env osascript
 
-set nativeApps to {"Flux"}
-repeat with nativeApp in nativeApps
-	run application nativeApp
-end repeat
-
 delay 3
 tell application "SwitchResX Daemon"
 	set current mode of display 1 to mode 1 of display 1

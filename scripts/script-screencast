@@ -1,10 +1,5 @@
 #!/usr/bin/env osascript
 
-set nativeApps to {"Flux"}
-repeat with nativeApp in nativeApps
-	tell application nativeApp to quit
-end repeat
-
 do shell script "script-demo"
 
 set nativeApps to {"Google Chrome", "SwitchResX Daemon", "ScreenFlow", "Todoist", "/Applications/HyperTerm.app"}
