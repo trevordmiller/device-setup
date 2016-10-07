@@ -50,8 +50,8 @@ function ruby_packages {
 }
 
 function symlink_dotfiles {
-  for file in $1; do
-    ln -s $2/$file ~/$file
+  for file in $(find "$HOME/drive/settings/dotfiles" -depth 1 -exec basename {} \;); do
+    ln -s "$HOME/drive/settings/dotfiles/$file" "$HOME/$file"
   done
 }
 
@@ -68,5 +68,5 @@ graphical_apps "1password anki dash google-chrome google-drive google-photos-bac
 fonts "font-fira-mono font-quicksand"
 npm_packages "create-react-app csslint eslint eslint-plugin-react jsonlint"
 ruby_packages "travis"
-symlink_dotfiles ".bash_profile .bashrc .vimrc .git-prompt.sh .git-completion.sh .gitignore .gitconfig .hyperterm.js .eslintrc.js .slate .tmux.conf" ~/drive/settings/dotfiles 
+symlink_dotfiles
 vim_plugins
