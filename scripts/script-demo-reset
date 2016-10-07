@@ -1,6 +1,6 @@
 #!/bin/bash
 set -euo pipefail
 
-git checkout ~/drive/settings/dotfiles/{.hyperterm.js,.vimrc} && source ~/.vimrc
+git checkout ~/drive/settings/dotfiles/{.hyperterm.js,.vimrc}
 
 clear
