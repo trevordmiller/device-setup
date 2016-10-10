@@ -1,4 +1,6 @@
 #!/bin/bash
+script-log state "Killing running processes"
 killall node || true
 killall phantomjs || true
 tmux kill-server || true
+script-log state "Done"

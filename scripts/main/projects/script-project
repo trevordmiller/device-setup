@@ -1,5 +1,10 @@
 #!/bin/bash
 
+
+# ==================================================================
+# VARIABLES
+# ==================================================================
+
 template_path=$HOME/drive/settings/scripts/main/projects/
 user_name="trevordmiller"
 user_full_name="Trevor D. Miller"
@@ -114,6 +119,7 @@ esac
 # RESULTS
 # ==================================================================
 
+script-log state "Opening results"
 open "https://github.com/$user_name/$project_name"
 open "https://travis-ci.org/$user_name/$project_name"
 case "$project_type" in 
@@ -125,5 +131,7 @@ case "$project_type" in
     ;;
 esac
 
+
+# ==================================================================
 
 script-log state "Done"

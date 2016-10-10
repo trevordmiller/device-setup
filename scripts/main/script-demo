@@ -1,5 +1,7 @@
 #!/bin/bash
 
+script-log state "Loading terminal and editor demo settings"
+
 sed -i "" -e "s/fontSize: 17/fontSize: 30/" -e "s/nova-hyperterm/hyperterm-one-light/" "$HOME/drive/settings/dotfiles/.hyperterm.js"
 
 vimrcRules=(
@@ -14,3 +16,5 @@ done
 
 sleep 3
 clear
+
+script-log state "Done"

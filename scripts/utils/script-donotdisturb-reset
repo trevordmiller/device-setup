@@ -1,4 +1,5 @@
 #!/usr/bin/env osascript
+do shell script "script-log state 'Turning off Do Not Disturb'"
 delay 3
 tell application "System Events"
 	tell application process "SystemUIServer"
@@ -11,3 +12,4 @@ tell application "System Events"
 		end try
 	end tell
 end tell
+do shell script "script-log state 'Done'"

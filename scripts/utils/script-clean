@@ -1,4 +1,6 @@
 #!/bin/bash
+script-log state "Cleaning folders"
 find ~/'drive' -name 'node_modules' -type d -exec rm -r '{}' ';' || true
 rm -rf ~/Downloads/*
 rm -rf ~/.Trash
+script-log state "Done"

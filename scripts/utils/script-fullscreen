@@ -1,5 +1,7 @@
 #!/usr/bin/env osascript
+do shell script "script-log state 'Making active app fullscreen'"
 delay 3
 tell application "System Events"
 	keystroke "f" using {command down, control down}
 end tell
+do shell script "script-log state 'Done'"

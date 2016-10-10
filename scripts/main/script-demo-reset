@@ -1,6 +1,10 @@
 #!/bin/bash
 
+script-log state "Reverting terminal and editor settings to normal"
+
 git checkout ~/drive/settings/dotfiles/{.hyperterm.js,.vimrc}
 
 sleep 3
 clear
+
+script-log state "Done"

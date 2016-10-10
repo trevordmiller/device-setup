@@ -2,17 +2,20 @@
 
 do shell script "script-demo"
 
+script-log state "Opening native apps"
 set nativeApps to {"Google Chrome", "SwitchResX Daemon", "ScreenFlow", "Todoist", "/Applications/HyperTerm.app"}
 repeat with nativeApp in nativeApps
 	run application nativeApp
 end repeat
 
+script-log state "Opening web apps"
 set webApps to {"https://github.com/trevordmiller?tab=repositories&q=example"}
 repeat with webApp in webApps
 	do shell script "open " & webApp
 end repeat
-
 delay 3
+
+script-log state "Switching screen resolutions"
 tell application "SwitchResX Daemon"
 	set res to modes of display 1 whose (width = 1280 and height = 720 and definition = 2)
 	set current mode of display 1 to first item of res
@@ -23,6 +26,9 @@ do shell script "script-windows"
 tell application "/Applications/HyperTerm.app" to activate
 do shell script "script-fullscreen"
 
+script-log state "Moving to screencast directory"
 do shell script "cd $HOME/drive/personal/eggheadio"
 
 do shell script "script-donotdisturb"
+
+script-log state "Done"
