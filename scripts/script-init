@@ -20,6 +20,7 @@ function homebrew_packages {
   for package in $1; do
     brew install $package
   done
+  heroku login
 }
 
 function graphical_apps {
@@ -47,6 +48,7 @@ function ruby_packages {
   for package in $1; do
     gem install $package
   done
+  travis login
 }
 
 function symlink_dotfiles {

@@ -3,9 +3,10 @@
 # ==================================================================
 
 SCRIPTS_PATH="$HOME/drive/settings/scripts"
+SCRIPT_JS_PROJECT_PATH="$HOME/drive/settings/scripts/script-js-project"
 HOMEBREW_PATH="/usr/local/bin"
 PROJECT_NPM_PATH="./node_modules/.bin"
-export PATH="$PATH:$SCRIPTS_PATH:$HOMEBREW_PATH:$PROJECT_NPM_PATH"
+export PATH="$PATH:$SCRIPTS_PATH:$SCRIPT_JS_PROJECT_PATH:$HOMEBREW_PATH:$PROJECT_NPM_PATH"
 
 
 # ==================================================================

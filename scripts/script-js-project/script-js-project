@@ -1,0 +1,130 @@
+#!/bin/bash
+set -euo pipefail
+
+template_path=$HOME/drive/settings/scripts/script-js-project
+user_name="trevordmiller"
+user_full_name="Trevor D. Miller"
+user_email="trevordmiller@icloud.com"
+user_website="http://www.trevordmiller.com"
+project_year=$(date +"%Y")
+project_type=$1
+project_name=$2
+project_description=$3
+
+
+# ==================================================================
+# TEMPLATES
+# ==================================================================
+
+script-log state "Generating files and folders"
+
+# PROJECT TYPE SPECIFIC
+case "$project_type" in 
+  "app" ) 
+    script-log state "Running create-react-app"
+    create-react-app "$project_name"
+    cd "$project_name"
+    cp -a "$template_path"/app/. ./
+    ;; 
+  "package" ) 
+    mkdir "$project_name"
+    cd "$project_name"
+    cp -a "$template_path"/package/. ./
+    ;; 
+esac
+
+# SHARED
+cp -a "$template_path"/shared/. ./
+
+# VARIABLE SUBSTITUTION
+grep -rl '$user_name' . --exclude-dir=node_modules | xargs sed -i '' "s|\$user_name|$user_name|g"
+grep -rl '$user_full_name' . --exclude-dir=node_modules | xargs sed -i '' "s|\$user_full_name|$user_full_name|g"
+grep -rl '$user_email' . --exclude-dir=node_modules | xargs sed -i '' "s|\$user_email|$user_email|g"
+grep -rl '$user_website' . --exclude-dir=node_modules | xargs sed -i '' "s|\$user_website|$user_website|g"
+grep -rl '$project_year' . --exclude-dir=node_modules | xargs sed -i '' "s|\$project_year|$project_year|g"
+grep -rl '$project_name' . --exclude-dir=node_modules | xargs sed -i '' "s|\$project_name|$project_name|g"
+grep -rl '$project_description' . --exclude-dir=node_modules | xargs sed -i '' "s|\$project_description|$project_description|g"
+
+
+# ==================================================================
+# DEPENDENCIES
+# ==================================================================
+
+case "$project_type" in 
+  "package" ) 
+    script-log state "Installing dependencies"
+    npm install -D babel-cli babel-preset-latest eslint jest-cli babel-jest watch
+    ;; 
+esac
+
+
+# ==================================================================
+# SOURCE CONTROL
+# ==================================================================
+
+script-log state "Adding source control"
+git init
+git add -A
+git commit -m "Scaffold project"
+script-log action "Enter GitHub password"
+curl -u "$user_name" https://api.github.com/user/repos -d "{\"name\":\"$project_name\", \"description\":\"$project_description\"}"
+git remote add origin https://github.com/"$user_name"/"$project_name".git
+git push -u origin master
+
+
+# ==================================================================
+# CONTINUOUS INTEGRATION & DEPLOYMENT
+# ==================================================================
+
+script-log state "Initializing continuous integration and deployment"
+travis enable -r "$user_name"/"$project_name"
+script-log action "Enter deployment details"
+case "$project_type" in 
+  "app" ) 
+    heroku create "$project_name" --buildpack https://github.com/mars/create-react-app-buildpack.git
+    travis setup heroku
+    ;; 
+  "package" ) 
+    travis setup npm
+    npm publish
+    ;; 
+esac
+git add -A
+git commit -m "Add continous deployment"
+git push
+
+
+# ==================================================================
+# MANUAL CONFIG
+# ==================================================================
+
+script-log action "MANUAL CONFIG"
+script-log action "Protect master branch"
+case "$project_type" in 
+  "app" ) 
+    script-log action "Add Guages analytics"
+    script-log action "Add Sentry error tracking"
+    ;; 
+esac
+
+
+# ==================================================================
+# OPEN
+# ==================================================================
+
+open "https://github.com/$user_name/$project_name/settings/branches"
+open "https://github.com/$user_name/$project_name"
+open "https://travis-ci.org/$user_name/$project_name"
+case "$project_type" in 
+  "app" ) 
+    open "https://$project_name.herokuapp.com"
+    open "https://secure.gaug.es/dashboard"
+    open "https://sentry.io/$user_name/"
+    ;; 
+  "package" )
+    open "https://www.npmjs.com/package/$project_name"
+    ;;
+esac
+
+
+script-log state "Done"

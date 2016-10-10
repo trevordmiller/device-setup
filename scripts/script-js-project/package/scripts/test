@@ -1,0 +1,6 @@
+#!/bin/bash
+if [ -z "${CI-}" ]; then
+  jest --watch
+else
+  jest
+fi

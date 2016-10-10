@@ -1,0 +1,25 @@
+{
+  "name": "$project_name",
+  "version": "0.1.0",
+  "scripts": {
+    "start": "scripts/start",
+    "test": "scripts/test",
+    "build": "scripts/build",
+    "prepublish": "npm run build"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "main": "build/index.js",
+  "devDependencies": {
+  },
+  "dependencies": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/$user_name/$project_name.git"
+  },
+  "description": "$project_description",
+  "author": "$user_full_name <$user_email> ($user_website)",
+  "license": "MIT"
+}

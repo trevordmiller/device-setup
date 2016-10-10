@@ -1,0 +1,22 @@
+#!/bin/bash
+
+color_user_action_needed=$'\e[31m'
+color_user_current_state=$'\e[36m'
+color_reset=$'\e[0m'
+separator="=================================================================="
+log_type=$1
+text=$2
+
+case "$log_type" in 
+  "action" ) 
+    printf "%s" "${color_user_action_needed}"
+    ;; 
+  "state" ) 
+    printf "%s" "${color_user_current_state}"
+    ;; 
+esac
+printf "\n%s" "$separator"
+printf "\n%s" "$text"
+printf "\n%s" "$separator"
+printf "\n%s" "${color_reset}"
+printf "\n"
