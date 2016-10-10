@@ -3,7 +3,7 @@ set -euo pipefail
 
 script-log state "Reverting terminal and editor settings to normal"
 
-git checkout ~/drive/settings/dotfiles/{.hyperterm.js,.vimrc}
+git checkout ~/drive/settings/dotfiles/{.hyper.js,.vimrc}
 
 sleep 3
 clear

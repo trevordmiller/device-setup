@@ -3,7 +3,7 @@
 do shell script "script-demo"
 
 script-log state "Opening native apps"
-set nativeApps to {"Google Chrome", "SwitchResX Daemon", "ScreenFlow", "Todoist", "/Applications/HyperTerm.app"}
+set nativeApps to {"Google Chrome", "SwitchResX Daemon", "ScreenFlow", "Todoist", "Hyper"}
 repeat with nativeApp in nativeApps
 	run application nativeApp
 end repeat
@@ -23,7 +23,7 @@ end tell
 
 do shell script "script-windows"
 
-tell application "/Applications/HyperTerm.app" to activate
+tell application "Hyper" to activate
 do shell script "script-fullscreen"
 
 script-log state "Moving to screencast directory"

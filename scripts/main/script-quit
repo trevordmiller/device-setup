@@ -6,7 +6,7 @@ do shell script "script-clean"
 
 script-log state "Quitting applications"
 tell application "System Events" to set the visible of every process to true
-set white_list to {"Finder", "HyperTerm"}
+set white_list to {"Finder", "Hyper"}
 try
 	tell application "Finder"
 		set process_list to the name of every process whose visible is true

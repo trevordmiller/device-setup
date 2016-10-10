@@ -11,7 +11,7 @@ do shell script "script-donotdisturb-reset"
 do shell script "script-demo-reset"
 
 do shell script "Quiting apps"
-set nativeApps to {"Google Chrome", "SwitchResX Daemon", "ScreenFlow", "Todoist", "/Applications/HyperTerm.app"}
+set nativeApps to {"Google Chrome", "SwitchResX Daemon", "ScreenFlow", "Todoist", "Hyper"}
 repeat with nativeApp in nativeApps
 	tell application nativeApp to quit
 end repeat

@@ -3,7 +3,7 @@ set -euo pipefail
 
 script-log state "Loading terminal and editor demo settings"
 
-sed -i "" -e "s/fontSize: 17/fontSize: 30/" -e "s/nova-hyperterm/hyperterm-one-light/" "$HOME/drive/settings/dotfiles/.hyperterm.js"
+sed -i "" -e "s/fontSize: 17/fontSize: 30/" -e "s/nova-hyperterm/hyperterm-one-light/" "$HOME/drive/settings/dotfiles/.hyper.js"
 
 vimrcRules=(
   "set laststatus=0"

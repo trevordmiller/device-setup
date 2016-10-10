@@ -1,7 +1,7 @@
 #!/usr/bin/env osascript
 
 script-log state "Opening native apps"
-set nativeApps to {"Todoist", "/Applications/HyperTerm.app", "Google Chrome", "Calendar", "Spotify", "Messages", "Mail", "Slack", "Dash"}
+set nativeApps to {"Todoist", "Hyper", "Google Chrome", "Calendar", "Spotify", "Messages", "Mail", "Slack", "Dash"}
 repeat with nativeApp in nativeApps
 	run application nativeApp
 end repeat
@@ -14,7 +14,7 @@ end repeat
 
 do shell script "script-windows"
 
-tell application "/Applications/HyperTerm.app" to activate
+tell application "Hyper" to activate
 do shell script "script-fullscreen"
 
 script-log state "Opening dev tools"

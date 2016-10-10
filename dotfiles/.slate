@@ -57,7 +57,7 @@ layout layout1 'Firefox':REPEAT ${screen1}
 layout layout1 'Simulator':REPEAT ${screen1}
 
 # RIGHT MONITOR
-layout layout1 'HyperTerm':REPEAT ${screen2}
+layout layout1 'Hyper':REPEAT ${screen2}
 
 
 # ==================================================================

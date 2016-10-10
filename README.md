@@ -22,7 +22,7 @@ _Most things are automatically set up with the bootstrap script ^, but these are
 
 - Todoist install (Mac Store Only)
 - Account system logins (iCloud, Facebook, Twitter)
-- Login items (`Todoist`, `HyperTerm`, `Google Drive`, `Google Photos Backup`, `Seil`, `Karabiner`, `Slate`, `Flux`, `RescueTime`)
+- Login items (`Todoist`, `Google Drive`, `Google Photos Backup`, `Seil`, `Karabiner`, `Slate`, `Flux`, `RescueTime`)
 - "Text Message Forwarding" (on)
 - "Do Not Disturb" when display is sleeping (on)
 - "Do Not Disturb" when mirroring to TVs and projectors (on)
