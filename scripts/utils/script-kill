@@ -1,4 +1,6 @@
 #!/bin/bash
+set -euo pipefail
+
 script-log state "Killing running processes"
 killall node || true
 killall phantomjs || true

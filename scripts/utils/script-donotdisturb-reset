@@ -1,4 +1,5 @@
 #!/usr/bin/env osascript
+
 do shell script "script-log state 'Turning off Do Not Disturb'"
 delay 3
 tell application "System Events"

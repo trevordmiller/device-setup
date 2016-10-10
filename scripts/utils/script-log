@@ -1,4 +1,5 @@
 #!/bin/bash
+set -euo pipefail
 
 color_user_action_needed=$'\e[31m'
 color_user_current_state=$'\e[36m'

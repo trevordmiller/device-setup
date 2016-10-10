@@ -1,4 +1,5 @@
 #!/bin/bash
+set -euo pipefail
 
 script-log state "Upgrading Homebrew + brew/cask packages"
 brew update && brew upgrade
