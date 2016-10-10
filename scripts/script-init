@@ -1,73 +1,170 @@
 #!/bin/bash
 
-function shell {
-  chsh -s /bin/bash
-}
 
-function hidden_files {
-  defaults write com.apple.finder AppleShowAllFiles YES
-  killall Finder
-}
+# ==================================================================
+# VARIABLES
+# ==================================================================
 
-function screenshots {
-  defaults write com.apple.screencapture location ~/Downloads
-  killall SystemUIServer
-}
+homebrew_packages=(
+  "bash"
+  "git"
+  "heroku"
+  "n"
+  "node"
+  "shellcheck"
+  "tmux"
+  "vim"
+)
 
-function homebrew_packages {
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-  for package in $1; do
-    brew install $package
-  done
-  heroku login
-}
+ruby_gems=(
+  "travis"
+)
 
-function graphical_apps {
-  for app in $1; do
-    brew cask install $app
-  done
-}
+npm_global_packages=(
+  "create-react-app"
+  "csslint"
+  "eslint"
+  "eslint-plugin-react"
+  "jsonlint"
+)
 
-function fonts {
-  brew tap caskroom/fonts
-  for font in $1; do
-    brew cask install $font
-  done
-}
+fonts=(
+  "font-fira-mono"
+  "font-quicksand"
+)
 
-function npm_packages {
-  for package in $1; do
-    npm install -g $package
-  done
-  n latest
-  npm login
-}
+homebrew_cask_apps=(
+  "1password"
+  "anki"
+  "dash"
+  "flux"
+  "google-chrome"
+  "google-drive"
+  "google-photos-backup"
+  "hyperterm"
+  "karabiner"
+  "rescuetime"
+  "screenflow"
+  "seil"
+  "sketch"
+  "slack"
+  "slate"
+  "spotify"
+  "switchresx"
+)
 
-function ruby_packages {
-  for package in $1; do
-    gem install $package
-  done
-  travis login
-}
 
-function symlink_dotfiles {
-  for file in $(find "$HOME/drive/settings/dotfiles" -depth 1 -exec basename {} \;); do
-    ln -s "$HOME/drive/settings/dotfiles/$file" "$HOME/$file"
-  done
-}
+# ==================================================================
+# SHELL
+# ==================================================================
 
-function vim_plugins {
-  git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-  vim +PluginInstall +qall
-}
+script-log state "Making bash the default shell"
+chsh -s /bin/bash
 
-shell
-hidden_files
-screenshots
-homebrew_packages "bash git heroku n node shellcheck tmux vim"
-graphical_apps "1password anki dash google-chrome google-drive google-photos-backup hyperterm karabiner screenflow seil sketch slack slate spotify switchresx flux rescuetime"
-fonts "font-fira-mono font-quicksand"
-npm_packages "create-react-app csslint eslint eslint-plugin-react jsonlint"
-ruby_packages "travis"
-symlink_dotfiles
-vim_plugins
+
+# ==================================================================
+# MACOS
+# ==================================================================
+
+# HIDDEN FILES
+script-log state "Configuring hidden files to show"
+defaults write com.apple.finder AppleShowAllFiles YES
+killall Finder
+
+# SCREENSHOTS
+script-log state "Configuring screenshots to save in Downloads"
+defaults write com.apple.screencapture location ~/Downloads
+killall SystemUIServer
+
+
+# ==================================================================
+# PACKAGES
+# ==================================================================
+
+# HOMEBREW
+script-log state "Installing Homebrew"
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+script-log state "Installing Homebrew packages"
+for homebrew_package in "${homebrew_packages[@]}"; do
+  brew install "$homebrew_package"
+done
+
+# RUBY
+script-log state "Installing Ruby gems"
+for ruby_gem in "${ruby_gems[@]}"; do
+  gem install "$ruby_gem"
+done
+
+# NPM
+script-log state "Installing npm global packages"
+for npm_global_package in "${npm_global_packages[@]}"; do
+  npm install -g "$npm_global_package"
+done
+
+# CONFIG
+script-log state "Upgrade to latest Node"
+n latest
+
+
+# ==================================================================
+# DOTFILES
+# ==================================================================
+
+script-log state "Symlinking dotfiles"
+for file in $(find "$HOME/drive/settings/dotfiles" -depth 1 -exec basename {} \;); do
+  ln -s "$HOME/drive/settings/dotfiles/$file" "$HOME/$file"
+done
+
+
+# ==================================================================
+# VIM PLUGINS
+# ==================================================================
+
+script-log state "Installing Vundle"
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+script-log state "Installing Vundle Vim plugins"
+vim +PluginInstall +qall
+
+
+# ==================================================================
+# FONTS
+# ==================================================================
+
+script-log state "Adding Homebrew fonts tap"
+brew tap caskroom/fonts
+script-log state "Installing Homebrew fonts"
+for font in "${fonts[@]}"; do
+  brew cask install "$font"
+done
+
+
+# ==================================================================
+# GUI APPS
+# ==================================================================
+
+script-log state "Installing Homebrew cask apps"
+for homebrew_cask_app in "${homebrew_cask_apps[@]}"; do
+  brew cask install "$homebrew_cask_app"
+done
+
+
+# ==================================================================
+# MANUAL SETUP
+# ==================================================================
+
+# NPM
+script-log action "Log in to npm CLI"
+npm login
+
+# HEROKU
+script-log action "Log in to Heroku CLI"
+heroku login
+
+# TRAVIS
+script-log action "Log in to Travis CI CLI"
+travis login
+
+
+# ==================================================================
+
+script-log state "Done"
