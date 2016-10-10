@@ -83,8 +83,8 @@ case "$project_type" in
     travis setup heroku
     ;; 
   "package" ) 
-    travis setup npm
     npm publish
+    travis setup npm
     ;; 
 esac
 git add -A
