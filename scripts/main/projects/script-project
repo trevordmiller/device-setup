@@ -93,31 +93,31 @@ git push
 
 
 # ==================================================================
-# MANUAL CONFIG
+# MANUAL SETUP
 # ==================================================================
 
-script-log action "MANUAL CONFIG"
-script-log action "Protect master branch"
+script-log action "MANUAL SETUP"
+script-log action "TODO: Protect master branch"
+open "https://github.com/$user_name/$project_name/settings/branches"
 case "$project_type" in 
   "app" ) 
-    script-log action "Add Guages analytics"
-    script-log action "Add Sentry error tracking"
+    script-log action "TODO: Add Guages analytics"
+    open "https://secure.gaug.es/dashboard"
+    script-log action "TODO: Add Sentry error tracking"
+    open "https://sentry.io/$user_name/"
     ;; 
 esac
 
 
 # ==================================================================
-# OPEN
+# RESULTS
 # ==================================================================
 
-open "https://github.com/$user_name/$project_name/settings/branches"
 open "https://github.com/$user_name/$project_name"
 open "https://travis-ci.org/$user_name/$project_name"
 case "$project_type" in 
   "app" ) 
     open "https://$project_name.herokuapp.com"
-    open "https://secure.gaug.es/dashboard"
-    open "https://sentry.io/$user_name/"
     ;; 
   "package" )
     open "https://www.npmjs.com/package/$project_name"
