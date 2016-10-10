@@ -1,5 +1,5 @@
 {
-  "name": "%project_name",
+  "name": "%substitute_project_name",
   "version": "0.1.0",
   "scripts": {
     "start": "scripts/start",
@@ -17,9 +17,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/%user_name/%project_name.git"
+    "url": "git+https://github.com/%substitute_user_name/%substitute_project_name.git"
   },
-  "description": "%project_description",
-  "author": "%user_full_name <%user_email> (%user_website)",
+  "description": "%substitute_project_description",
+  "author": "%substitute_user_full_name <%substitute_user_email> (%substitute_user_website)",
   "license": "MIT"
 }
