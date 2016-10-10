@@ -1,6 +1,6 @@
 # MIT License
 
-Copyright (c) $project_year $user_full_name
+Copyright (c) %project_year %user_full_name
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

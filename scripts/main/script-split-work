@@ -1,0 +1,3 @@
+#!/bin/bash
+cd "$HOME/Documents/DomoWeb/DomoWeb/mobile-web/" || exit
+script-split

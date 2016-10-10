@@ -1,5 +1,4 @@
 #!/bin/bash
-set -euo pipefail
 
 sed -i "" -e "s/fontSize: 17/fontSize: 30/" -e "s/nova-hyperterm/hyperterm-one-light/" "$HOME/drive/settings/dotfiles/.hyperterm.js"
 

@@ -1,5 +1,4 @@
 #!/bin/bash
-set -euo pipefail
 
 git checkout ~/drive/settings/dotfiles/{.hyperterm.js,.vimrc}
 

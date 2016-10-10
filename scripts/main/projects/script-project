@@ -1,7 +1,6 @@
 #!/bin/bash
-set -euo pipefail
 
-template_path=$HOME/drive/settings/scripts/script-js-project
+template_path=$HOME/drive/settings/scripts/main/projects/
 user_name="trevordmiller"
 user_full_name="Trevor D. Miller"
 user_email="trevordmiller@icloud.com"
@@ -23,12 +22,11 @@ case "$project_type" in
   "app" ) 
     script-log state "Running create-react-app"
     create-react-app "$project_name"
-    cd "$project_name"
-    cp -a "$template_path"/app/. ./
+    cd "$project_name" || exit
     ;; 
   "package" ) 
     mkdir "$project_name"
-    cd "$project_name"
+    cd "$project_name" || exit
     cp -a "$template_path"/package/. ./
     ;; 
 esac
@@ -37,13 +35,13 @@ esac
 cp -a "$template_path"/shared/. ./
 
 # VARIABLE SUBSTITUTION
-grep -rl '$user_name' . --exclude-dir=node_modules | xargs sed -i '' "s|\$user_name|$user_name|g"
-grep -rl '$user_full_name' . --exclude-dir=node_modules | xargs sed -i '' "s|\$user_full_name|$user_full_name|g"
-grep -rl '$user_email' . --exclude-dir=node_modules | xargs sed -i '' "s|\$user_email|$user_email|g"
-grep -rl '$user_website' . --exclude-dir=node_modules | xargs sed -i '' "s|\$user_website|$user_website|g"
-grep -rl '$project_year' . --exclude-dir=node_modules | xargs sed -i '' "s|\$project_year|$project_year|g"
-grep -rl '$project_name' . --exclude-dir=node_modules | xargs sed -i '' "s|\$project_name|$project_name|g"
-grep -rl '$project_description' . --exclude-dir=node_modules | xargs sed -i '' "s|\$project_description|$project_description|g"
+grep -rl '%user_name' . --exclude-dir=node_modules | xargs sed -i '' "s|%user_name|$user_name|g"
+grep -rl '%user_full_name' . --exclude-dir=node_modules | xargs sed -i '' "s|%user_full_name|$user_full_name|g"
+grep -rl '%user_email' . --exclude-dir=node_modules | xargs sed -i '' "s|%user_email|$user_email|g"
+grep -rl '%user_website' . --exclude-dir=node_modules | xargs sed -i '' "s|%user_website|$user_website|g"
+grep -rl '%project_year' . --exclude-dir=node_modules | xargs sed -i '' "s|%project_year|$project_year|g"
+grep -rl '%project_name' . --exclude-dir=node_modules | xargs sed -i '' "s|%project_name|$project_name|g"
+grep -rl '%project_description' . --exclude-dir=node_modules | xargs sed -i '' "s|%project_description|$project_description|g"
 
 
 # ==================================================================

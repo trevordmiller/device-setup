@@ -1,5 +1,4 @@
 #!/usr/bin/env osascript
-
 delay 3
 tell application "System Events"
 	tell application process "SystemUIServer"

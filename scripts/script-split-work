@@ -1,5 +1,0 @@
-#!/bin/bash
-set -euo pipefail
-
-cd "$HOME/Documents/DomoWeb/DomoWeb/mobile-web/"
-script-split

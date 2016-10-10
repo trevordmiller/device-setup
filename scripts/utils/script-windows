@@ -1,5 +1,4 @@
 #!/usr/bin/env osascript
-
 delay 3
 tell application "System Events"
 	key code 18 using {command down, option down, control down}

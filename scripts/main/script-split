@@ -1,6 +1,4 @@
 #!/bin/bash
-set -euo pipefail
-
 tmux new-session -d
 tmux split-window -v -p 33
 tmux split-window -h

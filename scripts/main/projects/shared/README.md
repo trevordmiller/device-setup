@@ -1,6 +1,6 @@
-# $project_name
+# %project_name
 
-$project_description
+%project_description
 
 ## Contributing
 

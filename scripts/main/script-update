@@ -1,6 +1,4 @@
 #!/bin/bash
-set -euo pipefail
-
 brew update && brew upgrade
 n latest
 npm update -g

@@ -1,6 +1,4 @@
 #!/bin/bash
-set -euo pipefail
-
 find ~/'drive' -name 'node_modules' -type d -exec rm -r '{}' ';' || true
 rm -rf ~/Downloads/*
 rm -rf ~/.Trash
