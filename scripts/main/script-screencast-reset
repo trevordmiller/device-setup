@@ -1,6 +1,6 @@
 #!/usr/bin/env osascript
 
-script-log state "Reverting screen resolution"
+do shell script "script-log state 'Reverting screen resolution'"
 delay 3
 tell application "SwitchResX Daemon"
 	set current mode of display 1 to mode 1 of display 1
@@ -10,10 +10,4 @@ do shell script "script-donotdisturb-reset"
 
 do shell script "script-demo-reset"
 
-do shell script "Quiting apps"
-set nativeApps to {"Google Chrome", "SwitchResX Daemon", "ScreenFlow", "Todoist", "Hyper"}
-repeat with nativeApp in nativeApps
-	tell application nativeApp to quit
-end repeat
-
-script-log state "Done"
+do shell script "script-log state 'Done'"
