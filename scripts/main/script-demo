@@ -3,13 +3,18 @@ set -euo pipefail
 
 script-log state "Loading terminal and editor demo settings"
 
-sed -i "" -e "s/fontSize: 17/fontSize: 30/" -e "s/nova-hyperterm/hyperterm-one-light/" "$HOME/drive/settings/dotfiles/.hyper.js"
+sed -i "" \
+-e "s/nova-hyperterm/hyperterm-one-light/" \
+-e "s/padding: '17px'/padding: '25px'/" \
+-e "s/fontSize: 17/fontSize: 30/" \
+"$HOME/drive/settings/dotfiles/.hyper.js"
 
 vimrcRules=(
   "set laststatus=0"
   "set noshowmode"
   "set background=light"
   "colorscheme one"
+  "exec 'highlight EndOfBuffer guifg=#CCCCCC'"
 )
 for vimrcRule in "${vimrcRules[@]}"; do
   echo "$vimrcRule" >> "$HOME/drive/settings/dotfiles/.vimrc"
