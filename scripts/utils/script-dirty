@@ -12,10 +12,8 @@ output=$(script-status | grep \
 if [ -z "$output" ]
 then 
   script-log state "All git repos are clean";
-  exit 0;
 else
   script-log action "Clean dirty git repos!";
   script-status
-  exit 1;
 fi
 script-log state "Done";
