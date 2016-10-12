@@ -4,7 +4,7 @@ test('$1', () => {
 })
 endsnippet
 
-snippet componentInstance "React component instantiation"
+snippet componentTag "React component instantiation"
 <${1:div}
   $2
 >
@@ -14,7 +14,7 @@ endsnippet
 
 snippet componentFunction "React component function"
 const ${1:`!v expand('%:t:r')`} = ({$2}) => (
-  componentInstance$3
+  componentTag$3
 )
 endsnippet
 
@@ -23,7 +23,7 @@ class ${1:`!v expand('%:t:r')`} extends React.Component {
   render() {
     const {$2} = this.props
     return (
-      componentInstance$3
+      componentTag$3
     )
   }
 }
