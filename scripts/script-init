@@ -83,8 +83,6 @@ killall SystemUIServer
 # ==================================================================
 
 # HOMEBREW
-script-log state "Installing Homebrew"
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 script-log state "Installing Homebrew packages"
 for homebrew_package in "${homebrew_packages[@]}"; do
   brew install "$homebrew_package"

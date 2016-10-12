@@ -8,20 +8,22 @@ _Personal device settings_
 
 ## Dependencies
 
-- Google Drive install
-- Rename `~/Google\ Drive` to `~/drive`
+- Install Homebrew `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+- `brew cask install google-drive`
+- Rename `~/Google\ Drive` to `~/drive` and wire up sync
 - Clone this repo into `~/drive`
 
 ## Automatic
 
-- Run the bootstrap script (`. ~/drive/settings/scripts/script-bash-bootstrap`)
+- Run the init script (`. ~/drive/settings/scripts/script-init`)
 
 ## Manual
 
-_Most things are automatically set up with the bootstrap script ^, but these are the few outstanding manual items_
+_Most things are automatically set up with the init script ^, but these are the few outstanding manual items_
 
-- Todoist install (Mac Store Only)
-- Account system logins (iCloud, Facebook, Twitter)
+### System Preferences
+
+- Account system logins (iCloud, )
 - Login items (`Todoist`, `Google Drive`, `Google Photos Backup`, `Seil`, `Karabiner`, `Slate`, `Flux`, `RescueTime`)
 - "Text Message Forwarding" (on)
 - "Do Not Disturb" when display is sleeping (on)
@@ -31,11 +33,9 @@ _Most things are automatically set up with the bootstrap script ^, but these are
 - Dock auto hide (on)
 - Menu Bar auto hide (on)
 - Highlight color (nova.cyan)
-- Calendars (personal nova.cyan, tramy nova.magenta, work nova.blue)
 - Prevent computer from sleeping automatically when display is off (on)
 - Show all filename extensions (on)
 - Show warning before changing an extension (off)
-- Show warning before emptying the trash (off)
 - Power adapter, turn display off after (never)
 - Default browser (Chrome)
 - Notification center keyboard shortcut (`⌘⌥⌃n`)
@@ -43,9 +43,14 @@ _Most things are automatically set up with the bootstrap script ^, but these are
 - "Glass" sound for alerts
 - Alert volume (full)
 - "Popcorn" sound for messages
+
+### App Store Installs
+
+- Todoist
+
+### App Config
+
 - Finder sidebar condense (`Google Drive`, `Downloads`, `AirDrop`)
-- Google Photos Backup size (`Original`)
-- Time Machine discs (`backup-home`, `backup-work`)
 - Karabiner setting sync (`private.xml` with `~/drive/settings/karabiner/private.xml`)
 - Key repeat spacing (`Key repeat` to `20ms` in Karabiner)
 - Key repeat delay (`Delay until repeat` to `200ms` in Karabiner)
@@ -53,13 +58,16 @@ _Most things are automatically set up with the bootstrap script ^, but these are
 - Caps lock -> FN (CAPS lock to FN in Seil)
 - Dash settings and snippet sync (`~/drive/settings/dash/` folder)
 - WakaTime config (add API key to `~/.wakatime.cfg`)
-- Backups working in background (Google Drive, Google Photos Backup, Time Machine external drives)
+- Calendars (personal nova.cyan, tramy nova.magenta, work nova.blue)
 - Chrome extensions
   - 1Password
   - Grammarly
   - JSON Formatter
   - React DevTools
   - Redux DevTools
+- Google Photos Backup size (`Original`)
+- Time Machine discs (`backup-home`, `backup-work`)
+- Backups working in background (Google Drive, Google Photos Backup, Time Machine external drives)
 
 ---
 
