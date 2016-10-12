@@ -28,6 +28,9 @@ Plugin 'w0rp/ale'
 Plugin 'tmhedberg/matchit'
 Plugin 'moll/vim-node'
 
+" SNIPPETS
+Plugin 'SirVer/ultisnips'
+
 " SYNTAX GROUP EXTENSIONS
 Plugin 'othree/html5.vim'
 Plugin 'hail2u/vim-css3-syntax'
@@ -73,9 +76,14 @@ let g:ale_linters = {
 \  'css': ['csslint'],
 \}
 
+" SNIPPETS
+let g:UltiSnipsSnippetsDir='~/drive/settings/snippets'
+let g:UltiSnipsExpandTrigger='<tab>'
+let g:UltiSnipsJumpForwardTrigger='<tab>'
+let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
+
 " VIM-JSX
 let g:jsx_ext_required = 0
-
 
 " ==================================================================
 " CORE SETTINGS
