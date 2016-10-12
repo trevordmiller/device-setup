@@ -37,7 +37,6 @@ fonts=(
 homebrew_cask_apps=(
   "1password"
   "anki"
-  "dash"
   "flux"
   "google-chrome"
   "google-drive"
@@ -121,8 +120,13 @@ done
 
 script-log state "Installing Vundle"
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
 script-log state "Installing Vundle Vim plugins"
 vim +PluginInstall +qall
+
+script-log state "Making UltiSnips symlinks"
+mkdir ~/.vim/UltiSnips/
+ln -s ~/drive/settings/syncfiles/UltiSnips/* ~/.vim/UltiSnips/
 
 
 # ==================================================================

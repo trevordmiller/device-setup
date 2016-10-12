@@ -1,0 +1,55 @@
+snippet test "Unit test assertion"
+test('$1', () => {
+  expect($2).${3:toBe}($4)
+})
+endsnippet
+
+snippet componentInstance "React component instantiation"
+<${1:div}
+  $2
+>
+  $3
+</$1>
+endsnippet
+
+snippet componentFunction "React component function"
+const ${1:`!v expand('%:t:r')`} = ({$2}) => (
+  componentInstance$3
+)
+endsnippet
+
+snippet componentClass "React component class"
+class ${1:`!v expand('%:t:r')`} extends React.Component {
+  render() {
+    const {$2} = this.props
+    return (
+      componentInstance$3
+    )
+  }
+}
+endsnippet
+
+snippet componentFile "React component file"
+import React from 'react'
+
+componentFunction$5
+
+${1:`!v expand('%:t:r')`}.propTypes = {
+  $2: React.PropTypes.$3${4:.isRequired}
+}
+
+export default $1
+endsnippet
+
+snippet componentSnapshot "React component snapshot test assertion"
+test('$1', () => {
+  const tree = renderer.create(<${2:`!v expand('%:t:r:r')`} $3 />)
+  expect(tree).toMatchSnapshot()
+})
+endsnippet
+
+snippet componentSnapshotImports "React component snapshot test imports"
+import React from 'react'
+import renderer from 'react-test-renderer'
+import ${1:`!v expand('%:t:r:r')`} from './$1'
+endsnippet

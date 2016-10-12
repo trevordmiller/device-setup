@@ -77,7 +77,6 @@ let g:ale_linters = {
 \}
 
 " SNIPPETS
-let g:UltiSnipsSnippetsDir='~/drive/settings/snippets'
 let g:UltiSnipsExpandTrigger='<tab>'
 let g:UltiSnipsJumpForwardTrigger='<tab>'
 let g:UltiSnipsJumpBackwardTrigger='<s-tab>'

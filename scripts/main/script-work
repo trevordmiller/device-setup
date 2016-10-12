@@ -1,7 +1,7 @@
 #!/usr/bin/env osascript
 
 do shell script "script-log state 'Opening native apps'"
-set nativeApps to {"Todoist", "/Applications/Hyper.app", "Google Chrome", "Calendar", "Spotify", "Messages", "Mail", "Slack", "Dash"}
+set nativeApps to {"Todoist", "/Applications/Hyper.app", "Google Chrome", "Calendar", "Spotify", "Messages", "Mail", "Slack"}
 repeat with nativeApp in nativeApps
 	run application nativeApp
 end repeat
