@@ -58,7 +58,7 @@ homebrew_cask_apps=(
 # SHELL
 # ==================================================================
 
-script-log state "Making bash the default shell"
+echo "Making bash the default shell"
 chsh -s /bin/bash
 
 
@@ -67,12 +67,12 @@ chsh -s /bin/bash
 # ==================================================================
 
 # HIDDEN FILES
-script-log state "Configuring hidden files to show"
+echo "Configuring hidden files to show"
 defaults write com.apple.finder AppleShowAllFiles YES
 killall Finder
 
 # SCREENSHOTS
-script-log state "Configuring screenshots to save in Downloads"
+echo "Configuring screenshots to save in Downloads"
 defaults write com.apple.screencapture location ~/Downloads
 killall SystemUIServer
 
@@ -82,25 +82,25 @@ killall SystemUIServer
 # ==================================================================
 
 # HOMEBREW
-script-log state "Installing Homebrew packages"
+echo "Installing Homebrew packages"
 for homebrew_package in "${homebrew_packages[@]}"; do
   brew install "$homebrew_package"
 done
 
 # RUBY
-script-log state "Installing Ruby gems"
+echo "Installing Ruby gems"
 for ruby_gem in "${ruby_gems[@]}"; do
   gem install "$ruby_gem"
 done
 
 # NPM
-script-log state "Installing npm global packages"
+echo "Installing npm global packages"
 for npm_global_package in "${npm_global_packages[@]}"; do
   npm install -g "$npm_global_package"
 done
 
 # CONFIG
-script-log state "Upgrade to latest Node"
+echo "Upgrade to latest Node"
 n latest
 
 
@@ -108,7 +108,7 @@ n latest
 # DOTFILES
 # ==================================================================
 
-script-log state "Symlinking dotfiles"
+echo "Symlinking dotfiles"
 for file in $(find "$HOME/drive/settings/dotfiles" -depth 1 -exec basename {} \;); do
   ln -s "$HOME/drive/settings/dotfiles/$file" "$HOME/$file"
 done
@@ -118,13 +118,13 @@ done
 # VIM PLUGINS
 # ==================================================================
 
-script-log state "Installing Vundle"
+echo "Installing Vundle"
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
-script-log state "Installing Vundle Vim plugins"
+echo "Installing Vundle Vim plugins"
 vim +PluginInstall +qall
 
-script-log state "Making UltiSnips symlinks"
+echo "Making UltiSnips symlinks"
 mkdir ~/.vim/UltiSnips/
 ln -s ~/drive/settings/syncfiles/UltiSnips/* ~/.vim/UltiSnips/
 
@@ -133,9 +133,9 @@ ln -s ~/drive/settings/syncfiles/UltiSnips/* ~/.vim/UltiSnips/
 # FONTS
 # ==================================================================
 
-script-log state "Adding Homebrew fonts tap"
+echo "Adding Homebrew fonts tap"
 brew tap caskroom/fonts
-script-log state "Installing Homebrew fonts"
+echo "Installing Homebrew fonts"
 for font in "${fonts[@]}"; do
   brew cask install "$font"
 done
@@ -145,7 +145,7 @@ done
 # GUI APPS
 # ==================================================================
 
-script-log state "Installing Homebrew cask apps"
+echo "Installing Homebrew cask apps"
 for homebrew_cask_app in "${homebrew_cask_apps[@]}"; do
   brew cask install "$homebrew_cask_app"
 done
@@ -156,18 +156,18 @@ done
 # ==================================================================
 
 # NPM
-script-log action "Log in to npm CLI"
+echo "Log in to npm CLI"
 npm login
 
 # HEROKU
-script-log action "Log in to Heroku CLI"
+echo "Log in to Heroku CLI"
 heroku login
 
 # TRAVIS
-script-log action "Log in to Travis CI CLI"
+echo "Log in to Travis CI CLI"
 travis login
 
 
 # ==================================================================
 
-script-log state "Done"
+echo "Done"
