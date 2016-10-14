@@ -7,5 +7,4 @@ _This assumes you have Bash, Git, Node, and npm_
 - Stage, commit, and push
 - Submit a pull request
 - Ensure your pull request passes all checks
-- An admin will review your pull request and help you get it merged in
-- An admin will deploy a release with your latest code
+- An admin will merge your pull request and deploy a release
