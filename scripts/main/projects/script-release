@@ -20,9 +20,10 @@ git add -A
 git commit -m "Release"
 
 script-log state "Pushing"
-git push && git push --tags
+git push --set-upstream origin "$current_branch"
+git push --tags
 
-script-log action "Submit pull request"
+script-log action "TODO: Submit pull request"
 open https://github.com/"$user_name"/"$current_repo"/compare/master..."$current_branch"?expand=1
 
 script-log state "Done"
