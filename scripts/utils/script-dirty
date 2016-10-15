@@ -13,7 +13,7 @@ if [ -z "$output" ]
 then 
   script-log state "All git repos are clean";
 else
-  script-log action "Clean dirty git repos!";
+  script-log action "TODO: Clean dirty git repos!";
   script-status
 fi
 script-log state "Done";
