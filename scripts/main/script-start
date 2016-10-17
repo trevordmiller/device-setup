@@ -1,5 +1,7 @@
 #!/usr/bin/env osascript
 
+do shell script "script-quit"
+
 on getTodayApps(core, other, work, background)
 	set today to weekday of (current date)
 	if (today = Sunday) then
