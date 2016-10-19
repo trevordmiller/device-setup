@@ -104,7 +104,7 @@ git push
 # ==================================================================
 
 script-log action "MANUAL SETUP"
-script-log action "TODO: Protect master branch"
+script-log action "TODO: Protect master branch (all options)"
 open "https://github.com/$user_name/$project_name/settings/branches"
 case "$project_type" in 
   "app" ) 
