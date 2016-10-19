@@ -1,29 +1,16 @@
 #!/bin/bash
 set -euo pipefail
 
-user_name="trevordmiller"
-current_repo_path=$(git rev-parse --show-toplevel)
-current_repo=$(basename "$current_repo_path")
-current_branch=$(git rev-parse --abbrev-ref HEAD)
 release_type=$1
 
 script-log state "Pulling latest"
 git pull
 
-script-log state "Switching to release branch"
-git branch -d release
-git checkout -b release
-
 script-log state "Bumping version"
-npm version "$release_type"
-git add -A
-git commit -m "Release"
+npm version "$release_type" -m "Release %s"
 
 script-log state "Pushing"
-git push --set-upstream origin "$current_branch"
+git push --set-upstream origin master
 git push --tags
-
-script-log action "TODO: Submit pull request"
-open https://github.com/"$user_name"/"$current_repo"/compare/master..."$current_branch"?expand=1
 
 script-log state "Done"
