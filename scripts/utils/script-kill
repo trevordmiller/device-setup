@@ -5,4 +5,6 @@ script-log state "Killing running processes"
 killall node || true
 killall phantomjs || true
 tmux kill-server || true
+cd ~/drive/work/egghead-systems
+vagrant halt
 script-log state "Done"

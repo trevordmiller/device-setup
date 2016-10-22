@@ -1,5 +1,11 @@
 #!/bin/bash
 set -euo pipefail
 
-cd "$HOME/Documents/DomoWeb/DomoWeb/mobile-web/" || exit
+# cd "HOME"/drive/work/egghead-systems
+# vagrant up
+# vagrant ssh
+# cd /app
+# foreman start
+
+cd "$HOME"/drive/work/egghead-instructor-center
 script-split
