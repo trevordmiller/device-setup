@@ -54,6 +54,7 @@ layout layout1 'Google Chrome Canary':REPEAT ${screen1}
 layout layout1 'Safari':REPEAT ${screen1}
 layout layout1 'Firefox':REPEAT ${screen1}
 layout layout1 'Simulator':REPEAT ${screen1}
+layout layout1 'Balsamiq Mockups 3':REPEAT ${screen1}
 
 # RIGHT MONITOR
 layout layout1 'Hyper':REPEAT ${screen2}
