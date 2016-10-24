@@ -7,7 +7,7 @@ repeat with nativeApp in nativeApps
 end repeat
 
 do shell script "script-log state 'Opening web apps'"
-set webApps to {"https://github.com/eggheadio/egghead-instructor-center", "http://localhost:3000"}
+set webApps to {"https://docs.google.com/document/d/1O2Me9-4GoYfvEwrIXkyHDAJQs-P2eJXZ6YKJYqJhVWg"}
 repeat with webApp in webApps
 	do shell script "open " & webApp
 end repeat
