@@ -8,7 +8,8 @@ SCRIPTS_MAIN_PROJECTS_PATH="$HOME/drive/settings/scripts/main/projects"
 SCRIPTS_UTILS_PATH="$HOME/drive/settings/scripts/utils"
 HOMEBREW_PATH="/usr/local/bin"
 PROJECT_NPM_PATH="./node_modules/.bin"
-export PATH="$PATH:$SCRIPTS_PATH:$SCRIPTS_MAIN_PATH:$SCRIPTS_MAIN_PROJECTS_PATH:$SCRIPTS_UTILS_PATH:$HOMEBREW_PATH:$PROJECT_NPM_PATH"
+YARN_PATH="$HOME/.yarn/bin"
+export PATH="$PATH:$SCRIPTS_PATH:$SCRIPTS_MAIN_PATH:$SCRIPTS_MAIN_PROJECTS_PATH:$SCRIPTS_UTILS_PATH:$HOMEBREW_PATH:$PROJECT_NPM_PATH:$YARN_PATH"
 
 
 # ==================================================================

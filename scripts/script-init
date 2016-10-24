@@ -16,6 +16,7 @@ homebrew_packages=(
   "shellcheck"
   "tmux"
   "vim"
+  "yarn"
 )
 
 ruby_gems=(
