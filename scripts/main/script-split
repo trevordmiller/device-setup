@@ -2,7 +2,13 @@
 set -euo pipefail
 
 tmux new-session -d
-tmux split-window -v -p 33
-tmux split-window -h
+split_count=${1:-3}
+index=1
+while [ "$index" -lt "$split_count" ]
+do
+  tmux split-window
+  let "index+=1"
+done
+tmux select-layout main-horizontal
 tmux select-pane -t 0
 tmux attach-session -d 
