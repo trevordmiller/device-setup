@@ -57,3 +57,10 @@ import React from 'react'
 import renderer from 'react-test-renderer'
 import ${1:`!v expand('%:t:r:r')`} from './$1'
 endsnippet
+
+snippet componentStory "React component StoryBook story"
+storiesOf('$1', module)
+  .add('${2:Default}', () => (
+    componentTag$3
+  ))
+endsnippet
