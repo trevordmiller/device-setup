@@ -41,6 +41,10 @@ ${1:`!v expand('%:t:r')`}.propTypes = {
 export default $1
 endsnippet
 
+snippet componentPropType "React component PropType"
+$1: React.PropTypes.$2${3:.isRequired},
+endsnippet
+
 snippet componentSnapshot "React component snapshot test assertion"
 test('$1', () => {
   const tree = renderer.create(<${2:`!v expand('%:t:r:r')`} $3 />)
