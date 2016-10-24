@@ -46,7 +46,7 @@ $1: React.PropTypes.$2${3:.isRequired},
 endsnippet
 
 snippet componentSnapshot "React component snapshot test assertion"
-test('$1', () => {
+test('${1:Default}', () => {
   const tree = renderer.create(<${2:`!v expand('%:t:r:r')`} $3 />)
   expect(tree).toMatchSnapshot()
 })
