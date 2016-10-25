@@ -1,10 +1,46 @@
-snippet test "Unit test assertion"
+# ==================================================================
+# TEST
+# ==================================================================
+
+snippet tu "Test - unit"
 test('$1', () => {
   expect($2).${3:toBe}($4)
 })
 endsnippet
 
-snippet componentTag "React component instantiation"
+snippet tuf "Test - unit file"
+import ${1:`!v expand('%:t:r:r')`} from './$1'
+
+tu$2
+endsnippet
+
+snippet ts "Test - snapshot"
+test('${1:Default}', () => {
+  const tree = renderer.create(
+		<${2:`!v expand('%:t:r:r')`}
+			$3
+		>
+			$4
+		</$2>
+	)
+  expect(tree).toMatchSnapshot()
+})
+endsnippet
+
+snippet tsf "Test - snapshot file"
+import React from 'react'
+import renderer from 'react-test-renderer'
+import ${1:`!v expand('%:t:r:r')`} from './$1'
+
+ts$2
+endsnippet
+
+
+# ==================================================================
+# COMPONENT
+# ==================================================================
+
+snippet ct "Component tag"
 <${1:div}
   $2
 >
@@ -12,55 +48,72 @@ snippet componentTag "React component instantiation"
 </$1>
 endsnippet
 
-snippet componentFunction "React component function"
+snippet cf "Component function"
 const ${1:`!v expand('%:t:r')`} = ({$2}) => (
-  componentTag$3
+  ct$3
 )
 endsnippet
 
-snippet componentClass "React component class"
+snippet cc "Component class"
 class ${1:`!v expand('%:t:r')`} extends React.Component {
   render() {
     const {$2} = this.props
     return (
-      componentTag$3
+      ct$3
     )
   }
 }
 endsnippet
 
-snippet componentFile "React component file"
+snippet cp "Component proptype"
+$1: React.PropTypes.$2${3:.isRequired},
+endsnippet
+
+snippet cff "Component function file"
 import React from 'react'
 
-componentFunction$5
+cf$5
 
 ${1:`!v expand('%:t:r')`}.propTypes = {
-  $2: React.PropTypes.$3${4:.isRequired},
+	cp$6
 }
 
 export default $1
 endsnippet
 
-snippet componentPropType "React component PropType"
-$1: React.PropTypes.$2${3:.isRequired},
-endsnippet
-
-snippet componentSnapshot "React component snapshot test assertion"
-test('${1:Default}', () => {
-  const tree = renderer.create(<${2:`!v expand('%:t:r:r')`} $3 />)
-  expect(tree).toMatchSnapshot()
-})
-endsnippet
-
-snippet componentSnapshotImports "React component snapshot test imports"
+snippet ccf "Component class file"
 import React from 'react'
-import renderer from 'react-test-renderer'
-import ${1:`!v expand('%:t:r:r')`} from './$1'
+
+cc$5
+
+${1:`!v expand('%:t:r')`}.propTypes = {
+	cp$6
+}
+
+export default connect(
+  ({$7}) => ({...$7}),
+  {
+		$8,
+	}
+)($1)
 endsnippet
 
-snippet componentStory "React component StoryBook story"
+
+# ==================================================================
+# STORYBOOK
+# ==================================================================
+
+snippet ss "Storybook story"
 storiesOf('${1:`!v expand('%:t:r:r')`}', module)
   .add('${2:Default}', () => (
-    componentTag$3
+    ct$3
   ))
+endsnippet
+
+snippet ssf "Storybook story file"
+import React from 'react'
+import {storiesOf} from '@kadira/storybook'
+import ${1:`!v expand('%:t:r:r')`} from './$1'
+
+ss$2
 endsnippet
