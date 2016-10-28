@@ -9,6 +9,7 @@ do
   tmux split-window
   let "index+=1"
 done
+tmux set-window-option main-pane-height 30
 tmux select-layout main-horizontal
 tmux select-pane -t 0
 tmux attach-session -d 
