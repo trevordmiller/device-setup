@@ -8,4 +8,4 @@ set -euo pipefail
 # foreman start
 
 cd "$HOME"/drive/work/egghead-instructor-center
-script-split 4
+script-split
