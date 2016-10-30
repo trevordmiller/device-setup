@@ -97,6 +97,7 @@ _Most things are automatically set up with the init script ^, but these are the 
 - Install and configure apps
   - Home screen
     - Todoist
+    - Day One
     - _Calendar_
     - _Mail_
     - Google Drive
