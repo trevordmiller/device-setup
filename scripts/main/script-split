@@ -2,7 +2,11 @@
 set -euo pipefail
 
 # USAGE
-# script-split [pane_count=3] [pane_2_command="yarn start"] [pane_3_command="yarn test"] etc
+# script-split 2 "echo 'hello world'"
+# script-split [{pane_count}] [{pane_2_command}] [{pane_3_command}] etc
+#   {pane_count} defaults to 3
+#   {pane_2_command} defaults to "yarn start"
+#   {pane_3_command} defaults to "yarn test"
 
 tmux new-session -d 
 split_count=${1:-3}
