@@ -12,9 +12,6 @@ end repeat
 
 do shell script "script-windows"
 
-tell application "/Applications/Hyper.app" to activate
-do shell script "script-fullscreen"
-
 delay 3
 tell application "Google Chrome" to activate
 set devToolsTabs to {4}
@@ -25,4 +22,14 @@ repeat with devToolsTab in devToolsTabs
 	end tell
 end repeat
 
+delay 3
+tell application "/Applications/Hyper.app" to activate
+do shell script "script-fullscreen"
+tell application "System Events"
+  keystroke "t" using {command down}
+  delay 1
+  keystroke "cd \"$HOME\"/drive/work/egghead-instructor-center && script-split"
+end tell
+
+delay 3
 return "Done"
