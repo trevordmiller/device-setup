@@ -10,6 +10,7 @@ homebrew_packages=(
   "bash"
   "git"
   "heroku"
+  "mas"
   "n"
   "node"
   "reattach-to-user-namespace"
@@ -54,6 +55,10 @@ homebrew_cask_apps=(
   "slate"
   "spotify"
   "switchresx"
+)
+
+mac_app_store_apps=(
+  "585829637" # Todoist
 )
 
 
@@ -151,6 +156,11 @@ done
 echo "Installing Homebrew cask apps"
 for homebrew_cask_app in "${homebrew_cask_apps[@]}"; do
   brew cask install "$homebrew_cask_app"
+done
+
+echo "Installing Mac App Store apps"
+for mac_app_store_app in "${mac_app_store_apps[@]}"; do
+  mas install "$mac_app_store_app"
 done
 
 

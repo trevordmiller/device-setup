@@ -1,7 +1,7 @@
 #!/bin/bash
 set -euo pipefail
 
-script-log state "Upgrading Homebrew + brew/cask packages"
+script-log state "Upgrading Homebrew + brew packages"
 brew update
 brew upgrade
 
@@ -13,6 +13,9 @@ npm update -g
 
 script-log state "Upgrading Vim plugins"
 vim +PluginInstall +PluginClean +qall
+
+script-log state "Upgrading Mac App Store apps"
+mas upgrade
 
 script-log state "Upgrading macOS"
 sudo softwareupdate -ia
