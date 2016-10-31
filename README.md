@@ -44,10 +44,6 @@ _Most things are automatically set up with the init script ^, but these are the 
 - Alert volume (full)
 - "Popcorn" sound for messages
 
-### App Store Installs
-
-- Todoist
-
 ### App Config
 
 - Finder sidebar condense (`Google Drive`, `Downloads`, `AirDrop`)
