@@ -2,7 +2,8 @@
 set -euo pipefail
 
 script-log state "Upgrading Homebrew + brew/cask packages"
-brew update && brew upgrade
+brew update
+brew upgrade
 
 script-log state "Upgrading Node"
 n latest
