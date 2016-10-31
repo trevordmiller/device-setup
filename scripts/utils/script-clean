@@ -2,6 +2,8 @@
 set -euo pipefail
 
 script-log state "Cleaning folders"
+brew cleanup
+brew cask cleanup
 find "$HOME"/drive -name 'npm-debug.log' -delete
 find "$HOME"/drive -name 'node_modules' -type d -exec rm -r '{}' ';' || true
 rm -rf "$HOME"/drive/personal/playground/*
