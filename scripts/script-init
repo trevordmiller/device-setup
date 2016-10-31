@@ -59,6 +59,7 @@ homebrew_cask_apps=(
 
 mac_app_store_apps=(
   "585829637" # Todoist
+  "1055511498" # Day One
 )
 
 

@@ -13,7 +13,7 @@ on getTodayApps(core, other, work, background)
 	end if
 end getTodayApps
 
-set core to {"Todoist", "Calendar", "Messages", "Mail"}
+set core to {"Todoist", "Day One", "Calendar", "Messages", "Mail"}
 set other to {"Photos", "Anki", "Spotify", "Slack"}
 set work to {"Slack"}
 set background to {"Google Drive", "Google Photos Backup", "Flux", "Slate", "Seil", "Karabiner"}
