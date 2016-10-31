@@ -6,7 +6,6 @@ do shell script "script-clean"
 
 do shell script "script-dirty"
 
-do shell script "script-log state 'Quitting applications'"
 tell application "System Events" to set the visible of every process to true
 set white_list to {"Finder", "Hyper"}
 try
@@ -25,4 +24,4 @@ on error errorMessage
 	display dialog ("Error quitting apps: " & errorMessage)
 end try
 
-do shell script "script-log state 'Done'"
+return "Done"

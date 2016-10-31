@@ -1,7 +1,8 @@
 #!/usr/bin/env osascript
 
-do shell script "script-log state 'Managing windows'"
 delay 3
 tell application "System Events"
 	key code 18 using {command down, option down, control down}
 end tell
+
+return "Done"

@@ -1,12 +1,10 @@
 #!/usr/bin/env osascript
 
-do shell script "script-log state 'Opening native apps'"
 set nativeApps to {"Todoist", "/Applications/Hyper.app", "Google Chrome", "Calendar", "Spotify", "Messages", "Mail", "Slack"}
 repeat with nativeApp in nativeApps
 	run application nativeApp
 end repeat
 
-do shell script "script-log state 'Opening web apps'"
 set webApps to {"https://docs.google.com/document/d/1O2Me9-4GoYfvEwrIXkyHDAJQs-P2eJXZ6YKJYqJhVWg", "https://github.com/eggheadio/egghead-instructor-center/pulls", "http://localhost:9009/", "http://localhost:3000"}
 repeat with webApp in webApps
 	do shell script "open " & webApp
@@ -17,7 +15,6 @@ do shell script "script-windows"
 tell application "/Applications/Hyper.app" to activate
 do shell script "script-fullscreen"
 
-do shell script "script-log state 'Opening dev tools'"
 delay 3
 tell application "Google Chrome" to activate
 set devToolsTabs to {4}
@@ -28,4 +25,4 @@ repeat with devToolsTab in devToolsTabs
 	end tell
 end repeat
 
-do shell script "script-log state 'Done'"
+return "Done"
