@@ -5,7 +5,7 @@ repeat with nativeApp in nativeApps
 	run application nativeApp
 end repeat
 
-set webApps to {"https://docs.google.com/document/d/1O2Me9-4GoYfvEwrIXkyHDAJQs-P2eJXZ6YKJYqJhVWg", "https://github.com/eggheadio/egghead-instructor-center/pulls", "http://localhost:9009/", "http://localhost:3000"}
+set webApps to {"https://docs.google.com/document/d/1eZ_blnJOOZ3CRMxea6gz_UqCfy4c55_RkkccN8GKc10", "https://docs.google.com/document/d/1O2Me9-4GoYfvEwrIXkyHDAJQs-P2eJXZ6YKJYqJhVWg", "https://github.com/eggheadio/egghead-instructor-center/pulls", "http://localhost:9009/", "http://localhost:3000"}
 repeat with webApp in webApps
 	do shell script "open " & webApp
 end repeat
@@ -14,7 +14,7 @@ do shell script "script-windows"
 
 delay 3
 tell application "Google Chrome" to activate
-set devToolsTabs to {4}
+set devToolsTabs to {5}
 repeat with devToolsTab in devToolsTabs
 	tell application "Google Chrome" to set active tab index of first window to devToolsTab
 	tell application "System Events"
