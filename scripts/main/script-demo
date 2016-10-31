@@ -15,6 +15,7 @@ vimrcRules=(
   "set background=light"
   "colorscheme one"
   "exec 'highlight EndOfBuffer guifg=#CCCCCC'"
+  "exec 'highlight MatchParen guifg=#000000 guibg=#CCCCCC'"
 )
 for vimrcRule in "${vimrcRules[@]}"; do
   echo "$vimrcRule" >> "$HOME/drive/settings/dotfiles/.vimrc"
