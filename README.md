@@ -43,6 +43,9 @@ _Most things are automatically set up with the init script ^, but these are the 
 - "Glass" sound for alerts
 - Alert volume (full)
 - "Popcorn" sound for messages
+- Accessibility
+  - Zoom
+    - Use keyboard shortcuts to zoom (on)
 
 ### App Config
 
