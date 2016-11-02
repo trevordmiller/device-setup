@@ -172,7 +172,6 @@ _Delete other apps_
 ## Settings
 
 - Cellular
-  - 
 - Do Not Disturb
   - Scheduled (on, from 10pm-7am)
   - Silence (Always)
@@ -192,7 +191,7 @@ _Delete other apps_
 - Touch ID & Passcode
   - Add a Fingerprint
 - Mail
-  - A    - “Phone” phonecalls, voicemails.ccounts
+  - Accounts
     - iCloud
     - Add Account (Google)
       - Description (work)
@@ -207,60 +206,6 @@ _Delete other apps_
 - Twitter (login)
 - Facebook (login)
   - Calendars (off)
-      
-
-
-- Add 2nd thumb to touch ID
-
-
-
-
-- Account system logins (iCloud, Facebook, Twitter)
-- "Text Message Forwarding" (on)
-- "Do Not Disturb" schedule (10pm - 7am)
-- "Do Not Disturb" allow favorites (on)
-- "Find My Phone" (on)
-- "Restrictions" (on)
-- Auto brightness (on)
-- "Night Shift" schedule (8pm - 8am)
-- Install 1Password for app logins
-- Install and configure apps
-  - Home screen
-    - Todoist
-    - Day One
-    - _Calendar_
-    - _Mail_
-    - Google Drive
-    - _Health_
-    - Sleep Cycle
-    - Google Maps
-    - Spotify
-    - Gospel Library
-      - LDS account data sync
-    - Anki
-      - Anki web data sync
-    - _iBooks_
-    - Buffer
-    - Mint
-    - _Messages_
-    - _Phone_
-    - _Facetime_
-    - Photos
-    - YouTube
-    - Chrome
-    - _Settings_
-  - Background folder
-    - 1Password
-    - _Clock_
-      - Alarms (7am)
-    - _Camera_
-    - _Contacts_
-    - _Find iPhone_
-    - Google Photos
-      - Backup size (`Original`)
-    - IF
-    - Nest
-    - QS Access
 
 ## Share menu
 
