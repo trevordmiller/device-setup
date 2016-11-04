@@ -24,7 +24,7 @@ tu$2
 endsnippet
 
 snippet ts "Test - snapshot"
-test('${1:Default}', () => {
+test('${1:default}', () => {
   const tree = renderer.create(
 		<${2:`!v expand('%:t:r:r')`}
 			$3
@@ -114,7 +114,7 @@ endsnippet
 
 snippet ss "Storybook story"
 storiesOf('${1:`!v expand('%:t:r:r')`}', module)
-  .add('${2:Default}', () => (
+  .add('${2:default}', () => (
     ct$3
   ))
 endsnippet
