@@ -46,6 +46,7 @@ homebrew_cask_apps=(
   "google-drive"
   "google-photos-backup"
   "hyper"
+  "kap"
   "karabiner"
   "rescuetime"
   "screenflow"
