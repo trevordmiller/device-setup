@@ -119,63 +119,61 @@ _Most things are automatically set up with the init script ^, but these are the 
 
 ## Home Screen
 
-- Todoist (Dock)
+### core
+
+- Todoist
+- Calendar
+  - Calendars (personal, tramy, work, events found in apps)
 - Day One
   - Enable Sync (yes)
   - Connect Services (Calendars, Twitter, Facebook)
+- Anki
+  - Synchronize (download from AnkiWeb)
+- Google Drive
+
+### utils
+
+- Phone
+- Messages
+- Google Maps
 - Gospel Library
   - Settings
     - Sign In
     - List Mode (on) 
   - Download (Scriptures, past few conferences)
-- Phone
-- Messages
-- Calendar
-  - Calendars (personal, tramy, work, events found in apps)
-- Mail
-- Slack
-- Anki
-  - Synchronize (download from AnkiWeb)
 - Safari Queue
-- Google Drive
-- Sleep Cycle
-  - Microphone, push notifications (allow)
-- Google Maps
 - Spotify
   - Download (favorites)
-- Twitter
-- Facebook
 - YouTube
-- Mint
-- Chrome
-- "Background" folder
-  - 1Password
-  - Photos
-    - Use iCloud Photo Library (on)
-  - Google Photos
-    - Upload size (original)
-  - Camera
-  - Health
-    - Add Medical ID
-  - Contacts
-  - Find iPhone
-    - Store last known location (on)
-  - Nest
-  - IF
-  - Sheets
-  - Docs
-  - Wallet
-  - FaceTime
-  - Clock
-  - Safari
-  - App Store
-  - Settings
+
+### background
+
+- 1Password
+- Photos
+  - Use iCloud Photo Library (on)
+- Google Photos
+  - Upload size (original)
+- Clock
+- Camera
+- Contacts
+- Find iPhone
+  - Store last known location (on)
+- Nest
+- Sheets
+- Docs
+- Wallet
+- Health
+  - Add Medical ID
+- Safari
+- App Store
+- Settings
 
 _Delete other apps_
 
 ## Settings
 
 - Cellular
+  - App store, Spotify, YouTube (off)
 - Do Not Disturb
   - Scheduled (on, from 10pm-7am)
   - Silence (Always)
@@ -194,6 +192,8 @@ _Delete other apps_
 - Wallpaper (set)
 - Touch ID & Passcode
   - Add a Fingerprint
+- Clock
+  - Set daily alarm
 - Mail
   - Accounts
     - iCloud
@@ -207,9 +207,6 @@ _Delete other apps_
   - AutoFill
     - Names and Passwords (off)
   - Do Not Track (on)
-- Twitter (login)
-- Facebook (login)
-  - Calendars (off)
 
 ## Share menu
 
@@ -217,11 +214,7 @@ _Delete other apps_
   - Todoist
   - Day One
   - Messages
-  - Mail
-  - Slack
   - Google Drive
   - iCloud Photo Sharing
-  - Twitter
-  - Facebook
 - Extensions
   - 1Password
