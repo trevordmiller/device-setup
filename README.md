@@ -49,6 +49,12 @@ _Most things are automatically set up with the init script ^, but these are the 
 
 ### App Config
 
+- Dock
+  - Todoist
+  - Day One
+  - Anki
+  - Drive
+  - Remove everything else
 - Spotify don't open on login (in app preferences, not system preferences like the other login apps)
 - Finder sidebar condense (`Google Drive`, `Downloads`, `AirDrop`)
 - Karabiner setting sync (`private.xml` with `~/drive/settings/karabiner/private.xml`)
