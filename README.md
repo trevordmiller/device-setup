@@ -122,8 +122,6 @@ _Most things are automatically set up with the init script ^, but these are the 
 ### core
 
 - Todoist
-- Calendar
-  - Calendars (personal, tramy, work, events found in apps)
 - Day One
   - Enable Sync (yes)
   - Connect Services (Calendars, Twitter, Facebook)
@@ -133,6 +131,8 @@ _Most things are automatically set up with the init script ^, but these are the 
 
 ### utils
 
+- Calendar
+  - Calendars (personal, tramy, work, events found in apps)
 - Phone
 - Messages
 - Google Maps
