@@ -8,7 +8,7 @@ endsnippet
 
 
 # ==================================================================
-# TEST
+# TESTS
 # ==================================================================
 
 snippet tu "Test - unit"
@@ -46,7 +46,7 @@ endsnippet
 
 
 # ==================================================================
-# COMPONENT
+# COMPONENTS
 # ==================================================================
 
 snippet ct "Component tag"
@@ -109,22 +109,23 @@ endsnippet
 
 
 # ==================================================================
-# STORYBOOK
+# LIVING STYLE GUIDES
 # ==================================================================
 
-snippet ss "Storybook story"
+snippet gi "Guide instance"
 storiesOf('${1:`!v expand('%:t:r:r')`}', module)
   .add('${2:default}', () => (
     ct$3
   ))
 endsnippet
 
-snippet ssf "Storybook story file"
+snippet gif "Guide instance file"
 import React from 'react'
 import {storiesOf} from '@kadira/storybook'
+import faker from 'faker'
 import ${1:`!v expand('%:t:r:r')`} from '.'
 
-ss$2
+gi$2
 endsnippet
 
 
@@ -132,7 +133,7 @@ endsnippet
 # EGGHEAD PROJECTS
 # ==================================================================
 
-snippet eci "Egghead component - Icon"
+snippet ei "Egghead component - Icon"
 <Icon
 	type='$1'
 	size='$2'
