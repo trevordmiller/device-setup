@@ -57,29 +57,17 @@ snippet ct "Component tag"
 </$1>
 endsnippet
 
+snippet cp "Component proptype"
+$1: PropTypes.$2${3:.isRequired},
+endsnippet
+
 snippet cf "Component function"
 const ${1:`!v expand('%:t:r')`} = ({$2}) => (
-  ct$3
 )
 endsnippet
 
-snippet cc "Component class"
-class ${1:`!v expand('%:t:r')`} extends React.Component {
-  render() {
-    const {$2} = this.props
-    return (
-      ct$3
-    )
-  }
-}
-endsnippet
-
-snippet cp "Component proptype"
-$1: React.PropTypes.$2${3:.isRequired},
-endsnippet
-
 snippet cff "Component function file"
-import React from 'react'
+import React, {PropTypes} from 'react'
 
 cf$3
 
@@ -90,14 +78,28 @@ ${1:`!v expand('%:t:r')`}.propTypes = {
 export default $1
 endsnippet
 
+snippet cc "Component class"
+class ${1:`!v expand('%:t:r')`} extends Component {
+
+	static propTypes = {
+		cp$2
+	}
+	
+	state = {
+	}
+
+  render() {
+    const {$3} = this.props
+    return (
+    )
+  }
+}
+endsnippet
+
 snippet ccf "Component class file"
-import React from 'react'
+import React, {Component, PropTypes} from 'react'
 
 cc$5
-
-${1:`!v expand('%:t:r')`}.propTypes = {
-	cp$2
-}
 
 export default connect(
   ({$3Screen}) => ({...$3Screen}),
