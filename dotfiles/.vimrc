@@ -80,9 +80,11 @@ let g:ale_linters = {
 let g:UltiSnipsExpandTrigger='<tab>'
 let g:UltiSnipsJumpForwardTrigger='<tab>'
 let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
+set dictionary+=~/drive/settings/syncfiles/snippets.txt
 
 " VIM-JSX
 let g:jsx_ext_required = 0
+
 
 " ==================================================================
 " CORE SETTINGS
