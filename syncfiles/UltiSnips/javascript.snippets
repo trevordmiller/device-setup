@@ -1,47 +1,17 @@
 # ==================================================================
-# ECMASCRIPT
+# GENERAL
 # ==================================================================
 
-snippet mi "Module - import"
+snippet moduleImport
 import $1 from '$2$1'
 endsnippet
 
+snippet unitTest
+import $1 from '.'
 
-# ==================================================================
-# TESTS
-# ==================================================================
-
-snippet tu "Test - unit"
-test('$1', () => {
+test('$1', () => (
   expect($2).${3:toBe}($4)
-})
-endsnippet
-
-snippet tuf "Test - unit file"
-import ${1:`!v expand('%:t:r:r')`} from '.'
-
-tu$2
-endsnippet
-
-snippet ts "Test - snapshot"
-test('${1:default}', () => {
-  const tree = renderer.create(
-		<${2:`!v expand('%:t:r:r')`}
-			$3
-		>
-			$4
-		</$2>
-	)
-  expect(tree).toMatchSnapshot()
-})
-endsnippet
-
-snippet tsf "Test - snapshot file"
-import React from 'react'
-import renderer from 'react-test-renderer'
-import ${1:`!v expand('%:t:r:r')`} from '.'
-
-ts$2
+))
 endsnippet
 
 
@@ -49,7 +19,7 @@ endsnippet
 # COMPONENTS
 # ==================================================================
 
-snippet ct "Component tag"
+snippet componentTag
 <${1:div}
   $2
 >
@@ -57,85 +27,96 @@ snippet ct "Component tag"
 </$1>
 endsnippet
 
-snippet cp "Component proptype"
-$1: PropTypes.$2${3:.isRequired},
-endsnippet
+snippet pureComponent
+import React from 'react'
 
-snippet cf "Component function"
-const ${1:`!v expand('%:t:r')`} = ({$2}) => (
+export default ({$1}) => (
+	$2
 )
 endsnippet
 
-snippet cff "Component function file"
-import React, {PropTypes} from 'react'
+snippet stateComponent
+import React, {Component} from 'react'
 
-cf$3
+export default class extends Component {
 
-${1:`!v expand('%:t:r')`}.propTypes = {
-	cp$2
-}
-
-export default $1
-endsnippet
-
-snippet cc "Component class"
-class ${1:`!v expand('%:t:r')`} extends Component {
-
-	static propTypes = {
-		cp$2
-	}
-	
 	state = {
+		$1: $2,
 	}
 
   render() {
+    const {$1} = this.state
     const {$3} = this.props
     return (
+			$4
     )
   }
 }
 endsnippet
 
-snippet ccf "Component class file"
-import React, {Component, PropTypes} from 'react'
+snippet connectComponent
+import React, {Component} from 'react'
+import {connect} from 'react-redux'
+import {$2} from './state/actions'
 
-cc$5
+class $1 extends Component {
+
+	componentWillMount() {
+		$2()
+	}
+
+  render() {
+    const {$4} = this.props
+    return (
+			$5
+    )
+  }
+}
 
 export default connect(
-  ({$3Screen}) => ({...$3Screen}),
+  ({$3}) => ({...$3}),
   {
-		$4,
+		$2,
 	}
 )($1)
 endsnippet
 
-
-# ==================================================================
-# LIVING STYLE GUIDES
-# ==================================================================
-
-snippet gi "Guide instance"
-storiesOf('${1:`!v expand('%:t:r:r')`}', module)
-  .add('${2:default}', () => (
-    ct$3
-  ))
+snippet componentProptype
+$1: PropTypes.$2${3:.isRequired},
 endsnippet
 
-snippet gif "Guide instance file"
+# LIVING STYLE GUIDES
+
+snippet guideComponent
 import React from 'react'
 import {storiesOf} from '@kadira/storybook'
 import faker from 'faker'
-import ${1:`!v expand('%:t:r:r')`} from '.'
+import $1 from '.'
 
-gi$2
+storiesOf('$1', module)
+  .add('${2:default}', () => (
+		$3
+  ))
 endsnippet
 
+# TESTING
 
-# ==================================================================
-# EGGHEAD PROJECTS
-# ==================================================================
+snippet componentTest
+import React from 'react'
+import renderer from 'react-test-renderer'
+import $1 from '.'
 
-snippet ei "Egghead component - Icon"
+test('${1:default}', () => {
+  const tree = renderer.create(
+		$2
+	)
+  expect(tree).toMatchSnapshot()
+})
+endsnippet
+
+# EGGHEAD
+
+snippet eggheadIcon
 <Icon
 	type='$1'
 	size='$2'
