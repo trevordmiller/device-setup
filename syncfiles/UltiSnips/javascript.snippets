@@ -1,12 +1,18 @@
-# ==================================================================
-# GENERAL
-# ==================================================================
+snippet log
+console.log('$1', $1)
+endsnippet
 
-snippet moduleImport
+snippet module
+export default ({$1}) => (
+	$2
+)
+endsnippet
+
+snippet import
 import $1 from '$2$1'
 endsnippet
 
-snippet unitTest
+snippet test
 import $1 from '.'
 
 test('$1', () => (
@@ -14,12 +20,7 @@ test('$1', () => (
 ))
 endsnippet
 
-
-# ==================================================================
-# COMPONENTS
-# ==================================================================
-
-snippet componentTag
+snippet tag
 <${1:div}
   $2
 >
@@ -27,15 +28,13 @@ snippet componentTag
 </$1>
 endsnippet
 
-snippet pureComponent
+snippet pureComp
 import React from 'react'
 
-export default ({$1}) => (
-	$2
-)
+module$1
 endsnippet
 
-snippet stateComponent
+snippet stateComp
 import React, {Component} from 'react'
 
 export default class extends Component {
@@ -54,7 +53,7 @@ export default class extends Component {
 }
 endsnippet
 
-snippet connectComponent
+snippet connectComp
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {$2} from './state/actions'
@@ -81,13 +80,11 @@ export default connect(
 )($1)
 endsnippet
 
-snippet componentProptype
+snippet proptype
 $1: PropTypes.$2${3:.isRequired},
 endsnippet
 
-# LIVING STYLE GUIDES
-
-snippet guideComponent
+snippet guide
 import React from 'react'
 import {storiesOf} from '@kadira/storybook'
 import faker from 'faker'
@@ -99,9 +96,7 @@ storiesOf('$1', module)
   ))
 endsnippet
 
-# TESTING
-
-snippet componentTest
+snippet snapshot
 import React from 'react'
 import renderer from 'react-test-renderer'
 import $1 from '.'
@@ -113,8 +108,6 @@ test('${1:default}', () => {
   expect(tree).toMatchSnapshot()
 })
 endsnippet
-
-# EGGHEAD
 
 snippet eggheadIcon
 <Icon
