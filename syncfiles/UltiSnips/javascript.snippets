@@ -28,13 +28,13 @@ snippet tag
 </$1>
 endsnippet
 
-snippet pureComp
+snippet stateless
 import React from 'react'
 
 module$1
 endsnippet
 
-snippet stateComp
+snippet stateful
 import React, {Component} from 'react'
 
 export default class extends Component {
@@ -53,7 +53,7 @@ export default class extends Component {
 }
 endsnippet
 
-snippet connectComp
+snippet connected
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {$2} from './state/actions'
