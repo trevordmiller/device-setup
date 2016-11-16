@@ -1,8 +1,9 @@
 commit
 script
-log
+function
 module
 import
+log
 test
 tag
 stateless
@@ -11,4 +12,8 @@ connected
 proptype
 guide
 snapshot
+main
+split
+title
 icon
+avatar
