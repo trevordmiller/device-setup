@@ -5,10 +5,10 @@ module
 import
 test
 tag
-pureComp
-stateComp
-connectComp
+stateless
+stateful
+connected
 proptype
 guide
 snapshot
-eggheadIcon
+icon
