@@ -5,7 +5,7 @@ repeat with nativeApp in nativeApps
 	run application nativeApp
 end repeat
 
-set webApps to {"https://sprint.ly/tickets/?assignee=48505", "https://docs.google.com/document/d/1eZ_blnJOOZ3CRMxea6gz_UqCfy4c55_RkkccN8GKc10", "https://docs.google.com/document/d/1O2Me9-4GoYfvEwrIXkyHDAJQs-P2eJXZ6YKJYqJhVWg", "https://github.com/eggheadio/egghead-instructor-center/pulls", "http://localhost:2000/", "http://localhost:3000"}
+set webApps to {"https://docs.google.com/document/d/1O2Me9-4GoYfvEwrIXkyHDAJQs-P2eJXZ6YKJYqJhVWg", "http://localhost:2000/", "http://localhost:3000"}
 repeat with webApp in webApps
 	do shell script "open " & webApp
 end repeat
