@@ -2,25 +2,25 @@
 # GENERAL
 # ==================================================================
 
-snippet function
+snippet >function
 ({$1}) => (
 	$2
 )
 endsnippet
 
-snippet module
-export default function$1
+snippet >module
+export default >function$1
 endsnippet
 
-snippet import
+snippet >import
 import $1 from '$2$1'
 endsnippet
 
-snippet log
+snippet >log
 console.log('$1', $1)
 endsnippet
 
-snippet test
+snippet >test
 import $1 from '.'
 
 test('$2', () => (
@@ -33,7 +33,7 @@ endsnippet
 # REACT
 # ==================================================================
 
-snippet tag
+snippet >tag
 <${1:div}
   $2
 >
@@ -41,13 +41,13 @@ snippet tag
 </$1>
 endsnippet
 
-snippet stateless
+snippet >stateless
 import React from 'react'
 
-module$1
+>module$1
 endsnippet
 
-snippet stateful
+snippet >stateful
 import React, {Component} from 'react'
 
 export default class extends Component {
@@ -60,13 +60,13 @@ export default class extends Component {
     const {$1} = this.state
     const {$3} = this.props
     return (
-			$4
+			>tag$4
     )
   }
 }
 endsnippet
 
-snippet connected
+snippet >connected
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {$1} from './state/actions'
@@ -83,17 +83,17 @@ export default connect(
 	render() {
 		const {$4} = this.props
 		return (
-			$5
+			>tag$5
 		)
 	}
 })
 endsnippet
 
-snippet proptype
+snippet >proptype
 $1: PropTypes.$2${3:.isRequired},
 endsnippet
 
-snippet guide
+snippet >guide
 import React from 'react'
 import {storiesOf} from '@kadira/storybook'
 import faker from 'faker'
@@ -101,18 +101,18 @@ import $1 from '.'
 
 storiesOf('$1', module)
   .add('$2', () => (
-		$3
+		>tag$3
   ))
 endsnippet
 
-snippet snapshot
+snippet >snapshot
 import React from 'react'
-import renderer from 'react-test-renderer'
+import {create} from 'react-test-renderer'
 import $1 from '.'
 
 test('$2', () => (
-  expect(renderer.create(
-		$3
+  expect(create(
+		>tag$3
 	)).toMatchSnapshot()
 ))
 endsnippet
@@ -122,31 +122,31 @@ endsnippet
 # EGGHEAD
 # ==================================================================
 
-snippet main
+snippet >main
 <Main>
-	$1
+	>tag$1
 </Main>
 endsnippet
 
-snippet split
+snippet >split
 <Split
 	title='$1'
 	main={
-		$2
+		>tag$2
 	}
 	aside={
-		$3
+		>tag$3
 	}
 />
 endsnippet
 
-snippet title
+snippet >title
 <Title>
 	$1
 </Title>
 endsnippet
 
-snippet icon
+snippet >icon
 <Icon
 	type='$1'
 	size='$2'
@@ -154,7 +154,7 @@ snippet icon
 />
 endsnippet
 
-snippet avatar
+snippet >avatar
 <Avatar
 	name={$1}
 	url={$2}
