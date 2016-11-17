@@ -50,17 +50,17 @@ endsnippet
 snippet >stateful
 import React, {Component} from 'react'
 
-export default class extends Component {
+export default class $1 extends Component {
 
 	state = {
-		$1: $2,
+		$2: $3,
 	}
 
   render() {
-    const {$1} = this.state
-    const {$3} = this.props
+    const {$2} = this.state
+    const {$4} = this.props
     return (
-			>tag$4
+			>tag$5
     )
   }
 }
@@ -69,26 +69,26 @@ endsnippet
 snippet >callback
 import {Component, PropTypes} from 'react'
 
-export default class extends Component {
+export default class $1 extends Component {
   
   static propTypes = {
     children: PropTypes.func.isRequired,
   }
 
   state = {
-    $1: $2,
-    $3: $4,
+    $2: $3,
+    $4: $5,
   }
 
   componentWillMount() {
-		const {$5} = this.props
+		const {$6} = this.props
     // update state
   }
 
   render() {
-		const {$1, $3} = this.state
+		const {$2, $4} = this.state
 		const {children} = this.props
-    return children($1, $2)
+    return children($2, $4)
   }
 }
 endsnippet
@@ -96,21 +96,21 @@ endsnippet
 snippet >connected
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
-import {$1} from './state/actions'
+import {$2} from './state/actions'
 
 export default connect(
-  ({$2}) => ({...$2}),
-  {$1}
-)(class extends Component {
+  ({$3}) => ({...$3}),
+  {$2}
+)(class $1 extends Component {
 
 	componentWillMount() {
-		$1()
+		$2()
 	}
 
 	render() {
-		const {$4} = this.props
+		const {$3 pieces} = this.props
 		return (
-			>tag$5
+			>tag$4
 		)
 	}
 })
