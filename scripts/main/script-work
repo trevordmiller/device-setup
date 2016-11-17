@@ -14,7 +14,7 @@ do shell script "script-windows"
 
 delay 3
 tell application "Google Chrome" to activate
-set devToolsTabs to {6}
+set devToolsTabs to {3}
 repeat with devToolsTab in devToolsTabs
 	tell application "Google Chrome" to set active tab index of first window to devToolsTab
 	tell application "System Events"
