@@ -134,7 +134,7 @@ vim +PluginInstall +qall
 
 echo "Making UltiSnips symlinks"
 mkdir ~/.vim/UltiSnips/
-ln -s ~/drive/settings/syncfiles/UltiSnips/* ~/.vim/UltiSnips/
+ln -s ~/drive/settings/syncfiles/UltiSnips/all.snippets ~/.vim/UltiSnips/
 
 
 # ==================================================================
