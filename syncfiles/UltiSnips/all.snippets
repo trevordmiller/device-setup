@@ -25,7 +25,7 @@ endsnippet
 
 snippet @function
 ({$1}) => (
-	$2
+  $2
 )
 endsnippet
 
@@ -78,15 +78,15 @@ import React, {Component} from 'react'
 
 export default class $1 extends Component {
 
-	state = {
-		$2: $3,
-	}
+  state = {
+    $2: $3,
+  }
 
   render() {
     const {$2} = this.state
     const {$4} = this.props
     return (
-			@tag$5
+      @tag$5
     )
   }
 }
@@ -107,13 +107,13 @@ export default class $1 extends Component {
   }
 
   componentWillMount() {
-		const {$6} = this.props
+    const {$6} = this.props
     // update state
   }
 
   render() {
-		const {$2, $4} = this.state
-		const {children} = this.props
+    const {$2, $4} = this.state
+    const {children} = this.props
     return children($2, $4)
   }
 }
@@ -129,16 +129,16 @@ export default connect(
   {$2}
 )(class $1 extends Component {
 
-	componentWillMount() {
-		$2()
-	}
+  componentWillMount() {
+    $2()
+  }
 
-	render() {
-		const {$3 pieces} = this.props
-		return (
-			@tag$4
-		)
-	}
+  render() {
+    const {$3 pieces} = this.props
+    return (
+      @tag$4
+    )
+  }
 })
 endsnippet
 
@@ -154,7 +154,7 @@ import $1 from '.'
 
 storiesOf('$1', module)
   .add('$2', () => (
-		@tag$3
+    @tag$3
   ))
 endsnippet
 
@@ -165,8 +165,8 @@ import $1 from '.'
 
 test('$2', () => (
   expect(create(
-		@tag$3
-	)).toMatchSnapshot()
+    @tag$3
+  )).toMatchSnapshot()
 ))
 endsnippet
 
@@ -174,39 +174,39 @@ endsnippet
 
 snippet @main
 <Main>
-	@tag$1
+  @tag$1
 </Main>
 endsnippet
 
 snippet @split
 <Split
-	title='$1'
-	main={
-		@tag$2
-	}
-	aside={
-		@tag$3
-	}
+  title='$1'
+  main={
+    @tag$2
+  }
+  aside={
+    @tag$3
+  }
 />
 endsnippet
 
 snippet @title
 <Title>
-	$1
+  $1
 </Title>
 endsnippet
 
 snippet @icon
 <Icon
-	type='$1'
-	size='$2'
-	className='$3'
+  type='$1'
+  size='$2'
+  className='$3'
 />
 endsnippet
 
 snippet @avatar
 <Avatar
-	name={$1}
-	url={$2}
+  name={$1}
+  url={$2}
 />
 endsnippet
