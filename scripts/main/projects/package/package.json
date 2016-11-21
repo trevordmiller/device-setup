@@ -3,9 +3,14 @@
   "version": "0.1.0",
   "scripts": {
     "start": "scripts/start",
-    "test": "scripts/test",
+    "verify": "scripts/verify",
     "build": "scripts/build",
     "prepublish": "npm run build"
+  },
+  "babel": {
+    "presets": [
+      "latest"
+    ]
   },
   "jest": {
     "testEnvironment": "node"

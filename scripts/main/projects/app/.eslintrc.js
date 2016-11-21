@@ -1,5 +1,9 @@
 module.exports = {
-  'extends': ['eslint:recommended'],
+  'extends': [
+    'eslint:recommended',
+    'plugin:react/recommended',
+  ],
+  'plugins': ['react'],
   'env': {
     'es6': true,
     'node': true,
@@ -10,5 +14,11 @@ module.exports = {
   'parserOptions': {
     'ecmaVersion': 6,
     'sourceType': 'module',
+    'ecmaFeatures': {
+      'jsx': true,
+    },
+  },
+  'rules': {
+    'react/display-name': ['off'],
   },
 }

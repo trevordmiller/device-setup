@@ -1,8 +1,0 @@
-#!/bin/bash
-set -euo pipefail
-
-if [ -z "${CI-}" ]; then
-  jest --watch
-else
-  jest
-fi

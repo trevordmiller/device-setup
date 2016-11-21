@@ -146,10 +146,11 @@ set wildignore+=Icon
 set wildignore+=*/node_modules/*
 set wildignore+=npm-debug.log
 set wildignore+=.eslintcache
-set wildignore+=*.snap
 set wildignore+=*/build/*
+set wildignore+=*/.next/*
 set wildignore+=*/lib/*
 set wildignore+=*/dist/*
+set wildignore+=*/__snapshots__/*
 set wildignore+=*/compiled/*
 set wildignore+=*/cache/*
 

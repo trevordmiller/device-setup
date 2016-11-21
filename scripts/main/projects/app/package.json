@@ -1,0 +1,19 @@
+{
+  "name": "%substitute_project_name",
+  "scripts": {
+    "start": "next",
+    "verify": "scripts/verify",
+    "build": "next build",
+    "now-start": "next start"
+  },
+  "babel": {
+    "presets": [
+      "latest",
+      "react"
+    ]
+  },
+  "devDependencies": {
+  },
+  "dependencies": {
+  }
+}

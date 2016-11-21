@@ -5,7 +5,7 @@ set -euo pipefail
 # script-project package hello-world "A CLI to say Hello World"
 # script-project {project_type} {name} {description}
 #   {project_type} should be "app" or "package"
-#     "app" is currently a "create-react-app" app
+#     "app" is currently a zeit next app
 #     "package" is currently an npm package
 #   {name} should be a slug like "hello-world"
 #   {description} should be a short sentence like "A CLI to say Hello World"
@@ -31,23 +31,17 @@ project_description=$3
 # ==================================================================
 
 script-log state "Generating files and folders"
-
-# PROJECT TYPE SPECIFIC
+mkdir "$project_name"
+cd "$project_name"
+cp -a "$template_path"/shared/. ./
 case "$project_type" in 
   "app" ) 
-    script-log state "Running create-react-app"
-    create-react-app "$project_name"
-    cd "$project_name" || exit
+    cp -a "$template_path"/app/. ./
     ;; 
   "package" ) 
-    mkdir "$project_name"
-    cd "$project_name" || exit
     cp -a "$template_path"/package/. ./
     ;; 
 esac
-
-# SHARED
-cp -a "$template_path"/shared/. ./
 
 # VARIABLE SUBSTITUTION
 grep -rl '%substitute' . --exclude-dir=node_modules | xargs sed -i '' \
@@ -64,10 +58,14 @@ grep -rl '%substitute' . --exclude-dir=node_modules | xargs sed -i '' \
 # DEPENDENCIES
 # ==================================================================
 
+script-log state "Installing dependencies"
 case "$project_type" in 
+  "app" )
+    npm i -S next
+    npm i -D babel-preset-latest babel-preset-react eslint eslint-plugin-react jest babel-jest watch parallelshell
+    ;;
   "package" ) 
-    script-log state "Installing dependencies"
-    npm install -D babel-cli babel-preset-latest eslint jest-cli babel-jest watch
+    npm install -D babel-cli babel-preset-latest eslint jest babel-jest watch parallelshell
     ;; 
 esac
 
@@ -82,6 +80,7 @@ git add -A
 git commit -m "Scaffold project"
 script-log action "Enter GitHub password"
 curl -u "$user_name" https://api.github.com/user/repos -d "{\"name\":\"$project_name\", \"description\":\"$project_description\"}"
+sleep 3
 git remote add origin https://github.com/"$user_name"/"$project_name".git
 git push -u origin master
 
@@ -92,19 +91,19 @@ git push -u origin master
 
 script-log state "Initializing continuous integration and deployment"
 travis enable -r "$user_name"/"$project_name"
-script-log action "Enter deployment details"
 case "$project_type" in 
-  "app" ) 
+  "app" )
     now
-    ;; 
+    ;;
   "package" ) 
     npm publish
+    script-log action "Enter deployment details"
     travis setup npm
+    git add -A
+    git commit -m "Add continous deployment"
+    git push
     ;; 
 esac
-git add -A
-git commit -m "Add continous deployment"
-git push
 
 
 # ==================================================================
@@ -112,7 +111,7 @@ git push
 # ==================================================================
 
 script-log action "MANUAL SETUP"
-script-log action "TODO: Protect master branch (all options)"
+script-log action "TODO: Protect master branch"
 open "https://github.com/$user_name/$project_name/settings/branches"
 case "$project_type" in 
   "app" ) 
