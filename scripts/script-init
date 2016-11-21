@@ -9,7 +9,6 @@ set -euo pipefail
 homebrew_packages=(
   "bash"
   "git"
-  "heroku"
   "mas"
   "n"
   "node"
@@ -30,6 +29,7 @@ npm_global_packages=(
   "eslint"
   "eslint-plugin-react"
   "jsonlint"
+  "now"
 )
 
 fonts=(
@@ -172,13 +172,13 @@ done
 echo "Log in to npm CLI"
 npm login
 
-# HEROKU
-echo "Log in to Heroku CLI"
-heroku login
-
 # TRAVIS
 echo "Log in to Travis CI CLI"
 travis login
+
+# NOW
+echo "Log in to Now CLI"
+now --login
 
 
 # ==================================================================

@@ -95,8 +95,7 @@ travis enable -r "$user_name"/"$project_name"
 script-log action "Enter deployment details"
 case "$project_type" in 
   "app" ) 
-    heroku create "$project_name" --buildpack https://github.com/mars/create-react-app-buildpack.git
-    travis setup heroku
+    now
     ;; 
   "package" ) 
     npm publish
@@ -134,7 +133,7 @@ open "https://github.com/$user_name/$project_name"
 open "https://travis-ci.org/$user_name/$project_name"
 case "$project_type" in 
   "app" ) 
-    open "https://$project_name.herokuapp.com"
+    open "$(pbpaste)"
     ;; 
   "package" )
     open "https://www.npmjs.com/package/$project_name"
