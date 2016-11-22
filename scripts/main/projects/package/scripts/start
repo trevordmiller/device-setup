@@ -1,4 +1,4 @@
 #!/bin/bash
 set -euo pipefail
 
-watch 'npm run build' src
+watch 'yarn build' src

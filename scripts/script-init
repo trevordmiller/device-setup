@@ -23,7 +23,7 @@ ruby_gems=(
   "travis"
 )
 
-npm_global_packages=(
+yarn_global_packages=(
   "create-react-app"
   "csslint"
   "eslint"
@@ -102,9 +102,9 @@ for ruby_gem in "${ruby_gems[@]}"; do
 done
 
 # NPM
-echo "Installing npm global packages"
-for npm_global_package in "${npm_global_packages[@]}"; do
-  npm install -g "$npm_global_package"
+echo "Installing yarn global packages"
+for yarn_global_package in "${yarn_global_packages[@]}"; do
+  yarn install -g "$yarn_global_package"
 done
 
 # CONFIG
@@ -169,15 +169,15 @@ done
 # ==================================================================
 
 # NPM
-echo "Log in to npm CLI"
-npm login
+echo "Log in to npm registry with package manager"
+yarn login
 
 # TRAVIS
-echo "Log in to Travis CI CLI"
+echo "Log in to Travis CI"
 travis login
 
 # NOW
-echo "Log in to Now CLI"
+echo "Log in to Now"
 now --login
 
 

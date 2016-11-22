@@ -144,7 +144,6 @@ set wildignore+=*/.git/*
 set wildignore+=*DS_Store*
 set wildignore+=Icon
 set wildignore+=*/node_modules/*
-set wildignore+=npm-debug.log
 set wildignore+=.eslintcache
 set wildignore+=*/build/*
 set wildignore+=*/.next/*

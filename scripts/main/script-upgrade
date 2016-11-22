@@ -8,8 +8,8 @@ brew upgrade
 script-log state "Upgrading Node"
 n latest
 
-script-log state "Upgrading npm + global npm packages"
-npm update -g
+script-log state "Upgrading global yarn packages"
+yarn global upgrade
 
 script-log state "Upgrading Vim plugins"
 vim +PluginInstall +PluginClean +qall

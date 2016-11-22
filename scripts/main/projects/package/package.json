@@ -5,7 +5,7 @@
     "start": "scripts/start",
     "verify": "scripts/verify",
     "build": "scripts/build",
-    "prepublish": "npm run build"
+    "prepublish": "yarn build"
   },
   "babel": {
     "presets": [
