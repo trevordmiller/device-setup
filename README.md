@@ -43,6 +43,9 @@ _Most things are automatically set up with the init script ^, but these are the 
 - "Glass" sound for alerts
 - Alert volume (full)
 - "Popcorn" sound for messages
+- Keyboard
+  - Modifier keys
+    - caps lock (escape)
 - Accessibility
   - Zoom
     - Use keyboard shortcuts to zoom (on)
@@ -61,7 +64,6 @@ _Most things are automatically set up with the init script ^, but these are the 
 - Key repeat spacing (`Key repeat` to `20ms` in Karabiner)
 - Key repeat delay (`Delay until repeat` to `200ms` in Karabiner)
 - FN + media key use (`Change f1...f12` in Karabiner)
-- Caps lock -> FN (CAPS lock to FN in Seil)
 - WakaTime config (add API key to `~/.wakatime.cfg`)
 - Calendars (personal nova.cyan, tramy nova.magenta, work nova.blue)
 - Chrome extensions
