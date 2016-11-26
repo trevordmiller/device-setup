@@ -23,7 +23,7 @@ _Most things are automatically set up with the init script ^, but these are the 
 
 ### System Preferences
 
-- Account system logins (iCloud, )
+- Account system logins (personal, work)
 - Login items (`Todoist`, `Google Drive`, `Google Photos Backup`, `Seil`, `Karabiner`, `Slate`, `Flux`, `RescueTime`)
 - "Text Message Forwarding" (on)
 - "Do Not Disturb" when display is sleeping (on)
@@ -49,6 +49,10 @@ _Most things are automatically set up with the init script ^, but these are the 
 - Accessibility
   - Zoom
     - Use keyboard shortcuts to zoom (on)
+- Find
+  - Preferences
+    - Remove items from the Trash after 30 days (on)
+    - Keep folders on top when sorting by name (on)
 
 ### App Config
 

@@ -10,6 +10,5 @@ brew cask cleanup
 find "$HOME"/drive -name 'node_modules' -type d -exec rm -r '{}' ';' || true
 rm -rf "$HOME"/drive/personal/playground/*
 rm -rf "$HOME"/Downloads/*
-rm -rf "$HOME"/.Trash
 
 script-log state "DONE $task"
