@@ -143,14 +143,9 @@ set wildignore+=*.swp
 set wildignore+=*/.git/*
 set wildignore+=*DS_Store*
 set wildignore+=*/node_modules/*
-set wildignore+=.eslintcache
 set wildignore+=*/build/*
 set wildignore+=*/.next/*
-set wildignore+=*/lib/*
-set wildignore+=*/dist/*
 set wildignore+=*/__snapshots__/*
-set wildignore+=*/compiled/*
-set wildignore+=*/cache/*
 
 " CLIPBOARD
 set clipboard=unnamed
