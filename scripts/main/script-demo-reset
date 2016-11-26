@@ -1,7 +1,9 @@
 #!/bin/bash
 set -euo pipefail
 
-script-log state "Reverting terminal and editor settings to normal"
+task="Reverting terminal and editor settings to normal"
+
+script-log state "$task"
 
 cd "$HOME"/drive/settings/dotfiles
 git checkout .hyper.js .vimrc
@@ -9,4 +11,4 @@ git checkout .hyper.js .vimrc
 sleep 3
 clear
 
-script-log state "Done"
+script-log state "DONE $task"

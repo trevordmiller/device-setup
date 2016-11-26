@@ -1,12 +1,19 @@
-#!/usr/bin/env osascript
+#!/bin/bash
+set -euo pipefail
 
-delay 3
-tell application "SwitchResX Daemon"
-	set current mode of display 1 to mode 1 of display 1
-end tell
+task="Done screencasting, resetting to normal use"
 
-do shell script "script-donotdisturb-reset"
+script-log state "$task"
 
-do shell script "script-demo-reset"
+osascript <<EOD
+  delay 3
+  tell application "SwitchResX Daemon"
+    set current mode of display 1 to mode 1 of display 1
+  end tell
+EOD
 
-return "Done"
+script-donotdisturb-reset
+
+script-demo-reset
+
+script-log state "DONE $task"

@@ -8,6 +8,10 @@ set -euo pipefail
 #   {pane_2_command} defaults to "yarn start"
 #   {pane_3_command} defaults to "yarn verify"
 
+task="Splitting terminal"
+
+script-log state "$task"
+
 tmux new-session -d 
 split_count=${1:-3}
 index=1
@@ -33,3 +37,5 @@ tmux set-window-option main-pane-height 30
 tmux select-layout main-horizontal
 tmux select-pane -t 0
 tmux attach-session -d 
+
+script-log state "DONE $task"

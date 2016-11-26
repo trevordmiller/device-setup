@@ -1,7 +1,9 @@
 #!/bin/bash
 set -euo pipefail
 
-script-log state "Loading terminal and editor demo settings"
+task="Loading terminal and editor demo settings"
+
+script-log state "$task"
 
 sed -i "" \
 -e "s/nova-hyperterm/hyperterm-one-light/" \
@@ -24,4 +26,4 @@ done
 sleep 3
 clear
 
-script-log state "Done"
+script-log state "DONE $task"

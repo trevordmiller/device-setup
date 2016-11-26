@@ -10,6 +10,10 @@ set -euo pipefail
 #   {name} should be a slug like "hello-world"
 #   {description} should be a short sentence like "A CLI to say Hello World"
 
+task="Generating a project"
+
+script-log state "$task"
+
 
 # ==================================================================
 # VARIABLES
@@ -142,4 +146,4 @@ esac
 
 # ==================================================================
 
-script-log state "Done"
+script-log state "DONE $task"

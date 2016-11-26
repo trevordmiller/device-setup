@@ -1,35 +1,49 @@
-#!/usr/bin/env osascript
+#!/bin/bash
+set -euo pipefail
 
-do shell script "script-quit"
+task="Opening apps and websites to synchronize with"
 
-on getTodayApps(core, other, work, background)
-	set today to weekday of (current date)
-	if (today = Sunday) then
-		return core & background
-	else if (today = Saturday) then
-		return core & other & background
-	else
-		return core & other & work & background
-	end if
-end getTodayApps
+script-log state "$task"
 
-set core to {"Todoist", "Day One", "Calendar", "Messages", "Mail"}
-set other to {"Photos", "Anki", "Spotify", "Slack"}
-set work to {"Slack"}
-set background to {"Google Drive", "Google Photos Backup", "Flux", "Slate"}
-set nativeApps to getTodayApps(core, other, work, background)
-repeat with nativeApp in nativeApps
-	run application nativeApp
-end repeat
+items=(
+  "/Applications/Todoist.app"
+  "/Applications/Day One.app"
+  "/Applications/Anki.app"
+  "/Applications/Google Drive.app"
+  "/Applications/Calendar.app"
+  "/Applications/Messages.app"
+  "/Applications/Mail.app"
+  "/Applications/Slack.app"
+  "/Applications/Spotify.app"
+  "/Applications/Photos.app"
+  "/Applications/Google Photos Backup.app"
+  "/Applications/Flux.app"
+  "/Applications/Slate.app"
+  "https://www.rescuetime.com/dashboard"
+  "https://wakatime.com/dashboard"
+  "https://www.mint.com"
+  "https://www.egghead.io"
+  "https://www.codewars.com"
+  "https://www.youtube.com/feed/subscriptions"
+  "https://www.youtube.com/playlist?list=WL"
+  "https://facebook.com"
+  "https://twitter.com"
+  "https://github.com"
+  "https://github.com/pulls?q=is%3Aopen+is%3Apr+user%3Atrevordmiller+"
+  "https://github.com/issues?q=is%3Aopen+is%3Aissue+user%3Atrevordmiller+"
+  "https://github.com/issues"
+  "https://github.com/pulls"
+  "https://github.com/trevordmiller"
+  "https://secure.gaug.es/dashboard#/gauges/57e2132b4b2ffa03c5001224"
+  "https://sentry.io/trevordmiller/"
+  "https://www.egghead.io"
+  "https://github.com/eggheadio/egghead-instructor-center/issues"
+  "https://github.com/eggheadio/egghead-instructor-center/commits/master"
+  "https://github.com/eggheadio/egghead-instructor-center/pulls"
+  "https://docs.google.com/document/d/1gU6iRgpOUd_O-UIo7izJt4iKrmLueKdWVALsCv_zoNQ"
+)
+for item in "${items[@]}"; do
+  open "$item"
+done
 
-set other to {"https://www.rescuetime.com/dashboard", "https://wakatime.com/dashboard", "https://www.mint.com", "https://www.egghead.io", "https://www.codewars.com", "https://www.youtube.com/feed/subscriptions", "https://www.youtube.com/playlist?list=WL", "https://facebook.com", "https://twitter.com", "https://github.com", "https://github.com/pulls?q=is%3Aopen+is%3Apr+user%3Atrevordmiller+", "https://github.com/issues?q=is%3Aopen+is%3Aissue+user%3Atrevordmiller+", "https://github.com/issues", "https://github.com/pulls", "https://github.com/trevordmiller", "https://secure.gaug.es/dashboard#/gauges/57e2132b4b2ffa03c5001224", "https://sentry.io/trevordmiller/"}
-set work to {"https://www.egghead.io", "https://github.com/eggheadio/egghead-instructor-center/issues", "https://github.com/eggheadio/egghead-instructor-center/commits/master", "https://github.com/eggheadio/egghead-instructor-center/pulls", "https://docs.google.com/document/d/1gU6iRgpOUd_O-UIo7izJt4iKrmLueKdWVALsCv_zoNQ"}
-set background to {}
-set webApps to getTodayApps(core, other, work, background)
-repeat with webApp in webApps
-	do shell script "open " & webApp
-end repeat
-
-do shell script "script-windows"
-
-return "Done"
+script-log state "DONE $task"

@@ -2,7 +2,6 @@
 # PATH
 # ==================================================================
 
-SCRIPTS_PATH="$HOME/drive/settings/scripts"
 SCRIPTS_MAIN_PATH="$HOME/drive/settings/scripts/main"
 SCRIPTS_MAIN_PROJECTS_PATH="$HOME/drive/settings/scripts/main/projects"
 SCRIPTS_UTILS_PATH="$HOME/drive/settings/scripts/utils"

@@ -1,7 +1,10 @@
 #!/bin/bash
 set -euo pipefail
 
-script-log state "Checking if any git repos are dirty"
+task="Checking if any git repos are dirty"
+
+script-log state "$task"
+
 cd "$HOME"/drive
 output=$(script-status | grep \
 -e "Untracked files:" \
@@ -9,11 +12,13 @@ output=$(script-status | grep \
 -e "Changes to be committed:" \
 -e "Your branch is ahead" \
 )
+
 if [ -z "$output" ]
 then 
-  script-log state "All git repos are clean";
+  script-log state "All git repos are clean"
 else
-  script-log action "TODO: Clean dirty git repos!";
+  script-log action "TODO: Clean dirty git repos!"
   script-status
 fi
-script-log state "Done";
+
+script-log state "DONE $task"

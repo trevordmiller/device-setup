@@ -15,7 +15,7 @@ _Personal device settings_
 
 ## Automatic
 
-- Run the init script (`. ~/drive/settings/scripts/script-init`)
+- Run the init script (`. ~/drive/settings/index`)
 
 ## Manual
 

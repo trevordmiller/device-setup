@@ -1,35 +1,54 @@
-#!/usr/bin/env osascript
+#!/bin/bash
+set -euo pipefail
 
-set nativeApps to {"Todoist", "/Applications/Hyper.app", "Google Chrome", "Calendar", "Spotify", "Messages", "Mail", "Slack"}
-repeat with nativeApp in nativeApps
-	run application nativeApp
-end repeat
+task="Setting up for work"
 
-set webApps to {"https://docs.google.com/document/d/1O2Me9-4GoYfvEwrIXkyHDAJQs-P2eJXZ6YKJYqJhVWg", "http://localhost:2000/", "http://localhost:3000"}
-repeat with webApp in webApps
-	do shell script "open " & webApp
-end repeat
+script-log state "$task"
 
-do shell script "script-windows"
+items=(
+  "/Applications/Todoist.app"
+  "/Applications/Hyper.app"
+  "/Applications/Google Chrome.app"
+  "/Applications/Calendar.app"
+  "/Applications/Spotify.app"
+  "/Applications/Messages.app"
+  "/Applications/Mail.app"
+  "/Applications/Slack.app"
+  "https://docs.google.com/document/d/1O2Me9-4GoYfvEwrIXkyHDAJQs-P2eJXZ6YKJYqJhVWg"
+  "http://localhost:2000/"
+  "http://localhost:3000"
+)
+for item in "${items[@]}"; do
+  open "$item"
+done
 
-delay 3
-tell application "Google Chrome" to activate
-set devToolsTabs to {3}
-repeat with devToolsTab in devToolsTabs
-	tell application "Google Chrome" to set active tab index of first window to devToolsTab
-	tell application "System Events"
-		keystroke "i" using {command down, option down}
-	end tell
-end repeat
+script-windows
 
-delay 3
-tell application "/Applications/Hyper.app" to activate
-do shell script "script-fullscreen"
-tell application "System Events"
-  keystroke "t" using {command down}
-  delay 1
-  keystroke "cd \"$HOME\"/drive/work/egghead-instructor-center && script-split"
-end tell
+sleep 3
 
-delay 3
-return "Done"
+open "/Applications/Google Chrome.app"
+osascript <<EOD
+  set devToolsTabs to {3}
+  repeat with devToolsTab in devToolsTabs
+    tell application "Google Chrome" to set active tab index of first window to devToolsTab
+    tell application "System Events"
+      keystroke "i" using {command down, option down}
+    end tell
+  end repeat
+EOD
+
+sleep 3
+
+open "/Applications/Hyper.app"
+osascript <<EOD
+  do shell script "script-fullscreen"
+  tell application "System Events"
+    keystroke "t" using {command down}
+    delay 1
+    keystroke "cd \"$HOME\"/drive/work/egghead-instructor-center && script-split"
+  end tell
+EOD
+
+sleep 3
+
+script-log state "DONE $task"

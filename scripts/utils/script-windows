@@ -1,8 +1,15 @@
-#!/usr/bin/env osascript
+#!/bin/bash
+set -euo pipefail
 
-delay 3
-tell application "System Events"
-	key code 18 using {command down, option down, control down}
-end tell
+task="Managing windows"
 
-return "Done"
+script-log state "$task"
+
+sleep 3
+osascript <<EOD
+  tell application "System Events"
+    key code 18 using {command down, option down, control down}
+  end tell
+EOD
+
+script-log state "DONE $task"

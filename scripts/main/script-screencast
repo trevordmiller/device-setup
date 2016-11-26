@@ -1,30 +1,39 @@
-#!/usr/bin/env osascript
+#!/bin/bash
+set -euo pipefail
 
-do shell script "script-demo"
+task="Setting up for screencasting"
 
-set nativeApps to {"Google Chrome", "SwitchResX Daemon", "ScreenFlow", "Todoist", "/Applications/Hyper.app"}
-repeat with nativeApp in nativeApps
-	run application nativeApp
-end repeat
+script-log state "$task"
 
-set webApps to {"https://github.com/trevordmiller?tab=repositories&q=example"}
-repeat with webApp in webApps
-	do shell script "open " & webApp
-end repeat
+script-demo
 
-delay 3
-tell application "SwitchResX Daemon"
-	set res to modes of display 1 whose (width = 1280 and height = 720 and definition = 2)
-	set current mode of display 1 to first item of res
-end tell
+script-donotdisturb
 
-do shell script "script-windows"
+items=(
+  "/Applications/Google Chrome.app"
+  "/Applications/SwitchResX.app"
+  "/Applications/ScreenFlow.app"
+  "/Applications/Todoist.app"
+  "/Applications/Hyper.app"
+  "https://github.com/trevordmiller?tab=repositories&q=example"
+)
+for item in "${items[@]}"; do
+  open "$item"
+done
 
-tell application "/Applications/Hyper.app" to activate
-do shell script "script-fullscreen"
+sleep 3
+osascript <<EOD
+  tell application "SwitchResX Daemon"
+    set res to modes of display 1 whose (width = 1280 and height = 720 and definition = 2)
+    set current mode of display 1 to first item of res
+  end tell
+EOD
 
-do shell script "cd $HOME/drive/personal/eggheadio"
+script-windows
 
-do shell script "script-donotdisturb"
+open "/Applications/Hyper.app"
+script-fullscreen
 
-return "Done"
+cd "$HOME"/drive/personal/eggheadio
+
+script-log state "DONE $task"

@@ -1,6 +1,10 @@
 #!/bin/bash
 set -euo pipefail
 
+task="Upgrading software"
+
+script-log state "$task"
+
 script-log state "Upgrading Homebrew + brew packages"
 brew update
 brew upgrade
@@ -20,4 +24,4 @@ mas upgrade
 script-log state "Upgrading macOS"
 sudo softwareupdate -ia
 
-script-log state "Done"
+script-log state "DONE $task"
