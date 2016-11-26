@@ -157,6 +157,8 @@ _Most things are automatically set up with the init script ^, but these are the 
 - Spotify
   - Download (favorites)
 - YouTube
+- Venmo
+  - Touch ID
 
 ### background
 
