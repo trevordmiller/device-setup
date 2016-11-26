@@ -13,6 +13,7 @@ config resizePercentOf screenSize
 # THROWS
 alias screen1 throw 0 resize
 alias screen2 throw 1 resize
+alias screen3 throw 2 resize
 
 # SIZES
 alias full move screenOriginX;screenOriginY screenSizeX;screenSizeY
@@ -58,7 +59,7 @@ layout layout1 'Simulator':REPEAT ${screen1}
 layout layout1 'Balsamiq Mockups 3':REPEAT ${screen1}
 
 # RIGHT MONITOR
-layout layout1 'Hyper':REPEAT ${screen2}
+layout layout1 'Hyper':REPEAT ${screen3}
 
 
 # ==================================================================
