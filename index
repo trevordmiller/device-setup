@@ -14,6 +14,7 @@ homebrew_packages=(
   "node"
   "reattach-to-user-namespace"
   "shellcheck"
+  "the_silver_searcher"
   "tmux"
   "vim"
   "yarn"

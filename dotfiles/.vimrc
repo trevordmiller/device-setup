@@ -15,8 +15,8 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-vinegar'
 Plugin 'ctrlpvim/ctrlp.vim'
 
-" GIT
-Plugin 'tpope/vim-fugitive'
+" PROJECT SEARCHING
+Plugin 'mileszs/ack.vim'
 
 " SYNTAX CHECKING
 Plugin 'w0rp/ale'
@@ -60,6 +60,11 @@ let g:netrw_localrmdir='rm -r'
 
 " CTRLP
 let g:ctrlp_working_path_mode = 0
+let g:ctrlp_user_command = 'ag %s -l --hidden --path-to-ignore ~/.agignore --nocolor -g ""'
+let g:ctrlp_use_caching = 0
+
+" ACK
+let g:ackprg = 'ag --hidden --path-to-ignore ~/.agignore --vimgrep' 
 
 " ALE
 let g:ale_lint_on_enter = 0
@@ -133,16 +138,6 @@ set noswapfile
 
 " WILD MENU
 set wildmenu
-set wildignore+=*.zip
-set wildignore+=*.png,*.jpg,*.gif
-set wildignore+=*.pdf
-set wildignore+=*.swp
-set wildignore+=*/.git/*
-set wildignore+=*DS_Store*
-set wildignore+=*/node_modules/*
-set wildignore+=*/build/*
-set wildignore+=*/.next/*
-set wildignore+=*/__snapshots__/*
 
 " CLIPBOARD
 set clipboard=unnamed
