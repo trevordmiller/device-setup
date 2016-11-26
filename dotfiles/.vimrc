@@ -18,9 +18,6 @@ Plugin 'ctrlpvim/ctrlp.vim'
 " GIT
 Plugin 'tpope/vim-fugitive'
 
-" PROJECT FIND & REPLACE
-Plugin 'Olical/vim-enmasse'
-
 " SYNTAX CHECKING
 Plugin 'w0rp/ale'
 
