@@ -4,6 +4,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-vinegar'
 Plug 'mileszs/ack.vim'
 Plug 'SirVer/ultisnips'
+Plug 'mbbill/undotree'
 Plug 'tmhedberg/matchit'
 Plug 'othree/html5.vim'
 Plug 'hail2u/vim-css3-syntax'
@@ -44,11 +45,14 @@ set iskeyword+=-
 " WILD MENU
 set wildmenu
 
-" SWAP FILES
-set noswapfile
-
 " CLIPBOARD
 set clipboard=unnamed
+
+" HISTORY
+set undofile
+set undodir=~/.vim/undo_files//
+set directory=~/.vim/swap_files//
+set backupdir=~/.vim/backup_files//
 
 " SPELLCHECKING
 set spelllang=en
