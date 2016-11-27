@@ -1,66 +1,91 @@
-set nocompatible
-
-
-" ==================================================================
 " PLUGINS
-" ==================================================================
-
 call plug#begin('~/.vim/plugged')
-
-" PROJECT NAVIGATION
-Plug 'tpope/vim-vinegar'
 Plug 'ctrlpvim/ctrlp.vim'
-
-" PROJECT SEARCHING
+Plug 'tpope/vim-vinegar'
 Plug 'mileszs/ack.vim'
-
-" SYNTAX CHECKING
-Plug 'w0rp/ale'
-
-" MOTION EXTENSIONS
-Plug 'tmhedberg/matchit'
-Plug 'moll/vim-node'
-
-" SNIPPETS
 Plug 'SirVer/ultisnips'
-
-" SYNTAX GROUP EXTENSIONS
+Plug 'tmhedberg/matchit'
 Plug 'othree/html5.vim'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'pangloss/vim-javascript'
+Plug 'moll/vim-node'
 Plug 'mxw/vim-jsx'
-
-" TIME TRACKING
+Plug 'w0rp/ale'
 Plug 'wakatime/vim-wakatime'
-
-" AESTHETICS
 Plug 'trevordmiller/nova-vim'
-
-" DEMOS
 Plug 'rakr/vim-one'
-
 call plug#end()
 
+" COMPATABILITY
+set nocompatible
 
-" ==================================================================
-" PLUGIN SETTINGS
-" ==================================================================
+" LINES
+set cursorline
+set nowrap
+set textwidth=0
+set wrapmargin=0
+set number
+set scrolloff=5
 
-" NETRW
+" TABS
+set backspace=indent,eol,start
+set smarttab
+set expandtab
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+set autoindent
+set smartindent
+set indentkeys+=O,o
+
+" KEYWORDS
+set iskeyword+=-
+
+" WILD MENU
+set wildmenu
+
+" SWAP FILES
+set noswapfile
+
+" CLIPBOARD
+set clipboard=unnamed
+
+" SPELLCHECKING
+set spelllang=en
+set complete+=kspell
+set spellfile=$HOME/drive/settings/syncfiles/en.utf-8.add
+autocmd BufRead,BufNewFile *.md setlocal spell
+autocmd BufRead,BufNewFile *.txt setlocal spell
+autocmd FileType gitcommit setlocal spell
+
+" LANGUAGE EXTENDING
+let g:jsx_ext_required = 0
+
+" FILE SEARCHING
+set incsearch
+set wrapscan
+
+" PROJECT SEARCHING
+let g:ackprg = 'ag --hidden --path-to-ignore ~/.agignore --vimgrep' 
+
+" PROJECT EXPLORING
 let g:netrw_liststyle = 0
 let g:netrw_sort_by = 'name'
 let g:netrw_sort_direction = 'normal'
 let g:netrw_localrmdir='rm -r'
 
-" CTRLP
+" FUZZY FINDING
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_user_command = 'ag %s -l --hidden --path-to-ignore ~/.agignore --nocolor -g ""'
 let g:ctrlp_use_caching = 0
 
-" ACK
-let g:ackprg = 'ag --hidden --path-to-ignore ~/.agignore --vimgrep' 
+" SNIPPETS
+let g:UltiSnipsExpandTrigger='<tab>'
+let g:UltiSnipsJumpForwardTrigger='<tab>'
+let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
+set dictionary+=~/drive/settings/syncfiles/snippet-names.txt
 
-" ALE
+" LINTING
 let g:ale_lint_on_enter = 0
 let g:ale_lint_on_text_changed = 0
 let g:ale_lint_on_save = 1
@@ -72,54 +97,6 @@ let g:ale_linters = {
 \  'css': ['csslint'],
 \}
 
-" SNIPPETS
-let g:UltiSnipsExpandTrigger='<tab>'
-let g:UltiSnipsJumpForwardTrigger='<tab>'
-let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
-set dictionary+=~/drive/settings/syncfiles/snippet-names.txt
-
-" VIM-JSX
-let g:jsx_ext_required = 0
-
-
-" ==================================================================
-" CORE SETTINGS
-" ==================================================================
-
-" MODES
-set timeoutlen=1000
-set ttimeoutlen=10
-
-" KEYWORDS
-set iskeyword+=-
-
-" LINES
-set cursorline
-set nowrap
-set textwidth=0
-set wrapmargin=0
-set number
-set scrolloff=5
-
-" TABS
-filetype indent on
-set backspace=indent,eol,start
-set smarttab
-set expandtab
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
-set autoindent
-set smartindent
-set indentkeys+=O,o
-
-" SEARCH
-set incsearch
-set wrapscan
-
-" STATUS LINE
-set laststatus=2
-
 " WINDOW SPLITS
 set splitright
 nnoremap <c-h> <c-w>h
@@ -127,23 +104,8 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-l> <c-w>l
 
-" SWAP FILES
-set noswapfile
+" STATUS LINE
+set laststatus=2
 
-" WILD MENU
-set wildmenu
-
-" CLIPBOARD
-set clipboard=unnamed
-
-" SPELLCHECK
-set spelllang=en
-set complete+=kspell
-set spellfile=$HOME/drive/settings/syncfiles/en.utf-8.add
-autocmd BufRead,BufNewFile *.md setlocal spell
-autocmd BufRead,BufNewFile *.txt setlocal spell
-autocmd FileType gitcommit setlocal spell
-
-" AESTHETICS
-set termguicolors
+" COLOR SCHEME
 colorscheme nova
