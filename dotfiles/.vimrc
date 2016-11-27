@@ -71,6 +71,7 @@ set wrapscan
 
 " PROJECT SEARCHING
 let g:ackprg = 'ag --hidden --path-to-ignore ~/.agignore --vimgrep' 
+command! -bang -nargs=* -complete=file Ag call ack#Ack('grep<bang>', <q-args>)
 
 " PROJECT EXPLORING
 let g:netrw_liststyle = 0
