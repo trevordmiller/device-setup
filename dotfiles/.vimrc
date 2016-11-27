@@ -73,13 +73,13 @@ set wrapscan
 let g:ackprg = 'ag --hidden --path-to-ignore ~/.agignore --vimgrep' 
 command! -bang -nargs=* -complete=file Ag call ack#Ack('grep<bang>', <q-args>)
 
-" PROJECT EXPLORING
+" PROJECT DIRECTORY VIEWING
 let g:netrw_liststyle = 0
 let g:netrw_sort_by = 'name'
 let g:netrw_sort_direction = 'normal'
 let g:netrw_localrmdir='rm -r'
 
-" FUZZY FINDING
+" PROJECT FUZZY FINDING
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_user_command = 'ag %s -l --hidden --path-to-ignore ~/.agignore --nocolor -g ""'
 let g:ctrlp_use_caching = 0
