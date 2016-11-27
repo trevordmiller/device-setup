@@ -1,51 +1,45 @@
+set nocompatible
+
+
 " ==================================================================
 " PLUGINS
 " ==================================================================
 
-" PLUGIN SYSTEM SETUP START
-set nocompatible
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" PLUGIN SYSTEM
-Plugin 'VundleVim/Vundle.vim'
+call plug#begin('~/.vim/plugged')
 
 " PROJECT NAVIGATION
-Plugin 'tpope/vim-vinegar'
-Plugin 'ctrlpvim/ctrlp.vim'
+Plug 'tpope/vim-vinegar'
+Plug 'ctrlpvim/ctrlp.vim'
 
 " PROJECT SEARCHING
-Plugin 'mileszs/ack.vim'
+Plug 'mileszs/ack.vim'
 
 " SYNTAX CHECKING
-Plugin 'w0rp/ale'
+Plug 'w0rp/ale'
 
 " MOTION EXTENSIONS
-Plugin 'tmhedberg/matchit'
-Plugin 'moll/vim-node'
+Plug 'tmhedberg/matchit'
+Plug 'moll/vim-node'
 
 " SNIPPETS
-Plugin 'SirVer/ultisnips'
+Plug 'SirVer/ultisnips'
 
 " SYNTAX GROUP EXTENSIONS
-Plugin 'othree/html5.vim'
-Plugin 'hail2u/vim-css3-syntax'
-Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
+Plug 'othree/html5.vim'
+Plug 'hail2u/vim-css3-syntax'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
 
 " TIME TRACKING
-Plugin 'wakatime/vim-wakatime'
+Plug 'wakatime/vim-wakatime'
 
 " AESTHETICS
-Plugin 'trevordmiller/nova-vim'
+Plug 'trevordmiller/nova-vim'
 
 " DEMOS
-Plugin 'rakr/vim-one'
+Plug 'rakr/vim-one'
 
-" PLUGIN SYSTEM SETUP END
-call vundle#end()
-filetype plugin on
+call plug#end()
 
 
 " ==================================================================

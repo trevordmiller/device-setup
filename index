@@ -127,11 +127,12 @@ done
 # VIM PLUGINS
 # ==================================================================
 
-echo "Installing Vundle"
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+echo "Installing Vim Plug"
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-echo "Installing Vundle Vim plugins"
-vim +PluginInstall +qall
+echo "Installing Vim plugins"
+vim +PlugInstall +qall
 
 echo "Making UltiSnips symlinks"
 mkdir ~/.vim/UltiSnips/
