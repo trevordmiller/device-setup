@@ -8,6 +8,7 @@ script-log state "$task"
 brew cleanup
 brew cask cleanup
 find "$HOME"/drive -name 'node_modules' -type d -exec rm -r '{}' ';' || true
+find "$HOME" -name '.DS_Store' -delete
 rm -rf "$HOME"/drive/personal/playground/*
 rm -rf "$HOME"/Downloads/*
 
