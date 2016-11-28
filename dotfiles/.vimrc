@@ -70,7 +70,7 @@ set incsearch
 set wrapscan
 
 " PROJECT SEARCHING
-let g:ackprg = 'ag --hidden --path-to-ignore ~/.agignore --vimgrep' 
+let g:ackprg = 'ag -s --hidden --path-to-ignore ~/.agignore --vimgrep' 
 command! -bang -nargs=* -complete=file Ag call ack#Ack('grep<bang>', <q-args>)
 
 " PROJECT DIRECTORY VIEWING
@@ -81,7 +81,7 @@ let g:netrw_localrmdir='rm -r'
 
 " PROJECT FUZZY FINDING
 let g:ctrlp_working_path_mode = 0
-let g:ctrlp_user_command = 'ag %s -l --hidden --path-to-ignore ~/.agignore --nocolor -g ""'
+let g:ctrlp_user_command = 'ag %s -sl --hidden --path-to-ignore ~/.agignore --nocolor -g ""'
 let g:ctrlp_use_caching = 0
 
 " SNIPPETS

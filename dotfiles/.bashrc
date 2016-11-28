@@ -56,4 +56,4 @@ export EDITOR="$VISUAL"
 alias ls='ls -G'
 alias grep='grep --color=auto'
 alias less='less -R'
-alias ag='ag --hidden --path-to-ignore ~/.agignore'
+alias ag='ag -s --hidden --path-to-ignore ~/.agignore'
