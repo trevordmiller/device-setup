@@ -41,6 +41,18 @@ snippet @log
 console.log('$1', $1)
 endsnippet
 
+snippet @request
+fetch(payload.lesson.lesson_url, {
+  method: 'PUT',
+  body: JSON.stringify({}),
+  mode: 'cors',
+  headers,
+})
+  .then(response => response.json())
+  .then(json => json)
+  .catch(error => console.error(error))
+endsnippet
+
 
 # ==================================================================
 # JEST
@@ -192,7 +204,7 @@ endsnippet
 
 snippet @heading
 <Heading level='$1'>
-	$2
+  $2
 </Heading>
 endsnippet
 

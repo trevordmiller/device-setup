@@ -4,6 +4,7 @@
 @module
 @import
 @log
+@request
 @test
 @tag
 @stateless
