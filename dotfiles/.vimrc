@@ -83,6 +83,7 @@ let g:netrw_localrmdir='rm -r'
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_user_command = 'ag %s -sl --hidden --path-to-ignore ~/.agignore --nocolor -g ""'
 let g:ctrlp_use_caching = 0
+let g:ctrlp_regexp = 1
 
 " SNIPPETS
 let g:UltiSnipsExpandTrigger='<tab>'
