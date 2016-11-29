@@ -9,12 +9,13 @@
 @tag
 @stateless
 @stateful
+@callback
 @connected
 @proptype
 @guide
 @snapshot
 @main
 @split
-@title
+@heading
 @icon
 @avatar
