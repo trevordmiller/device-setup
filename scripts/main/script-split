@@ -6,7 +6,7 @@ set -euo pipefail
 # script-split [{pane_count}] [{pane_2_command}] [{pane_3_command}] etc
 #   {pane_count} defaults to 3
 #   {pane_2_command} defaults to "yarn start"
-#   {pane_3_command} defaults to "yarn verify"
+#   {pane_3_command} defaults to "yarn test"
 
 task="Splitting terminal"
 
@@ -30,7 +30,7 @@ if [ $# -ge 2 ]; then
   done
 else
   tmux send-keys -t 1 C-z "yarn start" Enter
-  tmux send-keys -t 2 C-z "yarn verify" Enter
+  tmux send-keys -t 2 C-z "yarn test" Enter
 fi
 
 tmux set-window-option main-pane-height 30
