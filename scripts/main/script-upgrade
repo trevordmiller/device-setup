@@ -16,7 +16,7 @@ script-log state "Upgrading global yarn packages"
 yarn global upgrade
 
 script-log state "Upgrading Vim plugins"
-vim +PluginInstall +PluginClean +qall
+vim +PlugUpgrade +PlugUpdate +PlugClean +qall
 
 script-log state "Upgrading Mac App Store apps"
 mas upgrade
