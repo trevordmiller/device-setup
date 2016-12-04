@@ -41,13 +41,11 @@ fonts=(
 homebrew_cask_apps=(
   "1password"
   "anki"
-  "balsamiq-mockups"
   "flux"
   "google-chrome"
   "google-drive"
   "google-photos-backup"
   "hyper"
-  "kap"
   "rescuetime"
   "screenflow"
   "sketch"
