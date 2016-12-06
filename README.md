@@ -44,29 +44,7 @@ _Most things are automatically set up with the init script ^, but these are the 
   - Day One
   - Photos
   - Chrome
-    - https://en.todoist.com/app?#agenda%2Foverdue%2C%20p%3Ainbox%2C%20no%20date
-    - https://www.rescuetime.com/dashboard
-    - https://wakatime.com/dashboard
-    - https://www.mint.com
-    - https://www.egghead.io
-    - https://www.codewars.com
-    - https://www.youtube.com/feed/subscriptions
-    - https://www.youtube.com/playlist?list=WL
-    - https://facebook.com
-    - https://twitter.com
-    - https://github.com
-    - https://github.com/pulls?q=is%3Aopen+is%3Apr+user%3Atrevordmiller+
-    - https://github.com/issues?q=is%3Aopen+is%3Aissue+user%3Atrevordmiller+
-    - https://github.com/issues
-    - https://github.com/pulls
-    - https://github.com/trevordmiller
-    - https://secure.gaug.es/dashboard#/gauges/57e2132b4b2ffa03c5001224
-    - https://sentry.io/trevordmiller/
-    - https://www.egghead.io
-    - https://github.com/eggheadio/egghead-instructor-center/issues
-    - https://github.com/eggheadio/egghead-instructor-center/commits/master
-    - https://github.com/eggheadio/egghead-instructor-center/pulls
-    - https://docs.google.com/document/d/1gU6iRgpOUd_O-UIo7izJt4iKrmLueKdWVALsCv_zoNQ
+    - Bookmarks > daily-sync
 
 Assign singular desktop apps to open in specific desktop
 
@@ -99,6 +77,7 @@ Assign singular desktop apps to open in specific desktop
   - Automatically rearrange Spaces based on most recent use (off)
   - When switching to an application, switch to a Space with open windows for the applciation (off)
   - Group windows by application (off)
+  - Displays have separate spaces (off)
 - Accessibility
   - Zoom
     - Use keyboard shortcuts to zoom (on)
