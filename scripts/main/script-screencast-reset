@@ -8,7 +8,7 @@ script-log state "$task"
 osascript <<EOD
   delay 3
   tell application "SwitchResX Daemon"
-    set current mode of display 3 to mode 1 of display 3
+    set current mode of display 1 to mode 1 of display 1
   end tell
 EOD
 

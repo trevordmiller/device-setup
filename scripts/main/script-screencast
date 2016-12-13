@@ -9,28 +9,15 @@ script-demo
 
 script-donotdisturb
 
-items=(
-  "/Applications/Google Chrome.app"
-  "/Applications/ScreenFlow.app"
-  "/Applications/Todoist.app"
-  "/Applications/Hyper.app"
-  "https://github.com/trevordmiller?tab=repositories&q=example"
-)
-for item in "${items[@]}"; do
-  open "$item"
-done
-
 sleep 3
 osascript <<EOD
   run application "SwitchResX Daemon"
   delay 3
   tell application "SwitchResX Daemon"
-    set res to modes of display 3 whose (width = 1280 and height = 720 and definition = 2)
-    set current mode of display 3 to first item of res
+    set res to modes of display 1 whose (width = 1280 and height = 720 and definition = 2)
+    set current mode of display 1 to first item of res
   end tell
 EOD
-
-script-windows
 
 open "/Applications/Hyper.app"
 script-fullscreen
