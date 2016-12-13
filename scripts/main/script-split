@@ -5,7 +5,7 @@ set -euo pipefail
 # script-split 2 "echo 'hello world'"
 # script-split [{pane_count}] [{pane_2_command}] [{pane_3_command}] etc
 #   {pane_count} defaults to 3
-#   {pane_2_command} defaults to "yarn start"
+#   {pane_2_command} defaults to "yarn dev"
 #   {pane_3_command} defaults to "yarn test"
 
 task="Splitting terminal"
@@ -29,7 +29,7 @@ if [ $# -ge 2 ]; then
     let "index+=1"
   done
 else
-  tmux send-keys -t 1 C-z "yarn start" Enter
+  tmux send-keys -t 1 C-z "yarn dev" Enter
   tmux send-keys -t 2 C-z "yarn test" Enter
 fi
 
