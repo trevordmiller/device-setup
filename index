@@ -73,6 +73,10 @@ chsh -s /bin/bash
 # MACOS
 # ==================================================================
 
+# KEYBOARD
+defaults write -g KeyRepeat -int 
+defaults write -g InitialKeyRepeat -int 10
+
 # HIDDEN FILES
 echo "Configuring hidden files to show"
 defaults write com.apple.finder AppleShowAllFiles YES

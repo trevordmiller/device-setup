@@ -51,7 +51,7 @@ Assign singular desktop apps to open in specific desktop
 ### System Preferences
 
 - Account system logins (personal, work)
-- Login items (`Todoist`, `Google Drive`, `Google Photos Backup`, `Seil`, `Karabiner`, `Slate`, `Flux`, `RescueTime`)
+- Login items (`Todoist`, `Google Drive`, `Google Photos Backup`, `Slate`, `Flux`, `RescueTime`)
 - "Text Message Forwarding" (on)
 - "Do Not Disturb" when display is sleeping (on)
 - "Do Not Disturb" when mirroring to TVs and projectors (on)
@@ -96,10 +96,6 @@ Assign singular desktop apps to open in specific desktop
   - Remove everything else
 - Spotify don't open on login (in app preferences, not system preferences like the other login apps)
 - Finder sidebar condense (`Google Drive`, `Downloads`, `AirDrop`)
-- Karabiner setting sync (`private.xml` with `~/drive/settings/karabiner/private.xml`)
-- Key repeat spacing (`Key repeat` to `20ms` in Karabiner)
-- Key repeat delay (`Delay until repeat` to `200ms` in Karabiner)
-- FN + media key use (`Change f1...f12` in Karabiner)
 - WakaTime config (add API key to `~/.wakatime.cfg`)
 - Calendars (personal nova.cyan, tramy nova.magenta, work nova.blue)
 - Chrome extensions
@@ -116,7 +112,6 @@ Assign singular desktop apps to open in specific desktop
 
 # Keyboard (Pok3r)
 
-- CAPS lock to FN (DIP switch 3 on)
 - Programming layer (Fn+R_Ctrl to start/stop recording)
   - VIM like HJKL
     - Left: FN + H then: FN + J then: PN
