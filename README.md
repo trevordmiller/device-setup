@@ -110,18 +110,6 @@ Assign singular desktop apps to open in specific desktop
 
 ---
 
-# Keyboard (Pok3r)
-
-- Programming layer (Fn+R_Ctrl to start/stop recording)
-  - VIM like HJKL
-    - Left: FN + H then: FN + J then: PN
-    - Down: FN + J then: FN + K then: PN
-    - Up: FN + K then: FN + I then: PN
-    - Right: already works
-    - Home: FN + I then: FN + H then: PN
-
----
-
 # Mobile (iOS)
 
 ## Welcome
