@@ -21,32 +21,30 @@ _Personal device settings_
 
 _Most things are automatically set up with the init script ^, but these are the few outstanding manual items_
 
-### Mission Control Desktops
+## Screens
 
-- Tasks (fullscreen)
+- 1 (Tasks, fullscreen)
   - Todoist
-- Development (fullscreen split)
+- 2 (Development, fullscreen split)
   - Hyper (2/3rds)
   - Chrome (1/3rd)
     - localhost
-- Development Tools
+- 3 (Development Tools)
   - Chrome
     - github repo
     - docs
-- Break sync
+- 4 (Break sync)
   - Messages
   - Mail
   - Slack
   - Spotify
-- Daily sync
+- 5 (Daily sync)
   - Calendar
   - Anki
   - Day One
   - Photos
   - Chrome
     - Bookmarks > daily-sync
-
-Assign singular desktop apps to open in specific desktop
 
 ### System Preferences
 
@@ -73,9 +71,11 @@ Assign singular desktop apps to open in specific desktop
 - Keyboard
   - Modifier keys
     - caps lock (escape)
+  - Text
+    - Correct spelling automatically (off)
 - Mission Control
   - Automatically rearrange Spaces based on most recent use (off)
-  - When switching to an application, switch to a Space with open windows for the applciation (off)
+  - When switching to an application, switch to a Space with open windows for the applciation (on)
   - Group windows by application (off)
   - Displays have separate spaces (off)
 - Accessibility
@@ -144,63 +144,66 @@ Assign singular desktop apps to open in specific desktop
     - Add Account 
       - Sign in with QR code (work)
 
-## Home Screen
+## Screens
 
-### core
-
-- Todoist
-- Day One
-  - Enable Sync (yes)
-  - Connect Services (Calendars, Twitter, Facebook)
-- Anki
-  - Synchronize (download from AnkiWeb)
-- Google Drive
-
-### utils
-
-- Calendar
-  - Calendars (personal, tramy, work, events found in apps)
-- Phone
-- Messages
-- Google Maps
-- Gospel Library
+- 1 (Root)
+  - Todoist
+- 2 (Productivity)
+  - Day One
+    - Enable Sync (yes)
+    - Connect Services (Calendars, Twitter, Facebook)
+  - Anki
+    - Synchronize (download from AnkiWeb)
+  - Gospel Library
+    - Settings
+      - Sign In
+      - List Mode (on) 
+    - Download (Scriptures, past few conferences)
+  - Safari Queue
+- 3 (Fun)
+  - Spotify
+    - Download (favorites)
+  - YouTubde
+  - Risk
+  - Garage Band
+  - Safari
+- 4 (Utilities)
+  - Drive
+  - 1Password
+  - Calendar
+    - Calendars (personal, tramy, work, events found in apps)
+  - Phone
+  - Messages
+  - Photos
+    - Use iCloud Photo Library (on)
+  - Google Photos
+    - Upload size (original)
+  - Camera
+  - Google Maps
+  - Nest
+  - Contacts
+  - Venmo
+    - Touch ID
+  - Clock
+    - Alarms
+  - Find iPhone
+    - Store last known location (on)
+  - App Store
   - Settings
-    - Sign In
-    - List Mode (on) 
-  - Download (Scriptures, past few conferences)
-- Safari Queue
-- Spotify
-  - Download (favorites)
-- YouTube
-- Venmo
-  - Touch ID
-
-### background
-
-- 1Password
-- Photos
-  - Use iCloud Photo Library (on)
-- Google Photos
-  - Upload size (original)
-- Clock
-- Camera
-- Contacts
-- Find iPhone
-  - Store last known location (on)
-- Nest
-- Sheets
-- Docs
-- Wallet
-- Health
-  - Add Medical ID
-- Safari
-- App Store
-- Settings
+- 5 (Background)
+  - Google Sheets
+  - Google Docs
+  - Health
+    - Add Medical ID
+  - Wallet
 
 _Delete other apps_
 
 ## Settings
 
+- Keyboards
+  - Auto-Capitalization (off)
+  - Auto-Correction (off)
 - Cellular
   - App store, Spotify, YouTube (off)
 - Do Not Disturb
@@ -236,14 +239,3 @@ _Delete other apps_
   - AutoFill
     - Names and Passwords (off)
   - Do Not Track (on)
-
-## Share menu
-
-- Apps
-  - Todoist
-  - Day One
-  - Messages
-  - Google Drive
-  - iCloud Photo Sharing
-- Extensions
-  - 1Password
