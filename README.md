@@ -107,6 +107,12 @@ _Most things are automatically set up with the init script ^, but these are the 
 - Google Photos Backup size (`Original`)
 - Time Machine discs (`backup-home`, `backup-work`)
 - Backups working in background (Google Drive, Google Photos Backup, Time Machine external drives)
+- Screenflow
+  - Countdown (0 seconds)
+  - Default durations
+    - Still images (3 seconds)
+  - Exporting
+    - 100% size
 
 ---
 
