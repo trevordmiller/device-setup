@@ -49,7 +49,7 @@ _Most things are automatically set up with the init script ^, but these are the 
 ### System Preferences
 
 - Account system logins (personal, work)
-- Login items (`Todoist`, `Google Drive`, `Google Photos Backup`, `Slate`, `Flux`, `RescueTime`)
+- Login items (`Todoist`, `Google Drive`, `Google Photos Backup`, `Flux`, `RescueTime`)
 - "Text Message Forwarding" (on)
 - "Do Not Disturb" when display is sleeping (on)
 - "Do Not Disturb" when mirroring to TVs and projectors (on)

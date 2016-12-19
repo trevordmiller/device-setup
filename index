@@ -50,7 +50,6 @@ homebrew_cask_apps=(
   "screenflow"
   "sketch"
   "slack"
-  "slate"
   "spotify"
   "switchresx"
 )
