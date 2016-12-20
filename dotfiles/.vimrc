@@ -115,3 +115,9 @@ set laststatus=2
 
 " COLOR SCHEME
 colorscheme nova
+set laststatus=0
+set noshowmode
+set background=light
+colorscheme one
+exec 'highlight EndOfBuffer guifg=#CCCCCC'
+exec 'highlight MatchParen guifg=#000000 guibg=#CCCCCC'

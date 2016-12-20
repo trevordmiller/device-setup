@@ -98,7 +98,10 @@ _Most things are automatically set up with the init script ^, but these are the 
   - Anki
   - Drive
   - Remove everything else
-- Spotify don't open on login (in app preferences, not system preferences like the other login apps)
+- Spotify
+  - Preferences
+  - Don't open on login
+  - High quality streaming
 - Finder sidebar condense (`Google Drive`, `Downloads`, `AirDrop`)
 - WakaTime config (add API key to `~/.wakatime.cfg`)
 - Calendars (personal nova.cyan, tramy nova.magenta, work nova.blue)

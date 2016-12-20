@@ -1,11 +1,11 @@
 module.exports = {
   plugins: [
-    'nova-hyperterm',
+    'hyperterm-one-light',
   ],
   config: {
     fontFamily: '"Fira Mono", monospace',
-    padding: '17px',
-    fontSize: 17,
+    padding: '25px',
+    fontSize: 30,
     cursorShape: 'BLOCK',
     windowSize: [1280, 720],
   },
