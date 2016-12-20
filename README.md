@@ -29,10 +29,8 @@ _Most things are automatically set up with the init script ^, but these are the 
   - Hyper (2/3rds)
   - Chrome (1/3rd)
     - localhost
-- 3 (Development Tools)
+- 3 (Misc)
   - Chrome
-    - github repo
-    - docs
 - 4 (Break sync)
   - Messages
   - Mail
@@ -45,6 +43,12 @@ _Most things are automatically set up with the init script ^, but these are the 
   - Photos
   - Chrome
     - Bookmarks > daily-sync
+- 6 (Screencasting, fullscreen split)
+  - Hyper (code, 2/3rds)
+  - Chrome or Hyper (output, 1/3rd)
+- 7 (Finances)
+  - Chrome
+    - Bookmarks > finances
 
 ### System Preferences
 
