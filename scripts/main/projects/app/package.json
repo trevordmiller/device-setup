@@ -1,10 +1,10 @@
 {
   "name": "%substitute_project_name",
   "scripts": {
-    "start": "next",
+    "dev": "next",
     "verify": "scripts/verify",
     "build": "next build",
-    "now-start": "next start"
+    "start": "next start"
   },
   "babel": {
     "presets": [

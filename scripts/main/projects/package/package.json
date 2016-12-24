@@ -2,7 +2,7 @@
   "name": "%substitute_project_name",
   "version": "0.1.0",
   "scripts": {
-    "start": "scripts/start",
+    "dev": "scripts/dev",
     "verify": "scripts/verify",
     "build": "scripts/build",
     "prepublish": "yarn build"

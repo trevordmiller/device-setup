@@ -66,10 +66,10 @@ script-log state "Installing dependencies"
 case "$project_type" in 
   "app" )
     yarn add next
-    yarn add --dev babel-preset-latest babel-preset-react eslint eslint-plugin-react jest babel-jest watch parallelshell
+    yarn add --dev babel-preset-latest babel-preset-react eslint eslint-plugin-react jest watch parallelshell
     ;;
   "package" ) 
-    yarn add --dev babel-cli babel-preset-latest eslint jest babel-jest watch parallelshell
+    yarn add --dev babel-cli babel-preset-latest eslint jest watch parallelshell
     ;; 
 esac
 
