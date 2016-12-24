@@ -176,8 +176,7 @@ _Most things are automatically set up with the init script ^, but these are the 
 - 3 (Fun)
   - Spotify
     - Download (favorites)
-  - YouTubde
-  - Risk
+  - YouTube
   - Garage Band
   - Safari
 - 4 (Utilities)
@@ -187,18 +186,20 @@ _Most things are automatically set up with the init script ^, but these are the 
     - Calendars (personal, tramy, work, events found in apps)
   - Phone
   - Messages
+  - Contacts
   - Photos
     - Use iCloud Photo Library (on)
   - Google Photos
     - Upload size (original)
-  - Camera
-  - Google Maps
-  - Nest
-  - Contacts
-  - Venmo
-    - Touch ID
   - Clock
     - Alarms
+  - Camera
+  - Google Maps
+  - Venmo
+    - Touch ID
+  - iSmartAlarm
+  - mydlink Home
+  - Nest
   - Find iPhone
     - Store last known location (on)
   - App Store
