@@ -36,7 +36,7 @@ project_description=$3
 
 script-log state "Generating files and folders"
 mkdir "$project_name"
-cd "$project_name"
+cd !$
 cp -a "$template_path"/shared/. ./
 case "$project_type" in 
   "app" ) 
@@ -113,7 +113,6 @@ esac
 # ==================================================================
 # MANUAL SETUP
 # ==================================================================
-
 script-log action "MANUAL SETUP"
 script-log action "TODO: Protect master branch"
 open "https://github.com/$user_name/$project_name/settings/branches"
@@ -145,5 +144,5 @@ esac
 
 
 # ==================================================================
-
+"$project_name"
 script-log state "DONE $task"
