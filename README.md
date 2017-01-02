@@ -100,8 +100,9 @@ _Most things are automatically set up with the init script ^, but these are the 
   - Remove everything else
 - Spotify
   - Preferences
-  - Don't open on login
-  - High quality streaming
+    - Don't open on login
+    - High quality streaming
+  - Download each playlist
 - Finder sidebar condense (`Google Drive`, `Downloads`, `AirDrop`)
 - WakaTime config (add API key to `~/.wakatime.cfg`)
 - Calendars (personal nova.cyan, tramy nova.magenta, work nova.blue)
@@ -175,7 +176,7 @@ _Most things are automatically set up with the init script ^, but these are the 
   - Safari Queue
 - 3 (Fun)
   - Spotify
-    - Download (favorites)
+    - Download (input)
   - YouTube
   - Garage Band
   - Safari
