@@ -7,8 +7,8 @@ script-log state "$task"
 
 sed -i "" \
 -e "s/nova-hyperterm/hyperterm-one-light/" \
--e "s/padding: '17px'/padding: '25px'/" \
--e "s/fontSize: 17/fontSize: 30/" \
+-e "s/padding: '16px'/padding: '25px'/" \
+-e "s/fontSize: 16/fontSize: 30/" \
 "$HOME/drive/settings/dotfiles/.hyper.js"
 
 vimrcRules=(

@@ -4,8 +4,8 @@ module.exports = {
   ],
   config: {
     fontFamily: '"Fira Mono", monospace',
-    padding: '17px',
-    fontSize: 17,
+    padding: '16px',
+    fontSize: 16,
     cursorShape: 'BLOCK',
     windowSize: [1280, 720],
   },
