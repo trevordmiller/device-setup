@@ -17,5 +17,7 @@
 @main
 @split
 @heading
+@anchor
+@button
 @icon
 @avatar
