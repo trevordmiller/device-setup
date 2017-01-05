@@ -33,7 +33,7 @@ else
   tmux send-keys -t 2 C-z "yarn test" Enter
 fi
 
-tmux set-window-option main-pane-height 30
+tmux set-window-option main-pane-height 35
 tmux select-layout main-horizontal
 tmux select-pane -t 0
 tmux attach-session -d 
