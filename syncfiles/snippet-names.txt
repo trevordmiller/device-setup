@@ -21,3 +21,4 @@
 @button
 @icon
 @avatar
+@prompt
