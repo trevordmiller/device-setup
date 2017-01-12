@@ -30,7 +30,6 @@ _Most things are automatically set up with the init script ^, but these are the 
   - Chrome (1/3rd)
     - localhost
 - 3 (Misc)
-  - Chrome
 - 4 (Break sync)
   - Messages
   - Mail
@@ -43,12 +42,6 @@ _Most things are automatically set up with the init script ^, but these are the 
   - Photos
   - Chrome
     - Bookmarks > daily-sync
-- 6 (Screencasting, fullscreen split)
-  - Hyper (code, 2/3rds)
-  - Chrome or Hyper (output, 1/3rd)
-- 7 (Finances)
-  - Chrome
-    - Bookmarks > finances
 
 ### System Preferences
 
@@ -58,6 +51,8 @@ _Most things are automatically set up with the init script ^, but these are the 
 - "Do Not Disturb" when display is sleeping (on)
 - "Do Not Disturb" when mirroring to TVs and projectors (on)
 - "Do Not Disturb" allow repeated calls (on)
+- Notifications
+  - Turn off distracting things that can wait until a break: Mail, Slack
 - "Find My Mac" (on)
 - Dock auto hide (on)
 - Menu Bar auto hide (on)
@@ -67,7 +62,6 @@ _Most things are automatically set up with the init script ^, but these are the 
 - Show warning before changing an extension (off)
 - Power adapter, turn display off after (never)
 - Default browser (Chrome)
-- Notification center keyboard shortcut (`⌘⌥⌃n`)
 - "Security & Privacy" control permissions (on)
 - "Glass" sound for alerts
 - Alert volume (full)
