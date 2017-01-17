@@ -106,7 +106,7 @@ done
 # NPM
 echo "Installing yarn global packages"
 for yarn_global_package in "${yarn_global_packages[@]}"; do
-  yarn install -g "$yarn_global_package"
+  yarn add global "$yarn_global_package"
 done
 
 # CONFIG
