@@ -16,6 +16,7 @@ homebrew_packages=(
   "shellcheck"
   "the_silver_searcher"
   "tmux"
+  "tree"
   "vim"
   "yarn"
 )
