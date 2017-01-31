@@ -10,10 +10,10 @@
 @stateless
 @stateful
 @callback
-@connected
 @proptype
 @guide
 @snapshot
+@fetch
 @main
 @split
 @heading

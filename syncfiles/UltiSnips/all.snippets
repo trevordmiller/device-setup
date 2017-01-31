@@ -131,29 +131,6 @@ export default class $1 extends Component {
 }
 endsnippet
 
-snippet @connected
-import React, {Component} from 'react'
-import {connect} from 'react-redux'
-import {$2} from './state/actions'
-
-export default connect(
-  ({$3}) => ({...$3}),
-  {$2}
-)(class $1 extends Component {
-
-  componentWillMount() {
-    $2()
-  }
-
-  render() {
-    const {$3 pieces} = this.props
-    return (
-      @tag$4
-    )
-  }
-})
-endsnippet
-
 snippet @proptype
 $1: PropTypes.$2${3:.isRequired},
 endsnippet
@@ -183,6 +160,14 @@ test('$2', () => (
 endsnippet
 
 # EGGHEAD SPECIFIC
+
+snippet @fetch
+<Fetch path='/$1'>
+  {({data}) => (
+    $2
+  )}
+</Fetch>
+endsnippet
 
 snippet @main
 <Main>
