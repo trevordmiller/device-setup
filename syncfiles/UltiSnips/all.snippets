@@ -41,7 +41,7 @@ snippet @log
 console.log('$1', $1)
 endsnippet
 
-snippet @request
+snippet @fetch
 fetch(payload.lesson.lesson_url, {
   method: 'PUT',
   body: JSON.stringify({}),
@@ -161,10 +161,14 @@ endsnippet
 
 # EGGHEAD SPECIFIC
 
-snippet @fetch
-<Fetch path='/$1'>
+snippet @request
+<Request
+	path='/$1'
+	method='$2'
+	${3:lazy}
+>
   {({data}) => (
-    $2
+    $4
   )}
 </Fetch>
 endsnippet

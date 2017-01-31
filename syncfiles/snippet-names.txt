@@ -4,7 +4,7 @@
 @module
 @import
 @log
-@request
+@fetch
 @test
 @tag
 @stateless
@@ -13,7 +13,7 @@
 @proptype
 @guide
 @snapshot
-@fetch
+@request
 @main
 @split
 @heading
