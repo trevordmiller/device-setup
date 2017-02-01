@@ -163,11 +163,11 @@ endsnippet
 
 snippet @request
 <Request
-	path='/$1'
-	method='$2'
 	${3:lazy}
+	method='$2'
+	url='/$1'
 >
-  {({data}) => (
+  {({request, data}) => (
     $4
   )}
 </Fetch>
