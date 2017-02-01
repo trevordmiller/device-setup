@@ -60,6 +60,7 @@ set complete+=kspell
 set spellfile=$HOME/drive/settings/syncfiles/en.utf-8.add
 autocmd BufRead,BufNewFile *.md setlocal spell
 autocmd BufRead,BufNewFile *.txt setlocal spell
+autocmd BufRead,BufNewFile */blog/* setlocal spell
 autocmd FileType gitcommit setlocal spell
 
 " LANGUAGE EXTENDING
