@@ -162,13 +162,23 @@ endsnippet
 # EGGHEAD SPECIFIC
 
 snippet @request
+<Request url='/$1'>
+  {({data}) => (
+    $2
+  )}
+</Fetch>
+endsnippet
+
+snippet @lazyrequest
 <Request
-	${3:lazy}
-	method='$2'
-	url='/$1'
+  ${1:lazy}
+  method='$2'
+  url='/$3'
 >
   {({request, data}) => (
-    $4
+    <a onClick={() => request()}>
+      Get data
+    </a>
   )}
 </Fetch>
 endsnippet
