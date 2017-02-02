@@ -26,12 +26,10 @@ ruby_gems=(
 )
 
 yarn_global_packages=(
-  "create-react-app"
   "csslint"
   "eslint"
   "eslint-plugin-react"
   "jsonlint"
-  "now"
 )
 
 fonts=(
@@ -182,10 +180,6 @@ yarn login
 # TRAVIS
 echo "Log in to Travis CI"
 travis login
-
-# NOW
-echo "Log in to Now"
-now --login
 
 
 # ==================================================================
