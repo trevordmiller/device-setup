@@ -8,7 +8,8 @@ SCRIPTS_UTILS_PATH="$HOME/drive/settings/scripts/utils"
 HOMEBREW_PATH="/usr/local/bin"
 PROJECT_NPM_PATH="./node_modules/.bin"
 YARN_PATH="$HOME/.yarn/bin"
-export PATH="$PATH:$SCRIPTS_PATH:$SCRIPTS_MAIN_PATH:$SCRIPTS_MAIN_PROJECTS_PATH:$SCRIPTS_UTILS_PATH:$HOMEBREW_PATH:$PROJECT_NPM_PATH:$YARN_PATH"
+RBENV_PATH="$HOME/.rbenv/bin"
+export PATH="$PATH:$SCRIPTS_PATH:$SCRIPTS_MAIN_PATH:$SCRIPTS_MAIN_PROJECTS_PATH:$SCRIPTS_UTILS_PATH:$HOMEBREW_PATH:$PROJECT_NPM_PATH:$YARN_PATH:$RBENV_PATH"
 
 
 # ==================================================================
@@ -57,3 +58,10 @@ alias ls='ls -G'
 alias grep='grep --color=auto'
 alias less='less -R'
 alias ag='ag -s --hidden --path-to-ignore ~/.agignore'
+
+
+# ==================================================================
+# RAILS
+# ==================================================================
+
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
