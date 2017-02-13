@@ -2,8 +2,8 @@
 # PATH
 # ==================================================================
 
-SCRIPTS_MAIN_PATH="$HOME/drive/settings/scripts/main"
-SCRIPTS_MAIN_PROJECTS_PATH="$HOME/drive/settings/scripts/main/projects"
+SCRIPTS_PATH="$HOME/drive/settings/scripts"
+SCRIPTS_PROJECTS_PATH="$HOME/drive/settings/scripts/projects"
 SCRIPTS_UTILS_PATH="$HOME/drive/settings/scripts/utils"
 HOMEBREW_PATH="/usr/local/bin"
 PROJECT_NPM_PATH="./node_modules/.bin"

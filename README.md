@@ -8,8 +8,7 @@ Trevor's personal device settings
 - **Desktop only work:** remove work items from mobile devices so work is completed on desktop only
 - **Single tasking:** complete tasks one at a time, while closing any apps/windows/tabs not needed for current task 
 - **Keyboard shortcuts:** use spotlight to open/switch between apps, then keyboard shortcuts inside apps
-- **Synchronize:** once a day, run `script-synchronize` to stay up-to-date/organized
-- **Updates:** a few times a day, check messages and add/update task list as needed
+- **Checks:** once a day, run [`script-check`](scripts/script-check), then a few times a day, run [`script-microcheck`](scripts/script-microcheck) to stay up-to-date
 
 # Desktop setup
 

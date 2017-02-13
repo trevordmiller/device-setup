@@ -1,0 +1,49 @@
+#!/bin/bash
+set -euo pipefail
+
+script-quit
+
+task="Opening apps and websites to check"
+
+script-log state "$task"
+
+items=(
+  "https://en.todoist.com/app?lang=en&v=845#agenda%2Foverdue%2C%20p%3Ainbox%2C%20no%20date"
+  "https://www.rescuetime.com/dashboard"
+  "https://wakatime.com/dashboard"
+  "https://www.mint.com/"
+  "https://www.amazon.com/gp/css/order-history?ie=UTF8&ref_=orders&"
+  "https://instructor.egghead.io/"
+  "https://analytics.google.com/"
+  "https://us3.admin.mailchimp.com/"
+  "https://github.com/issues?q=is%3Aopen+is%3Aissue+user%3Atrevordmiller+"
+  "https://github.com/issues"
+  "https://github.com/pulls?q=is%3Aopen+is%3Apr+user%3Atrevordmiller+"
+  "https://github.com/pulls"
+  "https://www.facebook.com/"
+  "https://twitter.com/i/notifications"
+  "https://www.youtube.com/feed/subscriptions"
+  "https://www.youtube.com/results?q=mario+%28zenyou+OR+ally%29&sp=CAI%253D"
+  "https://www.youtube.com/playlist?list=WL"
+  "https://www.google.com/search?q=%22trevordmiller%40icloud.com%22+OR+%22Trevor+D.+Miller%22&safe=active&espv=2&source=lnt&tbs=qdr:w&sa=X&ved=0ahUKEwirlOD7vurQAhVorFQKHRXMB0oQpwUIFA&biw=1440&bih=799"
+  "https://www.google.com/search?safe=active&espv=2&biw=1440&bih=799&tbs=qdr%3Aw&q=nova+color+scheme&oq=nova+color+scheme&gs_l=serp.3..35i39k1j0l2j0i22i30k1l4.4250.6234.0.6352.18.12.0.0.0.0.228.1491.0j6j2.8.0....0...1c.1.64.serp..10.7.1344.0..46j0i67k1j0i20i46k1j46i20k1j0i20k1j0i46k1j0i22i10i30k1.t6aaFclWTUU"
+  "https://www.google.com/search?q=%22Practical+Git+for+Everyday+Professional+Use%22&safe=active&biw=1440&bih=799&source=lnt&tbs=qdr:w&sa=X&ved=0ahUKEwjwueGZvurQAhUpw1QKHTx-DUkQpwUIFA"
+  "https://www.google.com/search?safe=active&biw=1440&bih=799&tbs=qdr%3Aw&q=%22React+Testing+Cookbook%22&oq=%22React+Testing+Cookbook%22&gs_l=serp.3...47325.49556.0.49708.22.14.0.0.0.0.290.2012.0j3j6.9.0....0...1c.1.64.serp..22.0.0.BrPANGWFLYM"
+  "https://egghead.io/"
+  "https://instructor.egghead.io/instructors"
+  "https://app.honeybadger.io/projects/51180/faults?ignored=f&resolved=f"
+  "https://analytics.google.com/analytics/web/?authuser=1#realtime/rt-overview/a36512724w134681887p138806178/"
+  "/Applications/Calendar.app"
+  "/Applications/Messages.app"
+  "/Applications/Mail.app"
+  "/Applications/Slack.app"
+  "/Applications/Day One.app"
+  "/Applications/Anki.app"
+  "/Applications/Spotify.app"
+  "/Applications/Photos.app"
+)
+for item in "${items[@]}"; do
+  open "$item"
+done
+
+script-log state "DONE $task"
