@@ -4,179 +4,91 @@ Trevor's personal device settings
 
 # Workflow
 
-- Use only desktop for work items _(remove work items like email/Slack from mobile devices)_
-- Minimal single tasking _(complete tasks one at a time, while only keeping open apps/windows/tabs which are currently in use)_
-- Use spotlight to open/switch between apps and keyboard shortcuts inside apps
-- Once a day, run `script-synchronize` to stay up-to-date/organized
-- A few times a day, check messages (texts, email, Slack) and add/update tasks as needed
+- **Task list:** use task list as a single source of truth
+- **Desktop only work:** remove work items from mobile devices so work is completed on desktop only
+- **Single tasking:** complete tasks one at a time, while closing any apps/windows/tabs not needed for current task 
+- **Keyboard shortcuts:** use spotlight to open/switch between apps, then keyboard shortcuts inside apps
+- **Synchronize:** once a day, run `script-synchronize` to stay up-to-date/organized
+- **Updates:** a few times a day, check messages and add/update task list as needed
 
-# Set up
-
-## Desktop
+# Desktop setup
 
 - Install Homebrew: `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
-- Set up Google Drive:
-  - `brew cask install google-drive`
-  - Rename Google Drive folder: `~/Google\ Drive` to `~/drive` 
-  - Start Google Drive sync
-- Install settings repo: `https://github.com/trevordmiller/settings.git ~/drive`
-- Run set up script (`. ~/drive/settings/index`)
+- Install Google Drive: `brew cask install google-drive`
+- Rename Google Drive directory: `mv ~/Google\ Drive  ~/drive`
+- Start Google Drive directory sync and wait for initial completion
+- Run set up script: `. ~/drive/settings/index`
 
-_Most things are automatically set up with the set up script ^, but some manual items are needed:_
+_Most things are taken care of automatically with the set up script ^, but some manual items are needed:_
 
-- Accounts (personal, work)
-- Dock
-  - Todoist
-  - Remove everything else
+- Add accounts (personal, work)
+- Clean up dock (Todoist, remove everything else)
 - Dock auto hide (on)
 - Menu Bar auto hide (on)
 - Login items (`Todoist`, `Google Drive`, `Google Photos Backup`, `Flux`, `RescueTime`)
 - Text Message Forwarding (on)
 - Do Not Disturb when display is sleeping (on), when mirroring to TVs and projectors (on), allow repeated calls (on)
 - Find My Mac (on)
-- Highlight color (`nova.cyan`)
+- Highlight color (Nova cyan)
 - Prevent computer from sleeping automatically when display is off (on)
 - Show all filename extensions (on)
 - Show warning before changing an extension (off)
 - Power adapter, turn display off after (never)
 - Default browser (Chrome)
 - Security & Privacy control permissions (on)
-- Glass sound for alerts
+- Alert sound (glass)
 - Alert volume (full)
-- Popcorn sound for messages
-- Keyboard
-  - Modifier keys
-    - caps lock (escape)
-  - Text
-    - Correct spelling automatically (off)
-- Finder
-  - Preferences
-    - Remove items from the Trash after 30 days (on)
-    - Keep folders on top when sorting by name (on)
-- Spotify
-  - Preferences
-    - Don't open on login
-    - High quality streaming
-  - Download each playlist
+- Message sound (popcorn)
+- Keyboard modifier keys caps lock (escape)
+- Correct spelling automatically (off)
+- Remove items from the Trash after 30 days (on)
+- Keep folders on top when sorting by name (on)
+- Spotify open on login (off), high quality streaming (on), download each playlist
+- Screenflow countdown (0 seconds), still images default duration (3 seconds)
 - Finder sidebar condense (`Google Drive`, `Downloads`, `AirDrop`)
 - WakaTime config (add API key to `~/.wakatime.cfg`)
-- Calendars (personal `nova.cyan`, tramy `nova.magenta`, work `nova.blue`)
-- Chrome extensions
-  - 1Password
-  - Grammarly
-  - JSON Formatter
-  - React DevTools
+- Calendars (personal Nova cyan, tramy Nova magenta, work Nova blue)
+- Chrome extensions (1Password, Grammarly, JSON Formatter, React DevTools)
+- Google safe search (on)
 - Google Photos Backup size (`Original`)
 - Time Machine backup on external hard drive
 - Backups working in background (Google Drive, Google Photos Backup, Time Machine external drives)
-- Screenflow
-  - Countdown (0 seconds)
-  - Default durations
-    - Still images (3 seconds)
-  - Exporting
-    - 100% size
 
-## Mobile Devices
+# Mobile devices setup
 
-- Turn on silent toggle
-- Welcome screens
-  - Add Wifi
-  - Enable Location Services
-  - Add touch ID
-  - Add passcode (from 1Password)
-  - Confirm 2fa phone number
-  - Confirm Apple Pay card
-  - Approve iCloud Keychain (from 1Password)
-  - Set up Siri
-  - Don't send diagnostics
-- Add backup finger to Touch ID
-- On desktop, add iPhone as 2fa option (from appleid.apple.com)
-- 1password
-  - Sign in with QR code (tramy)
-  - Settings
-    - Security
-      - Touch ID (on)
-      - Lock on Exit (off)
-      - 1Password Watchtower (on)
-    - 1Password Accounts
-      - Add Account 
-        - Sign in with QR code (work)
-- Dock
-  - Todoist
-  - Put everything else in `Other` folder
-    - Day One
-      - Enable Sync (yes)
-      - Connect Services (Calendars, Twitter, Facebook)
-    - Anki
-      - Synchronize (download from AnkiWeb)
-    - Gospel Library
-      - Settings
-        - Sign In
-        - List Mode (on) 
-      - Download (Scriptures, past few conferences)
-    - Spotify
-      - Download (input)
-    - YouTube
-    - Garage Band
-    - Safari
-    - Drive
-    - 1Password
-    - Calendar
-      - Calendars (personal, tramy, work, events found in apps)
-    - Phone
-    - Messages
-    - Contacts
-    - Photos
-      - Use iCloud Photo Library (on)
-    - Google Photos
-      - Upload size (original)
-    - Clock
-      - Alarms
-    - Camera
-    - Google Maps
-    - Venmo
-      - Touch ID
-    - iSmartAlarm
-    - Nest
-    - Find iPhone
-      - Store last known location (on)
-    - App Store
-    - Settings
-    - 5 (Background)
-    - Google Sheets
-    - Google Docs
-    - Health
-      - Add Medical ID
-    - Wallet
-  - Delete other apps
-- Keyboards
-  - Auto-Capitalization (off)
-  - Auto-Correction (off)
-- Cellular
-  - App store, Spotify, YouTube (off)
-- Do Not Disturb
-  - Scheduled (on, from 10pm-7am)
-  - Silence (Always)
-- General
-  - Restrictions (on)
-    - Music & News
-      - Explicit (off)
-    - Movies (PG-13)
-    - TV Shows (TV-14)
-    - Siri
-      - Explicit Language (off)
-    - Websites (Limit Adult Content)
-- Display & Brightness
-  - Auto-Brightness (on)
-  - Night Shift (scheduled,from 10pm-7am)
-- Wallpaper (set)
-- Set daily "bedtime"
-- Mail
-  - Accounts
-    - iCloud
-    - Add Account (Google)
-      - Description (work)
-  - Signature (clear)
-- Text Message Forwarding (on), Keep Messages (1 Year)
-- Safari AutoFill Names and Passwords (off)
+- Silent toggle switch (on)
+- Add multiple Touch ID fingers
+- On desktop, add [iPhone as 2fa option](https://appleid.apple.com)
+- Download 3rd party apps (1Password, Day One, Anki, Gospel Library, Spotify, Drive, Google Maps, Nest)
+- 1password accounts (tramy, work), touch ID (on), Watchtower (on)
+- Sign in to all apps
+- Delete unused stock installed apps
+- Dock Todoist, put other apps in `Other` folder
+- Mail signature (clear)
+- Day One enable sync (on)
+- Anki (sync from AnkiWeb)
+- Gospel Library download (scriptures, past few conferences)
+- Spotify download playlists
+- Calendars (personal, tramy, work, events found in apps)
+- Photos use iCloud Photo Library (on)
+- Google Photos upload size (original)
+- Clock bedtime settings
+- Venmo Touch ID (on)
+- Find iPhone store last known location (on)
+- Health medical ID (on)
+- Keyboard auto-Capitalization (off), auto-Correction (off)
+- Cellular (turn off large media apps)
+- Do Not Disturb scheduled (on, from 10pm-7am)
+- Silence (always)
+- Restrictions (on), explicit (off), movies (PG-13), TV Shows (TV-14), explicit Language (off), websites (Limit Adult Content)
+- Auto-Brightness (on)
+- Night Shift (scheduled,from 10pm-7am)
+- Wallpaper
+- User avatar
+- Text Message Forwarding (on), keep messages (1 Year)
+- Safari AutoFill Names and Passwords (off), Google safe search (on)
 - Do Not Track (on)
+
+# Router setup
+
+- Configure [OpenDNS Family Shield](https://www.opendns.com/setupguide/?url=familyshield)
