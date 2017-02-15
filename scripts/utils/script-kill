@@ -6,9 +6,6 @@ task="Killing processes"
 script-log state "$task"
 
 killall node || true
-killall phantomjs || true
 tmux kill-server || true
-cd ~/drive/work/egghead-systems
-vagrant halt
 
 script-log state "DONE $task"
