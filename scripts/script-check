@@ -1,8 +1,6 @@
 #!/bin/bash
 set -euo pipefail
 
-script-quit
-
 task="Opening apps and websites to check"
 
 script-log state "$task"

@@ -19,7 +19,7 @@ script-log state "$task"
 # VARIABLES
 # ==================================================================
 
-template_path=$HOME/drive/settings/scripts/main/projects/
+template_path=$HOME/drive/settings/scripts/utils/projects/
 user_name="trevordmiller"
 user_full_name="Trevor D. Miller"
 user_email="trevordmiller@icloud.com"

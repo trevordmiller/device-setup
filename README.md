@@ -9,6 +9,11 @@ Trevor's personal device settings
 - **Single tasking:** complete tasks one at a time, while closing any apps/windows/tabs not needed for current task 
 - **Keyboard shortcuts:** use spotlight to open/switch between apps, then keyboard shortcuts inside apps
 - **Checks:** once a day, run [`script-check`](scripts/script-check), then a few times a day, run [`script-microcheck`](scripts/script-microcheck) to stay up-to-date
+- **Spliting:** run [`script-split`](scripts/script-split) to start a terminal workflow
+- **Quitting:** run [`script-quit`](scripts/script-quit) to cleanup the system
+- **Upgrading:** run [`script-upgrade`](scripts/script-upgrade) to upgrade the system
+- **Screencasting:** run [`script-screencast`](scripts/script-screencast) to screencast, then [`script-screencast-reset`](scripts/script-screencast-reset) to reset
+- **New projects:** run [`script-project`](scripts/script-project) to create a new project
 
 # Desktop setup
 
