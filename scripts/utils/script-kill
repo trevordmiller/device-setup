@@ -7,5 +7,7 @@ script-log state "$task"
 
 killall node || true
 tmux kill-server || true
+brew services stop postgresql || true
+redis-cli shutdown || true
 
 script-log state "DONE $task"
