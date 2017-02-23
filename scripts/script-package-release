@@ -1,0 +1,23 @@
+#!/bin/bash
+
+PACKAGEJSON_VERSION=$(npm run version --silent)
+
+NPM_PUBLISHED_VERSION=$(npm show egghead-ui version)
+
+echo "Library version in package.json: $PACKAGEJSON_VERSION"
+echo "Library version published on npm: $NPM_PUBLISHED_VERSION"
+
+function semver_to_integer() {
+  spaced_current_version=`echo $1 | sed  "s/\./ /g"`
+  printf "%.3d%.3d%.3d" ${spaced_current_version}
+}
+
+if [ $(semver_to_integer $PACKAGEJSON_VERSION) -le $(semver_to_integer $NPM_PUBLISHED_VERSION) ]; then
+  echo 'Not releasing because package.json version is not new'
+else
+  echo "Running npm publish"
+  npm publish
+  echo "Bumping git tags to match library version in package.json"
+  git tag "v$PACKAGEJSON_VERSION"
+  git push --tags
+fi
