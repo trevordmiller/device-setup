@@ -6,7 +6,7 @@ task="Loading terminal and editor demo settings"
 script-log state "$task"
 
 sed -i "" \
--e "s/nova-hyperterm/hyperterm-one-light/" \
+-e "s/nova-hyperterm/hyper-one-light/" \
 -e "s/padding: '16px'/padding: '25px'/" \
 -e "s/fontSize: 16/fontSize: 30/" \
 "$HOME/drive/settings/dotfiles/.hyper.js"
