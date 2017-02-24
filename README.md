@@ -49,6 +49,7 @@ _Most things are taken care of automatically with the set up script ^, but some 
 - Keep folders on top when sorting by name (on)
 - Spotify open on login (off), high quality streaming (on), download each playlist
 - Screenflow countdown (0 seconds), still images default duration (3 seconds)
+- Garage Band add composer and author (`Perfect Particle`)
 - Finder sidebar condense (`Google Drive`, `Downloads`, `AirDrop`)
 - WakaTime config (add API key to `~/.wakatime.cfg`)
 - Calendars (personal Nova cyan, tramy Nova magenta, work Nova blue)
