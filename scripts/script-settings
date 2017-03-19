@@ -2,3 +2,4 @@
 set -euo pipefail
 
 cd ~/drive/settings
+script-split

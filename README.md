@@ -46,7 +46,7 @@ _Most things are taken care of automatically with the set up script ^, but some 
 - Time Machine backup on external hard drive
 - Backups working in background (Google Drive, Google Photos Backup, Time Machine external drives)
 
-## Mobile setup
+# Mobile setup
 
 - Silent toggle switch (on)
 - Add multiple Touch ID fingers
