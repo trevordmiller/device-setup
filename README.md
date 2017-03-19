@@ -1,19 +1,6 @@
 # settings
 
-Trevor's personal device settings
-
-# Workflow
-
-- **Task list:** use task list as a single source of truth
-- **Desktop only work:** remove work items from mobile devices so work is completed on desktop only
-- **Single tasking:** complete tasks one at a time, while closing any apps/windows/tabs not needed for current task 
-- **Keyboard shortcuts:** use spotlight to open/switch between apps, then keyboard shortcuts inside apps
-- **Checks:** once a day, run [`script-check`](scripts/script-check) to stay up-to-date
-- **Spliting:** run [`script-split`](scripts/script-split) to start a terminal workflow
-- **Quitting:** run [`script-quit`](scripts/script-quit) to cleanup the system
-- **Upgrading:** run [`script-upgrade`](scripts/script-upgrade) to upgrade the system
-- **Screencasting:** run [`script-screencast`](scripts/script-screencast) to screencast, then [`script-screencast-reset`](scripts/script-screencast-reset) to reset
-- **New projects:** run [`script-project`](scripts/script-project) to create a new project
+Trevor's settings
 
 # Desktop setup
 
@@ -59,7 +46,7 @@ _Most things are taken care of automatically with the set up script ^, but some 
 - Time Machine backup on external hard drive
 - Backups working in background (Google Drive, Google Photos Backup, Time Machine external drives)
 
-# Mobile devices setup
+## Mobile setup
 
 - Silent toggle switch (on)
 - Add multiple Touch ID fingers

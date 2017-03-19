@@ -6,10 +6,9 @@ task="Opening apps and websites to check"
 script-log state "$task"
 
 items=(
-  "/Applications/Todoist.app"
+  "/Applications/Mail.app"
   "/Applications/Calendar.app"
   "/Applications/Messages.app"
-  "/Applications/Mail.app"
 )
 for item in "${items[@]}"; do
   open "$item"

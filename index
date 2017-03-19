@@ -16,7 +16,6 @@ homebrew_packages=(
   "shellcheck"
   "the_silver_searcher"
   "tmux"
-  "tree"
   "vim"
   "yarn"
 )
@@ -54,8 +53,8 @@ homebrew_cask_apps=(
 )
 
 mac_app_store_apps=(
-  "585829637" # Todoist
   "1055511498" # Day One
+  "585829637" # Todoist
 )
 
 
@@ -72,8 +71,8 @@ chsh -s /bin/bash
 # ==================================================================
 
 # KEYBOARD
-defaults write -g KeyRepeat -int 
-defaults write -g InitialKeyRepeat -int 10
+defaults write NSGlobalDomain KeyRepeat -int 1
+defaults write NSGlobalDomain InitialKeyRepeat -int 10
 
 # HIDDEN FILES
 echo "Configuring hidden files to show"
