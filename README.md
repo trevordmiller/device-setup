@@ -8,7 +8,7 @@ Trevor's personal device settings
 - **Desktop only work:** remove work items from mobile devices so work is completed on desktop only
 - **Single tasking:** complete tasks one at a time, while closing any apps/windows/tabs not needed for current task 
 - **Keyboard shortcuts:** use spotlight to open/switch between apps, then keyboard shortcuts inside apps
-- **Checks:** once a day, run [`script-check`](scripts/script-check), then a few times a day, run [`script-microcheck`](scripts/script-microcheck) to stay up-to-date
+- **Checks:** once a day, run [`script-check`](scripts/script-check) to stay up-to-date
 - **Spliting:** run [`script-split`](scripts/script-split) to start a terminal workflow
 - **Quitting:** run [`script-quit`](scripts/script-quit) to cleanup the system
 - **Upgrading:** run [`script-upgrade`](scripts/script-upgrade) to upgrade the system
