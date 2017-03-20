@@ -3,13 +3,12 @@
 # ==================================================================
 
 SCRIPTS_PATH="$HOME/drive/settings/scripts"
-SCRIPTS_PROJECTS_PATH="$HOME/drive/settings/scripts/projects"
 SCRIPTS_UTILS_PATH="$HOME/drive/settings/scripts/utils"
 HOMEBREW_PATH="/usr/local/bin"
 PROJECT_NPM_PATH="./node_modules/.bin"
 YARN_PATH="$HOME/.yarn/bin"
 RBENV_PATH="$HOME/.rbenv/bin"
-export PATH="$PATH:$SCRIPTS_PATH:$SCRIPTS_MAIN_PATH:$SCRIPTS_MAIN_PROJECTS_PATH:$SCRIPTS_UTILS_PATH:$HOMEBREW_PATH:$PROJECT_NPM_PATH:$YARN_PATH:$RBENV_PATH"
+export PATH="$PATH:$SCRIPTS_PATH:$SCRIPTS_UTILS_PATH:$HOMEBREW_PATH:$PROJECT_NPM_PATH:$YARN_PATH:$RBENV_PATH"
 
 
 # ==================================================================
@@ -25,18 +24,11 @@ NEWLINE="\n"
 
 # COLOR
 COLOR_USER_CURRENT_STATE='\[\033[01;36m\]'
-COLOR_IDENTIFIER='\[\033[01;34m\]'
 COLOR_STATEMENT='\[\033[01;33m\]'
 COLOR_RESET='\[\033[0m\]'
 
-# GIT
-source ~/.git-completion.sh
-source ~/.git-prompt.sh
-export GIT_PS1_SHOWDIRTYSTATE=1
-GIT_BRANCH='$(__git_ps1 "[%s]")'
-
 # RENDER
-export PS1="$NEWLINE${COLOR_IDENTIFIER}$WORKING_DIRECTORY${COLOR_USER_CURRENT_STATE}$GIT_BRANCH$NEWLINE${COLOR_STATEMENT}$PROMPT_SYMBOL${COLOR_RESET} "
+export PS1="$NEWLINE${COLOR_USER_CURRENT_STATE}$WORKING_DIRECTORY$NEWLINE${COLOR_STATEMENT}$PROMPT_SYMBOL${COLOR_RESET} "
 
 # VI BINDINGS
 set -o vi
@@ -57,7 +49,6 @@ export EDITOR="$VISUAL"
 alias ls='ls -G'
 alias grep='grep --color=auto'
 alias less='less -R'
-alias ag='ag -s --hidden --path-to-ignore ~/.agignore'
 
 
 # ==================================================================

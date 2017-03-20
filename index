@@ -13,8 +13,6 @@ homebrew_packages=(
   "n"
   "node"
   "reattach-to-user-namespace"
-  "shellcheck"
-  "the_silver_searcher"
   "tmux"
   "vim"
   "yarn"
@@ -22,12 +20,6 @@ homebrew_packages=(
 
 ruby_gems=(
   "travis"
-)
-
-yarn_global_packages=(
-  "csslint"
-  "eslint"
-  "jsonlint"
 )
 
 fonts=(
@@ -98,12 +90,6 @@ done
 echo "Installing Ruby gems"
 for ruby_gem in "${ruby_gems[@]}"; do
   gem install "$ruby_gem"
-done
-
-# NPM
-echo "Installing yarn global packages"
-for yarn_global_package in "${yarn_global_packages[@]}"; do
-  yarn add global "$yarn_global_package"
 done
 
 # CONFIG

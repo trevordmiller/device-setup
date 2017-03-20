@@ -1,31 +1,73 @@
+" ==================================================================
 " PLUGINS
+" ==================================================================
+
+" VIM-PLUG MANAGEMENT
 call plug#begin('~/.vim/plugged')
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'tpope/vim-vinegar'
-Plug 'mileszs/ack.vim'
-Plug 'SirVer/ultisnips'
-Plug 'mbbill/undotree'
-Plug 'tmhedberg/matchit'
 Plug 'othree/html5.vim'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'pangloss/vim-javascript'
-Plug 'moll/vim-node'
 Plug 'mxw/vim-jsx'
+Plug 'tmhedberg/matchit'
 Plug 'w0rp/ale'
+Plug 'SirVer/ultisnips'
 Plug 'wakatime/vim-wakatime'
 Plug 'trevordmiller/nova-vim'
 Plug 'rakr/vim-one'
 call plug#end()
 
-" COMPATABILITY
+" LANGUAGES
+let g:jsx_ext_required = 0
+
+" LINTING
+let g:ale_lint_on_enter = 0
+let g:ale_lint_on_text_changed = 0
+let g:ale_lint_on_save = 1
+let g:ale_lint_delay = 0
+let g:ale_linters = {
+\  'javascript': ['eslint'],
+\}
+
+" SNIPPETS
+let g:UltiSnipsExpandTrigger='<tab>'
+let g:UltiSnipsJumpForwardTrigger='<tab>'
+let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
+
+" COLOR SCHEME
+colorscheme nova
+
+
+" ==================================================================
+" NATIVE
+" ==================================================================
+
+" DIRECTORY EXPLORER
+let g:netrw_liststyle = 0
+let g:netrw_banner = 0
+let g:netrw_sort_by = 'name'
+let g:netrw_sort_direction = 'normal'
+let g:netrw_localrmdir='rm -r'
+
+" COMPATIBILITY
 set nocompatible
 
+" WINDOWS
+set splitright
+nnoremap <c-h> <c-w>h
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-l> <c-w>l
+
+" STATUS LINE
+set laststatus=2
+
+" SEARCH
+set incsearch
+set wrapscan
+
 " LINES
-set cursorline
-set nowrap
-set textwidth=0
-set wrapmargin=0
 set number
+set cursorline
 set scrolloff=5
 
 " TABS
@@ -62,57 +104,3 @@ autocmd BufRead,BufNewFile *.md setlocal spell
 autocmd BufRead,BufNewFile *.txt setlocal spell
 autocmd BufRead,BufNewFile */blog/* setlocal spell
 autocmd FileType gitcommit setlocal spell
-
-" LANGUAGE EXTENDING
-let g:jsx_ext_required = 0
-
-" FILE SEARCHING
-set incsearch
-set wrapscan
-
-" PROJECT SEARCHING
-let g:ackprg = 'ag -s --hidden --path-to-ignore ~/.agignore --vimgrep' 
-command! -bang -nargs=* -complete=file Ag call ack#Ack('grep<bang>', <q-args>)
-
-" PROJECT DIRECTORY VIEWING
-let g:netrw_liststyle = 0
-let g:netrw_sort_by = 'name'
-let g:netrw_sort_direction = 'normal'
-let g:netrw_localrmdir='rm -r'
-
-" PROJECT FUZZY FINDING
-let g:ctrlp_working_path_mode = 0
-let g:ctrlp_user_command = 'ag %s -sl --hidden --path-to-ignore ~/.agignore --nocolor -g ""'
-let g:ctrlp_use_caching = 0
-let g:ctrlp_regexp = 1
-
-" SNIPPETS
-let g:UltiSnipsExpandTrigger='<tab>'
-let g:UltiSnipsJumpForwardTrigger='<tab>'
-let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
-set dictionary+=~/drive/settings/syncfiles/snippet-names.txt
-
-" LINTING
-let g:ale_lint_on_enter = 0
-let g:ale_lint_on_text_changed = 0
-let g:ale_lint_on_save = 1
-let g:ale_lint_delay = 0
-let g:ale_linters = {
-\  'javascript': ['eslint'],
-\  'sh': ['shellcheck'],
-\  'json': ['jsonlint'],
-\  'css': ['csslint'],
-\}
-
-" WINDOW SPLITS
-set splitright
-nnoremap <c-h> <c-w>h
-nnoremap <c-j> <c-w>j
-nnoremap <c-k> <c-w>k
-nnoremap <c-l> <c-w>l
-
-" STATUS LINE
-set laststatus=2
-
-" COLOR SCHEME
-colorscheme nova

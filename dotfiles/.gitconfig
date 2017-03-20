@@ -10,7 +10,6 @@
   default = simple
 [core]
   editor = vim
-  excludesfile = /Users/trevormiller/.gitignore
 [log]
   date = relative
 [help]

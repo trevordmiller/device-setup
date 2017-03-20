@@ -66,6 +66,18 @@ test('$2', () => (
 ))
 endsnippet
 
+snippet @snapshot
+import React from 'react'
+import {create} from 'react-test-renderer'
+import $1 from '.'
+
+test('$2', () => (
+  expect(create(
+    @tag$3
+  )).toMatchSnapshot()
+))
+endsnippet
+
 
 # ==================================================================
 # REACT
@@ -88,45 +100,35 @@ endsnippet
 snippet @stateful
 import React, {Component} from 'react'
 
-export default class $1 extends Component {
+export default class extends Component {
 
   state = {
-    $2: $3,
+    $1: $2,
   }
 
   render() {
-    const {$2} = this.state
-    const {$4} = this.props
+    const {$1} = this.state
+    const {$3} = this.props
     return (
-      @tag$5
+      @tag$4
     )
   }
 }
 endsnippet
 
 snippet @callback
-import {Component, PropTypes} from 'react'
+import {Component} from 'react'
 
-export default class $1 extends Component {
+export default class extends Component {
   
-  static propTypes = {
-    children: PropTypes.func.isRequired,
-  }
-
   state = {
-    $2: $3,
-    $4: $5,
-  }
-
-  componentWillMount() {
-    const {$6} = this.props
-    // update state
+    $1: $2,
   }
 
   render() {
-    const {$2, $4} = this.state
+    const {$1} = this.state
     const {children} = this.props
-    return children($2, $4)
+    return children($1)
   }
 }
 endsnippet
@@ -135,70 +137,19 @@ snippet @proptype
 $1: PropTypes.$2${3:.isRequired},
 endsnippet
 
-snippet @guide
-import React from 'react'
-import {storiesOf} from '@kadira/storybook'
-import faker from 'faker'
-import $1 from '.'
+# EGGHEAD-UI
 
-storiesOf('$1', module)
-  .add('$2', () => (
-    @tag$3
-  ))
+snippet @button
+<Button onClick={$1}>
+	$1
+</Button>
 endsnippet
 
-snippet @snapshot
-import React from 'react'
-import {create} from 'react-test-renderer'
-import $1 from '.'
-
-test('$2', () => (
-  expect(create(
-    @tag$3
-  )).toMatchSnapshot()
-))
-endsnippet
-
-# EGGHEAD SPECIFIC
-
-snippet @request
-<Request url='/$1'>
-  {({data}) => (
-    $2
-  )}
-</Request>
-endsnippet
-
-snippet @lazyrequest
-<Request
-  ${1:lazy}
-  method='$2'
-  url='/$3'
-	body={{$4}}
->
-  {({request, data}) => (
-    <a onClick={() => request()}>
-      Get data
-    </a>
-  )}
-</Request>
-endsnippet
-
-snippet @main
-<Main>
-  @tag$1
-</Main>
-endsnippet
-
-snippet @split
-<Split
-  title='$1'
-  main={
-    @tag$2
-  }
-  aside={
-    @tag$3
-  }
+snippet @icon
+<Icon
+  type='$1'
+  size='$2'
+  color='$3'
 />
 endsnippet
 
@@ -208,31 +159,60 @@ snippet @heading
 </Heading>
 endsnippet
 
+snippet @paragraph
+<Paragraph>
+  $2
+</Paragraph>
+endsnippet
+
+# EGGHEAD-INSTRUCTOR-CENTER
+
+snippet @request
+<WrappedRequest url='$1'>
+  {({data}) => (
+    $2
+  )}
+</WrappedRequest>
+endsnippet
+
+snippet @lazy
+<WrappedRequest
+  ${1:lazy}
+  method='$2'
+  url='$3'
+	body={{$4}}
+>
+  {({request, data}) => (
+		$5
+  )}
+</WrappedRequest>
+endsnippet
+
+snippet @card
+<Card
+	title={$1}
+	description={$2}
+>
+	$3
+</Card>
+endsnippet
+
+snippet @list
+<List items={map($1, $2 => (
+	$3
+))} />
+endsnippet
+
+snippet @columns
+<LayoutColumns items={[
+	$1,
+]} />
+endsnippet
+
 snippet @anchor
 <Anchor url={$1}>
   $2
 </Anchor>
-endsnippet
-
-snippet @button
-<Button onClick={$1}>
-  $2
-</Button>
-endsnippet
-
-snippet @icon
-<Icon
-  type='$1'
-  size='$2'
-  className='$3'
-/>
-endsnippet
-
-snippet @avatar
-<Avatar
-  name={$1}
-  url={$2}
-/>
 endsnippet
 
 snippet @prompt
