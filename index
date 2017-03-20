@@ -18,6 +18,12 @@ homebrew_packages=(
   "yarn"
 )
 
+yarn_global_packages=(
+  "create-react-app"
+  "create-react-native-app"
+  "graphql-up"
+)
+
 ruby_gems=(
   "travis"
 )
@@ -84,6 +90,12 @@ killall SystemUIServer
 echo "Installing Homebrew packages"
 for homebrew_package in "${homebrew_packages[@]}"; do
   brew install "$homebrew_package"
+done
+
+# YARN
+echo "Installing yarn global packages"
+for yarn_global_package in "${yarn_global_packages[@]}"; do
+  yarn global add "$yarn_global_package"
 done
 
 # RUBY

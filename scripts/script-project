@@ -4,11 +4,9 @@ set -euo pipefail
 # USAGE
 # script-project package hello-world "A CLI to say Hello World"
 # script-project {project_type} {name} {description}
-#   {project_type} should be "app" or "package"
-#     "app" is currently a zeit next app
-#     "package" is currently a yarn package for the npm registry
-#   {name} should be a slug like "hello-world"
-#   {description} should be a short sentence like "A CLI to say Hello World"
+#  {project_type} can be package, web-app, native-mobile-app, or api
+#  {name} should be a slug like hello-world
+#  {description} should be a short sentence like "A CLI to say Hello World"
 
 task="Generating a project"
 
@@ -35,15 +33,25 @@ project_description=$3
 # ==================================================================
 
 script-log state "Generating files and folders"
-mkdir "$project_name"
-cd !$
-cp -a "$template_path"/shared/. ./
 case "$project_type" in 
-  "app" ) 
-    cp -a "$template_path"/app/. ./
-    ;; 
   "package" ) 
+    mkdir "$project_name"
+    cd "$project_name"
     cp -a "$template_path"/package/. ./
+    cp -a "$template_path"/shared/. ./
+    ;; 
+  "web-app" ) 
+    create-react-app "$project_name"
+    cd "$project_name"
+    cp -a "$template_path"/shared/. ./
+    ;; 
+  "native-mobile-app" ) 
+    create-react-native-app "$project_name"
+    cd "$project_name"
+    cp -a "$template_path"/shared/. ./
+    ;; 
+  "api" ) 
+    graphql-up
     ;; 
 esac
 
@@ -64,10 +72,6 @@ grep -rl '%substitute' . --exclude-dir=node_modules | xargs sed -i '' \
 
 script-log state "Installing dependencies"
 case "$project_type" in 
-  "app" )
-    yarn add next
-    yarn add --dev babel-preset-latest babel-preset-react eslint eslint-plugin-react jest watch parallelshell
-    ;;
   "package" ) 
     yarn add --dev babel-cli babel-preset-latest eslint jest watch parallelshell
     ;; 
@@ -96,9 +100,6 @@ git push -u origin master
 script-log state "Initializing continuous integration and deployment"
 travis enable -r "$user_name"/"$project_name"
 case "$project_type" in 
-  "app" )
-    now
-    ;;
   "package" ) 
     yarn publish
     script-log action "Enter deployment details"
@@ -107,6 +108,9 @@ case "$project_type" in
     git commit -m "Add continous deployment"
     git push
     ;; 
+  "web-app" )
+    now
+    ;;
 esac
 
 
@@ -116,14 +120,6 @@ esac
 script-log action "MANUAL SETUP"
 script-log action "TODO: Protect master branch"
 open "https://github.com/$user_name/$project_name/settings/branches"
-case "$project_type" in 
-  "app" ) 
-    script-log action "TODO: Add Guages analytics"
-    open "https://secure.gaug.es/dashboard"
-    script-log action "TODO: Add Sentry error tracking"
-    open "https://sentry.io/$user_name/"
-    ;; 
-esac
 
 
 # ==================================================================
@@ -134,15 +130,15 @@ script-log state "Opening results"
 open "https://github.com/$user_name/$project_name"
 open "https://travis-ci.org/$user_name/$project_name"
 case "$project_type" in 
-  "app" ) 
-    open "$(pbpaste)"
-    ;; 
   "package" )
     open "https://www.npmjs.com/package/$project_name"
     ;;
+  "web-app" ) 
+    open "$(pbpaste)"
+    ;; 
 esac
 
 
 # ==================================================================
-"$project_name"
+
 script-log state "DONE $task"
