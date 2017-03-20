@@ -1,8 +1,0 @@
-#!/bin/bash
-set -euo pipefail
-
-if [ -z "${CI-}" ]; then
-  parallelshell "jest --watch" "watch 'eslint src' src"
-else
-  jest && eslint src
-fi

@@ -2,9 +2,11 @@
   "name": "%substitute_project_name",
   "version": "0.1.0",
   "scripts": {
-    "dev": "scripts/dev",
-    "verify": "scripts/verify",
-    "build": "scripts/build",
+    "dev": "watch 'yarn build' src",
+    "test": "jest src --watch",
+    "verify": "eslint src && jest src",
+    "build": "babel src -d build",
+    "release": "yarn version && git push && git push --tags",
     "prepublish": "yarn build"
   },
   "babel": {
@@ -12,10 +14,32 @@
       "latest"
     ]
   },
+  "eslintConfig": {
+    "extends": [
+      "eslint:recommended"
+    ],
+    "env": {
+      "es6": true,
+      "node": true,
+      "commonjs": true,
+      "browser": true,
+      "jest": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module"
+    }
+  },
   "jest": {
     "testEnvironment": "node"
   },
   "main": "build/index.js",
+  "files": [
+    "package.json",
+    "README.md",
+    "LICENSE.md",
+    "build"
+  ],
   "devDependencies": {
   },
   "dependencies": {

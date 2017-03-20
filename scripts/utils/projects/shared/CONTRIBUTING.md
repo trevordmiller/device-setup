@@ -1,10 +1,10 @@
-_This assumes you have Bash, Git, Node, and Yarn installed_
+_Git, Node, and Yarn are required_
 
 - Fork repo
 - Branch off `master`
-- Run `yarn dev` to compile
-- Run `yarn verify` to lint and test
+- `yarn dev` to compile
+- `yarn test` to test
+- `yarn verify` to lint, test, and build
 - Stage, commit, and push
 - Submit a pull request
-- Ensure your pull request passes all checks
 - An admin will merge your pull request and deploy a release
