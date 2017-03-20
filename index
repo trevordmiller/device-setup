@@ -27,7 +27,6 @@ ruby_gems=(
 yarn_global_packages=(
   "csslint"
   "eslint"
-  "eslint-plugin-react"
   "jsonlint"
 )
 
