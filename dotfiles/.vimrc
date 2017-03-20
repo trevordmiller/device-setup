@@ -42,8 +42,10 @@ colorscheme nova
 " ==================================================================
 
 " DIRECTORY EXPLORER
-let g:netrw_liststyle = 0
 let g:netrw_banner = 0
+let g:netrw_liststyle = 0
+let g:netrw_list_hide = '^\./$,^\.\./$'
+let g:netrw_hide = 1
 let g:netrw_sort_by = 'name'
 let g:netrw_sort_direction = 'normal'
 let g:netrw_localrmdir='rm -r'
