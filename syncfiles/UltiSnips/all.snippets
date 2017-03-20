@@ -141,7 +141,7 @@ endsnippet
 
 snippet @button
 <Button onClick={$1}>
-	$1
+  $1
 </Button>
 endsnippet
 
@@ -180,32 +180,32 @@ snippet @lazy
   ${1:lazy}
   method='$2'
   url='$3'
-	body={{$4}}
+  body={{$4}}
 >
   {({request, data}) => (
-		$5
+    $5
   )}
 </WrappedRequest>
 endsnippet
 
 snippet @card
 <Card
-	title={$1}
-	description={$2}
+  title={$1}
+  description={$2}
 >
-	$3
+  $3
 </Card>
 endsnippet
 
 snippet @list
 <List items={map($1, $2 => (
-	$3
+  $3
 ))} />
 endsnippet
 
 snippet @columns
 <LayoutColumns items={[
-	$1,
+  $1,
 ]} />
 endsnippet
 
