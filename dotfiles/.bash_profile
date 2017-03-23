@@ -46,7 +46,7 @@ export EDITOR="$VISUAL"
 # ALIASES
 # ==================================================================
 
-alias grep='grep -I --color=auto --exclude-dir={.git,node_modules,build,lib,.next,__snapshots__} --exclude={yarn.lock}'
+alias grep='grep -I --color=auto --exclude-dir={.git,node_modules,build,lib,.next,__snapshots__} --exclude=yarn.lock'
 alias ls='ls -G'
 alias less='less -R'
 
