@@ -89,6 +89,10 @@ set iskeyword+=-
 " WILD MENU
 set wildmenu
 
+" IGNORING
+set wildignore+=*.zip,*.png,*.jpg,*.gif,*.pdf,*DS_Store*,*/.git/*,*/node_modules/*,*/build/*,*/lib/*,*/.next/*,*/__snapshots__/*,yarn.lock
+set grepprg=grep\ -In\ --exclude-dir={.git,node_modules,build,lib,.next,__snapshots__}\ --exclude=yarn.lock
+
 " CLIPBOARD
 set clipboard=unnamed
 
