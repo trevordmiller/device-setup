@@ -167,6 +167,10 @@ endsnippet
 
 # EGGHEAD-INSTRUCTOR-CENTER
 
+snippet @text
+<Text message='$1' />
+endsnippet
+
 snippet @request
 <WrappedRequest url='$1'>
   {({data}) => (
@@ -218,7 +222,7 @@ endsnippet
 snippet @prompt
 <Prompt
   description={$1}
-  action={$2}
-  route={'/$3'}
+	actionText={$2}
+  action={$3}
 />
 endsnippet
