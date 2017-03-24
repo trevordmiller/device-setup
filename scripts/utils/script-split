@@ -5,6 +5,8 @@ set -euo pipefail
 # script-split 2 "echo 'hello world'"
 # script-split [{pane_count}] [{pane_2_command}] [{pane_3_command}] etc
 #   {pane_count} defaults to 3
+#   pane 1 doesn't have a command as it is the main workspace up top
+#   panes 2+ are secondary background tasks at the bottom
 #   {pane_2_command} defaults to "yarn dev"
 #   {pane_3_command} defaults to "yarn test"
 
@@ -25,7 +27,7 @@ if [ $# -ge 2 ]; then
   index=1
   for command in "${@:2}"
   do
-    tmux send-keys -t $index C-z $command Enter
+    tmux send-keys -t $index C-z "$command" Enter
     let "index+=1"
   done
 else
