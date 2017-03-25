@@ -1,0 +1,7 @@
+#!/bin/bash
+set -euo pipefail
+
+cd ~/drive/personal/open-source/nova/nova-vim
+mkdir -p ~/.vim/colors
+ln -sf "$(pwd)"/colors/nova.vim ~/.vim/colors/nova.vim
+script-split 2 "yarn dev"
