@@ -36,7 +36,6 @@ fonts=(
 homebrew_cask_apps=(
   "1password"
   "anki"
-  "flux"
   "google-chrome"
   "google-drive"
   "google-photos-backup"

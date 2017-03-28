@@ -19,6 +19,8 @@ _Most things are taken care of automatically with the set up script ^, but some 
 - Login items (`Todoist`, `Google Drive`, `Google Photos Backup`, `Flux`, `RescueTime`)
 - Text Message Forwarding (on)
 - Do Not Disturb when display is sleeping (on), when mirroring to TVs and projectors (on), allow repeated calls (on)
+- Do Not Disturb scheduled (on, from 11pm-7am)
+- Night Shift (scheduled, from sunset to sunrise)
 - Find My Mac (on)
 - Highlight color (Nova cyan)
 - Prevent computer from sleeping automatically when display is off (on)
@@ -70,11 +72,11 @@ _Most things are taken care of automatically with the set up script ^, but some 
 - Health medical ID (on)
 - Keyboard auto-Capitalization (off), auto-Correction (off)
 - Cellular (turn off large media apps)
-- Do Not Disturb scheduled (on, from 10pm-7am)
+- Do Not Disturb scheduled (on, from 11pm-7am)
+- Night Shift (scheduled, from sunset to sunrise)
 - Silence (always)
 - Restrictions (on), explicit (off), movies (PG-13), TV Shows (TV-14), explicit Language (off), websites (Limit Adult Content)
 - Auto-Brightness (on)
-- Night Shift (scheduled,from 10pm-7am)
 - Wallpaper
 - User avatar
 - Text Message Forwarding (on), keep messages (1 Year)
