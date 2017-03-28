@@ -1,0 +1,4 @@
+#!/bin/bash
+set -euo pipefail
+
+wine /Users/trevordmiller/drive/personal/smash/Project64/Project64.exe
