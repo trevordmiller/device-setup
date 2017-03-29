@@ -6,6 +6,8 @@ task="Opening apps and websites to check"
 script-log state "$task"
 
 items=(
+  "https://todoist.com"
+  "https://eggheadio.slack.com"
   "/Applications/Mail.app"
   "/Applications/Calendar.app"
   "/Applications/Messages.app"

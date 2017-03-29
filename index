@@ -19,12 +19,6 @@ homebrew_packages=(
   "yarn"
 )
 
-yarn_global_packages=(
-  "create-react-app"
-  "create-react-native-app"
-  "graphql-up"
-)
-
 ruby_gems=(
   "travis"
 )
@@ -36,7 +30,6 @@ fonts=(
 
 homebrew_cask_apps=(
   "1password"
-  "anki"
   "google-chrome"
   "google-drive"
   "google-photos-backup"
@@ -44,14 +37,13 @@ homebrew_cask_apps=(
   "rescuetime"
   "screenflow"
   "sketch"
-  "slack"
   "spotify"
   "switchresx"
+  "xquartz"
 )
 
 mac_app_store_apps=(
   "1055511498" # Day One
-  "585829637" # Todoist
 )
 
 
@@ -90,12 +82,6 @@ killall SystemUIServer
 echo "Installing Homebrew packages"
 for homebrew_package in "${homebrew_packages[@]}"; do
   brew install "$homebrew_package"
-done
-
-# YARN
-echo "Installing yarn global packages"
-for yarn_global_package in "${yarn_global_packages[@]}"; do
-  yarn global add "$yarn_global_package"
 done
 
 # RUBY
@@ -152,6 +138,7 @@ done
 
 # ==================================================================
 # GUI APPS
+# Needed for heavy creation, background processes, or OS integration
 # ==================================================================
 
 echo "Installing Homebrew cask apps"
