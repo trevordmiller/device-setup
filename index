@@ -43,6 +43,7 @@ homebrew_cask_apps=(
 )
 
 mac_app_store_apps=(
+  "682658836" # Garage Band
   "1055511498" # Day One
 )
 
