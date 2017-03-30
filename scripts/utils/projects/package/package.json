@@ -2,9 +2,9 @@
   "name": "%substitute_project_name",
   "version": "0.1.0",
   "scripts": {
-    "dev": "watch 'yarn build' src",
+    "dev": "yarn build -- --watch",
     "test": "jest src --watch",
-    "verify": "eslint src && jest src",
+    "verify": "eslint src && jest src && yarn build",
     "build": "babel src -d build",
     "release": "yarn version && git push && git push --tags",
     "prepublish": "yarn build"
@@ -21,7 +21,6 @@
     "env": {
       "es6": true,
       "node": true,
-      "commonjs": true,
       "browser": true,
       "jest": true
     },
