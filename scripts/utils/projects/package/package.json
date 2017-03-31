@@ -1,17 +1,33 @@
 {
   "name": "%substitute_project_name",
   "version": "0.1.0",
+  "description": "%substitute_project_description",
+  "repository": "%substitute_user_name/%substitute_project_name",
+  "license": "MIT",
+  "author": "%substitute_user_full_name <%substitute_user_email> (%substitute_user_website)",
+  "main": "lib/index.js",
+  "files": [
+    "package.json",
+    "README.md",
+    "LICENSE.md",
+    "lib"
+  ],
   "scripts": {
-    "dev": "yarn build -- --watch",
-    "test": "jest src --watch",
-    "verify": "eslint src && jest src && yarn build",
-    "build": "babel src -d build",
-    "release": "yarn version && git push && git push --tags",
-    "prepublish": "yarn build"
+    "build": "eslint src && babel src -d lib -i test.js",
+    "prepublish": "yarn build",
+    "test:once": "jest src",
+    "dev": "yarn build -- -w",
+    "test": "yarn test -- --watch",
+    "verify": "yarn build && yarn test:once",
+    "release": "np"
+  },
+  "devDependencies": {
+  },
+  "dependencies": {
   },
   "babel": {
     "presets": [
-      "latest"
+      "env"
     ]
   },
   "eslintConfig": {
@@ -31,23 +47,5 @@
   },
   "jest": {
     "testEnvironment": "node"
-  },
-  "main": "build/index.js",
-  "files": [
-    "package.json",
-    "README.md",
-    "LICENSE.md",
-    "build"
-  ],
-  "devDependencies": {
-  },
-  "dependencies": {
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/%substitute_user_name/%substitute_project_name.git"
-  },
-  "description": "%substitute_project_description",
-  "author": "%substitute_user_full_name <%substitute_user_email> (%substitute_user_website)",
-  "license": "MIT"
+  }
 }

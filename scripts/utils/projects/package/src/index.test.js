@@ -1,5 +1,5 @@
-import %substitute_project_name from '.'
+import helloWorld from '.'
 
 test('outputs hello world', () => (
-  expect(%substitute_project_name()).toBe('hello world')
+  expect(helloWorld()).toBe('hello world')
 ))

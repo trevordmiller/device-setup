@@ -70,7 +70,7 @@ grep -rl '%substitute' . --exclude-dir=node_modules | xargs sed -i '' \
 script-log state "Installing dependencies"
 case "$project_type" in 
   "package" ) 
-    yarn add --dev babel-cli babel-preset-latest eslint jest
+    yarn add --dev babel-cli babel-preset-env eslint jest np
     ;; 
 esac
 
@@ -99,11 +99,6 @@ travis enable -r "$user_name"/"$project_name"
 case "$project_type" in 
   "package" ) 
     yarn publish
-    script-log action "Enter deployment details"
-    travis setup npm
-    git add -A
-    git commit -m "Add continous deployment"
-    git push
     ;; 
   "web-app" )
     now
