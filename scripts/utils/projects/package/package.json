@@ -15,9 +15,9 @@
   "scripts": {
     "build": "eslint src && babel src -d lib -i test.js",
     "prepublish": "yarn build",
-    "test:once": "jest src",
+    "test:once:": "jest src",
     "dev": "yarn build -- -w",
-    "test": "yarn test -- --watch",
+    "test": "yarn test:once -- --watch",
     "verify": "yarn build && yarn test:once",
     "release": "np"
   },
