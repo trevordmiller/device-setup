@@ -6,7 +6,6 @@ task="Opening apps and websites to check"
 script-log state "$task"
 
 items=(
-  "https://todoist.com"
   "https://www.icloud.com/#calendar"
   "/Applications/Messages.app"
   "https://www.icloud.com/#mail"
