@@ -12,10 +12,10 @@ Trevor's settings
 
 _Most things are taken care of automatically with the set up script ^, but some manual items are needed:_
 
-- Clean up dock (Todoist, remove everything else)
+- Remove all dock icons
 - Dock auto hide (on)
 - Menu Bar auto hide (on)
-- Login items (`Todoist`, `Google Drive`, `Google Photos Backup`, `Flux`, `RescueTime`)
+- Login items (`Google Drive`, `Google Photos Backup`, `RescueTime`)
 - Text Message Forwarding (on)
 - Do Not Disturb when display is sleeping (on), when mirroring to TVs and projectors (on), allow repeated calls (on)
 - Do Not Disturb scheduled (on, from 11pm-7am)
@@ -55,6 +55,7 @@ _Most things are taken care of automatically with the set up script ^, but some 
 - 1password accounts (tramy, work), touch ID (on), Watchtower (on)
 - Sign in to all apps
 - Delete unused stock installed apps
+- Add debit card to Apple Wallet
 - Dock Todoist, put other apps in `Other` folder
 - Day One enable sync (on)
 - Anki (sync from AnkiWeb)
@@ -64,6 +65,7 @@ _Most things are taken care of automatically with the set up script ^, but some 
 - Google Photos upload size (original)
 - Clock bedtime settings
 - Venmo Touch ID (on)
+- Lyft
 - Find iPhone store last known location (on)
 - Health medical ID (on)
 - Keyboard auto-Capitalization (off), auto-Correction (off)
