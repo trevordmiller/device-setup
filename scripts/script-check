@@ -7,10 +7,11 @@ script-log state "$task"
 
 items=(
   "https://todoist.com"
-  "https://eggheadio.slack.com"
-  "/Applications/Mail.app"
-  "/Applications/Calendar.app"
+  "https://www.icloud.com/#calendar"
   "/Applications/Messages.app"
+  "https://www.icloud.com/#mail"
+  "https://eggheadio.slack.com"
+  "https://mail.google.com/mail/u/1/#inbox"
 )
 for item in "${items[@]}"; do
   open "$item"
