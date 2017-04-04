@@ -2,4 +2,4 @@
 set -euo pipefail
 
 cd ~/drive/work/egghead-ui
-script-split 2 "yarn dev:styleguide"
+script-split 3 "yarn dev:styleguide" "yarn dev:library"
