@@ -12,7 +12,6 @@ Trevor's settings
 
 _Most things are taken care of automatically with the set up script ^, but some manual items are needed:_
 
-- Add accounts (personal, work)
 - Clean up dock (Todoist, remove everything else)
 - Dock auto hide (on)
 - Menu Bar auto hide (on)
