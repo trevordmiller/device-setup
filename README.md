@@ -48,39 +48,68 @@ _Most things are taken care of automatically with the set up script ^, but some 
 
 # Mobile setup
 
-- Silent toggle switch (on)
-- Add multiple Touch ID fingers
-- On desktop, add [iPhone as 2fa option](https://appleid.apple.com)
-- Download 3rd party apps (1Password, Day One, Anki, Gospel Library, Spotify, Drive, Google Maps, Nest)
-- 1password accounts (tramy, work), touch ID (on), Watchtower (on)
-- Sign in to all apps
-- Delete unused stock installed apps
-- Add debit card to Apple Wallet
-- Dock Todoist, put other apps in `Other` folder
-- Day One enable sync (on)
-- Anki (sync from AnkiWeb)
-- Gospel Library download (scriptures, past few conferences)
-- Spotify download playlists
-- Photos use iCloud Photo Library (on)
-- Google Photos upload size (original)
-- Clock bedtime settings
-- Venmo Touch ID (on)
-- Lyft
-- Find iPhone store last known location (on)
-- Health medical ID (on)
-- Keyboard auto-Capitalization (off), auto-Correction (off)
-- Cellular (turn off large media apps)
-- Do Not Disturb scheduled (on, from 11pm-7am)
-- Night Shift (scheduled, from sunset to sunrise)
-- Silence (always)
-- Restrictions (on), explicit (off), movies (PG-13), TV Shows (TV-14), explicit Language (off), websites (Limit Adult Content)
-- Auto-Brightness (on)
-- Wallpaper
-- User avatar
-- Text Message Forwarding (on), keep messages (1 Year)
-- Safari AutoFill Names and Passwords (off), Google safe search (on)
-- Do Not Track (on)
+- Hardware
+  - Silent toggle switch (on)
+- Download 3rd party apps (1Password, iSmartAlarm, Google Photos, Gospel Library, Day One, Clips, PhotoScan, Spotify, Lyft, Venmo)
+- Desktop
+  - [iPhone as 2fa option](https://appleid.apple.com)
+- Dock
+  - Todoist (web link)
+  - `Applications` folder
+    - Messages
+    - Phone
+    - Calendar
+    - Gospel Library
+      - Download items (scriptures, past few conferences)
+    - Day One
+      - Day One enable sync (on)
+    - Clips
+    - PhotoScan
+    - Clock
+      - Bedtime (11pm - 7am)
+    - Spotify
+      - Download playlists
+    - Maps
+    - Lyft
+      - Apple Pay (on)
+    - Venmo
+      - Touch ID (on)
+    - Safari
+      - AutoFill Names and Passwords (off)
+      - Google safe search (on)
+  - `Background` folder
+    - Settings
+      - Add multiple Touch ID fingers
+      - Keyboard auto-Capitalization (off), auto-Correction (off)
+      - Cellular (turn off large media apps)
+      - Do Not Disturb scheduled (on, from 11pm-7am)
+      - Night Shift (scheduled, from sunset to sunrise)
+      - Silence (always)
+      - Restrictions (on), explicit (off), movies (PG-13), TV Shows (TV-14), explicit Language (off), websites (Limit Adult Content)
+      - Auto-Brightness (on)
+      - Wallpaper
+      - User avatar
+      - Text message forwarding (on)
+      - Keep text messages (1 Year)
+      - Text message read receipt (off)
+      - Do Not Track (on)
+    - 1Password
+      - 1password accounts (tramy, work), touch ID (on), Watchtower (on)
+    - Find iPhone
+      - Store last known location (on)
+    - Photos
+      - iCloud Photo Library (on)
+    - Google Photos
+      - Upload size (original)
+    - Camera
+    - Contacts
+    - Health
+      - Medical ID (fill out)
+    - Wallet
+      - Add debit card to Apple Wallet for Apple Pay
+    - App Store
+- Delete unused apps
 
 # Router setup
 
-- Configure [OpenDNS Family Shield](https://www.opendns.com/setupguide/?url=familyshield)
+- [OpenDNS Family Shield](https://www.opendns.com/setupguide/?url=familyshield)
