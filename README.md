@@ -50,7 +50,7 @@ _Most things are taken care of automatically with the set up script ^, but some 
 
 - Hardware
   - Silent toggle switch (on)
-- Download 3rd party apps (1Password, iSmartAlarm, Google Photos, Gospel Library, Day One, Clips, PhotoScan, Spotify, Lyft, Venmo)
+- Download 3rd party apps (1Password, Google Photos, Gospel Library, Day One, Spotify, Venmo)
 - Desktop
   - [iPhone as 2fa option](https://appleid.apple.com)
 - Dock
@@ -63,15 +63,11 @@ _Most things are taken care of automatically with the set up script ^, but some 
       - Download items (scriptures, past few conferences)
     - Day One
       - Day One enable sync (on)
-    - Clips
-    - PhotoScan
     - Clock
       - Bedtime (11pm - 7am)
     - Spotify
       - Download playlists
     - Maps
-    - Lyft
-      - Apple Pay (on)
     - Venmo
       - Touch ID (on)
     - Safari
