@@ -50,7 +50,7 @@ _Most things are taken care of automatically with the set up script ^, but some 
 
 - Hardware
   - Silent toggle switch (on)
-- Download 3rd party apps (1Password, Google Photos, Gospel Library, Day One, Spotify, Venmo)
+- Download 3rd party apps (1Password, Google Photos, Gospel Library, Day One, Spotify)
 - Desktop
   - [iPhone as 2fa option](https://appleid.apple.com)
 - Dock
@@ -68,8 +68,6 @@ _Most things are taken care of automatically with the set up script ^, but some 
     - Spotify
       - Download playlists
     - Maps
-    - Venmo
-      - Touch ID (on)
     - Safari
       - AutoFill Names and Passwords (off)
       - Google safe search (on)
