@@ -68,6 +68,7 @@ _Most things are taken care of automatically with the set up script ^, but some 
     - Spotify
       - Download playlists
     - Maps
+    - Expo
     - Safari
       - AutoFill Names and Passwords (off)
       - Google safe search (on)
