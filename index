@@ -15,7 +15,6 @@ homebrew_packages=(
   "reattach-to-user-namespace"
   "tmux"
   "vim"
-  "wine"
   "yarn"
 )
 
@@ -39,7 +38,6 @@ homebrew_cask_apps=(
   "sketch"
   "spotify"
   "switchresx"
-  "xquartz"
 )
 
 mac_app_store_apps=(
