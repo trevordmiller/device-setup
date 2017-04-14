@@ -30,7 +30,9 @@ snippet @function
 endsnippet
 
 snippet @module
-export default @function$1
+const $1 = @function$2
+
+export default $1
 endsnippet
 
 snippet @import
@@ -100,37 +102,41 @@ endsnippet
 snippet @stateful
 import React, {Component} from 'react'
 
-export default class extends Component {
+class $1 extends Component {
 
   state = {
-    $1: $2,
+    $2: $3,
   }
 
   render() {
-    const {$1} = this.state
-    const {$3} = this.props
+    const {$2} = this.state
+    const {$4} = this.props
     return (
-      @tag$4
+      @tag$5
     )
   }
 }
+
+export default $1
 endsnippet
 
 snippet @callback
 import {Component} from 'react'
 
-export default class extends Component {
+class $1 extends Component {
   
   state = {
-    $1: $2,
+    $2: $3,
   }
 
   render() {
-    const {$1} = this.state
+    const {$2} = this.state
     const {children} = this.props
-    return children({$1})
+    return children({$2})
   }
 }
+
+export default $1
 endsnippet
 
 snippet @proptype
@@ -171,22 +177,16 @@ snippet @paragraph
 </Paragraph>
 endsnippet
 
-# EGGHEAD-INSTRUCTOR-CENTER
-
-snippet @text
-<Text message='$1' />
-endsnippet
-
 snippet @request
-<WrappedRequest url='$1'>
+<Request url='$1'>
   {({data}) => (
     $2
   )}
-</WrappedRequest>
+</Request>
 endsnippet
 
 snippet @lazy
-<WrappedRequest
+<Request
   ${1:lazy}
   method='$2'
   url='$3'
@@ -195,7 +195,7 @@ snippet @lazy
   {({request, data}) => (
     $5
   )}
-</WrappedRequest>
+</Request>
 endsnippet
 
 snippet	@image
