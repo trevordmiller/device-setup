@@ -5,10 +5,9 @@
 SCRIPTS_PATH="$HOME/drive/settings/scripts"
 SCRIPTS_UTILS_PATH="$HOME/drive/settings/scripts/utils"
 HOMEBREW_PATH="/usr/local/bin"
-PROJECT_NPM_PATH="./node_modules/.bin"
 YARN_PATH="$HOME/.yarn/bin"
 RBENV_PATH="$HOME/.rbenv/bin"
-export PATH="$PATH:$SCRIPTS_PATH:$SCRIPTS_UTILS_PATH:$HOMEBREW_PATH:$PROJECT_NPM_PATH:$YARN_PATH:$RBENV_PATH"
+export PATH="$PATH:$SCRIPTS_PATH:$SCRIPTS_UTILS_PATH:$HOMEBREW_PATH:$YARN_PATH:$RBENV_PATH"
 
 
 # ==================================================================
