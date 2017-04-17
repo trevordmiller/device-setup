@@ -2,4 +2,4 @@
 set -euo pipefail
 
 cd ~/drive/work/egghead-ui
-script-split 4 "yarn dev:package" "yarn dev:app" "yarn test"
+script-split 4 "yarn dev:package" "yarn dev:app:staging" "yarn test"
