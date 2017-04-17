@@ -16,4 +16,6 @@ for item in "${items[@]}"; do
   open "$item"
 done
 
+say "Drink water, check posture, check apps and websites"
+
 script-log state "DONE $task"
