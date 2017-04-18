@@ -1,4 +1,0 @@
-#!/bin/bash
-set -euo pipefail
-
-wine ~/drive/personal/smash/mac/PJ64kVE\ -\ Pizza\ Preset/Project64KVE.exe
