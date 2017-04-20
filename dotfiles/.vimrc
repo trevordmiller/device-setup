@@ -13,7 +13,6 @@ set laststatus=2
 
 " SEARCH
 set incsearch
-set wrapscan
 
 " LINES
 set number
