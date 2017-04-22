@@ -72,6 +72,9 @@ echo "Configuring screenshots to save in Downloads"
 defaults write com.apple.screencapture location ~/Downloads
 killall SystemUIServer
 
+# CHROME
+defaults write com.google.chrome IncognitoModeAvailability -integer 1
+
 
 # ==================================================================
 # PACKAGES
