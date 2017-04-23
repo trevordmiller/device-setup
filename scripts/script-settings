@@ -2,4 +2,4 @@
 set -euo pipefail
 
 cd ~/drive/settings
-script-split 2 "ls"
+script-split

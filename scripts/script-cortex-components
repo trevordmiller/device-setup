@@ -2,4 +2,4 @@
 set -euo pipefail
 
 cd ~/drive/personal/open-source/cortex/cortex-components/
-script-split
+script-split 4 "yarn relay:watch" "yarn build:watch" "yarn test:watch"
