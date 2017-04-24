@@ -5,9 +5,6 @@ task="Killing processes"
 
 script-log state "$task"
 
-# UNIX BACKGROUND PROCESSES
-kill $(jobs -p)
-
 # NODE SERVERS
 killall node || true
 
