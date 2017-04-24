@@ -40,7 +40,9 @@ _Most things are taken care of automatically with the set up script ^, but some 
 - Garage Band add composer and author (`Perfect Particle`)
 - Finder sidebar condense (`Google Drive`, `Downloads`, `AirDrop`)
 - WakaTime config (add API key to `~/.wakatime.cfg`)
-- Chrome extensions (1Password, Grammarly, React DevTools)
+- Chrome extensions (1Password, StayFocusd, Grammarly, React DevTools)
+- StayFocusd
+  - Blacklist: Twitter, Facebook
 - Google safe search (on)
 - Google Photos Backup size (`Original`)
 - Time Machine backup on external hard drive
