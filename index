@@ -13,6 +13,7 @@ homebrew_packages=(
   "n"
   "node"
   "reattach-to-user-namespace"
+  "terminal-notifier"
   "tmux"
   "vim"
   "yarn"
