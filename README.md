@@ -47,6 +47,7 @@ _Most things are taken care of automatically with the set up script ^, but some 
 - Google Photos Backup size (`Original`)
 - Time Machine backup on external hard drive
 - Backups working in background (Google Drive, Google Photos Backup, Time Machine external drives)
+- Login items (Google Drive, Google Photos Backup, RescueTime, PomoDone)
 
 # Mobile setup
 
