@@ -1,5 +1,5 @@
 #!/bin/bash
 set -euo pipefail
 
-cd ~/drive/work/egghead-ui
+cd ~/drive/work/egghead-instructor-center 
 script-split 2 "yarn dev:staging"
