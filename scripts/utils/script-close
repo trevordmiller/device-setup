@@ -1,0 +1,25 @@
+#!/bin/bash
+set -euo pipefail
+
+sleep 3
+
+# Create a comma-separated String of open applications
+foregroundAppsString=$(osascript -e 'tell application "System Events" to get name of (processes where background only is false)')
+
+# Convert the comma-separated String to an Array using IFS
+IFS=',' read -r -a foregroundApps <<< "$foregroundAppsString"
+
+for foregroundApp in "${foregroundApps[@]}"
+do
+  # Remove space character from the start of the Array item
+  appName=$(echo "$foregroundApp" | sed 's/^ *//g')
+
+  # Avoid closing the "Finder" and tool running the script
+  if [[ ! "$appName" == "Finder" && ! "$appName" == "Hyper" ]]; then
+
+    # Quit the app
+    osascript -e 'quit app "'"$appName"'"'
+  fi
+done
+
+sleep 3

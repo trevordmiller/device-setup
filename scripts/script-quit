@@ -1,9 +1,11 @@
 #!/bin/bash
 set -euo pipefail
 
-task="Killing processes and cleaning up"
+task="Killing apps and processes and cleaning up"
 
 script-log state "$task"
+
+script-close
 
 script-kill
 

@@ -1,0 +1,52 @@
+#!/bin/bash
+set -euo pipefail
+
+SECONDS=1800;
+PIDFILE="$HOME/.pid.script-hideout"
+
+# If no arguments were used
+if [ $# -eq 0 ]; then
+
+  # If script is already running, don't do anything
+  if test -f "$PIDFILE"; then 
+    echo "Process is already running"
+    exit 1; 
+  fi
+
+  # Re-run script with --start command in the background
+  $0 --start < /dev/null &> /dev/null &
+  echo $$ > "$PIDFILE"
+  disown
+
+# If arguments were used
+else
+  case "$1" in
+
+    -s|--start)
+
+      # Hideout start
+      script-close
+      spotify play
+      open "https://todoist.com/"
+      terminal-notifier -sound default -title 'Pomodoro' -message "Stay focused on a single task.";
+      script-donotdisturb
+      sleep $SECONDS;
+
+      # Hideout end
+      script-donotdisturb-reset
+      terminal-notifier -sound default -title 'Pomodoro' -message "Take a break. Stretch. Drink water. Check posture. Check apps and websites.";
+      spotify pause
+      script-check
+      PID=$(cat $PIDFILE)
+      rm -f $PIDFILE
+      kill $PID
+
+      ;;
+
+    *)
+
+      echo "Usage: $0 {--start}"
+      exit 1
+
+  esac
+fi

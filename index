@@ -13,6 +13,7 @@ homebrew_packages=(
   "n"
   "node"
   "reattach-to-user-namespace"
+  "shpotify"
   "terminal-notifier"
   "tmux"
   "vim"
