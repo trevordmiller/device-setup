@@ -17,8 +17,7 @@ _Most things are taken care of automatically with the set up script ^, but some 
 - Menu Bar auto hide (on)
 - Login items (`Google Drive`, `Google Photos Backup`, `RescueTime`)
 - Text Message Forwarding (on)
-- Do Not Disturb when display is sleeping (on), when mirroring to TVs and projectors (on), allow repeated calls (on)
-- Do Not Disturb scheduled (on, from 11pm-7am)
+- Do Not Disturb scheduled (on, from 11pm-7am), when display is sleeping (on), when mirroring to TVs and projectors (on), allow repeated calls (on), sort order (recents by app)
 - Night Shift (scheduled, from sunset to sunrise)
 - Find My Mac (on)
 - Highlight color (Nova cyan)
@@ -40,14 +39,11 @@ _Most things are taken care of automatically with the set up script ^, but some 
 - Garage Band add composer and author (`Perfect Particle`)
 - Finder sidebar condense (`Google Drive`, `Downloads`, `AirDrop`)
 - WakaTime config (add API key to `~/.wakatime.cfg`)
-- Chrome extensions (1Password, Grammarly, React DevTools)
-- StayFocusd
-  - Blacklist: Twitter, Facebook
+- Chrome extensions (1Password, SiteCop, Grammarly, React DevTools)
 - Google safe search (on)
 - Google Photos Backup size (`Original`)
 - Time Machine backup on external hard drive
 - Backups working in background (Google Drive, Google Photos Backup, Time Machine external drives)
-- Login items (Google Drive, Google Photos Backup, RescueTime, PomoDone)
 
 # Mobile setup
 
@@ -80,7 +76,7 @@ _Most things are taken care of automatically with the set up script ^, but some 
       - Add multiple Touch ID fingers
       - Keyboard auto-Capitalization (off), auto-Correction (off)
       - Cellular (turn off large media apps)
-      - Do Not Disturb scheduled (on, from 11pm-7am)
+      - Do Not Disturb scheduled (on, from 11pm-7am), allow calls from (Amy), repeated calls (on), silence (always)
       - Night Shift (scheduled, from sunset to sunrise)
       - Silence (always)
       - Restrictions (on), explicit (off), movies (PG-13), TV Shows (TV-14), explicit Language (off), websites (Limit Adult Content)
@@ -101,6 +97,8 @@ _Most things are taken care of automatically with the set up script ^, but some 
       - Upload size (original)
     - Camera
     - Contacts
+      - Special sound/vibrate pattern for Amy
+      - Emergency bypass call and text for Amy
     - Health
       - Medical ID (fill out)
     - Wallet

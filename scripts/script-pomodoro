@@ -9,15 +9,18 @@ TASK_LONG_BREAK_SIZE=4;
 while true; do
   for i in $(seq 1 $TASK_LONG_BREAK_SIZE); do
 
-    terminal-notifier -sound default -title 'Pomodoro' -message "Starting Pomodori. Stay focused on a single task.";
+    terminal-notifier -sound default -title 'Pomodoro' -message "Stay focused on a single task.";
     open "https://todoist.com/"
+    script-donotdisturb
     sleep $TASK_SECONDS;
 
+    script-donotdisturb-reset
     terminal-notifier -sound default -title 'Pomodoro' -message "Take a short break. Drink water. Check posture.";
     sleep $SHORT_BREAK_SECONDS;
 
   done
 
+  script-donotdisturb-reset
   terminal-notifier -sound default -title 'Pomodoro' -message "Take a long break. Drink water. Check posture. Check apps and websites.";
   script-check
   sleep $LONG_BREAK_SECONDS;

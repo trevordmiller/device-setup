@@ -6,12 +6,13 @@ task="Turning on Do Not Disturb"
 script-log state "$task"
 
 sleep 3
+
 osascript <<EOD
   tell application "System Events"
     tell application process "SystemUIServer"
       try
         key down option
-        click menu bar item "Notification Center" of menu bar 2
+        click menu bar item "Notification Center" of menu bar 1
         key up option
       on error
         key up option
@@ -19,5 +20,7 @@ osascript <<EOD
     end tell
   end tell
 EOD
+
+sleep 3
 
 script-log state "DONE $task"

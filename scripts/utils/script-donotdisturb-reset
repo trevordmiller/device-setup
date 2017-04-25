@@ -11,7 +11,7 @@ osascript <<EOD
     tell application process "SystemUIServer"
       try
         key down option
-        click menu bar item "Notification Center, Do Not Disturb enabled" of menu bar 2
+        click menu bar item "Notification Center, Do Not Disturb enabled" of menu bar 1
         key up option
       on error
         key up option
