@@ -12,6 +12,7 @@ Trevor's settings
 
 _Most things are taken care of automatically with the set up script ^, but some manual items are needed:_
 
+- iCloud (disable everything except Find My Mac, Keychain, Photos, and Messages inside iCloud Drive)
 - Remove all dock icons
 - Dock auto hide (on)
 - Menu Bar auto hide (on)
