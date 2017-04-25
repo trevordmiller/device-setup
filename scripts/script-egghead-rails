@@ -2,4 +2,4 @@
 set -euo pipefail
 
 cd ~/drive/work/egghead-rails
-script-split 3 "brew services start postgresql && redis-server /usr/local/etc/redis.conf" "git checkout master && git pull && bundle install && yarn install && rake db:migrate && foreman start -f Procfile.dev" 
+script-split 3 "brew services start postgresql && redis-server /usr/local/etc/redis.conf" "gem install bundler foreman && bundle install && git checkout master && git pull && bundle install && yarn install && rake db:migrate && foreman start -f Procfile.dev" 
