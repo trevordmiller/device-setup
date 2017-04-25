@@ -2,7 +2,7 @@
 set -euo pipefail
 
 SECONDS=1800;
-PIDFILE="$HOME/.pid.script-hideout"
+PIDFILE="$HOME/.pid.script-hideaway"
 
 # If no arguments were used
 if [ $# -eq 0 ]; then
