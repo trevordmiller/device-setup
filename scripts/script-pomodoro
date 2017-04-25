@@ -15,13 +15,13 @@ while true; do
     sleep $TASK_SECONDS;
 
     script-donotdisturb-reset
-    terminal-notifier -sound default -title 'Pomodoro' -message "Take a short break. Drink water. Check posture.";
+    terminal-notifier -sound default -title 'Pomodoro' -message "Take a short break. Stretch. Drink water. Check posture.";
     sleep $SHORT_BREAK_SECONDS;
 
   done
 
   script-donotdisturb-reset
-  terminal-notifier -sound default -title 'Pomodoro' -message "Take a long break. Drink water. Check posture. Check apps and websites.";
+  terminal-notifier -sound default -title 'Pomodoro' -message "Take a long break. Stretch. Drink water. Check posture. Check apps and websites.";
   script-check
   sleep $LONG_BREAK_SECONDS;
 
