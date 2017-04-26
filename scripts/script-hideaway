@@ -28,13 +28,13 @@ else
       script-close
       spotify play
       open "https://todoist.com/"
-      terminal-notifier -sound default -title 'Pomodoro' -message "Stay focused on a single task.";
+      terminal-notifier -sound default -title 'Hideaway' -message 'Stay focused on a single task.';
       script-donotdisturb
       sleep $SECONDS;
 
       # Hideout end
       script-donotdisturb-reset
-      terminal-notifier -sound default -title 'Pomodoro' -message "Take a break. Stretch. Drink water. Check posture. Check apps and websites.";
+      terminal-notifier -sound default -title 'Hideaway' -message 'Take a break. Stretch. Drink water. Check posture. Check apps and websites.';
       spotify pause
       script-check
       PID=$(cat $PIDFILE)
