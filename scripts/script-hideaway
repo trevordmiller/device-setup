@@ -2,6 +2,7 @@
 set -euo pipefail
 
 SECONDS=1800;
+ENDING_SECONDS=300
 PIDFILE="$HOME/.pid.script-hideaway"
 
 # If no arguments were used
@@ -30,7 +31,10 @@ else
       open "https://todoist.com/"
       terminal-notifier -sound default -title 'Hideaway' -message 'Stay focused on a single task.';
       script-donotdisturb
-      sleep $SECONDS;
+      sleep $(expr $SECONDS - $ENDING_SECONDS);
+
+      say '5 minutes left.'
+      sleep $ENDING_SECONDS;
 
       # Hideout end
       script-donotdisturb-reset
