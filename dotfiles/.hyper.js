@@ -1,6 +1,7 @@
 module.exports = {
   plugins: [
     'nova-hyperterm',
+    'hyper-autohide-tabs',
   ],
   config: {
     fontFamily: '"Fira Mono", monospace',
