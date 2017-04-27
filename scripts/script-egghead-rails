@@ -1,5 +1,0 @@
-#!/bin/bash
-set -euo pipefail
-
-cd ~/drive/work/egghead-rails
-script-split 3 "brew services start postgresql && redis-server /usr/local/etc/redis.conf" "git checkout master && git pull && gem install bundler foreman && bundle install && yarn install && rake db:migrate && foreman start -f Procfile.dev" 

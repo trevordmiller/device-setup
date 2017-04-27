@@ -1,8 +1,0 @@
-#!/bin/bash
-set -euo pipefail
-
-cd ~/drive/work/egghead-rails
-git checkout develop
-git pull
-git pull origin master
-git push

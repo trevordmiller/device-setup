@@ -1,0 +1,35 @@
+#!/bin/bash
+set -euo pipefail
+
+# USAGE
+# script-split "hello" "cool-project" 2 "echo 'hello world'"
+# script-split {window-name} {dir} [{pane_count}] [{pane_2_command}] [{pane_3_command}] etc
+#   {pane_count} defaults to 2
+#   pane 1 doesn't have a command as it is the main pane
+#   panes 2+ are secondary background tasks at the bottom
+
+tmux new-window -c "$2"
+tmux rename-window $1
+
+split_count=${3:-2}
+index=1
+while [ "$index" -lt "$split_count" ]
+do
+  tmux split-window -c "$2"
+  let "index+=1"
+done
+
+if [ $# -ge 2 ]; then
+  index=1
+  for command in "${@:4}"
+  do
+    tmux send-keys -t $index C-z "$command" Enter
+    let "index+=1"
+  done
+else
+  tmux send-keys -t 1 C-z "clear" Enter
+fi
+
+tmux set-window-option main-pane-height 30
+tmux select-layout main-horizontal
+tmux select-pane -t 0
