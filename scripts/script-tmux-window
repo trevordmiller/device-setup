@@ -30,6 +30,7 @@ else
   tmux send-keys -t 1 C-z "clear" Enter
 fi
 
-tmux set-window-option main-pane-height 30
 tmux select-layout main-horizontal
+MAIN_PANE_HEIGHT=$(expr $(tmux display -p '#{window_height}') / 3 \* 2)
+tmux resize-pane -t:.0 -y $MAIN_PANE_HEIGHT
 tmux select-pane -t 0
