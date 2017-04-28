@@ -12,9 +12,6 @@ brew upgrade
 script-log state "Upgrading Node"
 n latest
 
-script-log state "Upgrading global yarn packages"
-yarn global upgrade
-
 script-log state "Upgrading Vim plugins"
 vim +PlugUpgrade +PlugUpdate +PlugClean +qall
 
