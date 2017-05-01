@@ -3,7 +3,7 @@ set -euo pipefail
 
 cd ~
 tmux new-session -d -s hideaway
-script-tmux-window "hideaway" "drive/personal/open-source/hideaway/hideaway" 3 "yarn start" "yarn electron"
+script-tmux-window "hideaway" "drive/personal/open-source/hideaway/hideaway" 3 "yarn client-dev" "yarn desktop-dev"
 tmux kill-window -t 0
 tmux select-window -t 1
 tmux attach-session -d 
