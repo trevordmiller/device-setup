@@ -2,9 +2,9 @@
 set -euo pipefail
 
 # USAGE
-# script-project package hello-world "A CLI to say Hello World"
+# script-project library hello-world "A CLI to say Hello World"
 # script-project {project_type} {name} {description}
-#  {project_type} can be package, web-app, or native-mobile-app
+#  {project_type} can be library, web-app, or native-mobile-app
 #  {name} should be a slug like hello-world
 #  {description} should be a short sentence like "A CLI to say Hello World"
 
@@ -34,10 +34,10 @@ project_description=$3
 
 script-log state "Generating files and folders"
 case "$project_type" in 
-  "package" ) 
+  "library" ) 
     mkdir "$project_name"
     cd "$project_name"
-    cp -a "$template_path"/package/. ./
+    cp -a "$template_path"/library/. ./
     cp -a "$template_path"/shared/. ./
     ;; 
   "web-app" ) 
@@ -69,7 +69,7 @@ grep -rl '%substitute' . --exclude-dir=node_modules | xargs sed -i '' \
 
 script-log state "Installing dependencies"
 case "$project_type" in 
-  "package" ) 
+  "library" ) 
     yarn add --dev babel-cli babel-preset-env eslint jest np
     ;; 
 esac
@@ -97,7 +97,7 @@ git push -u origin master
 script-log state "Initializing continuous integration and deployment"
 travis enable -r "$user_name"/"$project_name"
 case "$project_type" in 
-  "package" ) 
+  "library" ) 
     yarn publish
     ;; 
   "web-app" )
@@ -122,7 +122,7 @@ script-log state "Opening results"
 open "https://github.com/$user_name/$project_name"
 open "https://travis-ci.org/$user_name/$project_name"
 case "$project_type" in 
-  "package" )
+  "library" )
     open "https://www.npmjs.com/package/$project_name"
     ;;
   "web-app" ) 
