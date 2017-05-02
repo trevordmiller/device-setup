@@ -3,8 +3,8 @@ set -euo pipefail
 
 cd ~
 tmux new-session -d -s cortex
-script-tmux-window "cortex-api" "drive/personal/open-source/cortex/cortex-api" 3 "yarn build:watch" "yarn start:watch"
-script-tmux-window "cortex-components" "drive/personal/open-source/cortex/cortex-components" 4 "yarn relay:watch" "yarn build:watch" "yarn test:watch"
+script-tmux-window "cortex-api" "drive/personal/open-source/cortex/cortex-api" 3 "yarn dev:build" "yarn dev:server"
+script-tmux-window "cortex-components" "drive/personal/open-source/cortex/cortex-components" 4 "yarn dev:queries" "yarn dev:build" "yarn dev:test"
 script-tmux-window "cortex-clients" "drive/personal/open-source/cortex/cortex-clients"
 tmux kill-window -t 0
 tmux select-window -t 1
