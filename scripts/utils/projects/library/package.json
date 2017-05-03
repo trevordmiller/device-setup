@@ -3,39 +3,30 @@
   "version": "0.1.0",
   "description": "%substitute_project_description",
   "repository": "%substitute_user_name/%substitute_project_name",
+  "author": "%substitute_user_full_name (%substitute_user_website)",
   "license": "MIT",
-  "author": "%substitute_user_full_name <%substitute_user_email> (%substitute_user_website)",
-  "main": "lib/index.js",
+  "main": "build/index.js",
   "files": [
     "package.json",
-    "README.md",
-    "LICENSE.md",
-    "lib"
+    "build"
   ],
   "scripts": {
-    "build": "eslint src && babel src -d lib -i test.js",
-    "prepublish": "yarn build",
-    "test:once:": "jest src",
-    "dev": "yarn build -- -w",
-    "test": "yarn test:once -- --watch",
-    "verify": "yarn build && yarn test:once",
-    "release": "np"
+    "dev:build": "yarn build -- --watch",
+    "dev:test": "yarn test -- --watch",
+    "verify": "yarn test && yarn lint && yarn build",
+    "test": "jest src",
+    "lint": "eslint src",
+    "build": "babel src -d build -i '**/*.test.js'",
+    "release": "git checkout master && git pull && yarn build && yarn version && git push && git push --tags && yarn publish"
   },
-  "devDependencies": {
-  },
-  "dependencies": {
-  },
-  "babel": {
-    "presets": [
-      "env"
-    ]
+  "jest": {
+    "testEnvironment": "node"
   },
   "eslintConfig": {
     "extends": "eslint:recommended",
     "env": {
       "es6": true,
       "node": true,
-      "browser": true,
       "jest": true
     },
     "parserOptions": {
@@ -43,7 +34,13 @@
       "sourceType": "module"
     }
   },
-  "jest": {
-    "testEnvironment": "node"
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  },
+  "devDependencies": {
+  },
+  "dependencies": {
   }
 }

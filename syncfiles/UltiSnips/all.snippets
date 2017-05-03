@@ -63,9 +63,9 @@ endsnippet
 snippet @test
 import $1 from '.'
 
-test('$2', () => (
+test('$2', () => {
   expect($3).${4:toBe}($5)
-))
+})
 endsnippet
 
 snippet @snapshot
