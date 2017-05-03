@@ -1,10 +1,5 @@
 {
   "name": "%substitute_project_name",
-  "version": "0.1.0",
-  "description": "%substitute_project_description",
-  "repository": "%substitute_user_name/%substitute_project_name",
-  "author": "%substitute_user_full_name (%substitute_user_website)",
-  "license": "MIT",
   "scripts": {
     "dev:build": "next",
     "dev:test": "yarn test -- --watch",
