@@ -2,13 +2,15 @@
 
 Used to start a new project
 
+## Example
+
 ```
 script-project library hello-world "A CLI to say Hello World"
 ```
 
-# Usage
+## Usage
 
-``
+```
 script-project {project_type} {name} {description}
 ```
 
