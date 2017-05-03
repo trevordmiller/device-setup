@@ -1,13 +1,6 @@
 #!/bin/bash
 set -euo pipefail
 
-# USAGE
-# script-project library hello-world "A CLI to say Hello World"
-# script-project {project_type} {name} {description}
-#  {project_type} can be library, web-app, or native-mobile-app
-#  {name} should be a slug like hello-world
-#  {description} should be a short sentence like "A server to say Hello World"
-
 task="Generating a project"
 
 script-log state "$task"
