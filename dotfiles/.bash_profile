@@ -3,11 +3,11 @@
 # ==================================================================
 
 SCRIPTS_PATH="$HOME/drive/settings/scripts"
-SCRIPTS_UTILS_PATH="$HOME/drive/settings/scripts/utils"
+SCRIPT_PROJECT_PATH="$HOME/drive/settings/scripts/script-project"
 HOMEBREW_PATH="/usr/local/bin"
 YARN_PATH="$HOME/.yarn/bin"
 RBENV_PATH="$HOME/.rbenv/bin"
-export PATH="$PATH:$SCRIPTS_PATH:$SCRIPTS_UTILS_PATH:$HOMEBREW_PATH:$YARN_PATH:$RBENV_PATH"
+export PATH="$PATH:$SCRIPTS_PATH:$SCRIPT_PROJECT_PATH:$HOMEBREW_PATH:$YARN_PATH:$RBENV_PATH"
 
 
 # ==================================================================
