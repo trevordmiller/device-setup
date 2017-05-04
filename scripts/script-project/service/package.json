@@ -1,0 +1,32 @@
+{
+  "name": "%substitute_project_name",
+  "main": "index.js",
+  "scripts": {
+    "dev:start": "micro",
+    "dev:test": "yarn test -- --watch",
+    "verify": "yarn test && yarn lint",
+    "test": "jest .",
+    "lint": "eslint .",
+    "release": "git checkout master && git pull && now",
+    "start": "micro"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "eslintConfig": {
+    "extends": "eslint:recommended",
+    "env": {
+      "es6": true,
+      "node": true,
+      "jest": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module"
+    }
+  },
+  "devDependencies": {
+  },
+  "dependencies": {
+  }
+}

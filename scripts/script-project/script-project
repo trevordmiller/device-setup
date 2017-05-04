@@ -28,6 +28,9 @@ case "$project_type" in
   "web-app" ) 
     cp -a "$template_path"/web-app/. ./
     ;; 
+  "service" ) 
+    cp -a "$template_path"/service/. ./
+    ;; 
 esac
 
 # INSTANCE SUBSTITUTION
@@ -49,6 +52,10 @@ case "$project_type" in
   "web-app" ) 
     yarn add --dev eslint-plugin-react now
     yarn add react react-dom next
+    ;; 
+  "service" ) 
+    yarn add --dev node-fetch now
+    yarn add micro
     ;; 
 esac
 
@@ -74,6 +81,9 @@ case "$project_type" in
     open "https://www.npmjs.com/package/$project_name"
     ;; 
   "web-app" )
+    open "$(pbpaste)"
+    ;;
+  "service" )
     open "$(pbpaste)"
     ;;
 esac

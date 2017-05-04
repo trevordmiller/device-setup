@@ -4,8 +4,8 @@
     "dev:build": "next",
     "dev:test": "yarn test -- --watch",
     "verify": "yarn test && yarn lint && yarn build",
-    "test": "jest pages components utils",
-    "lint": "eslint pages components utils",
+    "test": "jest .",
+    "lint": "eslint .",
     "build": "next build",
     "release": "git checkout master && git pull && now",
     "start": "next start"
