@@ -54,7 +54,7 @@ case "$project_type" in
     yarn add react react-dom next
     ;; 
   "service" ) 
-    yarn add --dev node-fetch now
+    yarn add --dev node-fetch nodemon now
     yarn add micro
     ;; 
 esac
