@@ -72,6 +72,8 @@ open "https://github.com/$user_name/$project_name"
 
 # CONTINUOUS INTEGRATION
 travis enable -r "$user_name"/"$project_name"
+sleep 3
+travis restart
 open "https://travis-ci.org/$user_name/$project_name"
 
 # RELEASE
