@@ -1,13 +1,14 @@
 {
   "name": "%substitute_project_name",
   "scripts": {
-    "dev:build": "next",
-    "dev:test": "yarn test -- --watch",
+    "dev": "next",
+    "test:watch": "yarn test -- --watch",
     "verify": "yarn test && yarn lint && yarn build",
     "test": "jest .",
     "lint": "eslint .",
     "build": "next build",
-    "release": "git checkout master && git pull && now",
+    "stage": "git checkout master && git pull && now",
+    "release": "now alias",
     "start": "next start"
   },
   "jest": {
@@ -49,6 +50,7 @@
       "react"
     ]
   },
+  "alias": "%substitute_project_name",
   "devDependencies": {
   },
   "dependencies": {

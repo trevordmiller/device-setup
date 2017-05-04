@@ -11,8 +11,8 @@
     "build"
   ],
   "scripts": {
-    "dev:build": "yarn build -- --watch",
-    "dev:test": "yarn test -- --watch",
+    "dev": "yarn build -- --watch",
+    "test:watch": "yarn test -- --watch",
     "verify": "yarn test && yarn lint && yarn build",
     "test": "jest src",
     "lint": "eslint src",

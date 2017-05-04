@@ -77,15 +77,19 @@ travis restart
 open "https://travis-ci.org/$user_name/$project_name"
 
 # RELEASE
-yarn release
 case "$project_type" in 
   "library" ) 
+    yarn release
     open "https://www.npmjs.com/package/$project_name"
     ;; 
   "web-app" )
+    yarn release:staging
+    yarn release:production
     open "$(pbpaste)"
     ;;
   "service" )
+    yarn release:staging
+    yarn release:production
     open "$(pbpaste)"
     ;;
 esac

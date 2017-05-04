@@ -2,12 +2,13 @@
   "name": "%substitute_project_name",
   "main": "index.js",
   "scripts": {
-    "dev:build": "nodemon --exec micro",
-    "dev:test": "yarn test -- --watch",
+    "dev": "nodemon --exec micro",
+    "test:watch": "yarn test -- --watch",
     "verify": "yarn test && yarn lint",
     "test": "jest .",
     "lint": "eslint .",
-    "release": "git checkout master && git pull && now",
+    "stage": "git checkout master && git pull && now",
+    "release": "now alias",
     "start": "micro"
   },
   "jest": {
@@ -25,6 +26,7 @@
       "sourceType": "module"
     }
   },
+  "alias": "%substitute_project_name",
   "devDependencies": {
   },
   "dependencies": {
