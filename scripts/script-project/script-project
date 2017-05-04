@@ -50,7 +50,7 @@ case "$project_type" in
     yarn add --dev babel-cli babel-preset-env
     ;; 
   "web-app" ) 
-    yarn add --dev eslint-plugin-react now
+    yarn add --dev eslint-plugin-react babel-preset-env babel-preset-react now
     yarn add react react-dom next
     ;; 
   "service" ) 

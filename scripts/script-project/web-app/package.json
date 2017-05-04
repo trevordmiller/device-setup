@@ -10,6 +10,9 @@
     "release": "git checkout master && git pull && now",
     "start": "next start"
   },
+  "jest": {
+    "testEnvironment": "node"
+  },
   "eslintConfig": {
     "extends": [
       "eslint:recommended",
@@ -39,6 +42,12 @@
         "off"
       ]
     }
+  },
+  "babel": {
+    "presets": [
+      "env",
+      "react"
+    ]
   },
   "devDependencies": {
   },
