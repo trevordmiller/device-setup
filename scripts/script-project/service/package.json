@@ -2,7 +2,7 @@
   "name": "%substitute_project_name",
   "main": "index.js",
   "scripts": {
-    "dev:start": "micro",
+    "dev:build": "micro",
     "dev:test": "yarn test -- --watch",
     "verify": "yarn test && yarn lint",
     "test": "jest .",
