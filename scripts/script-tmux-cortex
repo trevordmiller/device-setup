@@ -3,9 +3,9 @@ set -euo pipefail
 
 cd ~
 tmux new-session -d -s cortex
-script-tmux-window "cortex-api" "drive/personal/open-source/cortex/cortex-api" 3 "yarn dev:build" "yarn dev:server"
-script-tmux-window "cortex-components" "drive/personal/open-source/cortex/cortex-components" 4 "yarn dev:queries" "yarn dev:build" "yarn dev:test"
-script-tmux-window "cortex-clients" "drive/personal/open-source/cortex/cortex-clients"
+script-tmux-window "cortex-api" "drive/personal/open-source/cortex/cortex-api" 3 "yarn dev" "yarn test:watch"
+script-tmux-window "cortex-components" "drive/personal/open-source/cortex/cortex-components" 3 "yarn dev" "yarn test:watch"
+script-tmux-window "cortex-clients" "drive/personal/open-source/cortex/cortex-clients" 3 "yarn dev" "yarn test"
 tmux kill-window -t 0
 tmux select-window -t 1
 tmux attach-session -d 
