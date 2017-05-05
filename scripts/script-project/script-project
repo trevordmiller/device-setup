@@ -73,7 +73,6 @@ open "https://github.com/$user_name/$project_name"
 # CONTINUOUS INTEGRATION
 travis enable -r "$user_name"/"$project_name"
 sleep 3
-travis restart
 open "https://travis-ci.org/$user_name/$project_name"
 
 # RELEASE
@@ -83,14 +82,16 @@ case "$project_type" in
     open "https://www.npmjs.com/package/$project_name"
     ;; 
   "web-app" )
-    yarn release:staging
-    yarn release:production
+    yarn stage
     open "$(pbpaste)"
+    yarn release
+    open "https://$project_name.now.sh"
     ;;
   "service" )
-    yarn release:staging
-    yarn release:production
+    yarn stage
     open "$(pbpaste)"
+    yarn release
+    open "https://$project_name.now.sh"
     ;;
 esac
 

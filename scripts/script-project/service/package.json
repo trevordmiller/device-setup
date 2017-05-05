@@ -26,7 +26,9 @@
       "sourceType": "module"
     }
   },
-  "alias": "%substitute_project_name",
+  "now": {
+    "alias": "%substitute_project_name"
+  },
   "devDependencies": {
   },
   "dependencies": {
