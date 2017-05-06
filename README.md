@@ -14,8 +14,6 @@ _Most things are taken care of automatically with the set up script ^, but some 
 
 - iCloud (disable everything except Find My Mac, Keychain, Photos, and Messages inside iCloud Drive)
 - Remove all dock icons
-- Dock auto hide (on)
-- Menu Bar auto hide (on)
 - Login items (`Google Drive`, `Google Photos Backup`, `RescueTime`)
 - Text Message Forwarding (on)
 - Do Not Disturb scheduled (on, from 11pm-7am), when display is sleeping (on), when mirroring to TVs and projectors (on), allow repeated calls (on), sort order (recents by app)

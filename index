@@ -70,6 +70,19 @@ echo "Configuring hidden files to show"
 defaults write com.apple.finder AppleShowAllFiles YES
 killall Finder
 
+# MENU BAR
+defaults write NSGlobalDomain _HIHideMenuBar -bool true
+killall Finder
+
+# DOCK
+osascript <<EOD
+  tell application "System Events"
+    if (get autohide of dock preferences) is false then
+      tell dock preferences to set autohide to not autohide
+    end if
+  end tell
+EOD
+
 # SCREENSHOTS
 echo "Configuring screenshots to save in Downloads"
 defaults write com.apple.screencapture location ~/Downloads
