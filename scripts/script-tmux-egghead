@@ -4,8 +4,8 @@ set -euo pipefail
 cd ~
 tmux new-session -d -s egghead
 script-tmux-window "egghead-rails" "drive/work/egghead-rails" 3 "brew services start postgresql && redis-server /usr/local/etc/redis.conf" "git checkout master && git pull && gem install bundler foreman && bundle install && yarn install && rake db:migrate && foreman start -f Procfile.dev"
-script-tmux-window "egghead-ui" "drive/work/egghead-ui" 4 "yarn dev:package" "yarn dev:app" "yarn test"
-script-tmux-window "egghead-instructor-center" "drive/work/egghead-instructor-center" 2 "yarn dev"
+script-tmux-window "egghead-ui" "drive/work/egghead-ui" 4 "yarn dev:package" "yarn dev:app" "yarn test:unit"
+script-tmux-window "egghead-instructor-center" "drive/work/egghead-instructor-center"
 tmux kill-window -t 0
 tmux select-window -t 1
 tmux attach-session -d 
