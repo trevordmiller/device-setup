@@ -19,7 +19,7 @@
     "test": "jest src",
     "lint": "eslint src",
     "build": "babel src -d build -i '**/*.test.js'",
-    "release": "git checkout master && git pull && yarn build && yarn version && git push && git push --tags && npm publish"
+    "release": "git checkout master && git pull && yarn version && yarn build && git push && git push --tags && npm publish"
   },
   "jest": {
     "testEnvironment": "node"
