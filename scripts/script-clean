@@ -5,11 +5,20 @@ task="Cleaning folders"
 
 script-log state "$task"
 
+# Remove unused homebrew artifacts
 brew cleanup
 brew cask cleanup
+
+# Remove node_modules directories
 find "$HOME"/drive -name 'node_modules' -type d -exec rm -r '{}' ';' || true
+
+# Remove .DS_Store files
 find "$HOME" -name '.DS_Store' -delete
 rm -rf "$HOME"/drive/personal/playground/*
 rm -rf "$HOME"/Downloads/*
+
+# Remove unused git branches
+cd "$HOME"/drive
+find . -path "*/.git" -print -execdir script-git-clean ";"
 
 script-log state "DONE $task"

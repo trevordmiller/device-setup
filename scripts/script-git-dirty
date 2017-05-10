@@ -6,7 +6,7 @@ task="Checking if any git repos are dirty"
 script-log state "$task"
 
 cd "$HOME"/drive
-output=$(script-status | grep \
+output=$(script-git-statuses | grep \
 -e "Untracked files:" \
 -e "Changes not staged for commit:"  \
 -e "Changes to be committed:" \
@@ -18,7 +18,7 @@ then
   script-log state "All git repos are clean"
 else
   script-log action "TODO: Clean dirty git repos!"
-  script-status
+  script-statuses
 fi
 
 script-log state "DONE $task"

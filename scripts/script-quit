@@ -11,6 +11,6 @@ script-kill
 
 script-clean
 
-script-dirty
+script-git-dirty
 
 script-log state "DONE $task"
