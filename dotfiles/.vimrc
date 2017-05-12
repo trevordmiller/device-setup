@@ -85,7 +85,7 @@ Plug 'mxw/vim-jsx'
 Plug 'tmhedberg/matchit'
 
 " SNIPPETS
-Plug 'SirVer/ultisnips'
+Plug 'KeyboardFire/vim-minisnip'
 
 " INLINE LINTING
 Plug 'w0rp/ale'
@@ -105,8 +105,3 @@ colorscheme nova
 
 " EXTENDED LANGUAGES
 let g:jsx_ext_required = 0
-
-" SNIPPETS
-let g:UltiSnipsExpandTrigger='<tab>'
-let g:UltiSnipsJumpForwardTrigger='<tab>'
-let g:UltiSnipsJumpBackwardTrigger='<s-tab>'

@@ -132,12 +132,11 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 echo "Installing Vim plugins"
 vim +PlugInstall +qall
 
-echo "Making UltiSnips symlinks"
-mkdir ~/.vim/UltiSnips/
-ln -s ~/drive/settings/syncfiles/UltiSnips/all.snippets ~/.vim/UltiSnips/
-
-echo "Making temp file directories"
+echo "Making history file directories"
 mkdir ~/.vim/{backup_files,swap_files,undo_files}
+
+echo "Making snippet symlinks"
+ln -s ~/drive/settings/syncfiles/snippets ~/.vim/minisnip
 
 
 # ==================================================================

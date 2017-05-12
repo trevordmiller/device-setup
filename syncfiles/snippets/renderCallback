@@ -1,0 +1,15 @@
+import React, {Component} from 'react'
+
+class {{+~expand('%:t:r')+}} extends Component {
+
+  state = {
+    {{++}}: {{++}},
+  }
+
+  render() {
+    const {{{+~\~2+}}} = this.state
+    return children({{{+~\~1+}}})
+  }
+}
+
+export default {{+~\~5+}}
