@@ -18,7 +18,7 @@ then
   script-log state "All git repos are clean"
 else
   script-log action "TODO: Clean dirty git repos!"
-  script-statuses
+  script-git-statuses
 fi
 
 script-log state "DONE $task"
