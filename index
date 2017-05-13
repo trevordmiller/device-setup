@@ -135,9 +135,6 @@ vim +PlugInstall +qall
 echo "Making history file directories"
 mkdir ~/.vim/{backup_files,swap_files,undo_files}
 
-echo "Making snippet symlinks"
-ln -s ~/drive/settings/syncfiles/snippets ~/.vim/minisnip
-
 
 # ==================================================================
 # FONTS

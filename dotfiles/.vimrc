@@ -49,7 +49,6 @@ set grepprg=grep\ -In\ --exclude-dir={.git,node_modules,build,lib,.next,__snapsh
 " SPELLCHECK
 set spelllang=en
 set complete+=kspell
-set spellfile=~/drive/settings/syncfiles/en.utf-8.add
 autocmd BufRead,BufNewFile *.md setlocal spell
 autocmd BufRead,BufNewFile *.txt setlocal spell
 autocmd BufRead,BufNewFile */blog/* setlocal spell
@@ -105,3 +104,6 @@ colorscheme nova
 
 " EXTENDED LANGUAGES
 let g:jsx_ext_required = 0
+
+" SNIPPETS
+let g:minisnip_dir = '~/drive/settings/dotfiles/.snippets/'
