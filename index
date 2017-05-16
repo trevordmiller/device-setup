@@ -13,7 +13,6 @@ homebrew_packages=(
   "n"
   "node"
   "reattach-to-user-namespace"
-  "shpotify"
   "tmux"
   "vim"
   "yarn"
@@ -31,18 +30,13 @@ fonts=(
 homebrew_cask_apps=(
   "1password"
   "google-chrome"
-  "google-drive"
-  "google-photos-backup"
   "hyper"
   "rescuetime"
-  "screenflow"
   "sketch"
   "spotify"
-  "switchresx"
 )
 
 mac_app_store_apps=(
-  "682658836" # Garage Band
   "1055511498" # Day One
 )
 
@@ -116,8 +110,8 @@ n latest
 # ==================================================================
 
 echo "Symlinking dotfiles"
-for file in $(find "$HOME/drive/settings/dotfiles" -depth 1 -exec basename {} \;); do
-  ln -s "$HOME/drive/settings/dotfiles/$file" "$HOME/$file"
+for file in $(find "$HOME/settings/dotfiles" -depth 1 -exec basename {} \;); do
+  ln -s "$HOME/settings/dotfiles/$file" "$HOME/$file"
 done
 
 
