@@ -6,8 +6,7 @@ SCRIPTS_PATH="$HOME/settings/scripts"
 SCRIPT_PROJECT_PATH="$HOME/settings/scripts/script-project"
 HOMEBREW_PATH="/usr/local/bin"
 YARN_PATH="$HOME/.yarn/bin"
-RBENV_PATH="$HOME/.rbenv/bin"
-export PATH="$PATH:$SCRIPTS_PATH:$SCRIPT_PROJECT_PATH:$HOMEBREW_PATH:$YARN_PATH:$RBENV_PATH"
+export PATH="$PATH:$SCRIPTS_PATH:$SCRIPT_PROJECT_PATH:$HOMEBREW_PATH:$YARN_PATH"
 
 
 # ==================================================================
@@ -48,10 +47,3 @@ export EDITOR="$VISUAL"
 alias grep='grep -I --color=auto --exclude-dir={.git,node_modules,build,lib,.next,__snapshots__} --exclude=yarn.lock'
 alias ls='ls -G'
 alias less='less -R'
-
-
-# ==================================================================
-# RAILS
-# ==================================================================
-
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
