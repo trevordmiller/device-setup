@@ -9,7 +9,7 @@ sed -i "" \
 -e "s/nova-hyperterm/hyper-one-light/" \
 -e "s/padding: '16px'/padding: '25px'/" \
 -e "s/fontSize: 16/fontSize: 30/" \
-"$HOME/drive/settings/dotfiles/.hyper.js"
+"$HOME/settings/dotfiles/.hyper.js"
 
 vimrcRules=(
   "set laststatus=0"
@@ -20,7 +20,7 @@ vimrcRules=(
   "exec 'highlight MatchParen guifg=#000000 guibg=#CCCCCC'"
 )
 for vimrcRule in "${vimrcRules[@]}"; do
-  echo "$vimrcRule" >> "$HOME/drive/settings/dotfiles/.vimrc"
+  echo "$vimrcRule" >> "$HOME/settings/dotfiles/.vimrc"
 done
 
 sleep 3

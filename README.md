@@ -5,10 +5,8 @@ Trevor's settings
 # Desktop setup
 
 - Install Homebrew: `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
-- Install Google Drive: `brew cask install google-drive`
-- Rename Google Drive directory: `mv ~/Google\ Drive  ~/drive`
-- Start Google Drive directory sync and wait for initial completion
-- Run set up script: `. ~/drive/settings/index`
+- Clone this repo into `~/`
+- Run set up script: `. ~/settings/index`
 
 _Most things are taken care of automatically with the set up script ^, but some manual items are needed:_
 
@@ -38,11 +36,11 @@ _Most things are taken care of automatically with the set up script ^, but some 
 - Garage Band add composer and author (`Perfect Particle`)
 - Finder sidebar condense (`Google Drive`, `Downloads`, `AirDrop`)
 - WakaTime config (add API key to `~/.wakatime.cfg`)
-- Chrome extensions (1Password, SiteCop, Grammarly, React DevTools)
+- Chrome extensions (1Password, Grammarly, React DevTools)
 - Google safe search (on)
 - Google Photos Backup size (`Original`)
 - Time Machine backup on external hard drive
-- Backups working in background (Google Drive, Google Photos Backup, Time Machine external drives)
+- Backups working in background (Time Machine external drives)
 
 # Mobile setup
 

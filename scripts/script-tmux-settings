@@ -3,7 +3,7 @@ set -euo pipefail
 
 cd ~
 tmux new-session -d -s settings
-script-tmux-window "settings" "drive/settings"
+script-tmux-window "settings" "settings"
 tmux kill-window -t 0
 tmux select-window -t 1
 tmux attach-session -d 

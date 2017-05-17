@@ -2,8 +2,8 @@
 # PATH
 # ==================================================================
 
-SCRIPTS_PATH="$HOME/drive/settings/scripts"
-SCRIPT_PROJECT_PATH="$HOME/drive/settings/scripts/script-project"
+SCRIPTS_PATH="$HOME/settings/scripts"
+SCRIPT_PROJECT_PATH="$HOME/settings/scripts/script-project"
 HOMEBREW_PATH="/usr/local/bin"
 YARN_PATH="$HOME/.yarn/bin"
 RBENV_PATH="$HOME/.rbenv/bin"

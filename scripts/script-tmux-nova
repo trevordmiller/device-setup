@@ -3,7 +3,7 @@ set -euo pipefail
 
 cd ~
 tmux new-session -d -s nova
-script-tmux-window "nova-vim" "drive/personal/open-source/nova/nova-vim" 2 "mkdir -p ~/.vim/colors && ln -sf "$(pwd)"/colors/nova.vim ~/.vim/colors/nova.vim && (yarn dev; rm ~/.vim/colors/nova.vim)"
+script-tmux-window "nova-vim" "personal/open-source/nova/nova-vim" 2 "mkdir -p ~/.vim/colors && ln -sf "$(pwd)"/colors/nova.vim ~/.vim/colors/nova.vim && (yarn dev; rm ~/.vim/colors/nova.vim)"
 tmux kill-window -t 0
 tmux select-window -t 1
 tmux attach-session -d 
