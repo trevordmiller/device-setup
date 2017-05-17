@@ -3,7 +3,7 @@ set -euo pipefail
 
 cd ~
 tmux new-session -d -s trevordmiller
-script-tmux-window "trevordmiller-website" "personal/open-source/trevordmiller/trevordmiller-website" 2 "yarn dev"
+script-tmux-window "trevordmiller-website" "projects/trevordmiller-website" 2 "yarn dev"
 tmux kill-window -t 0
 tmux select-window -t 1
 tmux attach-session -d 
