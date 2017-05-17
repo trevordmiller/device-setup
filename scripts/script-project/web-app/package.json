@@ -36,12 +36,8 @@
       }
     },
     "rules": {
-      "react/display-name": [
-        "off"
-      ],
-      "react/prop-types": [
-        "off"
-      ]
+      "react/display-name": "off",
+      "react/prop-types": "off"
     }
   },
   "babel": {
