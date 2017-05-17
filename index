@@ -28,8 +28,12 @@ fonts=(
 )
 
 homebrew_cask_apps=(
+  "1password"
+  "google-chrome"
   "hyper"
   "rescuetime"
+  "sketch"
+  "spotify"
 )
 
 mac_app_store_apps=(
@@ -37,6 +41,105 @@ mac_app_store_apps=(
 )
 
 
+# ==================================================================
+# SHELL
+# ==================================================================
+
+echo "Making bash the default shell"
+chsh -s /bin/bash
+
+
+# ==================================================================
+# MACOS
+# ==================================================================
+
+# KEYBOARD
+defaults write NSGlobalDomain KeyRepeat -int 1
+defaults write NSGlobalDomain InitialKeyRepeat -int 10
+
+# HIDDEN FILES
+echo "Configuring hidden files to show"
+defaults write com.apple.finder AppleShowAllFiles YES
+killall Finder
+
+# MENU BAR
+defaults write NSGlobalDomain _HIHideMenuBar -bool true
+killall Finder
+
+# DOCK
+osascript <<EOD
+  tell application "System Events"
+    if (get autohide of dock preferences) is false then
+      tell dock preferences to set autohide to not autohide
+    end if
+  end tell
+EOD
+
+# SCREENSHOTS
+echo "Configuring screenshots to save in Downloads"
+defaults write com.apple.screencapture location ~/Downloads
+killall SystemUIServer
+
+# CHROME
+defaults write com.google.chrome IncognitoModeAvailability -integer 1
+
+
+# ==================================================================
+# PACKAGES
+# ==================================================================
+
+# HOMEBREW
+echo "Installing Homebrew packages"
+for homebrew_package in "${homebrew_packages[@]}"; do
+  brew install "$homebrew_package"
+done
+
+# RUBY
+echo "Installing Ruby gems"
+for ruby_gem in "${ruby_gems[@]}"; do
+  gem install "$ruby_gem"
+done
+
+# CONFIG
+echo "Upgrade to latest Node"
+n latest
+
+
+# ==================================================================
+# DOTFILES
+# ==================================================================
+
+echo "Symlinking dotfiles"
+for file in $(find "$HOME/settings/dotfiles" -depth 1 -exec basename {} \;); do
+  ln -s "$HOME/settings/dotfiles/$file" "$HOME/$file"
+done
+
+
+# ==================================================================
+# VIM PLUGINS & FOLDERS
+# ==================================================================
+
+echo "Installing Vim plugin manager"
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+echo "Installing Vim plugins"
+vim +PlugInstall +qall
+
+echo "Making history file directories"
+mkdir ~/.vim/{backup_files,swap_files,undo_files}
+
+
+# ==================================================================
+# FONTS
+# ==================================================================
+
+echo "Adding Homebrew fonts tap"
+brew tap caskroom/fonts
+echo "Installing Homebrew fonts"
+for font in "${fonts[@]}"; do
+  brew cask install "$font"
+done
 
 
 # ==================================================================
@@ -53,6 +156,19 @@ echo "Installing Mac App Store apps"
 for mac_app_store_app in "${mac_app_store_apps[@]}"; do
   mas install "$mac_app_store_app"
 done
+
+
+# ==================================================================
+# MANUAL SETUP
+# ==================================================================
+
+# NPM
+echo "Log in to npm registry with package manager"
+yarn login
+
+# TRAVIS
+echo "Log in to Travis CI"
+travis login
 
 
 # ==================================================================
