@@ -10,7 +10,7 @@ Trevor's settings
 
 _Most things are taken care of automatically with the set up script ^, but some manual items are needed:_
 
-- iCloud (disable everything except Find My Mac, Keychain, Photos, and Messages inside iCloud Drive)
+- iCloud (disable everything except Contacts, iBooks, Find My Mac, Keychain, Photos, and Messages inside iCloud Drive)
 - Remove all dock icons
 - Login items (`Google Drive`, `Google Photos Backup`, `RescueTime`)
 - Text Message Forwarding (on)
@@ -32,10 +32,8 @@ _Most things are taken care of automatically with the set up script ^, but some 
 - Remove items from the Trash after 30 days (on)
 - Keep folders on top when sorting by name (on)
 - Spotify open on login (off), high quality streaming (on), download each playlist
-- Screenflow countdown (0 seconds), still images default duration (3 seconds)
-- Garage Band add composer and author (`Perfect Particle`)
-- Finder sidebar condense (`Google Drive`, `Downloads`, `AirDrop`)
-- WakaTime config (add API key to `~/.wakatime.cfg`)
+- Finder sidebar condense (`trevordmiller`)
+- WakaTime config (add API key to `~/.wakatime.cfg`, automatically done with command line prompt on first run of Vim)
 - Chrome extensions (1Password, Grammarly, React DevTools)
 - Google safe search (on)
 - Google Photos Backup size (`Original`)
