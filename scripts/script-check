@@ -8,6 +8,7 @@ script-log state "$task"
 items=(
   "https://todoist.com"
   "https://www.icloud.com/#calendar"
+  "https://calendar.google.com/calendar/b/1/render?pli=1"
   "https://www.icloud.com/#mail"
   "https://mail.google.com/mail/u/1"
   "https://utahjavascript.slack.com"
