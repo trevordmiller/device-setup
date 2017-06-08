@@ -9,6 +9,7 @@ items=(
   "https://todoist.com"
   "https://www.icloud.com/#calendar"
   "https://www.icloud.com/#mail"
+  "https://mail.google.com/mail/u/1"
   "https://utahjavascript.slack.com"
   "/Applications/Messages.app"
 )
