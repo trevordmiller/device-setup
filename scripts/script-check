@@ -11,6 +11,7 @@ items=(
   "https://calendar.google.com/calendar/b/1/render?pli=1"
   "https://www.icloud.com/#mail"
   "https://mail.google.com/mail/u/1"
+  "http://roederstudios.slack.com/"
   "https://utahjavascript.slack.com"
   "/Applications/Messages.app"
 )
