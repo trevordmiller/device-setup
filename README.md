@@ -12,7 +12,7 @@ _Most things are taken care of automatically with the set up script ^, but some 
 
 - iCloud (disable everything except Contacts, iBooks, Find My Mac, Keychain, Photos, and Messages inside iCloud Drive)
 - Remove all dock icons
-- Login items (`Google Drive`, `Google Photos Backup`, `RescueTime`)
+- Login items (`RescueTime`, `Kap`)
 - Text Message Forwarding (on)
 - Do Not Disturb scheduled (on, from 11pm-7am), when display is sleeping (on), when mirroring to TVs and projectors (on), allow repeated calls (on), sort order (recents by app)
 - Night Shift (scheduled, from sunset to sunrise)
@@ -32,6 +32,7 @@ _Most things are taken care of automatically with the set up script ^, but some 
 - Remove items from the Trash after 30 days (on)
 - Keep folders on top when sorting by name (on)
 - Spotify open on login (off), high quality streaming (on), download each playlist
+- Kap save to (`/Downloads`)
 - Finder sidebar condense (`trevordmiller`)
 - WakaTime config (add API key to `~/.wakatime.cfg`, automatically done with command line prompt on first run of Vim)
 - Chrome extensions (1Password, Grammarly, React DevTools)

@@ -97,6 +97,7 @@ homebrew_cask_apps=(
   "google-chrome"
   "1password"
   "rescuetime"
+  "kap"
 )
 
 for homebrew_cask_app in "${homebrew_cask_apps[@]}"; do
