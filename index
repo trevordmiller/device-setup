@@ -3,109 +3,6 @@ set -euo pipefail
 
 
 # ==================================================================
-# VARIABLES
-# ==================================================================
-
-homebrew_packages=(
-  "bash"
-  "git"
-  "mas"
-  "n"
-  "node"
-  "reattach-to-user-namespace"
-  "tmux"
-  "vim"
-  "yarn"
-)
-
-ruby_gems=(
-  "travis"
-)
-
-fonts=(
-  "font-fira-mono"
-  "font-quicksand"
-)
-
-homebrew_cask_apps=(
-  "1password"
-  "google-chrome"
-  "hyper"
-  "rescuetime"
-  "sketch"
-  "spotify"
-)
-
-mac_app_store_apps=(
-  "1055511498" # Day One
-)
-
-
-# ==================================================================
-# SHELL
-# ==================================================================
-
-echo "Making bash the default shell"
-chsh -s /bin/bash
-
-
-# ==================================================================
-# MACOS
-# ==================================================================
-
-# KEYBOARD
-defaults write NSGlobalDomain KeyRepeat -int 1
-defaults write NSGlobalDomain InitialKeyRepeat -int 10
-
-# HIDDEN FILES
-echo "Configuring hidden files to show"
-defaults write com.apple.finder AppleShowAllFiles YES
-killall Finder
-
-# MENU BAR
-defaults write NSGlobalDomain _HIHideMenuBar -bool true
-killall Finder
-
-# DOCK
-osascript <<EOD
-  tell application "System Events"
-    if (get autohide of dock preferences) is false then
-      tell dock preferences to set autohide to not autohide
-    end if
-  end tell
-EOD
-
-# SCREENSHOTS
-echo "Configuring screenshots to save in Downloads"
-defaults write com.apple.screencapture location ~/Downloads
-killall SystemUIServer
-
-# CHROME
-defaults write com.google.chrome IncognitoModeAvailability -integer 1
-
-
-# ==================================================================
-# PACKAGES
-# ==================================================================
-
-# HOMEBREW
-echo "Installing Homebrew packages"
-for homebrew_package in "${homebrew_packages[@]}"; do
-  brew install "$homebrew_package"
-done
-
-# RUBY
-echo "Installing Ruby gems"
-for ruby_gem in "${ruby_gems[@]}"; do
-  gem install "$ruby_gem"
-done
-
-# CONFIG
-echo "Upgrade to latest Node"
-n latest
-
-
-# ==================================================================
 # DOTFILES
 # ==================================================================
 
@@ -116,59 +13,140 @@ done
 
 
 # ==================================================================
-# VIM PLUGINS & FOLDERS
+# PACKAGES
 # ==================================================================
+
+# HOMEBREW
+
+echo "Installing and configuring Homebrew packages"
+
+homebrew_packages=(
+  "bash"
+  "tmux"
+  "vim"
+  "git"
+  "node"
+  "n"
+)
+
+for homebrew_package in "${homebrew_packages[@]}"; do
+  brew install "$homebrew_package"
+done
+
+echo "Making bash the default shell"
+chsh -s /bin/bash
 
 echo "Installing Vim plugin manager"
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
+    
 echo "Installing Vim plugins"
 vim +PlugInstall +qall
 
-echo "Making history file directories"
+echo "Making Vim history file directories"
 mkdir ~/.vim/{backup_files,swap_files,undo_files}
+
+echo "Upgrading to latest Node"
+n latest
+
+echo "Adding npm user"
+npm adduser
+
+echo "Adding Travis user"
+travis login
+
+# RUBY
+
+echo "Installing and configuring Ruby gems"
+
+ruby_gems=(
+  "travis"
+)
+
+for ruby_gem in "${ruby_gems[@]}"; do
+  gem install "$ruby_gem"
+done
 
 
 # ==================================================================
 # FONTS
 # ==================================================================
 
-echo "Adding Homebrew fonts tap"
-brew tap caskroom/fonts
 echo "Installing Homebrew fonts"
+
+fonts=(
+  "font-fira-mono"
+  "font-quicksand"
+)
+
+brew tap caskroom/fonts
+
 for font in "${fonts[@]}"; do
   brew cask install "$font"
 done
 
 
 # ==================================================================
-# GUI APPS
-# Needed for heavy creation, background processes, or OS integration
+# APPS
 # ==================================================================
 
 echo "Installing Homebrew cask apps"
+
+homebrew_cask_apps=(
+  "hyper"
+  "google-chrome"
+  "1password"
+  "rescuetime"
+)
+
 for homebrew_cask_app in "${homebrew_cask_apps[@]}"; do
   brew cask install "$homebrew_cask_app"
 done
 
-echo "Installing Mac App Store apps"
-for mac_app_store_app in "${mac_app_store_apps[@]}"; do
-  mas install "$mac_app_store_app"
-done
-
 
 # ==================================================================
-# MANUAL SETUP
+# MACOS
 # ==================================================================
 
-# NPM
-echo "Log in to npm registry with package manager"
-yarn login
+# KEYBOARD
 
-# TRAVIS
-echo "Log in to Travis CI"
-travis login
+echo "Configuring key repeat"
+defaults write NSGlobalDomain KeyRepeat -int 1
+defaults write NSGlobalDomain InitialKeyRepeat -int 10
+
+# HIDDEN FILES
+
+echo "Configuring hidden files to show"
+defaults write com.apple.finder AppleShowAllFiles YES
+killall Finder
+
+# MENU BAR
+
+echo "Configuring menu bar to autohide"
+defaults write NSGlobalDomain _HIHideMenuBar -bool true
+killall Finder
+
+# DOCK
+
+echo "Configuring dock to autohide"
+osascript <<EOD
+  tell application "System Events"
+    if (get autohide of dock preferences) is false then
+      tell dock preferences to set autohide to not autohide
+    end if
+  end tell
+EOD
+
+# SCREENSHOTS
+
+echo "Configuring screenshots to save in Downloads"
+defaults write com.apple.screencapture location ~/Downloads
+killall SystemUIServer
+
+# CHROME
+
+echo "Configuring incognito mode"
+defaults write com.google.chrome IncognitoModeAvailability -integer 1
 
 
 # ==================================================================
