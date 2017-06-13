@@ -4,48 +4,71 @@ Trevor's settings
 
 # Desktop setup
 
-- Install Homebrew: `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 - Clone this repo into `~/`
-- Run set up script: `. ~/settings/index`
+- Run set up script: `sudo ~/settings/index`
 
 _Most things are taken care of automatically with the set up script ^, but some manual items are needed:_
 
-- iCloud (disable everything except Contacts, iBooks, Find My Mac, Keychain, Photos, and Messages inside iCloud Drive)
+- Text Message Forwarding (on, from iPhone)
 - Remove all dock icons
-- Login items (`RescueTime`, `Kap`)
-- Text Message Forwarding (on)
-- Do Not Disturb scheduled (on, from 11pm-7am), when display is sleeping (on), when mirroring to TVs and projectors (on), allow repeated calls (on), sort order (recents by app)
-- Night Shift (scheduled, from sunset to sunrise)
-- Find My Mac (on)
-- Highlight color (Nova cyan)
-- Prevent computer from sleeping automatically when display is off (on)
-- Show all filename extensions (on)
-- Show warning before changing an extension (off)
-- Power adapter, turn display off after (never)
-- Default browser (Chrome)
-- Security & Privacy control permissions (on)
-- Alert sound (glass)
-- Alert volume (full)
-- Message sound (popcorn)
-- Keyboard modifier keys caps lock (escape)
-- Correct spelling automatically (off)
-- Remove items from the Trash after 30 days (on)
-- Keep folders on top when sorting by name (on)
-- Spotify open on login (off), high quality streaming (on), download each playlist
-- Kap save to (`/Downloads`)
-- Finder sidebar condense (`trevordmiller`)
-- WakaTime config (add API key to `~/.wakatime.cfg`, automatically done with command line prompt on first run of Vim)
-- Chrome extensions (1Password, Grammarly, React DevTools)
-- Google safe search (on)
-- Google Photos Backup size (`Original`)
-- Time Machine backup on external hard drive
-- Backups working in background (Time Machine external drives)
+- Delete unused factory Applications
+- Remove notification center widgets
+- General
+  - Highlight color (Nova cyan)
+- Keyboard
+  - Modifier keys caps lock (escape)
+  - Touch bar (app controls)
+- Users
+  - Add avatar
+  - Login items (`RescueTime`, `Kap`)
+- Desktop & Screen Saver
+  - Add desktop background
+- Finder
+  - Favorites (`trevordmiller` only)
+  - Show all filename extensions (on)
+  - Show warning before changing an extension (off)
+  - Correct spelling automatically (off)
+  - Remove items from the Trash after 30 days (on)
+  - Keep folders on top when sorting by name (on)
+- Touch ID
+  - Login (on)
+  - Apple Pay (on)
+- iCloud
+  - disable everything except Photos, Contacts, Keychain, and Find My Mac)
+- Notification Center
+  - Do Not Disturb
+    - Scheduled (on, from 11pm-7am)
+    - When display is sleeping (on)
+    - When mirroring to TVs and projectors (on)
+    - Allow repeated calls (on)
+    - Sort order (recents by app)
+- Display
+  - Night Shift
+    - Scheduled (from sunset to sunrise)
+- Sound
+  - Alert sound (glass)
+  - Alert volume (full)
+- Sound
+  - Show volume in menu bar (on)
+- Chrome
+  - Set as default browser
+  - Sign in with Google Account
+  - Extensions
+    - Confirm install (1Password, Grammarly, React DevTools)
+    - Sign in
+    - Hide icons in Chrome menu
+  - Safe search (on, locked)
+- WakaTime
+  - Add API key to `~/.wakatime.cfg`
+- Kap
+  - Save to (`/Downloads`)
+
+Then, restart desktop.
 
 # Mobile setup
 
 - Hardware
   - Silent toggle switch (on)
-- Download 3rd party apps (1Password, Google Photos, Gospel Library, Day One, Spotify)
 - Desktop
   - [iPhone as 2fa option](https://appleid.apple.com)
 - `Applications` folder

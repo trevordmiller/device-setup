@@ -18,17 +18,20 @@ done
 
 # HOMEBREW
 
+echo "Installing Homebrew"
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
 echo "Installing and configuring Homebrew packages"
 
 homebrew_packages=(
   "bash"
   "tmux"
+  "reattach-to-user-namespace"
   "vim"
   "git"
   "node"
   "n"
 )
-
 for homebrew_package in "${homebrew_packages[@]}"; do
   brew install "$homebrew_package"
 done
@@ -52,9 +55,6 @@ n latest
 echo "Adding npm user"
 npm adduser
 
-echo "Adding Travis user"
-travis login
-
 # RUBY
 
 echo "Installing and configuring Ruby gems"
@@ -62,46 +62,33 @@ echo "Installing and configuring Ruby gems"
 ruby_gems=(
   "travis"
 )
-
 for ruby_gem in "${ruby_gems[@]}"; do
   gem install "$ruby_gem"
 done
 
+echo "Adding Travis user"
+travis login
+
 
 # ==================================================================
-# FONTS
+# APPS & FONTS
 # ==================================================================
 
-echo "Installing Homebrew fonts"
-
-fonts=(
-  "font-fira-mono"
-  "font-quicksand"
-)
+echo "Installing Homebrew cask packages"
 
 brew tap caskroom/fonts
 
-for font in "${fonts[@]}"; do
-  brew cask install "$font"
-done
-
-
-# ==================================================================
-# APPS
-# ==================================================================
-
-echo "Installing Homebrew cask apps"
-
-homebrew_cask_apps=(
+homebrew_cask_packages=(
   "hyper"
   "google-chrome"
   "1password"
   "rescuetime"
   "kap"
+  "font-fira-mono"
+  "font-quicksand"
 )
-
-for homebrew_cask_app in "${homebrew_cask_apps[@]}"; do
-  brew cask install "$homebrew_cask_app"
+for homebrew_cask_package in "${homebrew_cask_packages[@]}"; do
+  brew cask install "$homebrew_cask_package"
 done
 
 
