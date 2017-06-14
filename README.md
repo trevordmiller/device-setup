@@ -62,6 +62,13 @@ _Most things are taken care of automatically with the set up script ^, but some 
   - Add API key to `~/.wakatime.cfg`
 - Kap
   - Save to (`/Downloads`)
+- Spotify
+  - High quality streaming (on)
+  - Show unavailable songs in playlists (on)
+  - Show sponsored songs (off)
+  - Show friends feed (off)
+  - Auto play similar songs when your music ends (off)
+  - Open Spotify automatically on login (off)
 
 Then, restart desktop.
 

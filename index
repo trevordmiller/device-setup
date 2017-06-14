@@ -84,6 +84,7 @@ homebrew_cask_packages=(
   "1password"
   "rescuetime"
   "kap"
+  "spotify"
   "font-fira-mono"
   "font-quicksand"
 )
