@@ -5,16 +5,37 @@ task="Opening apps and websites to check"
 
 script-log state "$task"
 
-items=(
-  "https://todoist.com"
-  "https://www.icloud.com/#calendar"
+work_items=(
+  "https://todoist.com/app?lang=en#agenda%2F%23work%20%26%20today"
   "https://calendar.google.com/calendar/b/1/render?pli=1"
-  "https://www.icloud.com/#mail"
   "https://mail.google.com/mail/u/1"
   "http://roederstudios.slack.com/"
+)
+
+personal_items=(
+  "https://todoist.com"
+  "https://www.icloud.com/#calendar"
+  "https://www.icloud.com/#mail"
   "https://utahjavascript.slack.com"
+  "https://twitter.com"
+  "https://www.facebook.com"
   "/Applications/Messages.app"
 )
+
+if [[ $(date +%u) -lt 6 ]] ; then
+  HOUR=$(date +%H)
+  if (( 9 <= 10#$HOUR && 10#$HOUR < 17 )); then 
+    echo 'Opening work items to check'
+    items=("${work_items[@]}")
+  else
+    echo 'Opening personal items to check'
+    items=("${personal_items[@]}")
+  fi
+else
+  echo 'Opening personal items to check'
+  items=("${personal_items[@]}")
+fi
+
 for item in "${items[@]}"; do
   open "$item"
 done
