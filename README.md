@@ -4,8 +4,8 @@ Trevor's settings
 
 # Desktop setup
 
-- Clone this repo into `~/`
-- Run set up script: `sudo ~/settings/index`
+- Clone this repo into `~/projects`
+- Run set up script: `sudo ~/projects/settings/index`
 
 _Most things are taken care of automatically with the set up script ^, but some manual items are needed:_
 

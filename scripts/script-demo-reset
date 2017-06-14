@@ -5,7 +5,7 @@ task="Reverting terminal and editor settings to normal"
 
 script-log state "$task"
 
-cd "$HOME"/settings/dotfiles
+cd "$HOME"/projects/settings/dotfiles
 git checkout .hyper.js .vimrc
 
 sleep 3

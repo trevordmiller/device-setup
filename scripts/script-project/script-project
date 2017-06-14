@@ -6,7 +6,7 @@ task="Generating a project"
 script-log state "$task"
 
 # VARIABLES
-template_path=$HOME/settings/scripts/script-project/
+template_path=$HOME/projects/settings/scripts/script-project/
 user_name="trevordmiller"
 user_full_name="Trevor D. Miller"
 user_website="https://trevordmiller.com"

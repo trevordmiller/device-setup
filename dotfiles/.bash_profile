@@ -2,8 +2,8 @@
 # PATH
 # ==================================================================
 
-SCRIPTS_PATH="$HOME/settings/scripts"
-SCRIPT_PROJECT_PATH="$HOME/settings/scripts/script-project"
+SCRIPTS_PATH="$HOME/projects/settings/scripts"
+SCRIPT_PROJECT_PATH="$HOME/projects/settings/scripts/script-project"
 HOMEBREW_PATH="/usr/local/bin"
 YARN_PATH="$HOME/.yarn/bin"
 export PATH="$PATH:$SCRIPTS_PATH:$SCRIPT_PROJECT_PATH:$HOMEBREW_PATH:$YARN_PATH"
