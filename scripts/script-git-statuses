@@ -5,7 +5,7 @@ task="Checking status of all git repos"
 
 script-log state "$task"
 
-cd "$HOME"
+cd "$HOME/projects"
 find . -path "*/.git" -print -execdir git status ";"
 
 script-log state "DONE $task"
