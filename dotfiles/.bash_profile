@@ -5,8 +5,7 @@
 SCRIPTS_PATH="$HOME/projects/settings/scripts"
 SCRIPT_PROJECT_PATH="$HOME/projects/settings/scripts/script-project"
 HOMEBREW_PATH="/usr/local/bin"
-YARN_PATH="$HOME/.yarn/bin"
-export PATH="$PATH:$SCRIPTS_PATH:$SCRIPT_PROJECT_PATH:$HOMEBREW_PATH:$YARN_PATH"
+export PATH="$PATH:$SCRIPTS_PATH:$SCRIPT_PROJECT_PATH:$HOMEBREW_PATH"
 
 
 # ==================================================================
@@ -44,6 +43,6 @@ export EDITOR="$VISUAL"
 # ALIASES
 # ==================================================================
 
-alias grep='grep -I --color=auto --exclude-dir={.git,node_modules,build,lib,.next,__snapshots__} --exclude=yarn.lock'
+alias grep='grep -I --color=auto --exclude-dir={.git,node_modules,build,lib,.next,__snapshots__} --exclude=package-lock.json'
 alias ls='ls -G'
 alias less='less -R'

@@ -43,19 +43,18 @@ grep -rl '%substitute' . --exclude-dir=node_modules | xargs sed -i '' \
 -e "s|%substitute_project_description|$project_description|g" 
 
 # DEPENDENCIES
-touch yarn.lock
-yarn add --dev eslint jest
+npm install -D eslint jest
 case "$project_type" in 
   "library" ) 
-    yarn add --dev babel-cli babel-preset-env
+    npm install -D babel-cli babel-preset-env
     ;; 
   "web-app" ) 
-    yarn add --dev eslint-plugin-react babel-preset-env babel-preset-react now
-    yarn add react react-dom next
+    npm install -D eslint-plugin-react babel-preset-env babel-preset-react now
+    npm install react react-dom next
     ;; 
   "service" ) 
-    yarn add --dev node-fetch nodemon now
-    yarn add micro
+    npm install -D node-fetch nodemon now
+    npm install micro
     ;; 
 esac
 
@@ -78,19 +77,19 @@ open "https://travis-ci.org/$user_name/$project_name"
 # RELEASE
 case "$project_type" in 
   "library" ) 
-    yarn release
+    npm run release
     open "https://www.npmjs.com/package/$project_name"
     ;; 
   "web-app" )
-    yarn stage
+    npm run stage
     open "$(pbpaste)"
-    yarn release
+    npm run release
     open "https://$project_name.now.sh"
     ;;
   "service" )
-    yarn stage
+    npm run stage
     open "$(pbpaste)"
-    yarn release
+    npm run release
     open "https://$project_name.now.sh"
     ;;
 esac

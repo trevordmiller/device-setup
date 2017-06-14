@@ -3,8 +3,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon --exec micro",
-    "test:watch": "yarn test -- --watch",
-    "verify": "yarn test && yarn lint",
+    "test:watch": "npm test -- --watch",
+    "verify": "npm test && npm run lint",
     "test": "jest .",
     "lint": "eslint .",
     "stage": "git checkout master && git pull && now",

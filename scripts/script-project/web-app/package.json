@@ -2,8 +2,8 @@
   "name": "%substitute_project_name",
   "scripts": {
     "dev": "next",
-    "test:watch": "yarn test -- --watch",
-    "verify": "yarn test && yarn lint && yarn build",
+    "test:watch": "npm test -- --watch",
+    "verify": "npm test && npm run lint && npm run build",
     "test": "jest .",
     "lint": "eslint .",
     "build": "next build",
