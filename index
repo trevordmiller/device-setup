@@ -31,6 +31,7 @@ homebrew_packages=(
   "git"
   "node"
   "n"
+  "mas"
 )
 for homebrew_package in "${homebrew_packages[@]}"; do
   brew install "$homebrew_package"
@@ -90,6 +91,15 @@ homebrew_cask_packages=(
 )
 for homebrew_cask_package in "${homebrew_cask_packages[@]}"; do
   brew cask install "$homebrew_cask_package"
+done
+
+echo "Installing Mac App Store apps"
+
+mac_app_store_apps=(
+  "585829637" # Todoist
+)
+for mac_app_store_app in "${mac_app_store_apps[@]}"; do
+  mas install "$mac_app_store_app"
 done
 
 

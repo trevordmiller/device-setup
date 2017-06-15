@@ -50,6 +50,9 @@ _Most things are taken care of automatically with the set up script ^, but some 
   - Alert volume (full)
 - Sound
   - Show volume in menu bar (on)
+- Todoist
+  - Show in menu bar (off)
+  - Show badge in dock icon (off)
 - Chrome
   - Set as default browser
   - Sign in with Google Account

@@ -1,25 +1,23 @@
 #!/bin/bash
 set -euo pipefail
 
-task="Opening apps and websites to check"
+task="Opening apps and websites to check based on day/time"
 
 script-log state "$task"
 
 work_items=(
-  "https://todoist.com/app?lang=en#agenda%2F%23work%20%26%20today"
-  "https://calendar.google.com/calendar/b/1/render?pli=1"
-  "https://mail.google.com/mail/u/1"
-  "http://roederstudios.slack.com/"
+  "https://calendar.google.com"
+  "https://mail.google.com"
+  "https://roederstudios.slack.com"
 )
 
 personal_items=(
-  "https://todoist.com"
+  "/Applications/Messages.app"
   "https://www.icloud.com/#calendar"
   "https://www.icloud.com/#mail"
   "https://utahjavascript.slack.com"
   "https://twitter.com"
   "https://www.facebook.com"
-  "/Applications/Messages.app"
 )
 
 if [[ $(date +%u) -lt 6 ]] ; then
