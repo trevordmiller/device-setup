@@ -73,9 +73,8 @@ set synmaxcol=200
 
 call plug#begin('~/.vim/plugged')
 
-" COLOR SCHEMES
+" COLOR SCHEME
 Plug 'trevordmiller/nova-vim'
-Plug 'rakr/vim-one'
 
 " EXTENDED LANGUAGES
 Plug 'othree/html5.vim'
@@ -105,7 +104,7 @@ call plug#end()
 " PLUGIN CONFIG
 " ==================================================================
 
-" COLOR SCHEMES
+" COLOR SCHEME
 colorscheme nova
 
 " EXTENDED LANGUAGES
