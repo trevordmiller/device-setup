@@ -92,6 +92,9 @@ Plug 'KeyboardFire/vim-minisnip'
 " INLINE LINTING
 Plug 'w0rp/ale'
 
+" INLINE FORMATTING
+Plug 'mitermayer/vim-prettier'
+
 " TIME TRACKING
 Plug 'wakatime/vim-wakatime'
 
