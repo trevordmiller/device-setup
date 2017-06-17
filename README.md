@@ -57,7 +57,7 @@ _Most things are taken care of automatically with the set up script ^, but some 
   - Set as default browser
   - Sign in with Google Account
   - Extensions
-    - Confirm install (1Password, Grammarly, React DevTools)
+    - Confirm install (1Password, Grammarly, React DevTools, Apollo DevTools)
     - Sign in
     - Hide icons in Chrome menu
   - Safe search (on, locked)
