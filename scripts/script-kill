@@ -11,4 +11,7 @@ killall node || true
 # TMUX SERVERS
 tmux kill-server || true
 
+# POSTGRES SERVERS
+pkill postgres || true
+
 script-log state "DONE $task"
