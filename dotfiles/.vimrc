@@ -91,6 +91,9 @@ Plug 'KeyboardFire/vim-minisnip'
 " INLINE LINTING
 Plug 'w0rp/ale'
 
+" INLINE TYPE CHECKING
+Plug 'flowtype/vim-flow'
+
 " INLINE FORMATTING
 Plug 'mitermayer/vim-prettier'
 
@@ -112,3 +115,12 @@ let g:jsx_ext_required = 0
 
 " SNIPPETS
 let g:minisnip_dir = '~/projects/settings/dotfiles/.snippets/'
+
+" INLINE TYPE CHECKING
+let local_flow = finddir('node_modules', '.;') . '/.bin/flow'
+if matchstr(local_flow, "^\/\\w") == ''
+  let local_flow= getcwd() . "/" . local_flow
+endif
+if executable(local_flow)
+  let g:flow#flowpath = local_flow
+endif
