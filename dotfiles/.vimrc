@@ -43,8 +43,8 @@ let g:netrw_localrmdir='rm -r'
 set wildmenu
 
 " PATTERN IGNORING
-set wildignore+=*.zip,*.png,*.jpg,*.gif,*.pdf,*DS_Store*,*/.git/*,*/node_modules/*,*/build/*,*/lib/*,*/.next/*,*/__snapshots__/*,package-lock.json
-set grepprg=grep\ -In\ --exclude-dir={.git,node_modules,build,lib,.next,__snapshots__}\ --exclude=package-lock.json
+set wildignore+=*.zip,*.png,*.jpg,*.gif,*.pdf,*DS_Store*,*/.git/*,*/node_modules/*,*/build/*,*/lib/*,*/.next/*,*/__snapshots__/*,*/flow-typed/*,package-lock.json
+set grepprg=grep\ -In\ --exclude-dir={.git,node_modules,build,lib,.next,__snapshots__,flow-typed}\ --exclude=package-lock.json
 
 " SPELLCHECK
 set spelllang=en
