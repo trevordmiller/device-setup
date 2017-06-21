@@ -1,0 +1,9 @@
+#!/bin/bash
+set -euo pipefail
+
+cd ~
+tmux new-session -d -s trevordmiller
+script-tmux-window "snout-web" "projects/snout/apps/snout_web" 4 "postgres -D /usr/local/var/postgres" "yarn dev" "yarn test:watch"
+tmux kill-window -t 0
+tmux select-window -t 1
+tmux attach-session -d
