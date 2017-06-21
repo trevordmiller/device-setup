@@ -12,7 +12,9 @@ work_workflow () {
   script-fullscreen
   open "/Applications/Spotify.app"
   open -a "/Applications/Google Chrome.app" --args --profile-directory="Profile 1"
-} 
+  open "https://trello.com/b/55pvbyFV/snout-dev"
+  open "http://localhost:4000"
+}
 
 personal_workflow () { 
   echo 'Opening personal workflow items'
