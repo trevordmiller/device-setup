@@ -1,7 +1,0 @@
-import React from 'react'
-import styled from 'styled-components';
-
-const {{+~expand('%:t:r')+}} = styled.{{+~\~1+}}`
-`
-
-export default {{+~\~2+}}

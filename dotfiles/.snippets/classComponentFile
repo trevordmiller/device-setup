@@ -1,4 +1,5 @@
-import React, {Component} from 'react'
+/* @flow */
+import React, { Component } from 'react'
 
 class {{+~expand('%:t:r')+}} extends Component {
 
@@ -7,7 +8,7 @@ class {{+~expand('%:t:r')+}} extends Component {
   }
 
   render() {
-    const {{{+~\~2+}}} = this.state
+    const { {{+~\~2+}} } = this.state
     return (
     )
   }

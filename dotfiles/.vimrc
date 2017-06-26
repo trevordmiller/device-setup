@@ -88,14 +88,8 @@ Plug 'tmhedberg/matchit'
 " SNIPPETS
 Plug 'KeyboardFire/vim-minisnip'
 
-" INLINE ERRORS
+" INLINE LINTING/TYPE CHECKING/FORMATTING
 Plug 'w0rp/ale'
-
-" TYPE CHECKING OMNIFUNC
-Plug 'flowtype/vim-flow'
-
-" INLINE FORMATTING
-Plug 'mitermayer/vim-prettier'
 
 " TIME TRACKING
 Plug 'wakatime/vim-wakatime'
@@ -116,17 +110,8 @@ let g:jsx_ext_required = 0
 " SNIPPETS
 let g:minisnip_dir = '~/projects/settings/dotfiles/.snippets/'
 
-" INLINE ERRORS
+" INLINE LINTING/TYPE CHECKING/FORMATTING
+autocmd BufWritePre *.{js} ALEFix
 let g:ale_linters = {
-\  'javascript': ['eslint', 'flow'],
+\  'javascript': ['eslint', 'flow', 'prettier'],
 \}
-
-" TYPE CHECKING OMNIFUNC
-let g:flow#enable = 0
-let local_flow = finddir('node_modules', '.;') . '/.bin/flow'
-if matchstr(local_flow, "^\/\\w") == ''
-  let local_flow= getcwd() . "/" . local_flow
-endif
-if executable(local_flow)
-  let g:flow#flowpath = local_flow
-endif

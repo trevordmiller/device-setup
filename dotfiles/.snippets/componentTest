@@ -1,0 +1,5 @@
+test('{{++}}', () => {
+  const output = mount(<{{++}} />)
+  const {{++}}Node = output.find('#{{+~\~1+}}')
+  expect({{+~\~2+}}Node.{{++}}).toBe({{++}})
+})
