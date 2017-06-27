@@ -111,7 +111,10 @@ let g:jsx_ext_required = 0
 let g:minisnip_dir = '~/projects/settings/dotfiles/.snippets/'
 
 " INLINE LINTING/TYPE CHECKING/FORMATTING
-autocmd BufWritePre *.{js} ALEFix
 let g:ale_linters = {
 \  'javascript': ['eslint', 'flow', 'prettier'],
 \}
+let g:ale_fixers = {
+\  'javascript': ['eslint', 'prettier'],
+\}
+autocmd BufWritePre *.{js} ALEFix
