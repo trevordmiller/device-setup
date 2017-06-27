@@ -12,6 +12,8 @@
   editor = vim
 [log]
   date = relative
+[format]
+  pretty = format:%C(yellow)%h %Cblue%>(15)%ad %Cgreen%<(15)%aN%Cred%d %Creset%s
 [help]
   autocorrect = 1
 [column]
