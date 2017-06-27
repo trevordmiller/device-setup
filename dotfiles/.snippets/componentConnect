@@ -3,3 +3,5 @@ export default graphql(gql`
 
   }
 `)({{+~expand('%:t:r')+}})
+import { graphql } from 'react-apollo'
+import gql from 'graphql-tag'
