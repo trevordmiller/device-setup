@@ -1,6 +1,0 @@
-/* @flow */
-import React from 'react'
-import { mount } from 'enzyme'
-import {{++}} from './{{+~expand('%:t:r:r')+}}'
-
-componentTest{{++}}

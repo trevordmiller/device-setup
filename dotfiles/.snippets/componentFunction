@@ -1,0 +1,14 @@
+/* @flow */
+import React from 'react'
+
+type Props = {
+
+}
+
+const {{+~expand('%:t:r')+}} = ({
+
+}: Props) => (
+
+)
+
+export default {{+~\~1+}}

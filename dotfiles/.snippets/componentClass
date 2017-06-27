@@ -1,17 +1,22 @@
 /* @flow */
 import React, { Component } from 'react'
 
+type Props = {
+
+}
+
 class {{+~expand('%:t:r')+}} extends Component {
+  props: Props
 
   state = {
-    {{++}}: {{++}},
+
   }
 
   render() {
-    const { {{+~\~2+}} } = this.state
     return (
+
     )
   }
 }
 
-export default {{+~\~4+}}
+export default {{+~\~1+}}

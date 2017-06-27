@@ -1,6 +1,0 @@
-const {{++}} = gql`
-  query/mutation {{+~\~1+}} {
-  }
-`
-
-export default graphql({{+~\~2+}})({{+~expand('%:t:r')+}})

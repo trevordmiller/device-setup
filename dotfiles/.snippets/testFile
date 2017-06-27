@@ -1,4 +1,0 @@
-/* @flow */
-import {{++}} from './{{+~expand('%:t:r:r')+}}'
-
-test{{++}}

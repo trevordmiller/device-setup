@@ -110,6 +110,7 @@ let g:jsx_ext_required = 0
 
 " SNIPPETS
 let g:minisnip_dir = '~/projects/settings/dotfiles/.snippets/'
+set dictionary=~/projects/settings/dotfiles/.snippets/index.txt
 
 " INLINE LINTING/TYPE CHECKING/FORMATTING
 let g:ale_linters = {
