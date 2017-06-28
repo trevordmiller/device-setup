@@ -119,4 +119,4 @@ let g:ale_linters = {
 let g:ale_fixers = {
 \  'javascript': ['eslint', 'prettier'],
 \}
-autocmd BufWritePre *.{js} ALEFix
+let g:ale_fix_on_save = 1
