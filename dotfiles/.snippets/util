@@ -1,5 +1,5 @@
 /* @flow */
 
-const {{+~expand('%:t:r')+}} = {{++}}
+const {{+~expand('%:p:h:t')+}} = {{++}}
 
 export default {{+~\~2+}}

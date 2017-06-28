@@ -2,6 +2,6 @@ export default graphql(gql`
   query/mutation {
 
   }
-`)({{+~expand('%:t:r')+}})
+`)({{+~expand('%:p:h:t')+}})
 import { graphql } from 'react-apollo'
 import gql from 'graphql-tag'
