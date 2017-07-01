@@ -95,7 +95,9 @@ Then, restart desktop.
   - Phone
   - Mail
   - Anki
+    - Sync with AnkiWeb
   - Gospel Library
+    - Sign in and sync notes/highlights
     - Download items (scriptures, past few conferences)
   - Instapaper
     - Image thumbnails (off)
