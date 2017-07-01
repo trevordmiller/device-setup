@@ -6,14 +6,14 @@ task="Opening apps and websites to check based on day/time"
 script-log state "$task"
 
 work_items=(
-  "https://calendar.google.com"
+  "/Applications/Calendar.app"
   "https://mail.google.com"
   "https://roederstudios.slack.com"
 )
 
 personal_items=(
+  "/Applications/Calendar.app"
   "/Applications/Messages.app"
-  "https://www.icloud.com/#calendar"
   "https://www.icloud.com/#mail"
   "https://utahjavascript.slack.com"
   "https://twitter.com"

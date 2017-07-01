@@ -34,7 +34,7 @@ _Most things are taken care of automatically with the set up script ^, but some 
   - Login (on)
   - Apple Pay (on)
 - iCloud
-  - disable everything except Photos, Contacts, Keychain, and Find My Mac)
+  - disable everything except Calendar, Photos, Contacts, Keychain, and Find My Mac)
 - Notification Center
   - Do Not Disturb
     - Scheduled (on, from 11pm-7am)
@@ -53,9 +53,15 @@ _Most things are taken care of automatically with the set up script ^, but some 
 - Todoist
   - Show in menu bar (off)
   - Show badge in dock icon (off)
+- Calendar
+  - Add "Personal" and "Work" accounts
+  - Start week on (Sunday)
+  - Alerts (10 minutes before)
+  - Time to leave (on)
+  - Show shared calendar messages in notification center (off)
 - Chrome
   - Set as default browser
-  - Sign in with Google Account
+  - Create "Personal" and "Work" users, signed in to the related google account
   - Extensions
     - Confirm install (1Password, Grammarly, React DevTools, Apollo DevTools)
     - Sign in
@@ -84,6 +90,7 @@ Then, restart desktop.
 - `Applications` folder
   - Todoist
   - Calendar
+    - Add "Personal" and "Work" accounts
   - Messages
   - Phone
   - Mail
