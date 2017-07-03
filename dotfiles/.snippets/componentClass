@@ -5,10 +5,14 @@ type Props = {
 
 }
 
+type State = {
+
+}
+
 class {{+~expand('%:p:h:t')+}} extends Component {
   props: Props
 
-  state = {
+  state: State = {
 
   }
 
