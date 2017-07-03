@@ -1,0 +1,14 @@
+#!/bin/bash
+set -euo pipefail
+
+task="Starting personal workflow"
+
+script-log state "$task"
+
+open "/Applications/Todoist.app"
+open "/Applications/Hyper.app"
+script-fullscreen
+open "/Applications/Spotify.app"
+open -a "/Applications/Google Chrome.app" --args --profile-directory="Default"
+
+script-log state "DONE $task"

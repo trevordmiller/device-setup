@@ -1,0 +1,23 @@
+#!/bin/bash
+set -euo pipefail
+
+task="Opening personal apps and websites to check based on day/time"
+
+script-log state "$task"
+
+items=(
+  "/Applications/Calendar.app"
+  "/Applications/Messages.app"
+  "https://www.icloud.com/#mail"
+  "https://utahjavascript.slack.com"
+  "https://twitter.com"
+  "https://www.facebook.com"
+)
+
+open -a "/Applications/Google Chrome.app" --args --profile-directory="Default"
+
+for item in "${items[@]}"; do
+  open "$item"
+done
+
+script-log state "DONE $task"

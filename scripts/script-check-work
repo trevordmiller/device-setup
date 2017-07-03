@@ -1,0 +1,19 @@
+#!/bin/bash
+set -euo pipefail
+
+task="Opening work apps and websites to check"
+
+script-log state "$task"
+
+items=(
+  "/Applications/Calendar.app"
+  "https://mail.google.com"
+  "https://roederstudios.slack.com"
+)
+
+open -a "/Applications/Google Chrome.app" --args --profile-directory="Profile 1"
+for item in "${items[@]}"; do
+  open "$item"
+done
+
+script-log state "DONE $task"
