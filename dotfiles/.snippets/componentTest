@@ -1,7 +1,7 @@
 /* @flow */
 import React from 'react'
 import { mount } from 'enzyme'
-import {{++}} from './{{+~expand('%:p:h:t')+}}'
+import {{+~expand('%:p:h:t')+}} from '.'
 
 test('{{++}}', () => {
   const output = mount(<{{++}} />)
