@@ -12,6 +12,9 @@ brew upgrade
 script-log state "Upgrading Node"
 n latest
 
+script-log state "Upgrading npm"
+npm install npm@latest -g
+
 script-log state "Upgrading Vim plugins"
 vim +PlugUpgrade +PlugUpdate +PlugClean +qall
 
