@@ -7,8 +7,8 @@ script-log state "$task"
 
 items=(
   "/Applications/Calendar.app"
+  "/Applications/Slack.app"
   "https://mail.google.com"
-  "https://roederstudios.slack.com"
 )
 
 open -a "/Applications/Google Chrome.app" --args --profile-directory="Profile 1"
