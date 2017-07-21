@@ -8,6 +8,7 @@ script-log state "$task"
 items=(
   "/Applications/Calendar.app"
   "/Applications/Messages.app"
+  "/Applications/Photos.app"
   "https://www.icloud.com/#mail"
   "https://app.youneedabudget.com/"
   "https://twitter.com"
