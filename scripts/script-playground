@@ -1,9 +1,0 @@
-#!/bin/bash
-set -euo pipefail
-
-cd ~
-tmux new-session -d -s playground
-script-tmux-window "playground" "projects/playground"
-tmux kill-window -t 0
-tmux select-window -t 1
-tmux attach-session -d 

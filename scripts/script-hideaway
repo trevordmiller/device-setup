@@ -1,9 +1,0 @@
-#!/bin/bash
-set -euo pipefail
-
-cd ~
-tmux new-session -d -s hideaway
-script-tmux-window "hideaway" "projects/hideaway" 2 "npm run dev"
-tmux kill-window -t 0
-tmux select-window -t 1
-tmux attach-session -d 

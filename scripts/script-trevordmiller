@@ -1,9 +1,0 @@
-#!/bin/bash
-set -euo pipefail
-
-cd ~
-tmux new-session -d -s trevordmiller
-script-tmux-window "trevordmiller-website" "projects/trevordmiller-website" 2 "npm run dev"
-tmux kill-window -t 0
-tmux select-window -t 1
-tmux attach-session -d 

@@ -5,7 +5,7 @@ Trevor's settings
 # Desktop setup
 
 - Clone this repo into `~/projects`
-- Run set up script: `sudo ~/projects/settings/index`
+- Run set up script: `sudo ~/projects/device-setup/index`
 
 _Most things are taken care of automatically with the set up script ^, but some manual items are needed:_
 
