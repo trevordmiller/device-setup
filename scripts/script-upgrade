@@ -10,7 +10,7 @@ brew update
 brew upgrade
 
 script-log state "Upgrading Node"
-n latest
+sudo n latest
 
 script-log state "Upgrading npm"
 npm install npm@latest -g
