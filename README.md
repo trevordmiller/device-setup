@@ -1,6 +1,6 @@
-# settings
+# device-setup
 
-Trevor's settings
+Trevor's device setup
 
 # Desktop setup
 

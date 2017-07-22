@@ -3,11 +3,22 @@ set -euo pipefail
 
 
 # ==================================================================
+# SHELL SCRIPTS
+# ==================================================================
+
+cd ~/projects
+git clone https://github.com/trevordmiller/shell-scripts.git
+
+
+# ==================================================================
 # DOTFILES
 # ==================================================================
 
-git clone https://github.com/trevordmiller/dotfiles.git ~/projects
-~/projects/dotfiles/index
+cd ~/projects
+git clone https://github.com/trevordmiller/dotfiles.git
+cd dotfiles
+./index
+cd ~
 
 
 # ==================================================================
