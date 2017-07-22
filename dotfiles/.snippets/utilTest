@@ -1,6 +1,0 @@
-/* @flow */
-import {{+~expand('%:p:h:t')+}} from '.'
-
-test('{{++}}', () => {
-  expect({{++}}).{{+toBe+}}({{++}})
-})

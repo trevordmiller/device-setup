@@ -6,10 +6,8 @@ set -euo pipefail
 # DOTFILES
 # ==================================================================
 
-echo "Symlinking dotfiles"
-for file in $(find "$HOME/settings/dotfiles" -depth 1 -exec basename {} \;); do
-  ln -s "$HOME/settings/dotfiles/$file" "$HOME/$file"
-done
+git clone https://github.com/trevordmiller/dotfiles.git ~/projects
+~/projects/dotfiles/index
 
 
 # ==================================================================
