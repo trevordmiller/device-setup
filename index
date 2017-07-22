@@ -97,6 +97,7 @@ echo "Installing Mac App Store apps"
 
 mac_app_store_apps=(
   "585829637" # Todoist
+  "1055511498" # Day One
 )
 for mac_app_store_app in "${mac_app_store_apps[@]}"; do
   mas install "$mac_app_store_app"
