@@ -1,0 +1,91 @@
+#!/bin/bash
+set -euo pipefail
+
+# VARIABLES
+template_path=$HOME/projects/shell-scripts/scripts/create-js-project/
+user_name="trevordmiller"
+user_full_name="Trevor D. Miller"
+user_website="https://trevordmiller.com"
+project_year=$(date +"%Y")
+project_type=$1
+project_name=$2
+project_description=$3
+
+# ROOT DIRECTORY
+mkdir "$project_name"
+cd "$project_name"
+
+# INITIAL FILES/DEPENDENCIES
+cp -a "$template_path"/shared/. ./
+case "$project_type" in 
+  "library" ) 
+    cp -a "$template_path"/library/. ./
+    ;; 
+  "web-app" ) 
+    cp -a "$template_path"/web-app/. ./
+    ;; 
+  "service" ) 
+    cp -a "$template_path"/service/. ./
+    ;; 
+esac
+
+# INSTANCE SUBSTITUTION
+grep -rl '%substitute' . --exclude-dir=node_modules | xargs sed -i '' \
+-e "s|%substitute_user_name|$user_name|g" \
+-e "s|%substitute_user_full_name|$user_full_name|g" \
+-e "s|%substitute_user_website|$user_website|g" \
+-e "s|%substitute_project_year|$project_year|g" \
+-e "s|%substitute_project_name|$project_name|g" \
+-e "s|%substitute_project_description|$project_description|g" 
+
+# DEPENDENCIES
+npm install -D eslint jest
+case "$project_type" in 
+  "library" ) 
+    npm install -D babel-cli babel-preset-env
+    ;; 
+  "web-app" ) 
+    npm install -D eslint-plugin-react babel-preset-env babel-preset-react now
+    npm install react react-dom next
+    ;; 
+  "service" ) 
+    npm install -D node-fetch nodemon now
+    npm install micro
+    ;; 
+esac
+
+# SOURCE CONTROL
+git init
+git add -A
+git commit -m "Scaffold project"
+echo "Enter GitHub 2fa password"
+curl -u "$user_name" https://api.github.com/user/repos -d "{\"name\":\"$project_name\", \"description\":\"$project_description\"}"
+sleep 3
+git remote add origin https://github.com/"$user_name"/"$project_name".git
+git push -u origin master
+open "https://github.com/$user_name/$project_name"
+
+# CONTINUOUS INTEGRATION
+travis enable -r "$user_name"/"$project_name"
+sleep 3
+open "https://travis-ci.org/$user_name/$project_name"
+
+# RELEASE
+case "$project_type" in 
+  "library" ) 
+    npm run release
+    open "https://www.npmjs.com/package/$project_name"
+    ;; 
+  "web-app" )
+    npm run stage
+    open "$(pbpaste)"
+    npm run release
+    open "https://$project_name.now.sh"
+    ;;
+  "service" )
+    npm run stage
+    open "$(pbpaste)"
+    npm run release
+    open "https://$project_name.now.sh"
+    ;;
+esac

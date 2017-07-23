@@ -1,0 +1,11 @@
+#!/bin/bash
+set -euo pipefail
+
+# NODE SERVERS
+killall node || true
+
+# TMUX SERVERS
+tmux kill-server || true
+
+# POSTGRES SERVERS
+pkill postgres || true

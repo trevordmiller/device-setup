@@ -1,0 +1,5 @@
+#!/bin/bash
+set -euo pipefail
+
+cd "$HOME/projects"
+find . -path "*/.git" -print -execdir git status ";"

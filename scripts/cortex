@@ -1,0 +1,11 @@
+#!/bin/bash
+set -euo pipefail
+
+cd ~
+tmux new-session -d -s cortex
+tmux-window "cortex-api" "projects/cortex-api" 3 "npm run dev" "npm test:watch"
+tmux-window "cortex-components" "projects/cortex-components" 3 "npm run dev" "npm run test:watch"
+tmux-window "cortex-clients" "projects/cortex-clients" 3 "npm run dev" "npm test"
+tmux kill-window -t 0
+tmux select-window -t 1
+tmux attach-session -d 

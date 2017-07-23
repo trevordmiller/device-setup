@@ -1,0 +1,16 @@
+#!/bin/bash
+set -euo pipefail
+IFS=$'\n\t'
+
+# Remove merged git branches and stale remote references other than master and the current branch in each git directory
+set +e
+LOCAL_BRANCHES=$(git branch --merged master | grep -v -e 'master' -e '\*' | tr -d ' ')
+set -e
+
+if [[ -n "$LOCAL_BRANCHES" ]]; then
+  for BRANCH in $LOCAL_BRANCHES; do
+    git branch -d "$BRANCH"
+  done
+fi
+
+git remote prune origin

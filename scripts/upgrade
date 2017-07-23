@@ -1,0 +1,21 @@
+#!/bin/bash
+set -euo pipefail
+
+echo "Upgrading Homebrew + brew packages"
+brew update
+brew upgrade
+
+echo "Upgrading Node"
+sudo n latest
+
+echo "Upgrading npm"
+npm install npm@latest -g
+
+echo "Upgrading Vim plugins"
+vim +PlugUpgrade +PlugUpdate +PlugClean +qall
+
+echo "Upgrading Mac App Store apps"
+mas upgrade
+
+echo "Upgrading macOS"
+sudo softwareupdate -ia

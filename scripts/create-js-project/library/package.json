@@ -1,0 +1,48 @@
+{
+  "name": "%substitute_project_name",
+  "version": "0.1.0",
+  "description": "%substitute_project_description",
+  "keywords": [
+  ],
+  "repository": "%substitute_user_name/%substitute_project_name",
+  "author": "%substitute_user_full_name (%substitute_user_website)",
+  "license": "MIT",
+  "main": "build/index.js",
+  "files": [
+    "package.json",
+    "build"
+  ],
+  "scripts": {
+    "dev": "npm run build -- --watch",
+    "test:watch": "npm test -- --watch",
+    "verify": "npm test && npm run lint && npm run build",
+    "test": "jest src",
+    "lint": "eslint src",
+    "build": "babel src -d build -i '**/*.test.js'",
+    "release": "git checkout master && git pull && npm version && npm run build && git push && git push --tags && npm publish"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "eslintConfig": {
+    "extends": "eslint:recommended",
+    "env": {
+      "es6": true,
+      "node": true,
+      "jest": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 2017,
+      "sourceType": "module"
+    }
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  },
+  "devDependencies": {
+  },
+  "dependencies": {
+  }
+}

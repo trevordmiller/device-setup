@@ -1,0 +1,11 @@
+#!/bin/bash
+set -euo pipefail
+
+open "/Applications/Todoist.app"
+open "/Applications/Hyper.app"
+fullscreen
+open "/Applications/Slack.app"
+open "/Applications/Spotify.app"
+open -a "/Applications/Google Chrome.app" --args --profile-directory="Profile 1"
+open "https://trello.com/b/55pvbyFV/snout-dev"
+open "http://localhost:4000"

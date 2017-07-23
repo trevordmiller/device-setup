@@ -1,0 +1,9 @@
+#!/bin/bash
+set -euo pipefail
+
+sleep 3
+osascript <<EOD
+  tell application "System Events"
+    keystroke "f" using {command down, control down}
+  end tell
+EOD

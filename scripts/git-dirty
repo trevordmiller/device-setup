@@ -1,0 +1,18 @@
+#!/bin/bash
+set -euo pipefail
+
+cd "$HOME"
+output=$(git-statuses | grep \
+-e "Untracked files:" \
+-e "Changes not staged for commit:"  \
+-e "Changes to be committed:" \
+-e "Your branch is ahead" \
+)
+
+if [ -z "$output" ]
+then 
+  echo "All git repos are in a finished state"
+else
+  echo "TODO: Commit dirty git repos!"
+  git-statuses
+fi

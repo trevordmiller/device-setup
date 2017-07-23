@@ -1,0 +1,14 @@
+#!/bin/bash
+set -euo pipefail
+
+# Remove unused homebrew artifacts
+brew cleanup
+brew cask cleanup
+
+# Remove .DS_Store files
+find "$HOME" -name '.DS_Store' -delete
+rm -rf "$HOME"/Downloads/*
+
+# Remove unused git branches
+cd "$HOME/projects"
+find . -path "*/.git" -print -execdir git-clean ";"
