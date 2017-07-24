@@ -2,6 +2,7 @@
 set -euo pipefail
 
 items=(
+  "/Applications/Todoist.app"
   "/Applications/Calendar.app"
   "/Applications/Slack.app"
   "https://mail.google.com"
