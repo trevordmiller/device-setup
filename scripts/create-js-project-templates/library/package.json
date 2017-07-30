@@ -18,6 +18,8 @@
     "verify": "npm test && npm run lint && npm run build",
     "test": "jest src",
     "lint": "eslint src",
+    "format": "prettier --no-semi --single-quote --trailing-comma es5 --write '{src}/**/*.js'",
+    "precommit": "npm run format",
     "build": "babel src -d build -i '**/*.test.js'",
     "release": "git checkout master && git pull && npm version && npm run build && git push && git push --tags && npm publish"
   },

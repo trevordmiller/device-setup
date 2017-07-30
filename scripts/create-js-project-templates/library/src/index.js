@@ -1,3 +1,3 @@
-import helloWorldSource from './helloWorld'
+import helloWorldSource from './utils/helloWorld'
 
 export const helloWorld = helloWorldSource
