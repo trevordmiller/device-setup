@@ -1,14 +1,21 @@
 #!/bin/bash
 set -euo pipefail
 
-items=(
-  "/Applications/Todoist.app"
-  "/Applications/Calendar.app"
-  "/Applications/Slack.app"
+websites=(
   "https://mail.google.com"
 )
 
-open -a "/Applications/Google Chrome.app" --args --profile-directory="Profile 1"
-for item in "${items[@]}"; do
-  open "$item"
+open -a "Google Chrome" --args --profile-directory="Profile 1"
+for website in "${websites[@]}"; do
+  open "$website"
+done
+
+native_apps=(
+  "Todoist"
+  "Calendar"
+  "Slack"
+)
+
+for native_app in "${native_apps[@]}"; do
+  open -a "$native_app"
 done

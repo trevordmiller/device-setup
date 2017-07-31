@@ -1,8 +1,8 @@
 #!/bin/bash
 set -euo pipefail
 
-open "/Applications/Todoist.app"
-open "/Applications/Hyper.app"
+open -a "Todoist"
+open -a "Hyper"
 fullscreen
-open "/Applications/Spotify.app"
-open -a "/Applications/Google Chrome.app" --args --profile-directory="Default"
+open -a "Spotify"
+open -a "Google Chrome" --args --profile-directory="Default"
