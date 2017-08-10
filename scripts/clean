@@ -11,4 +11,4 @@ rm -rf "$HOME"/Downloads/*
 
 # Remove unused git branches
 cd "$HOME/projects"
-find . -path "*/.git" -print -execdir git-clean ";"
+find . -path "*/.git" -maxdepth 2 -print -execdir git-clean ";"
