@@ -2,4 +2,4 @@
 set -euo pipefail
 
 cd "$HOME/projects"
-find . -path "*/.git" -print -execdir git status ";"
+find . -path "*/.git" -maxdepth 2 -print -execdir git status ";"
