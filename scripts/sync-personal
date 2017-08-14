@@ -4,6 +4,7 @@ set -euo pipefail
 websites=(
   "https://www.icloud.com/#mail"
   "https://app.youneedabudget.com"
+  "http://www.myfitnesspal.com"
   "https://ankiweb.net"
   "https://twitter.com"
   "https://utahjavascript.slack.com"
