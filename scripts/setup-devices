@@ -97,7 +97,7 @@ echo "Installing Homebrew cask packages"
 brew tap caskroom/fonts
 
 homebrew_cask_packages=(
-  "hyper"
+  "iterm2"
   "google-chrome"
   "1password"
   "rescuetime"
