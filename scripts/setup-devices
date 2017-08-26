@@ -174,6 +174,7 @@ cat << EOF
 
 Most things are taken care of automatically with the set up script, but some manual items are needed:
 
+- Sync iTerm2 settings with `com.googlecode.iterm2.plist` dotfile
 - Text Message Forwarding (on, from iPhone)
 - Remove all dock icons
 - Delete unused factory Applications
