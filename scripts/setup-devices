@@ -101,7 +101,8 @@ homebrew_cask_packages=(
   "google-chrome"
   "1password"
   "rescuetime"
-  "kap"
+  "switchresx"
+  "screenflow"
   "spotify"
   "font-fira-mono"
   "font-quicksand"
@@ -235,8 +236,10 @@ Most things are taken care of automatically with the set up script, but some man
   - Safe search (on, locked)
 - WakaTime
   - Add API key to `~/.wakatime.cfg`
-- Kap
-  - Save to (`/Downloads`)
+- Screenflow
+  - Enter licence
+- SwitchResX
+  - Enter licence
 - Spotify
   - High quality streaming (on)
   - Show unavailable songs in playlists (on)
