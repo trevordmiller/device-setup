@@ -238,8 +238,11 @@ Most things are taken care of automatically with the set up script, but some man
   - Add API key to `~/.wakatime.cfg`
 - Screenflow
   - Enter licence
+  - Remove recording countdown
+  - Add audio driver for computer sound
 - SwitchResX
   - Enter licence
+  - Show only 1080p60 (HiDPI) and 720p60 (HiDPI) options
 - Spotify
   - High quality streaming (on)
   - Show unavailable songs in playlists (on)
