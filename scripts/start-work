@@ -2,7 +2,6 @@
 set -euo pipefail
 
 open -a "Todoist"
-open -a "Hideaway"
 open -a "iTerm"
 fullscreen
 open -a "Slack"
