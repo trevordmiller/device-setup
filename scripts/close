@@ -15,7 +15,7 @@ do
   appName=$(echo "$foregroundApp" | sed 's/^ *//g')
 
   # Avoid closing the "Finder" and tool running the script
-  if [[ ! "$appName" == "Finder" && ! "$appName" == "iTerm" ]]; then
+  if [[ ! "$appName" == "Finder" && ! "$appName" == "iTerm2" ]]; then
 
     # Quit the app
     osascript -e 'quit app "'"$appName"'"'
