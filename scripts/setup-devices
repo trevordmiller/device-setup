@@ -190,7 +190,11 @@ Most things are taken care of automatically with the set up script, but some man
   - Touch bar (app controls)
 - Users
   - Add avatar
-  - Login items (`RescueTime`, `Kap`)
+  - Login items (`RescueTime`)
+- Audio & video
+  - Video input: webcam camera
+  - Audio input: mic via XLR interface
+  - Audio output: DAC
 - Desktop & Screen Saver
   - Add desktop background
 - Finder
