@@ -173,8 +173,11 @@ defaults write com.google.chrome IncognitoModeAvailability -integer 1
 
 cat << EOF
 
+Most importantly, my task list (Todoist) is the only docked app and is the single source of truth linking to everything else. 
+
 Most things are taken care of automatically with the set up script, but some manual items are needed:
 
+- Todoist in dock as root, remove all other items from dock
 - Sync iTerm2 settings with `com.googlecode.iterm2.plist` dotfile
 - Text Message Forwarding (on, from iPhone)
 - Remove all dock icons
@@ -259,7 +262,8 @@ Then, restart desktop.
   - Silent toggle switch (on)
 - Desktop
   - [iPhone as 2fa option](https://appleid.apple.com)
-- `Applications` folder
+- Todoist in dock as root
+- `Applications` folder in dock with everything else
   - Todoist
   - Calendar
     - Add "Personal" and "Work" accounts
