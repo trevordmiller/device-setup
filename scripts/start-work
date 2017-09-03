@@ -3,7 +3,6 @@ set -euo pipefail
 
 open -a "Todoist"
 open -a "iTerm"
-fullscreen
 open -a "Slack"
 open -a "Spotify"
 open -a "Google Chrome" --args --profile-directory="Profile 1"
