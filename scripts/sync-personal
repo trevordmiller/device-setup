@@ -3,7 +3,6 @@ set -euo pipefail
 
 websites=(
   "https://www.icloud.com/#mail"
-  "https://mail.google.com/mail/u/1"
   "https://app.youneedabudget.com"
   "http://www.myfitnesspal.com"
   "https://ankiweb.net"
