@@ -2,7 +2,6 @@
 set -euo pipefail
 
 open -a "Todoist"
-open -a "iTerm"
-fullscreen
 open -a "Spotify"
 open -a "Google Chrome" --args --profile-directory="Default"
+open "https://github.com/issues?q=is%3Aopen+user%3Atrevordmiller"
