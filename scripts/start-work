@@ -2,8 +2,9 @@
 set -euo pipefail
 
 open -a "Todoist"
+open -a "Trello"
 open -a "Slack"
+open -a "Calendar"
 open -a "Spotify"
 open -a "Google Chrome" --args --profile-directory="Profile 1"
-open "https://trello.com/b/55pvbyFV/snout-dev"
 open "http://localhost:4000"

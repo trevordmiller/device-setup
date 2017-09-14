@@ -12,8 +12,9 @@ done
 
 native_apps=(
   "Todoist"
-  "Calendar"
+  "Trello"
   "Slack"
+  "Calendar"
 )
 
 for native_app in "${native_apps[@]}"; do
