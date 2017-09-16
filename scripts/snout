@@ -3,7 +3,7 @@ set -euo pipefail
 
 cd ~
 tmux new-session -d -s snout
-tmux-window "snout" "projects/snout/apps/snout_web/assets" 4 "npm run services" "npm run dev" "npm run test"
-tmux kill-window -t 0
+tmux-window "snout" "projects/snout/apps/snout_web/assets" 4 "npm run services" "sleep 5 && npm run dev" "npm run test:unit"
+tmux kill-window -t 1
 tmux select-window -t 1
 tmux attach-session -d
