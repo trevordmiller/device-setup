@@ -1,19 +1,6 @@
 #!/bin/bash
 set -euo pipefail
 
-osascript <<EOD
-tell application "iTerm"
-  make new terminal
-  tell the current terminal
-    activate current session
-    launch session "Default Session"
-    tell the last session
-      write text "ropig"
-    end tell
-  end tell
-end tell
-EOD
-
 open -a "Todoist"
 open -a "Trello"
 open -a "Slack"
