@@ -238,7 +238,7 @@ Most things are taken care of automatically with the set up script, but some man
   - Set as default browser
   - Create "Personal" and "Work" users, signed in to the related google account
   - Extensions
-    - Confirm install (1Password, Grammarly, React DevTools, Apollo DevTools)
+    - Confirm install (1Password, Grammarly, Vimium, React DevTools, Apollo DevTools)
     - Sign in
     - Hide icons in Chrome menu
   - Safe search (on, locked)
