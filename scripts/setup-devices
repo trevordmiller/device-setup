@@ -103,6 +103,10 @@ homebrew_cask_packages=(
   "rescuetime"
   "switchresx"
   "screenflow"
+  "zoomus"
+  "screenhero"
+  "java"
+  "google-cloud-sdk"
   "font-fira-mono"
   "font-quicksand"
 )
