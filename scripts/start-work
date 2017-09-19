@@ -1,10 +1,14 @@
 #!/bin/bash
 set -euo pipefail
 
-open -a "Todoist"
-open -a "Trello"
-open -a "Slack"
-open -a "Calendar"
-open -a "Spotify"
+websites=(
+  "https://todoist.com/app"
+  "https://open.spotify.com"
+  "https://roederstudios.slack.com"
+  "https://trello.com/b/55pvbyFV/ropig-dev"
+)
+
 open -a "Google Chrome" --args --profile-directory="Profile 1"
-open "http://localhost:4000"
+for website in "${websites[@]}"; do
+  open "$website"
+done

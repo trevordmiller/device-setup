@@ -1,7 +1,13 @@
 #!/bin/bash
 set -euo pipefail
 
-open -a "Todoist"
-open -a "Spotify"
+websites=(
+  "https://todoist.com/app"
+  "https://open.spotify.com"
+  "https://github.com/issues?q=is%3Aopen+user%3Atrevordmiller"
+)
+
 open -a "Google Chrome" --args --profile-directory="Default"
-open "https://github.com/issues?q=is%3Aopen+user%3Atrevordmiller"
+for website in "${websites[@]}"; do
+  open "$website"
+done
