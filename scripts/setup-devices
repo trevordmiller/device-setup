@@ -240,6 +240,9 @@ Most things are taken care of automatically with the set up script, but some man
   - Create "Personal" and "Work" users, signed in to the related google account
   - Extensions
     - Confirm install (1Password, Grammarly, Vimium, React DevTools, Apollo DevTools)
+    - Vimium custom mappings
+      - map <c-b> scrollFullPageUp
+      - map <c-f> scrollFullPageDown
     - Sign in
     - Hide icons in Chrome menu
   - Safe search (on, locked)
