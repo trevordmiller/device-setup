@@ -3,7 +3,7 @@ set -euo pipefail
 
 cd ~
 tmux new-session -d -s ropig
-tmux-window "ropig" "projects/snout/apps/snout_web/assets" 4 "npm run services" "sleep 10 && npm run dev" "npm run test:unit"
+tmux-window "ropig" "repos/snout/apps/snout_web/assets" 4 "npm run services" "sleep 10 && npm run dev" "npm run test:unit"
 tmux kill-window -t 0
 tmux select-window -t 1
 tmux attach-session -d

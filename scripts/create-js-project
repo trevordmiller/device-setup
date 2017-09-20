@@ -8,7 +8,7 @@ set -euo pipefail
 #   `{description}` should be a short description in quotes like `"A web app to say Hello World"`
 
 # VARIABLES
-template_path=$HOME/projects/shell-scripts/scripts/create-js-project-templates/
+template_path=$HOME/repos/shell-scripts/scripts/create-js-project-templates/
 user_name="trevordmiller"
 user_full_name="Trevor D. Miller"
 user_website="https://trevordmiller.com"

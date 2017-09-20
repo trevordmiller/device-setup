@@ -10,5 +10,5 @@ find "$HOME" -name '.DS_Store' -delete
 rm -rf "$HOME"/Downloads/*
 
 # Remove unused git branches
-cd "$HOME/projects"
+cd "$HOME/repos"
 find . -path "*/.git" -maxdepth 2 -print -execdir git-clean ";"

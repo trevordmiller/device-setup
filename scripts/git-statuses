@@ -1,5 +1,5 @@
 #!/bin/bash
 set -euo pipefail
 
-cd "$HOME/projects"
+cd "$HOME/repos"
 find . -path "*/.git" -maxdepth 2 -print -execdir git status ";"
