@@ -277,7 +277,10 @@ Then, restart desktop.
   - Add vault
   - Allow unlock with Face ID
   - Show in Safari share
-- Dock has Todoist as root and "Applications" folder with:
+- Dock has Todoist as root and "Applications" folder
+- Apps
+  - Todoist
+    - Turn off badge notifications for count
   - Phone
   - Messages
   - Calendar
@@ -321,6 +324,7 @@ Then, restart desktop.
   - Settings
 - Settings
   - Text message forwarding to desktop
+  - Send as SMS when iMessage is unavailable
   - Don't store passwords in Safari
   - Restrictions (on), explicit (off), movies (PG-13), TV Shows (TV-14), explicit Language (off), websites (Limit Adult Content)
   - Cellular turn off large media apps
