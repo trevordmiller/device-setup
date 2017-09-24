@@ -262,6 +262,11 @@ Most things are taken care of automatically with the set up script, but some man
   - Show friends feed (off)
   - Auto play similar songs when your music ends (off)
   - Open Spotify automatically on login (off)
+- Windows via Boot Camp Assistant
+  - Official ISO file from Microsoft
+  - 150gb partition
+  - Skip key
+  - Download Steam
 
 Then, restart desktop.
 
