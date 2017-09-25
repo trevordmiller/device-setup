@@ -231,8 +231,6 @@ Most things are taken care of automatically with the set up script, but some man
   - Show badge in dock icon (off)
 - Calendar
   - Add "Personal" and "Work" accounts
-  - Start week on (Sunday)
-  - Alerts (10 minutes before)
   - Time to leave (on)
   - Show shared calendar messages in notification center (off)
 - Chrome
@@ -289,6 +287,8 @@ Then, restart desktop.
   - Phone
   - Messages
   - Calendar
+    - Add "Personal" and "Work" accounts
+    - Show shared calendar messages in notification center (off)
   - Gospel Library
     - Sign in and sync highlights/notes
   - Feedly
