@@ -7,6 +7,8 @@ websites=(
   "https://mail.google.com"
   "https://roederstudios.slack.com"
   "https://trello.com/b/55pvbyFV/ropig-dev"
+  "https://app.bugsnag.com/lkr/ropig-front-end"
+  "https://app.asana.com/0/212309631908144"
 )
 
 open -a "Google Chrome" --args --profile-directory="Profile 1"
