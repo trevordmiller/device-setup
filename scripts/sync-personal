@@ -2,7 +2,6 @@
 set -euo pipefail
 
 websites=(
-  "https://todoist.com/app"
   "https://www.icloud.com/#calendar"
   "https://www.icloud.com/#mail"
   "https://app.youneedabudget.com"
@@ -23,6 +22,7 @@ for website in "${websites[@]}"; do
 done
 
 native_apps=(
+  "Todoist"
   "Messages"
   "Photos"
   "Day One"

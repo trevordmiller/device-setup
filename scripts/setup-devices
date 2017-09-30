@@ -117,6 +117,7 @@ done
 echo "Installing Mac App Store apps"
 
 mac_app_store_apps=(
+  "585829637" # Todoist
   "1055511498" # Day One
 )
 for mac_app_store_app in "${mac_app_store_apps[@]}"; do
@@ -182,6 +183,7 @@ Most things are taken care of automatically with the set up script, but some man
 - Sync iTerm2 settings with `com.googlecode.iterm2.plist` dotfile
 - Text Message Forwarding (on, from iPhone)
 - Remove all dock icons
+- Add Todoist as only permanent item in dock
 - Delete unused factory Applications
 - Remove notification center widgets
 - General

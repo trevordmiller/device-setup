@@ -2,7 +2,6 @@
 set -euo pipefail
 
 websites=(
-  "https://todoist.com/app#agenda%2Ftoday%20%26%20(p1%20%7C%20p2)"
   "https://open.spotify.com"
   "https://roederstudios.slack.com"
   "https://trello.com/b/55pvbyFV/ropig-dev?menu=filter&filter=@trevormiller14"
@@ -11,4 +10,12 @@ websites=(
 open -a "Google Chrome" --args --profile-directory="Profile 1"
 for website in "${websites[@]}"; do
   open "$website"
+done
+
+native_apps=(
+  "Todoist"
+)
+
+for native_app in "${native_apps[@]}"; do
+  open -a "$native_app"
 done
