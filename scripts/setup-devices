@@ -256,17 +256,14 @@ Most things are taken care of automatically with the set up script, but some man
 - SwitchResX
   - Enter licence
   - Show only 1080p60 (HiDPI) and 720p60 (HiDPI) options
-- Spotify
-  - High quality streaming (on)
-  - Show unavailable songs in playlists (on)
-  - Show sponsored songs (off)
-  - Show friends feed (off)
-  - Auto play similar songs when your music ends (off)
-  - Open Spotify automatically on login (off)
 - Windows via Boot Camp Assistant
   - Official ISO file from Microsoft
   - 150gb partition
   - Skip key
+  - Switch scroll direction
+  - Change caps to escape
+  - For each keyboard
+    - Change caps lock to escape
   - Download Steam
 
 Then, restart desktop.
@@ -336,7 +333,7 @@ Then, restart desktop.
 
 # Keyboard setup (Poker 3)
 
-- Swap command and alt keys to match mac setup
+- Swap command and alt keys to match mac setup inside Mac and Windows
 
 # Router setup
 
