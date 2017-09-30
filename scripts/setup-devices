@@ -273,63 +273,10 @@ Then, restart desktop.
 # Mobile setup
 
 - Turn hardware silent toggle switch on
-- Sign in with Apple ID
-- Add Face ID
-- Set background pictures
-- Remove widgets
-- Remove unused stock apps
-- Download and configure 1Password
-  - Add vault
-  - Allow unlock with Face ID
-  - Show in Safari share
-- Dock has Todoist as root and "Applications" folder
-- Apps
-  - Todoist
-    - Turn off badge notifications for count
-  - Phone
-  - Messages
-  - Calendar
-    - Add "Personal" and "Work" accounts
-    - Show shared calendar messages in notification center (off)
-  - Gospel Library
-    - Sign in and sync highlights/notes
-  - Feedly
-    - Sign in and sync highlights/notes
-  - Kindle
-    - Sign in and sync highlights/notes
-    - Download current book(s) offline
-  - Anki
-    - Sync with AnkiWeb
-    - Turn off badge notifications for count
-  - Edgar
-  - Spotify
-    - Sign in
-    - Download current playlist(s) offline
-  - iSmartAlarm
-    - Sign in
-  - Safari
-    - Google safe search
-  - Photos
-  - Camera
-  - Maps
-  - Lyft
-    - Sign in
-  - Clock
-    - Weekday alarm
-    - Weekend alarm
-  - 1Password
-    - Already done ^
-  - Find iPhone
-    - Turn on Send Last Location
-  - Wallet
-    - Add debit card for Apple Pay
-  - Health
-  - Contacts
-    - Special sound/vibrate pattern for Amy
-    - Emergency bypass call and text for Amy
-  - App Store
-  - Settings
 - Settings
+  - Sign in with Apple ID
+  - Add Face ID
+  - Set background pictures
   - Text message forwarding to desktop
   - Send as SMS when iMessage is unavailable
   - Don't store passwords in Safari
@@ -338,6 +285,53 @@ Then, restart desktop.
   - Do Not Disturb scheduled
   - Do Not Disturb automatically while driving
   - Night Shift scheduled with full warmth
+  - Turn off keyboard auto capitalization and auto spelling correction
+- Remove widgets
+- Remove unused stock apps
+- Download and configure 1Password
+  - Add vault
+  - Allow unlock with Face ID
+  - Show in Safari share
+- Dock has only Todoist
+- Todoist
+  - Turn off badge notifications for count
+- Phone
+- Messages
+- Clock
+  - Weekday alarm
+  - Weekend alarm
+- Calendar
+  - Add "Personal" and "Work" accounts
+  - Show shared calendar messages in notification center (off)
+- Maps
+- Safari
+  - Google safe search
+- Gospel Library
+  - Sign in and sync highlights/notes
+- Kindle
+  - Sign in and sync highlights/notes
+  - Download current book(s) offline
+- YouTube
+  - Sign in
+- Spotify
+  - Sign in
+  - Download current playlist(s) offline
+- background/ folder
+  - 1Password
+    - Already done ^
+  - Contacts
+    - Special sound/vibrate pattern for Amy
+    - Emergency bypass call and text for Amy
+  - Photos
+  - Camera
+  - Find iPhone
+    - Turn on Send Last Location
+  - Health
+  - Wallet
+    - Add debit card for Apple Pay
+  - App Store
+  - Settings
+    - Already done ^
 
 # Router setup
 
