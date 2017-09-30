@@ -189,7 +189,8 @@ Most things are taken care of automatically with the set up script, but some man
 - General
   - Highlight color (Nova cyan)
 - Keyboard
-  - Modifier keys caps lock (escape)
+  - For each keyboard
+    - Modifier keys caps lock (escape)
   - Touch bar (app controls)
 - Users
   - Add avatar
@@ -270,7 +271,7 @@ Most things are taken care of automatically with the set up script, but some man
 
 Then, restart desktop.
 
-# Mobile setup
+# Mobile setup (iPhone)
 
 - Turn hardware silent toggle switch on
 - Settings
@@ -332,6 +333,10 @@ Then, restart desktop.
   - App Store
   - Settings
     - Already done ^
+
+# Keyboard setup (Poker 3)
+
+- Swap command and alt keys to match mac setup
 
 # Router setup
 
