@@ -9,6 +9,12 @@ websites=(
   "https://ankiweb.net"
   "https://app.meetedgar.com"
   "https://www.facebook.com"
+  "https://trevordmiller.teachable.com/admin"
+  "https://instructor.egghead.io"
+  "https://us3.admin.mailchimp.com/reports/#t:campaigns-list"
+  "https://analytics.google.com"
+  "https://www.facebook.com/trevordmillercom/insights"
+  "https://analytics.twitter.com"
 )
 
 open -a "Google Chrome" --args --profile-directory="Profile 3"
