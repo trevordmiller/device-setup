@@ -108,7 +108,6 @@ homebrew_cask_packages=(
   "java"
   "google-cloud-sdk"
   "font-fira-mono"
-  "font-quicksand"
 )
 for homebrew_cask_package in "${homebrew_cask_packages[@]}"; do
   brew cask install "$homebrew_cask_package"
