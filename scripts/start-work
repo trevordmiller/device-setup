@@ -14,6 +14,9 @@ done
 
 native_apps=(
   "Todoist"
+  "Chrome"
+  "Safari"
+  "Firefox"
 )
 
 for native_app in "${native_apps[@]}"; do
