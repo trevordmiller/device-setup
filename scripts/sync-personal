@@ -7,7 +7,6 @@ websites=(
   "https://app.youneedabudget.com"
   "https://www.facebook.com"
   "https://feedly.com"
-  "https://ankiweb.net"
   "https://app.meetedgar.com"
   "https://www.facebook.com/trevordmillercom/insights"
   "https://analytics.twitter.com"
@@ -27,6 +26,7 @@ native_apps=(
   "Messages"
   "Photos"
   "Day One"
+  "Anki"
 )
 
 for native_app in "${native_apps[@]}"; do
