@@ -3,11 +3,13 @@ set -euo pipefail
 
 websites=(
   "https://calendar.google.com"
-  "https://mail.google.com"
   "https://roederstudios.slack.com"
-  "https://trello.com/b/55pvbyFV/ropig-dev"
-  "https://app.bugsnag.com/lkr/ropig-front-end"
+  "https://mail.google.com"
   "https://app.asana.com/0/212309631908144"
+  "https://trello.com/b/55pvbyFV/ropig-dev"
+  "https://github.com/roederstudios/snout/pulls"
+  "https://circleci.com/gh/roederstudios/workflows/snout"
+  "https://app.bugsnag.com/lkr/ropig-front-end"
 )
 
 open -a "Google Chrome" --args --profile-directory="Profile 1"
