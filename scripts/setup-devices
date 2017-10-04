@@ -305,9 +305,11 @@ Then, restart desktop.
 - Safari
   - Google safe search
 - Gospel Library
-  - Sign in and sync highlights/notes
-- YouTube
   - Sign in
+- Feedly
+  - Sign in 
+- Anki
+  - Disable badge notifications
 - Spotify
   - Sign in
   - Download current playlist(s) offline
