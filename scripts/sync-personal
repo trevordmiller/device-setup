@@ -4,6 +4,7 @@ set -euo pipefail
 websites=(
   "https://www.icloud.com/#calendar"
   "https://www.icloud.com/#mail"
+  "https://webaccess.americafirst.com/AFCU/Accounts/PMMActivity.aspx?index=3"
   "https://app.youneedabudget.com"
   "https://www.facebook.com"
   "https://feedly.com"
