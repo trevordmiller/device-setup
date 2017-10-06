@@ -11,13 +11,13 @@ websites=(
   "https://wakatime.com/dashboard"
   "https://feedly.com"
   "https://app.meetedgar.com"
-  "https://www.facebook.com/trevordmillercom/insights"
+  "https://www.reddit.com/user/trevordmiller"
   "https://analytics.twitter.com"
+  "https://www.facebook.com/trevordmillercom/insights"
   "https://analytics.google.com"
   "https://us3.admin.mailchimp.com/reports/#t:campaigns-list"
   "https://trevordmiller.teachable.com/admin"
   "https://instructor.egghead.io"
-  "https://mail.google.com/mail/u/1/#inbox"
 )
 
 open -a "Google Chrome" --args --profile-directory="Profile 3"
@@ -35,4 +35,18 @@ native_apps=(
 
 for native_app in "${native_apps[@]}"; do
   open -a "$native_app"
+done
+
+websites=(
+  "https://mail.google.com"
+  "https://app.meetedgar.com"
+  "https://www.reddit.com/user/roatutorials"
+  "https://analytics.twitter.com"
+  "https://www.facebook.com/trevordmillercom/insights"
+  "https://www.patreon.com"
+)
+
+open -a "Google Chrome" --args --profile-directory="Profile 5"
+for website in "${websites[@]}"; do
+  open "$website"
 done

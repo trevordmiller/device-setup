@@ -238,7 +238,7 @@ Most things are taken care of automatically with the set up script, but some man
   - Show shared calendar messages in notification center (off)
 - Chrome
   - Set as default browser
-  - Create "personal" and "work" users, signed in to the related google account
+  - Add "personal", "work", and "roatutorials" profiles, signed in to the related google account
   - Sign in to roatutorials with personal account too
   - Extensions
     - Confirm install (1Password, Grammarly, Vimium, React DevTools, Apollo DevTools)
@@ -300,7 +300,7 @@ Then, restart desktop.
   - Weekday alarm
   - Weekend alarm
 - Calendar
-  - Add "Personal" and "Work" accounts
+  - Add "personal" and "work" accounts
   - Show shared calendar messages in notification center (off)
 - Maps
 - Safari
