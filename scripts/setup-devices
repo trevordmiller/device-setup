@@ -304,16 +304,17 @@ Then, restart desktop.
 - Maps
 - Safari
   - Google safe search
-- Gospel Library
-  - Sign in
-- Feedly
-  - Sign in 
-- Anki
-  - Disable badge notifications
-- Edgar
 - Spotify
   - Sign in
   - Download current playlist(s) offline
+- learn/ folder
+  - Gospel Library
+    - Sign in
+  - Feedly
+    - Sign in 
+  - Anki
+    - Disable badge notifications
+  - Edgar
 - background/ folder
   - 1Password
     - Already done ^
