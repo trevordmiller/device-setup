@@ -36,18 +36,3 @@ native_apps=(
 for native_app in "${native_apps[@]}"; do
   open -a "$native_app"
 done
-
-websites=(
-  "https://mail.google.com"
-  "http://smashvods.com/roa"
-  "https://app.meetedgar.com"
-  "https://www.reddit.com/user/roatutorials"
-  "https://analytics.twitter.com"
-  "https://www.facebook.com/RoA-Tutorials-1269504136488638/insights"
-  "https://www.patreon.com"
-)
-
-open -a "Google Chrome" --args --profile-directory="Profile 5"
-for website in "${websites[@]}"; do
-  open "$website"
-done

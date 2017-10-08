@@ -238,8 +238,7 @@ Most things are taken care of automatically with the set up script, but some man
   - Show shared calendar messages in notification center (off)
 - Chrome
   - Set as default browser
-  - Add "personal", "work", and "roatutorials" profiles, signed in to the related google account
-  - Sign in to roatutorials with personal account too
+  - Add "personal" and "work" profiles, signed in to the related google account
   - Extensions
     - Confirm install (1Password, Grammarly, Vimium, React DevTools, Apollo DevTools)
     - Vimium custom mappings
