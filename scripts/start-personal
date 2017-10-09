@@ -2,7 +2,7 @@
 set -euo pipefail
 
 websites=(
-  "https://open.spotify.com"
+  "https://open.spotify.com/collection/playlists"
   "https://github.com/issues?q=is%3Aopen+user%3Atrevordmiller"
 )
 
