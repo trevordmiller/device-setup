@@ -4,7 +4,7 @@ set -euo pipefail
 websites=(
   "https://open.spotify.com/collection/playlists"
   "https://roederstudios.slack.com"
-  "https://trello.com/b/55pvbyFV/ropig-dev?menu=filter&filter=@trevormiller14"
+  "https://trello.com/b/55pvbyFV/ropig-dev?menu=filter&filter=label:Front-end%20needed,label:General%20work%20needed"
 )
 
 open -a "Google Chrome" --args --profile-directory="Profile 1"
@@ -14,8 +14,6 @@ done
 
 native_apps=(
   "Todoist"
-  "Safari"
-  "Firefox"
 )
 
 for native_app in "${native_apps[@]}"; do
