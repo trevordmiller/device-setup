@@ -177,6 +177,7 @@ Most importantly, my task list (Todoist) is the single source of truth linking t
 
 Most things are taken care of automatically with the set up script, but some manual items are needed:
 
+- Install my ethernet adapter drivers from http://www.asix.com.tw/FrootAttach/driver/AX88179_178A_Macintosh_Driver_Installer_v2.9.0_20171011.zip
 - Sync iTerm2 settings with `com.googlecode.iterm2.plist` dotfile
 - Text Message Forwarding (on, from iPhone)
 - Remove all dock icons

@@ -1,6 +1,8 @@
 #!/bin/bash
 set -euo pipefail
 
+networksetup -setairportpower en0 off
+
 websites=(
   "https://open.spotify.com/collection/playlists"
   "https://roederstudios.slack.com"
