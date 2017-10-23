@@ -12,6 +12,7 @@ websites=(
   "https://lifesum.com/account"
   "https://feedly.com"
   "https://app.meetedgar.com"
+  "https://utahjavascript.slack.com/messages"
   "https://www.reddit.com/user/trevordmiller"
   "https://analytics.twitter.com"
   "https://www.facebook.com/trevordmillercom/insights"
@@ -19,6 +20,7 @@ websites=(
   "https://us3.admin.mailchimp.com/reports/#t:campaigns-list"
   "https://trevordmiller.teachable.com/admin"
   "https://instructor.egghead.io"
+  "https://discordapp.com/channels/370800591867346944/370800591867346946"
 )
 
 open -a "Google Chrome" --args --profile-directory="Profile 3"
