@@ -102,7 +102,6 @@ homebrew_cask_packages=(
   "switchresx"
   "screenflow"
   "zoomus"
-  "screenhero"
   "java"
   "google-cloud-sdk"
   "font-fira-mono"
