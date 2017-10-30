@@ -94,6 +94,7 @@ echo "Installing Homebrew cask packages"
 brew tap caskroom/fonts
 
 homebrew_cask_packages=(
+  "font-fira-mono"
   "google-chrome"
   "iterm2"
   "1password"
@@ -102,9 +103,6 @@ homebrew_cask_packages=(
   "switchresx"
   "screenflow"
   "zoomus"
-  "java"
-  "google-cloud-sdk"
-  "font-fira-mono"
 )
 for homebrew_cask_package in "${homebrew_cask_packages[@]}"; do
   brew cask install "$homebrew_cask_package"
