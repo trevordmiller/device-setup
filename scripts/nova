@@ -2,8 +2,4 @@
 set -euo pipefail
 
 cd ~
-tmux new-session -d -s nova
 tmux-window "nova-vim" "repos/nova-vim" 2 "ln -sf ~/repos/nova-vim/colors/nova.vim ~/.vim/colors/nova.vim && npm run dev"
-tmux kill-window -t 0
-tmux select-window -t 1
-tmux attach-session -d 
