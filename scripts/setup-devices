@@ -289,6 +289,7 @@ Then, restart desktop.
 - Dock has only Todoist
 - Todoist
   - Turn off badge notifications for count
+  - Show in Safari share
 - Phone
 - Messages
 - Clock
@@ -297,22 +298,27 @@ Then, restart desktop.
 - Calendar
   - Add "personal" and "work" accounts
   - Show shared calendar messages in notification center (off)
+- Gospel Library
+  - Sign in
+- Lifesum
+  - Sync with Apple Health
 - Maps
-- Safari
-  - Google safe search
 - Spotify
   - Sign in
   - Download current playlist(s) offline
-- Lifesum
-  - Sync with Apple Health
+- Safari
+  - Google safe search
 - learn/ folder
-  - Gospel Library
-    - Sign in
   - Feedly
     - Sign in 
+    - "All" as start page
+    - Title-only layout
+    - Show in Safari share
   - Anki
+    - Sign in and "Download from Anki web"
     - Disable badge notifications
   - Edgar
+    - Sign in
 - background/ folder
   - 1Password
     - Already done ^
