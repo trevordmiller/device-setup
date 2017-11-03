@@ -254,11 +254,7 @@ Most things are taken care of automatically with the set up script, but some man
 - Windows via Boot Camp Assistant
   - Official ISO file from Microsoft
   - 150gb partition
-  - Skip key
-  - Switch scroll direction
-  - Change caps to escape
-  - For each keyboard
-    - Change caps lock to escape
+  - Skip registration key
   - Download Steam
 - Set Startup Disk to macOS
 
