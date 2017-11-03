@@ -301,7 +301,7 @@ Then, restart desktop.
 - Maps
 - Spotify
   - Sign in
-  - Download current playlist(s) offline
+  - Download playlists offline
 - Safari
   - Google safe search
 - learn/ folder
@@ -310,6 +310,9 @@ Then, restart desktop.
     - "All" as start page
     - Title-only layout
     - Show in Safari share
+  - Kindle
+    - Sign in
+    - Download current book(s) offline
   - Anki
     - Sign in and "Download from Anki web"
     - Disable badge notifications
