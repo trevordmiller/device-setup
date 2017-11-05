@@ -299,9 +299,6 @@ Then, restart desktop.
 - Lifesum
   - Sync with Apple Health
 - Maps
-- Spotify
-  - Sign in
-  - Download playlists offline
 - Safari
   - Google safe search
 - learn/ folder
@@ -317,6 +314,13 @@ Then, restart desktop.
     - Disable badge notifications
   - Edgar
     - Sign in
+- fun/ folder
+  - YouTube
+    - Sign in
+  - Spotify
+    - Sign in
+    - Extreme quality of streaming and downloads
+    - Download playlists offline
 - background/ folder
   - 1Password
     - Already done ^
