@@ -20,14 +20,13 @@ do
 done
 
 if [ $# -ge 2 ]; then
+  tmux send-keys -t 0 C-z "vim -c 'E'" Enter
   index=1
   for command in "${@:4}"
   do
     tmux send-keys -t $index C-z "$command" Enter
     let "index+=1"
   done
-else
-  tmux send-keys -t 1 C-z "clear" Enter
 fi
 
 tmux select-layout main-horizontal
