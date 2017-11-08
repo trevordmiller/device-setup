@@ -234,14 +234,17 @@ Most things are taken care of automatically with the set up script, but some man
 - Chrome
   - Set as default browser
   - Add "personal" and "work" profiles, signed in to the related google account
-  - Extensions
-    - Confirm install (1Password, Grammarly, Vimium, React DevTools, Apollo DevTools)
-    - Vimium custom mappings
-      - map <c-b> scrollFullPageUp
-      - map <c-f> scrollFullPageDown
-    - Sign in
-    - Hide icons in Chrome menu
-  - Safe search (on, locked)
+    - Safe search (on, locked)
+    - Extensions
+      - Confirm install (1Password, Grammarly, Vimium, Adblock Plus, React DevTools, Apollo DevTools)
+      - Vimium custom mappings
+        - map <c-b> scrollFullPageUp
+        - map <c-f> scrollFullPageDown
+      - Adblock Plus settings
+        - Allow some non-intrusive advertising (off)
+        - Show 'Block Element' right-click menu item (off)
+        - Show 'Adblock Plus' panel in the developer tools (off)
+      - Hide icons in Chrome menu
 - WakaTime
   - Add API key to `~/.wakatime.cfg`
 - Screenflow
