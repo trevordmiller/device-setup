@@ -2,4 +2,4 @@
 set -euo pipefail
 
 cd ~
-tmux-window "ropig" "repos/snout/apps/snout_web/assets" 4 "npm run services" "sleep 10 && npm run dev" "npm run test:unit"
+tmux-window "ropig" "repos/snout/apps/snout_web/assets" 4 "npm run services" "sleep 15 && npm run dev" "git status"

@@ -2,6 +2,6 @@
 set -euo pipefail
 
 cd ~
-tmux-window "cortex-api" "repos/cortex-api" 3 "npm run dev" "npm test:watch"
-tmux-window "cortex-components" "repos/cortex-components" 3 "npm run dev" "npm run test:watch"
-tmux-window "cortex-clients" "repos/cortex-clients" 3 "npm run dev" "npm test"
+tmux-window "cortex-api" "repos/cortex-api" 4 "npm run dev" "npm test:watch" "git status"
+tmux-window "cortex-components" "repos/cortex-components" 4 "npm run dev" "npm run test:watch" "git status"
+tmux-window "cortex-clients" "repos/cortex-clients" 4 "npm run dev" "npm test" "git status"

@@ -2,4 +2,4 @@
 set -euo pipefail
 
 cd ~
-tmux-window "hideaway" "repos/hideaway" 2 "npm run dev"
+tmux-window "hideaway" "repos/hideaway" 3 "npm run dev" "git status"

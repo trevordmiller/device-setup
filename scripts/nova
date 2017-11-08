@@ -2,4 +2,4 @@
 set -euo pipefail
 
 cd ~
-tmux-window "nova-vim" "repos/nova-vim" 2 "ln -sf ~/repos/nova-vim/colors/nova.vim ~/.vim/colors/nova.vim && npm run dev"
+tmux-window "nova-vim" "repos/nova-vim" 3 "ln -sf ~/repos/nova-vim/colors/nova.vim ~/.vim/colors/nova.vim && npm run dev" "git status"
