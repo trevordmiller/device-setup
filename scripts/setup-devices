@@ -99,6 +99,7 @@ homebrew_cask_packages=(
   "iterm2"
   "1password"
   "anki"
+  "spotify"
   "rescuetime"
   "switchresx"
   "screenflow"
@@ -247,6 +248,10 @@ Most things are taken care of automatically with the set up script, but some man
       - Hide icons in Chrome menu
 - WakaTime
   - Add API key to `~/.wakatime.cfg`
+- Spotify
+  - Sign in
+  - Highest quality of streaming and downloads
+  - Download playlists offline
 - Screenflow
   - Enter licence
   - Remove recording countdown
@@ -322,7 +327,7 @@ Then, restart desktop.
     - Sign in
   - Spotify
     - Sign in
-    - Extreme quality of streaming and downloads
+    - Highest quality of streaming and downloads
     - Download playlists offline
 - background/ folder
   - 1Password

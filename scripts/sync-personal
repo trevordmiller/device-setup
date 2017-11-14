@@ -12,7 +12,6 @@ websites=(
   "https://www.facebook.com"
   "https://discordapp.com/channels/@me"
   "https://www.reddit.com"
-  "https://open.spotify.com/user/trevordmiller/playlist/2uzSKWikkCiKoxVYJBpfqj"
   "https://www.youtube.com/playlist?list=WL"
   "https://feedly.com"
   "https://read.amazon.com/notebook"
@@ -37,6 +36,7 @@ native_apps=(
   "Photos"
   "Day One"
   "Anki"
+  "Spotify"
 )
 
 for native_app in "${native_apps[@]}"; do

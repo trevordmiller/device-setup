@@ -4,7 +4,6 @@ set -euo pipefail
 networksetup -setairportpower en0 off
 
 websites=(
-  "https://open.spotify.com/collection/playlists"
   "https://github.com/issues?q=is%3Aopen+user%3Atrevordmiller"
 )
 
@@ -15,6 +14,7 @@ done
 
 native_apps=(
   "Todoist"
+  "Spotify"
 )
 
 for native_app in "${native_apps[@]}"; do
