@@ -1,9 +1,22 @@
 #!/bin/bash
 set -euo pipefail
 
+native_apps=(
+  "Todoist"
+  "Messages"
+  "Calendar"
+  "Mail"
+  "Photos"
+  "Day One"
+  "Anki"
+  "Spotify"
+)
+
+for native_app in "${native_apps[@]}"; do
+  open -a "$native_app"
+done
+
 websites=(
-  "https://www.icloud.com/#calendar"
-  "https://www.icloud.com/#mail"
   "https://lifesum.com/account"
   "https://www.rescuetime.com/dashboard"
   "https://wakatime.com/dashboard"
@@ -28,17 +41,4 @@ websites=(
 open -a "Google Chrome" --args --profile-directory="Profile 3"
 for website in "${websites[@]}"; do
   open "$website"
-done
-
-native_apps=(
-  "Todoist"
-  "Messages"
-  "Photos"
-  "Day One"
-  "Anki"
-  "Spotify"
-)
-
-for native_app in "${native_apps[@]}"; do
-  open -a "$native_app"
 done

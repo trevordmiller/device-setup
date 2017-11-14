@@ -1,17 +1,6 @@
 #!/bin/bash
 set -euo pipefail
 
-networksetup -setairportpower en0 off
-
-websites=(
-  "https://github.com/issues?q=is%3Aopen+user%3Atrevordmiller"
-)
-
-open -a "Google Chrome" --args --profile-directory="Profile 3"
-for website in "${websites[@]}"; do
-  open "$website"
-done
-
 native_apps=(
   "Todoist"
   "Spotify"
@@ -20,3 +9,5 @@ native_apps=(
 for native_app in "${native_apps[@]}"; do
   open -a "$native_app"
 done
+
+open -a "Google Chrome" --args --profile-directory="Profile 3"

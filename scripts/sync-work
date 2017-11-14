@@ -1,12 +1,21 @@
 #!/bin/bash
 set -euo pipefail
 
+native_apps=(
+  "Todoist"
+  "Slack"
+  "Trello"
+  "Calendar"
+  "Mail"
+  "Messages"
+  "Spotify"
+)
+
+for native_app in "${native_apps[@]}"; do
+  open -a "$native_app"
+done
+
 websites=(
-  "https://calendar.google.com"
-  "https://roederstudios.slack.com"
-  "https://mail.google.com"
-  "https://app.asana.com/0/212309631908144"
-  "https://trello.com/b/55pvbyFV/ropig-dev"
   "https://github.com/roederstudios/snout/pulls"
   "https://circleci.com/gh/roederstudios/workflows/snout"
   "https://app.bugsnag.com/lkr/ropig-front-end"
@@ -17,10 +26,3 @@ for website in "${websites[@]}"; do
   open "$website"
 done
 
-native_apps=(
-  "Todoist"
-)
-
-for native_app in "${native_apps[@]}"; do
-  open -a "$native_app"
-done

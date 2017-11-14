@@ -99,6 +99,8 @@ homebrew_cask_packages=(
   "iterm2"
   "1password"
   "anki"
+  "trello"
+  "slack"
   "spotify"
   "rescuetime"
   "switchresx"
