@@ -19,6 +19,7 @@ websites=(
   "https://github.com/roederstudios/snout/pulls"
   "https://circleci.com/gh/roederstudios/workflows/snout"
   "https://app.bugsnag.com/lkr/ropig-front-end"
+  "https://disqus.com/home/inbox/"
 )
 
 open -a "Google Chrome" --args --profile-directory="Profile 1"
