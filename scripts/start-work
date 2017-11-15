@@ -4,18 +4,10 @@ set -euo pipefail
 native_apps=(
   "Todoist"
   "Slack"
+  "Trello"
   "Spotify"
 )
 
 for native_app in "${native_apps[@]}"; do
   open -a "$native_app"
-done
-
-websites=(
-  "https://trello.com/b/55pvbyFV/ropig-dev?menu=filter&filter=@trevormiller14"
-)
-
-open -a "Google Chrome" --args --profile-directory="Profile 1"
-for website in "${websites[@]}"; do
-  open "$website"
 done

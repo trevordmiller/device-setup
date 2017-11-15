@@ -6,6 +6,7 @@ native_apps=(
   "Slack"
   "Calendar"
   "Mail"
+  "Trello"
   "Messages"
   "Spotify"
 )
@@ -15,7 +16,6 @@ for native_app in "${native_apps[@]}"; do
 done
 
 websites=(
-  "https://trello.com/b/55pvbyFV/ropig-dev"
   "https://github.com/roederstudios/snout/pulls"
   "https://circleci.com/gh/roederstudios/workflows/snout"
   "https://app.bugsnag.com/lkr/ropig-front-end"
