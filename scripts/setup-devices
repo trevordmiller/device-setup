@@ -353,6 +353,12 @@ Then, restart desktop.
 
 - Swap command and alt keys to match mac setup inside Mac and Windows
 
+# Audio interface setup
+
+- Mic input
+  - Full gain
+  - +48v (on)
+
 # Router setup
 
 - [OpenDNS Family Shield](https://www.opendns.com/setupguide/?url=familyshield)
