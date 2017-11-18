@@ -325,12 +325,16 @@ Then, restart desktop.
   - Edgar
     - Sign in
 - fun/ folder
-  - YouTube
-    - Sign in
   - Spotify
     - Sign in
     - Highest quality of streaming and downloads
     - Download playlists offline
+  - YouTube
+    - Sign in
+  - Twitch
+    - Sign in
+  - Discord
+    - Sign in
 - background/ folder
   - 1Password
     - Already done ^
