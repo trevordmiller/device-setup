@@ -35,7 +35,7 @@ websites=(
   "https://analytics.google.com"
   "https://us3.admin.mailchimp.com/reports/#t:campaigns-list"
   "https://trevordmiller.teachable.com/admin"
-  "https://instructor.egghead.io"
+  "https://egghead.io/production"
 )
 
 open -a "Google Chrome" --args --profile-directory="Profile 3"
