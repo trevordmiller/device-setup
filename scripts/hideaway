@@ -1,5 +1,0 @@
-#!/bin/bash
-set -euo pipefail
-
-cd ~
-tmux-window "hideaway" "repos/hideaway" 3 "npm run dev" "git status"
