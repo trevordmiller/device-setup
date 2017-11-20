@@ -45,10 +45,9 @@ rm -rf "$HOME"/Downloads/*
 # PRUNE REPO BRANCHES
 # ==================================================================
 
-IFS=$'\n\t'
-
 deep-git-prune ()
 {
+  IFS=$'\n\t'
 
   # Remove merged git branches and stale remote references other than master and the current branch in each git directory
   set +e
@@ -65,7 +64,8 @@ deep-git-prune ()
 }
 
 cd "$HOME/repos"
-find . -path "*/.git" -maxdepth 2 -print -execdir deep-git-prune ";"
+
+for i in */.git; do ( echo $i; cd $i/..; deep-git-prune; ); done
 
 
 # ==================================================================
