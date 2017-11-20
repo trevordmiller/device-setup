@@ -1,4 +1,0 @@
-#!/bin/bash
-set -euo pipefail
-
-tmux-window "trevordmiller-website" "repos/trevordmiller-website" 3 "npm run dev" "git status"

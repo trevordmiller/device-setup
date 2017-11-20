@@ -1,4 +1,0 @@
-#!/bin/bash
-set -euo pipefail
-
-tmux-window "snout" "repos/snout/apps/snout_web/assets" 4 "npm run services" "sleep 15 && npm run dev" "git status"

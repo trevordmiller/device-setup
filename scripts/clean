@@ -1,6 +1,37 @@
 #!/bin/bash
 set -euo pipefail
 
+
+# ==================================================================
+# CLOSE APPS
+# ==================================================================
+
+foregroundAppsString=$(osascript -e 'tell application "System Events" to get name of (processes where background only is false)')
+
+IFS=',' read -r -a foregroundApps <<< "$foregroundAppsString"
+
+for foregroundApp in "${foregroundApps[@]}"
+do
+  appName=$(echo "$foregroundApp" | sed 's/^ *//g')
+  if [[ ! "$appName" == "Finder" && ! "$appName" == "iTerm2" ]]; then
+    osascript -e 'quit app "'"$appName"'"'
+  fi
+done
+
+
+# ==================================================================
+# KILL PROCESSES
+# ==================================================================
+
+killall node || true
+tmux kill-server || true
+pkill postgres || true
+
+
+# ==================================================================
+# REMOVE ARTIFACTS
+# ==================================================================
+
 # Remove unused homebrew artifacts
 brew cleanup
 brew cask cleanup
@@ -9,6 +40,55 @@ brew cask cleanup
 find "$HOME" -name '.DS_Store' -delete
 rm -rf "$HOME"/Downloads/*
 
-# Remove unused git branches
+
+# ==================================================================
+# PRUNE REPO BRANCHES
+# ==================================================================
+
+IFS=$'\n\t'
+
+deep-git-prune ()
+{
+
+  # Remove merged git branches and stale remote references other than master and the current branch in each git directory
+  set +e
+  LOCAL_BRANCHES=$(git branch --merged master | grep -v -e 'master' -e '\*' | tr -d ' ')
+  set -e
+
+  if [[ -n "$LOCAL_BRANCHES" ]]; then
+    for BRANCH in $LOCAL_BRANCHES; do
+      git branch -d "$BRANCH"
+    done
+  fi
+
+  git remote prune origin
+}
+
 cd "$HOME/repos"
-find . -path "*/.git" -maxdepth 2 -print -execdir git-clean ";"
+find . -path "*/.git" -maxdepth 2 -print -execdir deep-git-prune ";"
+
+
+# ==================================================================
+# CHECK REPO STATES
+# ==================================================================
+
+deep-git-status ()
+{
+  cd "$HOME/repos"
+  find . -path "*/.git" -maxdepth 2 -print -execdir git status ";"
+}
+
+output=$(deep-git-status | grep \
+-e "Untracked files:" \
+-e "Changes not staged for commit:"  \
+-e "Changes to be committed:" \
+-e "Your branch is ahead" \
+)
+
+if [ -z "$output" ]
+then 
+  echo "All git repos are clean"
+else
+  echo "Clean dirty git repos!"
+  deep-git-status
+fi

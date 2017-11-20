@@ -1,6 +1,11 @@
 #!/bin/bash
 set -euo pipefail
 
+
+# ==================================================================
+# NATIVE APPS
+# ==================================================================
+
 native_apps=(
   "Todoist"
   "Slack"
@@ -15,6 +20,11 @@ for native_app in "${native_apps[@]}"; do
   open -a "$native_app"
 done
 
+
+# ==================================================================
+# WEBSITES
+# ==================================================================
+
 websites=(
   "https://github.com/roederstudios/snout/pulls"
   "https://circleci.com/gh/roederstudios/workflows/snout"
@@ -27,4 +37,22 @@ for website in "${websites[@]}"; do
   open "$website"
 done
 
-tmux-ropig
+
+# ==================================================================
+# TERMINAL
+# ==================================================================
+
+cd ~
+DEFAULT_DIRECTORY="repos/snout/apps/snout_web/assets"
+tmux new-window -c "$DEFAULT_DIRECTORY"
+tmux rename-window "snout"
+tmux split-window -c "$DEFAULT_DIRECTORY"
+tmux split-window -c "$DEFAULT_DIRECTORY"
+tmux split-window -c "$DEFAULT_DIRECTORY"
+tmux send-keys -t 0 C-z "vim -c 'E'" Enter
+tmux send-keys -t 1 C-z "npm run services" Enter
+tmux send-keys -t 2 C-z "sleep 15 && npm run dev" Enter
+tmux send-keys -t 3 C-z "git status" Enter
+tmux select-layout main-horizontal
+tmux resize-pane -t:.0 -y $(expr $(tmux display -p '#{window_height}') / 3 \* 2)
+tmux select-pane -t 0

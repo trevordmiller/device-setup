@@ -1,6 +1,0 @@
-#!/bin/bash
-set -euo pipefail
-
-killall node || true
-tmux kill-server || true
-pkill postgres || true
