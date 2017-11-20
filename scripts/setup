@@ -26,7 +26,6 @@ git clone https://github.com/trevordmiller/dotfiles.git
 cd dotfiles
 ./index
 
-
 # ==================================================================
 # PACKAGES
 # ==================================================================

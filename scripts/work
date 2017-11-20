@@ -27,3 +27,4 @@ for website in "${websites[@]}"; do
   open "$website"
 done
 
+tmux-ropig

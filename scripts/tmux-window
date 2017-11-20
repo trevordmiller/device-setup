@@ -8,6 +8,8 @@ set -euo pipefail
 #   pane 1 doesn't have a command as it is the main pane
 #   panes 2+ are secondary background tasks at the bottom
 
+cd ~
+
 tmux new-window -c "$2"
 tmux rename-window $1
 
