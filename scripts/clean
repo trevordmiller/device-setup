@@ -3,7 +3,7 @@ set -euo pipefail
 
 
 # ==================================================================
-# CLOSE APPS
+# APPS
 # ==================================================================
 
 foregroundAppsString=$(osascript -e 'tell application "System Events" to get name of (processes where background only is false)')
@@ -20,7 +20,7 @@ done
 
 
 # ==================================================================
-# KILL PROCESSES
+# PROCESSES
 # ==================================================================
 
 killall node || true
@@ -29,7 +29,7 @@ pkill postgres || true
 
 
 # ==================================================================
-# REMOVE ARTIFACTS
+# ARTIFACTS
 # ==================================================================
 
 # Remove unused homebrew artifacts
@@ -42,7 +42,7 @@ rm -rf "$HOME"/Downloads/*
 
 
 # ==================================================================
-# PRUNE REPO BRANCHES
+# REPO BRANCHES
 # ==================================================================
 
 deep-git-prune ()
@@ -69,7 +69,7 @@ for i in */.git; do ( echo $i; cd $i/..; deep-git-prune; ); done
 
 
 # ==================================================================
-# CHECK REPO STATES
+# REPO STATES
 # ==================================================================
 
 deep-git-status ()

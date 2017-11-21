@@ -3,43 +3,26 @@ set -euo pipefail
 
 
 # ==================================================================
-# NATIVE APPS
+# APPS
 # ==================================================================
 
-native_apps=(
+apps=(
   "Todoist"
+  "iTerm2"
   "Slack"
   "Calendar"
   "Mail"
   "Trello"
-  "Messages"
   "Spotify"
 )
 
-for native_app in "${native_apps[@]}"; do
-  open -a "$native_app"
+for app in "${apps[@]}"; do
+  open -a "$app"
 done
 
 
 # ==================================================================
-# WEBSITES
-# ==================================================================
-
-websites=(
-  "https://github.com/roederstudios/snout/pulls"
-  "https://circleci.com/gh/roederstudios/workflows/snout"
-  "https://app.bugsnag.com/lkr/ropig-front-end"
-  "https://disqus.com/home/inbox/"
-)
-
-open -a "Google Chrome" --args --profile-directory="Profile 1"
-for website in "${websites[@]}"; do
-  open "$website"
-done
-
-
-# ==================================================================
-# TERMINAL
+# TERMINAL WORKFLOW
 # ==================================================================
 
 cd ~

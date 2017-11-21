@@ -3,10 +3,10 @@ set -euo pipefail
 
 
 # ==================================================================
-# NATIVE APPS
+# APPS
 # ==================================================================
 
-native_apps=(
+apps=(
   "Todoist"
   "Messages"
   "Calendar"
@@ -14,11 +14,10 @@ native_apps=(
   "Photos"
   "Day One"
   "Anki"
-  "Spotify"
 )
 
-for native_app in "${native_apps[@]}"; do
-  open -a "$native_app"
+for app in "${apps[@]}"; do
+  open -a "$app"
 done
 
 
@@ -27,25 +26,9 @@ done
 # ==================================================================
 
 websites=(
-  "https://lifesum.com/account"
-  "https://www.rescuetime.com/dashboard"
-  "https://wakatime.com/dashboard"
-  "https://webaccess.americafirst.com/AFCU/Accounts/PMMActivity.aspx?index=3"
   "https://app.youneedabudget.com"
-  "https://www.facebook.com"
-  "https://discordapp.com/channels/@me"
-  "https://www.reddit.com"
-  "https://www.youtube.com/playlist?list=WL"
   "https://feedly.com"
-  "https://read.amazon.com/notebook"
-  "https://app.meetedgar.com"
-  "https://www.reddit.com/user/trevordmiller"
-  "https://analytics.twitter.com"
-  "https://www.facebook.com/trevordmillercom/insights"
-  "https://analytics.google.com"
-  "https://us3.admin.mailchimp.com/reports/#t:campaigns-list"
-  "https://trevordmiller.teachable.com/admin"
-  "https://egghead.io/production"
+  "https://www.facebook.com"
 )
 
 open -a "Google Chrome" --args --profile-directory="Profile 3"

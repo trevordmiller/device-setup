@@ -8,36 +8,38 @@ set -euo pipefail
 
 cd ~
 mkdir repos
-cd repos
 
 
 # ==================================================================
 # SHELL SCRIPTS
 # ==================================================================
 
+echo "Cloning shell scripts"
+cd ~/repos
 git clone https://github.com/trevordmiller/shell-scripts.git
+cd ~
 
 
 # ==================================================================
 # DOTFILES
 # ==================================================================
 
+echo "Cloning dotfiles"
+cd ~/repos
 git clone https://github.com/trevordmiller/dotfiles.git
 cd dotfiles
 ./index
+cd ~
+
 
 # ==================================================================
 # PACKAGES
 # ==================================================================
 
-cd ~
-
-# HOMEBREW
-
 echo "Installing Homebrew"
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-echo "Installing and configuring Homebrew packages"
+echo "Installing Homebrew packages"
 
 homebrew_packages=(
   "bash"
@@ -46,7 +48,6 @@ homebrew_packages=(
   "vim"
   "git"
   "node"
-  "n"
   "mas"
 )
 for homebrew_package in "${homebrew_packages[@]}"; do
@@ -60,50 +61,33 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 echo "Installing Vim plugins"
 vim +PlugInstall +qall
 
-echo "Making Vim history file directories"
+echo "Creating Vim history file directories"
 mkdir ~/.vim/{backup_files,swap_files,undo_files}
-
-echo "Upgrading to latest Node"
-n latest
 
 echo "Adding npm user"
 npm adduser
 
-# RUBY
-
-echo "Installing and configuring Ruby gems"
-
-ruby_gems=(
-  "travis"
-)
-for ruby_gem in "${ruby_gems[@]}"; do
-  gem install "$ruby_gem"
-done
-
-echo "Adding Travis user"
-travis login
-
 
 # ==================================================================
-# APPS & FONTS
+# APPS / FONTS
 # ==================================================================
 
-echo "Installing Homebrew cask packages"
+echo "Installing Homebrew cask apps and fonts"
 
 brew tap caskroom/fonts
 
 homebrew_cask_packages=(
-  "font-fira-mono"
-  "google-chrome"
   "iterm2"
-  "1password"
+  "google-chrome"
   "anki"
-  "slack"
-  "spotify"
-  "rescuetime"
   "switchresx"
   "screenflow"
+  "spotify"
+  "slack"
   "zoomus"
+  "1password"
+  "rescuetime"
+  "font-fira-mono"
 )
 for homebrew_cask_package in "${homebrew_cask_packages[@]}"; do
   brew cask install "$homebrew_cask_package"
@@ -209,7 +193,7 @@ Most things are taken care of automatically with the set up script, but some man
   - Login (on)
   - Apple Pay (on)
 - iCloud
-  - disable everything except Calendar, Photos, Contacts, Keychain, and Find My Mac)
+  - disable everything except Calendars, Mail, Photos, Contacts, Siri, Keychain, and Find My Mac)
 - Notification Center
   - Do Not Disturb
     - Scheduled (on, from 11pm-7am)

@@ -3,36 +3,20 @@ set -euo pipefail
 
 
 # ==================================================================
-# HOMEBREW
+# PACKAGES
 # ==================================================================
 
-echo "Upgrading Homebrew + brew packages"
+# HOMEBREW
+
+echo "Upgrading Homebrew packages"
 brew update
 brew upgrade
 
-
-# ==================================================================
-# NODE
-# ==================================================================
-
-echo "Upgrading Node"
-sudo n latest
-
-
-# ==================================================================
-# NPM
-# ==================================================================
+echo "Upgrading Vim plugins"
+vim +PlugUpgrade +PlugUpdate +PlugClean +qall
 
 echo "Upgrading npm"
 npm install npm@latest -g
-
-
-# ==================================================================
-# VIM PLUGINS
-# ==================================================================
-
-echo "Upgrading Vim plugins"
-vim +PlugUpgrade +PlugUpdate +PlugClean +qall
 
 
 # ==================================================================
@@ -44,7 +28,7 @@ mas upgrade
 
 
 # ==================================================================
-# MAC
+# MACOS
 # ==================================================================
 
 echo "Upgrading macOS"
