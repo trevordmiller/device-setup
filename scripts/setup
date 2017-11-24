@@ -193,7 +193,7 @@ Most things are taken care of automatically with the set up script, but some man
   - Login (on)
   - Apple Pay (on)
 - iCloud
-  - disable everything except Calendars, Mail, Photos, Contacts, Siri, Keychain, and Find My Mac)
+  - Enable everything
 - Notification Center
   - Do Not Disturb
     - Scheduled (on, from 11pm-7am)
@@ -281,47 +281,35 @@ Then, restart desktop.
   - Show in Safari share
 - Phone
 - Messages
-- Clock
-  - Weekday alarm
-  - Weekend alarm
 - Calendar
   - Add "personal" and "work" accounts
   - Show shared calendar messages in notification center (off)
+- Google Maps
 - Lifesum
   - Sync with Apple Health
-- Google Maps
 - Gospel Library
   - Sign in
 - Feedly
   - Sign in 
   - Title-only layout
   - Show in Safari share
-- Kindle
-  - Sign in
-  - Download current book(s) offline
-- Anki
-  - Sign in and "Download from Anki web"
-  - Disable badge notifications
-- Edgar
-  - Sign in
 - Spotify
   - Sign in
   - Highest quality of streaming and downloads
   - Download playlists offline
 - YouTube
   - Sign in
-- Twitch
-  - Sign in
-- Safari
-  - Google safe search
 - background/ folder
   - 1Password
     - Already done ^
+  - Clock
+    - Weekday alarm
+    - Weekend alarm
   - Contacts
     - Special sound/vibrate pattern for Amy
     - Emergency bypass call and text for Amy
-  - Photos
   - Camera
+  - Photos
   - Find iPhone
     - Turn on Send Last Location
   - Health
@@ -329,6 +317,8 @@ Then, restart desktop.
   - Wallet
     - Add debit card for Apple Pay
   - App Store
+  - Safari
+    - Google safe search
   - Settings
     - Already done ^
 
