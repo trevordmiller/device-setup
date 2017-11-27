@@ -35,6 +35,7 @@ pkill postgres || true
 # Remove unused homebrew artifacts
 brew cleanup
 brew cask cleanup
+brew prune
 
 # Remove .DS_Store files
 find "$HOME" -name '.DS_Store' -delete
