@@ -26,9 +26,9 @@ done
 # ==================================================================
 
 cd ~
-DEFAULT_DIRECTORY="repos/snout/apps/snout_web/assets"
+DEFAULT_DIRECTORY="repos/ropig/apps/ropig_web/assets"
 tmux new-window -c "$DEFAULT_DIRECTORY"
-tmux rename-window "snout"
+tmux rename-window "ropig"
 tmux split-window -c "$DEFAULT_DIRECTORY"
 tmux split-window -c "$DEFAULT_DIRECTORY"
 tmux split-window -c "$DEFAULT_DIRECTORY"
