@@ -167,7 +167,6 @@ Most things are taken care of automatically with the set up script, but some man
 - Sync iTerm2 settings with `com.googlecode.iterm2.plist` dotfile
 - Text Message Forwarding (on, from iPhone)
 - Remove all dock icons
-- Add Todoist as only permanent item in dock
 - Delete unused factory Applications
 - Remove notification center widgets
 - General
