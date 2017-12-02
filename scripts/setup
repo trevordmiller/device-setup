@@ -203,6 +203,7 @@ Most things are taken care of automatically with the set up script, but some man
     - When mirroring to TVs and projectors (on)
     - Allow repeated calls (on)
     - Sort order (recents by app)
+  - Turn off notifications for all apps that have email notifications
 - Display
   - Night Shift
     - Scheduled (from sunset to sunrise)
@@ -271,6 +272,7 @@ Then, restart desktop.
   - Do Not Disturb automatically while driving
   - Night Shift scheduled with full warmth
   - Turn off keyboard auto capitalization and auto spelling correction
+  - Turn off notifications for all apps that have email notifications
 - Remove widgets
 - Remove unused stock apps
 - Download and configure 1Password
@@ -278,7 +280,6 @@ Then, restart desktop.
   - Allow unlock with Face ID
   - Show in Safari share
 - Todoist
-  - Turn off badge notifications for count
   - Show in Safari share
 - Calendar
   - Add "personal" and "work" accounts
