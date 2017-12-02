@@ -8,8 +8,8 @@ set -euo pipefail
 
 apps=(
   "Todoist"
-  "Messages"
   "Calendar"
+  "Messages"
   "Mail"
   "Photos"
   "Day One"
@@ -26,9 +26,9 @@ done
 # ==================================================================
 
 websites=(
-  "https://app.youneedabudget.com"
-  "https://feedly.com"
   "https://app.meetedgar.com/upcoming_posts"
+  "https://feedly.com"
+  "https://app.youneedabudget.com"
   "https://www.facebook.com"
   "https://discordapp.com/channels/@me"
 )
