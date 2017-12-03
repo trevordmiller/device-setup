@@ -30,7 +30,6 @@ websites=(
   "https://feedly.com"
   "https://app.youneedabudget.com"
   "https://www.facebook.com"
-  "https://discordapp.com/channels/@me"
 )
 
 open -a "Google Chrome" --args --profile-directory="Profile 3"

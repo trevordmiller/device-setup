@@ -299,8 +299,6 @@ Then, restart desktop.
   - Sign in
 - Facebook
   - Sign in
-- Discord
-  - Sign in
 - Gospel Library
   - Sign in
 - Lifesum
@@ -322,6 +320,7 @@ Then, restart desktop.
 - background/ folder
   - 1Password
     - Already done ^
+  - Google Sheets
   - Clock
     - Weekday alarm
     - Weekend alarm
