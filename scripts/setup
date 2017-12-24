@@ -250,9 +250,17 @@ Most things are taken care of automatically with the set up script, but some man
   - Show only 1080p60 (HiDPI) and 720p60 (HiDPI) options
 - Windows via Boot Camp Assistant
   - Official ISO file from Microsoft
+    - 64 bit
+    - English
   - 150gb partition
   - Skip registration key
-  - Download Steam
+  - Enhance pointer precision (off)
+  - Download Blizzard.net app
+  - 800 mouse DPI
+  - Overwatch
+    - Music Volume (off)
+    - Mouse sensitivity (6)
+    - Allied health bars (on)
 - Set Startup Disk to macOS
 
 Then, restart desktop.
