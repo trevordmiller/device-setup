@@ -181,7 +181,7 @@ Most things are taken care of automatically with the set up script, but some man
   - Login items (`RescueTime`)
 - Audio & video
   - Video input: webcam camera
-  - Audio input: mic via XLR interface
+  - Audio input: webcam mic
   - Audio output: DAC
 - Desktop & Screen Saver
   - Add desktop background
@@ -256,10 +256,10 @@ Most things are taken care of automatically with the set up script, but some man
   - Skip registration key
   - Enhance pointer precision (off)
   - Download Blizzard.net app
-  - 800 mouse DPI
+  - 1000 mouse DPI
   - Overwatch
     - Music Volume (off)
-    - Mouse sensitivity (5)
+    - Mouse sensitivity (4.5 for 4500 eDPI)
     - Allied health bars (on)
 - Set Startup Disk to macOS
 
@@ -297,10 +297,6 @@ Then, restart desktop.
 - Phone
 - Gospel Library
   - Sign in
-- Feedly		
-  - Sign in 		
-  - Title-only layout		
-  - Show in Safari share menu
 - Maps
 - Spotify
   - Sign in
