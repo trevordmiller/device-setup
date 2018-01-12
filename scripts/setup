@@ -223,7 +223,7 @@ Most things are taken care of automatically with the set up script, but some man
   - Show shared calendar messages in notification center (off)
 - Chrome
   - Set as default browser
-  - Add "personal" and "work" profiles, signed in to the related google account
+  - Add "personal", "work", and "flashcardbot" profiles, signed in to the related google account
     - Safe search (on, locked)
     - Extensions
       - Confirm install (1Password, Grammarly, Vimium, Adblock Plus, React DevTools, Apollo DevTools)
@@ -302,6 +302,7 @@ Then, restart desktop.
   - Sign in
   - Highest quality of streaming and downloads
   - Download playlists offline
+- Expo
 - Safari
   - Google safe search
 - background/ folder
