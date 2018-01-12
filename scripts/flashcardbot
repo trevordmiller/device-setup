@@ -15,7 +15,7 @@ for app in "${apps[@]}"; do
   open -a "$app"
 done
 
-open -a "Google Chrome" --args --profile-directory="Profile 4"
+open -a "Google Chrome" --args --profile-directory="Profile 6"
 
 
 # ==================================================================
