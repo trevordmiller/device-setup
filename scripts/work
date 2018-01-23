@@ -12,7 +12,6 @@ apps=(
   "Slack"
   "Calendar"
   "Mail"
-  "Trello"
   "Spotify"
 )
 
@@ -20,7 +19,20 @@ for app in "${apps[@]}"; do
   open -a "$app"
 done
 
+
+# ==================================================================
+# WEBSITES
+# ==================================================================
+
+websites=(
+  "https://trello.com/c/QdzmEHSL"
+  "localhost:4000"
+)
+
 open -a "Google Chrome" --args --profile-directory="Profile 1"
+for website in "${websites[@]}"; do
+  open "$website"
+done
 
 
 # ==================================================================
