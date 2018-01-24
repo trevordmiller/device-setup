@@ -26,7 +26,7 @@ done
 
 websites=(
   "https://trello.com/c/QdzmEHSL"
-  "localhost:4000"
+  "http://localhost:4000"
 )
 
 open -a "Google Chrome" --args --profile-directory="Profile 1"
