@@ -26,12 +26,9 @@ done
 # ==================================================================
 
 websites=(
-  "https://app.meetedgar.com/upcoming_posts"
-  "https://feedly.com"
   "https://app.youneedabudget.com"
+  "https://feedly.com"
   "https://www.facebook.com"
-  "https://trevordmiller.teachable.com/admin/dashboard"
-  "https://utahjavascript.slack.com"
 )
 
 open -a "Google Chrome" --args --profile-directory="Profile 3"
