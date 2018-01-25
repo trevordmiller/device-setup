@@ -166,7 +166,7 @@ Most things are taken care of automatically with the set up script, but some man
 - Install my ethernet adapter drivers from http://www.asix.com.tw/FrootAttach/driver/AX88179_178A_Macintosh_Driver_Installer_v2.9.0_20171011.zip
 - Sync iTerm2 settings with `com.googlecode.iterm2.plist` dotfile
 - Text Message Forwarding (on, from iPhone)
-- Remove all dock icons
+- Remove all dock icons other than Todoist
 - Delete unused factory Applications
 - Remove notification center widgets
 - General
@@ -287,6 +287,7 @@ Then, restart desktop.
   - Add vault
   - Allow unlock with Face ID
   - Show in Safari share
+- Todoist is the only app in the dock
 - Todoist
   - Show in Safari share
 - Calendar
@@ -294,6 +295,15 @@ Then, restart desktop.
   - Show shared calendar messages in notification center (off)
 - Messages
 - Phone
+- Mail
+- Photos
+- Day One
+- YNAB
+- Feedly
+  - Sign in
+  - Show in Safari share menu
+- Anki
+- Facebook
 - Gospel Library
   - Sign in
 - Maps
@@ -301,9 +311,6 @@ Then, restart desktop.
   - Sign in
   - Highest quality of streaming and downloads
   - Download playlists offline
-- Feedly
-  - Sign in
-  - Show in Safari share menu
 - Safari
   - Google safe search
 - background/ folder
@@ -316,13 +323,14 @@ Then, restart desktop.
     - Weekday alarm
     - Weekend alarm
   - Camera
-  - Photos
   - Find iPhone
     - Turn on Send Last Location
   - Health
     - Set up profile and medical ID
   - Wallet
     - Add debit card for Apple Pay
+  - Google Docs
+  - Messenger
   - App Store
   - Settings
     - Already done ^
