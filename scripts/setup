@@ -40,7 +40,6 @@ echo "Installing Homebrew"
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 echo "Installing Homebrew packages"
-
 homebrew_packages=(
   "bash"
   "tmux"
@@ -77,9 +76,7 @@ npm adduser
 # ==================================================================
 
 echo "Installing Homebrew cask apps and fonts"
-
 brew tap caskroom/fonts
-
 homebrew_cask_packages=(
   "iterm2"
   "google-chrome"
@@ -98,7 +95,6 @@ for homebrew_cask_package in "${homebrew_cask_packages[@]}"; do
 done
 
 echo "Installing Mac App Store apps"
-
 mac_app_store_apps=(
   "585829637" # Todoist
   "1055511498" # Day One
