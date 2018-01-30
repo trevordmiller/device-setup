@@ -48,6 +48,7 @@ homebrew_packages=(
   "vim"
   "git"
   "node"
+  "ruby"
   "mas"
 )
 for homebrew_package in "${homebrew_packages[@]}"; do
