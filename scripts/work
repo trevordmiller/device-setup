@@ -25,7 +25,7 @@ done
 # ==================================================================
 
 websites=(
-  "https://trello.com/c/QdzmEHSL"
+  "https://trello.com/b/HCedzXo1/development"
   "http://localhost:4000"
 )
 
@@ -40,15 +40,15 @@ done
 # ==================================================================
 
 cd ~
-DEFAULT_DIRECTORY="repos/ropig/apps/ropig_web/assets"
+DEFAULT_DIRECTORY="repos/edgar"
 tmux new-window -c "$DEFAULT_DIRECTORY"
-tmux rename-window "ropig"
+tmux rename-window "edgar"
 tmux split-window -c "$DEFAULT_DIRECTORY"
 tmux split-window -c "$DEFAULT_DIRECTORY"
 tmux split-window -c "$DEFAULT_DIRECTORY"
 tmux send-keys -t 0 C-z "vim -c 'E'" Enter
-tmux send-keys -t 1 C-z "npm run services" Enter
-tmux send-keys -t 2 C-z "sleep 15 && npm run dev" Enter
+tmux send-keys -t 1 C-z "" Enter
+tmux send-keys -t 2 C-z "" Enter
 tmux send-keys -t 3 C-z "git status" Enter
 tmux select-layout main-horizontal
 tmux resize-pane -t:.0 -y $(expr $(tmux display -p '#{window_height}') / 3 \* 2)
