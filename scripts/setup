@@ -45,6 +45,8 @@ homebrew_packages=(
   "tmux"
   "reattach-to-user-namespace"
   "vim"
+  "ripgrep"
+  "fzf"
   "git"
   "node"
   "ruby"
