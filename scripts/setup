@@ -44,7 +44,7 @@ homebrew_packages=(
   "bash"
   "tmux"
   "reattach-to-user-namespace"
-  "ripgrep"
+  "the_silver_searcher"
   "fzf"
   "git"
   "vim"
