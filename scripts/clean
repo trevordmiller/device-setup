@@ -50,7 +50,7 @@ deep-git-prune ()
 {
   IFS=$'\n\t'
 
-  # Remove merged git branches and stale remote references other than master and the current branch in each git directory
+  # Remove merged local git branches in each git directory
   set +e
   LOCAL_BRANCHES=$(git branch --merged master | grep -v -e 'master' -e '\*' | tr -d ' ')
   set -e
@@ -60,8 +60,6 @@ deep-git-prune ()
       git branch -d "$BRANCH"
     done
   fi
-
-  git remote prune origin
 }
 
 cd "$HOME/repos"
