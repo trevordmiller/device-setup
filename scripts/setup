@@ -44,11 +44,12 @@ homebrew_packages=(
   "bash"
   "tmux"
   "reattach-to-user-namespace"
-  "vim"
   "ripgrep"
   "fzf"
   "git"
+  "vim"
   "node"
+  "yarn"
   "ruby"
   "mas"
 )
