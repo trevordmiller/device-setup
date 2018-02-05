@@ -26,7 +26,7 @@ done
 
 websites=(
   "https://trello.com/b/HCedzXo1/development"
-  "http://localhost:4000"
+  "http://localhost:3000"
 )
 
 open -a "Google Chrome" --args --profile-directory="Profile 1"
@@ -45,11 +45,9 @@ tmux new-window -c "$DEFAULT_DIRECTORY"
 tmux rename-window "edgar"
 tmux split-window -c "$DEFAULT_DIRECTORY"
 tmux split-window -c "$DEFAULT_DIRECTORY"
-tmux split-window -c "$DEFAULT_DIRECTORY"
 tmux send-keys -t 0 C-z "vim -c 'E'" Enter
-tmux send-keys -t 1 C-z "" Enter
-tmux send-keys -t 2 C-z "" Enter
-tmux send-keys -t 3 C-z "git status" Enter
+tmux send-keys -t 1 C-z "foreman start -f Procfile.dev" Enter
+tmux send-keys -t 2 C-z "git status" Enter
 tmux select-layout main-horizontal
 tmux resize-pane -t:.0 -y $(expr $(tmux display -p '#{window_height}') / 3 \* 2)
 tmux select-pane -t 0

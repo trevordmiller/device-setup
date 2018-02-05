@@ -49,8 +49,13 @@ homebrew_packages=(
   "git"
   "vim"
   "node"
+  "n"
   "yarn"
   "ruby"
+  "rbenv"
+  "ruby-build"
+  "postgresql"
+  "redis"
   "mas"
 )
 for homebrew_package in "${homebrew_packages[@]}"; do
@@ -72,6 +77,14 @@ npm install npm@latest -g
 
 echo "Adding npm user"
 npm adduser
+
+echo "Installing global Ruby packages"
+ruby_packages=(
+  "bundler"
+)
+for ruby_package in "${ruby_packages[@]}"; do
+  gem install "$ruby_package"
+done
 
 
 # ==================================================================
