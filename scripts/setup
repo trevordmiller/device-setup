@@ -82,6 +82,7 @@ npm adduser
 echo "Installing global Ruby packages"
 ruby_packages=(
   "bundler"
+  "foreman"
 )
 for ruby_package in "${ruby_packages[@]}"; do
   gem install "$ruby_package"
