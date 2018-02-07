@@ -27,8 +27,9 @@ done
 
 websites=(
   "https://app.youneedabudget.com"
-  "https://feedly.com"
   "https://www.facebook.com"
+  "http://www.codewars.com/dashboard"
+  "https://feedly.com"
 )
 
 open -a "Google Chrome" --args --profile-directory="Profile 3"
