@@ -28,7 +28,7 @@ done
 websites=(
   "https://app.youneedabudget.com"
   "https://www.facebook.com"
-  "http://www.codewars.com/dashboard"
+  "https://www.codewars.com/trainer/javascript"
   "https://feedly.com"
 )
 
