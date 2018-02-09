@@ -240,11 +240,11 @@ Most things are taken care of automatically with the set up script, but some man
   - Add "personal" and "work" profiles, signed in to the related google account
     - Safe search (on, locked)
     - Extensions
-      - Shared: Grammarly, Vimium
+      - Shared: Vimium
         - Vimium custom mappings
           - map <c-b> scrollFullPageUp
           - map <c-f> scrollFullPageDown
-      - Personal: 1Password, Adblock Plus
+      - Personal: 1Password
         - Adblock Plus settings
           - Allow some non-intrusive advertising (off)
           - Show 'Block Element' right-click menu item (off)
