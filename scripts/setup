@@ -82,7 +82,6 @@ npm adduser
 
 echo "Installing global node packages"
 node_packages=(
-  "stylelint"
   "eslint"
   "prettier"
 )
