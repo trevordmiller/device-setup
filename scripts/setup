@@ -54,6 +54,7 @@ homebrew_packages=(
   "ruby"
   "rbenv"
   "ruby-build"
+  "python3"
   "postgresql"
   "redis"
   "phantomjs"
@@ -86,6 +87,15 @@ ruby_packages=(
 )
 for ruby_package in "${ruby_packages[@]}"; do
   gem install "$ruby_package"
+done
+
+echo "Installing global Python packages"
+python_packages=(
+  "pylint"
+  "yapf"
+)
+for python_package in "${python_packages[@]}"; do
+  pip3 install "$python_package"
 done
 
 
