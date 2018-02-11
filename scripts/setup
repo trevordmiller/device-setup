@@ -39,7 +39,7 @@ cd ~
 echo "Installing Homebrew"
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-echo "Installing Homebrew packages"
+echo "Installing global Homebrew packages"
 homebrew_packages=(
   "bash"
   "tmux"
@@ -80,10 +80,21 @@ npm install npm@latest -g
 echo "Adding npm user"
 npm adduser
 
+echo "Installing global node packages"
+node_packages=(
+  "stylelint"
+  "eslint"
+  "prettier"
+)
+for node_package in "${node_packages[@]}"; do
+  npm install -g "$node_package"
+done
+
 echo "Installing global Ruby packages"
 ruby_packages=(
   "bundler"
   "foreman"
+  "rubocop"
 )
 for ruby_package in "${ruby_packages[@]}"; do
   gem install "$ruby_package"
