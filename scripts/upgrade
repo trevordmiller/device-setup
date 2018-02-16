@@ -16,6 +16,9 @@ brew doctor
 echo "Upgrading Vim plugins"
 vim +PlugUpgrade +PlugUpdate +PlugClean +qall
 
+echo "Upgrading pip"
+pip3 install --upgrade pip
+
 echo "Upgrading npm"
 npm install npm@latest -g
 
