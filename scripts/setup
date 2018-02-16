@@ -42,6 +42,7 @@ echo "Installing Homebrew"
 echo "Installing global Homebrew packages"
 homebrew_packages=(
   "bash"
+  "bash-completion"
   "tmux"
   "reattach-to-user-namespace"
   "git"
