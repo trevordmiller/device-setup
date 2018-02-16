@@ -11,6 +11,7 @@ set -euo pipefail
 echo "Upgrading Homebrew packages"
 brew update
 brew upgrade
+brew doctor
 
 echo "Upgrading Vim plugins"
 vim +PlugUpgrade +PlugUpdate +PlugClean +qall
