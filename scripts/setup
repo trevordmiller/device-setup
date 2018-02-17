@@ -49,6 +49,7 @@ homebrew_packages=(
   "vim"
   "the_silver_searcher"
   "fzf"
+  "ctags"
   "tree"
   "httpie"
   "postgresql"
