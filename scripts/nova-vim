@@ -7,7 +7,7 @@ set -euo pipefail
 # ==================================================================
 
 cd ~
-DEFAULT_DIRECTORY="repos/trevordmiller-website"
+DEFAULT_DIRECTORY="repos/nova-vim"
 
 tmux new-window -c "$DEFAULT_DIRECTORY"
 tmux rename-window "background"
