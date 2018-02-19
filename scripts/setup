@@ -49,9 +49,6 @@ homebrew_packages=(
   "vim"
   "the_silver_searcher"
   "fzf"
-  "ctags"
-  "tree"
-  "httpie"
   "postgresql"
   "redis"
   "python3"
@@ -61,7 +58,6 @@ homebrew_packages=(
   "node"
   "n"
   "yarn"
-  "phantomjs"
   "mas"
 )
 for homebrew_package in "${homebrew_packages[@]}"; do
