@@ -382,6 +382,15 @@ Then, restart desktop.
 
 # Router setup
 
-- [OpenDNS Family Shield](https://www.opendns.com/setupguide/?url=familyshield)
+- OpenDNS Family Shield
+  - Open router preferences at http://192.168.0.1
+  - Select Advanced Setup
+  - Select WAN settings
+  - Change DNS type to static DNS
+  - Add FamilyShield OpenDNS server addresses as DNS server settings and save
+    - Primary DNS: 208.67.222.123
+    - Secondary DNS: 208.67.220.123
+  - Repeat for IPv6 WAN settings
+  - Check it is working at https://welcome.opendns.com and http://www.internetbadguys.com
 
 EOF
