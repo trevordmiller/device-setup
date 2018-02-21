@@ -27,7 +27,6 @@ done
 
 websites=(
   "https://app.youneedabudget.com"
-  "https://www.facebook.com"
   "https://feedly.com"
 )
 

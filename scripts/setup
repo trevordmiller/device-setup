@@ -324,33 +324,26 @@ Then, restart desktop.
   - Add vault
   - Allow unlock with Face ID
   - Show in Safari share
-- Todoist is the only app in the dock
-- Todoist
-  - Show in Safari share
-- Calendar
-  - Add "personal" and "work" accounts
-  - Show shared calendar messages in notification center (off)
-- Messages
-- Phone
-- Mail
-- Photos
-- Day One
-- YNAB
-- Facebook
-- Anki
-- Feedly
-  - Sign in
-  - Show in Safari share menu
-- Gospel Library
-  - Sign in
-- Maps
-- Spotify
-  - Sign in
-  - Highest quality of streaming and downloads
-  - Download playlists offline
-- Safari
-  - Google safe search
-- background/ folder
+- Homescreen
+  - Todoist
+    - The only app in the dock
+  - Calendar
+    - Add "personal" and "work" accounts
+  - Messages
+  - Phone
+  - Anki
+    - Sign in
+  - Feedly
+    - Sign in
+  - Gospel Library
+    - Sign in
+  - Camera
+  - Spotify
+    - Sign in
+    - Highest quality of streaming and downloads
+    - Download playlists offline
+  - Maps
+- background/ folder on second screen
   - 1Password
     - Already done ^
   - Contacts
@@ -359,7 +352,7 @@ Then, restart desktop.
   - Clock
     - Weekday alarm
     - Weekend alarm
-  - Camera
+  - Photos
   - Find iPhone
     - Turn on Send Last Location
   - Health
@@ -367,14 +360,15 @@ Then, restart desktop.
   - Wallet
     - Add debit card for Apple Pay
   - Google Docs
-  - Messenger
+  - Safari
+    - Google safe search
   - App Store
   - Settings
     - Already done ^
 
 # Keyboard setup (Poker 3)
 
-- Swap command and alt keys to match mac setup inside Mac and Windows
+- Defaults
 
 # Router setup
 
