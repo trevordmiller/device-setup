@@ -50,6 +50,8 @@ homebrew_packages=(
   "the_silver_searcher"
   "fzf"
   "postgresql"
+  "heroku"
+  "phantomjs"
   "redis"
   "python3"
   "ruby"
