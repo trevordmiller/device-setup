@@ -33,6 +33,16 @@ cd ~
 
 
 # ==================================================================
+# PRACTICE PROBLEMS
+# ==================================================================
+
+echo "Cloning practice problems"
+cd ~/repos
+git clone https://github.com/trevordmiller/practice-problems.git
+cd ~
+
+
+# ==================================================================
 # PACKAGES
 # ==================================================================
 
@@ -111,6 +121,10 @@ python_packages=(
 for python_package in "${python_packages[@]}"; do
   pip3 install "$python_package"
 done
+
+echo "Configuring practice problems"
+exercism configure
+exercism configure --dir="/Users/trevordmiller/repos/practice-problems/exercism"
 
 
 # ==================================================================
