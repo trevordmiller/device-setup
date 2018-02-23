@@ -61,6 +61,7 @@ homebrew_packages=(
   "node"
   "n"
   "yarn"
+  "exercism"
   "mas"
 )
 for homebrew_package in "${homebrew_packages[@]}"; do
@@ -276,6 +277,8 @@ Most things are taken care of automatically with the set up script, but some man
       - Hide icons in Chrome menu
 - WakaTime
   - Add API key to `~/.wakatime.cfg`
+- Exercism
+  - Run `exercism configure --key={apiKey}` from http://exercism.io/account/key
 - Spotify
   - Sign in
   - Highest quality of streaming and downloads
