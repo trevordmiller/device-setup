@@ -53,6 +53,7 @@ homebrew_packages=(
   "heroku"
   "phantomjs"
   "redis"
+  "go"
   "python3"
   "ruby"
   "rbenv"
