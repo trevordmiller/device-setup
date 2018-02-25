@@ -96,6 +96,14 @@ vim +PlugInstall +qall
 echo "Creating Vim history file directories"
 mkdir ~/.vim/{backup_files,swap_files,undo_files}
 
+echo "Installing global Go packages"
+go_packages=(
+  "github.com/golang/lint/golint"
+)
+for go_package in "${go_packages[@]}"; do
+  go get "$go_package"
+done
+
 echo "Installing global Python packages"
 python_packages=(
   "pipenv"
