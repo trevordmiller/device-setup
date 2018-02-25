@@ -23,9 +23,9 @@ done
 # PROCESSES
 # ==================================================================
 
-killall node || true
 tmux kill-server || true
 pkill postgres || true
+killall node || true
 
 
 # ==================================================================
@@ -65,7 +65,6 @@ deep-git-prune ()
 }
 
 cd "$HOME/repos"
-
 for i in */.git; do ( echo $i; cd $i/..; deep-git-prune; ); done
 
 
