@@ -96,6 +96,26 @@ vim +PlugInstall +qall
 echo "Creating Vim history file directories"
 mkdir ~/.vim/{backup_files,swap_files,undo_files}
 
+echo "Installing global Python packages"
+python_packages=(
+  "pipenv"
+  "pylint"
+  "yapf"
+)
+for python_package in "${python_packages[@]}"; do
+  pip3 install "$python_package"
+done
+
+echo "Installing global Ruby packages"
+ruby_packages=(
+  "bundler"
+  "foreman"
+  "rubocop"
+)
+for ruby_package in "${ruby_packages[@]}"; do
+  gem install "$ruby_package"
+done
+
 echo "Upgrading npm"
 npm install npm@latest -g
 
@@ -109,26 +129,6 @@ node_packages=(
 )
 for node_package in "${node_packages[@]}"; do
   npm install -g "$node_package"
-done
-
-echo "Installing global Ruby packages"
-ruby_packages=(
-  "bundler"
-  "foreman"
-  "rubocop"
-)
-for ruby_package in "${ruby_packages[@]}"; do
-  gem install "$ruby_package"
-done
-
-echo "Installing global Python packages"
-python_packages=(
-  "pipenv"
-  "pylint"
-  "yapf"
-)
-for python_package in "${python_packages[@]}"; do
-  pip3 install "$python_package"
 done
 
 echo "Configuring practice problems"
