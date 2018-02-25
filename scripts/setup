@@ -123,6 +123,7 @@ done
 
 echo "Installing global Python packages"
 python_packages=(
+  "pipenv"
   "pylint"
   "yapf"
 )
