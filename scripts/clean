@@ -38,7 +38,7 @@ brew cask cleanup
 brew prune
 
 # Remove .DS_Store files
-find "$HOME" -name '.DS_Store' -delete
+find "$HOME/repos" -name '.DS_Store' -delete
 
 # Remove downloads
 rm -rf "$HOME"/Downloads/*
