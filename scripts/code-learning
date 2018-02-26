@@ -1,0 +1,45 @@
+#!/bin/bash
+set -euo pipefail
+
+
+# ==================================================================
+# APPS
+# ==================================================================
+
+apps=(
+  "Anki"
+)
+
+for app in "${apps[@]}"; do
+  open -a "$app"
+done
+
+
+# ==================================================================
+# WEBSITES
+# ==================================================================
+
+websites=(
+  "https://app.meetedgar.com"
+  "https://feedly.com"
+)
+
+open -a "Google Chrome" --args --profile-directory="Profile 1"
+for website in "${websites[@]}"; do
+  open "$website"
+done
+
+
+# ==================================================================
+# TERMINAL WORKFLOW
+# ==================================================================
+
+DEFAULT_DIRECTORY="$HOME/repos/practice-problems"
+cd "$DEFAULT_DIRECTORY"
+tmux new-session -d -s "practice-problems"
+tmux rename-window "shell"
+tmux send-keys -t 0 C-z "git status" Enter
+tmux new-window -c "$DEFAULT_DIRECTORY"
+tmux rename-window "main"
+tmux send-keys -t 0 C-z "vim -c 'E'" Enter
+tmux attach-session -d
