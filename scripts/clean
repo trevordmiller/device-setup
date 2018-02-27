@@ -6,6 +6,8 @@ set -euo pipefail
 # APPS
 # ==================================================================
 
+echo "Closing apps"
+
 foregroundAppsString=$(osascript -e 'tell application "System Events" to get name of (processes where background only is false)')
 
 IFS=',' read -r -a foregroundApps <<< "$foregroundAppsString"
@@ -23,6 +25,7 @@ done
 # PROCESSES
 # ==================================================================
 
+echo "Quitting processes"
 tmux kill-server || true
 pkill postgres || true
 killall node || true
@@ -32,15 +35,15 @@ killall node || true
 # ARTIFACTS
 # ==================================================================
 
-# Remove unused homebrew artifacts
+echo "Removing homebrew artifacts"
 brew cleanup
 brew cask cleanup
 brew prune
 
-# Remove .DS_Store files
+echo "Removing OS artifacts"
 find "$HOME/repos" -name '.DS_Store' -delete
 
-# Remove downloads
+echo "Removing downloads"
 rm -rf "$HOME"/Downloads/*
 
 
@@ -48,11 +51,12 @@ rm -rf "$HOME"/Downloads/*
 # REPO BRANCHES
 # ==================================================================
 
+echo "Removing merged local branches in each git repo"
+
 deep-git-prune ()
 {
   IFS=$'\n\t'
 
-  # Remove merged local git branches in each git directory
   set +e
   LOCAL_BRANCHES=$(git branch --merged master | grep -v -e 'master' -e '\*' | tr -d ' ')
   set -e
@@ -72,6 +76,7 @@ for i in */.git; do ( echo $i; cd $i/..; deep-git-prune; ); done
 # REPO STATES
 # ==================================================================
 
+echo "Checking the status of each git repo"
 deep-git-status ()
 {
   cd "$HOME/repos"
@@ -89,6 +94,6 @@ if [ -z "$output" ]
 then 
   echo "All git repos are clean"
 else
-  echo "Clean dirty git repos!"
+  echo "Dirty git repos were found"
   deep-git-status
 fi
