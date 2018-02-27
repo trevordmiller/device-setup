@@ -59,6 +59,8 @@ homebrew_packages=(
   "the_silver_searcher"
   "fzf"
   "vim"
+  "docker"
+  "heroku"
   "postgresql"
   "redis"
   "go"
@@ -69,8 +71,6 @@ homebrew_packages=(
   "node"
   "n"
   "yarn"
-  "heroku"
-  "phantomjs"
   "exercism"
   "mas"
 )
