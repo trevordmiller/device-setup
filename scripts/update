@@ -13,7 +13,6 @@ apps=(
   "Mail"
   "Photos"
   "Day One"
-  "Anki"
 )
 
 for app in "${apps[@]}"; do
@@ -27,7 +26,6 @@ done
 
 websites=(
   "https://app.youneedabudget.com"
-  "https://feedly.com"
 )
 
 open -a "Google Chrome" --args --profile-directory="Profile 3"
