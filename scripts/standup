@@ -1,0 +1,12 @@
+#!/bin/bash
+set -euo pipefail
+
+AUTHOR="trevordmiller"
+
+if [ `date +%w` == 1 ] ; then
+  LIMIT="3 days"
+else
+  LIMIT="yesterday"
+fi
+
+git log --author="$AUTHOR" --after="$LIMIT"
