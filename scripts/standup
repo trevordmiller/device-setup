@@ -9,4 +9,4 @@ else
   LIMIT="yesterday"
 fi
 
-git log --author="$AUTHOR" --after="$LIMIT"
+git log --all --author="$AUTHOR" --after="$LIMIT" --decorate --graph
