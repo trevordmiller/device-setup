@@ -90,8 +90,7 @@ output=$(deep-git-status | grep \
 -e "Your branch is ahead" \
 )
 
-if [ -z "$output" ]
-then 
+if [ -z "$output" ]; then 
   echo "All git repos are clean"
 else
   echo "Dirty git repos were found"
