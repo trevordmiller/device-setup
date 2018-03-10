@@ -4,9 +4,18 @@ set -euo pipefail
 AUTHOR="trevordmiller"
 
 if [ `date +%w` == 1 ] ; then
-  LIMIT="3 days"
+  LIMIT="3 days ago"
 else
   LIMIT="yesterday"
 fi
 
-git log --all --author="$AUTHOR" --after="$LIMIT" --decorate --graph
+git fetch
+
+echo "MERGED:"
+git log --merges --author="$AUTHOR" --after="$LIMIT"
+
+echo "WAITING:"
+git branch --no-merged master
+
+echo "DOING:"
+git status
