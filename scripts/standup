@@ -14,7 +14,7 @@ git fetch
 echo "MERGED:"
 git log --merges --author="$AUTHOR" --after="$LIMIT"
 
-echo "WAITING:"
+echo "UNMERGED:"
 git branch --no-merged master
 
 echo "DOING:"
