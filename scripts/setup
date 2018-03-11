@@ -1,14 +1,12 @@
 #!/bin/bash
 set -euo pipefail
 
-
 # ==================================================================
 # ROOT
 # ==================================================================
 
 cd ~
 mkdir repos
-
 
 # ==================================================================
 # SHELL SCRIPTS
@@ -18,7 +16,6 @@ echo "Cloning shell scripts"
 cd ~/repos
 git clone https://github.com/trevordmiller/shell-scripts.git
 cd ~
-
 
 # ==================================================================
 # DOTFILES
@@ -31,7 +28,6 @@ cd dotfiles
 ./index
 cd ~
 
-
 # ==================================================================
 # PRACTICE PROBLEMS
 # ==================================================================
@@ -40,7 +36,6 @@ echo "Cloning practice problems"
 cd ~/repos
 git clone https://github.com/trevordmiller/practice-problems.git
 cd ~
-
 
 # ==================================================================
 # PACKAGES
@@ -51,46 +46,47 @@ echo "Installing Homebrew"
 
 echo "Installing global Homebrew packages"
 homebrew_packages=(
-  "bash"
-  "bash-completion"
-  "tmux"
-  "reattach-to-user-namespace"
-  "git"
-  "the_silver_searcher"
-  "fzf"
-  "vim"
-  "docker"
-  "heroku"
-  "postgresql"
-  "redis"
-  "go"
-  "dep"
-  "python3"
-  "ruby"
-  "rbenv"
-  "ruby-build"
-  "node"
-  "n"
-  "yarn"
-  "exercism"
-  "mas"
+	"bash"
+	"bash-completion"
+	"shfmt"
+	"tmux"
+	"reattach-to-user-namespace"
+	"git"
+	"the_silver_searcher"
+	"fzf"
+	"vim"
+	"docker"
+	"heroku"
+	"postgresql"
+	"redis"
+	"go"
+	"dep"
+	"python3"
+	"ruby"
+	"rbenv"
+	"ruby-build"
+	"node"
+	"n"
+	"yarn"
+	"exercism"
+	"mas"
 )
 for homebrew_package in "${homebrew_packages[@]}"; do
-  brew install "$homebrew_package"
+	brew install "$homebrew_package"
 done
 
 echo "Installing unofficial global Homebrew packages"
 unofficial_homebrew_packages=(
-  "universal-ctags/universal-ctags/universal-ctags"
+	"universal-ctags/universal-ctags/universal-ctags"
 )
 for unofficial_homebrew_package in "${unofficial_homebrew_packages[@]}"; do
-  brew install --HEAD "$unofficial_homebrew_package"
+	brew install --HEAD "$unofficial_homebrew_package"
 done
 
 echo "Installing Vim plugin manager"
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    
+	https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
 echo "Installing Vim plugins"
 vim +PlugInstall +qall
 
@@ -99,30 +95,30 @@ mkdir ~/.vim/{backup_files,swap_files,undo_files}
 
 echo "Installing global Go packages"
 go_packages=(
-  "github.com/golang/lint/golint"
+	"github.com/golang/lint/golint"
 )
 for go_package in "${go_packages[@]}"; do
-  go get "$go_package"
+	go get "$go_package"
 done
 
 echo "Installing global Python packages"
 python_packages=(
-  "pipenv"
-  "pylint"
-  "yapf"
+	"pipenv"
+	"pylint"
+	"yapf"
 )
 for python_package in "${python_packages[@]}"; do
-  pip3 install "$python_package"
+	pip3 install "$python_package"
 done
 
 echo "Installing global Ruby packages"
 ruby_packages=(
-  "bundler"
-  "foreman"
-  "rubocop"
+	"bundler"
+	"foreman"
+	"rubocop"
 )
 for ruby_package in "${ruby_packages[@]}"; do
-  gem install "$ruby_package"
+	gem install "$ruby_package"
 done
 
 echo "Upgrading npm"
@@ -133,17 +129,16 @@ npm adduser
 
 echo "Installing global node packages"
 node_packages=(
-  "eslint"
-  "prettier"
+	"eslint"
+	"prettier"
 )
 for node_package in "${node_packages[@]}"; do
-  npm install -g "$node_package"
+	npm install -g "$node_package"
 done
 
 echo "Configuring practice problems"
 exercism configure
 exercism configure --dir="/Users/trevordmiller/repos/practice-problems/exercism"
-
 
 # ==================================================================
 # APPS / FONTS
@@ -152,32 +147,31 @@ exercism configure --dir="/Users/trevordmiller/repos/practice-problems/exercism"
 echo "Installing Homebrew cask apps and fonts"
 brew tap caskroom/fonts
 homebrew_cask_packages=(
-  "iterm2"
-  "google-chrome"
-  "anki"
-  "switchresx"
-  "screenflow"
-  "spotify"
-  "slack"
-  "zoomus"
-  "1password"
-  "rescuetime"
-  "font-fira-mono"
+	"iterm2"
+	"google-chrome"
+	"anki"
+	"switchresx"
+	"screenflow"
+	"spotify"
+	"slack"
+	"zoomus"
+	"1password"
+	"rescuetime"
+	"font-fira-mono"
 )
 for homebrew_cask_package in "${homebrew_cask_packages[@]}"; do
-  brew cask install "$homebrew_cask_package"
+	brew cask install "$homebrew_cask_package"
 done
 
 echo "Installing Mac App Store apps"
 mac_app_store_apps=(
-  "585829637" # Todoist
-  "1055511498" # Day One
-  "682658836" # GarageBand
+	"585829637" # Todoist
+	"1055511498" # Day One
+	"682658836" # GarageBand
 )
 for mac_app_store_app in "${mac_app_store_apps[@]}"; do
-  mas install "$mac_app_store_app"
+	mas install "$mac_app_store_app"
 done
-
 
 # ==================================================================
 # MACOS
@@ -223,19 +217,18 @@ killall SystemUIServer
 echo "Configuring incognito mode"
 defaults write com.google.chrome IncognitoModeAvailability -integer 1
 
-
 # ==================================================================
 # MANUAL
 # ==================================================================
 
-cat << EOF
+cat <<EOF
 
 Most importantly, my task list (Todoist) is the single source of truth linking to everything else. 
 
 Most things are taken care of automatically with the set up script, but some manual items are needed:
 
 - Install my ethernet adapter drivers from http://www.asix.com.tw/FrootAttach/driver/AX88179_178A_Macintosh_Driver_Installer_v2.9.0_20171011.zip
-- Sync iTerm2 settings with `com.googlecode.iterm2.plist` dotfile
+- Sync iTerm2 settings with $(com.googlecode.iterm2.plist) dotfile
 - Text Message Forwarding (on, from iPhone)
 - Remove all dock icons other than Todoist
 - Delete unused factory Applications
@@ -248,7 +241,7 @@ Most things are taken care of automatically with the set up script, but some man
   - Touch bar (app controls)
 - Users
   - Add avatar
-  - Login items (`RescueTime`)
+  - Login items ($(RescueTime))
 - Audio & video
   - Video input: webcam camera
   - Audio input: webcam mic
@@ -256,7 +249,7 @@ Most things are taken care of automatically with the set up script, but some man
 - Desktop & Screen Saver
   - Add desktop background
 - Finder
-  - Favorites (`trevordmiller` only)
+  - Favorites ($(trevordmiller) only)
   - Show all filename extensions (on)
   - Show warning before changing an extension (off)
   - Correct spelling automatically (off)
@@ -308,9 +301,9 @@ Most things are taken care of automatically with the set up script, but some man
       - Work: LastPass, React DevTools, Redux DevTools
       - Hide icons in Chrome menu
 - WakaTime
-  - Add API key to `~/.wakatime.cfg`
+  - Add API key to $(~/.wakatime.cfg)
 - Exercism
-  - Run `exercism configure --key={apiKey}` from http://exercism.io/account/key
+  - Run $(exercism configure --key={apiKey}) from http://exercism.io/account/key
 - Spotify
   - Sign in
   - Highest quality of streaming and downloads

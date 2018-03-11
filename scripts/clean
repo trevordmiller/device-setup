@@ -1,7 +1,6 @@
 #!/bin/bash
 set -euo pipefail
 
-
 # ==================================================================
 # APPS
 # ==================================================================
@@ -10,16 +9,14 @@ echo "Closing apps"
 
 foregroundAppsString=$(osascript -e 'tell application "System Events" to get name of (processes where background only is false)')
 
-IFS=',' read -r -a foregroundApps <<< "$foregroundAppsString"
+IFS=',' read -r -a foregroundApps <<<"$foregroundAppsString"
 
-for foregroundApp in "${foregroundApps[@]}"
-do
-  appName=$(echo "$foregroundApp" | sed 's/^ *//g')
-  if [[ ! "$appName" == "Finder" && ! "$appName" == "iTerm2" ]]; then
-    osascript -e 'quit app "'"$appName"'"'
-  fi
+for foregroundApp in "${foregroundApps[@]}"; do
+	appName=$(echo "$foregroundApp" | sed 's/^ *//g')
+	if [[ ! "$appName" == "Finder" && ! "$appName" == "iTerm2" ]]; then
+		osascript -e 'quit app "'"$appName"'"'
+	fi
 done
-
 
 # ==================================================================
 # PROCESSES
@@ -29,7 +26,6 @@ echo "Quitting processes"
 tmux kill-server || true
 pkill postgres || true
 killall node || true
-
 
 # ==================================================================
 # ARTIFACTS
@@ -46,53 +42,53 @@ find "$HOME/repos" -name '.DS_Store' -delete
 echo "Removing downloads"
 rm -rf "$HOME"/Downloads/*
 
-
 # ==================================================================
 # REPO BRANCHES
 # ==================================================================
 
 echo "Removing merged local branches in each git repo"
 
-deep-git-prune ()
-{
-  IFS=$'\n\t'
+deep-git-prune() {
+	IFS=$'\n\t'
 
-  set +e
-  LOCAL_BRANCHES=$(git branch --merged master | grep -v -e 'master' -e '\*' | tr -d ' ')
-  set -e
+	set +e
+	LOCAL_BRANCHES=$(git branch --merged master | grep -v -e 'master' -e '\*' | tr -d ' ')
+	set -e
 
-  if [[ -n "$LOCAL_BRANCHES" ]]; then
-    for BRANCH in $LOCAL_BRANCHES; do
-      git branch -d "$BRANCH"
-    done
-  fi
+	if [[ -n "$LOCAL_BRANCHES" ]]; then
+		for BRANCH in $LOCAL_BRANCHES; do
+			git branch -d "$BRANCH"
+		done
+	fi
 }
 
 cd "$HOME/repos"
-for i in */.git; do ( echo $i; cd $i/..; deep-git-prune; ); done
-
+for i in */.git; do (
+	echo $i
+	cd $i/..
+	deep-git-prune
+); done
 
 # ==================================================================
 # REPO STATES
 # ==================================================================
 
 echo "Checking the status of each git repo"
-deep-git-status ()
-{
-  cd "$HOME/repos"
-  find . -path "*/.git" -maxdepth 2 -print -execdir git status ";"
+deep-git-status() {
+	cd "$HOME/repos"
+	find . -path "*/.git" -maxdepth 2 -print -execdir git status ";"
 }
 
 output=$(deep-git-status | grep \
--e "Untracked files:" \
--e "Changes not staged for commit:"  \
--e "Changes to be committed:" \
--e "Your branch is ahead" \
+	-e "Untracked files:" \
+	-e "Changes not staged for commit:" \
+	-e "Changes to be committed:" \
+	-e "Your branch is ahead"
 )
 
-if [ -z "$output" ]; then 
-  echo "All git repos are clean"
+if [ -z "$output" ]; then
+	echo "All git repos are clean"
 else
-  echo "Dirty git repos were found"
-  deep-git-status
+	echo "Dirty git repos were found"
+	deep-git-status
 fi

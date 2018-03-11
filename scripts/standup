@@ -3,10 +3,10 @@ set -euo pipefail
 
 AUTHOR="trevordmiller"
 
-if [ `date +%w` == 1 ] ; then
-  LIMIT="3 days ago"
+if [ $(date +%w) == 1 ]; then
+	LIMIT="3 days ago"
 else
-  LIMIT="yesterday"
+	LIMIT="yesterday"
 fi
 
 git fetch

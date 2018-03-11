@@ -1,34 +1,31 @@
 #!/bin/bash
 set -euo pipefail
 
-
 # ==================================================================
 # APPS
 # ==================================================================
 
 apps=(
-  "Anki"
+	"Anki"
 )
 
 for app in "${apps[@]}"; do
-  open -a "$app"
+	open -a "$app"
 done
-
 
 # ==================================================================
 # WEBSITES
 # ==================================================================
 
 websites=(
-  "https://app.meetedgar.com"
-  "https://feedly.com"
+	"https://app.meetedgar.com"
+	"https://feedly.com"
 )
 
 open -a "Google Chrome" --args --profile-directory="Profile 3"
 for website in "${websites[@]}"; do
-  open "$website"
+	open "$website"
 done
-
 
 # ==================================================================
 # TERMINAL WORKFLOW

@@ -1,38 +1,35 @@
 #!/bin/bash
 set -euo pipefail
 
-
 # ==================================================================
 # APPS
 # ==================================================================
 
 apps=(
-  "Todoist"
-  "iTerm"
-  "Slack"
-  "Calendar"
-  "Mail"
-  "Spotify"
+	"Todoist"
+	"iTerm"
+	"Slack"
+	"Calendar"
+	"Mail"
+	"Spotify"
 )
 
 for app in "${apps[@]}"; do
-  open -a "$app"
+	open -a "$app"
 done
-
 
 # ==================================================================
 # WEBSITES
 # ==================================================================
 
 websites=(
-  "https://trello.com/b/HCedzXo1/development"
+	"https://trello.com/b/HCedzXo1/development"
 )
 
 open -a "Google Chrome" --args --profile-directory="Profile 1"
 for website in "${websites[@]}"; do
-  open "$website"
+	open "$website"
 done
-
 
 # ==================================================================
 # TERMINAL WORKFLOW

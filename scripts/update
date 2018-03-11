@@ -1,34 +1,32 @@
 #!/bin/bash
 set -euo pipefail
 
-
 # ==================================================================
 # APPS
 # ==================================================================
 
 apps=(
-  "Todoist"
-  "Calendar"
-  "Messages"
-  "Mail"
-  "Photos"
-  "Day One"
+	"Todoist"
+	"Calendar"
+	"Messages"
+	"Mail"
+	"Photos"
+	"Day One"
 )
 
 for app in "${apps[@]}"; do
-  open -a "$app"
+	open -a "$app"
 done
-
 
 # ==================================================================
 # WEBSITES
 # ==================================================================
 
 websites=(
-  "https://app.youneedabudget.com"
+	"https://app.youneedabudget.com"
 )
 
 open -a "Google Chrome" --args --profile-directory="Profile 3"
 for website in "${websites[@]}"; do
-  open "$website"
+	open "$website"
 done
