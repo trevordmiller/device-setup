@@ -64,6 +64,7 @@ homebrew_packages=(
   "postgresql"
   "redis"
   "go"
+  "dep"
   "python3"
   "ruby"
   "rbenv"
