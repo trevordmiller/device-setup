@@ -69,6 +69,7 @@ homebrew_packages=(
 	"n"
 	"yarn"
 	"exercism"
+	"asciinema"
 	"mas"
 )
 for homebrew_package in "${homebrew_packages[@]}"; do
@@ -139,6 +140,9 @@ done
 echo "Configuring practice problems"
 exercism configure
 exercism configure --dir="/Users/trevordmiller/repos/practice-problems/exercism"
+
+echo "Configuring terminal recording"
+asciinema auth
 
 # ==================================================================
 # APPS / FONTS
