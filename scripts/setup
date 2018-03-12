@@ -154,8 +154,6 @@ homebrew_cask_packages=(
 	"iterm2"
 	"google-chrome"
 	"anki"
-	"switchresx"
-	"screenflow"
 	"spotify"
 	"slack"
 	"zoomus"
