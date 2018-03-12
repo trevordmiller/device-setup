@@ -11,11 +11,16 @@ fi
 
 git fetch
 
-echo "MERGED:"
+clear
+
+echo "Commits:"
+git log --all --author="$AUTHOR" --after="$LIMIT" --decorate --graph
+
+echo "Merged:"
 git log --merges --author="$AUTHOR" --after="$LIMIT"
 
-echo "UNMERGED:"
+echo "In review:"
 git branch --no-merged master
 
-echo "DOING:"
+echo "Next:"
 git status
