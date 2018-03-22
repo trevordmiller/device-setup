@@ -238,6 +238,7 @@ Most things are taken care of automatically with the set up script, but some man
 - Delete unused factory Applications
 - Remove notification center widgets
 - General
+  - Appearance (Graphite)
   - Highlight color (Nova cyan)
 - Keyboard
   - For each keyboard
