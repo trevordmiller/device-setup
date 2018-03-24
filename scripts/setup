@@ -59,7 +59,6 @@ homebrew_packages=(
 	"heroku"
 	"postgresql"
 	"redis"
-	"python3"
 	"ruby"
 	"rbenv"
 	"ruby-build"
@@ -82,16 +81,6 @@ vim +PlugInstall +qall
 
 echo "Creating Vim history file directories"
 mkdir ~/.vim/{backup_files,swap_files,undo_files}
-
-echo "Installing global Python packages"
-python_packages=(
-	"pipenv"
-	"pylint"
-	"yapf"
-)
-for python_package in "${python_packages[@]}"; do
-	pip3 install "$python_package"
-done
 
 echo "Installing global Ruby packages"
 ruby_packages=(
