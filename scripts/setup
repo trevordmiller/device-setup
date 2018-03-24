@@ -74,14 +74,6 @@ for homebrew_package in "${homebrew_packages[@]}"; do
 	brew install "$homebrew_package"
 done
 
-echo "Installing unofficial global Homebrew packages"
-unofficial_homebrew_packages=(
-	"universal-ctags/universal-ctags/universal-ctags"
-)
-for unofficial_homebrew_package in "${unofficial_homebrew_packages[@]}"; do
-	brew install --HEAD "$unofficial_homebrew_package"
-done
-
 echo "Installing Vim plugin manager"
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 	https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
