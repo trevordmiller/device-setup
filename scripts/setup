@@ -64,7 +64,6 @@ homebrew_packages=(
 	"rbenv"
 	"ruby-build"
 	"node"
-	"n"
 	"yarn"
 	"exercism"
 	"asciinema"
