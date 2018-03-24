@@ -68,7 +68,6 @@ homebrew_packages=(
 	"node"
 	"n"
 	"yarn"
-	"hugo"
 	"exercism"
 	"asciinema"
 	"mas"
