@@ -49,24 +49,24 @@ homebrew_packages=(
 	"bash"
 	"bash-completion"
 	"shfmt"
+	"the_silver_searcher"
 	"tmux"
 	"reattach-to-user-namespace"
-	"git"
-	"the_silver_searcher"
 	"fzf"
 	"vim"
-	"docker"
-	"heroku"
-	"postgresql"
-	"redis"
-	"ruby"
-	"rbenv"
-	"ruby-build"
+	"git"
 	"node"
-	"yarn"
+	"docker"
+	"postgresql"
 	"exercism"
 	"asciinema"
 	"mas"
+	"redis"
+	"heroku"
+	"yarn"
+	"ruby"
+	"rbenv"
+	"ruby-build"
 )
 for homebrew_package in "${homebrew_packages[@]}"; do
 	brew install "$homebrew_package"
@@ -82,26 +82,13 @@ vim +PlugInstall +qall
 echo "Creating Vim history file directories"
 mkdir ~/.vim/{backup_files,swap_files,undo_files}
 
-echo "Installing global Ruby packages"
-ruby_packages=(
-	"bundler"
-	"foreman"
-	"rubocop"
-)
-for ruby_package in "${ruby_packages[@]}"; do
-	gem install "$ruby_package"
-done
-
-echo "Upgrading npm"
-npm install npm@latest -g
-
 echo "Adding npm user"
 npm adduser
 
 echo "Installing global node packages"
 node_packages=(
-	"eslint"
 	"prettier"
+	"eslint"
 )
 for node_package in "${node_packages[@]}"; do
 	npm install -g "$node_package"
@@ -114,6 +101,16 @@ exercism configure --dir="/Users/trevordmiller/repos/practice-problems/exercism"
 echo "Configuring terminal recording"
 asciinema auth
 
+echo "Installing global Ruby packages"
+ruby_packages=(
+	"bundler"
+	"foreman"
+	"rubocop"
+)
+for ruby_package in "${ruby_packages[@]}"; do
+	gem install "$ruby_package"
+done
+
 # ==================================================================
 # APPS / FONTS
 # ==================================================================
@@ -121,15 +118,15 @@ asciinema auth
 echo "Installing Homebrew cask apps and fonts"
 brew tap caskroom/fonts
 homebrew_cask_packages=(
+	"font-fira-mono"
 	"iterm2"
+	"1password"
+	"rescuetime"
 	"google-chrome"
 	"anki"
 	"spotify"
 	"slack"
 	"zoomus"
-	"1password"
-	"rescuetime"
-	"font-fira-mono"
 )
 for homebrew_cask_package in "${homebrew_cask_packages[@]}"; do
 	brew cask install "$homebrew_cask_package"
