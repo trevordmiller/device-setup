@@ -83,7 +83,7 @@ echo "Creating Vim history file directories"
 mkdir ~/.vim/{backup_files,swap_files,undo_files}
 
 echo "Upgrading npm"
-npm i npm
+npm install npm@latest -g
 
 echo "Adding npm user"
 npm adduser
