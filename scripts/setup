@@ -82,6 +82,9 @@ vim +PlugInstall +qall
 echo "Creating Vim history file directories"
 mkdir ~/.vim/{backup_files,swap_files,undo_files}
 
+echo "Upgrading npm"
+npm i npm
+
 echo "Adding npm user"
 npm adduser
 

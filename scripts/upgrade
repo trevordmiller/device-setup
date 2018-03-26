@@ -15,6 +15,9 @@ brew doctor
 echo "Upgrading Vim plugins"
 vim +PlugUpgrade +PlugUpdate +PlugClean +qall
 
+echo "Upgrading npm"
+npm i npm
+
 # ==================================================================
 # MAC APP STORE
 # ==================================================================
