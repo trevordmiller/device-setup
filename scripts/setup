@@ -125,6 +125,7 @@ homebrew_cask_packages=(
 	"iterm2"
 	"1password"
 	"rescuetime"
+	"kap"
 	"google-chrome"
 	"anki"
 	"spotify"
