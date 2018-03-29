@@ -90,8 +90,10 @@ npm adduser
 
 echo "Installing global node packages"
 node_packages=(
-	"prettier"
+	"typescript"
+	"tslint"
 	"eslint"
+	"prettier"
 )
 for node_package in "${node_packages[@]}"; do
 	npm install -g "$node_package"
