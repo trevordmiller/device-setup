@@ -285,13 +285,6 @@ Most things are taken care of automatically with the set up script, but some man
   - Sign in
   - Highest quality of streaming and downloads
   - Download playlists offline
-- Screenflow
-  - Enter licence
-  - Remove recording countdown
-  - Add audio driver for computer sound
-- SwitchResX
-  - Enter licence
-  - Show only 1080p60 (HiDPI) and 720p60 (HiDPI) options
 - Windows via Boot Camp Assistant
   - Official ISO file from Microsoft
     - 64 bit
@@ -306,7 +299,7 @@ Most things are taken care of automatically with the set up script, but some man
     - Music Volume (off)
     - Mouse sensitivity (4.5 for 4500 eDPI)
     - Allied health bars (on)
-- Set Startup Disk to macOS
+  - Set Startup Disk to macOS
 
 Then, restart desktop.
 
