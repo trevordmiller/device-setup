@@ -220,9 +220,9 @@ Most things are taken care of automatically with the set up script, but some man
   - Add avatar
   - Login items ($(RescueTime))
 - Audio & video
+  - Audio input: audio interface
+  - Audio output: audio interface
   - Video input: webcam camera
-  - Audio input: webcam mic
-  - Audio output: DAC
 - Desktop & Screen Saver
   - Add desktop background
 - Finder
