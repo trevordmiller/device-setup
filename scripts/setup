@@ -53,6 +53,7 @@ homebrew_packages=(
 	"tmux"
 	"reattach-to-user-namespace"
 	"fzf"
+	"ctags"
 	"vim"
 	"git"
 	"node"
