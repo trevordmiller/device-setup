@@ -53,7 +53,6 @@ homebrew_packages=(
 	"tmux"
 	"reattach-to-user-namespace"
 	"fzf"
-	"ctags"
 	"vim"
 	"git"
 	"node"
@@ -71,6 +70,14 @@ homebrew_packages=(
 )
 for homebrew_package in "${homebrew_packages[@]}"; do
 	brew install "$homebrew_package"
+done
+
+echo "Installing non-core Homebrew packages"
+homebrew_packages_from_tap=(
+	"universal-ctags/universal-ctags/universal-ctags"
+)
+for homebrew_package_from_tap in "${homebrew_packages_from_tap[@]}"; do
+	brew install --HEAD "$homebrew_package_from_tap"
 done
 
 echo "Installing Vim plugin manager"
