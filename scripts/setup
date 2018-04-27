@@ -195,6 +195,11 @@ echo "Configuring screenshots to save in Downloads"
 defaults write com.apple.screencapture location ~/Downloads
 killall SystemUIServer
 
+# BLUETOOTH AUDIO
+
+echo "Configuring highest quality bluetooth audio"
+sudo defaults write bluetoothaudiod "Enable AAC codec" -bool true
+
 # CHROME
 
 echo "Configuring incognito mode"
