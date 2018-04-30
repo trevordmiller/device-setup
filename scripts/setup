@@ -44,6 +44,14 @@ cd ~
 echo "Installing Homebrew"
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
+echo "Adding Homebrew taps"
+homebrew_taps=(
+	"universal-ctags/universal-ctags"
+)
+for homebrew_tap in "${homebrew_taps[@]}"; do
+	brew tap "$homebrew_tap"
+done
+
 echo "Installing global Homebrew packages"
 homebrew_packages=(
 	"bash"
@@ -53,6 +61,7 @@ homebrew_packages=(
 	"tmux"
 	"reattach-to-user-namespace"
 	"fzf"
+	"universal-ctags"
 	"vim"
 	"git"
 	"node"
@@ -70,14 +79,6 @@ homebrew_packages=(
 )
 for homebrew_package in "${homebrew_packages[@]}"; do
 	brew install "$homebrew_package"
-done
-
-echo "Installing non-core Homebrew packages"
-homebrew_packages_from_tap=(
-	"universal-ctags/universal-ctags/universal-ctags"
-)
-for homebrew_package_from_tap in "${homebrew_packages_from_tap[@]}"; do
-	brew install --HEAD "$homebrew_package_from_tap"
 done
 
 echo "Installing Vim plugin manager"
