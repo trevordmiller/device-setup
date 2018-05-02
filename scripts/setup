@@ -307,10 +307,10 @@ Most things are taken care of automatically with the set up script, but some man
   - Skip registration key
   - Enhance pointer precision (off)
   - Download Blizzard.net app
-  - 1000 mouse DPI
+  - 800 mouse DPI
   - Overwatch
+    - Mouse sensitivity (5.0 for 4000 eDPI)
     - Music Volume (off)
-    - Mouse sensitivity (4.5 for 4500 eDPI)
     - Allied health bars (on)
   - Set Startup Disk to macOS
 
