@@ -65,6 +65,7 @@ homebrew_packages=(
 	"vim"
 	"git"
 	"node"
+	"n"
 	"docker"
 	"postgresql"
 	"exercism"
@@ -91,8 +92,11 @@ vim +PlugInstall +qall
 echo "Creating Vim history file directories"
 mkdir ~/.vim/{backup_files,swap_files,undo_files}
 
+echo "Upgrading node"
+n stable
+
 echo "Upgrading npm"
-npm install npm@latest -g
+npm install npm -g
 
 echo "Adding npm user"
 npm adduser
