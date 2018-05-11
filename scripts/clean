@@ -25,7 +25,6 @@ done
 echo "Quitting processes"
 tmux kill-server || true
 killall node || true
-pkill postgres || true
 
 # ==================================================================
 # ARTIFACTS

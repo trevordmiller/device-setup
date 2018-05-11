@@ -66,17 +66,9 @@ homebrew_packages=(
 	"git"
 	"node"
 	"n"
-	"docker"
-	"postgresql"
 	"exercism"
 	"asciinema"
 	"mas"
-	"redis"
-	"heroku"
-	"yarn"
-	"ruby"
-	"rbenv"
-	"ruby-build"
 )
 for homebrew_package in "${homebrew_packages[@]}"; do
 	brew install "$homebrew_package"
@@ -119,16 +111,6 @@ exercism configure --dir="/Users/trevordmiller/repos/practice-problems/exercism"
 echo "Configuring terminal recording"
 asciinema auth
 
-echo "Installing global Ruby packages"
-ruby_packages=(
-	"bundler"
-	"foreman"
-	"rubocop"
-)
-for ruby_package in "${ruby_packages[@]}"; do
-	gem install "$ruby_package"
-done
-
 # ==================================================================
 # APPS / FONTS
 # ==================================================================
@@ -143,8 +125,6 @@ homebrew_cask_packages=(
 	"google-chrome"
 	"anki"
 	"spotify"
-	"slack"
-	"zoomus"
 )
 for homebrew_cask_package in "${homebrew_cask_packages[@]}"; do
 	brew cask install "$homebrew_cask_package"
@@ -155,7 +135,6 @@ mac_app_store_apps=(
 	"585829637" # Todoist
 	"1055511498" # Day One
 	"682658836" # GarageBand
-	"1278508951" # Trello
 )
 for mac_app_store_app in "${mac_app_store_apps[@]}"; do
 	mas install "$mac_app_store_app"
@@ -221,7 +200,7 @@ Most importantly, my task list (Todoist) is the single source of truth linking t
 Most things are taken care of automatically with the set up script, but some manual items are needed:
 
 - Install my ethernet adapter drivers from http://www.asix.com.tw/FrootAttach/driver/AX88179_178A_Macintosh_Driver_Installer_v2.9.0_20171011.zip
-- Sync iTerm2 settings with $(com.googlecode.iterm2.plist) dotfile
+- Sync iTerm2 settings with com.googlecode.iterm2.plist dotfile
 - Text Message Forwarding (on, from iPhone)
 - Remove all dock icons other than Todoist
 - Delete unused factory Applications
@@ -235,15 +214,15 @@ Most things are taken care of automatically with the set up script, but some man
   - Touch bar (app controls)
 - Users
   - Add avatar
-  - Login items ($(RescueTime))
+  - Login items (RescueTime)
 - Audio & video
   - Audio input: audio interface
   - Audio output: audio interface
   - Video input: webcam camera
 - Desktop & Screen Saver
-  - Add desktop background
+  - Add circuit desktop background
 - Finder
-  - Favorites ($(trevordmiller) only)
+  - Favorites (trevordmiller) only)
   - Show all filename extensions (on)
   - Show warning before changing an extension (off)
   - Correct spelling automatically (off)
@@ -275,29 +254,24 @@ Most things are taken care of automatically with the set up script, but some man
   - Show in menu bar (off)
   - Show badge in dock icon (off)
 - Calendar
-  - Add "Personal" and "Work" accounts
   - Time to leave (on)
   - Show shared calendar messages in notification center (off)
 - Chrome
   - Set as default browser
-  - Add "personal" and "work" profiles, signed in to the related google account
+  - Add "personal" profile, signed in to personal google account
     - Safe search (on, locked)
     - Extensions
-      - Shared: Vimium
+      - 1Password
+      - Vimium
         - Vimium custom mappings
           - map <c-b> scrollFullPageUp
           - map <c-f> scrollFullPageDown
-      - Personal: 1Password
-        - Adblock Plus settings
-          - Allow some non-intrusive advertising (off)
-          - Show 'Block Element' right-click menu item (off)
-          - Show 'Adblock Plus' panel in the developer tools (off)
-      - Work: LastPass, React DevTools, Redux DevTools
+      - React DevTools
       - Hide icons in Chrome menu
 - WakaTime
-  - Add API key to $(~/.wakatime.cfg)
+  - Add API key to "~/.wakatime.cfg"
 - Exercism
-  - Run $(exercism configure --key={apiKey}) from http://exercism.io/account/key
+  - Run "exercism configure --key={apiKey}" from http://exercism.io/account/key
 - Spotify
   - Sign in
   - Highest quality of streaming and downloads
@@ -347,7 +321,6 @@ Then, restart desktop.
   - Todoist
     - The only app in the dock
   - Calendar
-    - Add "personal" and "work" accounts
   - Messages
   - Phone
   - Anki
