@@ -29,15 +29,6 @@ cd dotfiles
 cd ~
 
 # ==================================================================
-# PRACTICE PROBLEMS
-# ==================================================================
-
-echo "Cloning practice problems"
-cd ~/repos
-git clone https://github.com/trevordmiller/practice-problems.git
-cd ~
-
-# ==================================================================
 # PACKAGES
 # ==================================================================
 
@@ -95,8 +86,6 @@ npm adduser
 
 echo "Installing global node packages"
 node_packages=(
-	"typescript"
-	"tslint"
 	"eslint"
 	"prettier"
 )
