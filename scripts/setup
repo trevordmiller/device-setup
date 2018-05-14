@@ -29,6 +29,15 @@ cd dotfiles
 cd ~
 
 # ==================================================================
+# PRACTICE PROBLEMS
+# ==================================================================
+
+echo "Cloning practice problems"
+cd ~/repos
+git clone https://github.com/trevordmiller/practice-problems.git
+cd ~
+
+# ==================================================================
 # PACKAGES
 # ==================================================================
 
@@ -312,32 +321,33 @@ Then, restart desktop.
   - Calendar
   - Messages
   - Phone
-  - Anki
-    - Sign in
-  - Feedly
-    - Sign in
+  - Safari
+    - Google safe search
   - Gospel Library
     - Sign in
   - LDS Tools
     - Sign in
     - Use Face ID
     - Use caller ID
-  - Camera
   - Spotify
     - Sign in
     - Highest quality of streaming and downloads
     - Download playlists offline
+  - Camera
   - Maps
+  - Clock
+    - Weekday alarm
+    - Weekend alarm
+  - Settings
+    - Already done ^
 - background/ folder on second screen
   - 1Password
     - Already done ^
+  - iSmartAlarm
   - Contacts
     - Special sound/vibrate pattern for Amy
     - Emergency bypass call and text for Amy
     - Emergency bypass call and text for security system
-  - Clock
-    - Weekday alarm
-    - Weekend alarm
   - Photos
   - Find iPhone
     - Turn on Send Last Location
@@ -345,13 +355,7 @@ Then, restart desktop.
     - Set up profile and medical ID
   - Wallet
     - Add debit card for Apple Pay
-  - Google Docs
-  - iSmartAlarm
-  - Safari
-    - Google safe search
   - App Store
-  - Settings
-    - Already done ^
 
 # Router setup
 
