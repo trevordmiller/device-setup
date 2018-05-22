@@ -327,7 +327,7 @@ Then, restart desktop.
   - LDS Tools
     - Sign in
     - Use Face ID
-    - Use caller ID
+    - Enable caller ID in iPhone Settings Call Blocking & Identification
   - Spotify
     - Sign in
     - Highest quality of streaming and downloads
@@ -346,6 +346,10 @@ Then, restart desktop.
   - 1Password
     - Already done ^
   - iSmartAlarm
+    - Sign in
+  - RoboKiller
+    - Sign in
+    - Enable in iPhone Settings Call Blocking & Identification
   - Contacts
     - Special sound/vibrate pattern for Amy
     - Emergency bypass call and text for Amy
@@ -358,6 +362,8 @@ Then, restart desktop.
   - Wallet
     - Add debit card for Apple Pay
   - App Store
+- Per phone number
+  - Sign up for National Do Not Call Registry at https://www.donotcall.gov
 
 # TV (Apple TV)
 
