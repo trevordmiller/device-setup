@@ -291,7 +291,7 @@ Most things are taken care of automatically with the set up script, but some man
 
 Then, restart desktop.
 
-# Mobile setup (iPhone)
+# Mobile (iPhone)
 
 - Turn hardware silent toggle switch on
 - Settings
@@ -335,11 +335,6 @@ Then, restart desktop.
   - Fender Tune
     - Acoustic instrument
     - Standard tuning
-    - Chords
-      - Interval string labels
-      - Finger note labels
-    - Scales
-      - Interval note labels
   - Camera
   - Maps
   - Clock
@@ -364,7 +359,39 @@ Then, restart desktop.
     - Add debit card for Apple Pay
   - App Store
 
-# Router setup
+# TV (Apple TV)
+
+- Homescreen
+  - TV
+    - The Office
+    - Psych
+    - Speechless
+    - The Good Place
+    - Modern Family
+    - Trial & Error
+    - Brooklyn Nine-Nine
+    - Monk
+    - Chuck
+    - Parks and Recreation
+    - Big Bang Theory
+    - Superstore
+    - AFV
+    - Timeless
+    - This Is Us
+  - YouTube
+    - Sign in
+  - Twitchy
+    - Overwatch League
+  - Photos
+  - background/ folder
+    - Prime Video
+    - Hulu
+    - Netflix
+    - App Store
+    - Settings
+- Restrictions (on), explicit (off), movies (PG-13), TV Shows (TV-14), explicit Language (off), websites (Limit Adult Content)
+
+# Router
 
 - OpenDNS Family Shield
   - Open router preferences at http://192.168.0.1
@@ -376,5 +403,14 @@ Then, restart desktop.
     - Secondary DNS: 208.67.220.123
   - Repeat for IPv6 WAN settings
   - Check it is working at https://welcome.opendns.com and http://www.internetbadguys.com
+
+# Thermostat (Nest)
+
+- Set temperature, don't change/track automatically
+
+# Smoke / Carbon Monoxide (Nest Protect)
+
+- Monthly self-check
+- Call + text air and battery alerts
 
 EOF
