@@ -273,6 +273,8 @@ Most things are taken care of automatically with the set up script, but some man
   - Sign in
   - Highest quality of streaming and downloads
   - Download playlists offline
+  - Hide unplayable songs (off)
+  - Autoplay (off)
 - Windows via Boot Camp Assistant
   - Official ISO file from Microsoft
     - 64 bit
@@ -332,6 +334,8 @@ Then, restart desktop.
     - Sign in
     - Highest quality of streaming and downloads
     - Download playlists offline
+    - Hide unplayable songs (off)
+    - Autoplay (off)
   - Fender Tune
     - Acoustic instrument
     - Standard tuning
