@@ -23,8 +23,6 @@ done
 # ==================================================================
 
 websites=(
-	"https://my.1password.com/vaults/v6npp3fcckviz7tcpxfgtgvbfm/watchtower"
-	"https://my.1password.com/vaults/r77xxemjsuaqm5nolgy2z4q2ea/watchtower"
 	"https://app.youneedabudget.com"
 )
 
