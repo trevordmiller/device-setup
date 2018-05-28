@@ -324,23 +324,31 @@ Then, restart desktop.
   - Phone
   - Safari
     - Google safe search
+    - Block pop-ups (on)
+    - Prevent Cross-Site Tracking (on)
+    - Ask websites not to track me (on)
+    - Fraudulent website warning (on)
+    - Check for Apple Pay (on)
   - Gospel Library
     - Sign in
   - LDS Tools
     - Sign in
     - Use Face ID
     - Enable caller ID in iPhone Settings Call Blocking & Identification
+  - Camera
   - Spotify
     - Sign in
     - Highest quality of streaming and downloads
     - Download playlists offline
     - Hide unplayable songs (off)
     - Autoplay (off)
-  - Camera
-  - Maps
   - Clock
     - Weekday alarm
     - Weekend alarm
+  - Venmo
+    - Default privacy settings (private)
+    - Face ID & Pin (on)
+  - Maps
   - Settings
     - Already done ^
 - background/ folder on second screen
@@ -348,9 +356,6 @@ Then, restart desktop.
     - Already done ^
   - iSmartAlarm
     - Sign in
-  - RoboKiller
-    - Sign in
-    - Enable in iPhone Settings Call Blocking & Identification
   - Contacts
     - Special sound/vibrate pattern for Amy
     - Emergency bypass call and text for Amy
