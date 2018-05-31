@@ -29,15 +29,6 @@ cd dotfiles
 cd ~
 
 # ==================================================================
-# PRACTICE PROBLEMS
-# ==================================================================
-
-echo "Cloning practice problems"
-cd ~/repos
-git clone https://github.com/trevordmiller/practice-problems.git
-cd ~
-
-# ==================================================================
 # PACKAGES
 # ==================================================================
 
@@ -66,8 +57,6 @@ homebrew_packages=(
 	"git"
 	"node"
 	"n"
-	"exercism"
-	"asciinema"
 	"mas"
 )
 for homebrew_package in "${homebrew_packages[@]}"; do
@@ -101,13 +90,6 @@ node_packages=(
 for node_package in "${node_packages[@]}"; do
 	npm install -g "$node_package"
 done
-
-echo "Configuring practice problems"
-exercism configure
-exercism configure --dir="/Users/trevordmiller/repos/practice-problems/exercism"
-
-echo "Configuring terminal recording"
-asciinema auth
 
 # ==================================================================
 # APPS / FONTS
@@ -267,8 +249,6 @@ Most things are taken care of automatically with the set up script, but some man
       - Hide icons in Chrome menu
 - WakaTime
   - Add API key to "~/.wakatime.cfg"
-- Exercism
-  - Run "exercism configure --key={apiKey}" from http://exercism.io/account/key
 - Spotify
   - Sign in
   - Highest quality of streaming and downloads
