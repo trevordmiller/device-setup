@@ -8,6 +8,6 @@ Trevor's shell scripts
 - Add the `scripts` directory to your path
 
 ```
-SHELL_SCRIPTS_PATH="{where you cloned this repo}/scripts"		
+SHELL_SCRIPTS_PATH="{where you cloned this repo}/scripts"
 export PATH="$PATH:$SHELL_SCRIPTS_PATH"
 ```

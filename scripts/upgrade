@@ -7,7 +7,7 @@ set -euo pipefail
 
 # HOMEBREW
 
-echo "Upgrading Homebrew packages"
+echo "Upgrading global Homebrew packages"
 brew update
 brew upgrade
 brew doctor
@@ -20,6 +20,9 @@ n stable
 
 echo "Upgrading npm"
 npm install npm -g
+
+echo "Upgrading global node packages"
+npm update -g
 
 # ==================================================================
 # MAC APP STORE
