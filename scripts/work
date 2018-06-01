@@ -10,6 +10,8 @@ apps=(
 	"Calendar"
 	"Mail"
 	"Microsoft Teams"
+	"iTerm2"
+	"Spotify"
 )
 
 for app in "${apps[@]}"; do
