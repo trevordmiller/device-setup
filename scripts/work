@@ -1,0 +1,17 @@
+#!/bin/bash
+set -euo pipefail
+
+# ==================================================================
+# APPS
+# ==================================================================
+
+apps=(
+	"Todoist"
+	"Calendar"
+	"Mail"
+	"Microsoft Teams"
+)
+
+for app in "${apps[@]}"; do
+	open -a "$app"
+done
