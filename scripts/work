@@ -10,7 +10,7 @@ apps=(
 	"Calendar"
 	"Mail"
 	"Microsoft Teams"
-	"iTerm2"
+	"iTerm"
 	"Spotify"
 )
 
