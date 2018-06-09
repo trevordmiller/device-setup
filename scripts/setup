@@ -184,13 +184,18 @@ Most things are taken care of automatically with the set up script, but some man
 - Remove all dock icons other than Todoist
 - Delete unused factory Applications
 - Remove notification center widgets
-- General
-  - Appearance (Graphite)
-  - Highlight color (Nova cyan)
 - Keyboard
   - For each keyboard
     - Modifier keys caps lock (escape)
   - Touch bar (app controls)
+- Display
+  - For 4k monitors, scaled for larger text (to look like double the resolution)
+  - Night Shift
+    - Scheduled (from sunset to sunrise)
+    - Full warmth
+- General
+  - Appearance (Graphite)
+  - Highlight color (Nova cyan)
 - Users
   - Add avatar
   - Login items (RescueTime)
@@ -220,10 +225,6 @@ Most things are taken care of automatically with the set up script, but some man
     - Allow repeated calls (on)
     - Sort order (recents by app)
   - Turn off notifications for all apps that have email notifications
-- Display
-  - Night Shift
-    - Scheduled (from sunset to sunrise)
-    - Full warmth
 - Sound
   - Alert sound (glass)
   - Alert volume (full)
