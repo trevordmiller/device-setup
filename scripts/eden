@@ -9,7 +9,7 @@ DEFAULT_DIRECTORY="$HOME/repos/eden"
 cd "$DEFAULT_DIRECTORY"
 tmux new-session -d -s "eden"
 tmux rename-window "background"
-tmux send-keys -t 0 C-z "cd packages/eden-buttons && npm run storybook" Enter
+tmux send-keys -t 0 C-z "npm run storybook" Enter
 tmux new-window -c "$DEFAULT_DIRECTORY"
 tmux rename-window "shell"
 tmux send-keys -t 0 C-z "git status" Enter
