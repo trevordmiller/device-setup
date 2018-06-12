@@ -26,7 +26,7 @@ websites=(
 	"https://docs.google.com/document/d/1_VVsWcN0e5eoFiRK1U_vODdViSHNnRO6dE1y5EZ76Xw"
 )
 
-open -a "Google Chrome" --args --profile-directory="Profile 3"
+open -a "Google Chrome"
 for website in "${websites[@]}"; do
 	open "$website"
 done
