@@ -7,8 +7,7 @@ set -euo pipefail
 
 apps=(
 	"Todoist"
-	"Calendar"
-	"Mail"
+	"Microsoft Outlook"
 	"Microsoft Teams"
 	"iTerm"
 	"Spotify"
