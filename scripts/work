@@ -7,8 +7,7 @@ set -euo pipefail
 
 apps=(
 	"Todoist"
-	"Calendar"
-	"Mail"
+	"Microsoft Outlook"
 	"Microsoft Teams"
 	"iTerm"
 	"Spotify"
@@ -16,4 +15,18 @@ apps=(
 
 for app in "${apps[@]}"; do
 	open -a "$app"
+done
+
+# ==================================================================
+# WEBSITES
+# ==================================================================
+
+websites=(
+	"https://docs.google.com/document/d/1_VVsWcN0e5eoFiRK1U_vODdViSHNnRO6dE1y5EZ76Xw"
+	"https://code.ldschurch.org/git/dashboard"
+)
+
+open -a "Google Chrome"
+for website in "${websites[@]}"; do
+	open "$website"
 done
