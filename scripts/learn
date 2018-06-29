@@ -19,6 +19,7 @@ done
 
 websites=(
 	"https://feedly.com"
+	"https://feedly.com/i/saved"
 )
 
 open -a "Google Chrome" --args --profile-directory="Profile 3"
