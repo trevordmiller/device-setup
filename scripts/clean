@@ -91,3 +91,15 @@ else
 	echo "Dirty git repos were found"
 	deep-git-status
 fi
+
+# ==================================================================
+# SHARED CONFIG
+# ==================================================================
+
+echo "Pulling latest dotfiles and shell scripts"
+
+cd "$HOME/repos/dotfiles"
+git pull
+
+cd "$HOME/repos/shell-scripts"
+git pull
