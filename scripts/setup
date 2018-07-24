@@ -74,7 +74,7 @@ echo "Creating Vim history file directories"
 mkdir ~/.vim/{backup_files,swap_files,undo_files}
 
 echo "Upgrading node"
-n stable
+n lts
 
 echo "Upgrading npm"
 npm install npm -g
