@@ -12,6 +12,7 @@ apps=(
 	"Mail"
 	"Photos"
 	"Day One"
+	"Anki"
 )
 
 for app in "${apps[@]}"; do
@@ -24,6 +25,8 @@ done
 
 websites=(
 	"https://app.youneedabudget.com"
+	"https://feedly.com"
+	"https://feedly.com/i/saved"
 )
 
 DAYOFWEEK=$(date +"%u")
