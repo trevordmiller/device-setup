@@ -6,12 +6,7 @@ set -euo pipefail
 # ==================================================================
 
 apps=(
-	"Todoist"
-	"Calendar"
-	"Messages"
-	"Mail"
-	"Photos"
-	"Day One"
+	"Anki"
 )
 
 for app in "${apps[@]}"; do
@@ -23,17 +18,11 @@ done
 # ==================================================================
 
 websites=(
-	"https://app.youneedabudget.com"
+	"https://feedly.com"
+	"https://feedly.com/i/saved"
 )
 
-DAYOFWEEK=$(date +"%u")
-if [ "${DAYOFWEEK}" -eq 1 ]; then
-	websites+=('https://www.facebook.com')
-	websites+=('https://twitter.com')
-	websites+=('https://utahjavascript.slack.com')
-fi
-
-open -a "Google Chrome" --args --profile-directory="Profile 3"
+open -a "Google Chrome"
 for website in "${websites[@]}"; do
 	open "$website"
 done
