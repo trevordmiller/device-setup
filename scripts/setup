@@ -336,6 +336,11 @@ Then, restart desktop.
     - Already done ^
   - iSmartAlarm
     - Sign in
+  - Nest
+    - Connect Nest Protect and Thermostat
+    - Home away/assist (off)
+    - Auto-schedule (off)
+    - Fan schedule (15 minutes every hour, 9am-9pm)
   - Contacts
     - Special sound/vibrate pattern for Amy
     - Emergency bypass call and text for Amy
