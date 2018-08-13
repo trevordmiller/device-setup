@@ -292,7 +292,7 @@ Then, restart desktop.
   - Do Not Disturb automatically while driving
   - Night Shift scheduled with full warmth
   - Turn off keyboard auto capitalization and auto spelling correction
-  - Turn off notifications for all apps that have email notifications
+  - Turn off notifications for all apps that aren't critical for mobile / have email notifications
 - Remove widgets
 - Remove unused stock apps
 - Download and configure 1Password
@@ -336,10 +336,17 @@ Then, restart desktop.
     - Already done ^
   - iSmartAlarm
     - Sign in
+  - Nest
+    - Connect Nest Protect and Thermostat
+    - Add my phone to emergency contact
+    - Home away/assist (off)
+    - Auto-schedule (off)
+    - Fan schedule (15 minutes every hour, 9am-9pm)
   - Contacts
     - Special sound/vibrate pattern for Amy
     - Emergency bypass call and text for Amy
-    - Emergency bypass call and text for security system
+    - Emergency bypass call and text for iSmartAlarm
+    - Emergency bypass call and text for Nest
   - Photos
   - Google Photos
     - Back up & sync (on)
