@@ -16,6 +16,7 @@ echo "Upgrading Vim plugins"
 vim +PlugUpgrade +PlugUpdate +PlugClean +qall
 
 echo "Upgrading Node"
+. ~/.nvm/nvm.sh
 nvm install --lts
 nvm use --lts
 
