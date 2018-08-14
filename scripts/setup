@@ -82,15 +82,6 @@ npm install npm -g
 echo "Adding npm user"
 npm adduser
 
-echo "Installing global node packages"
-node_packages=(
-	"eslint"
-	"prettier"
-)
-for node_package in "${node_packages[@]}"; do
-	npm install -g "$node_package"
-done
-
 # ==================================================================
 # APPS / FONTS
 # ==================================================================

@@ -21,9 +21,6 @@ n lts
 echo "Upgrading npm"
 npm install npm -g
 
-echo "Upgrading global node packages"
-npm update -g
-
 # ==================================================================
 # MAC APP STORE
 # ==================================================================
