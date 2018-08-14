@@ -55,7 +55,6 @@ homebrew_packages=(
 	"universal-ctags"
 	"vim"
 	"git"
-	"node"
 	"n"
 	"mas"
 )
@@ -73,7 +72,7 @@ vim +PlugInstall +qall
 echo "Creating Vim history file directories"
 mkdir ~/.vim/{backup_files,swap_files,undo_files}
 
-echo "Upgrading node"
+echo "Install node"
 n lts
 
 echo "Upgrading npm"
