@@ -55,7 +55,6 @@ homebrew_packages=(
 	"universal-ctags"
 	"vim"
 	"git"
-	"n"
 	"mas"
 )
 for homebrew_package in "${homebrew_packages[@]}"; do
@@ -72,11 +71,15 @@ vim +PlugInstall +qall
 echo "Creating Vim history file directories"
 mkdir ~/.vim/{backup_files,swap_files,undo_files}
 
-echo "Install node"
-n lts
+echo "Installing Node version manager"
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+
+echo "Installing Node"
+nvm install --lts
+nvm use --lts
 
 echo "Upgrading npm"
-npm install npm -g
+npm install -g npm
 
 echo "Adding npm user"
 npm adduser
