@@ -9,7 +9,8 @@ DEFAULT_DIRECTORY="$HOME/repos/trevordmiller-website"
 cd "$DEFAULT_DIRECTORY"
 tmux new-session -d -s "trevordmiller-website"
 tmux rename-window "background"
-tmux send-keys -t 0 C-z "npm run dev" Enter
+tmux send-keys -t 0 C-z "npm run storybook" Enter
+tmux splitw "npm run dev"
 tmux new-window -c "$DEFAULT_DIRECTORY"
 tmux rename-window "shell"
 tmux send-keys -t 0 C-z "git status" Enter

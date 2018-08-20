@@ -10,6 +10,7 @@ cd "$DEFAULT_DIRECTORY"
 tmux new-session -d -s "react-starter"
 tmux rename-window "background"
 tmux send-keys -t 0 C-z "npm run storybook" Enter
+tmux splitw "npm run dev"
 tmux new-window -c "$DEFAULT_DIRECTORY"
 tmux rename-window "shell"
 tmux send-keys -t 0 C-z "git status" Enter
