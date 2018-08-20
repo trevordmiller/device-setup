@@ -97,7 +97,6 @@ homebrew_cask_packages=(
 	"1password"
 	"rescuetime"
 	"google-chrome"
-	"anki"
 	"spotify"
 )
 for homebrew_cask_package in "${homebrew_cask_packages[@]}"; do
