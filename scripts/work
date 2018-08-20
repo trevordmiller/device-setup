@@ -10,7 +10,6 @@ apps=(
 	"Microsoft Outlook"
 	"Microsoft Teams"
 	"iTerm"
-	"Anki"
 )
 
 for app in "${apps[@]}"; do
@@ -23,6 +22,7 @@ done
 
 websites=(
 	"https://code.ldschurch.org/git/dashboard"
+	"https://apps.ankiweb.net/docs/AnkiMobile.html"
 	"https://feedly.com"
 	"https://feedly.com/i/saved"
 )
