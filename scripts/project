@@ -1,0 +1,15 @@
+#!/bin/bash
+set -euo pipefail
+
+# ==================================================================
+# TERMINAL WORKFLOW
+# ==================================================================
+
+tmux new-session -d -s "pwd trimmed"
+tmux rename-window "background"
+tmux new-window
+tmux rename-window "shell"
+tmux new-window
+tmux rename-window "main"
+tmux send-keys -t 0 C-z "vim -c 'E'" Enter
+tmux attach-session -d
