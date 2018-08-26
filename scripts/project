@@ -5,7 +5,7 @@ set -euo pipefail
 # TERMINAL WORKFLOW
 # ==================================================================
 
-tmux new-session -d -s "pwd trimmed"
+tmux new-session -d -s "$(basename $(pwd))"
 tmux rename-window "background"
 tmux new-window
 tmux rename-window "shell"
