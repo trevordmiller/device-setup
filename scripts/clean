@@ -44,7 +44,6 @@ git pull
 
 echo "Removing homebrew artifacts"
 brew cleanup
-brew cask cleanup
 brew prune
 
 echo "Removing OS artifacts"
