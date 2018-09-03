@@ -30,7 +30,6 @@ DAYOFWEEK=$(date +"%u")
 if [ "${DAYOFWEEK}" -eq 1 ]; then
 	websites+=('https://www.facebook.com')
 	websites+=('https://twitter.com')
-	websites+=('https://utahjavascript.slack.com')
 fi
 
 open -a "Google Chrome" --args --profile-directory="Profile 3"
