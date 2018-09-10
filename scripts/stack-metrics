@@ -11,6 +11,7 @@ tmux new-session -d -s "stack-metrics"
 tmux rename-window "background"
 tmux send-keys -t 0 C-z "npm run storybook" Enter
 tmux splitw "npm run dev"
+tmux splitw "npm run facade"
 tmux new-window -c "$DEFAULT_DIRECTORY"
 tmux rename-window "shell"
 tmux send-keys -t 0 C-z "git status" Enter
