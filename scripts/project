@@ -6,10 +6,14 @@ set -euo pipefail
 # ==================================================================
 
 tmux new-session -d -s "$(basename $(pwd))"
+
 tmux rename-window "background"
+
 tmux new-window
 tmux rename-window "shell"
+
 tmux new-window
 tmux rename-window "main"
 tmux send-keys -t 0 C-z "vim -c 'E'" Enter
+
 tmux attach-session -d
