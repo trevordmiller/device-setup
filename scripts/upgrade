@@ -10,7 +10,6 @@ set -euo pipefail
 echo "Upgrading global Homebrew packages"
 brew update
 brew upgrade
-brew doctor
 
 echo "Upgrading Vim plugins"
 vim +PlugUpgrade +PlugUpdate +PlugClean +qall
