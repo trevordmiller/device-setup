@@ -26,12 +26,6 @@ websites=(
 	"https://app.youneedabudget.com"
 )
 
-DAYOFWEEK=$(date +"%u")
-if [ "${DAYOFWEEK}" -eq 1 ]; then
-	websites+=('https://www.facebook.com')
-	websites+=('https://twitter.com')
-fi
-
 open -a "Google Chrome" --args --profile-directory="Profile 3"
 for website in "${websites[@]}"; do
 	open "$website"
