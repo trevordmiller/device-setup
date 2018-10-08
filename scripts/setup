@@ -282,11 +282,13 @@ Then, restart desktop.
   - Text message forwarding to desktop
   - Send as SMS when iMessage is unavailable
   - Don't store passwords in Safari
+  - Enable screen time settings
   - Restrictions (on), explicit (off), movies (PG-13), TV Shows (TV-14), explicit Language (off), websites (Limit Adult Content)
   - Cellular turn off large media apps
   - Do Not Disturb scheduled
   - Do Not Disturb automatically while driving
   - Night Shift scheduled with full warmth
+  - Disable raise to wake
   - Turn off keyboard auto capitalization and auto spelling correction
   - Turn off notifications for all apps that aren't critical for mobile / have email notifications
 - Remove widgets
@@ -295,6 +297,7 @@ Then, restart desktop.
   - Add vault
   - Allow unlock with Face ID
   - Show in Safari share
+  - Enable native password autofill
 - Homescreen
   - Todoist
     - The only app in the dock
