@@ -234,6 +234,8 @@ Most things are taken care of automatically with the set up script, but some man
 - Calendar
   - Time to leave (on)
   - Show shared calendar messages in notification center (off)
+- Messages
+  - Enable Messages in iCloud (on)
 - Chrome
   - Set as default browser
   - Add "personal" profile, signed in to personal google account
