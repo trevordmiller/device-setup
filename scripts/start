@@ -22,7 +22,7 @@ done
 
 websites=(
 	"https://code.ldschurch.org/git/dashboard"
-	"https://apps.ankiweb.net/docs/AnkiMobile.html"
+	"https://ankiweb.net"
 	"https://feedly.com"
 	"https://feedly.com/i/saved"
 )
