@@ -82,7 +82,7 @@ nvm install --lts
 nvm use --lts
 
 echo "Upgrading npm"
-nvm install-latest-npm
+npm install -g npm@latest
 
 echo "Adding npm user"
 npm adduser
