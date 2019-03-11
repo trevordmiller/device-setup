@@ -44,7 +44,6 @@ git pull
 
 echo "Removing homebrew artifacts"
 brew cleanup
-brew prune
 
 echo "Removing OS artifacts"
 find "$HOME/repos" -name '.DS_Store' -delete
@@ -89,11 +88,12 @@ deep-git-status() {
 	find . -path "*/.git" -maxdepth 2 -print -execdir git status ";"
 }
 
-output=$(deep-git-status | grep \
-	-e "Untracked files:" \
-	-e "Changes not staged for commit:" \
-	-e "Changes to be committed:" \
-	-e "Your branch is ahead"
+output=$(
+	deep-git-status | grep \
+		-e "Untracked files:" \
+		-e "Changes not staged for commit:" \
+		-e "Changes to be committed:" \
+		-e "Your branch is ahead"
 )
 
 if [ -z "$output" ]; then
