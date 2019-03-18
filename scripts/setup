@@ -99,7 +99,6 @@ homebrew_cask_packages=(
 	"1password"
 	"rescuetime"
 	"google-chrome"
-	"spotify"
 )
 for homebrew_cask_package in "${homebrew_cask_packages[@]}"; do
 	brew cask install "$homebrew_cask_package"
