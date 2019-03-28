@@ -88,11 +88,10 @@ npm adduser
 # APPS / FONTS
 # ==================================================================
 
-echo "Installing Homebrew cask apps and fonts"
+echo "Installing Homebrew cask apps"
 brew tap caskroom/fonts
 homebrew_cask_packages=(
-	"font-fira-mono"
-	"iterm2"
+	"alacritty"
 	"1password"
 	"rescuetime"
 	"google-chrome"

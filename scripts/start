@@ -6,9 +6,9 @@ set -euo pipefail
 # ==================================================================
 
 apps=(
+	"Alacritty"
 	"Microsoft Outlook"
 	"Microsoft Teams"
-	"iTerm"
 )
 
 for app in "${apps[@]}"; do
