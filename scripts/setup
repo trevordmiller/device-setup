@@ -38,7 +38,6 @@ echo "Installing Homebrew"
 echo "Adding Homebrew taps"
 homebrew_taps=(
 	"universal-ctags/universal-ctags"
-	"joshuaclayton/formulae"
 )
 for homebrew_tap in "${homebrew_taps[@]}"; do
 	brew tap "$homebrew_tap"
@@ -54,10 +53,8 @@ homebrew_packages=(
 	"reattach-to-user-namespace"
 	"fzf"
 	"universal-ctags"
-	"unused"
 	"vim"
 	"git"
-	"asciinema"
 )
 for homebrew_package in "${homebrew_packages[@]}"; do
 	brew install "$homebrew_package"
