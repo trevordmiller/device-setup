@@ -27,7 +27,7 @@ websites=(
 	"https://code.ldschurch.org/jira/secure/RapidBoard.jspa?rapidView=2279&quickFilter=12808"
 )
 
-open -a "Google Chrome"
+open -a "Safari"
 for website in "${websites[@]}"; do
 	open "$website"
 done

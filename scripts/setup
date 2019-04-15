@@ -94,7 +94,6 @@ homebrew_cask_packages=(
 	"alacritty"
 	"1password"
 	"rescuetime"
-	"google-chrome"
 )
 for homebrew_cask_package in "${homebrew_cask_packages[@]}"; do
 	brew cask install "$homebrew_cask_package"
@@ -143,11 +142,6 @@ killall SystemUIServer
 
 echo "Configuring highest quality bluetooth audio"
 sudo defaults write bluetoothaudiod "Enable AAC codec" -bool true
-
-# CHROME
-
-echo "Configuring incognito mode"
-defaults write com.google.chrome IncognitoModeAvailability -integer 1
 
 # ==================================================================
 # RESTART
