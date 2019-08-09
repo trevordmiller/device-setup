@@ -29,6 +29,15 @@ cd dotfiles
 cd ~
 
 # ==================================================================
+# PRACTICE PROBLEMS
+# ==================================================================
+
+echo "Cloning practice problems"
+cd ~/repos
+git clone https://github.com/trevordmiller/practice-problems.git
+cd ~
+
+# ==================================================================
 # PACKAGES
 # ==================================================================
 
@@ -55,6 +64,7 @@ homebrew_packages=(
 	"universal-ctags"
 	"vim"
 	"git"
+	"exercism"
 )
 for homebrew_package in "${homebrew_packages[@]}"; do
 	brew install "$homebrew_package"
