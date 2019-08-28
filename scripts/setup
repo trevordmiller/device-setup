@@ -56,7 +56,6 @@ echo "Installing global Homebrew packages"
 homebrew_packages=(
 	"bash"
 	"bash-completion"
-	"shfmt"
 	"the_silver_searcher"
 	"tmux"
 	"reattach-to-user-namespace"
@@ -64,6 +63,9 @@ homebrew_packages=(
 	"universal-ctags"
 	"vim"
 	"git"
+	"shfmt"
+	"prettier"
+	"eslint"
 	"exercism"
 )
 for homebrew_package in "${homebrew_packages[@]}"; do
