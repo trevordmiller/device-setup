@@ -64,8 +64,6 @@ homebrew_packages=(
 	"vim"
 	"git"
 	"shfmt"
-	"prettier"
-	"eslint"
 	"exercism"
 )
 for homebrew_package in "${homebrew_packages[@]}"; do
@@ -83,7 +81,7 @@ echo "Creating Vim history file directories"
 mkdir ~/.vim/{backup_files,swap_files,undo_files}
 
 echo "Installing Node version manager"
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
 
 echo "Installing Node"
 . ~/.nvm/nvm.sh
