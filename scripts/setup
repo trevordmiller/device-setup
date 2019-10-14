@@ -2,24 +2,16 @@
 set -euo pipefail
 
 # ==================================================================
-# ROOT
+# REPOS
 # ==================================================================
 
 cd ~
 mkdir repos
 
-# ==================================================================
-# SHELL SCRIPTS
-# ==================================================================
-
 echo "Cloning shell scripts"
 cd ~/repos
 git clone https://github.com/trevordmiller/shell-scripts.git
 cd ~
-
-# ==================================================================
-# DOTFILES
-# ==================================================================
 
 echo "Cloning dotfiles"
 cd ~/repos
@@ -27,10 +19,6 @@ git clone https://github.com/trevordmiller/dotfiles.git
 cd dotfiles
 ./index
 cd ~
-
-# ==================================================================
-# PRACTICE PROBLEMS
-# ==================================================================
 
 echo "Cloning practice problems"
 cd ~/repos
