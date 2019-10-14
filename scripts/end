@@ -42,6 +42,8 @@ git pull
 # ARTIFACTS
 # ==================================================================
 
+cd ~
+
 echo "Removing homebrew artifacts"
 brew cleanup
 brew bundle cleanup
