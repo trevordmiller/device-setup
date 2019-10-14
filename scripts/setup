@@ -44,31 +44,8 @@ cd ~
 echo "Installing Homebrew"
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-echo "Adding Homebrew taps"
-homebrew_taps=(
-	"universal-ctags/universal-ctags"
-)
-for homebrew_tap in "${homebrew_taps[@]}"; do
-	brew tap "$homebrew_tap"
-done
-
 echo "Installing global Homebrew packages"
-homebrew_packages=(
-	"bash"
-	"bash-completion"
-	"the_silver_searcher"
-	"tmux"
-	"reattach-to-user-namespace"
-	"fzf"
-	"universal-ctags"
-	"vim"
-	"git"
-	"shfmt"
-	"exercism"
-)
-for homebrew_package in "${homebrew_packages[@]}"; do
-	brew install "$homebrew_package"
-done
+brew bundle
 
 echo "Installing Vim plugin manager"
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
@@ -93,21 +70,6 @@ npm install -g npm@latest
 
 echo "Adding npm user"
 npm adduser
-
-# ==================================================================
-# APPS / FONTS
-# ==================================================================
-
-echo "Installing Homebrew cask apps"
-brew tap caskroom/fonts
-homebrew_cask_packages=(
-	"alacritty"
-	"1password"
-	"rescuetime"
-)
-for homebrew_cask_package in "${homebrew_cask_packages[@]}"; do
-	brew cask install "$homebrew_cask_package"
-done
 
 # ==================================================================
 # MACOS
