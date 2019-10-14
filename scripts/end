@@ -44,6 +44,7 @@ git pull
 
 echo "Removing homebrew artifacts"
 brew cleanup
+brew bundle cleanup
 
 echo "Removing OS artifacts"
 find "$HOME/repos" -name '.DS_Store' -delete
