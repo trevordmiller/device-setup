@@ -8,15 +8,12 @@ set -euo pipefail
 tmux new-session -d -s "$(basename $(pwd))"
 
 tmux rename-window "background"
-tmux send-keys -t 0 C-z "npm run storybook"
 tmux splitw
-tmux send-keys -t 1 "npm run dev"
 tmux splitw
-tmux send-keys -t 2 "npm run facade"
 
 tmux new-window
 tmux rename-window "main"
-tmux send-keys -t 0 C-z "git status" Enter
+tmux send-keys -t 0 C-z "clear && git status" Enter
 
 tmux new-window
 tmux rename-window "editor"
