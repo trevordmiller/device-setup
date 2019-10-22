@@ -39,16 +39,27 @@ git pull
 cd "$HOME/repos/shell-scripts"
 git pull
 
+echo "Making sure Brewfile and machine installs are in sync"
+
+cd ~
+
+brew_bundle_cleanup_output=$(brew bundle cleanup)
+
+if [ -z "$brew_bundle_cleanup_output" ]; then
+	echo "Brewfile and machine installs are in sync"
+else
+	echo "Inconsistencies were found between Brewfile and machine installs. Fix them and re-run."
+	brew bundle cleanup
+	exit 1
+fi
+
 # ==================================================================
 # ARTIFACTS
 # ==================================================================
 
-cd ~
-
 echo "Removing homebrew artifacts"
 
 brew cleanup
-brew bundle cleanup
 
 echo "Removing OS artifacts"
 
@@ -103,6 +114,7 @@ deep_git_status_output=$(
 if [ -z "$deep_git_status_output" ]; then
 	echo "All git repos are clean"
 else
-	echo "Dirty git repos were found"
+	echo "Dirty git repos were found! Fix them and re-run."
 	deep_git_status
+	exit 1
 fi
