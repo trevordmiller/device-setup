@@ -7,14 +7,14 @@ set -euo pipefail
 
 echo "Closing apps"
 
-foregroundAppsString=$(osascript -e 'tell application "System Events" to get name of (processes where background only is false)')
+foreground_apps_string=$(osascript -e 'tell application "System Events" to get name of (processes where background only is false)')
 
-IFS=',' read -r -a foregroundApps <<<"$foregroundAppsString"
+IFS=',' read -r -a foreground_apps <<<"$foreground_apps_string"
 
-for foregroundApp in "${foregroundApps[@]}"; do
-	appName=$(echo "$foregroundApp" | sed 's/^ *//g')
-	if [[ ! "$appName" == "Finder" && ! "$appName" == "alacritty" ]]; then
-		osascript -e 'quit app "'"$appName"'"'
+for foreground_app in "${foreground_apps[@]}"; do
+	app_name=$(echo "$foreground_app" | sed 's/^ *//g')
+	if [[ ! "$app_name" == "Finder" && ! "$app_name" == "alacritty" ]]; then
+		osascript -e 'quit app "'"$app_name"'"'
 	fi
 done
 
@@ -23,6 +23,7 @@ done
 # ==================================================================
 
 echo "Quitting processes"
+
 tmux kill-server || true
 killall node || true
 
@@ -45,13 +46,16 @@ git pull
 cd ~
 
 echo "Removing homebrew artifacts"
+
 brew cleanup
 brew bundle cleanup
 
 echo "Removing OS artifacts"
+
 find "$HOME/repos" -name '.DS_Store' -delete
 
 echo "Removing downloads"
+
 rm -rf "$HOME"/Downloads/*
 
 # ==================================================================
@@ -60,7 +64,7 @@ rm -rf "$HOME"/Downloads/*
 
 echo "Removing merged local branches in each git repo"
 
-deep-git-prune() {
+deep_git_prune() {
 	IFS=$'\n\t'
 
 	set +e
@@ -78,27 +82,27 @@ cd "$HOME/repos"
 for i in */.git; do (
 	echo $i
 	cd $i/..
-	deep-git-prune
+	deep_git_prune
 ); done
 
 echo "Checking the status of each git repo"
 
-deep-git-status() {
+deep_git_status() {
 	cd "$HOME/repos"
 	find . -path "*/.git" -maxdepth 2 -print -execdir git status ";"
 }
 
-output=$(
-	deep-git-status | grep \
+deep_git_status_output=$(
+	deep_git_status | grep \
 		-e "Untracked files:" \
 		-e "Changes not staged for commit:" \
 		-e "Changes to be committed:" \
 		-e "Your branch is ahead"
 )
 
-if [ -z "$output" ]; then
+if [ -z "$deep_git_status_output" ]; then
 	echo "All git repos are clean"
 else
 	echo "Dirty git repos were found"
-	deep-git-status
+	deep_git_status
 fi
