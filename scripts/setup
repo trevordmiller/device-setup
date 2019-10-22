@@ -53,14 +53,11 @@ echo "Installing Node"
 nvm install --lts
 nvm use --lts
 
-echo "Upgrading npm"
-npm install -g npm@latest
-
 echo "Adding npm user"
 npm adduser
 
 # ==================================================================
-# MACOS
+# OS
 # ==================================================================
 
 # KEYBOARD

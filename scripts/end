@@ -27,7 +27,7 @@ tmux kill-server || true
 killall node || true
 
 # ==================================================================
-# SHARED CONFIG
+# CONFIG
 # ==================================================================
 
 echo "Pulling latest dotfiles and shell scripts"
@@ -55,7 +55,7 @@ echo "Removing downloads"
 rm -rf "$HOME"/Downloads/*
 
 # ==================================================================
-# REPO BRANCHES
+# REPOS
 # ==================================================================
 
 echo "Removing merged local branches in each git repo"
@@ -81,11 +81,8 @@ for i in */.git; do (
 	deep-git-prune
 ); done
 
-# ==================================================================
-# REPO STATES
-# ==================================================================
-
 echo "Checking the status of each git repo"
+
 deep-git-status() {
 	cd "$HOME/repos"
 	find . -path "*/.git" -maxdepth 2 -print -execdir git status ";"

@@ -5,8 +5,6 @@ set -euo pipefail
 # PACKAGES
 # ==================================================================
 
-# HOMEBREW
-
 echo "Upgrading global Homebrew packages"
 brew update
 brew upgrade
@@ -14,16 +12,13 @@ brew upgrade
 echo "Upgrading Vim plugins"
 vim +PlugUpgrade +PlugUpdate +PlugClean +qall
 
-echo "Upgrading Node"
+echo "Upgrading Node / npm"
 . ~/.nvm/nvm.sh
 nvm install --lts
 nvm use --lts
 
-echo "Upgrading npm"
-npm install -g npm@latest
-
 # ==================================================================
-# MACOS
+# OS
 # ==================================================================
 
 echo "Upgrading macOS"
