@@ -1,10 +1,6 @@
 #!/bin/bash
 set -euo pipefail
 
-# ==================================================================
-# APPS
-# ==================================================================
-
 echo "Closing apps"
 
 foreground_apps_string=$(osascript -e 'tell application "System Events" to get name of (processes where background only is false)')
@@ -18,18 +14,10 @@ for foreground_app in "${foreground_apps[@]}"; do
 	fi
 done
 
-# ==================================================================
-# PROCESSES
-# ==================================================================
-
 echo "Quitting processes"
 
 tmux kill-server || true
 killall node || true
-
-# ==================================================================
-# CONFIG
-# ==================================================================
 
 echo "Pulling latest dotfiles and shell scripts"
 
@@ -53,10 +41,6 @@ else
 	exit 1
 fi
 
-# ==================================================================
-# ARTIFACTS
-# ==================================================================
-
 echo "Removing homebrew artifacts"
 
 brew cleanup
@@ -68,10 +52,6 @@ find "$HOME/repos" -name '.DS_Store' -delete
 echo "Removing downloads"
 
 rm -rf "$HOME"/Downloads/*
-
-# ==================================================================
-# REPOS
-# ==================================================================
 
 echo "Removing merged local branches in each git repo"
 

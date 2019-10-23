@@ -1,10 +1,7 @@
 #!/bin/bash
 set -euo pipefail
 
-# ==================================================================
-# REPOS
-# ==================================================================
-
+echo "Creating ~/repos directory"
 cd ~
 mkdir repos
 
@@ -24,10 +21,6 @@ echo "Cloning practice problems"
 cd ~/repos
 git clone https://github.com/trevordmiller/practice-problems.git
 cd ~
-
-# ==================================================================
-# PACKAGES
-# ==================================================================
 
 echo "Installing Homebrew"
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -56,29 +49,17 @@ nvm use --lts
 echo "Adding npm user"
 npm adduser
 
-# ==================================================================
-# OS
-# ==================================================================
-
-# KEYBOARD
-
-echo "Configuring key repeat"
+echo "Configuring keyboard key repeat"
 defaults write NSGlobalDomain KeyRepeat -int 1
 defaults write NSGlobalDomain InitialKeyRepeat -int 10
-
-# HIDDEN FILES
 
 echo "Configuring hidden files to show"
 defaults write com.apple.finder AppleShowAllFiles YES
 killall Finder
 
-# MENU BAR
-
 echo "Configuring menu bar to autohide"
 defaults write NSGlobalDomain _HIHideMenuBar -bool true
 killall Finder
-
-# DOCK
 
 echo "Configuring dock to autohide"
 osascript <<EOD
@@ -88,20 +69,12 @@ osascript <<EOD
     end if
   end tell
 EOD
-
-# SCREENSHOTS
-
 echo "Configuring screenshots to save in Downloads"
 defaults write com.apple.screencapture location ~/Downloads
 killall SystemUIServer
 
-# BLUETOOTH AUDIO
-
 echo "Configuring highest quality bluetooth audio"
 sudo defaults write bluetoothaudiod "Enable AAC codec" -bool true
 
-# ==================================================================
-# RESTART
-# ==================================================================
-
+echo "Rebooting"
 sudo shutdown -r now

@@ -1,10 +1,6 @@
 #!/bin/bash
 set -euo pipefail
 
-# ==================================================================
-# TERMINAL WORKFLOW
-# ==================================================================
-
 tmux new-session -d -s "$(basename $(pwd))"
 
 tmux rename-window "background"

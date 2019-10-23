@@ -1,10 +1,6 @@
 #!/bin/bash
 set -euo pipefail
 
-# ==================================================================
-# PACKAGES
-# ==================================================================
-
 echo "Upgrading global Homebrew packages"
 brew update
 brew upgrade
@@ -17,9 +13,5 @@ echo "Upgrading Node / npm"
 nvm install --lts
 nvm use --lts
 
-# ==================================================================
-# OS
-# ==================================================================
-
-echo "Upgrading macOS"
+echo "Upgrading OS"
 sudo softwareupdate -ia
