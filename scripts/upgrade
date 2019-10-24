@@ -8,7 +8,7 @@ brew upgrade
 echo "Upgrading Vim plugins"
 vim +PlugUpgrade +PlugUpdate +PlugClean +qall
 
-echo "Upgrading Node / npm"
+echo "Upgrading Node / npm for JavaScript projects"
 nvm install --lts
 nvm use --lts
 

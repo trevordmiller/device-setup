@@ -38,12 +38,10 @@ vim +PlugInstall +qall
 echo "Creating Vim history file directories"
 mkdir ~/.vim/{backup_files,swap_files,undo_files}
 
-echo "Installing Node"
+echo "Installing Node / npm for JavaScript projects"
 source ~/.bash_profile
 nvm install --lts
 nvm use --lts
-
-echo "Adding npm user"
 npm adduser
 
 echo "Configuring keyboard key repeat"
