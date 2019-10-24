@@ -9,7 +9,7 @@ IFS=',' read -r -a foreground_apps <<<"$foreground_apps_string"
 
 for foreground_app in "${foreground_apps[@]}"; do
 	app_name=$(echo "$foreground_app" | sed 's/^ *//g')
-	if [[ ! "$app_name" == "Finder" && ! "$app_name" == "alacritty" ]]; then
+	if [[ ! "$app_name" == "Finder" && ! "$app_name" == "Terminal" ]]; then
 		osascript -e 'quit app "'"$app_name"'"'
 	fi
 done
