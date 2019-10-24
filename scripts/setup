@@ -38,11 +38,8 @@ vim +PlugInstall +qall
 echo "Creating Vim history file directories"
 mkdir ~/.vim/{backup_files,swap_files,undo_files}
 
-echo "Installing Node version manager"
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
-
 echo "Installing Node"
-. ~/.nvm/nvm.sh
+source ~/.bash_profile
 nvm install --lts
 nvm use --lts
 
