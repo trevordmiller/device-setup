@@ -16,7 +16,6 @@ done
 
 echo "Quitting processes"
 
-tmux kill-server || true
 killall node || true
 
 echo "Pulling latest dotfiles and shell scripts"
