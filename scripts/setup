@@ -42,7 +42,6 @@ echo "Installing Node / npm for JavaScript projects"
 . "/usr/local/opt/nvm/nvm.sh"
 nvm install --lts
 nvm use --lts
-npm adduser
 
 echo "Configuring keyboard key repeat"
 defaults write NSGlobalDomain KeyRepeat -int 1
@@ -51,6 +50,10 @@ defaults write NSGlobalDomain InitialKeyRepeat -int 10
 echo "Configuring hidden files to show"
 defaults write com.apple.finder AppleShowAllFiles YES
 killall Finder
+
+echo "Configuring screenshots to save in Downloads"
+defaults write com.apple.screencapture location ~/Downloads
+killall SystemUIServer
 
 echo "Configuring menu bar to autohide"
 defaults write NSGlobalDomain _HIHideMenuBar -bool true
@@ -64,12 +67,6 @@ osascript <<EOD
     end if
   end tell
 EOD
-echo "Configuring screenshots to save in Downloads"
-defaults write com.apple.screencapture location ~/Downloads
-killall SystemUIServer
-
-echo "Configuring highest quality bluetooth audio"
-sudo defaults write bluetoothaudiod "Enable AAC codec" -bool true
 
 echo "Rebooting"
 sudo shutdown -r now
