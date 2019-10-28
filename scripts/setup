@@ -39,7 +39,7 @@ echo "Creating Vim history file directories"
 mkdir ~/.vim/{backup_files,swap_files,undo_files}
 
 echo "Installing Node / npm for JavaScript projects"
-source ~/.bash_profile
+. "/usr/local/opt/nvm/nvm.sh"
 nvm install --lts
 nvm use --lts
 npm adduser

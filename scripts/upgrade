@@ -9,6 +9,7 @@ echo "Upgrading Vim plugins"
 vim +PlugUpgrade +PlugUpdate +PlugClean +qall
 
 echo "Upgrading Node / npm for JavaScript projects"
+. "/usr/local/opt/nvm/nvm.sh"
 nvm install --lts
 nvm use --lts
 
