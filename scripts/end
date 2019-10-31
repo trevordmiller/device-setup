@@ -22,6 +22,10 @@ git pull
 cd "$HOME/repos/shell-scripts"
 git pull
 
+echo "Removing homebrew artifacts"
+
+brew cleanup
+
 echo "Making sure Brewfile and machine installs are in sync"
 
 cd ~
@@ -35,10 +39,6 @@ else
 	brew bundle cleanup
 	exit 1
 fi
-
-echo "Removing homebrew artifacts"
-
-brew cleanup
 
 echo "Removing OS artifacts"
 
