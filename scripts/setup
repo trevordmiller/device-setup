@@ -30,9 +30,6 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 echo "Installing Vim plugins"
 vim +PlugInstall +qall
 
-echo "Creating Vim history file directories"
-mkdir ~/.vim/{backup_files,swap_files,undo_files}
-
 echo "Installing Node / npm for JavaScript projects"
 . "/usr/local/opt/nvm/nvm.sh"
 nvm install --lts
