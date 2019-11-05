@@ -39,10 +39,6 @@ echo "Configuring keyboard key repeat"
 defaults write NSGlobalDomain KeyRepeat -int 1
 defaults write NSGlobalDomain InitialKeyRepeat -int 10
 
-echo "Configuring hidden files to show"
-defaults write com.apple.finder AppleShowAllFiles YES
-killall Finder
-
 echo "Configuring screenshots to save in Downloads"
 defaults write com.apple.screencapture location ~/Downloads
 killall SystemUIServer
