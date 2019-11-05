@@ -1,14 +1,14 @@
 #!/bin/bash
 set -euo pipefail
 
-echo "Upgrading global Homebrew packages"
+echo "Upgrading global packages"
 brew update
 brew upgrade
 
-echo "Upgrading Vim plugins"
+echo "Upgrading editor plugins"
 vim +PlugUpgrade +PlugUpdate +PlugClean +qall
 
-echo "Upgrading Node / npm for JavaScript projects"
+echo "Upgrading Node / npm"
 . "/usr/local/opt/nvm/nvm.sh"
 nvm install --lts
 nvm use --lts

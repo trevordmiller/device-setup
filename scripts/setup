@@ -17,20 +17,20 @@ cd ~/repos
 git clone https://github.com/trevordmiller/shell-scripts.git
 cd ~
 
-echo "Installing Homebrew"
+echo "Installing global package manager"
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-echo "Installing global Homebrew packages"
+echo "Installing global packages"
 brew bundle
 
-echo "Installing Vim plugin manager"
+echo "Installing editor plugin manager"
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 	https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-echo "Installing Vim plugins"
+echo "Installing editor plugins"
 vim +PlugInstall +qall
 
-echo "Installing Node / npm for JavaScript projects"
+echo "Installing Node / npm"
 . "/usr/local/opt/nvm/nvm.sh"
 nvm install --lts
 nvm use --lts

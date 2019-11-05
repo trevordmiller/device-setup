@@ -14,6 +14,10 @@ for foreground_app in "${foreground_apps[@]}"; do
 	fi
 done
 
+echo "Quitting processes"
+
+killall node || true
+
 echo "Pulling latest dotfiles and shell scripts"
 
 cd "$HOME/repos/dotfiles"
@@ -93,7 +97,3 @@ else
 	deep_git_status
 	exit 1
 fi
-
-echo "Quitting JavaScript processes"
-
-killall node || true
