@@ -5,14 +5,14 @@ echo "Creating ~/repos directory"
 cd ~
 mkdir repos
 
-echo "Cloning and wiring up dotfiles"
+echo "Wiring up dotfiles"
 cd ~/repos
 git clone https://github.com/trevordmiller/dotfiles.git
 cd dotfiles
 ./index
 cd ~
 
-echo "Cloning shell scripts"
+echo "Exposing shell scripts"
 cd ~/repos
 git clone https://github.com/trevordmiller/shell-scripts.git
 cd ~
