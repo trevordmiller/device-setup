@@ -30,11 +30,6 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 echo "Installing editor plugins"
 vim +PlugInstall +qall
 
-echo "Installing Node / npm"
-. "/usr/local/opt/nvm/nvm.sh"
-nvm install --lts
-nvm use --lts
-
 echo "Configuring keyboard key repeat"
 defaults write NSGlobalDomain KeyRepeat -int 1
 defaults write NSGlobalDomain InitialKeyRepeat -int 10

@@ -8,10 +8,5 @@ brew upgrade
 echo "Upgrading editor plugins"
 vim +PlugUpgrade +PlugUpdate +PlugClean +qall
 
-echo "Upgrading Node / npm"
-. "/usr/local/opt/nvm/nvm.sh"
-nvm install --lts
-nvm use --lts
-
 echo "Upgrading OS"
 sudo softwareupdate -ia
