@@ -1,3 +1,3 @@
-# shell-scripts
+# scripts
 
-Trevor's shell scripts
+Trevor's scripts

@@ -23,7 +23,7 @@ echo "Pulling latest dotfiles and shell scripts"
 cd "$HOME/repos/dotfiles"
 git pull
 
-cd "$HOME/repos/shell-scripts"
+cd "$HOME/repos/scripts"
 git pull
 
 echo "Removing homebrew artifacts"

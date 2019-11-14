@@ -14,7 +14,7 @@ cd ~
 
 echo "Exposing shell scripts"
 cd ~/repos
-git clone https://github.com/trevordmiller/shell-scripts.git
+git clone https://github.com/trevordmiller/scripts.git
 cd ~
 
 echo "Installing global package manager"
