@@ -1,16 +1,19 @@
 #!/bin/sh
 set -euo pipefail
 
+# -----------------------------------------------------------------
 # Environment (Unix)
+# -----------------------------------------------------------------
 
 echo "Installing system package manager"
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-echo "Installing system packages / apps"
-brew install vim git node
-brew cask install 1password
-
+# -----------------------------------------------------------------
 # Editor (Vim)
+# -----------------------------------------------------------------
+
+echo "Installing editor system packages"
+brew install vim
 
 echo "Generating editor configuration dotfile"
 cat <<EOF >~/.vimrc
@@ -51,7 +54,12 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 echo "Installing editor plugins"
 vim +PlugInstall +qall
 
+# -----------------------------------------------------------------
 # Version control (Git)
+# -----------------------------------------------------------------
+
+echo "Installing version control system packages"
+brew install git
 
 echo "Generating version control configuration dotfile"
 cat <<EOF >~/.gitconfig
@@ -61,11 +69,20 @@ cat <<EOF >~/.gitconfig
   useconfigonly = true
 EOF
 
+# -----------------------------------------------------------------
 # Language (Rust)
+# -----------------------------------------------------------------
 
+# -----------------------------------------------------------------
 # Language (JavaScript)
+# -----------------------------------------------------------------
 
+# -----------------------------------------------------------------
 # Operating system (macOS)
+# -----------------------------------------------------------------
+
+echo "Installing app system packages"
+brew cask install 1password
 
 echo "Creating ~/repos directory for git repos"
 cd ~

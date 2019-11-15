@@ -1,24 +1,44 @@
 #!/bin/sh
 set -euo pipefail
 
+# -----------------------------------------------------------------
 # Environment (Unix)
+# -----------------------------------------------------------------
 
-echo "Upgrading system packages / apps"
+echo "Upgrading system package manager"
 brew update
-brew upgrade
 
+# -----------------------------------------------------------------
 # Editor (Vim)
+# -----------------------------------------------------------------
+
+echo "Upgrading editor system packages"
+brew upgrade vim
 
 echo "Upgrading editor plugins"
 vim +PlugUpgrade +PlugUpdate +PlugClean +qall
 
+# -----------------------------------------------------------------
 # Version control (Git)
+# -----------------------------------------------------------------
 
+echo "Upgrading version control system packages"
+brew upgrade vim
+
+# -----------------------------------------------------------------
 # Language (Rust)
+# -----------------------------------------------------------------
 
+# -----------------------------------------------------------------
 # Language (JavaScript)
+# -----------------------------------------------------------------
 
+# -----------------------------------------------------------------
 # Operating system (macOS)
+# -----------------------------------------------------------------
+
+echo "Upgrading app system packages"
+brew cask upgrade 1password
 
 echo "Upgrading operating system"
 sudo softwareupdate -ia
