@@ -33,6 +33,11 @@ brew upgrade vim
 # Language (JavaScript)
 # -----------------------------------------------------------------
 
+echo "Upgrading language toolchain"
+. ~/.nvm/nvm.sh
+nvm install --lts
+nvm use --lts
+
 # -----------------------------------------------------------------
 # Operating system (macOS)
 # -----------------------------------------------------------------

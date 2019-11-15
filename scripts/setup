@@ -5,6 +5,9 @@ set -euo pipefail
 # Environment (Unix)
 # -----------------------------------------------------------------
 
+echo "Generating shell configuration dotfile"
+touch ~/.zshrc
+
 echo "Installing system package manager"
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
@@ -76,6 +79,12 @@ EOF
 # -----------------------------------------------------------------
 # Language (JavaScript)
 # -----------------------------------------------------------------
+
+echo "Installing language toolchain"
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
+. ~/.nvm/nvm.sh
+nvm install --lts
+nvm use --lts
 
 # -----------------------------------------------------------------
 # Operating system (macOS)
