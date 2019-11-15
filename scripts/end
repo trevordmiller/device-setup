@@ -32,7 +32,7 @@ deep_git_prune() {
 		done
 	fi
 }
-cd "$HOME/repos"
+cd ~/repos
 for i in */.git; do (
 	echo $i
 	cd $i/..
@@ -41,7 +41,7 @@ for i in */.git; do (
 
 echo "Checking the status of each git repo"
 deep_git_status() {
-	cd "$HOME/repos"
+	cd ~repos
 	find . -path "*/.git" -maxdepth 2 -print -execdir git status ";"
 }
 deep_git_status_output=$(
@@ -90,6 +90,6 @@ for foreground_app in "${foreground_apps[@]}"; do
 done
 
 echo "Removing operating system artifacts"
-find "$HOME/repos" -name '.DS_Store' -delete
+find ~/repos -name '.DS_Store' -delete
 echo "Removing downloads"
-rm -rf "$HOME"/Downloads/*
+rm -rf ~/Downloads/*
