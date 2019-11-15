@@ -12,7 +12,7 @@ brew cleanup
 # Editor (Vim)
 # -----------------------------------------------------------------
 
-# Vim cleans up automatically when terminal is closed
+# Vim cleans up automatically when the terminal is closed
 
 # -----------------------------------------------------------------
 # Version control (Git)
