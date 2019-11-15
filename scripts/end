@@ -1,59 +1,16 @@
 #!/bin/sh
 set -euo pipefail
 
-echo "Closing apps"
+# Environment (Unix)
 
-foreground_apps_string=$(osascript -e 'tell application "System Events" to get name of (processes where background only is false)')
-
-IFS=',' read -r -a foreground_apps <<<"$foreground_apps_string"
-
-for foreground_app in "${foreground_apps[@]}"; do
-	app_name=$(echo "$foreground_app" | sed 's/^ *//g')
-	if [[ ! "$app_name" == "Finder" && ! "$app_name" == "Terminal" ]]; then
-		osascript -e 'quit app "'"$app_name"'"'
-	fi
-done
-
-echo "Quitting processes"
-
-killall node || true
-
-echo "Pulling latest dotfiles and shell scripts"
-
-cd "$HOME/repos/dotfiles"
-git pull
-
-cd "$HOME/repos/scripts"
-git pull
-
-echo "Removing homebrew artifacts"
-
+echo "Removing system package manager artifacts"
 brew cleanup
 
-echo "Making sure Brewfile and machine installs are in sync"
+# Editor (Vim)
 
-cd ~
-
-brew_bundle_cleanup_output=$(brew bundle cleanup)
-
-if [ -z "$brew_bundle_cleanup_output" ]; then
-	echo "Brewfile and machine installs are in sync"
-else
-	echo "Inconsistencies were found between Brewfile and machine installs. Fix them and re-run."
-	brew bundle cleanup
-	exit 1
-fi
-
-echo "Removing OS artifacts"
-
-find "$HOME/repos" -name '.DS_Store' -delete
-
-echo "Removing downloads"
-
-rm -rf "$HOME"/Downloads/*
+# Version control (Git)
 
 echo "Removing merged local branches in each git repo"
-
 deep_git_prune() {
 	IFS=$'\n\t'
 
@@ -67,7 +24,6 @@ deep_git_prune() {
 		done
 	fi
 }
-
 cd "$HOME/repos"
 for i in */.git; do (
 	echo $i
@@ -76,12 +32,10 @@ for i in */.git; do (
 ); done
 
 echo "Checking the status of each git repo"
-
 deep_git_status() {
 	cd "$HOME/repos"
 	find . -path "*/.git" -maxdepth 2 -print -execdir git status ";"
 }
-
 deep_git_status_output=$(
 	deep_git_status | grep \
 		-e "Untracked files:" \
@@ -89,7 +43,6 @@ deep_git_status_output=$(
 		-e "Changes to be committed:" \
 		-e "Your branch is ahead"
 )
-
 if [ -z "$deep_git_status_output" ]; then
 	echo "All git repos are clean"
 else
@@ -97,3 +50,30 @@ else
 	deep_git_status
 	exit 1
 fi
+
+# Language (Rust)
+
+# Language (JavaScript)
+
+echo "Quitting language processes"
+killall node || true
+
+# Operating system (macOS)
+
+echo "Closing apps"
+
+foreground_apps_string=$(osascript -e 'tell application "System Events" to get name of (processes where background only is false)')
+
+IFS=',' read -r -a foreground_apps <<<"$foreground_apps_string"
+
+for foreground_app in "${foreground_apps[@]}"; do
+	app_name=$(echo "$foreground_app" | sed 's/^ *//g')
+	if [[ ! "$app_name" == "Finder" && ! "$app_name" == "Terminal" ]]; then
+		osascript -e 'quit app "'"$app_name"'"'
+	fi
+done
+
+echo "Removing operating system artifacts"
+find "$HOME/repos" -name '.DS_Store' -delete
+echo "Removing downloads"
+rm -rf "$HOME"/Downloads/*

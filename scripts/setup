@@ -1,27 +1,48 @@
 #!/bin/sh
 set -euo pipefail
 
-echo "Creating ~/repos directory"
-cd ~
-mkdir repos
+# Environment (Unix)
 
-echo "Wiring up dotfiles"
-cd ~/repos
-git clone https://github.com/trevordmiller/dotfiles.git
-cd dotfiles
-./index
-cd ~
-
-echo "Exposing shell scripts"
-cd ~/repos
-git clone https://github.com/trevordmiller/scripts.git
-cd ~
-
-echo "Installing global package manager"
+echo "Installing system package manager"
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-echo "Installing global packages"
-brew bundle
+echo "Installing system packages / apps"
+brew install vim git node
+brew cask install 1password
+
+# Editor (Vim)
+
+echo "Generating editor configuration dotfile"
+cat <<EOF >~/.vimrc
+" Sync plugins with git repos
+call plug#begin('~/.vim/plugged')
+
+" Enhance core defaults to work consistently
+Plug 'https://github.com/tpope/vim-sensible'
+
+" Enhance indenting to indent automatically
+Plug 'https://github.com/tpope/vim-sleuth'
+
+" Enhance languages to use updated language packs
+Plug 'https://github.com/sheerun/vim-polyglot'
+
+" Enhance wildignore to ignore .gitignore items
+Plug 'https://github.com/octref/RootIgnore'
+
+" Enhance statics analysis to use installed programs
+Plug 'https://github.com/dense-analysis/ale'
+
+" Enhance color scheme to use terminal color palette
+Plug 'https://github.com/arcticicestudio/nord-vim'
+call plug#end()
+
+" Enhance grep to ignore .gitignore items
+set grepprg=git\ --no-pager\ grep\ --no-color\ -n\ $*
+set grepformat=%f:%l:%m,%m\ %f\ match%ts,%f
+
+" Enhance color scheme to use terminal color palette
+colorscheme nord
+EOF
 
 echo "Installing editor plugin manager"
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
@@ -29,6 +50,31 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 
 echo "Installing editor plugins"
 vim +PlugInstall +qall
+
+# Version control (Git)
+
+echo "Generating version control configuration dotfile"
+cat <<EOF >~/.gitconfig
+[user]
+  name = Trevor D. Miller
+  email = 5497885+trevordmiller@users.noreply.github.com
+  useconfigonly = true
+EOF
+
+# Language (Rust)
+
+# Language (JavaScript)
+
+# Operating system (macOS)
+
+echo "Creating ~/repos directory for git repos"
+cd ~
+mkdir repos
+
+echo "Exposing shell scripts locally"
+cd ~/repos
+git clone https://github.com/trevordmiller/scripts.git
+cd ~
 
 echo "Configuring keyboard key repeat"
 defaults write NSGlobalDomain KeyRepeat -int 1
