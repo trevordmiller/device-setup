@@ -41,7 +41,7 @@ for i in */.git; do (
 
 echo "Checking the status of each git repo"
 deep_git_status() {
-	cd ~repos
+	cd ~/repos
 	find . -path "*/.git" -maxdepth 2 -print -execdir git status ";"
 }
 deep_git_status_output=$(
