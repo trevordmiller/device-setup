@@ -13,7 +13,7 @@ brew update
 # -----------------------------------------------------------------
 
 echo "Upgrading editor system packages"
-brew upgrade vim
+brew upgrade vim || true
 
 echo "Upgrading editor plugins"
 vim +PlugUpgrade +PlugUpdate +PlugClean +qall
@@ -23,7 +23,7 @@ vim +PlugUpgrade +PlugUpdate +PlugClean +qall
 # -----------------------------------------------------------------
 
 echo "Upgrading version control system packages"
-brew upgrade vim
+brew upgrade git || true
 
 # -----------------------------------------------------------------
 # Language (Rust)
@@ -46,7 +46,7 @@ nvm use --lts
 # -----------------------------------------------------------------
 
 echo "Upgrading app system packages"
-brew cask upgrade 1password
+brew cask upgrade 1password || true
 
 echo "Upgrading operating system"
 sudo softwareupdate -ia
