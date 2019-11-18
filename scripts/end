@@ -90,5 +90,6 @@ done
 
 echo "Removing operating system artifacts"
 find ~/repos -name '.DS_Store' -delete
+
 echo "Removing downloads"
 rm -rf ~/Downloads/*
