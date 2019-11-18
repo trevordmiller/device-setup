@@ -8,7 +8,7 @@ set -euo pipefail
 echo "Generating shell configuration dotfile"
 cat <<EOF >~/.zshrc
 # Simplifying prompt
-export PS1="\$ "
+export PS1="%# "
 EOF
 
 echo "Installing system package manager"
