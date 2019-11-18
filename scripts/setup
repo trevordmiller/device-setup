@@ -5,9 +5,6 @@ set -euo pipefail
 # Environment (Unix)
 # -----------------------------------------------------------------
 
-echo "Generating shell configuration dotfile"
-touch ~/.zshrc
-
 echo "Installing system package manager"
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
@@ -84,6 +81,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 # -----------------------------------------------------------------
 
 echo "Installing language toolchain"
+touch ~/.zshrc
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
 . ~/.nvm/nvm.sh
 nvm install --lts
