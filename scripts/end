@@ -34,7 +34,6 @@ deep_git_prune() {
 }
 cd ~/repos
 for i in */.git; do (
-	echo $i
 	cd $i/..
 	deep_git_prune
 ); done
