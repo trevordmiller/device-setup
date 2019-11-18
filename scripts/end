@@ -50,9 +50,7 @@ deep_git_status_output=$(
 		-e "Changes to be committed:" \
 		-e "Your branch is ahead"
 )
-if [ -z "$deep_git_status_output" ]; then
-	echo "All git repos are clean"
-else
+if [ ! -z "$deep_git_status_output" ]; then
 	echo "Dirty git repos were found! Fix them and re-run."
 	deep_git_status
 	exit 1
