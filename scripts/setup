@@ -103,9 +103,11 @@ echo "Creating ~/repos directory for git repos"
 cd ~
 mkdir repos
 
-echo "Exposing shell scripts locally"
+echo "Cloning personal repos"
 cd ~/repos
 git clone https://github.com/trevordmiller/scripts.git
+git clone https://github.com/trevordmiller/study.git
+git clone https://github.com/trevordmiller/trevordmiller.github.io.git
 cd ~
 
 echo "Configuring keyboard key repeat"
