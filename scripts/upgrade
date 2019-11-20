@@ -32,6 +32,9 @@ brew upgrade git || true
 echo "Upgrading language toolchain"
 rustup update
 
+echo "Upgrading static site generator system packages"
+brew upgrade zola || true
+
 # -----------------------------------------------------------------
 # Language (JavaScript)
 # -----------------------------------------------------------------

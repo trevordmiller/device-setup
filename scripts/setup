@@ -82,6 +82,9 @@ EOF
 echo "Installing language toolchain"
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
+echo "Installing static site generator system packages"
+brew install zola
+
 # -----------------------------------------------------------------
 # Language (JavaScript)
 # -----------------------------------------------------------------
