@@ -5,12 +5,6 @@ set -euo pipefail
 # Environment (Unix)
 # -----------------------------------------------------------------
 
-echo "Generating shell configuration dotfile"
-cat <<EOF >~/.zshrc
-# Simplifying prompt
-export PS1="%# "
-EOF
-
 echo "Installing system package manager"
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
