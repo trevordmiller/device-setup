@@ -18,9 +18,6 @@ echo "Installing system package manager"
 # Editor (Vim)
 # -----------------------------------------------------------------
 
-echo "Installing editor system packages"
-brew install vim
-
 echo "Generating editor configuration dotfile"
 cat <<EOF >~/.vimrc
 " Sync plugins with git repos
@@ -53,6 +50,9 @@ set grepformat=%f:%l:%m,%m\ %f\ match%ts,%f
 colorscheme nord
 EOF
 
+echo "Installing editor system packages"
+brew install vim
+
 echo "Installing editor plugin manager"
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 	https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -64,9 +64,6 @@ vim +PlugInstall +qall
 # Version control (Git)
 # -----------------------------------------------------------------
 
-echo "Installing version control system packages"
-brew install git
-
 echo "Generating version control configuration dotfile"
 cat <<EOF >~/.gitconfig
 [user]
@@ -74,6 +71,9 @@ cat <<EOF >~/.gitconfig
   email = 5497885+trevordmiller@users.noreply.github.com
   useconfigonly = true
 EOF
+
+echo "Installing version control system packages"
+brew install git
 
 # -----------------------------------------------------------------
 # Language (Rust)
@@ -102,11 +102,9 @@ nvm use --lts
 echo "Installing app system packages"
 brew cask install 1password
 
-echo "Creating ~/repos directory for git repos"
+echo "Cloning personal repos"
 cd ~
 mkdir repos
-
-echo "Cloning personal repos"
 cd ~/repos
 git clone https://github.com/trevordmiller/scripts.git
 git clone https://github.com/trevordmiller/study.git

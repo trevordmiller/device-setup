@@ -15,8 +15,11 @@ brew update
 echo "Upgrading editor system packages"
 brew upgrade vim || true
 
+echo "Upgrading editor plugin manager"
+vim +PlugUpgrade +qall
+
 echo "Upgrading editor plugins"
-vim +PlugUpgrade +PlugUpdate +PlugClean +qall
+vim +PlugUpdate +PlugClean +qall
 
 # -----------------------------------------------------------------
 # Version control (Git)
