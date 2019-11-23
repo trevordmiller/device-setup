@@ -2,11 +2,39 @@
 set -euo pipefail
 
 # -----------------------------------------------------------------
+# Operating system (macOS)
+# -----------------------------------------------------------------
+
+echo "Configuring keyboard key repeat"
+defaults write NSGlobalDomain KeyRepeat -int 1
+defaults write NSGlobalDomain InitialKeyRepeat -int 10
+
+echo "Configuring screenshots to save in Downloads"
+defaults write com.apple.screencapture location ~/Downloads
+killall SystemUIServer
+
+echo "Configuring menu bar to autohide"
+defaults write NSGlobalDomain _HIHideMenuBar -bool true
+killall Finder
+
+echo "Configuring dock to autohide"
+osascript <<EOD
+  tell application "System Events"
+    if (get autohide of dock preferences) is false then
+      tell dock preferences to set autohide to not autohide
+    end if
+  end tell
+EOD
+
+# -----------------------------------------------------------------
 # Environment (Unix)
 # -----------------------------------------------------------------
 
-echo "Installing system package manager"
+echo "Installing environment package manager"
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+echo "Installing apps"
+brew cask install 1password
 
 # -----------------------------------------------------------------
 # Editor (Vim)
@@ -44,7 +72,7 @@ set grepformat=%f:%l:%m,%m\ %f\ match%ts,%f
 colorscheme nord
 EOF
 
-echo "Installing editor system packages"
+echo "Installing editor"
 brew install vim
 
 echo "Installing editor plugin manager"
@@ -66,35 +94,8 @@ cat <<EOF >~/.gitconfig
   useconfigonly = true
 EOF
 
-echo "Installing version control system packages"
+echo "Installing version control"
 brew install git
-
-# -----------------------------------------------------------------
-# Language (Rust)
-# -----------------------------------------------------------------
-
-echo "Installing language toolchain"
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-
-echo "Installing static site generator system packages"
-brew install zola
-
-# -----------------------------------------------------------------
-# Language (JavaScript)
-# -----------------------------------------------------------------
-
-echo "Installing language toolchain"
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
-. ~/.nvm/nvm.sh
-nvm install --lts
-nvm use --lts
-
-# -----------------------------------------------------------------
-# Operating system (macOS)
-# -----------------------------------------------------------------
-
-echo "Installing app system packages"
-brew cask install 1password
 
 echo "Cloning personal repos"
 cd ~
@@ -105,26 +106,22 @@ git clone https://github.com/trevordmiller/study.git
 git clone https://github.com/trevordmiller/trevordmiller.github.io.git
 cd ~
 
-echo "Configuring keyboard key repeat"
-defaults write NSGlobalDomain KeyRepeat -int 1
-defaults write NSGlobalDomain InitialKeyRepeat -int 10
+# -----------------------------------------------------------------
+# Application programming (JavaScript)
+# -----------------------------------------------------------------
 
-echo "Configuring screenshots to save in Downloads"
-defaults write com.apple.screencapture location ~/Downloads
-killall SystemUIServer
+echo "Installing application programming toolchain"
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
+. ~/.nvm/nvm.sh
+nvm install --lts
+nvm use --lts
 
-echo "Configuring menu bar to autohide"
-defaults write NSGlobalDomain _HIHideMenuBar -bool true
-killall Finder
+# -----------------------------------------------------------------
+# Systems programming (Rust)
+# -----------------------------------------------------------------
 
-echo "Configuring dock to autohide"
-osascript <<EOD
-  tell application "System Events"
-    if (get autohide of dock preferences) is false then
-      tell dock preferences to set autohide to not autohide
-    end if
-  end tell
-EOD
+echo "Installing systems programming toolchain"
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
-echo "Rebooting"
-sudo shutdown -r now
+echo "Installing static site generator"
+brew install zola

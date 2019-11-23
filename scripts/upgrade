@@ -2,17 +2,27 @@
 set -euo pipefail
 
 # -----------------------------------------------------------------
+# Operating system (macOS)
+# -----------------------------------------------------------------
+
+echo "Upgrading operating system"
+sudo softwareupdate -ia
+
+# -----------------------------------------------------------------
 # Environment (Unix)
 # -----------------------------------------------------------------
 
-echo "Upgrading system package manager"
+echo "Upgrading environment package manager"
 brew update
+
+echo "Upgrading apps"
+brew cask upgrade 1password || true
 
 # -----------------------------------------------------------------
 # Editor (Vim)
 # -----------------------------------------------------------------
 
-echo "Upgrading editor system packages"
+echo "Upgrading editor"
 brew upgrade vim || true
 
 echo "Upgrading editor plugin manager"
@@ -25,34 +35,24 @@ vim +PlugUpdate +PlugClean +qall
 # Version control (Git)
 # -----------------------------------------------------------------
 
-echo "Upgrading version control system packages"
+echo "Upgrading version control"
 brew upgrade git || true
 
 # -----------------------------------------------------------------
-# Language (Rust)
+# Application programming (JavaScript)
 # -----------------------------------------------------------------
 
-echo "Upgrading language toolchain"
-rustup update
-
-echo "Upgrading static site generator system packages"
-brew upgrade zola || true
-
-# -----------------------------------------------------------------
-# Language (JavaScript)
-# -----------------------------------------------------------------
-
-echo "Upgrading language toolchain"
+echo "Upgrading application programming toolchain"
 . ~/.nvm/nvm.sh
 nvm install --lts
 nvm use --lts
 
 # -----------------------------------------------------------------
-# Operating system (macOS)
+# Systems programming (Rust)
 # -----------------------------------------------------------------
 
-echo "Upgrading app system packages"
-brew cask upgrade 1password || true
+echo "Upgrading systems programming toolchain"
+rustup update
 
-echo "Upgrading operating system"
-sudo softwareupdate -ia
+echo "Upgrading static site generator"
+brew upgrade zola || true
