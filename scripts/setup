@@ -35,7 +35,12 @@ brew cask install 1password
 # Environment (Unix)
 # -----------------------------------------------------------------
 
-# Using defaults
+echo "Installing shell"
+brew install zsh
+
+echo "Setting default shell"
+sudo sh -c "echo $(which zsh) >> /etc/shells"
+chsh -s $(which zsh)
 
 # -----------------------------------------------------------------
 # Editor (Vim)

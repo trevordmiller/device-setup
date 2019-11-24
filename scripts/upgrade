@@ -17,7 +17,12 @@ brew cask upgrade 1password
 # Environment (Unix)
 # -----------------------------------------------------------------
 
-# Using defaults
+echo "Upgrading shell"
+brew upgrade zsh
+
+echo "Setting default shell"
+sudo sh -c "echo $(which zsh) >> /etc/shells"
+chsh -s $(which zsh)
 
 # -----------------------------------------------------------------
 # Editor (Vim)
