@@ -54,9 +54,6 @@ nvm use --lts
 echo "Upgrading systems programming toolchain"
 rustup update
 
-echo "Upgrading static site generator"
-brew upgrade zola || true
-
 # -----------------------------------------------------------------
 
 echo "Finished"
