@@ -7,15 +7,17 @@
 echo "Upgrading operating system"
 sudo softwareupdate -ia
 
-# -----------------------------------------------------------------
-# Environment (Unix)
-# -----------------------------------------------------------------
-
-echo "Upgrading environment package manager"
+echo "Upgrading package manager"
 brew update
 
 echo "Upgrading apps"
 brew cask upgrade 1password
+
+# -----------------------------------------------------------------
+# Environment (Unix)
+# -----------------------------------------------------------------
+
+# Using defaults
 
 # -----------------------------------------------------------------
 # Editor (Vim)

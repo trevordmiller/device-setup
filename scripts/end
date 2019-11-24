@@ -23,18 +23,20 @@ find ~/repos -name '.DS_Store' -delete
 echo "Removing downloads"
 rm -rf ~/Downloads/*
 
+echo "Removing package manager artifacts"
+brew cleanup
+
 # -----------------------------------------------------------------
 # Environment (Unix)
 # -----------------------------------------------------------------
 
-echo "Removing environment package manager artifacts"
-brew cleanup
+# Cleans up automatically when programs end
 
 # -----------------------------------------------------------------
 # Editor (Vim)
 # -----------------------------------------------------------------
 
-# Cleans up automatically when the editor is closed
+# Cleans up automatically when programs end
 
 # -----------------------------------------------------------------
 # Version control (Git)

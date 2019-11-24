@@ -25,15 +25,17 @@ osascript <<EOD
   end tell
 EOD
 
-# -----------------------------------------------------------------
-# Environment (Unix)
-# -----------------------------------------------------------------
-
-echo "Installing environment package manager"
+echo "Installing package manager"
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 echo "Installing apps"
 brew cask install 1password
+
+# -----------------------------------------------------------------
+# Environment (Unix)
+# -----------------------------------------------------------------
+
+# Using defaults
 
 # -----------------------------------------------------------------
 # Editor (Vim)
