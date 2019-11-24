@@ -1,5 +1,4 @@
 #!/bin/sh
-set -euo pipefail
 
 # -----------------------------------------------------------------
 # Operating system (macOS)
@@ -16,14 +15,14 @@ echo "Upgrading environment package manager"
 brew update
 
 echo "Upgrading apps"
-brew cask upgrade 1password || true
+brew cask upgrade 1password
 
 # -----------------------------------------------------------------
 # Editor (Vim)
 # -----------------------------------------------------------------
 
 echo "Upgrading editor"
-brew upgrade vim || true
+brew upgrade vim
 
 echo "Upgrading editor plugin manager"
 vim +PlugUpgrade +qall
@@ -36,7 +35,7 @@ vim +PlugUpdate +PlugClean +qall
 # -----------------------------------------------------------------
 
 echo "Upgrading version control"
-brew upgrade git || true
+brew upgrade git
 
 # -----------------------------------------------------------------
 # Application programming (JavaScript)

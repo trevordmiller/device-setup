@@ -1,5 +1,4 @@
 #!/bin/sh
-set -euo pipefail
 
 # -----------------------------------------------------------------
 # Operating system (macOS)
@@ -71,7 +70,7 @@ deep_git_status_output=$(
 		-e "Untracked files:" \
 		-e "Changes not staged for commit:" \
 		-e "Changes to be committed:" \
-		-e "Your branch is ahead" || true
+		-e "Your branch is ahead"
 )
 if [ ! -z "$deep_git_status_output" ]; then
 	echo "Dirty git repos were found! Fix them and re-run."
@@ -84,7 +83,7 @@ fi
 # -----------------------------------------------------------------
 
 echo "Quitting application programming processes"
-killall node || true
+killall node
 
 # -----------------------------------------------------------------
 # Systems programming (Rust)
