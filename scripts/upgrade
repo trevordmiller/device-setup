@@ -4,14 +4,14 @@
 # Operating system (macOS)
 # -----------------------------------------------------------------
 
-echo "Upgrading operating system"
-sudo softwareupdate -ia
-
 echo "Upgrading package manager"
 brew update
 
 echo "Upgrading apps"
 brew cask upgrade 1password
+
+echo "Upgrading operating system"
+sudo softwareupdate -ia
 
 # -----------------------------------------------------------------
 # Environment (Unix)
@@ -19,23 +19,7 @@ brew cask upgrade 1password
 
 echo "Upgrading shell"
 brew upgrade zsh
-
-echo "Setting default shell"
-sudo sh -c "echo $(which zsh) >> /etc/shells"
 chsh -s $(which zsh)
-
-# -----------------------------------------------------------------
-# Editor (Vim)
-# -----------------------------------------------------------------
-
-echo "Upgrading editor"
-brew upgrade vim
-
-echo "Upgrading editor plugin manager"
-vim +PlugUpgrade +qall
-
-echo "Upgrading editor plugins"
-vim +PlugUpdate +PlugClean +qall
 
 # -----------------------------------------------------------------
 # Version control (Git)
@@ -45,19 +29,29 @@ echo "Upgrading version control"
 brew upgrade git
 
 # -----------------------------------------------------------------
+# Editor (Vim)
+# -----------------------------------------------------------------
+
+echo "Upgrading editor"
+brew upgrade vim
+
+echo "Upgrading editor configuration dotfiles"
+cd ~/repos/scripts
+git submodule update --remote --merge
+
+# -----------------------------------------------------------------
 # Application programming (JavaScript)
 # -----------------------------------------------------------------
 
 echo "Upgrading application programming toolchain"
-. ~/.nvm/nvm.sh
-nvm install --lts
-nvm use --lts
+brew upgrade node
 
 # -----------------------------------------------------------------
 # Systems programming (Rust)
 # -----------------------------------------------------------------
 
 echo "Upgrading systems programming toolchain"
+brew upgrade rustup
 rustup update
 
 # -----------------------------------------------------------------

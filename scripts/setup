@@ -4,27 +4,6 @@
 # Operating system (macOS)
 # -----------------------------------------------------------------
 
-echo "Configuring keyboard key repeat"
-defaults write NSGlobalDomain KeyRepeat -int 1
-defaults write NSGlobalDomain InitialKeyRepeat -int 10
-
-echo "Configuring screenshots to save in Downloads"
-defaults write com.apple.screencapture location ~/Downloads
-killall SystemUIServer
-
-echo "Configuring menu bar to autohide"
-defaults write NSGlobalDomain _HIHideMenuBar -bool true
-killall Finder
-
-echo "Configuring dock to autohide"
-osascript <<EOD
-  tell application "System Events"
-    if (get autohide of dock preferences) is false then
-      tell dock preferences to set autohide to not autohide
-    end if
-  end tell
-EOD
-
 echo "Installing package manager"
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
@@ -37,97 +16,47 @@ brew cask install 1password
 
 echo "Installing shell"
 brew install zsh
-
-echo "Setting default shell"
 sudo sh -c "echo $(which zsh) >> /etc/shells"
 chsh -s $(which zsh)
 
-# -----------------------------------------------------------------
-# Editor (Vim)
-# -----------------------------------------------------------------
-
-echo "Generating editor configuration dotfile"
-cat <<EOF >~/.vimrc
-" Sync plugins with git repos
-call plug#begin('~/.vim/plugged')
-
-" Enhance core defaults to work consistently
-Plug 'https://github.com/tpope/vim-sensible'
-
-" Enhance indenting to indent automatically
-Plug 'https://github.com/tpope/vim-sleuth'
-
-" Enhance languages to use updated language packs
-Plug 'https://github.com/sheerun/vim-polyglot'
-
-" Enhance wildignore to ignore .gitignore items
-Plug 'https://github.com/octref/RootIgnore'
-
-" Enhance statics analysis to use installed programs
-Plug 'https://github.com/dense-analysis/ale'
-
-" Enhance color scheme to use terminal color palette
-Plug 'https://github.com/arcticicestudio/nord-vim'
-call plug#end()
-
-" Enhance grep to ignore .gitignore items
-set grepprg=git\ --no-pager\ grep\ --no-color\ -n\ $*
-set grepformat=%f:%l:%m,%m\ %f\ match%ts,%f
-
-" Enhance color scheme to use terminal color palette
-colorscheme nord
-EOF
-
-echo "Installing editor"
-brew install vim
-
-echo "Installing editor plugin manager"
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-	https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
-echo "Installing editor plugins"
-vim +PlugInstall +qall
+echo "Linking shell configuration dotfile"
+ln -s ~/repos/scripts/dotfiles/.zshrc ~/.zshrc
 
 # -----------------------------------------------------------------
 # Version control (Git)
 # -----------------------------------------------------------------
 
-echo "Generating version control configuration dotfile"
-cat <<EOF >~/.gitconfig
-[user]
-  name = Trevor D. Miller
-  email = 5497885+trevordmiller@users.noreply.github.com
-  useconfigonly = true
-EOF
-
 echo "Installing version control"
 brew install git
 
-echo "Cloning personal repos"
-cd ~
-mkdir repos
-cd ~/repos
-git clone https://github.com/trevordmiller/scripts.git
-git clone https://github.com/trevordmiller/study.git
-git clone https://github.com/trevordmiller/trevordmiller.github.io.git --recurse-submodules
-cd ~
+echo "Linking version control configuration dotfile"
+ln -s ~/repos/scripts/dotfiles/.gitconfig ~/.gitconfig
+
+# -----------------------------------------------------------------
+# Editor (Vim)
+# -----------------------------------------------------------------
+
+echo "Installing editor"
+brew install vim
+
+echo "Linking editor configuration dotfiles"
+ln -s ~/repos/scripts/dotfiles/.vimrc ~/.vimrc
+ln -s ~/repos/scripts/dotfiles/.vim/* ~/.vim/
 
 # -----------------------------------------------------------------
 # Application programming (JavaScript)
 # -----------------------------------------------------------------
 
 echo "Installing application programming toolchain"
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
-. ~/.nvm/nvm.sh
-nvm install --lts
-nvm use --lts
+brew install node
 
 # -----------------------------------------------------------------
 # Systems programming (Rust)
 # -----------------------------------------------------------------
 
 echo "Installing systems programming toolchain"
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+brew install rustup
+rustup-init
 
 # -----------------------------------------------------------------
 
