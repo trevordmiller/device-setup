@@ -1,2 +1,2 @@
-# Simplifying prompt
+# Simplify prompt
 export PS1="%# "
