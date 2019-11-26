@@ -54,6 +54,9 @@ echo "Upgrading systems programming toolchain"
 brew upgrade rustup
 rustup update
 
+echo "Upgrading static site generator"
+brew upgrade zola
+
 # -----------------------------------------------------------------
 
 echo "Finished"

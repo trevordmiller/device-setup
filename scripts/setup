@@ -58,6 +58,9 @@ echo "Installing systems programming toolchain"
 brew install rustup
 rustup-init
 
+echo "Installing static site generator"
+brew install zola
+
 # -----------------------------------------------------------------
 
 echo "Finished"
