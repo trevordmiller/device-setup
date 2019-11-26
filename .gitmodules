@@ -1,18 +1,29 @@
+# Normalize editor defaults
 [submodule "dotfiles/.vim/pack/plugins/start/vim-sensible"]
 	path = dotfiles/.vim/pack/plugins/start/vim-sensible
 	url = https://github.com/tpope/vim-sensible
+
+# Enhance editor indentation
 [submodule "dotfiles/.vim/pack/plugins/start/vim-sleuth"]
 	path = dotfiles/.vim/pack/plugins/start/vim-sleuth
 	url = https://github.com/tpope/vim-sleuth
+
+# Enhance editor languages
 [submodule "dotfiles/.vim/pack/plugins/start/vim-polyglot"]
 	path = dotfiles/.vim/pack/plugins/start/vim-polyglot
 	url = https://github.com/sheerun/vim-polyglot
+
+# Enhance editor ignore patterns
 [submodule "dotfiles/.vim/pack/plugins/start/RootIgnore"]
 	path = dotfiles/.vim/pack/plugins/start/RootIgnore
 	url = https://github.com/octref/RootIgnore
+
+# Enhance editor static analysis
 [submodule "dotfiles/.vim/pack/plugins/start/ale"]
 	path = dotfiles/.vim/pack/plugins/start/ale
 	url = https://github.com/dense-analysis/ale
+
+# Enhance editor colors
 [submodule "dotfiles/.vim/pack/plugins/start/nord-vim"]
 	path = dotfiles/.vim/pack/plugins/start/nord-vim
 	url = https://github.com/arcticicestudio/nord-vim
