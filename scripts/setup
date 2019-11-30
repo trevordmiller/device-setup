@@ -29,9 +29,6 @@ ln -s ~/repos/scripts/dotfiles/.zshrc ~/.zshrc
 echo "Installing version control"
 brew install git
 
-echo "Linking version control configuration dotfile"
-ln -s ~/repos/scripts/dotfiles/.gitconfig ~/.gitconfig
-
 # -----------------------------------------------------------------
 # Editor (Vim)
 # -----------------------------------------------------------------
