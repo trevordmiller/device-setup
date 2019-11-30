@@ -15,4 +15,8 @@ cd scripts
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md).
+### Workflow
+
+Assuming [git](https://git-scm.com) is installed.
+
+- Work off the `master` branch.
