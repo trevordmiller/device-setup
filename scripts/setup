@@ -14,13 +14,7 @@ brew cask install 1password
 # Environment (Unix)
 # -----------------------------------------------------------------
 
-echo "Installing shell"
-brew install zsh
-sudo sh -c "echo $(which zsh) >> /etc/shells"
-chsh -s $(which zsh)
-
-echo "Linking shell configuration dotfile"
-ln -s ~/repos/scripts/dotfiles/.zshrc ~/.zshrc
+# Using defaults
 
 # -----------------------------------------------------------------
 # Version control (Git)

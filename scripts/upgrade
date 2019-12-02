@@ -17,9 +17,7 @@ sudo softwareupdate -ia
 # Environment (Unix)
 # -----------------------------------------------------------------
 
-echo "Upgrading shell"
-brew upgrade zsh
-chsh -s $(which zsh)
+# Using defaults
 
 # -----------------------------------------------------------------
 # Version control (Git)
