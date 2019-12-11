@@ -4,22 +4,26 @@ Personal scripts to automate my computer configuration.
 
 ## Usage
 
-```sh
-cd ~
-mkdir repos
-cd repos
-git clone --recurse-submodules https://github.com/trevordmiller/scripts.git
-cd scripts
-./scripts/setup
-```
+Assuming a Unix environment is being used (like macOS, Linux, or Windows Subsystem for Linux).
+
+- Install [Homebrew](https://brew.sh) for the correct environment.
+- TODO
 
 ## Contributing
 
 ### Workflow
 
-Assuming [git](https://git-scm.com) is installed.
+Assuming [git](https://git-scm.com) and [rust](https://www.rust-lang.org) are installed.
 
 - Work off the `master` branch.
+- Run `cargo build` to compile.
+- Run `cargo run` to run.
+- Run `cargo check` to check for errors.
+- Run `cargo fix` to fix syntax.
+- Run `cargo test` to test logic.
+- Run `cargo clippy` to lint for common issues.
+- Run `cargo fmt` to format source code.
+- Run `cargo doc` to generate documentation.
 
 ### Guidelines
 

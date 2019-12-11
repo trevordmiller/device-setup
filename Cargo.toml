@@ -1,0 +1,9 @@
+[package]
+name = "scripts"
+version = "0.1.0"
+authors = ["trevordmiller"]
+edition = "2018"
+
+[dependencies]
+structopt = "0.3.5"
+dirs = "2.0.2"
