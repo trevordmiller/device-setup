@@ -18,7 +18,7 @@ pub fn run() {
 
     // Version control (Git)
 
-    println!("Checking the status of each repo.");
+    println!("Making sure all repos are clean.");
 
     let home_dir = match dirs::home_dir() {
         Some(directory) => directory,
@@ -29,13 +29,15 @@ pub fn run() {
 
     match fs::read_dir(&repos_path) {
         Ok(paths) => {
+            let mut all_repos_clean = true;
+
             for path in paths {
                 let path = match &path {
                     Ok(path) => path.path(),
                     Err(error) => panic!("There was a problem: {:?}", error),
                 };
 
-                let dirty_check = match Command::new("git")
+                let status_check = match Command::new("git")
                     .current_dir(&path)
                     .arg("status")
                     .arg("--porcelain")
@@ -44,10 +46,6 @@ pub fn run() {
                     Ok(output) => output.stdout,
                     Err(error) => panic!("There was a problem: {:?}", error),
                 };
-
-                if !dirty_check.is_empty() {
-                    panic!("The {} repo is dirty.", &path.display());
-                }
 
                 let unpushed_check = match Command::new("git")
                     .current_dir(&path)
@@ -59,9 +57,14 @@ pub fn run() {
                     Err(error) => panic!("There was a problem: {:?}", error),
                 };
 
-                if !unpushed_check.is_empty() {
-                    panic!("The {} repo has unpushed commits.", &path.display());
+                if !status_check.is_empty() || !unpushed_check.is_empty() {
+                    all_repos_clean = false;
+                    eprintln!("A dirty repo was found: {}", &path.display());
                 }
+            }
+
+            if !all_repos_clean {
+                panic!("Repos are dirty.");
             }
         }
         Err(error) => panic!("There was a problem: {:?}", error),
