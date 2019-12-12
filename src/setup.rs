@@ -92,7 +92,7 @@ pub fn run() {
         println!("Repos directory already exists.")
     } else {
         println!("Creating repos directory.");
-        match fs::create_dir_all(&repos_path) {
+        match fs::create_dir(&repos_path) {
             Ok(_) => (),
             Err(error) => panic!("There was a problem: {:?}", error),
         }
