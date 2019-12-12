@@ -81,13 +81,12 @@ pub fn run() {
         }
     }
 
-    let home_dir = match dirs::home_dir() {
+    let home_path = match dirs::home_dir() {
         Some(directory) => directory,
         None => panic!("Cannot find the home directory."),
     };
 
-    let repos_path = &home_dir
-        .join("repos");
+    let repos_path = home_path.join("repos");
 
     if repos_path.exists() {
         println!("Repos directory already exists.")
@@ -140,7 +139,6 @@ pub fn run() {
         }
     };
 
-
     // Editor (Vim)
 
     let editor_status = match Command::new("brew").arg("list").arg("vim").output() {
@@ -164,7 +162,7 @@ pub fn run() {
         }
     }
 
-    let editor_plugins_path = &home_dir
+    let editor_plugins_path = home_path
         .join(".vim")
         .join("pack")
         .join("plugins")
@@ -180,7 +178,7 @@ pub fn run() {
         }
     }
 
-    let editor_configuration_path = home_dir.join(".vimrc");
+    let editor_configuration_path = home_path.join(".vimrc");
 
     if editor_configuration_path.exists() {
         println!("Editor configuration file already exists.")

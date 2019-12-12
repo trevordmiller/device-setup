@@ -67,12 +67,12 @@ pub fn run() {
 
     println!("Upgrading editor plugins.");
 
-    let home_dir = match dirs::home_dir() {
+    let home_path = match dirs::home_dir() {
         Some(directory) => directory,
         None => panic!("Cannot find the home directory."),
     };
 
-    let editor_plugins_path = &home_dir
+    let editor_plugins_path = home_path
         .join(".vim")
         .join("pack")
         .join("plugins")

@@ -20,12 +20,12 @@ pub fn run() {
 
     println!("Making sure all repos are clean.");
 
-    let home_dir = match dirs::home_dir() {
+    let home_path = match dirs::home_dir() {
         Some(directory) => directory,
         None => panic!("Cannot find the home directory."),
     };
 
-    let repos_path = &home_dir.join("repos");
+    let repos_path = home_path.join("repos");
 
     match fs::read_dir(&repos_path) {
         Ok(paths) => {
