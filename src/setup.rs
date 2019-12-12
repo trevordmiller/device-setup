@@ -81,6 +81,66 @@ pub fn run() {
         }
     }
 
+    let home_dir = match dirs::home_dir() {
+        Some(directory) => directory,
+        None => panic!("Cannot find the home directory."),
+    };
+
+    let repos_path = &home_dir
+        .join("repos");
+
+    if repos_path.exists() {
+        println!("Repos directory already exists.")
+    } else {
+        println!("Creating repos directory.");
+        match fs::create_dir_all(&repos_path) {
+            Ok(_) => (),
+            Err(error) => panic!("There was a problem: {:?}", error),
+        }
+    }
+
+    match fs::read_dir(&repos_path) {
+        Ok(_) => println!("Repos are already installed."),
+        Err(_) => {
+            println!("Cloning scripts repo.");
+
+            match Command::new("git")
+                .current_dir(&repos_path)
+                .arg("clone")
+                .arg("https://github.com/trevordmiller/scripts")
+                .output()
+            {
+                Ok(_) => (),
+                Err(error) => panic!("There was a problem: {:?}", error),
+            }
+
+            println!("Cloning study repo.");
+
+            match Command::new("git")
+                .current_dir(&repos_path)
+                .arg("clone")
+                .arg("https://github.com/trevordmiller/study")
+                .output()
+            {
+                Ok(_) => (),
+                Err(error) => panic!("There was a problem: {:?}", error),
+            }
+
+            println!("Cloning trevordmiller.github.io repo.");
+
+            match Command::new("git")
+                .current_dir(&repos_path)
+                .arg("clone")
+                .arg("https://github.com/trevordmiller/trevordmiller.github.io")
+                .output()
+            {
+                Ok(_) => (),
+                Err(error) => panic!("There was a problem: {:?}", error),
+            }
+        }
+    };
+
+
     // Editor (Vim)
 
     let editor_status = match Command::new("brew").arg("list").arg("vim").output() {
@@ -103,11 +163,6 @@ pub fn run() {
             },
         }
     }
-
-    let home_dir = match dirs::home_dir() {
-        Some(directory) => directory,
-        None => panic!("Cannot find the home directory."),
-    };
 
     let editor_plugins_path = &home_dir
         .join(".vim")
