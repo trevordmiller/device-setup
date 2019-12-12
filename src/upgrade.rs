@@ -10,10 +10,7 @@ pub fn run() {
 
     match Command::new("brew").arg("update").output() {
         Ok(_) => (),
-        Err(error) => match error.kind() {
-            ErrorKind::NotFound => panic!("The `brew` command is missing."),
-            other_error => panic!("There was a problem: {:?}", other_error),
-        },
+        Err(error) => panic!("There was a problem: {:?}", error),
     }
 
     println!("Upgrading password manager.");
@@ -25,20 +22,14 @@ pub fn run() {
         .output()
     {
         Ok(_) => (),
-        Err(error) => match error.kind() {
-            ErrorKind::NotFound => panic!("The `brew` command is missing."),
-            other_error => panic!("There was a problem: {:?}", other_error),
-        },
+        Err(error) => panic!("There was a problem: {:?}", error),
     }
 
     println!("Upgrading search tool.");
 
     match Command::new("brew").arg("upgrade").arg("ripgrep").output() {
         Ok(_) => (),
-        Err(error) => match error.kind() {
-            ErrorKind::NotFound => panic!("The `brew` command is missing."),
-            other_error => panic!("There was a problem: {:?}", other_error),
-        },
+        Err(error) => panic!("There was a problem: {:?}", error),
     }
 
     // Version control (Git)
@@ -47,10 +38,7 @@ pub fn run() {
 
     match Command::new("brew").arg("upgrade").arg("git").output() {
         Ok(_) => (),
-        Err(error) => match error.kind() {
-            ErrorKind::NotFound => panic!("The `brew` command is missing."),
-            other_error => panic!("There was a problem: {:?}", other_error),
-        },
+        Err(error) => panic!("There was a problem: {:?}", error),
     }
 
     // Editor (Vim)
@@ -59,10 +47,7 @@ pub fn run() {
 
     match Command::new("brew").arg("upgrade").arg("vim").output() {
         Ok(_) => (),
-        Err(error) => match error.kind() {
-            ErrorKind::NotFound => panic!("The `brew` command is missing."),
-            other_error => panic!("There was a problem: {:?}", other_error),
-        },
+        Err(error) => panic!("There was a problem: {:?}", error),
     }
 
     println!("Upgrading editor plugins.");
@@ -103,10 +88,7 @@ pub fn run() {
 
     match Command::new("brew").arg("upgrade").arg("node").output() {
         Ok(_) => (),
-        Err(error) => match error.kind() {
-            ErrorKind::NotFound => panic!("The `brew` command is missing."),
-            other_error => panic!("There was a problem: {:?}", other_error),
-        },
+        Err(error) => panic!("There was a problem: {:?}", error),
     }
 
     // Systems programming (Rust)
@@ -119,10 +101,7 @@ pub fn run() {
         .output()
     {
         Ok(_) => (),
-        Err(error) => match error.kind() {
-            ErrorKind::NotFound => panic!("The `brew` command is missing."),
-            other_error => panic!("There was a problem: {:?}", other_error),
-        },
+        Err(error) => panic!("There was a problem: {:?}", error),
     }
 
     match Command::new("rustup").arg("update").output() {

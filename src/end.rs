@@ -1,6 +1,5 @@
 use dirs;
 use std::fs;
-use std::io::ErrorKind;
 use std::process::Command;
 
 pub fn run() {
@@ -10,10 +9,7 @@ pub fn run() {
 
     match Command::new("brew").arg("cleanup").output() {
         Ok(_) => (),
-        Err(error) => match error.kind() {
-            ErrorKind::NotFound => panic!("The `brew` command is missing."),
-            other_error => panic!("There was a problem: {:?}", other_error),
-        },
+        Err(error) => panic!("There was a problem: {:?}", error),
     }
 
     // Version control (Git)
@@ -76,10 +72,7 @@ pub fn run() {
 
     match Command::new("killall").arg("vim").output() {
         Ok(_) => (),
-        Err(error) => match error.kind() {
-            ErrorKind::NotFound => panic!("The `killall` command is missing."),
-            other_error => panic!("There was a problem: {:?}", other_error),
-        },
+        Err(error) => panic!("There was a problem: {:?}", error),
     }
 
     // Application programming (JavaScript)
@@ -88,10 +81,7 @@ pub fn run() {
 
     match Command::new("killall").arg("node").output() {
         Ok(_) => (),
-        Err(error) => match error.kind() {
-            ErrorKind::NotFound => panic!("The `killall` command is missing."),
-            other_error => panic!("There was a problem: {:?}", other_error),
-        },
+        Err(error) => panic!("There was a problem: {:?}", error),
     }
 
     // Systems programming (Rust)
@@ -100,9 +90,6 @@ pub fn run() {
 
     match Command::new("killall").arg("rls").output() {
         Ok(_) => (),
-        Err(error) => match error.kind() {
-            ErrorKind::NotFound => panic!("The `killall` command is missing."),
-            other_error => panic!("There was a problem: {:?}", other_error),
-        },
+        Err(error) => panic!("There was a problem: {:?}", error),
     }
 }

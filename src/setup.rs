@@ -13,10 +13,7 @@ pub fn run() {
         .output()
     {
         Ok(output) => output.status,
-        Err(error) => match error.kind() {
-            ErrorKind::NotFound => panic!("The `brew` command is missing."),
-            other_error => panic!("There was a problem: {:?}", other_error),
-        },
+        Err(error) => panic!("There was a problem: {:?}", error),
     };
 
     if password_manager_status.success() {
@@ -30,19 +27,13 @@ pub fn run() {
             .output()
         {
             Ok(_) => (),
-            Err(error) => match error.kind() {
-                ErrorKind::NotFound => panic!("The `brew` command is missing."),
-                other_error => panic!("There was a problem: {:?}", other_error),
-            },
+            Err(error) => panic!("There was a problem: {:?}", error),
         }
     }
 
     let search_tool_status = match Command::new("brew").arg("list").arg("ripgrep").output() {
         Ok(output) => output.status,
-        Err(error) => match error.kind() {
-            ErrorKind::NotFound => panic!("The `brew` command is missing."),
-            other_error => panic!("There was a problem: {:?}", other_error),
-        },
+        Err(error) => panic!("There was a problem: {:?}", error),
     };
 
     if search_tool_status.success() {
@@ -51,10 +42,7 @@ pub fn run() {
         println!("Installing search tool.");
         match Command::new("brew").arg("install").arg("ripgrep").output() {
             Ok(_) => (),
-            Err(error) => match error.kind() {
-                ErrorKind::NotFound => panic!("The `brew` command is missing."),
-                other_error => panic!("There was a problem: {:?}", other_error),
-            },
+            Err(error) => panic!("There was a problem: {:?}", error),
         }
     }
 
@@ -62,10 +50,7 @@ pub fn run() {
 
     let version_control_status = match Command::new("brew").arg("list").arg("git").output() {
         Ok(output) => output.status,
-        Err(error) => match error.kind() {
-            ErrorKind::NotFound => panic!("The `brew` command is missing."),
-            other_error => panic!("There was a problem: {:?}", other_error),
-        },
+        Err(error) => panic!("There was a problem: {:?}", error),
     };
 
     if version_control_status.success() {
@@ -74,10 +59,7 @@ pub fn run() {
         println!("Installing version control.");
         match Command::new("brew").arg("install").arg("git").output() {
             Ok(_) => (),
-            Err(error) => match error.kind() {
-                ErrorKind::NotFound => panic!("The `brew` command is missing."),
-                other_error => panic!("There was a problem: {:?}", other_error),
-            },
+            Err(error) => panic!("There was a problem: {:?}", error),
         }
     }
 
@@ -143,10 +125,7 @@ pub fn run() {
 
     let editor_status = match Command::new("brew").arg("list").arg("vim").output() {
         Ok(output) => output.status,
-        Err(error) => match error.kind() {
-            ErrorKind::NotFound => panic!("The `brew` command is missing."),
-            other_error => panic!("There was a problem: {:?}", other_error),
-        },
+        Err(error) => panic!("There was a problem: {:?}", error),
     };
 
     if editor_status.success() {
@@ -155,10 +134,7 @@ pub fn run() {
         println!("Installing editor.");
         match Command::new("brew").arg("install").arg("vim").output() {
             Ok(_) => (),
-            Err(error) => match error.kind() {
-                ErrorKind::NotFound => panic!("The `brew` command is missing."),
-                other_error => panic!("There was a problem: {:?}", other_error),
-            },
+            Err(error) => panic!("There was a problem: {:?}", error),
         }
     }
 
@@ -291,10 +267,7 @@ pub fn run() {
     let application_programming_toolchain_status =
         match Command::new("brew").arg("list").arg("node").output() {
             Ok(output) => output.status,
-            Err(error) => match error.kind() {
-                ErrorKind::NotFound => panic!("The `brew` command is missing."),
-                other_error => panic!("There was a problem: {:?}", other_error),
-            },
+            Err(error) => panic!("There was a problem: {:?}", error),
         };
 
     if application_programming_toolchain_status.success() {
@@ -303,10 +276,7 @@ pub fn run() {
         println!("Installing application programming toolchain.");
         match Command::new("brew").arg("install").arg("node").output() {
             Ok(_) => (),
-            Err(error) => match error.kind() {
-                ErrorKind::NotFound => panic!("The `brew` command is missing."),
-                other_error => panic!("There was a problem: {:?}", other_error),
-            },
+            Err(error) => panic!("There was a problem: {:?}", error),
         }
     }
 
@@ -315,10 +285,7 @@ pub fn run() {
     let systems_programming_toolchain_status =
         match Command::new("brew").arg("list").arg("rustup-init").output() {
             Ok(output) => output.status,
-            Err(error) => match error.kind() {
-                ErrorKind::NotFound => panic!("The `brew` command is missing."),
-                other_error => panic!("There was a problem: {:?}", other_error),
-            },
+            Err(error) => panic!("There was a problem: {:?}", error),
         };
 
     if systems_programming_toolchain_status.success() {
@@ -331,10 +298,7 @@ pub fn run() {
             .output()
         {
             Ok(_) => (),
-            Err(error) => match error.kind() {
-                ErrorKind::NotFound => panic!("The `brew` command is missing."),
-                other_error => panic!("There was a problem: {:?}", other_error),
-            },
+            Err(error) => panic!("There was a problem: {:?}", error),
         }
 
         match Command::new("rustup-init").output() {
