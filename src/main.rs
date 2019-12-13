@@ -5,6 +5,8 @@ use std::process::Command;
 mod end;
 mod setup;
 mod upgrade;
+mod install_app;
+mod install_package;
 
 /// Personal scripts to automate my computer configuration.
 #[derive(StructOpt)]
@@ -23,7 +25,7 @@ fn main() {
     match Command::new("which").arg("killall").output() {
         Ok(_) => (),
         Err(error) => match error.kind() {
-            ErrorKind::NotFound => panic!("These scripts are only designed to work in a Unix environment."),
+            ErrorKind::NotFound => panic!("A Unix environment is required."),
             other_error => panic!("There was a problem: {:?}", other_error),
         },
     };
@@ -31,15 +33,15 @@ fn main() {
     match Command::new("brew").output() {
         Ok(_) => (),
         Err(error) => match error.kind() {
-            ErrorKind::NotFound => panic!("The `brew` command is missing."),
+            ErrorKind::NotFound => panic!("Homebrew is required."),
             other_error => panic!("There was a problem: {:?}", other_error),
         },
     }
 
     match Scripts::from_args() {
-        Scripts::Setup => setup::run(),
-        Scripts::Upgrade => upgrade::run(),
-        Scripts::End => end::run(),
+        Scripts::Setup => setup::setup(),
+        Scripts::Upgrade => upgrade::upgrade(),
+        Scripts::End => end::end(),
     }
 
     println!("Finished.");

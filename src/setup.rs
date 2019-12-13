@@ -2,66 +2,18 @@ use dirs;
 use std::fs;
 use std::io::ErrorKind;
 use std::process::Command;
+use crate::install_app;
+use crate::install_package;
 
-pub fn run() {
+pub fn setup() {
     // Environment (Unix)
-
-    let password_manager_status = match Command::new("brew")
-        .arg("cask")
-        .arg("list")
-        .arg("1password")
-        .output()
-    {
-        Ok(output) => output.status,
-        Err(error) => panic!("There was a problem: {:?}", error),
-    };
-
-    if password_manager_status.success() {
-        println!("Password manager is already installed.")
-    } else {
-        println!("Installing password manager.");
-        match Command::new("brew")
-            .arg("cask")
-            .arg("install")
-            .arg("1password")
-            .output()
-        {
-            Ok(_) => (),
-            Err(error) => panic!("There was a problem: {:?}", error),
-        }
-    }
-
-    let search_tool_status = match Command::new("brew").arg("list").arg("ripgrep").output() {
-        Ok(output) => output.status,
-        Err(error) => panic!("There was a problem: {:?}", error),
-    };
-
-    if search_tool_status.success() {
-        println!("Search tool is already installed.")
-    } else {
-        println!("Installing search tool.");
-        match Command::new("brew").arg("install").arg("ripgrep").output() {
-            Ok(_) => (),
-            Err(error) => panic!("There was a problem: {:?}", error),
-        }
-    }
+    
+    install_app::install_app("1password");
+    install_package::install_package("ripgrep");
 
     // Version control (Git)
 
-    let version_control_status = match Command::new("brew").arg("list").arg("git").output() {
-        Ok(output) => output.status,
-        Err(error) => panic!("There was a problem: {:?}", error),
-    };
-
-    if version_control_status.success() {
-        println!("Version control is already installed.")
-    } else {
-        println!("Installing version control.");
-        match Command::new("brew").arg("install").arg("git").output() {
-            Ok(_) => (),
-            Err(error) => panic!("There was a problem: {:?}", error),
-        }
-    }
+    install_package::install_package("git");
 
     let home_path = match dirs::home_dir() {
         Some(directory) => directory,
@@ -123,20 +75,7 @@ pub fn run() {
 
     // Editor (Vim)
 
-    let editor_status = match Command::new("brew").arg("list").arg("vim").output() {
-        Ok(output) => output.status,
-        Err(error) => panic!("There was a problem: {:?}", error),
-    };
-
-    if editor_status.success() {
-        println!("Editor is already installed.")
-    } else {
-        println!("Installing editor.");
-        match Command::new("brew").arg("install").arg("vim").output() {
-            Ok(_) => (),
-            Err(error) => panic!("There was a problem: {:?}", error),
-        }
-    }
+    install_package::install_package("vim");
 
     let editor_plugins_path = home_path
         .join(".vim")
@@ -264,43 +203,21 @@ pub fn run() {
 
     // Application programming (JavaScript)
 
-    let application_programming_toolchain_status =
-        match Command::new("brew").arg("list").arg("node").output() {
-            Ok(output) => output.status,
-            Err(error) => panic!("There was a problem: {:?}", error),
-        };
-
-    if application_programming_toolchain_status.success() {
-        println!("Application programming toolchain is already installed.")
-    } else {
-        println!("Installing application programming toolchain.");
-        match Command::new("brew").arg("install").arg("node").output() {
-            Ok(_) => (),
-            Err(error) => panic!("There was a problem: {:?}", error),
-        }
-    }
+    install_package::install_package("node");
 
     // Systems programming (Rust)
 
-    let systems_programming_toolchain_status =
-        match Command::new("brew").arg("list").arg("rustup-init").output() {
-            Ok(output) => output.status,
-            Err(error) => panic!("There was a problem: {:?}", error),
-        };
+    install_package::install_package("rustup-init");
 
-    if systems_programming_toolchain_status.success() {
-        println!("Systems programming toolchain is already installed.")
-    } else {
-        println!("Installing systems programming toolchain.");
-        match Command::new("brew")
-            .arg("install")
-            .arg("rustup-init")
-            .output()
-        {
-            Ok(_) => (),
-            Err(error) => panic!("There was a problem: {:?}", error),
-        }
+    let rustup_path_check = match Command::new("which")
+        .arg("rustup")
+        .output()
+    {
+        Ok(output) => output.stdout,
+        Err(error) => panic!("There was a problem: {:?}", error),
+    };
 
+    if rustup_path_check.is_empty() {
         match Command::new("rustup-init").output() {
             Ok(_) => (),
             Err(error) => match error.kind() {
@@ -308,5 +225,7 @@ pub fn run() {
                 other_error => panic!("There was a problem: {:?}", other_error),
             },
         }
+    } else {
+        println!("rustup-init has already been run.")
     }
 }

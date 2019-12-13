@@ -3,7 +3,7 @@ use std::fs;
 use std::io::ErrorKind;
 use std::process::Command;
 
-pub fn run() {
+pub fn upgrade() {
     // Environment (Unix)
 
     println!("Upgrading package manager.");

@@ -2,7 +2,7 @@ use dirs;
 use std::fs;
 use std::process::Command;
 
-pub fn run() {
+pub fn end() {
     // Environment (Unix)
 
     println!("Removing package manager artifacts.");
