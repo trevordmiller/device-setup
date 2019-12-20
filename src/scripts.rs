@@ -1,12 +1,12 @@
+use crate::utils;
 use dirs;
 use std::fs;
 use std::io::ErrorKind;
 use std::process::Command;
-use crate::utils;
 
 pub fn setup() {
     // Environment (Unix)
-    
+
     utils::install_app("1password");
     utils::install_package("ripgrep");
 
@@ -208,10 +208,7 @@ pub fn setup() {
 
     utils::install_package("rustup-init");
 
-    let rustup_path_check = match Command::new("which")
-        .arg("rustup")
-        .output()
-    {
+    let rustup_path_check = match Command::new("which").arg("rustup").output() {
         Ok(output) => output.stdout,
         Err(error) => panic!("There was a problem: {:?}", error),
     };

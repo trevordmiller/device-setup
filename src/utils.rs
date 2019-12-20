@@ -28,11 +28,7 @@ pub fn install_app(app: &str) {
 }
 
 pub fn install_package(package: &str) {
-    let installation_status = match Command::new("brew")
-        .arg("list")
-        .arg(package)
-        .output()
-    {
+    let installation_status = match Command::new("brew").arg("list").arg(package).output() {
         Ok(output) => output.status,
         Err(error) => panic!("There was a problem: {:?}", error),
     };
@@ -41,11 +37,7 @@ pub fn install_package(package: &str) {
         println!("The {} package is already installed.", package)
     } else {
         println!("Installing the {} package.", package);
-        match Command::new("brew")
-            .arg("install")
-            .arg(package)
-            .output()
-        {
+        match Command::new("brew").arg("install").arg(package).output() {
             Ok(_) => (),
             Err(error) => panic!("There was a problem: {:?}", error),
         }
