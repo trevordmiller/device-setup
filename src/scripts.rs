@@ -22,7 +22,7 @@ pub fn setup() {
     let repos_path = home_path.join("repos");
 
     if repos_path.exists() {
-        println!("Repos directory already exists.")
+        println!("The repos directory already exists.")
     } else {
         println!("Creating repos directory.");
         match fs::create_dir(&repos_path) {
@@ -32,7 +32,7 @@ pub fn setup() {
     }
 
     match fs::read_dir(&repos_path) {
-        Ok(_) => println!("Repos are already installed."),
+        Ok(_) => println!("The repos are already installed."),
         Err(_) => {
             println!("Cloning scripts repo.");
 
@@ -83,7 +83,7 @@ pub fn setup() {
         .join("start");
 
     if editor_plugins_path.exists() {
-        println!("Editor plugins directory already exists.")
+        println!("The editor plugins directory already exists.")
     } else {
         println!("Creating editor plugins directory.");
         match fs::create_dir_all(&editor_plugins_path) {
@@ -95,7 +95,7 @@ pub fn setup() {
     let editor_configuration_path = home_path.join(".vimrc");
 
     if editor_configuration_path.exists() {
-        println!("Editor configuration file already exists.")
+        println!("The editor configuration file already exists.")
     } else {
         println!("Creating editor configuration file.");
         match fs::File::create(&editor_configuration_path) {
@@ -105,7 +105,7 @@ pub fn setup() {
     }
 
     match fs::read_dir(&editor_plugins_path) {
-        Ok(_) => println!("Editor plugins are already installed."),
+        Ok(_) => println!("The editor plugins are already installed."),
         Err(_) => {
             println!("Installing editor plugin to normalize editor defaults.");
 
@@ -225,7 +225,7 @@ pub fn setup() {
             },
         }
     } else {
-        println!("rustup-init has already been run.")
+        println!("The rustup-init has already been run.")
     }
 }
 
