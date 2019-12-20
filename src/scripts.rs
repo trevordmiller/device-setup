@@ -220,7 +220,7 @@ pub fn setup() {
         match Command::new("rustup-init").output() {
             Ok(_) => (),
             Err(error) => match error.kind() {
-                ErrorKind::NotFound => panic!("The `rustup-init` command is missing."),
+                ErrorKind::NotFound => panic!("The rustup-init command is missing."),
                 other_error => panic!("There was a problem: {:?}", other_error),
             },
         }
@@ -333,7 +333,7 @@ pub fn upgrade() {
     match Command::new("rustup").arg("update").output() {
         Ok(_) => (),
         Err(error) => match error.kind() {
-            ErrorKind::NotFound => panic!("The `rustup` command is missing."),
+            ErrorKind::NotFound => panic!("The rustup command is missing."),
             other_error => panic!("There was a problem: {:?}", other_error),
         },
     }

@@ -14,7 +14,7 @@ pub fn install_app(app: &str) {
     if installation_status.success() {
         println!("The {} app is already installed.", app)
     } else {
-        println!("Installing {}.", app);
+        println!("Installing the {} app.", app);
         match Command::new("brew")
             .arg("cask")
             .arg("install")
@@ -40,7 +40,7 @@ pub fn install_package(package: &str) {
     if installation_status.success() {
         println!("The {} package is already installed.", package)
     } else {
-        println!("Installing {}.", package);
+        println!("Installing the {} package.", package);
         match Command::new("brew")
             .arg("install")
             .arg(package)

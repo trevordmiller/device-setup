@@ -1,6 +1,6 @@
 use structopt::StructOpt;
-use std::io::ErrorKind;
 use std::process::Command;
+use std::io::ErrorKind;
 
 mod scripts;
 mod utils;
