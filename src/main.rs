@@ -2,11 +2,8 @@ use structopt::StructOpt;
 use std::io::ErrorKind;
 use std::process::Command;
 
-mod end;
-mod setup;
-mod upgrade;
-mod install_app;
-mod install_package;
+mod scripts;
+mod utils;
 
 /// Personal scripts to automate my computer configuration.
 #[derive(StructOpt)]
@@ -39,9 +36,9 @@ fn main() {
     }
 
     match Scripts::from_args() {
-        Scripts::Setup => setup::setup(),
-        Scripts::Upgrade => upgrade::upgrade(),
-        Scripts::End => end::end(),
+        Scripts::Setup => scripts::setup(),
+        Scripts::Upgrade => scripts::upgrade(),
+        Scripts::End => scripts::end(),
     }
 
     println!("Finished.");
