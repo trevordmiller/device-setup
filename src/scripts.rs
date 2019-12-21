@@ -21,15 +21,7 @@ pub fn setup() {
 
     let repos_path = home_path.join("repos");
 
-    if repos_path.exists() {
-        println!("The repos directory already exists.")
-    } else {
-        println!("Creating repos directory.");
-        match fs::create_dir(&repos_path) {
-            Ok(_) => (),
-            Err(error) => panic!("There was a problem: {:?}", error),
-        }
-    }
+    utils::create_dir("repos", &repos_path);
 
     match fs::read_dir(&repos_path) {
         Ok(_) => println!("The repos are already installed."),
@@ -82,27 +74,11 @@ pub fn setup() {
         .join("plugins")
         .join("start");
 
-    if editor_plugins_path.exists() {
-        println!("The editor plugins directory already exists.")
-    } else {
-        println!("Creating editor plugins directory.");
-        match fs::create_dir_all(&editor_plugins_path) {
-            Ok(_) => (),
-            Err(error) => panic!("There was a problem: {:?}", error),
-        }
-    }
+    utils::create_dir("editor plugins", &editor_plugins_path);
 
     let editor_configuration_path = home_path.join(".vimrc");
 
-    if editor_configuration_path.exists() {
-        println!("The editor configuration file already exists.")
-    } else {
-        println!("Creating editor configuration file.");
-        match fs::File::create(&editor_configuration_path) {
-            Ok(_) => (),
-            Err(error) => panic!("There was a problem: {:?}", error),
-        }
-    }
+    utils::create_file("editor configuration", &editor_configuration_path);
 
     match fs::read_dir(&editor_plugins_path) {
         Ok(_) => println!("The editor plugins are already installed."),
