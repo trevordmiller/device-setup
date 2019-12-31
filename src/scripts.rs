@@ -49,18 +49,6 @@ pub fn setup() {
                 Ok(_) => (),
                 Err(error) => panic!("There was a problem: {:?}", error),
             }
-
-            println!("Cloning trevordmiller.github.io repo.");
-
-            match Command::new("git")
-                .current_dir(&repos_path)
-                .arg("clone")
-                .arg("https://github.com/trevordmiller/trevordmiller.github.io")
-                .output()
-            {
-                Ok(_) => (),
-                Err(error) => panic!("There was a problem: {:?}", error),
-            }
         }
     };
 
