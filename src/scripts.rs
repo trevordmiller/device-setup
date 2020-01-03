@@ -21,7 +21,7 @@ pub fn setup() {
 
     let repos_path = home_path.join("repos");
 
-    utils::create_dir("repos", &repos_path);
+    utils::create_dir(&repos_path);
 
     match fs::read_dir(&repos_path) {
         Ok(_) => println!("The repos are already installed."),
@@ -62,11 +62,11 @@ pub fn setup() {
         .join("plugins")
         .join("start");
 
-    utils::create_dir("editor plugins", &editor_plugins_path);
+    utils::create_dir(&editor_plugins_path);
 
     let editor_configuration_path = home_path.join(".vimrc");
 
-    utils::create_file("editor configuration", &editor_configuration_path);
+    utils::create_file(&editor_configuration_path);
 
     match fs::read_dir(&editor_plugins_path) {
         Ok(_) => println!("The editor plugins are already installed."),

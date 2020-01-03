@@ -46,11 +46,11 @@ pub fn install_package(package: &str) {
     }
 }
 
-pub fn create_dir(description: &str, path: &PathBuf) {
+pub fn create_dir(path: &PathBuf) {
     if path.exists() {
-        println!("The {} directory already exists.", &description)
+        println!("A directory already exists at {}.", path.to_string_lossy())
     } else {
-        println!("Creating {} directory.", &description);
+        println!("Creating directory at {}.", path.to_string_lossy());
         match fs::create_dir_all(&path) {
             Ok(_) => (),
             Err(error) => panic!("There was a problem: {:?}", error),
@@ -58,11 +58,11 @@ pub fn create_dir(description: &str, path: &PathBuf) {
     }
 }
 
-pub fn create_file(description: &str, path: &PathBuf) {
+pub fn create_file(path: &PathBuf) {
     if path.exists() {
-        println!("The {} file already exists.", &description)
+        println!("A file already exists at {}.", path.to_string_lossy())
     } else {
-        println!("Creating {} file.", &description);
+        println!("Creating file at {}.", path.to_string_lossy());
         match fs::File::create(&path) {
             Ok(_) => (),
             Err(error) => panic!("There was a problem: {:?}", error),
