@@ -26,29 +26,8 @@ pub fn setup() {
     match fs::read_dir(&repos_path) {
         Ok(_) => println!("The repos are already installed."),
         Err(_) => {
-            println!("Cloning scripts repo.");
-
-            match Command::new("git")
-                .current_dir(&repos_path)
-                .arg("clone")
-                .arg("https://github.com/trevordmiller/scripts")
-                .output()
-            {
-                Ok(_) => (),
-                Err(error) => panic!("There was a problem: {:?}", error),
-            }
-
-            println!("Cloning study repo.");
-
-            match Command::new("git")
-                .current_dir(&repos_path)
-                .arg("clone")
-                .arg("https://github.com/trevordmiller/study")
-                .output()
-            {
-                Ok(_) => (),
-                Err(error) => panic!("There was a problem: {:?}", error),
-            }
+            utils::clone_repo(&repos_path, "https://github.com/trevordmiller/scripts");
+            utils::clone_repo(&repos_path, "https://github.com/trevordmiller/study");
         }
     };
 
@@ -71,93 +50,15 @@ pub fn setup() {
     match fs::read_dir(&editor_plugins_path) {
         Ok(_) => println!("The editor plugins are already installed."),
         Err(_) => {
-            println!("Installing editor plugin to normalize editor defaults.");
+            utils::clone_repo(&editor_plugins_path, "https://github.com/tpope/vim-sensible");
+            utils::clone_repo(&editor_plugins_path, "https://github.com/tpope/vim-sleuth");
+            utils::clone_repo(&editor_plugins_path, "https://github.com/sheerun/vim-polyglot");
+            utils::clone_repo(&editor_plugins_path, "https://github.com/octref/RootIgnore");
+            utils::clone_repo(&editor_plugins_path, "https://github.com/dense-analysis/ale");
+            utils::clone_repo(&editor_plugins_path, "https://github.com/arcticicestudio/nord-vim");
 
-            match Command::new("git")
-                .current_dir(&editor_plugins_path)
-                .arg("clone")
-                .arg("https://github.com/tpope/vim-sensible")
-                .output()
-            {
-                Ok(_) => (),
-                Err(error) => panic!("There was a problem: {:?}", error),
-            }
-
-            println!("Installing editor plugin to enhance editor indentation.");
-
-            match Command::new("git")
-                .current_dir(&editor_plugins_path)
-                .arg("clone")
-                .arg("https://github.com/tpope/vim-sleuth")
-                .output()
-            {
-                Ok(_) => (),
-                Err(error) => panic!("There was a problem: {:?}", error),
-            }
-
-            println!("Installing editor plugin to enhance editor languages.");
-
-            match Command::new("git")
-                .current_dir(&editor_plugins_path)
-                .arg("clone")
-                .arg("https://github.com/sheerun/vim-polyglot")
-                .output()
-            {
-                Ok(_) => (),
-                Err(error) => panic!("There was a problem: {:?}", error),
-            }
-
-            println!("Installing editor plugin to enhance editor ignore patterns.");
-
-            match Command::new("git")
-                .current_dir(&editor_plugins_path)
-                .arg("clone")
-                .arg("https://github.com/octref/RootIgnore")
-                .output()
-            {
-                Ok(_) => (),
-                Err(error) => panic!("There was a problem: {:?}", error),
-            }
-
-            println!("Installing editor plugin to enhance editor static analysis.");
-
-            match Command::new("git")
-                .current_dir(&editor_plugins_path)
-                .arg("clone")
-                .arg("https://github.com/dense-analysis/ale")
-                .output()
-            {
-                Ok(_) => (),
-                Err(error) => panic!("There was a problem: {:?}", error),
-            }
-
-            println!("Adding editor configuration to enhance editor search.");
-
-            match fs::write(&editor_configuration_path, "set grepprg=rg\\ --vimgrep") {
-                Ok(_) => (),
-                Err(error) => panic!("There was a problem: {:?}", error),
-            }
-
-            match fs::write(&editor_configuration_path, "set grepformat=%f:%l:%c:%m") {
-                Ok(_) => (),
-                Err(error) => panic!("There was a problem: {:?}", error),
-            }
-
-            println!("Installing editor plugin to enhance editor colors.");
-
-            match Command::new("git")
-                .current_dir(&editor_plugins_path)
-                .arg("clone")
-                .arg("https://github.com/arcticicestudio/nord-vim")
-                .output()
-            {
-                Ok(_) => (),
-                Err(error) => panic!("There was a problem: {:?}", error),
-            }
-
-            println!("Adding editor configuration to enhance editor colors.");
-
-            match fs::write(editor_configuration_path, "colorscheme nord") {
+            println!("Adding editor configuration.");
+            match fs::write(&editor_configuration_path, "set grepprg=rg\\ --vimgrep\nset grepformat=%f:%l:%c:%m\ncolorscheme nord") {
                 Ok(_) => (),
                 Err(error) => panic!("There was a problem: {:?}", error),
             }

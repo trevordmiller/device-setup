@@ -69,3 +69,17 @@ pub fn create_file(path: &PathBuf) {
         }
     }
 }
+
+pub fn clone_repo(path: &PathBuf, url: &str) {
+        println!("Cloning {} repo.", url);
+
+        match Command::new("git")
+            .current_dir(&path)
+            .arg("clone")
+            .arg(url)
+            .output()
+        {
+            Ok(_) => (),
+            Err(error) => panic!("There was a problem: {:?}", error),
+        }
+}
