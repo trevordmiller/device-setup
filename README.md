@@ -6,8 +6,16 @@ Personal scripts to automate my computer configuration.
 
 Assuming a Unix environment is being used (like macOS, Linux, or Windows Subsystem for Linux).
 
+### Installation
+
 - Install [Homebrew](https://brew.sh) for the correct environment.
-- TODO
+- Run `brew TODO` to install the package.
+
+### Options
+
+- Run `scripts setup` to reproduce my computer's configuration.
+- Run `scripts upgrade` to upgrade what's installed on my computer.
+- Run `scripts end` to clean up my computer's state.
 
 ## Contributing
 
