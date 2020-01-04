@@ -101,42 +101,17 @@ pub fn upgrade() {
         Err(error) => panic!("There was a problem: {:?}", error),
     }
 
-    println!("Upgrading password manager.");
+    utils::upgrade_app("1password");
 
-    match Command::new("brew")
-        .arg("cask")
-        .arg("upgrade")
-        .arg("1password")
-        .output()
-    {
-        Ok(_) => (),
-        Err(error) => panic!("There was a problem: {:?}", error),
-    }
-
-    println!("Upgrading search tool.");
-
-    match Command::new("brew").arg("upgrade").arg("ripgrep").output() {
-        Ok(_) => (),
-        Err(error) => panic!("There was a problem: {:?}", error),
-    }
+    utils::upgrade_package("ripgrep");
 
     // Version control (Git)
 
-    println!("Upgrading version control.");
-
-    match Command::new("brew").arg("upgrade").arg("git").output() {
-        Ok(_) => (),
-        Err(error) => panic!("There was a problem: {:?}", error),
-    }
+    utils::upgrade_package("git");
 
     // Editor (Vim)
 
-    println!("Upgrading editor.");
-
-    match Command::new("brew").arg("upgrade").arg("vim").output() {
-        Ok(_) => (),
-        Err(error) => panic!("There was a problem: {:?}", error),
-    }
+    utils::upgrade_package("vim");
 
     println!("Upgrading editor plugins.");
 
@@ -172,25 +147,13 @@ pub fn upgrade() {
 
     // Application programming (JavaScript)
 
-    println!("Upgrading application programming toolchain.");
-
-    match Command::new("brew").arg("upgrade").arg("node").output() {
-        Ok(_) => (),
-        Err(error) => panic!("There was a problem: {:?}", error),
-    }
+    utils::upgrade_package("node");
 
     // Systems programming (Rust)
 
-    println!("Upgrading systems programming toolchain.");
+    utils::upgrade_package("rustup-init");
 
-    match Command::new("brew")
-        .arg("upgrade")
-        .arg("rustup-init")
-        .output()
-    {
-        Ok(_) => (),
-        Err(error) => panic!("There was a problem: {:?}", error),
-    }
+    println!("Upgrading systems programming toolchain.");
 
     match Command::new("rustup").arg("update").output() {
         Ok(_) => (),

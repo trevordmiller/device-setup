@@ -46,6 +46,27 @@ pub fn install_package(package: &str) {
     }
 }
 
+pub fn upgrade_app(app: &str) {
+        println!("Upgrading the {} app.", app);
+        match Command::new("brew")
+            .arg("cask")
+            .arg("upgrade")
+            .arg(app)
+            .output()
+        {
+            Ok(_) => (),
+            Err(error) => panic!("There was a problem: {:?}", error),
+        }
+}
+
+pub fn upgrade_package(package: &str) {
+        println!("Upgrading the {} package.", package);
+        match Command::new("brew").arg("upgrade").arg(package).output() {
+            Ok(_) => (),
+            Err(error) => panic!("There was a problem: {:?}", error),
+        }
+}
+
 pub fn create_dir(path: &PathBuf) {
     if path.exists() {
         println!("A directory already exists at {}.", path.to_string_lossy())
