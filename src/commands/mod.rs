@@ -6,6 +6,7 @@ mod git;
 mod homebrew;
 mod paths;
 mod processes;
+mod progress;
 
 pub fn setup() {
     homebrew::install_package("ripgrep", &|| {});
@@ -85,12 +86,17 @@ pub fn end() {
 
 pub fn study() {
     println!("Follow.");
+    progress::pause();
 
     println!("Practice.");
+    progress::pause();
 
     println!("Research.");
+    progress::pause();
 
     println!("Remember.");
+    progress::pause();
 
     println!("Share.");
+    progress::pause();
 }
