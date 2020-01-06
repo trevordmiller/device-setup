@@ -1,0 +1,6 @@
+[package]
+edition = "2018"
+name = "series"
+version = "0.1.0"
+
+[dependencies]

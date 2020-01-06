@@ -1,0 +1,4 @@
+[package]
+edition = "2018"
+name = "queen-attack"
+version = "2.2.0"

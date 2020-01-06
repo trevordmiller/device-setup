@@ -2,12 +2,12 @@ use std::io::ErrorKind;
 use std::process::Command;
 use structopt::StructOpt;
 
-mod scripts;
+mod commands;
 mod utils;
 
-/// Personal scripts to automate my computer configuration.
+/// Personal CLI.
 #[derive(StructOpt)]
-enum Scripts {
+enum Commands {
     /// Reproduce my computer's configuration.
     Setup,
 
@@ -16,6 +16,9 @@ enum Scripts {
 
     /// Clean up my computer's state.
     End,
+
+    /// Start a study session.
+    Study,
 }
 
 fn main() {
@@ -35,10 +38,11 @@ fn main() {
         },
     }
 
-    match Scripts::from_args() {
-        Scripts::Setup => scripts::setup(),
-        Scripts::Upgrade => scripts::upgrade(),
-        Scripts::End => scripts::end(),
+    match Commands::from_args() {
+        Commands::Setup => commands::setup(),
+        Commands::Upgrade => commands::upgrade(),
+        Commands::End => commands::end(),
+        Commands::Study => commands::study(),
     }
 
     println!("Finished.");

@@ -5,7 +5,7 @@ Personal CLI.
 ## Principles
 
 - Use defaults as much as possible so that I can work on other computers without my configuration.
-- Encapsulate all configuration so that I can reproduce my machine state on other computers.
+- Encapsulate my configuration so that I can reproduce it on other computers.
 
 ## Setup
 

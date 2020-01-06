@@ -1,0 +1,6 @@
+[package]
+edition = "2018"
+name = "accumulate"
+version = "0.0.0"
+
+[dependencies]

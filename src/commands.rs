@@ -245,3 +245,15 @@ pub fn end() {
         Err(error) => panic!("There was a problem: {:?}", error),
     }
 }
+
+pub fn study() {
+    println!("Follow.");
+
+    println!("Practice.");
+
+    println!("Research.");
+
+    println!("Remember.");
+
+    println!("Share.");
+}
