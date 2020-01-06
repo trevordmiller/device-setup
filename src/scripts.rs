@@ -22,34 +22,40 @@ pub fn setup() {
 
     utils::install_package("vim");
 
+    println!("Adding editor configuration.");
+
     let editor_plugins_path = home_path
         .join(".vim")
         .join("pack")
         .join("plugins")
         .join("start");
 
-    utils::create_dir(&editor_plugins_path);
+    utils::create_dir(&editor_plugins_path, &|| {
+        utils::clone_repo(
+            &editor_plugins_path,
+            "https://github.com/tpope/vim-sensible",
+        );
+        utils::clone_repo(&editor_plugins_path, "https://github.com/tpope/vim-sleuth");
+        utils::clone_repo(
+            &editor_plugins_path,
+            "https://github.com/sheerun/vim-polyglot",
+        );
+        utils::clone_repo(&editor_plugins_path, "https://github.com/octref/RootIgnore");
+        utils::clone_repo(
+            &editor_plugins_path,
+            "https://github.com/dense-analysis/ale",
+        );
+    });
 
     let editor_configuration_path = home_path.join(".vimrc");
 
-    utils::create_file(&editor_configuration_path);
-
-    match fs::read_dir(&editor_plugins_path) {
-        Ok(_) => println!("The editor plugins are already installed."),
-        Err(_) => {
-            utils::clone_repo(&editor_plugins_path, "https://github.com/tpope/vim-sensible");
-            utils::clone_repo(&editor_plugins_path, "https://github.com/tpope/vim-sleuth");
-            utils::clone_repo(&editor_plugins_path, "https://github.com/sheerun/vim-polyglot");
-            utils::clone_repo(&editor_plugins_path, "https://github.com/octref/RootIgnore");
-            utils::clone_repo(&editor_plugins_path, "https://github.com/dense-analysis/ale");
-
-            println!("Adding editor configuration.");
-            match fs::write(&editor_configuration_path, "set grepprg=rg\\ --vimgrep\nset grepformat=%f:%l:%c:%m") {
-                Ok(_) => (),
-                Err(error) => panic!("There was a problem: {:?}", error),
-            }
-        }
-    };
+    utils::create_file(&editor_configuration_path, &|| match fs::write(
+        &editor_configuration_path,
+        "set grepprg=rg\\ --vimgrep\nset grepformat=%f:%l:%c:%m",
+    ) {
+        Ok(_) => (),
+        Err(error) => panic!("There was a problem: {:?}", error),
+    });
 
     // Application programming (JavaScript)
 
