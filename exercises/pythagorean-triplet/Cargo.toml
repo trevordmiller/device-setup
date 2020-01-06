@@ -1,6 +1,0 @@
-[dependencies]
-
-[package]
-edition = "2018"
-name = "pythagorean_triplet"
-version = "1.0.0"

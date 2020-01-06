@@ -3,7 +3,6 @@ use std::process::Command;
 use structopt::StructOpt;
 
 mod commands;
-mod utils;
 
 /// Personal CLI.
 #[derive(StructOpt)]

@@ -1,4 +1,0 @@
-[package]
-edition = "2018"
-name = "rotational-cipher"
-version = "1.0.0"
