@@ -42,10 +42,9 @@ pub fn setup() {
             utils::clone_repo(&editor_plugins_path, "https://github.com/sheerun/vim-polyglot");
             utils::clone_repo(&editor_plugins_path, "https://github.com/octref/RootIgnore");
             utils::clone_repo(&editor_plugins_path, "https://github.com/dense-analysis/ale");
-            utils::clone_repo(&editor_plugins_path, "https://github.com/arcticicestudio/nord-vim");
 
             println!("Adding editor configuration.");
-            match fs::write(&editor_configuration_path, "set grepprg=rg\\ --vimgrep\nset grepformat=%f:%l:%c:%m\ncolorscheme nord") {
+            match fs::write(&editor_configuration_path, "set grepprg=rg\\ --vimgrep\nset grepformat=%f:%l:%c:%m") {
                 Ok(_) => (),
                 Err(error) => panic!("There was a problem: {:?}", error),
             }
