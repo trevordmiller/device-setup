@@ -2,33 +2,6 @@ use std::fs;
 use std::path::PathBuf;
 use std::process::Command;
 
-pub fn install_app(app: &str) {
-    let installation_status = match Command::new("brew")
-        .arg("cask")
-        .arg("list")
-        .arg(app)
-        .output()
-    {
-        Ok(output) => output.status,
-        Err(error) => panic!("There was a problem: {:?}", error),
-    };
-
-    if installation_status.success() {
-        println!("The {} app is already installed.", app)
-    } else {
-        println!("Installing the {} app.", app);
-        match Command::new("brew")
-            .arg("cask")
-            .arg("install")
-            .arg(app)
-            .output()
-        {
-            Ok(_) => (),
-            Err(error) => panic!("There was a problem: {:?}", error),
-        }
-    }
-}
-
 pub fn install_package(package: &str) {
     let installation_status = match Command::new("brew").arg("list").arg(package).output() {
         Ok(output) => output.status,
@@ -44,19 +17,6 @@ pub fn install_package(package: &str) {
             Err(error) => panic!("There was a problem: {:?}", error),
         }
     }
-}
-
-pub fn upgrade_app(app: &str) {
-        println!("Upgrading the {} app.", app);
-        match Command::new("brew")
-            .arg("cask")
-            .arg("upgrade")
-            .arg(app)
-            .output()
-        {
-            Ok(_) => (),
-            Err(error) => panic!("There was a problem: {:?}", error),
-        }
 }
 
 pub fn upgrade_package(package: &str) {
