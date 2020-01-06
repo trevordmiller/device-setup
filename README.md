@@ -17,7 +17,7 @@ Assuming a Unix environment is being used (like macOS, Linux, or Windows Subsyst
 - Run `brew install rustup-init && rustup-init` to install Rust.
 - Restart terminal.
 - Run `mkdir ~/repos` to create my repos directory.
-- Run `git clone https://github.com/trevordmiller/trevordmiller.git ~/repos` to clone this repo.
+- Run `git clone https://github.com/trevordmiller/trevordmiller.git ~/repos/trevordmiller` to clone this repo.
 - Run `cd ~/repos/trevordmiller` to move into the repo.
 - Run `git config user.name "Trevor D. Miller"` to configure my username for the repo.
 - Run `git config user.email "5497885+trevordmiller@users.noreply.github.com"` to configure my email for the repo.
