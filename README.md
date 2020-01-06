@@ -23,7 +23,7 @@ Assuming a Unix environment is being used (like macOS, Linux, or Windows Subsyst
 
 ## Usage
 
-- Run `cargo run` for a list of options.
+- Run `cargo doc --open` to view documentation.
 
 ## Contributing
 
