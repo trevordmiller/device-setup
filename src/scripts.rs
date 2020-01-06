@@ -7,7 +7,6 @@ use std::process::Command;
 pub fn setup() {
     // Environment (Unix)
 
-    utils::install_app("1password");
     utils::install_package("ripgrep");
 
     // Version control (Git)
@@ -100,8 +99,6 @@ pub fn upgrade() {
         Ok(_) => (),
         Err(error) => panic!("There was a problem: {:?}", error),
     }
-
-    utils::upgrade_app("1password");
 
     utils::upgrade_package("ripgrep");
 
