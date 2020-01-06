@@ -20,8 +20,6 @@ pub fn setup() {
 
     let repos_path = home_path.join("repos");
 
-    utils::create_dir(&repos_path);
-
     match fs::read_dir(&repos_path) {
         Ok(_) => println!("The repos are already installed."),
         Err(_) => {
