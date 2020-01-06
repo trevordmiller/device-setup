@@ -1,0 +1,6 @@
+[package]
+edition = "2018"
+name = "palindrome-products"
+version = "1.2.0"
+
+[dependencies]

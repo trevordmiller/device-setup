@@ -1,0 +1,604 @@
+#### General
+
+##### Principles
+
+- Encapsulated
+  - Portable
+  - Deterministic
+  - Explicit
+  - Declarative
+- Automated
+  - Compiled
+  - Tested
+  - Linted
+  - Documented
+  - Formatted
+- Reliable
+  - Stable
+  - Versioned
+  - Safe
+- Efficient
+  - Fast
+  - Lightweight
+
+#### Environment (Unix)
+
+##### View documentation
+
+- `man {verb}`
+
+##### Interrupt a running process
+
+- `<ctrl c>`
+
+##### Run a binary executable
+
+- `{path}<enter>`
+
+##### Print working directory
+
+- `pwd`
+
+##### List directory
+
+- `ls -a`
+
+##### Change directory
+
+- `cd {path}`
+
+##### Change to last directory
+
+- `cd -`
+
+##### Create directory
+
+- `mkdir {directory}`
+
+##### Create file
+
+- `touch {file}`
+
+##### Remove directory 
+
+- `rm -rf {directory}`
+
+##### Remove file
+
+- `rm {file}`
+
+##### Move directory
+
+- `mv {source} {destination}`
+
+##### Move file
+
+- `mv {source} {destination}`
+
+##### Re-run commands
+
+- `<ctrl r>`
+- Search
+- `<up/down>` to move through list of items
+- `<enter>` to run
+
+##### See where a package is installed
+
+- `which {package}`
+
+##### Pipe output from one command as input to another
+
+- `{command} | {command}`
+
+##### Redirect output from one command to a file
+
+- `{command} > {file}`
+
+##### Use file contents in a command
+
+- `{file} < {command}`
+
+##### Run a command if another is successful
+
+- `{command} && {command}`
+
+##### File contents
+
+- `cat {file}`
+
+##### Search
+
+- `grep [-r] {regex} [{path}]`
+
+##### Substitute
+
+- `sed`
+
+##### HTTP requests
+
+- `curl`
+
+##### Search packages
+
+- `brew search {package}`
+
+##### View info about packages
+
+- `brew info {package}`
+
+##### Install packages
+
+- `brew install {package}`
+
+##### Install apps
+
+- `brew cask install {app}`
+
+##### List installed packages
+
+- `brew leaves`
+
+##### Uninstall packages
+
+- `brew uninstall {package}`
+
+#### Version control (Git)
+
+##### View documentation
+
+- `git --help`
+
+##### Start working in an existing repo
+
+- `git clone {existing}`
+- `cd {existing}`
+- `git config user.name "Trevor D. Miller"`
+- `git config user.email "5497885+trevordmiller@users.noreply.github.com"`
+- Add any missing `.gitignore` items specific to my setup like `.DS_Store` and `*.swp`
+
+##### Search across tracked files
+
+- `git grep {regex}`
+
+##### Status
+
+- `git status`
+
+##### Diff with staged
+
+- `git diff`
+
+##### Restore working directory version
+
+- `git checkout {paths}`
+
+##### Stage
+
+- `git stage {paths}`
+
+##### Stage hunks
+
+- `git add -p`
+- Respond to each hunk with `y` (yes), `n` (no), or `s` (split) to break down into smaller hunks
+
+##### Commit what is staged
+
+- `git commit`
+- Opens default editor
+- Fill out commit message
+- Save and quit file to let commit finish
+
+##### Push
+
+- `git push`
+
+##### Rebase
+
+- `git fetch && git rebase origin/master`
+- Fix conflicts
+- `git push -f` to overwrite history
+
+##### Blame
+
+- `git blame {files}`
+
+##### Search
+
+- `git log -p -S {string}`
+
+##### Find the commit that broke something
+
+- `git bisect start`
+- `git bisect bad`
+- `git bisect good {reference}` with reference to when things were known to work
+- `git bisect {bad/good}` repeated until binary search is complete
+- `git bisect reset` to clean up
+
+#### Editor (Vim)
+
+##### View documentation
+
+- `:h {verb}`
+
+##### Start
+
+- `cd {project root}`
+- `vim`
+
+##### Switch to a shell
+
+- `:sh`
+- Run shell commands
+- `<ctrl d>`
+
+##### Search
+
+- `:grep [-r] {regex} [{path}]`
+- `:cn/p` to jump between quickfix results
+- `:copen` to show all quickfix results
+
+##### Edit
+
+- `:e {path}`
+
+Examples:
+
+```vim
+:e **/*{file}<tab>
+:e src/**/*{file}<tab>
+:e **/*<tab>
+:e src/
+:e .
+```
+
+##### Write
+
+- `:w`
+
+##### Write and quit
+
+- `:wq`
+
+##### Page
+
+- `<ctrl f/b>`
+
+##### Search
+
+- `/{regex}`
+- `n` to move to the next
+
+##### Block
+
+- `{` / `}`
+
+##### Top
+
+- `gg`
+
+##### Bottom
+
+- `G`
+
+##### Format
+
+- `=`
+
+##### Change
+
+- `c`
+
+##### Delete
+
+- `d`
+
+##### Yank
+
+- `y`
+
+##### Put
+
+- `p`
+
+##### Inside
+
+- `i`
+
+##### Around
+
+- `a`
+
+##### Braces
+
+- `{`
+
+##### Parenthesis
+
+- `(`
+
+##### Tag
+
+- `t`
+
+##### Undo
+
+- `u`
+
+##### Redo
+
+- `<ctrl r>`
+
+##### Put from the clipboard
+
+- `"+p`
+
+##### Delete to the clipboard
+
+- `"+d`
+
+##### Yank to the clipboard
+
+- `"+y`
+
+##### Substitute
+
+- `:{range}s/{regex}/{substitution}/g`
+-
+Examples:
+
+```vim
+:%s/foo/bar/gc
+```
+
+##### Apply ex commands to patterns
+
+- `:{range}g/{regex}/{command}`
+
+Examples:
+
+```vim
+:g/deleteMe/d
+```
+
+##### Macro
+
+- `qq`
+- Complete generic commands
+- `q`
+- Populate the quickfix with something like `:grep`
+- `:c[f]do normal @q | :w`
+
+##### Split windows
+
+- `:vs`
+
+##### Go to window
+
+- `<ctrl w h/j/k/l>`
+
+##### Go in/out
+
+- `<ctrl i/o>`
+
+##### Go to file
+
+- Cursor over import
+- `gf`
+
+##### Complete word
+
+- `<ctrl n>`
+- `<ctrl n/p>` to move through list items
+
+##### Complete line
+
+- `<ctrl x><ctrl l>`
+- `<ctrl n/p>` to move through list items
+
+#### Application programming (JavaScript)
+
+##### View documentation
+
+- [https://developer.mozilla.org](https://developer.mozilla.org)
+
+##### Start a REPL
+
+- `node`
+
+##### Upgrade dependencies
+
+- `npx npm-check -u`
+- `npm audit fix`
+
+#### Systems programming (Rust)
+
+##### View documentation
+
+- `rustup doc`
+
+##### Run toolchain commands
+
+###### Scaffold a new project
+
+- `cargo new some_project`
+
+###### Compile
+
+- `cargo build`
+
+###### Run
+
+- `cargo run`
+
+###### Check for errors
+
+- `cargo check`
+
+###### Fix syntax
+
+- `cargo fix`
+
+Examples
+
+```sh
+# Fix compilation errors.
+cargo fix
+
+# Upgrade syntax to a new edition in Cargo.toml
+cargo fix --edition
+```
+
+###### Test logic
+
+- `cargo test`
+
+###### Lint for common issues
+
+- `cargo clippy`
+
+###### Format source code
+
+- `cargo fmt`
+
+###### Generate documentation
+
+- `cargo doc`
+
+Examples:
+
+```sh
+# Generate documentation for shipping
+cargo doc
+
+# View documentation
+cargo doc --open
+```
+
+###### Share an executable
+
+- `cargo build --release`
+- Outputs to `./target/release/some_project`
+- Default target is the host architecture
+
+###### Share a library
+
+- `cargo publish` uploads to [crates.io](http://crates.io/)
+
+##### Define the entry point
+
+```rust
+fn main() {
+  ...
+}
+```
+
+##### Create a file
+
+- `some_file.rs`
+
+##### Declare a variable
+
+- `let some_variable = {value}`
+
+##### Use a reference to a variable
+
+- `&some_variable`
+
+##### Declare a mutable variable
+
+- `let mut some_variable = {value}`
+
+##### Use a mutable reference to a variable
+
+- `&mut some_variable`
+
+##### Declare a function
+
+```rust
+fn some_function() {
+  ...
+}
+```
+
+##### Use a function
+
+- `some_function()`
+
+##### Use a macro
+
+- `some_macro!()`
+
+##### Use modules
+
+- `use some_library::some_module`
+- Can be from the standard library (`std`), or a dependency
+- Brings the last item after the `::` into scope on top of the minimal prelude
+
+##### Add a dependency
+
+- `some_library = "x.y.z"` manually added in `[dependencies]` section of `Cargo.toml`
+- From [crates.io](http://crates.io/)
+- Updates `Cargo.lock` during the next compile
+
+##### Upgrade a dependency
+
+- Manually change in `[dependencies]` section of `Cargo.toml` to a different version
+- Updates `Cargo.lock` during the next compile
+
+##### Print
+
+- `println!("Some string")`
+
+##### Print values
+
+- `println!("Some {} and another {}", some_value, another_value, ...)`
+
+##### Add a comment
+
+- `// Some comment`
+
+##### Handle conditional logic of enum variants
+
+```rust
+match {expression} {
+  {pattern to match} => {code to run},
+  ...
+}
+```
+
+##### Compare two values
+
+- `some_value.cmp(another_value)`
+
+##### Remove white space at the beginning / end of strings
+
+- `{String}.trim()`
+
+##### Convert a string to a number
+
+- `{String}.parse()`
+
+##### Specify a variable's type
+
+- `let some_variable: {type} = {value}`
+
+##### Repeat code until a condition is met
+
+- `loop { ... }`
+- `break` to end
+- `continue` to move to next iteration of the loop
+
+##### Handle asynchronous code
+
+```rust
+async fn some_function() {
+  ...
+}
+```
+
+```rust
+async fn another_function() {
+    let future = some_function();
+    let result = future.await;
+}
+```

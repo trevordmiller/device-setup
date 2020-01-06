@@ -85,18 +85,30 @@ pub fn end() {
 }
 
 pub fn study() {
-    println!("Follow.");
+    println!("Skim my feeds so that I keep my skills up-to-date with industry changes.");
+    // ./resources/feeds.txt
     progress::pause();
 
-    println!("Practice.");
+    println!("Complete the next incomplete exercise so that I increase my ability to solve problems.");
+    // ./resources/exercises/
+    // Exercise README.md
+    // Red green tests
+    // Compare my solution with the example solution
     progress::pause();
 
-    println!("Research.");
+    println!("Read books so that I add to what I know.");
+    // ./resources/books.txt
     progress::pause();
 
-    println!("Remember.");
+    println!("Review and update my notes so that I don't forget what I already know.");
+    // ./resources/notes/
+    // Use permanant routes for each category
+    // Keep content encapsulated in markdown files so that the content is portable with minimal integrations
     progress::pause();
 
-    println!("Share.");
+    println!("Publish my updates so that I have a record for reference.");
+    // If relevant, send an email to the newsletter email list?
+    // Hosting: [Github Pages](https://github.com/trevordmiller/trevordmiller.github.io/settings) with the built output from the `develop` branch to the `master` branch.
+    // Custom domain name: [Hover](https://www.hover.com) with the `CNAME` file generated during release.
     progress::pause();
 }

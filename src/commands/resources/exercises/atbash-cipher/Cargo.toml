@@ -1,0 +1,4 @@
+[package]
+edition = "2018"
+name = "atbash-cipher"
+version = "1.2.0"

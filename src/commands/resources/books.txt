@@ -1,0 +1,7 @@
+- ~~[The Linux Command Line](http://linuxcommand.org/tlcl.php)~~
+- ~~[Practial Vim](https://pragprog.com/book/dnvim2/practical-vim-second-edition)~~
+- [The Rust Programming Language](https://doc.rust-lang.org/book/)
+- [Rust by Example](https://doc.rust-lang.org/stable/rust-by-example/)
+- [Standard Library](https://doc.rust-lang.org/std/index.html)
+- [Command Line Book](https://rust-lang-nursery.github.io/cli-wg/)
+- [WebAssembly Book](https://rust-lang-nursery.github.io/cli-wg/)

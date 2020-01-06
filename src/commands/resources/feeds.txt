@@ -1,0 +1,9 @@
+https://www.reddit.com/r/programming/top/?t=month
+https://brew.sh/blog
+https://www.reddit.com/r/commandline/top/?t=month
+https://www.reddit.com/r/git/top/?t=month
+https://www.vim.org/news/news.php
+https://www.reddit.com/r/vim/top/?t=month
+https://www.reddit.com/r/javascript/top/?t=month
+https://blog.rust-lang.org
+https://www.reddit.com/r/rust/top/?t=month

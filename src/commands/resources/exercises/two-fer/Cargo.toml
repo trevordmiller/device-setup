@@ -1,0 +1,6 @@
+[package]
+edition = "2018"
+name = "twofer"
+version = "1.2.0"
+
+[dependencies]

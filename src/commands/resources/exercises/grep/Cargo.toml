@@ -1,0 +1,7 @@
+[dependencies]
+failure = "0.1.1"
+
+[package]
+edition = "2018"
+name = "grep"
+version = "1.2.0"
