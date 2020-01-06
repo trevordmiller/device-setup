@@ -18,16 +18,6 @@ pub fn setup() {
         None => panic!("Cannot find the home directory."),
     };
 
-    let repos_path = home_path.join("repos");
-
-    match fs::read_dir(&repos_path) {
-        Ok(_) => println!("The repos are already installed."),
-        Err(_) => {
-            utils::clone_repo(&repos_path, "https://github.com/trevordmiller/scripts");
-            utils::clone_repo(&repos_path, "https://github.com/trevordmiller/study");
-        }
-    };
-
     // Editor (Vim)
 
     utils::install_package("vim");
