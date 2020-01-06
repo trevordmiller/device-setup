@@ -11,9 +11,11 @@ Personal CLI.
 
 Assuming a Unix environment is being used (like macOS, Linux, or Windows Subsystem for Linux).
 
+- Launch terminal.
 - Install Homebrew with the command for the current environment from [https://brew.sh](https://brew.sh).
 - Run `brew install git` to install Git.
 - Run `brew install rustup-init && rustup-init` to install Rust.
+- Restart terminal.
 - Run `mkdir ~/repos` to create my repos directory.
 - Run `git clone https://github.com/trevordmiller/trevordmiller.git ~/repos` to clone this repo.
 - Run `cd ~/repos/trevordmiller` to move into the repo.
