@@ -28,7 +28,8 @@ pub fn setup() {
 
         paths::create_file(&vim_configuration_path, &|| match fs::write(
             &vim_configuration_path,
-            "set grepprg=rg\\ --vimgrep\nset grepformat=%f:%l:%c:%m",
+            "set grepprg=rg\\ --vimgrep
+            set grepformat=%f:%l:%c:%m",
         ) {
             Ok(_) => (),
             Err(error) => panic!("There was a problem: {:?}", error),
