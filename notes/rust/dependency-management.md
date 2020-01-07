@@ -1,4 +1,4 @@
-# Dependencies in Rust
+# Dependency management in Rust
 
 ## Add a dependency
 

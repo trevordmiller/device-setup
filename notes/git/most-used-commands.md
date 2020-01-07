@@ -1,4 +1,4 @@
-# Essential Git commands
+# Most used commands in Git
 
 ## View documentation
 

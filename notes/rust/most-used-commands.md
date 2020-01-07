@@ -1,4 +1,4 @@
-# Essential Rust commands
+# Most used commands in Rust
 
 ## View documentation
 

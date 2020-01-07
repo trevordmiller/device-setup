@@ -1,4 +1,4 @@
-# Essential programming principles
+# Key principles in programming
 
 - Encapsulated
   - Portable

@@ -1,4 +1,4 @@
-# Essential Vim commands
+# Most used commands in Vim
 
 ## View documentation
 

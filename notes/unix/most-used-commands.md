@@ -1,4 +1,4 @@
-# Essential Unix commands
+# Most used commands in Unix
 
 ## View documentation
 

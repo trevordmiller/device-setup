@@ -13,10 +13,7 @@ mod processes;
 mod website;
 
 pub fn setup() {
-    homebrew::install_package("ripgrep", &|| {});
-
-    homebrew::install_package("git", &|| {});
-
+    // Vim
     homebrew::install_package("vim", &|| {
         let vim_plugins_path = paths::vim_plugins();
         let vim_configuration_path = paths::vim_configuration();
@@ -37,9 +34,12 @@ pub fn setup() {
             Err(error) => panic!("There was a problem: {:?}", error),
         });
     });
+    homebrew::install_package("ripgrep", &|| {});
 
-    homebrew::install_package("node", &|| {});
+    // Git
+    homebrew::install_package("git", &|| {});
 
+    // Rust
     homebrew::install_package("rustup-init", &|| {
         let rustup_path_check = match Command::new("which").arg("rustup").output() {
             Ok(output) => output.stdout,
@@ -56,46 +56,52 @@ pub fn setup() {
             }
         }
     });
+
+    // JavaScript
+    homebrew::install_package("node", &|| {});
 }
 
 pub fn upgrade() {
+    // Unix
     homebrew::upgrade_self();
 
-    homebrew::upgrade_package("ripgrep");
-
-    homebrew::upgrade_package("git");
-
+    // Vim
     homebrew::upgrade_package("vim");
-
+    homebrew::upgrade_package("ripgrep");
     git::pull_all(&paths::vim_plugins());
 
-    homebrew::upgrade_package("node");
+    // Git
+    homebrew::upgrade_package("git");
 
+    // Rust
     homebrew::upgrade_package("rustup-init");
-
     homebrew::upgrade_rust();
+
+    // JavaScript
+    homebrew::upgrade_package("node");
 }
 
 pub fn end() {
+    // Unix
     homebrew::clean_artifacts();
 
-    git::check_all(&paths::repos());
-
+    // Vim
     processes::stop("vim");
 
-    processes::stop("node");
+    // Git
+    git::check_all(&paths::repos());
 
+    // Rust
     processes::stop("rls");
+
+    // JavaScript
+    processes::stop("node");
 }
 
 pub fn study() {
     feeds::next();
-
     exercises::next();
-
     documents::next();
-
     notes::next();
-
     website::release();
 }
