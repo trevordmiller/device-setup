@@ -27,32 +27,24 @@ pub fn create_file(path: &PathBuf, after_create: &dyn Fn()) {
 }
 
 pub fn vim_plugins() -> PathBuf {
-    let vim_plugins_path = home()
+    home()
         .join(".vim")
         .join("pack")
         .join("plugins")
-        .join("start");
-
-    return vim_plugins_path;
+        .join("start")
 }
 
 pub fn vim_configuration() -> PathBuf {
-    let vim_configuration_path = home().join(".vimrc");
-
-    return vim_configuration_path;
+    home().join(".vimrc")
 }
 
 pub fn repos() -> PathBuf {
-    let repos_path = home().join("repos");
-
-    return repos_path;
+    home().join("repos")
 }
 
 fn home() -> PathBuf {
-    let home_path = match dirs::home_dir() {
+    match dirs::home_dir() {
         Some(directory) => directory,
         None => panic!("Cannot find the home directory."),
-    };
-
-    return home_path;
+    }
 }
