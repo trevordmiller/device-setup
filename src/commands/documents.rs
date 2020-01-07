@@ -1,4 +1,4 @@
-use std::io;
+use super::progress;
 
 pub fn next() {
     println!("Reading a document so that I increase what I know.");
@@ -17,20 +17,6 @@ pub fn next() {
     // Rust Standard Library: https://doc.rust-lang.org/std/index.html
     // Rust Command Line Book: https://rust-lang-nursery.github.io/cli-wg/
     // Rust WebAssembly Book: https://rust-lang-nursery.github.io/cli-wg/
-    loop {
-        println!("Enter 'Continue' to continue");
 
-        let mut input = String::new();
-
-        match io::stdin().read_line(&mut input) {
-            Ok(_) => (),
-            Err(error) => panic!("There was a problem: {:?}", error),
-        }
-
-        if input.contains("Continue") {
-            break;
-        } else {
-            continue;
-        }
-    }
+    progress::pause();
 }

@@ -10,7 +10,7 @@ mod homebrew;
 mod notes;
 mod paths;
 mod processes;
-mod website;
+mod progress;
 
 pub fn setup() {
     // Vim

@@ -1,4 +1,4 @@
-use std::io;
+use super::progress;
 
 pub fn next() {
     println!("Following feeds so that I'm aware of industry changes.");
@@ -25,20 +25,6 @@ pub fn next() {
     //
     // JavaScript
     // JavaScript subreddit: https://www.reddit.com/r/javascript/top/?t=month
-    loop {
-        println!("Enter 'Continue' to continue");
-
-        let mut input = String::new();
-
-        match io::stdin().read_line(&mut input) {
-            Ok(_) => (),
-            Err(error) => panic!("There was a problem: {:?}", error),
-        }
-
-        if input.contains("Continue") {
-            break;
-        } else {
-            continue;
-        }
-    }
+    
+    progress::pause();
 }
