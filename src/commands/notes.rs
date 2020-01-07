@@ -1,13 +1,15 @@
-use super::progress;
+use crate::printing;
 
 pub fn next() {
-    println!("Writing a note so that I solidify the most important things I've learned.");
+    printing::heading("Write a note so that I solidify the most important things I've learned.");
 
-    // New note in:
-    // notes/{category}
-    // Markdown file
-    // Permanant id in format "{category}/{kebab-case-topic}" like "rust/asynchronous-functions"
-    // Human title in format "{Topic} in {Category}" like "Asynchronous functions in Rust"
+    printing::subheading("Add a new note");
 
-    progress::pause();
+    printing::list(vec![
+        "vim notes/{category}/{kebab-case-topic}.md",
+        "Use a title in the format '# {Topic} in {Category}'",
+        "Keep contents encapsulated in the markdown file",
+    ]);
+
+    printing::pause();
 }

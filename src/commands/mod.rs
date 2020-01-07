@@ -10,7 +10,6 @@ mod homebrew;
 mod notes;
 mod paths;
 mod processes;
-mod progress;
 
 pub fn setup() {
     // Vim
@@ -100,9 +99,15 @@ pub fn end() {
 }
 
 pub fn study() {
+    // Feeds
     feeds::next();
+
+    // Exercises
     exercises::next();
+
+    // Documents
     documents::next();
+
+    // Notes
     notes::next();
-    website::release();
 }

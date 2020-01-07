@@ -1,22 +1,26 @@
-use super::progress;
+use crate::printing;
 
 pub fn next() {
-    println!("Reading a document so that I increase what I know.");
+    printing::heading("Read a document so that I increase what I know.");
 
-    // Next incomplete document in list:
-    //
-    // Unix
-    // The Linux Command Line: http://linuxcommand.org/tlcl.php
-    //
-    // Vim
-    // Practial Vim: https://pragprog.com/book/dnvim2/practical-vim-second-edition
-    //
-    // Rust
-    // The Rust Programming Language: https://doc.rust-lang.org/book/
-    // Rust by Example: https://doc.rust-lang.org/stable/rust-by-example/
-    // Rust Standard Library: https://doc.rust-lang.org/std/index.html
-    // Rust Command Line Book: https://rust-lang-nursery.github.io/cli-wg/
-    // Rust WebAssembly Book: https://rust-lang-nursery.github.io/cli-wg/
+    printing::subheading("Read the next incomplete document");
 
-    progress::pause();
+    printing::subheading("Unix");
+    printing::list(vec!["http://linuxcommand.org/tlcl.php"]);
+
+    printing::subheading("Vim");
+    printing::list(vec![
+        "https://pragprog.com/book/dnvim2/practical-vim-second-edition",
+    ]);
+
+    printing::subheading("Rust");
+    printing::list(vec![
+        "https://doc.rust-lang.org/book/",
+        "https://doc.rust-lang.org/stable/rust-by-example/",
+        "https://doc.rust-lang.org/std/index.html",
+        "https://rust-lang-nursery.github.io/cli-wg/",
+        "https://rustwasm.github.io/docs/book/",
+    ]);
+
+    printing::pause();
 }

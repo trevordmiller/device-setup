@@ -1,13 +1,16 @@
-use super::progress;
+use crate::printing;
 
 pub fn next() {
-    println!("Completing an exercise so that I gain experience solving problems.");
+    printing::heading("Complete an exercise so that I gain experience solving problems.");
 
-    // Next incomplete exercise in:
-    // exercises/{category}/{exercise}
-    // README.md
-    // {Verification commands specific to category}
-    // example.{category specific filetype} solution
+    printing::subheading("Complete the next incomplete exercise");
 
-    progress::pause();
+    printing::list(vec![
+        "cd exercises/{category}/{exercise}",
+        "Read the README.md",
+        "Make verification commands pass",
+        "Compare my solution with the example solution",
+    ]);
+
+    printing::pause();
 }
