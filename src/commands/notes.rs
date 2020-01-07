@@ -1,6 +1,11 @@
 use std::io;
 
-pub fn pause() {
+pub fn next() {
+    println!("Writing a note so that I solidify the most important things I've learned.");
+
+    // New note, markdown file in notes/
+    // Permanant id like "rust-asynchronous-functions"
+    // Title like "Asynchronous functions in Rust"
     loop {
         println!("Enter 'Continue' to continue");
 

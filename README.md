@@ -4,10 +4,9 @@ Personal CLI.
 
 ## Principles
 
-- Encapsulate my configuration so that I can reproduce it on other computers.
 - Focus on timeless skills so that my skills are relevant as long as possible.
 - Use defaults as much as possible so that my skills are portable without being tied to custom setups.
-- Only add notes for timeless programming topics so that the content doesn't need to be updated.
+- Encapsulate my configuration so that I can reproduce it on other computers.
 
 ## Setup
 
