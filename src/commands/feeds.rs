@@ -6,7 +6,10 @@ pub fn next() {
     printing::subheading("Open the top recent items in each feed");
 
     printing::subheading("Programming");
-    printing::list(vec!["https://www.reddit.com/r/programming/top/?t=month"]);
+    printing::list(vec![
+        "https://www.reddit.com/r/programming/top/?t=month",
+        "https://github.com/trending?since=monthly"
+    ]);
 
     printing::subheading("Unix");
     printing::list(vec![
