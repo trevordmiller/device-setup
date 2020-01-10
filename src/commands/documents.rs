@@ -22,5 +22,10 @@ pub fn next() {
         "https://rustwasm.github.io/docs/book/",
     ]);
 
+    printing::subheading("JavaScript");
+    printing::list(vec![
+        "https://developer.mozilla.org/en-US/docs/WebAssembly"
+    ]);
+
     printing::pause();
 }
