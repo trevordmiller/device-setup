@@ -33,11 +33,13 @@ pub fn next() {
     ]);
 
     printing::subheading("JavaScript");
-    printing::list(vec!["https://www.reddit.com/r/javascript/top/?t=month"]);
-    printing::list(vec!["https://nodejs.org/en/blog/"]);
-    printing::list(vec!["https://www.reddit.com/r/node/top/?t=month"]);
-    printing::list(vec!["https://reactjs.org/blog/all.html"]);
-    printing::list(vec!["https://nextjs.org/blog"]);
+    printing::list(vec![
+        "https://www.reddit.com/r/javascript/top/?t=month",
+        "https://nodejs.org/en/blog/",
+        "https://www.reddit.com/r/node/top/?t=month",
+        "https://reactjs.org/blog/all.html",
+        "https://nextjs.org/blog",
+    ]);
 
     printing::pause();
 }
