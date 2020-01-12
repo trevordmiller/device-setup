@@ -1,4 +1,4 @@
-use super::printing;
+use crate::utils::printing;
 
 pub fn next() {
     printing::heading("Read a document so that I increase what I know.");

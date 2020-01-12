@@ -1,4 +1,4 @@
-use super::printing;
+use crate::utils::printing;
 
 pub fn next() {
     printing::heading("Complete an exercise so that I gain experience solving problems.");

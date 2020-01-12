@@ -1,4 +1,4 @@
-use super::printing;
+use crate::utils::printing;
 
 pub fn next() {
     printing::heading("Write a note so that I solidify the most important things I've learned.");
