@@ -1,4 +1,4 @@
-use crate::printing;
+use super::printing;
 
 pub fn next() {
     printing::heading("Read a document so that I increase what I know.");
@@ -23,9 +23,7 @@ pub fn next() {
     ]);
 
     printing::subheading("JavaScript");
-    printing::list(vec![
-        "https://developer.mozilla.org/en-US/docs/WebAssembly"
-    ]);
+    printing::list(vec!["https://developer.mozilla.org/en-US/docs/WebAssembly"]);
 
     printing::pause();
 }

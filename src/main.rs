@@ -1,7 +1,6 @@
 use structopt::StructOpt;
 
 mod commands;
-mod printing;
 
 /// Personal CLI.
 #[derive(StructOpt)]
@@ -26,6 +25,4 @@ fn main() {
         Commands::End => commands::end(),
         Commands::Study => commands::study(),
     }
-
-    printing::heading("Finished.");
 }

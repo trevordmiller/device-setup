@@ -9,6 +9,7 @@ mod git;
 mod homebrew;
 mod notes;
 mod paths;
+mod printing;
 mod processes;
 
 pub fn setup() {

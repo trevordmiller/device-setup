@@ -1,4 +1,4 @@
-use crate::printing;
+use super::printing;
 
 pub fn next() {
     printing::heading("Follow feeds so that I'm aware of industry changes.");
@@ -8,7 +8,7 @@ pub fn next() {
     printing::subheading("Programming");
     printing::list(vec![
         "https://www.reddit.com/r/programming/top/?t=month",
-        "https://github.com/trending?since=monthly"
+        "https://github.com/trending?since=monthly",
     ]);
 
     printing::subheading("Unix");
