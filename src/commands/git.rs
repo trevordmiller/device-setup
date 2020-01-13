@@ -1,9 +1,10 @@
 use std::fs;
 use std::path::PathBuf;
 use std::process::Command;
+use crate::utils::printing;
 
 pub fn clone(path: &PathBuf, url: &str) {
-    println!("Cloning {} repo.", url);
+    printing::progress(format!("Cloning {} repo.", url));
 
     match Command::new("git")
         .current_dir(&path)
@@ -17,7 +18,7 @@ pub fn clone(path: &PathBuf, url: &str) {
 }
 
 pub fn pull_all(path: &PathBuf) {
-    println!("Updating all repos in {}.", path.to_string_lossy());
+    printing::progress(format!("Updating all repos in {}.", path.to_string_lossy()));
     match fs::read_dir(path) {
         Ok(paths) => {
             for path in paths {
@@ -39,7 +40,7 @@ pub fn pull_all(path: &PathBuf) {
 }
 
 pub fn check_all(path: &PathBuf) {
-    println!("Checking all repos in {}.", path.to_string_lossy());
+    printing::progress(format!("Checking all repos in {}.", path.to_string_lossy()));
     match fs::read_dir(path) {
         Ok(paths) => {
             let mut all_repos_clean = true;
@@ -72,7 +73,7 @@ pub fn check_all(path: &PathBuf) {
 
                 if !status_check.is_empty() || !unpushed_check.is_empty() {
                     all_repos_clean = false;
-                    eprintln!("A dirty repo was found: {}", &path.display());
+                    printing::error(format!("A dirty repo was found: {}", &path.display()));
                 }
             }
 

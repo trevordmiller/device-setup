@@ -1,5 +1,6 @@
 use std::io::ErrorKind;
 use std::process::Command;
+use crate::utils::printing;
 
 pub fn install_package(package: &str, after_install: &dyn Fn()) {
     let installation_status = match Command::new("brew").arg("list").arg(package).output() {
@@ -8,9 +9,9 @@ pub fn install_package(package: &str, after_install: &dyn Fn()) {
     };
 
     if installation_status.success() {
-        println!("The {} package is already installed.", package)
+        printing::info(format!("The {} package is already installed.", package));
     } else {
-        println!("Installing the {} package.", package);
+        printing::progress(format!("Installing the {} package.", package));
         match Command::new("brew").arg("install").arg(package).output() {
             Ok(_) => after_install(),
             Err(error) => panic!("There was a problem: {:?}", error),
@@ -19,7 +20,7 @@ pub fn install_package(package: &str, after_install: &dyn Fn()) {
 }
 
 pub fn upgrade_package(package: &str) {
-    println!("Upgrading the {} package.", package);
+    printing::progress(format!("Upgrading the {} package.", package));
     match Command::new("brew").arg("upgrade").arg(package).output() {
         Ok(_) => (),
         Err(error) => panic!("There was a problem: {:?}", error),
@@ -27,7 +28,7 @@ pub fn upgrade_package(package: &str) {
 }
 
 pub fn upgrade_rust() {
-    println!("Upgrading rust.");
+    printing::progress(format!("Upgrading rust."));
     match Command::new("rustup").arg("update").output() {
         Ok(_) => (),
         Err(error) => match error.kind() {
@@ -38,7 +39,7 @@ pub fn upgrade_rust() {
 }
 
 pub fn upgrade_self() {
-    println!("Upgrading homebrew.");
+    printing::progress(format!("Upgrading homebrew."));
     match Command::new("brew").arg("update").output() {
         Ok(_) => (),
         Err(error) => panic!("There was a problem: {:?}", error),
@@ -46,7 +47,7 @@ pub fn upgrade_self() {
 }
 
 pub fn clean_artifacts() {
-    println!("Removing homebrew artifacts.");
+    printing::progress(format!("Removing homebrew artifacts."));
     match Command::new("brew").arg("cleanup").output() {
         Ok(_) => (),
         Err(error) => panic!("There was a problem: {:?}", error),

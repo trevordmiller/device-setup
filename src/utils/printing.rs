@@ -1,7 +1,7 @@
 use std::io;
 
 pub fn heading(content: &str) {
-    padding();
+    clear();
     padding();
     println!("===========================================================================================================");
     println!("{}", content);
@@ -15,15 +15,29 @@ pub fn subheading(content: &str) {
     println!("-----------------------------------------------------------------------------------------------------------");
 }
 
+pub fn progress(content: String) {
+    println!("{}", content);
+}
+
+pub fn info(content: String) {
+    println!("{}", content);
+}
+
+pub fn error(content: String) {
+    println!("{}", content);
+}
+
 pub fn list(items: Vec<&str>) {
     padding();
     items.iter().for_each(|content| println!("- {}", content));
 }
 
 pub fn pause() {
-    divide();
+    padding();
+    padding();
+    padding();
+    println!("...");
     loop {
-        padding();
         println!("Enter 'Done' when ready to continue:");
 
         let mut input = String::new();
@@ -41,10 +55,8 @@ pub fn pause() {
     }
 }
 
-fn divide() {
-    padding();
-    padding();
-    println!("...........................................................................................................");
+pub fn clear() {
+    print!("{}[2J", 27 as char);
 }
 
 fn padding() {
