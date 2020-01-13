@@ -1,7 +1,7 @@
+use crate::utils::printing;
 use std::fs;
 use std::path::PathBuf;
 use std::process::Command;
-use crate::utils::printing;
 
 pub fn clone(path: &PathBuf, url: &str) {
     printing::progress(format!("Cloning {} repo.", url));

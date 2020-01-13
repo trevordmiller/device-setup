@@ -1,6 +1,6 @@
+use crate::utils::printing;
 use std::io::ErrorKind;
 use std::process::Command;
-use crate::utils::printing;
 
 pub fn install_package(package: &str, after_install: &dyn Fn()) {
     let installation_status = match Command::new("brew").arg("list").arg(package).output() {
@@ -28,7 +28,7 @@ pub fn upgrade_package(package: &str) {
 }
 
 pub fn upgrade_rust() {
-    printing::progress(format!("Upgrading rust."));
+    printing::progress("Upgrading rust.".to_string());
     match Command::new("rustup").arg("update").output() {
         Ok(_) => (),
         Err(error) => match error.kind() {
@@ -39,7 +39,7 @@ pub fn upgrade_rust() {
 }
 
 pub fn upgrade_self() {
-    printing::progress(format!("Upgrading homebrew."));
+    printing::progress("Upgrading homebrew.".to_string());
     match Command::new("brew").arg("update").output() {
         Ok(_) => (),
         Err(error) => panic!("There was a problem: {:?}", error),
@@ -47,7 +47,7 @@ pub fn upgrade_self() {
 }
 
 pub fn clean_artifacts() {
-    printing::progress(format!("Removing homebrew artifacts."));
+    printing::progress("Removing homebrew artifacts.".to_string());
     match Command::new("brew").arg("cleanup").output() {
         Ok(_) => (),
         Err(error) => panic!("There was a problem: {:?}", error),

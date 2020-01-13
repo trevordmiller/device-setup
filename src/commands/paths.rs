@@ -1,11 +1,14 @@
+use crate::utils::printing;
 use dirs;
 use std::fs;
 use std::path::PathBuf;
-use crate::utils::printing;
 
 pub fn create_dir(path: &PathBuf, after_create: &dyn Fn()) {
     if path.exists() {
-        printing::info(format!("A directory already exists at {}.", path.to_string_lossy()))
+        printing::info(format!(
+            "A directory already exists at {}.",
+            path.to_string_lossy()
+        ))
     } else {
         printing::progress(format!("Creating directory at {}.", path.to_string_lossy()));
         match fs::create_dir_all(&path) {
@@ -17,7 +20,10 @@ pub fn create_dir(path: &PathBuf, after_create: &dyn Fn()) {
 
 pub fn create_file(path: &PathBuf, after_create: &dyn Fn()) {
     if path.exists() {
-        printing::info(format!("A file already exists at {}.", path.to_string_lossy()))
+        printing::info(format!(
+            "A file already exists at {}.",
+            path.to_string_lossy()
+        ))
     } else {
         printing::progress(format!("Creating file at {}.", path.to_string_lossy()));
         match fs::File::create(&path) {

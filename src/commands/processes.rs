@@ -1,5 +1,5 @@
-use std::process::Command;
 use crate::utils::printing;
+use std::process::Command;
 
 pub fn stop(program: &str) {
     printing::progress(format!("Quitting {} processes.", program));
