@@ -16,14 +16,17 @@ pub fn subheading(content: &str) {
 }
 
 pub fn progress(content: String) {
+    padding();
     println!("{}", content);
 }
 
 pub fn info(content: String) {
+    padding();
     println!("{}", content);
 }
 
 pub fn error(content: String) {
+    padding();
     println!("{}", content);
 }
 
@@ -36,7 +39,7 @@ pub fn pause() {
     padding();
     padding();
     padding();
-    println!("...");
+    println!(">>>");
     loop {
         println!("Enter 'Done' when ready to continue:");
 

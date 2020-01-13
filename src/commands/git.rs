@@ -18,7 +18,10 @@ pub fn clone(path: &PathBuf, url: &str) {
 }
 
 pub fn pull_all(path: &PathBuf) {
-    printing::progress(format!("Updating all repos in {}.", path.to_string_lossy()));
+    printing::progress(format!(
+        "Upgrading all repos in {}.",
+        path.to_string_lossy()
+    ));
     match fs::read_dir(path) {
         Ok(paths) => {
             for path in paths {

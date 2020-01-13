@@ -1,3 +1,4 @@
+use crate::utils::printing;
 use std::fs;
 use std::io::ErrorKind;
 use std::process::Command;
@@ -12,6 +13,8 @@ mod paths;
 mod processes;
 
 pub fn setup() {
+    printing::heading("Reproducing my computer's configuration.");
+
     // Vim
     homebrew::install_package("vim", &|| {
         let vim_plugins_path = paths::vim_plugins();
@@ -62,6 +65,8 @@ pub fn setup() {
 }
 
 pub fn upgrade() {
+    printing::heading("Upgrading what's installed on my computer.");
+
     // Unix
     homebrew::upgrade_self();
 
@@ -82,6 +87,8 @@ pub fn upgrade() {
 }
 
 pub fn end() {
+    printing::heading("Cleanng up my computer's state.");
+
     // Unix
     homebrew::clean_artifacts();
 
@@ -100,14 +107,18 @@ pub fn end() {
 
 pub fn study() {
     // Feeds
+    printing::heading("Follow feeds so that I'm aware of industry changes.");
     feeds::next();
 
     // Exercises
+    printing::heading("Complete an exercise so that I gain experience solving problems.");
     exercises::next();
 
     // Documents
+    printing::heading("Read a document so that I increase what I know.");
     documents::next();
 
     // Notes
+    printing::heading("Write a note so that I solidify the most important things I've learned.");
     notes::next();
 }

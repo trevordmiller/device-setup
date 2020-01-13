@@ -1,8 +1,6 @@
 use crate::utils::printing;
 
 pub fn next() {
-    printing::heading("Complete an exercise so that I gain experience solving problems.");
-
     printing::subheading("Complete the next incomplete exercise");
 
     printing::list(vec![
