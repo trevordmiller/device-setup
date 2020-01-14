@@ -9,7 +9,7 @@ pub fn heading(content: &str) {
         Err(error) => panic!("There was a problem: {:?}", error),
     }
 
-    match writeln!(&mut stdout, "\n{}\n===========================================================================================================", content) {
+    match writeln!(&mut stdout, "\n{}\n{}", content, underline(content, "=")) {
         Ok(_) => (),
         Err(error) => panic!("There was a problem: {:?}", error),
     }
@@ -28,7 +28,7 @@ pub fn subheading(content: &str) {
         Err(error) => panic!("There was a problem: {:?}", error),
     }
 
-    match writeln!(&mut stdout, "\n{}\n-----------------------------------------------------------------------------------------------------------", content) {
+    match writeln!(&mut stdout, "\n{}\n{}", content, underline(content, "-")) {
         Ok(_) => (),
         Err(error) => panic!("There was a problem: {:?}", error),
     }
@@ -126,4 +126,8 @@ pub fn pause() {
             continue;
         }
     }
+}
+
+fn underline(content: &str, symbol: &str) -> String {
+    content.chars().map(|_| symbol).collect()
 }
