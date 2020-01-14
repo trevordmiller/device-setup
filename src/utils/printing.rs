@@ -1,47 +1,112 @@
-use std::io;
+use std::io::{self, Write};
+use termcolor::{Color, ColorChoice, ColorSpec, StandardStream, WriteColor};
 
 pub fn heading(content: &str) {
-    clear();
-    padding();
-    println!("===========================================================================================================");
-    println!("{}", content);
-    println!("===========================================================================================================");
+    let mut stdout = StandardStream::stdout(ColorChoice::Always);
+
+    match stdout.set_color(ColorSpec::new().set_fg(Some(Color::Cyan))) {
+        Ok(_) => (),
+        Err(error) => panic!("There was a problem: {:?}", error),
+    }
+
+    match writeln!(&mut stdout, "\n{}\n===========================================================================================================", content) {
+        Ok(_) => (),
+        Err(error) => panic!("There was a problem: {:?}", error),
+    }
+
+    match stdout.reset() {
+        Ok(_) => (),
+        Err(error) => panic!("There was a problem: {:?}", error),
+    }
 }
 
 pub fn subheading(content: &str) {
-    padding();
-    println!("-----------------------------------------------------------------------------------------------------------");
-    println!("{}", content);
-    println!("-----------------------------------------------------------------------------------------------------------");
+    let mut stdout = StandardStream::stdout(ColorChoice::Always);
+
+    match stdout.set_color(ColorSpec::new().set_fg(Some(Color::Cyan))) {
+        Ok(_) => (),
+        Err(error) => panic!("There was a problem: {:?}", error),
+    }
+
+    match writeln!(&mut stdout, "\n{}\n-----------------------------------------------------------------------------------------------------------", content) {
+        Ok(_) => (),
+        Err(error) => panic!("There was a problem: {:?}", error),
+    }
+
+    match stdout.reset() {
+        Ok(_) => (),
+        Err(error) => panic!("There was a problem: {:?}", error),
+    }
 }
 
 pub fn progress(content: String) {
-    padding();
-    println!("{}", content);
+    let mut stdout = io::stdout();
+
+    match writeln!(&mut stdout, "\n{}", content) {
+        Ok(_) => (),
+        Err(error) => panic!("There was a problem: {:?}", error),
+    }
 }
 
 pub fn info(content: String) {
-    padding();
-    println!("{}", content);
+    let mut stdout = io::stdout();
+
+    match writeln!(&mut stdout, "\n{}", content) {
+        Ok(_) => (),
+        Err(error) => panic!("There was a problem: {:?}", error),
+    }
 }
 
 pub fn error(content: String) {
-    padding();
-    println!("{}", content);
+    let mut stdout = StandardStream::stdout(ColorChoice::Always);
+
+    match stdout.set_color(ColorSpec::new().set_fg(Some(Color::Red))) {
+        Ok(_) => (),
+        Err(error) => panic!("There was a problem: {:?}", error),
+    }
+
+    match writeln!(&mut stdout, "\n{}", content) {
+        Ok(_) => (),
+        Err(error) => panic!("There was a problem: {:?}", error),
+    }
+
+    match stdout.reset() {
+        Ok(_) => (),
+        Err(error) => panic!("There was a problem: {:?}", error),
+    }
 }
 
 pub fn list(items: Vec<&str>) {
-    padding();
-    items.iter().for_each(|content| println!("- {}", content));
+    let mut stdout = io::stdout();
+
+    match writeln!(&mut stdout, "") {
+        Ok(_) => (),
+        Err(error) => panic!("There was a problem: {:?}", error),
+    }
+
+    items
+        .iter()
+        .for_each(|content| match writeln!(&mut stdout, "- {}", content) {
+            Ok(_) => (),
+            Err(error) => panic!("There was a problem: {:?}", error),
+        })
 }
 
 pub fn pause() {
-    padding();
-    padding();
-    padding();
-    println!(">>>");
+    let mut stdout = StandardStream::stdout(ColorChoice::Always);
+
+    match stdout.set_color(ColorSpec::new().set_fg(Some(Color::Yellow))) {
+        Ok(_) => (),
+        Err(error) => panic!("There was a problem: {:?}", error),
+    }
+
     loop {
-        println!("Enter 'Done' when ready to continue:");
+        let prompt = "Enter 'Done' when ready to continue:";
+
+        match writeln!(&mut stdout, "\n{}", prompt) {
+            Ok(_) => (),
+            Err(error) => panic!("There was a problem: {:?}", error),
+        }
 
         let mut input = String::new();
 
@@ -51,17 +116,14 @@ pub fn pause() {
         }
 
         if input.contains("Done") {
+            match stdout.reset() {
+                Ok(_) => (),
+                Err(error) => panic!("There was a problem: {:?}", error),
+            }
+
             break;
         } else {
             continue;
         }
     }
-}
-
-pub fn clear() {
-    print!("{}[2J", 27 as char);
-}
-
-fn padding() {
-    println!();
 }
