@@ -5,8 +5,9 @@ pub fn next() {
 
     printing::subheading("Programming");
     printing::list(vec![
-        "https://www.reddit.com/r/programming/top/?t=month",
         "https://github.com/trending?since=monthly",
+        "https://www.reddit.com/r/programming/top/?t=month",
+        "https://hackernewsletter.com/issues/",
     ]);
 
     printing::subheading("Unix");
@@ -22,7 +23,10 @@ pub fn next() {
     ]);
 
     printing::subheading("Git");
-    printing::list(vec!["https://www.reddit.com/r/git/top/?t=month"]);
+    printing::list(vec![
+        "https://github.com/git/git/releases",
+        "https://www.reddit.com/r/git/top/?t=month",
+    ]);
 
     printing::subheading("Rust");
     printing::list(vec![
@@ -32,11 +36,11 @@ pub fn next() {
 
     printing::subheading("JavaScript");
     printing::list(vec![
-        "https://www.reddit.com/r/javascript/top/?t=month",
         "https://nodejs.org/en/blog/",
-        "https://www.reddit.com/r/node/top/?t=month",
         "https://reactjs.org/blog/all.html",
         "https://nextjs.org/blog",
+        "https://www.reddit.com/r/node/top/?t=month",
+        "https://www.reddit.com/r/javascript/top/?t=month",
     ]);
 
     printing::pause();
