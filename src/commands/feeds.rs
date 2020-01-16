@@ -7,7 +7,6 @@ pub fn next() {
     printing::list(vec![
         "https://github.com/trending?since=monthly",
         "https://www.reddit.com/r/programming/top/?t=month",
-        "https://hackernewsletter.com/issues/",
     ]);
 
     printing::subheading("Unix");
