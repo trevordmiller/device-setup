@@ -18,31 +18,12 @@ pub fn create_dir(path: &PathBuf, after_create: &dyn Fn()) {
     }
 }
 
-pub fn create_file(path: &PathBuf, after_create: &dyn Fn()) {
-    if path.exists() {
-        printing::info(format!(
-            "A file already exists at {}.",
-            path.to_string_lossy()
-        ))
-    } else {
-        printing::progress(format!("Creating file at {}.", path.to_string_lossy()));
-        match fs::File::create(&path) {
-            Ok(_) => after_create(),
-            Err(error) => panic!("There was a problem: {:?}", error),
-        }
-    }
-}
-
 pub fn vim_plugins() -> PathBuf {
     home()
         .join(".vim")
         .join("pack")
         .join("plugins")
         .join("start")
-}
-
-pub fn vim_configuration() -> PathBuf {
-    home().join(".vimrc")
 }
 
 pub fn repos() -> PathBuf {

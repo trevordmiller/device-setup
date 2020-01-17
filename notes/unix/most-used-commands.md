@@ -85,7 +85,7 @@
 
 ## Search
 
-- `grep [-r] {regex} [{path}]`
+- `grep -r {regex} {path}`
 
 ## Substitute
 

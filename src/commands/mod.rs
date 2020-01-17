@@ -1,5 +1,4 @@
 use crate::utils::printing;
-use std::fs;
 use std::io::ErrorKind;
 use std::process::Command;
 
@@ -18,26 +17,21 @@ pub fn setup() {
     // Vim
     homebrew::install_package("vim", &|| {
         let vim_plugins_path = paths::vim_plugins();
-        let vim_configuration_path = paths::vim_configuration();
 
         paths::create_dir(&vim_plugins_path, &|| {
+            // Enhance defaults
             git::clone(&vim_plugins_path, "https://github.com/tpope/vim-sensible");
-            git::clone(&vim_plugins_path, "https://github.com/tpope/vim-sleuth");
+
+            // Enhance languages
             git::clone(&vim_plugins_path, "https://github.com/sheerun/vim-polyglot");
+
+            // Enhance wildignore
             git::clone(&vim_plugins_path, "https://github.com/octref/RootIgnore");
+
+            // Enhance static analysis
             git::clone(&vim_plugins_path, "https://github.com/dense-analysis/ale");
         });
-
-        paths::create_file(&vim_configuration_path, &|| match fs::write(
-            &vim_configuration_path,
-            "set grepprg=rg\\ --vimgrep
-            set grepformat=%f:%l:%c:%m",
-        ) {
-            Ok(_) => (),
-            Err(error) => panic!("There was a problem: {:?}", error),
-        });
     });
-    homebrew::install_package("ripgrep", &|| {});
 
     // Git
     homebrew::install_package("git", &|| {});
@@ -72,7 +66,6 @@ pub fn upgrade() {
 
     // Vim
     homebrew::upgrade_package("vim");
-    homebrew::upgrade_package("ripgrep");
     git::pull_all(&paths::vim_plugins());
 
     // Git

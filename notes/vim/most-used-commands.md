@@ -17,9 +17,17 @@
 
 ## Search
 
-- `:grep [-r] {regex} [{path}]`
+- `:vim /{regex}/ {path}`
 - `:cn/p` to jump between quickfix results
 - `:copen` to show all quickfix results
+
+Examples:
+
+ ```vim
+:vim /test/ **/*
+:vim /fn/ **/*.rs
+:vim /#/ **/.*
+```
 
 ## Edit
 
@@ -149,7 +157,7 @@ Examples:
 - `qq`
 - Complete generic commands
 - `q`
-- Populate the quickfix with something like `:grep`
+- Populate the quickfix with something like `:vim[grep]`
 - `:c[f]do normal @q | :w`
 
 ## Split windows
