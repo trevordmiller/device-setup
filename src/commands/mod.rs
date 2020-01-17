@@ -87,7 +87,7 @@ pub fn upgrade() {
 }
 
 pub fn end() {
-    printing::heading("Cleanng up my computer's state.");
+    printing::heading("Cleaning up my computer's state.");
 
     // Unix
     homebrew::clean_artifacts();

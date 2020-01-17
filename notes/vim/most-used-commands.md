@@ -127,7 +127,7 @@ Examples:
 ## Substitute
 
 - `:{range}s/{regex}/{substitution}/g`
--
+
 Examples:
 
 ```vim
