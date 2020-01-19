@@ -1,4 +1,5 @@
 use super::paths;
+use pulldown_cmark::{html, Options, Parser};
 
 pub fn clean() {
     // Removes any previously generated output
@@ -8,6 +9,11 @@ pub fn clean() {
 pub fn build() {
     // Generates a static HTML bundle from markdown notes
     paths::create_dir(&paths::public());
+    let markdown_input = "EmptySome **example** testing from trevordmiller.com";
+    let parser = Parser::new_ext(markdown_input, Options::empty());
+    let mut html_output = String::new();
+    html::push_html(&mut html_output, parser);
+    paths::create_file(&paths::public().join("testing.html"), &html_output);
 }
 
 pub fn configure() {

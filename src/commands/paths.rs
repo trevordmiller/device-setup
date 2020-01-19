@@ -26,13 +26,19 @@ pub fn remove_dir(path: &PathBuf) {
             Err(error) => panic!("There was a problem: {:?}", error),
         }
     } else {
-        printing::info(format!("A directory doesn't exist at {}.", path.to_string_lossy()));
+        printing::info(format!(
+            "A directory doesn't exist at {}.",
+            path.to_string_lossy()
+        ));
     }
 }
 
 pub fn create_file(path: &PathBuf, contents: &str) {
     if path.exists() {
-        printing::info(format!("A file already exists at {}.", path.to_string_lossy()))
+        printing::info(format!(
+            "A file already exists at {}.",
+            path.to_string_lossy()
+        ))
     } else {
         printing::progress(format!("Creating file at {}.", path.to_string_lossy()));
         match fs::File::create(&path) {
@@ -41,7 +47,7 @@ pub fn create_file(path: &PathBuf, contents: &str) {
                     Ok(_) => (),
                     Err(error) => panic!("There was a problem: {:?}", error),
                 };
-            },
+            }
             Err(error) => panic!("There was a problem: {:?}", error),
         }
     }
@@ -60,14 +66,11 @@ pub fn repos() -> PathBuf {
 }
 
 pub fn public() -> PathBuf {
-    repos()
-        .join("trevordmiller")
-        .join("public")
+    repos().join("trevordmiller").join("public")
 }
 
 pub fn cname() -> PathBuf {
-    public()
-        .join("CNAME")
+    public().join("CNAME")
 }
 
 fn home() -> PathBuf {
