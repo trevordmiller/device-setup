@@ -13,7 +13,37 @@ pub fn build() {
     let parser = Parser::new_ext(markdown_input, Options::empty());
     let mut html_output = String::new();
     html::push_html(&mut html_output, parser);
-    paths::create_file(&paths::public().join("testing.html"), &html_output);
+    let html_output_in_document = format!(
+        "
+        <!DOCTYPE html>
+        <html lang=\"en-US\">
+            <head>
+                <meta charset=\"utf-8\">
+                <meta name=\"author\" content=\"Trevor D. Miller\">
+                <meta name=\"description\" content=\"Personal website.\">
+                <title>trevordmiller.com</title>
+            </head>
+            <body>
+                <header>
+                    <p>Header</p>
+                </header>
+                <main>
+                    <article>
+                        {}
+                    </article>
+                </main>
+                <footer>
+                    <p>Footer</p>
+                </footer>
+              </body>
+        </html>
+    ",
+        &html_output
+    );
+    paths::create_file(
+        &paths::public().join("index.html"),
+        &html_output_in_document,
+    );
 }
 
 pub fn configure() {
