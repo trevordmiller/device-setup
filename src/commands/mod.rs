@@ -15,9 +15,6 @@ pub fn setup() {
         &paths::vim_plugins(),
         "https://github.com/octref/RootIgnore",
     );
-    homebrew::install_package("git");
-    homebrew::install_package("rustup-init");
-    executables::run("rustup-init");
     homebrew::install_package("node");
 }
 
