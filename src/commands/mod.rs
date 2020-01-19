@@ -19,14 +19,8 @@ pub fn setup() {
         let vim_plugins_path = paths::vim_plugins();
 
         paths::create_dir(&vim_plugins_path, &|| {
-            // Enhance languages
-            git::clone(&vim_plugins_path, "https://github.com/sheerun/vim-polyglot");
-
-            // Enhance wildignore
+            // Enhance wildignore with items from .gitignore
             git::clone(&vim_plugins_path, "https://github.com/octref/RootIgnore");
-
-            // Enhance static analysis
-            git::clone(&vim_plugins_path, "https://github.com/dense-analysis/ale");
         });
     });
 
