@@ -23,11 +23,11 @@ pub fn pull_all(path: &PathBuf) {
         path.to_string_lossy()
     ));
     match fs::read_dir(path) {
-        Ok(paths) => {
-            for path in paths {
+        Ok(dirs) => {
+            for dir in dirs {
                 match Command::new("git")
-                    .current_dir(match path {
-                        Ok(path) => path.path(),
+                    .current_dir(match dir {
+                        Ok(dir) => dir.path(),
                         Err(error) => panic!("There was a problem: {:?}", error),
                     })
                     .arg("pull")
@@ -45,17 +45,17 @@ pub fn pull_all(path: &PathBuf) {
 pub fn check_all(path: &PathBuf) {
     printing::progress(format!("Checking all repos in {}.", path.to_string_lossy()));
     match fs::read_dir(path) {
-        Ok(paths) => {
+        Ok(dirs) => {
             let mut all_repos_clean = true;
 
-            for path in paths {
-                let path = match &path {
-                    Ok(path) => path.path(),
+            for dir in dirs {
+                let dir = match &dir {
+                    Ok(dir) => dir.path(),
                     Err(error) => panic!("There was a problem: {:?}", error),
                 };
 
                 let status_check = match Command::new("git")
-                    .current_dir(&path)
+                    .current_dir(&dir)
                     .arg("status")
                     .arg("--porcelain")
                     .output()
@@ -65,7 +65,7 @@ pub fn check_all(path: &PathBuf) {
                 };
 
                 let unpushed_check = match Command::new("git")
-                    .current_dir(&path)
+                    .current_dir(&dir)
                     .arg("log")
                     .arg("@{u}..")
                     .output()
@@ -76,7 +76,7 @@ pub fn check_all(path: &PathBuf) {
 
                 if !status_check.is_empty() || !unpushed_check.is_empty() {
                     all_repos_clean = false;
-                    printing::error(format!("A dirty repo was found: {}", &path.display()));
+                    printing::error(format!("A dirty repo was found: {}", &dir.display()));
                 }
             }
 
