@@ -16,7 +16,7 @@ enum Commands {
     /// Clean up my machine's state.
     End,
 
-    /// Start a study session.
+    /// Start one of my study sessions.
     Study,
 }
 
@@ -35,7 +35,7 @@ fn main() {
             commands::end();
         }
         Commands::Study => {
-            printing::heading("Starting a study session.");
+            printing::heading("Starting one of my study sessions.");
             commands::study();
         }
     }
