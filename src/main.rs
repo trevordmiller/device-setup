@@ -18,6 +18,9 @@ enum Commands {
 
     /// Start one of my study sessions.
     Study,
+
+    /// Release my website.
+    Release,
 }
 
 fn main() {
@@ -37,6 +40,10 @@ fn main() {
         Commands::Study => {
             printing::heading("Starting one of my study sessions.");
             commands::study();
+        }
+        Commands::Release => {
+            printing::heading("Releasing my website.");
+            commands::release();
         }
     }
 }

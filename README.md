@@ -42,5 +42,3 @@ Assuming a Unix environment is being used (like macOS, Linux, or Windows Subsyst
 
 - Branch protection with [GitHub Settings](https://github.com/trevordmiller/trevordmiller/settings/branches).
 - Continuous Integration with [GitHub Actions](https://github.com/trevordmiller/trevordmiller/actions).
-- Website generation from `./notes`to `trevordmiller.com` with [GitHub pages](https://github.com/trevordmiller/trevordmiller.github.io/settings).
-- Domain name registration with [Hover](https://www.hover.com).

@@ -2,3 +2,4 @@
 *.swp
 target/
 **/*.rs.bk
+public/
