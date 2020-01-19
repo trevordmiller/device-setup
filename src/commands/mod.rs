@@ -19,9 +19,6 @@ pub fn setup() {
         let vim_plugins_path = paths::vim_plugins();
 
         paths::create_dir(&vim_plugins_path, &|| {
-            // Enhance defaults
-            git::clone(&vim_plugins_path, "https://github.com/tpope/vim-sensible");
-
             // Enhance languages
             git::clone(&vim_plugins_path, "https://github.com/sheerun/vim-polyglot");
 
