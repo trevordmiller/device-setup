@@ -17,11 +17,14 @@ pub fn build() {
                     Ok(markdown_file) => markdown_file.path(),
                     Err(error) => panic!("There was a problem: {:?}", error),
                 };
-
+                let markdown_file_contents = match fs::read_to_string(&markdown_file) {
+                    Ok(contents) => contents,
+                    Err(error) => panic!("There was a problem: {:?}", error),
+                };
                 let html_file = format!("{}.html", &paths::file_stem(markdown_file));
                 paths::create_file(
                     &paths::public().join(html_file),
-                    &markdown_to_html("Some **markdown** testing from trevordmiller.com"),
+                    &markdown_to_html(&markdown_file_contents),
                 );
             }
         }
