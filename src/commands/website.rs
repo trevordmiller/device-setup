@@ -12,6 +12,7 @@ pub fn build() {
 
 pub fn configure() {
     // Adds a CNAME file for the host (GitHub Pages) and registrar (Hover) to use my custom domain name (trevordmiller.com)
+    paths::create_file(&paths::cname(), "trevordmiller.com");
 }
 
 pub fn deploy() {

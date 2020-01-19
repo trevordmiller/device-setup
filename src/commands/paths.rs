@@ -30,6 +30,23 @@ pub fn remove_dir(path: &PathBuf) {
     }
 }
 
+pub fn create_file(path: &PathBuf, contents: &str) {
+    if path.exists() {
+        printing::info(format!("A file already exists at {}.", path.to_string_lossy()))
+    } else {
+        printing::progress(format!("Creating file at {}.", path.to_string_lossy()));
+        match fs::File::create(&path) {
+            Ok(_) => {
+                match fs::write(&path, &contents) {
+                    Ok(_) => (),
+                    Err(error) => panic!("There was a problem: {:?}", error),
+                };
+            },
+            Err(error) => panic!("There was a problem: {:?}", error),
+        }
+    }
+}
+
 pub fn vim_plugins() -> PathBuf {
     home()
         .join(".vim")
@@ -46,6 +63,11 @@ pub fn public() -> PathBuf {
     repos()
         .join("trevordmiller")
         .join("public")
+}
+
+pub fn cname() -> PathBuf {
+    public()
+        .join("CNAME")
 }
 
 fn home() -> PathBuf {
