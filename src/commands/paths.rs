@@ -53,6 +53,16 @@ pub fn create_file(path: &PathBuf, contents: &str) {
     }
 }
 
+pub fn file_stem(file: PathBuf) -> std::string::String {
+    match file.file_stem() {
+        Some(file_stem) => match file_stem.to_str() {
+            Some(string) => string.to_string(),
+            None => panic!("There was a problem."),
+        },
+        None => panic!("Cannot find the file stem for {}.", file.to_string_lossy()),
+    }
+}
+
 pub fn vim_plugins() -> PathBuf {
     home()
         .join(".vim")
@@ -65,8 +75,12 @@ pub fn repos() -> PathBuf {
     home().join("repos")
 }
 
+pub fn notes() -> PathBuf {
+    project().join("src/notes")
+}
+
 pub fn public() -> PathBuf {
-    repos().join("trevordmiller").join("public")
+    project().join("public")
 }
 
 pub fn cname() -> PathBuf {
@@ -78,4 +92,8 @@ fn home() -> PathBuf {
         Some(directory) => directory,
         None => panic!("Cannot find the home directory."),
     }
+}
+
+fn project() -> PathBuf {
+    repos().join("trevordmiller")
 }
