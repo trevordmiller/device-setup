@@ -18,6 +18,18 @@ pub fn create_dir(path: &PathBuf) {
     }
 }
 
+pub fn remove_dir(path: &PathBuf) {
+    if path.exists() {
+        printing::progress(format!("Deleting directory at {}.", path.to_string_lossy()));
+        match fs::remove_dir_all(&path) {
+            Ok(_) => (),
+            Err(error) => panic!("There was a problem: {:?}", error),
+        }
+    } else {
+        printing::info(format!("A directory doesn't exist at {}.", path.to_string_lossy()));
+    }
+}
+
 pub fn vim_plugins() -> PathBuf {
     home()
         .join(".vim")
@@ -28,6 +40,12 @@ pub fn vim_plugins() -> PathBuf {
 
 pub fn repos() -> PathBuf {
     home().join("repos")
+}
+
+pub fn public() -> PathBuf {
+    repos()
+        .join("trevordmiller")
+        .join("public")
 }
 
 fn home() -> PathBuf {

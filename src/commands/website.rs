@@ -1,15 +1,19 @@
+use super::paths;
+
 pub fn clean() {
-    // Removes any previously generated ./public/
+    // Removes any previously generated output
+    paths::remove_dir(&paths::public());
 }
 
 pub fn build() {
-    // Generates a static HTML bundle from ./src/notes/ markdown to ./public/
+    // Generates a static HTML bundle from markdown notes
+    paths::create_dir(&paths::public());
 }
 
 pub fn configure() {
-    // Adds a CNAME file for the host (GitHub Pages) and registrar (Hover) to use a custom domain name (trevordmiller.com) in ./public/
+    // Adds a CNAME file for the host (GitHub Pages) and registrar (Hover) to use my custom domain name (trevordmiller.com)
 }
 
 pub fn deploy() {
-    // Pushes ./public/ to my GitHub Pages repo (https://github.com/trevordmiller/trevordmiller.github.io)
+    // Pushes output to my GitHub Pages repo (https://github.com/trevordmiller/trevordmiller.github.io)
 }
