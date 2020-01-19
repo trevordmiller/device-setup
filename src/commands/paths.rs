@@ -3,7 +3,7 @@ use dirs;
 use std::fs;
 use std::path::PathBuf;
 
-pub fn create_dir(path: &PathBuf, after_create: &dyn Fn()) {
+pub fn create_dir(path: &PathBuf) {
     if path.exists() {
         printing::info(format!(
             "A directory already exists at {}.",
@@ -12,7 +12,7 @@ pub fn create_dir(path: &PathBuf, after_create: &dyn Fn()) {
     } else {
         printing::progress(format!("Creating directory at {}.", path.to_string_lossy()));
         match fs::create_dir_all(&path) {
-            Ok(_) => after_create(),
+            Ok(_) => (),
             Err(error) => panic!("There was a problem: {:?}", error),
         }
     }

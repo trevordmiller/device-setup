@@ -1,6 +1,8 @@
 use crate::utils::printing;
 
 pub fn next() {
+    printing::heading("Write a note so that I solidify the most important things I've learned.");
+
     printing::subheading("Add a new note");
 
     printing::list(vec![

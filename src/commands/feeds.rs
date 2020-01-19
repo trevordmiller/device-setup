@@ -1,6 +1,8 @@
 use crate::utils::printing;
 
 pub fn next() {
+    printing::heading("Follow feeds so that I'm aware of industry changes.");
+
     printing::subheading("Open the top recent items in each feed");
 
     printing::subheading("Programming");
