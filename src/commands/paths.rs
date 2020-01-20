@@ -76,15 +76,23 @@ pub fn repos() -> PathBuf {
 }
 
 pub fn notes() -> PathBuf {
-    project().join("src/notes")
+    home()
+        .join("repos")
+        .join("trevordmiller")
+        .join("src")
+        .join("notes")
 }
 
 pub fn public() -> PathBuf {
-    project().join("public")
+    home().join("repos").join("trevordmiller").join("public")
 }
 
 pub fn cname() -> PathBuf {
-    public().join("CNAME")
+    home()
+        .join("repos")
+        .join("trevordmiller")
+        .join("public")
+        .join("CNAME")
 }
 
 fn home() -> PathBuf {
@@ -92,8 +100,4 @@ fn home() -> PathBuf {
         Some(directory) => directory,
         None => panic!("Cannot find the home directory."),
     }
-}
-
-fn project() -> PathBuf {
-    repos().join("trevordmiller")
 }
