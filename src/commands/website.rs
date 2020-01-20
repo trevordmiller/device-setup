@@ -21,9 +21,10 @@ pub fn build() {
                     Ok(contents) => contents,
                     Err(error) => panic!("There was a problem: {:?}", error),
                 };
-                let html_file = format!("{}.html", &paths::file_stem(markdown_file));
+                let route = &paths::file_stem(markdown_file);
+                paths::create_dir(&paths::public().join(route));
                 paths::create_file(
-                    &paths::public().join(html_file),
+                    &paths::public().join(route).join("index.html"),
                     &markdown_to_html(&markdown_file_contents),
                 );
             }
