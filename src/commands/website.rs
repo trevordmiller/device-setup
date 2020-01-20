@@ -78,27 +78,20 @@ fn markdown_to_html(markdown: &str) -> std::string::String {
             <body>
                 <header>
                     <nav>
-                        <a href=\"/\">trevordmiller.com</a>
+                        <a href=\"/\">Home</a>
+                        <a href=\"https://github.com/trevordmiller\">GitHub</a>
+                        <a href=\"https://www.linkedin.com/in/trevordmiller\">LinkedIn</a>
                     </nav>
                 </header>
+                <hr />
                 <main>
                     <article>
                         {}
                     </article>
                 </main>
-                <hr />
-                <footer>
-                    <nav>
-                        <ul>
-                            <li><a href=\"https://github.com/trevordmiller\">Code</a></li>
-                            <li><a href=\"https://www.linkedin.com/in/trevordmiller\">Resume</a></li>
-                            <li><a href=\"https://egghead.io/instructors/trevor-miller\">Videos</a></li>
-                        </ul>
-                    </nav>
-                </footer>
               </body>
         </html>
     ",
-    &html
-        )
+        &html
+    )
 }
