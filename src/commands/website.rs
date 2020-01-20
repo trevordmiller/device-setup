@@ -32,7 +32,12 @@ pub fn build() {
                     &paths::public().join(route).join("index.html"),
                     &markdown_to_html(&markdown_file_contents),
                 );
-                markdown_links_to_routes.push(format!("- [{}](/{})", route, route).to_string());
+
+                let title = match markdown_file_contents.lines().next() {
+                    Some(title) => &title[2..],
+                    None => panic!("Cannot find a title in {}.", &route),
+                };
+                markdown_links_to_routes.push(format!("- [{}](/{})", title, route).to_string());
             }
 
             let markdown_home = markdown_links_to_routes.join("\n");
