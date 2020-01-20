@@ -72,23 +72,33 @@ fn markdown_to_html(markdown: &str) -> std::string::String {
                 <meta charset=\"utf-8\">
                 <meta name=\"author\" content=\"Trevor D. Miller\">
                 <meta name=\"description\" content=\"Personal website.\">
+                <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
                 <title>trevordmiller.com</title>
             </head>
             <body>
                 <header>
-                    <p>Header</p>
+                    <nav>
+                        <a href=\"/\">trevordmiller.com</a>
+                    </nav>
                 </header>
                 <main>
                     <article>
                         {}
                     </article>
                 </main>
+                <hr />
                 <footer>
-                    <p>Footer</p>
+                    <nav>
+                        <ul>
+                            <li><a href=\"https://github.com/trevordmiller\">Code</a></li>
+                            <li><a href=\"https://www.linkedin.com/in/trevordmiller\">Resume</a></li>
+                            <li><a href=\"https://egghead.io/instructors/trevor-miller\">Videos</a></li>
+                        </ul>
+                    </nav>
                 </footer>
               </body>
         </html>
     ",
-        &html
-    )
+    &html
+        )
 }
