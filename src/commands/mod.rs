@@ -7,7 +7,7 @@ mod homebrew;
 mod notes;
 mod paths;
 mod processes;
-mod website;
+mod public;
 
 pub fn setup() {
     homebrew::install_package("vim");
@@ -44,9 +44,8 @@ pub fn study() {
     notes::next();
 }
 
-pub fn release() {
-    website::clean();
-    website::build();
-    website::configure();
-    website::deploy();
+pub fn generate() {
+    public::clean();
+    public::build();
+    public::configure();
 }

@@ -56,9 +56,6 @@ pub fn configure() {
     paths::create_file(&paths::cname(), "trevordmiller.com");
 }
 
-// Pushes output to my GitHub Pages repo (https://github.com/trevordmiller/trevordmiller.github.io)
-pub fn deploy() {}
-
 fn markdown_to_html(markdown: &str) -> std::string::String {
     let parser = Parser::new_ext(markdown, Options::empty());
     let mut html = String::new();

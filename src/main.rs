@@ -19,8 +19,8 @@ enum Commands {
     /// Start one of my study sessions.
     Study,
 
-    /// Release my website.
-    Release,
+    /// Generate the public directory for my website.
+    Generate,
 }
 
 fn main() {
@@ -41,9 +41,9 @@ fn main() {
             printing::heading("Starting one of my study sessions.");
             commands::study();
         }
-        Commands::Release => {
-            printing::heading("Releasing my website.");
-            commands::release();
+        Commands::Generate => {
+            printing::heading("Generate the public directory for my website.");
+            commands::generate();
         }
     }
 }
