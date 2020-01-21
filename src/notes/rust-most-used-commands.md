@@ -12,9 +12,27 @@
 
 - `cargo build`
 
+```sh
+// Compile the executable in development mode
+cargo build
+
+// Compile the executable in production mode
+cargo build --release
+```
+
 ## Run
 
 - `cargo run`
+
+Examples
+
+```sh
+// Compile the executable in development mode then run the executable
+cargo run
+
+// Compile the executable in production mode then run the executable
+cargo run --release
+```
 
 ## Check for errors
 

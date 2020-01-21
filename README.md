@@ -22,16 +22,17 @@ Assuming a Unix environment is being used (like macOS, Linux, or Windows Subsyst
 - Run `cd ~/repos/trevordmiller` to move into the repo.
 - Run `git config user.name "Trevor D. Miller"` to configure my username for the repo.
 - Run `git config user.email "5497885+trevordmiller@users.noreply.github.com"` to configure my email for the repo.
-- Run `cargo run -- setup` to setup my remaining machine state.
+- Run `cargo run --release -- setup` to setup my remaining machine state.
 
 ## Usage
 
-- Run `cargo run` to list usage details.
+- Run `cargo run --release` to list the available commands.
+- Run `cargo run --release -- {command}` to run a command.
 
 ## Contributing
 
 - Work off the `master` branch.
-- Run `cargo run -- {command}` to run.
+- Run `cargo run` to run.
 - Run `cargo check` to check for errors.
 - Run `cargo fix` to fix syntax.
 - Run `cargo test` to test logic.
