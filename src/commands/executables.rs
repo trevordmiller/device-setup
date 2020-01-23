@@ -2,7 +2,7 @@ use crate::utils::printing;
 use std::io::ErrorKind;
 use std::process::Command;
 
-pub fn update(executable: &str) {
+pub fn upgrade(executable: &str) {
     printing::progress(format!("Updating {}.", executable));
     match Command::new(executable).arg("update").output() {
         Ok(_) => (),

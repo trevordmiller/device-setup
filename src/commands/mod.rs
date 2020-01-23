@@ -11,30 +11,27 @@ mod public;
 
 pub fn setup() {
     homebrew::install_package("vim");
+    homebrew::install_package("node");
     paths::create_dir(&paths::vim_plugins());
     git::clone(
         &paths::vim_plugins(),
         "https://github.com/octref/RootIgnore",
     );
-    homebrew::install_package("node");
 }
 
-pub fn upgrade() {
-    executables::update("brew");
-    homebrew::upgrade_package("vim");
-    git::pull_all(&paths::vim_plugins());
-    homebrew::upgrade_package("git");
-    homebrew::upgrade_package("rustup-init");
-    executables::update("rustup");
-    homebrew::upgrade_package("node");
-}
-
-pub fn end() {
+pub fn clean() {
     git::check_all(&paths::repos());
     processes::stop("vim");
     processes::stop("rls");
     processes::stop("node");
+    executables::upgrade("brew");
+    executables::upgrade("rustup");
+    homebrew::upgrade_package("vim");
+    homebrew::upgrade_package("git");
+    homebrew::upgrade_package("rustup-init");
+    homebrew::upgrade_package("node");
     homebrew::clean_artifacts();
+    git::pull_all(&paths::vim_plugins());
 }
 
 pub fn study() {
