@@ -6,7 +6,8 @@ Personal CLI.
 
 - Focus on timeless skills so that my skills are relevant as long as possible.
 - Use defaults as much as possible so that my skills are portable without being tied to custom setups. Strive to only add configuration that enhances defaults. Capture any added configuration so that it can be reproduced on other machines. 
-- Keep contents encapsulated in markdown files so that the content is portable with minimal integrations.
+- Keep input encapsulated in text and markdown files so that the input is portable with minimal integrations.
+- Use RSS for feeds so that I can avoid noise like ads, comments, and styles. Stick to official and community voted trends so that I learn from unbiased sources.
 
 ## Setup
 
