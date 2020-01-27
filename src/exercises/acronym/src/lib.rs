@@ -1,3 +1,12 @@
 pub fn abbreviate(phrase: &str) -> String {
-    unimplemented!("Given the phrase '{}', return its acronym", phrase);
+    if phrase == "" {
+        return phrase.to_string();
+    }
+
+    phrase
+        .replace("_", "")
+        .replace("-", " ")
+        .split_whitespace()
+        .map(|word| word.chars().next().unwrap().to_uppercase().to_string())
+        .collect()
 }
