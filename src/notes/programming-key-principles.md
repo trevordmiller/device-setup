@@ -1,5 +1,9 @@
 # Key principles in programming
 
+- Tradeoffs
+  - Respectful
+  - Open-minded
+  - Pragmatic
 - Encapsulated
   - Portable
   - Deterministic
