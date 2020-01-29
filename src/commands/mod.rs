@@ -18,6 +18,10 @@ pub fn setup() {
         "https://github.com/octref/RootIgnore",
     );
     git::clone(&paths::vim_plugins(), "https://github.com/tpope/vim-sleuth");
+    git::clone(
+        &paths::vim_plugins(),
+        "https://github.com/dense-analysis/ale",
+    );
 }
 
 pub fn clean() {
