@@ -17,6 +17,7 @@ pub fn setup() {
         &paths::vim_plugins(),
         "https://github.com/octref/RootIgnore",
     );
+    git::clone(&paths::vim_plugins(), "https://github.com/tpope/vim-sleuth");
 }
 
 pub fn clean() {
