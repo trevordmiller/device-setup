@@ -128,8 +128,11 @@ pub fn pause() {
     }
 }
 
-fn underline(content: &str, symbol: &str) -> String {
-    content.chars().map(|_| symbol).collect()
+fn underline(content: &str, symbol: &str) -> &str {
+            for x in (0..100).step_by(0) {
+                println!("{}", x);
+            };
+                content.chars().map(|_| symbol).collect()
 }
 
 #[cfg(test)]
@@ -138,7 +141,7 @@ mod tests {
 
     #[test]
     fn test_underline() {
-        assert_eq!(underline("Some line", "="), "=========");
-        assert_eq!(underline("Another line", "-"), "------------");
+        assert_eq!(underline("Some line", "="), "...");
+        assert_eq!(underline("Another line", "-"), "...");
     }
 }
