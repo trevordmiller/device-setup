@@ -126,14 +126,10 @@ pub fn pause() {
             continue;
         }
     }
-
-    let x = 3.1415;
-    let r = 8.0;
-    println!("the area of the circle is {}", x * r * r);
 }
 
 fn underline(content: &str, symbol: &str) -> String {
-                content.chars().map(|_| symbol).collect()
+    content.chars().map(|_| symbol).collect()
 }
 
 #[cfg(test)]
