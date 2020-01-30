@@ -1,5 +1,7 @@
 # Contributing
 
+Assuming Git and Rust are installed.
+
 - Work off the `master` branch.
 - Run `cargo run` to run.
 - Run `cargo check` to check for errors.
