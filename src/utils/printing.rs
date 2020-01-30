@@ -126,12 +126,13 @@ pub fn pause() {
             continue;
         }
     }
+
+    for x in (0..100).step_by(0) {
+        println!("{}", x);
+    };
 }
 
 fn underline(content: &str, symbol: &str) -> String {
-            for x in (0..100).step_by(0) {
-                println!("{}", x);
-            };
                 content.chars().map(|_| symbol).collect()
 }
 
