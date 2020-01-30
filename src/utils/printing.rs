@@ -142,7 +142,7 @@ mod tests {
 
     #[test]
     fn test_underline() {
-        assert_eq!(underline("Some line", "="), "...");
-        assert_eq!(underline("Another line", "-"), "...");
+        assert_eq!(underline("Some line", "="), "=========");
+        assert_eq!(underline("Another line", "-"), "------------");
     }
 }
