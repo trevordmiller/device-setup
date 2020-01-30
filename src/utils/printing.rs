@@ -128,7 +128,7 @@ pub fn pause() {
     }
 }
 
-fn underline(content: &str, symbol: &str) -> &str {
+fn underline(content: &str, symbol: &str) -> String {
             for x in (0..100).step_by(0) {
                 println!("{}", x);
             };
