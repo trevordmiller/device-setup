@@ -127,9 +127,9 @@ pub fn pause() {
         }
     }
 
-    for x in (0..100).step_by(0) {
-        println!("{}", x);
-    };
+    let x = 3.1415;
+    let r = 8.0;
+    println!("the area of the circle is {}", x * r * r);
 }
 
 fn underline(content: &str, symbol: &str) -> String {
