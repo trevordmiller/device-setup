@@ -1,5 +1,6 @@
 use crate::utils::printing;
 use dirs;
+use std::env;
 use std::fs;
 use std::path::PathBuf;
 
@@ -76,28 +77,27 @@ pub fn repos() -> PathBuf {
 }
 
 pub fn notes() -> PathBuf {
-    home()
-        .join("repos")
-        .join("trevordmiller")
-        .join("src")
-        .join("notes")
+    project_root().join("src").join("notes")
 }
 
 pub fn public() -> PathBuf {
-    home().join("repos").join("trevordmiller").join("public")
+    project_root().join("public")
 }
 
 pub fn cname() -> PathBuf {
-    home()
-        .join("repos")
-        .join("trevordmiller")
-        .join("public")
-        .join("CNAME")
+    project_root().join("public").join("CNAME")
 }
 
 fn home() -> PathBuf {
     match dirs::home_dir() {
         Some(directory) => directory,
         None => panic!("Cannot find the home directory."),
+    }
+}
+
+fn project_root() -> PathBuf {
+    match env::current_dir() {
+        Ok(directory) => directory,
+        Err(error) => panic!("There was a problem: {:?}", error),
     }
 }
