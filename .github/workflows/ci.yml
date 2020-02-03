@@ -10,6 +10,6 @@ jobs:
     - name: Test
       run: cargo test
     - name: Lint
-      run: cargo clippy
+      run: cargo clippy --all-targets
     - name: Format
       run: cargo fmt -- --check

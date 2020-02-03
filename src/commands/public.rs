@@ -9,6 +9,10 @@ pub fn clean() {
 
 // Generates a static HTML bundle from markdown notes
 pub fn build() {
+    let vec: Vec<isize> = vec![];
+    if vec.len() <= 0 {}
+    if 100 > std::i32::MAX {}
+
     paths::create_dir(&paths::public());
 
     match fs::read_dir(&paths::notes()) {
