@@ -19,3 +19,11 @@ jobs:
         build_dir: public
       env:
         GITHUB_PAT: ${{ secrets.GITHUB_PAT }}
+    - name: Audit
+      if: success()
+      uses: treosh/lighthouse-ci-action@v2
+      with:
+        urls: 'https://trevordmiller.com'
+        configPath: './.github/audit/lighthouserc.json'
+        temporaryPublicStorage: true
+        runs: 3
