@@ -40,7 +40,7 @@ pub fn build() {
                 markdown_links_to_routes.push(format!("- [{}](/{})", title, route).to_string());
             }
 
-            let markdown_home = markdown_links_to_routes.join("\n");
+            let markdown_home = format!("# Notes\n{}", markdown_links_to_routes.join("\n"));
 
             paths::create_file(
                 &paths::public().join("index.html"),
@@ -75,7 +75,7 @@ fn markdown_to_html(markdown: &str) -> std::string::String {
             <body>
                 <header>
                     <nav>
-                        <a href=\"/\">Home</a>
+                        <a href=\"/\">Notes</a>
                         <a href=\"https://github.com/trevordmiller\">GitHub</a>
                         <a href=\"https://www.linkedin.com/in/trevordmiller\">LinkedIn</a>
                     </nav>
