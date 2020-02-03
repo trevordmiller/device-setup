@@ -4,7 +4,7 @@ on:
     branches:
       - master
 jobs:
-  build:
+  website:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
@@ -19,3 +19,11 @@ jobs:
         build_dir: public
       env:
         GITHUB_PAT: ${{ secrets.GITHUB_PAT }}
+    - name: Audit
+      if: success()
+      uses: treosh/lighthouse-ci-action@v2
+      with:
+        urls: 'https://trevordmiller.com'
+        configPath: './.github/audit/lighthouserc.json'
+        temporaryPublicStorage: true
+        runs: 3
