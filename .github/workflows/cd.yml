@@ -14,7 +14,7 @@ jobs:
       if: success()
       uses: crazy-max/ghaction-github-pages@v1
       with:
-        repo: https://github.com/trevordmiller/trevordmiller.github.io
+        repo: trevordmiller/trevordmiller.github.io
         target_branch: master
         build_dir: public
       env:
