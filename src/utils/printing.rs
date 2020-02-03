@@ -79,7 +79,7 @@ pub fn error(content: String) {
 pub fn list(items: Vec<&str>) {
     let mut stdout = io::stdout();
 
-    match writeln!(&mut stdout, "") {
+    match writeln!(&mut stdout) {
         Ok(_) => (),
         Err(error) => panic!("There was a problem: {:?}", error),
     }
