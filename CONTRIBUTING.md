@@ -13,5 +13,6 @@ Assuming Git and Rust are installed.
 
 ### Integrations
 
-- Branch protection with [GitHub Settings](https://github.com/trevordmiller/trevordmiller/settings/branches).
+- Branch protection with [GitHub settings](https://github.com/trevordmiller/trevordmiller/settings/branches).
 - Continuous Integration and Deployment with [GitHub Actions](https://github.com/trevordmiller/trevordmiller/actions).
+- Secrets with [GitHub secrets](https://github.com/trevordmiller/trevordmiller/settings/secrets).
