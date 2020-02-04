@@ -10,6 +10,8 @@ mod processes;
 mod public;
 
 pub fn setup() {
+    git::configure("user.name", "Trevor D. Miller");
+    git::configure("user.email", "5497885+trevordmiller@users.noreply.github.com");
     homebrew::install_package("vim");
     homebrew::install_package("node");
     paths::create_dir(&paths::vim_plugins());

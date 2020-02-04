@@ -3,6 +3,21 @@ use std::fs;
 use std::path::PathBuf;
 use std::process::Command;
 
+pub fn configure(key: &str, value: &str) {
+    printing::progress(format!("Configuring git {}.", key));
+
+    match Command::new("git")
+        .arg("config")
+        .arg("--global")
+        .arg(key)
+        .arg(value)
+        .output()
+    {
+        Ok(_) => (),
+        Err(error) => panic!("There was a problem: {:?}", error),
+    }
+}
+
 pub fn clone(path: &PathBuf, url: &str) {
     printing::progress(format!("Cloning {} repo.", url));
 
