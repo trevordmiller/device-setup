@@ -1,6 +1,6 @@
 # Contributing
 
-Assuming Git and Rust are installed.
+Assuming the `Setup` steps have been completed from the [README.md](./README.md).
 
 - Work off the `master` branch.
 - Run `cargo run` to run.

@@ -11,18 +11,12 @@ Personal CLI.
 
 ## Setup
 
-Assuming a Unix environment is being used (like macOS, Linux, or Windows Subsystem for Linux).
+Assuming a Unix environment is being used (like macOS, Linux, or Windows Subsystem for Linux) with [Homebrew](https://brew.sh) installed.
 
-- Launch terminal.
-- Install Homebrew with the command for the current environment from [https://brew.sh](https://brew.sh).
 - Run `brew install git` to install Git.
 - Run `brew install rustup-init && rustup-init` to install Rust.
-- Restart terminal.
-- Run `mkdir ~/repos` to create my repos directory.
 - Run `git clone https://github.com/trevordmiller/trevordmiller.git ~/repos/trevordmiller` to clone this repo.
 - Run `cd ~/repos/trevordmiller` to move into the repo.
-- Run `git config user.name "Trevor D. Miller"` to configure my username for the repo.
-- Run `git config user.email "5497885+trevordmiller@users.noreply.github.com"` to configure my email for the repo.
 - Run `cargo run --release -- setup` to setup my remaining machine state.
 
 ## Usage
