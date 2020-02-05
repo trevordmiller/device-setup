@@ -14,6 +14,7 @@ Complete the `Setup` steps from the [README.md](./README.md).
 - Run `cargo clippy` to lint for common issues.
 - Run `cargo fmt` to format source code.
 - Change the `version` in `Cargo.toml` following [semver](https://doc.rust-lang.org/cargo/reference/manifest.html#the-version-field).
+- Run `cargo build` to sync the `Cargo.lock`.
 - Submit a pull request to the `master` branch.
 - Merge the pull request when it has passing merge checks.
 
