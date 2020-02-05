@@ -9,6 +9,7 @@ Assuming the `Setup` steps have been completed from the [README.md](./README.md)
 - Run `cargo test` to test logic.
 - Run `cargo clippy` to lint for common issues.
 - Run `cargo fmt` to format source code.
+- Change the `version` in `Cargo.toml` following [semver](https://doc.rust-lang.org/cargo/reference/manifest.html#the-version-field).
 - Submit a pull request to the `master` branch.
 
 ### Integrations

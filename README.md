@@ -15,14 +15,13 @@ Assuming a Unix environment is being used (like macOS, Linux, or Windows Subsyst
 
 - Run `brew install git` to install Git.
 - Run `brew install rustup-init && rustup-init` to install Rust.
-- Run `git clone https://github.com/trevordmiller/trevordmiller.git ~/repos/trevordmiller` to clone this repo.
-- Run `cd ~/repos/trevordmiller` to move into the repo.
-- Run `cargo run --release -- setup` to setup my remaining machine state.
+- Run `cargo install trevordmiller` to install the `trevordmiller` binary.
+- Run `trevordmiller setup` to setup my remaining machine state.
 
 ## Usage
 
-- Run `cargo run --release` to list the available commands.
-- Run `cargo run --release -- {command}` to run a command.
+- Run `trevormdiller --help` to list the available commands.
+- Run `trevordmiller {command}` to run a command.
 
 ## Contributing
 

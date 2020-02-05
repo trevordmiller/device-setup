@@ -8,8 +8,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
+    - name: Login
+      run: cargo login ${{ secrets.CRATE_REGISTRY_PAT }}
+    - name: Publish
+      if: success()
+      run: cargo publish
+    - name: Install
+      if: success()
+      run: cargo install trevordmiller
     - name: Generate
-      run: cargo run --release -- generate
+      if: success()
+      run: trevordmiller generate
     - name: Deploy
       if: success()
       uses: crazy-max/ghaction-github-pages@v1
