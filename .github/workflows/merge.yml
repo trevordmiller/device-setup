@@ -1,20 +1,40 @@
-name: CD
+name: Merge
 on:
   push:
     branches:
       - master
 jobs:
-  website:
+  verify:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
+    - name: Checkout
+      uses: actions/checkout@v1
+    - name: Check
+      run: cargo check
+    - name: Test
+      run: cargo test
+    - name: Lint
+      run: cargo clippy --all-targets
+    - name: Format
+      run: cargo fmt -- --check
+  executable:
+    runs-on: ubuntu-latest
+    needs: [verify]
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v1
     - name: Login
       run: cargo login ${{ secrets.CRATE_REGISTRY_PAT }}
     - name: Publish
       if: success()
       run: cargo publish
+  website:
+    runs-on: ubuntu-latest
+    needs: [verify, executable]
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v1
     - name: Install
-      if: success()
       run: cargo install trevordmiller
     - name: Generate
       if: success()
