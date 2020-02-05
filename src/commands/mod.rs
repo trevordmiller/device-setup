@@ -1,5 +1,4 @@
 mod documents;
-mod executables;
 mod exercises;
 mod feeds;
 mod git;
@@ -8,6 +7,7 @@ mod notes;
 mod paths;
 mod processes;
 mod public;
+mod rust;
 
 pub fn setup() {
     homebrew::install_package("git");
@@ -17,7 +17,10 @@ pub fn setup() {
         "user.email",
         "5497885+trevordmiller@users.noreply.github.com",
     );
-    git::clone(&paths::repos(), "https://github.com/trevordmiller/trevordmiller");
+    git::clone(
+        &paths::repos(),
+        "https://github.com/trevordmiller/trevordmiller",
+    );
 
     homebrew::install_package("vim");
     paths::create_dir(&paths::vim_plugins());
@@ -46,12 +49,13 @@ pub fn clean() {
 
     processes::stop("rls");
     homebrew::upgrade_package("rustup-init");
-    executables::upgrade("rustup");
+    rust::upgrade_self();
+    rust::upgrade_executable("trevordmiller");
 
     processes::stop("node");
     homebrew::upgrade_package("node");
 
-    executables::upgrade("brew");
+    homebrew::upgrade_self();
     homebrew::clean_artifacts();
 }
 

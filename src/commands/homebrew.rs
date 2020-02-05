@@ -1,4 +1,5 @@
 use crate::utils::printing;
+use std::io::ErrorKind;
 use std::process::Command;
 
 pub fn install_package(package: &str) {
@@ -31,5 +32,16 @@ pub fn clean_artifacts() {
     match Command::new("brew").arg("cleanup").output() {
         Ok(_) => (),
         Err(error) => panic!("There was a problem: {:?}", error),
+    }
+}
+
+pub fn upgrade_self() {
+    printing::progress(format!("Updating brew."));
+    match Command::new("brew").arg("update").output() {
+        Ok(_) => (),
+        Err(error) => match error.kind() {
+            ErrorKind::NotFound => panic!("The brew executable is missing."),
+            other_error => panic!("There was a problem: {:?}", other_error),
+        },
     }
 }
