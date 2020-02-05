@@ -11,9 +11,9 @@ Personal CLI.
 
 ## Setup
 
-Assuming a Unix environment is being used (like macOS, Linux, or Windows Subsystem for Linux) with [Homebrew](https://brew.sh) installed.
+Assuming a Unix environment is being used (like macOS, Linux, or Windows Subsystem for Linux).
 
-- Run `brew install git` to install Git.
+- Install [Homebrew](https://brew.sh) based on your Unix environment.
 - Run `brew install rustup-init && rustup-init` to install Rust.
 - Run `cargo install trevordmiller` to install the `trevordmiller` binary.
 - Run `trevordmiller setup` to setup my remaining machine state.
