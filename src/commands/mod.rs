@@ -1,5 +1,4 @@
 mod documents;
-mod executables;
 mod exercises;
 mod feeds;
 mod git;
@@ -8,15 +7,22 @@ mod notes;
 mod paths;
 mod processes;
 mod public;
+mod rust;
 
 pub fn setup() {
+    homebrew::install_package("git");
+    paths::create_dir(&paths::repos());
     git::configure("user.name", "Trevor D. Miller");
     git::configure(
         "user.email",
         "5497885+trevordmiller@users.noreply.github.com",
     );
+    git::clone(
+        &paths::repos(),
+        "https://github.com/trevordmiller/trevordmiller",
+    );
+
     homebrew::install_package("vim");
-    homebrew::install_package("node");
     paths::create_dir(&paths::vim_plugins());
     git::clone(
         &paths::vim_plugins(),
@@ -27,21 +33,30 @@ pub fn setup() {
         &paths::vim_plugins(),
         "https://github.com/dense-analysis/ale",
     );
+
+    homebrew::install_package("rustup-init");
+
+    homebrew::install_package("node");
 }
 
 pub fn clean() {
     git::check_all(&paths::repos());
-    processes::stop("vim");
-    processes::stop("rls");
-    processes::stop("node");
-    executables::upgrade("brew");
-    executables::upgrade("rustup");
-    homebrew::upgrade_package("vim");
     homebrew::upgrade_package("git");
-    homebrew::upgrade_package("rustup-init");
-    homebrew::upgrade_package("node");
-    homebrew::clean_artifacts();
+
+    processes::stop("vim");
+    homebrew::upgrade_package("vim");
     git::pull_all(&paths::vim_plugins());
+
+    processes::stop("rls");
+    homebrew::upgrade_package("rustup-init");
+    rust::upgrade_self();
+    rust::upgrade_executable("trevordmiller");
+
+    processes::stop("node");
+    homebrew::upgrade_package("node");
+
+    homebrew::upgrade_self();
+    homebrew::clean_artifacts();
 }
 
 pub fn study() {

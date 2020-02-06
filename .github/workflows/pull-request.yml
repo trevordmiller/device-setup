@@ -1,15 +1,16 @@
-name: CI
+name: Pull request
 on: [push]
 jobs:
   verify:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
+    - name: Checkout
+      uses: actions/checkout@v1
     - name: Check
       run: cargo check
     - name: Test
       run: cargo test
     - name: Lint
-      run: cargo clippy --all-targets
+      run: cargo clippy --all-targets -- -D warnings
     - name: Format
       run: cargo fmt -- --check

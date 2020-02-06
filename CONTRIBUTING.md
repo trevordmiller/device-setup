@@ -1,6 +1,10 @@
 # Contributing
 
-Assuming the `Setup` steps have been completed from the [README.md](./README.md).
+## Setup
+
+Complete the `Setup` steps from the [README.md](./README.md).
+
+## Workflow
 
 - Work off the `master` branch.
 - Run `cargo run` to run.
@@ -9,9 +13,12 @@ Assuming the `Setup` steps have been completed from the [README.md](./README.md)
 - Run `cargo test` to test logic.
 - Run `cargo clippy` to lint for common issues.
 - Run `cargo fmt` to format source code.
+- Change the `version` in `Cargo.toml` following [semver](https://doc.rust-lang.org/cargo/reference/manifest.html#the-version-field).
+- Run `cargo build` to sync the `Cargo.lock`.
 - Submit a pull request to the `master` branch.
+- Merge the pull request when it has passing merge checks.
 
-### Integrations
+## Integrations
 
 - Branch protection with [GitHub settings](https://github.com/trevordmiller/trevordmiller/settings/branches).
 - Continuous Integration and Deployment with [GitHub Actions](https://github.com/trevordmiller/trevordmiller/actions).

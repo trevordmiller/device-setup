@@ -1,6 +1,11 @@
 [package]
 name = "trevordmiller"
-version = "1.0.0"
+description = "Personal CLI"
+version = "1.0.5"
+readme = "README.md"
+homepage = "https://github.com/trevordmiller/trevordmiller"
+repository = "https://github.com/trevordmiller/trevordmiller"
+license = "MIT OR Apache-2.0"
 authors = ["trevordmiller"]
 edition = "2018"
 
