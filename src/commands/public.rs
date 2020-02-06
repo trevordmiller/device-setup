@@ -72,14 +72,6 @@ fn markdown_to_html(markdown: &str) -> std::string::String {
                 <meta charset=\"utf-8\">
                 <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
                 <style type=\"text/css\">
-                    /* Fix native tap targets */
-                    header nav a {{
-                      margin-right: 10px;
-                    }}
-                    li {{
-                      margin: 10px auto;
-                    }}
-
                     /* Fix native overflow */
                     pre {{
                       overflow: auto;
