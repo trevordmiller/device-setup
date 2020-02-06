@@ -7,14 +7,13 @@ Complete the `Setup` steps from the [README.md](./README.md).
 ## Workflow
 
 - Work off the `master` branch.
+- Bump the `version` in `Cargo.toml` following [semver](https://doc.rust-lang.org/cargo/reference/manifest.html#the-version-field).
 - Run `cargo run` to run.
 - Run `cargo check` to check for errors.
 - Run `cargo fix` to fix syntax.
 - Run `cargo test` to test logic.
 - Run `cargo clippy` to lint for common issues.
 - Run `cargo fmt` to format source code.
-- Change the `version` in `Cargo.toml` following [semver](https://doc.rust-lang.org/cargo/reference/manifest.html#the-version-field).
-- Run `cargo build` to sync the `Cargo.lock`.
 - Submit a pull request to the `master` branch.
 - Merge the pull request when it has passing merge checks.
 
