@@ -36,7 +36,7 @@ pub fn clean_artifacts() {
 }
 
 pub fn upgrade_self() {
-    printing::progress(format!("Updating brew."));
+    printing::progress("Upgrading brew.".to_string());
     match Command::new("brew").arg("update").output() {
         Ok(_) => (),
         Err(error) => match error.kind() {
