@@ -1,7 +1,7 @@
 [package]
 name = "trevordmiller"
 description = "Personal CLI"
-version = "1.0.6"
+version = "1.0.7"
 readme = "README.md"
 homepage = "https://github.com/trevordmiller/trevordmiller"
 repository = "https://github.com/trevordmiller/trevordmiller"
