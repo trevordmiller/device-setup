@@ -1,5 +1,8 @@
 name: Pull request
-on: [push]
+on:
+  push:
+    branches-ignore:
+      - master
 jobs:
   verify:
     runs-on: ubuntu-latest
@@ -14,3 +17,5 @@ jobs:
       run: cargo clippy --all-targets -- -D warnings
     - name: Format
       run: cargo fmt -- --check
+    - name: Publish
+      run: cargo publish --dry-run
