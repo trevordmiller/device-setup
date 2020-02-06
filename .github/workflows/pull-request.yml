@@ -1,5 +1,8 @@
 name: Pull request
-on: [push]
+on:
+  push:
+    branches-ignore:
+      - master
 jobs:
   verify:
     runs-on: ubuntu-latest
