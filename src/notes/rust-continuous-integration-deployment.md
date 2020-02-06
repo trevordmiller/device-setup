@@ -24,6 +24,8 @@ jobs:
       run: cargo clippy --all-targets -- -D warnings
     - name: Format
       run: cargo fmt -- --check
+    - name: Publish
+      run: cargo publish --dry-run
 ```
 
 ## Run CI and CD when merging pull requests to master
