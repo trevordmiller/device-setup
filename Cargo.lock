@@ -364,7 +364,7 @@ dependencies = [
 
 [[package]]
 name = "trevordmiller"
-version = "1.0.8"
+version = "1.1.0"
 dependencies = [
  "dirs 2.0.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "pulldown-cmark 0.6.1 (registry+https://github.com/rust-lang/crates.io-index)",

@@ -66,11 +66,25 @@ fn markdown_to_html(markdown: &str) -> std::string::String {
         <!DOCTYPE html>
         <html lang=\"en-US\">
             <head>
-                <meta charset=\"utf-8\">
+                <title>trevordmiller.com</title>
                 <meta name=\"author\" content=\"Trevor D. Miller\">
                 <meta name=\"description\" content=\"Personal website.\">
+                <meta charset=\"utf-8\">
                 <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
-                <title>trevordmiller.com</title>
+                <style type=\"text/css\">
+                    /* Fix native tap targets */
+                    header nav a {{
+                      margin-right: 10px;
+                    }}
+                    li {{
+                      margin: 10px auto;
+                    }}
+
+                    /* Fix native overflow */
+                    pre {{
+                      overflow: auto;
+                    }}
+                </style>
             </head>
             <body>
                 <header>
