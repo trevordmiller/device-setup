@@ -16,6 +16,10 @@
 
 - `pwd`
 
+## Display currently running processes
+
+- `ps`
+
 ## List directory
 
 - `ls -a`
