@@ -15,6 +15,10 @@
 - Run shell commands
 - `<ctrl d>`
 
+## See if in a subshell
+
+- `ps`, if `vim` is listed
+
 ## Search
 
 - `:vim /{regex}/ {path}`
