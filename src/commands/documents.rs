@@ -14,7 +14,7 @@ pub fn next() {
         "[ ] http://www.charlespetzold.com/code/",
         "[ ] https://pragprog.com/book/tpp/the-pragmatic-programmer",
         "[ ] http://codersatwork.com",
-        "[ ] https://mitpress.mit.edu/books/introduction-algorithms"
+        "[ ] https://mitpress.mit.edu/books/introduction-algorithms",
     ]);
     printing::pause();
 }
