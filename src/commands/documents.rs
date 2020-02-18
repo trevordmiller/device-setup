@@ -10,11 +10,7 @@ pub fn next() {
         "[ ] https://doc.rust-lang.org/std/index.html",
         "[ ] https://rust-lang-nursery.github.io/cli-wg/",
         "[ ] https://rustwasm.github.io/docs/book/",
-        "[ ] https://archive.org/details/MythicalManMonth",
-        "[ ] http://www.charlespetzold.com/code/",
-        "[ ] https://pragprog.com/book/tpp/the-pragmatic-programmer",
-        "[ ] http://codersatwork.com",
-        "[ ] https://mitpress.mit.edu/books/introduction-algorithms",
+        "[ ] https://developer.mozilla.org/en-US/docs/WebAssembly",
     ]);
     printing::pause();
 }
