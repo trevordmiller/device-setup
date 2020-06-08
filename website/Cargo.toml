@@ -1,0 +1,9 @@
+[package]
+name = "website"
+version = "1.0.0"
+authors = ["Trevor D. Miller"]
+edition = "2018"
+
+[dependencies]
+termcolor = "1.1.0"
+pulldown-cmark = "0.6.1"

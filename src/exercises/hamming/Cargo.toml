@@ -1,4 +1,0 @@
-[package]
-edition = "2018"
-name = "hamming"
-version = "2.2.0"

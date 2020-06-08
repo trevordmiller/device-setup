@@ -1,5 +1,4 @@
-.DS_Store
-*.swp
 target/
 **/*.rs.bk
-public/
+Cargo.lock
+/website/build/

@@ -1,0 +1,110 @@
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica,
+    Arial, Verdana, sans-serif;
+  color: black;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  background: whitesmoke;
+  border-bottom: 1px solid lightgray;
+}
+
+header nav {
+  max-width: 80ch;
+  margin: 0 auto;
+}
+
+header a {
+  padding: 1rem;
+  font-family: "Courier New", Courier, monospace;
+  text-decoration: none;
+  color: dimgray;
+  display: block;
+}
+
+header a:first-of-type {
+  display: flex;
+  align-items: center;
+}
+
+header a:first-of-type::before {
+  content: ">";
+  margin: 0 1ch 0 0;
+}
+
+header a:first-of-type::after {
+  content: "";
+  margin: 0 0 0 1ch;
+  display: inline-block;
+  background: dimgray;
+  width: 1ch;
+  height: 1em;
+  animation: cursor 800ms infinite;
+}
+
+@keyframes cursor {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+main {
+  max-width: 80ch;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+h2:not(:first-of-type) {
+  margin: 2rem 0 1rem 0;
+  padding: 2rem 0 0 0;
+  border-top: 1px solid lightgray;
+}
+
+blockquote {
+  border-left: 3px solid lightgray;
+  padding: 1rem;
+  margin: 0 0 1rem 0;
+  color: dimgray;
+}
+
+blockquote p {
+  margin: 0;
+}
+
+blockquote footer {
+  text-align: right;
+}
+
+video {
+  width: 100%;
+  max-height: 100%;
+  background: whitesmoke;
+}
+
+@media screen and (min-width: 80ch) {
+  header {
+    position: sticky;
+    top: 0;
+  }
+
+  header nav {
+    display: flex;
+    align-items: center;
+  }
+
+  header a:first-of-type {
+    flex: 1;
+  }
+}
