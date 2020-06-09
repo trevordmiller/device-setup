@@ -72,29 +72,14 @@ h2:not(:first-of-type) {
   border-top: 1px solid lightgray;
 }
 
-blockquote {
-  border-left: 3px solid lightgray;
-  padding: 1rem;
-  margin: 0 0 1rem 0;
-  color: dimgray;
-}
-
-blockquote p {
-  margin: 0;
-}
-
-blockquote footer {
-  text-align: right;
+pre {
+  overflow: auto;
 }
 
 video {
   width: 100%;
   max-height: 100%;
   background: whitesmoke;
-}
-
-pre {
-  overflow: auto;
 }
 
 @media screen and (min-width: 80ch) {
