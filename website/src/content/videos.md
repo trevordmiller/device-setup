@@ -24,5 +24,4 @@ My public programming courses.
 - [Capture code history snapshots with git add/commit/push](/public/git-add-commit-push.mp4).
 - [Copy remote repos to local machines with git clone](/public/git-clone.mp4).
 - [Create local repos with git init](/public/git-init.mp4).
-
-[Archive](https://egghead.io/instructors/trevor-miller).
+- [View all](https://egghead.io/instructors/trevor-miller).
