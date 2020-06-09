@@ -13,19 +13,6 @@ jobs:
       - name: Format
         run: npx prettier --check . --ignore-path ./.gitignore
 
-  links:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Links
-        uses: peter-evans/link-checker@v1
-        id: lc
-        with:
-          args: --document-root ./website/build --exclude https://www.invidio.us --verbose --recursive *
-      - name: Exit
-        run: exit ${{ steps.lc.outputs.exit_code }}
-
   exercises:
     runs-on: ubuntu-latest
     steps:
@@ -64,6 +51,13 @@ jobs:
       - name: Build
         run: cargo run --release
         working-directory: ./website
+      - name: Links
+        uses: peter-evans/link-checker@v1
+        id: lc
+        with:
+          args: --document-root ./website/build --exclude https://www.invidio.us --verbose --recursive *
+      - name: Exit
+        run: exit ${{ steps.lc.outputs.exit_code }}
       - name: Audit
         uses: treosh/lighthouse-ci-action@v2
         with:
