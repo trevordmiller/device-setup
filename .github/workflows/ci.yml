@@ -22,7 +22,7 @@ jobs:
         uses: peter-evans/link-checker@v1
         id: lc
         with:
-          args: --document-root . --exclude https://www.invidio.us --verbose --recursive *
+          args: --document-root ./website/build --exclude https://www.invidio.us --verbose --recursive *
       - name: Exit
         run: exit ${{ steps.lc.outputs.exit_code }}
 
