@@ -3,6 +3,7 @@
 - [Vim Announcements](https://www.vim.org/news/news.php).
 - [Git Rev News](https://git.github.io/rev_news/rev_news/).
 - [This Week in Rust](https://this-week-in-rust.org/blog/archives/).
+- [Devops Weekly](https://www.devopsweekly.com).
 - [StatusCode Weekly](https://weekly.statuscode.com/issues).
 - [Computerphile](https://www.invidio.us/channel/UC9-y-6csu5WGm29I7JiwpnA).
 - [Changelog Weekly](https://changelog.com/weekly/archive).
