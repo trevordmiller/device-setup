@@ -1,4 +1,0 @@
-[package]
-edition = "2018"
-name = "two-bucket"
-version = "1.4.0"

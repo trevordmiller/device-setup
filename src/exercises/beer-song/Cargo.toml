@@ -1,4 +1,0 @@
-[package]
-edition = "2018"
-name = "beer-song"
-version = "0.0.0"

@@ -1,6 +1,0 @@
-[package]
-edition = "2018"
-name = "robot-name"
-version = "0.0.0"
-
-[dependencies]

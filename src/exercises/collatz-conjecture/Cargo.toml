@@ -1,4 +1,0 @@
-[package]
-edition = "2018"
-name = "collatz_conjecture"
-version = "1.2.1"

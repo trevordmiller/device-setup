@@ -1,4 +1,0 @@
-[package]
-edition = "2018"
-name = "robot-simulator"
-version = "2.2.0"

@@ -1,0 +1,29 @@
+# Texts
+
+- [ ] [The Rust Programming Language](https://doc.rust-lang.org/book/).
+  - [x] Chapter 1.
+  - [x] Chapter 2.
+  - [x] Chapter 3.
+  - [ ] Chapter 4.
+  - [ ] Chapter 5.
+  - [ ] Chapter 6.
+  - [ ] Chapter 7.
+  - [ ] Chapter 8.
+  - [ ] Chapter 9.
+  - [ ] Chapter 10.
+  - [ ] Chapter 11.
+  - [ ] Chapter 12.
+  - [ ] Chapter 13.
+  - [ ] Chapter 14.
+  - [ ] Chapter 15.
+  - [ ] Chapter 16.
+  - [ ] Chapter 17.
+  - [ ] Chapter 18.
+  - [ ] Chapter 19.
+  - [ ] Chapter 20.
+  - [ ] Chapter 21.
+- [ ] [A half-hour to learn Rust](https://fasterthanli.me/blog/2020/a-half-hour-to-learn-rust/).
+- [ ] [An Introduction to Unix](http://oliverelliott.org/article/computing/tut_unix/).
+- [ ] [100 Useful Unix Commands](http://oliverelliott.org/article/computing/ref_unix/).
+- [ ] [The beauty of Unix pipelines](https://prithu.xyz/posts/unix-pipeline/).
+- [ ] [The Art of Command Line](https://github.com/jlevy/the-art-of-command-line).
