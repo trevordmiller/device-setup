@@ -2,10 +2,6 @@
 
 My open source repositories.
 
-## Active
+- [Personal workspace](https://github.com/trevordmiller/trevordmiller).
 
-- [trevordmiller](https://github.com/trevordmiller/trevordmiller).
-
-## Archive
-
-[View all](https://github.com/trevordmiller).
+[Archive](https://github.com/trevordmiller).
