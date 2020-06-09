@@ -66,10 +66,10 @@ main {
   padding: 1rem;
 }
 
-h2:not(:first-of-type) {
-  margin: 2rem 0 1rem 0;
-  padding: 2rem 0 0 0;
-  border-top: 1px solid lightgray;
+h1 {
+  margin: 1rem 0 2rem 0;
+  padding: 0 0 2rem 0;
+  border-bottom: 1px solid lightgray;
 }
 
 pre {
