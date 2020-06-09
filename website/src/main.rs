@@ -172,6 +172,11 @@ fn markdown_to_html(markdown: &str) -> std::string::String {
                 <main>
                     {}
                 </main>
+                <footer>
+                    <h2>Get my latest content by email</h2>
+                    <p>I won't send you spam or sell/share your email. Unsubscribe at any time.</p>
+                    <script async data-uid='b00e0e63dc' src='https://trevordmiller.ck.page/b00e0e63dc/index.js'></script>
+                </footer>
               </body>
         </html>
     ",
