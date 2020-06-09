@@ -1,71 +1,148 @@
 # My most used Git commands
 
-## View documentation
+## View help
 
-- `git --help`
+```shell
+git --help
+```
 
 ## Start working in an existing repo
 
-- `git clone {existing}`
-- `cd {existing}`
-- `git config user.name "Trevor D. Miller"`
-- `git config user.email "5497885+trevordmiller@users.noreply.github.com"`
-- Add any missing `.gitignore` items specific to my setup like `.DS_Store` and `*.swp`
+```shell
+git clone some-repo
+cd some-repo
+```
 
 ## Search across tracked files
 
-- `git grep {regex}`
+```shell
+git grep some-regex
+```
 
 ## Status
 
-- `git status`
+```shell
+git status
+```
 
-## Diff with staged
+## Diff
 
-- `git diff`
+```shell
+git diff
+```
+
+## Diff staged
+
+```shell
+git diff --staged
+```
+
+## Diff with remote branch
+
+```shell
+git fetch
+git diff origin/master
+```
+
+## Diff between branches
+
+```shell
+git diff some-branch..another-branch
+```
+
+## Diff between tags
+
+```shell
+git diff some-tag another-tag
+```
 
 ## Restore working directory version
 
-- `git checkout {paths}`
+```shell
+git checkout some-paths
+```
 
 ## Stage
 
-- `git stage {paths}`
+```shell
+git stage some-paths
+```
 
 ## Stage hunks
 
-- `git add -p`
-- Respond to each hunk with `y` (yes), `n` (no), or `s` (split) to break down into smaller hunks
+```shell
+git add -p
+# Respond to each hunk with y (yes), n (no), or s (split) to break down into smaller hunks
+```
 
 ## Commit what is staged
 
-- `git commit`
-- Opens default editor
-- Fill out commit message
-- Save and quit file to let commit finish
+```shell
+git commit
+# Opens default editor
+# Fill out commit message
+# Save and quit file to let commit finish
+```
 
 ## Push
 
-- `git push`
+```shell
+git push
+```
 
-## Rebase
+## Sync a pull request branch
 
-- `git fetch && git rebase origin/master`
-- Fix conflicts
-- `git push -f` to overwrite history
+```shell
+# With a merge commit
+git checkout master
+git pull
+git checkout some-branch
+git merge master
+# Fix conflicts
+git push
+
+# Without a merge commit re-writing history as if the commits in the pull request branch happened on-top
+git fetch
+git rebase origin/master
+# Fix conflicts
+git push -f
+```
+
+## Undo a single commit
+
+```shell
+# With a revert commit
+git log
+# Find the reference of the commit to undo
+git revert some-reference
+```
 
 ## Blame
 
-- `git blame {files}`
+```shell
+git blame some-paths
+```
 
 ## Search
 
-- `git log -p -S {string}`
+```shell
+git log -p -S "some-string"
+```
 
 ## Find the commit that broke something
 
-- `git bisect start`
-- `git bisect bad`
-- `git bisect good {reference}` with reference to when things were known to work
-- `git bisect {bad/good}` repeated until binary search is complete
-- `git bisect reset` to clean up
+```shell
+git bisect start
+git bisect bad
+git bisect good some-reference # with reference to when things were known to work
+git bisect bad/good # repeated until the binary search is complete
+git bisect reset # to clean up
+```
+
+## Sync cache with an updated .gitignore
+
+```shell
+git rm -r --cached .
+git add .
+git commit
+```

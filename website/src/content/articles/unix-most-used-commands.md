@@ -1,319 +1,572 @@
 # My most used Unix commands
 
-## View documentation
+## View help
 
-- `man {verb}`
+```shell
+man some-thing
+```
 
 ## Interrupt a running process
 
-- `<ctrl c>`
+```shell
+<ctrl c>
+```
 
-## Run a binary executable
+## Run an executable
 
-- `{path}<enter>`
+```shell
+./some-path<enter>
+```
 
 ## Print working directory
 
-- `pwd`
+```shell
+pwd
+```
 
-## Display currently running processes
+## Display own currently running processes
 
-- `ps`
+```shell
+ps
+```
 
-## List directory
+## Display all currently running processes
 
-- `ls -a`
+```shell
+ps -e
+```
+
+## Display processes using the most resources
+
+```shell
+top
+```
+
+## Stop a process and allow it to finish (SIGTERM)
+
+```shell
+kill -15 some-pid
+```
+
+## Force a process to quit with potential data loss or corruption (SIGKILL)
+
+```shell
+kill -9 some-pid
+```
+
+## Quit all spawned processes with a specific name
+
+```shell
+killall some-process-name
+```
+
+## List directory contents
+
+```shell
+ls
+```
+
+## List all directory contents
+
+```shell
+ls -a
+```
 
 ## Change directory
 
-- `cd {path}`
+```shell
+cd some-path
+```
 
 ## Change to last directory
 
-- `cd -`
+```shell
+cd -
+```
 
 ## Create directory
 
-- `mkdir {directory}`
+```shell
+mkdir some-directory
+```
 
 ## Create file
 
-- `touch {file}`
+```shell
+touch some-file
+```
 
-## Remove directory 
+## Remove directory
 
-- `rm -rf {directory}`
+```shell
+rm -rf some-directory
+```
 
 ## Remove file
 
-- `rm {file}`
+```shell
+rm some-file
+```
 
 ## Move directory
 
-- `mv {source} {destination}`
+```shell
+mv some-directory another-directory
+```
 
 ## Move file
 
-- `mv {source} {destination}`
+```shell
+mv some-directory another-directory
+```
+
+## Copy directory
+
+```shell
+cp -R some-directory another-directory
+```
+
+## Copy file
+
+```shell
+cp some-file another-file
+```
 
 ## Re-run commands
 
-- `<ctrl r>`
-- Search
-- `<up/down>` to move through list of items
-- `<enter>` to run
+```shell
+<ctrl r>
+Some search
+# <up/down> to move through list of items
+# <enter> to run
+```
 
-## See where a package is installed
+## See where an executable is installed
 
-- `which {package}`
+```shell
+which some-executable
+```
 
 ## Pipe output from one command as input to another
 
-- `{command} | {command}`
+```shell
+some-command | another-command
+```
 
 ## Redirect output from one command to a file
 
-- `{command} > {file}`
+```shell
+some-command > some-file
+```
 
 ## Use file contents in a command
 
-- `{file} < {command}`
+```shell
+some-file < some-command
+```
 
 ## Run a command if another is successful
 
-- `{command} && {command}`
+```shell
+some-command && another-command
+```
 
 ## File contents
 
-- `cat {file}`
+```shell
+cat some-file
+```
+
+## Page contents
+
+```shell
+less some-file
+```
 
 ## Search
 
-- `grep -r {regex} {path}`
-
-## Substitute
-
-- `sed`
-
-## HTTP requests
-
-- `curl`
-
-## Manage packages (via Homebrew on macOS, Linux, or Windows Subsystem for Linux)
-
-### Search packages
-
-- `brew search {package}`
-
-### View info about packages
-
-- `brew info {package}`
-
-### Install packages
-
-- `brew install {package}`
-
-### Install apps
-
-- `brew cask install {app}`
-
-### List installed packages
-
-- `brew leaves`
-
-### Uninstall packages
-
-- `brew uninstall {package}`
-
-# Most used commands in Vim
-
-## View documentation
-
-- `:h {verb}`
-
-## Start
-
-- `cd {project root}`
-- `vim`
-
-## Switch to a shell
-
-- `:sh`
-- Run shell commands
-- `<ctrl d>`
-
-## See if in a subshell
-
-- `ps`, if `vim` is listed
-
-## Search
-
-- `:vim /{regex}/ {path}`
-- `:cn/p` to jump between quickfix results
-- `:copen` to show all quickfix results
+```shell
+grep some-regex
+```
 
 Examples:
 
-```vim
+```shell
+ps -ef | grep systemd
+```
+
+## Search ignoring the casing
+
+```shell
+grep -i some-regex
+```
+
+## Search a path
+
+```shell
+grep -R some-regex some-path
+```
+
+## Substitute
+
+```shell
+sed 's/some-regex/some-replacement/g' some-file
+```
+
+## Send HTTP requests
+
+```shell
+curl some-url
+```
+
+## Run executable files
+
+```shell
+./some_executable
+```
+
+## Create a shell script
+
+```shell
+touch some_executable
+chmod +x some_executable
+# '#!/bin/sh' at top of file and shell commands inside
+```
+
+## Work on a remote server
+
+```shell
+ssh some-remote-server
+# Run other unix commands
+exit
+```
+
+## Run a command on a remote server
+
+```shell
+ssh some-remote-server "some-command"
+```
+
+## Show who is logged in
+
+```shell
+who
+```
+
+## Use text
+
+```shell
+echo "Some text"
+```
+
+Examples:
+
+```shell
+echo "Some text to append to file" >> some-file
+```
+
+## Check environment variables
+
+```shell
+echo $SOME_VARIABLE
+```
+
+## Edit files
+
+```shell
+vim
+```
+
+### View help
+
+```shell
+:h some-thing
+```
+
+### Start
+
+```shell
+cd some-project-directory-root
+vim
+```
+
+### Switch to a shell
+
+```shell
+:sh
+# Run shell commands
+<ctrl d>
+```
+
+### Search
+
+```shell
+:vim /some-regex/ some-path
+:cn/p # to jump between quickfix results
+:copen # to show all quickfix results
+```
+
+Examples:
+
+```shell
 :vim /test/ **/*
 :vim /fn/ **/*.rs
 :vim /#/ **/.*
 ```
 
-## Edit
+### Edit
 
-- `:e {path}`
+```shell
+:e some-path
+```
 
 Examples:
 
-```vim
-:e **/*{file}<tab>
-:e src/**/*{file}<tab>
+```shell
+:e **/*some-file<tab>
+:e src/**/*some-file<tab>
 :e **/*<tab>
 :e src/
 :e .
 ```
 
-## Write
+### Write
 
-- `:w`
+```shell
+:w
+```
 
-## Write and quit
+### Write and quit
 
-- `:wq`
+```shell
+:wq
+```
 
-## Page
+### Page
 
-- `<ctrl f/b>`
+```shell
+<ctrl f/b>
+```
 
-## Search
+### Search
 
-- `/{regex}`
-- `n` to move to the next
+```shell
+/some-regex
+n # to move to the next
+```
 
-## Block
+### Block
 
-- `{` / `}`
+```shell
+{ / }
+```
 
-## Top
+### Top
 
-- `gg`
+```shell
+gg
+```
 
-## Bottom
+### Bottom
 
-- `G`
+```shell
+G
+```
 
-## Format
+### Format
 
-- `=`
+```shell
+=
+```
 
-## Change
+### Change
 
-- `c`
+```shell
+c
+```
 
-## Delete
+### Delete
 
-- `d`
+```shell
+d
+```
 
-## Yank
+### Yank
 
-- `y`
+```shell
+y
+```
 
-## Put
+### Put
 
-- `p`
+```shell
+p
+```
 
-## Inside
+### Inside
 
-- `i`
+```shell
+i
+```
 
-## Around
+### Around
 
-- `a`
+```shell
+a
+```
 
-## Braces
+### Braces
 
-- `{`
+```shell
+{
+```
 
-## Parenthesis
+### Parenthesis
 
-- `(`
+```shell
+(
+```
 
-## Tag
+### Tag
 
-- `t`
+```shell
+t
+```
 
-## Undo
+### Undo
 
-- `u`
+```shell
+u
+```
 
-## Redo
+### Redo
 
-- `<ctrl r>`
+```shell
+<ctrl r>
+```
 
-## Put from the clipboard
+### Put from the clipboard
 
-- `"+p`
+```shell
+"+p
+```
 
-## Delete to the clipboard
+### Delete to the clipboard
 
-- `"+d`
+```shell
+"+d
+```
 
-## Yank to the clipboard
+### Yank to the clipboard
 
-- `"+y`
+```shell
+"+y
+```
 
-## Substitute
+### Split windows
 
-- `:{range}s/{regex}/{substitution}/g`
+```shell
+:vs
+```
+
+### Go to window
+
+```shell
+<ctrl w h/j/k/l>
+```
+
+### Go in/out
+
+```shell
+<ctrl i/o>
+```
+
+### Go to file
+
+```shell
+# Cursor over import
+gf
+```
+
+### Complete word
+
+```shell
+<ctrl n>
+<ctrl n/p> # to move through list items
+```
+
+### Complete line
+
+```shell
+<ctrl x><ctrl l>
+<ctrl n/p> # to move through list items
+```
+
+### Substitute
+
+```shell
+:some-range s/some-regex/some-replacement/g
+```
 
 Examples:
 
-```vim
+```shell
 :%s/foo/bar/gc
 ```
 
-## Apply ex commands to patterns
+### Apply commands to each quickfix item
 
-- `:{range}g/{regex}/{command}`
+```shell
+:cdo {command}
+```
 
 Examples:
 
-```vim
-:g/deleteMe/d
+```shell
+# Populate the quickfix with something like :vim[grep]
+:cdo normal dd
 ```
 
-## Macro
+### Apply commands to each quickfix file
 
-- `qq`
-- Complete generic commands
-- `q`
-- Populate the quickfix with something like `:vim[grep]`
-- `:c[f]do normal @q | :w`
+```shell
+:cfdo {command}
+```
 
-## Split windows
+Examples:
 
-- `:vs`
+```shell
+# Populate the quickfix with something like :vim[grep]
+:cfdo %s/foo/bar/g
+```
 
-## Go to window
+### Apply generic commands across lines in a file (macro)
 
-- `<ctrl w h/j/k/l>`
+```shell
+qq
+# Complete generic commands for a line
+q
+:some-range normal @q
+```
 
-## Go in/out
+### Apply generic commands across files (macro)
 
-- `<ctrl i/o>`
+```shell
+qq
+# Complete generic commands for a file
+q
+# Populate the quickfix with something like :vim[grep]
+:c[f]do normal @q | :w
+```
 
-## Go to file
+### Apply ex commands to patterns in a file
 
-- Cursor over import
-- `gf`
+```shell
+:some-range g/some-regex/some-command
+```
 
-## Complete word
+Examples:
 
-- `<ctrl n>`
-- `<ctrl n/p>` to move through list items
-
-## Complete line
-
-- `<ctrl x><ctrl l>`
-- `<ctrl n/p>` to move through list items
+```shell
+:g/deleteMe/d
+```

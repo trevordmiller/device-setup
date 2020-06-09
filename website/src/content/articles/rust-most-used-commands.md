@@ -2,84 +2,178 @@
 
 ## View documentation
 
-- `rustup doc`
+```shell
+rustup doc
+```
 
-## Scaffold a new project
+## Scaffold a new executable project
 
-- `cargo new some_project`
+```shell
+cargo new some_executable
+```
 
-## Compile
+## Scaffold a new library project
 
-- `cargo build`
+```shell
+cargo new some_library --lib
+```
 
-```sh
-// Compile the executable in development mode
+## Compile an executable in development mode
+
+```shell
 cargo build
+```
 
-// Compile the executable in production mode
+## Run a development mode executable
+
+```shell
+./target/debug/some_executable
+```
+
+## Compile an executable in production mode
+
+```shell
 cargo build --release
 ```
 
-## Run
+## Run a production mode executable
 
-- `cargo run`
+```shell
+./target/release/some_executable
+```
 
-Examples
+## Compile the executable in development mode then run the executable
 
-```sh
-// Compile the executable in development mode then run the executable
+```shell
 cargo run
+```
 
-// Compile the executable in production mode then run the executable
+## Compile the executable in production mode then run the executable
+
+```shell
 cargo run --release
 ```
 
-## Check for errors
+## Check for compilation errors
 
-- `cargo check`
+```shell
+cargo check
+```
 
-## Fix syntax
+## Get more information on a compilation error
 
-- `cargo fix`
+```shell
+rustc --explain some_error_id
+```
 
-Examples
+## Fix compilation errors that can be fixed automatically
 
-```sh
-# Fix compilation errors.
+```shell
 cargo fix
+```
 
-# Upgrade syntax to a new edition in Cargo.toml
+## Upgrade syntax to a new edition (in Cargo.toml)
+
+```shell
 cargo fix --edition
 ```
 
 ## Test logic
 
-- `cargo test`
+```shell
+cargo test
+```
 
 ## Lint for common issues
 
-- `cargo clippy`
+```shell
+cargo clippy
+```
 
 ## Format source code
 
-- `cargo fmt`
+```shell
+cargo fmt
+```
 
-## Generate documentation
+## Generate project documentation
 
-- `cargo doc`
-
-Examples:
-
-```sh
-# Generate documentation for shipping
+```shell
 cargo doc
+```
 
-# View documentation
+## View project documentation
+
+```shell
 cargo doc --open
 ```
 
 ## Share an executable
 
-- `cargo build --release`
+```shell
+cargo build --release
+```
+
 - Outputs to `./target/release/some_project`
 - Default target is the host architecture
+
+## Setup continuous integration
+
+Cargo can be used for static analysis. For example, with something like the following:
+
+```yaml
+on:
+  push:
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Compile
+        run: cargo check
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Test
+        run: cargo test
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Lint
+        run: cargo clippy --all-targets -- -D warnings
+
+  format:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Format
+        run: cargo fmt -- --check
+```
+
+## Add a dependency
+
+- `some_library = "x.y.z"` manually added in `[dependencies]` section of `Cargo.toml`
+- From `crates.io`
+- Updates `Cargo.lock` during the next compile (`cargo build`, `cargo run`, `cargo check`, `cargo test`, etc.)
+
+## Upgrade all dependencies to the latest patch versions
+
+```shell
+cargo update
+```
+
+## Upgrade a dependency to newer minor/major versions
+
+- Manually change in `[dependencies]` section of `Cargo.toml` to a different version
+- Updates `Cargo.lock` during the next compile (`cargo build`, `cargo run`, `cargo check`, `cargo test`, etc.)

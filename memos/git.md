@@ -50,6 +50,12 @@ git diff origin/master
 git diff some-branch..another-branch
 ```
 
+## Diff between tags
+
+```shell
+git diff some-tag another-tag
+```
+
 ## Restore working directory version
 
 ```shell

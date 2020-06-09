@@ -298,13 +298,6 @@ vim
 <ctrl d>
 ```
 
-### See if in a subshell
-
-```shell
-ps
-# if vim is listed
-```
-
 ### Search
 
 ```shell
