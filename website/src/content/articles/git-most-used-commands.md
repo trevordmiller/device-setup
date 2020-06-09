@@ -1,4 +1,4 @@
-# Most used commands in Git
+# My most used Git commands
 
 ## View documentation
 

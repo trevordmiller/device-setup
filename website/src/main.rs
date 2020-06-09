@@ -7,24 +7,37 @@ mod printing;
 fn main() {
     printing::heading("Building website.");
     clean();
-    build();
+    generate();
     configure();
 }
 
-// Removes any previously generated output
 fn clean() {
     printing::subheading("Cleaning build directory.");
-
     paths::remove_dir(&paths::build());
 }
 
-// Generates a static HTML bundle from markdown articles
-fn build() {
+fn generate() {
     printing::subheading("Generating build directory.");
-
     paths::create_dir(&paths::build());
+    generate_home();
+    generate_articles();
+}
 
-    match fs::read_dir(&paths::articles()) {
+fn generate_home() {
+    let markdown_file_contents = match fs::read_to_string(&paths::content().join("index.md")) {
+        Ok(contents) => contents,
+        Err(error) => panic!("There was a problem: {:?}", error),
+    };
+
+    paths::create_file(
+        &paths::build().join("index.html"),
+        &markdown_to_html(&markdown_file_contents),
+    );
+}
+
+fn generate_articles() {
+    paths::create_dir(&paths::build().join("articles"));
+    match fs::read_dir(&paths::content().join("articles")) {
         Ok(markdown_files) => {
             let mut markdown_links_to_routes = Vec::new();
 
@@ -40,9 +53,12 @@ fn build() {
                 };
 
                 let route = &paths::file_stem(markdown_file);
-                paths::create_dir(&paths::build().join(route));
+                paths::create_dir(&paths::build().join("articles").join(route));
                 paths::create_file(
-                    &paths::build().join(route).join("index.html"),
+                    &paths::build()
+                        .join("articles")
+                        .join(route)
+                        .join("index.html"),
                     &markdown_to_html(&markdown_file_contents),
                 );
 
@@ -50,28 +66,29 @@ fn build() {
                     Some(title) => &title[2..],
                     None => panic!("Cannot find a title in {}.", &route),
                 };
-                markdown_links_to_routes.push(format!("- [{}](/{})", title, route).to_string());
+                markdown_links_to_routes
+                    .push(format!("- [{}](/articles/{})", title, route).to_string());
             }
 
-            let markdown_home = format!("# Notes\n{}", markdown_links_to_routes.join("\n"));
+            let markdown_articles_index =
+                format!("# Articles\n{}", markdown_links_to_routes.join("\n"));
 
             paths::create_file(
-                &paths::build().join("index.html"),
-                &markdown_to_html(&markdown_home),
+                &paths::build().join("articles").join("index.html"),
+                &markdown_to_html(&markdown_articles_index),
             );
         }
         Err(error) => panic!("There was a problem: {:?}", error),
     };
 }
 
-// Adds a CNAME file for the host (GitHub Pages) and registrar (Hover) to use my custom domain name (trevordmiller.com)
 fn configure() {
     printing::subheading("Configuring build directory.");
 
-    paths::create_file(&paths::cname(), "trevordmiller.com");
+    // Adds a CNAME file for the host (GitHub Pages) and registrar (Hover) to use my custom domain name (trevordmiller.com)
+    paths::create_file(&paths::build().join("CNAME"), "trevordmiller.com");
 }
 
-// Converts markdown content into an HTML document
 fn markdown_to_html(markdown: &str) -> std::string::String {
     let parser = Parser::new_ext(markdown, Options::empty());
     let mut html = String::new();
@@ -80,33 +97,27 @@ fn markdown_to_html(markdown: &str) -> std::string::String {
     format!(
         "
         <!DOCTYPE html>
-        <html lang=\"en-US\">
+        <html lang='en-US'>
             <head>
                 <title>trevordmiller.com</title>
-                <meta name=\"author\" content=\"Trevor D. Miller\">
-                <meta name=\"description\" content=\"Personal website.\">
-                <meta charset=\"utf-8\">
-                <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
-                <style type=\"text/css\">
-                    /* Fix native overflow */
-                    pre {{
-                      overflow: auto;
-                    }}
-                </style>
+                <meta name='author' content='Trevor D. Miller'>
+                <meta name='description' content='Personal website.'>
+                <meta charset='utf-8'>
+                <meta name='viewport' content='width=device-width, initial-scale=1'>
+                <link rel='stylesheet' href='/public/theme.css' />
             </head>
             <body>
                 <header>
                     <nav>
-                        <a href=\"/\">Notes</a>
-                        <a href=\"https://github.com/trevordmiller\">GitHub</a>
-                        <a href=\"https://www.linkedin.com/in/trevordmiller\">LinkedIn</a>
+                        <a href='/'>trevordmiller</a>
+                        <a href='/code'>Code</a>
+                        <a href='/articles'>Articles</a>
+                        <a href='/videos'>Videos</a>
+                        <a href='/resume'>Resume</a>
                     </nav>
                 </header>
-                <hr />
                 <main>
-                    <article>
-                        {}
-                    </article>
+                    {}
                 </main>
               </body>
         </html>

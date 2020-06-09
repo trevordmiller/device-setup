@@ -93,6 +93,10 @@ video {
   background: whitesmoke;
 }
 
+pre {
+  overflow: auto;
+}
+
 @media screen and (min-width: 80ch) {
   header {
     position: sticky;
