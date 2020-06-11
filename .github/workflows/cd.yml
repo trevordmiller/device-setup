@@ -26,9 +26,14 @@ jobs:
           GH_PAT: ${{ secrets.GH_PAT }}
       - name: Audit
         if: success()
-        uses: treosh/lighthouse-ci-action@v2
+        uses: treosh/lighthouse-ci-action@v3
         with:
-          urls: "https://trevordmiller.com"
           configPath: "./.github/workflows/production-website.json"
           temporaryPublicStorage: true
-          runs: 3
+          urls: |
+            https://trevordmiller.com
+            https://trevordmiller.com/articles/
+            https://trevordmiller.com/articles/standard-vim/
+            https://trevordmiller.com/videos/
+            https://trevordmiller.com/code/
+            https://trevordmiller.com/resume/

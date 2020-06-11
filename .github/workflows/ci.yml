@@ -59,8 +59,7 @@ jobs:
       - name: Exit
         run: exit ${{ steps.lc.outputs.exit_code }}
       - name: Audit
-        uses: treosh/lighthouse-ci-action@v2
+        uses: treosh/lighthouse-ci-action@v3
         with:
           configPath: "./.github/workflows/local-website.json"
           temporaryPublicStorage: true
-          runs: 3
