@@ -2,26 +2,27 @@
 
 My programming tutorials that are public.
 
-- [Diagnose which commit broke something with git bisect](/public/git-bisect.mp4).
-- [Use semantic versioning with git tag](/public/git-tag.mp4).
-- [Clean up commits with git rebase](/public/git-rebase.mp4).
-- [Remove all unnecessary git tracking with a global .gitignorefile](/public/git-gitignore-global.mp4).
-- [Remove unnecessary git tracking with .gitignore files](/public/git-gitignore.mp4).
-- [Configure global settings with git config](/public/git-config.mp4).
-- [Run scripts on git events with git hooks](/public/git-hooks.mp4).
-- [Show who changed a line last with git blame](/public/git-blame.mp4).
-- [Compare file changes with git diff](/public/git-diff.mp4).
-- [Filter commit history with git log arguments](/public/git-log-filter.mp4).
-- [Format commit history with git log arguments](/public/git-log-format.mp4).
-- [View commit history with git log](/public/git-log.mp4).
-- [Navigate git command pager output with Unix less commands](/public/git-less-navigation.mp4).
-- [Save uncommitted changes with git stash](/public/git-stash.mp4).
-- [Resolve merge conflicts with git status](/public/git-status-conflicts.mp4).
-- [Sync branches with git merge](/public/git-merge.mp4).
-- [Isolate feature development with git branch](/public/git-branch.mp4).
-- [Sync local and remote repos with git pull](/public/git-pull.mp4).
-- [Document repos with README files](/public/git-readme.mp4).
-- [Capture code history snapshots with git add/commit/push](/public/git-add-commit-push.mp4).
-- [Copy remote repos to local machines with git clone](/public/git-clone.mp4).
-- [Create local repos with git init](/public/git-init.mp4).
-- [View all](https://egghead.io/instructors/trevor-miller).
+- [Git bisect: diagnose which commit broke something with git bisect](/public/git-bisect.mp4).
+- [Git tag: use semantic versioning with git tag](/public/git-tag.mp4).
+- [Git rebase: clean up commits with git rebase](/public/git-rebase.mp4).
+- [Git ignore global: remove all unnecessary git tracking with a global .gitignorefile](/public/git-ignore-global.mp4).
+- [Git ignore: remove unnecessary git tracking with .gitignore files](/public/git-ignore.mp4).
+- [Git config: configure global settings with git config](/public/git-config.mp4).
+- [Git hooks: run scripts on git events with git hooks](/public/git-hooks.mp4).
+- [Git blame: show who changed a line last with git blame](/public/git-blame.mp4).
+- [Git diff: dompare file changes with git diff](/public/git-diff.mp4).
+- [Git log filter: filter commit history with git log arguments](/public/git-log-filter.mp4).
+- [Git log format: format commit history with git log arguments](/public/git-log-format.mp4).
+- [Git log: view commit history with git log](/public/git-log.mp4).
+- [Git output: navigate git command pager output with Unix less commands](/public/git-output.mp4).
+- [Git stash: save uncommitted changes with git stash](/public/git-stash.mp4).
+- [Git conflicts: resolve merge conflicts with git status](/public/git-conflicts.mp4).
+- [Git merge: sync branches with git merge](/public/git-merge.mp4).
+- [Git branch: isolate feature development with git branch](/public/git-branch.mp4).
+- [Git pull: sync local and remote repos with git pull](/public/git-pull.mp4).
+- [Git readme: document repos with README files](/public/git-readme.mp4).
+- [Git commits: capture code history snapshots with git add/commit/push](/public/git-commits.mp4).
+- [Git clone: copy remote repos to local machines with git clone](/public/git-clone.mp4).
+- [Git init: create local repos with git init](/public/git-init.mp4).
+
+_[egghead.io](https://egghead.io/instructors/trevor-miller) has additional tutorials that I no longer work on._

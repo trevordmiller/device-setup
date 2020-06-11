@@ -371,7 +371,7 @@ some_value: some_type
 ## Annotate a type for a number without a decimal (integer types)
 
 ```rust
-{signed}{length}`
+u/isome_length
 ```
 
 - Like `u32`, `i32`, `u64`, etc. If can be negative needs signed (`i`), if only positive can be unsigned (`u`).

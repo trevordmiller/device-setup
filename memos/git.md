@@ -9,14 +9,14 @@ git --help
 ## Start working in an existing repo
 
 ```shell
-git clone some-repo
-cd some-repo
+git clone some_repo
+cd some_repo
 ```
 
 ## Search across tracked files
 
 ```shell
-git grep some-regex
+git grep some_regex
 ```
 
 ## Status
@@ -47,25 +47,25 @@ git diff origin/master
 ## Diff between branches
 
 ```shell
-git diff some-branch..another-branch
+git diff some_branch..another-branch
 ```
 
 ## Diff between tags
 
 ```shell
-git diff some-tag another-tag
+git diff some_tag another-tag
 ```
 
 ## Restore working directory version
 
 ```shell
-git checkout some-paths
+git checkout some_paths
 ```
 
 ## Stage
 
 ```shell
-git stage some-paths
+git stage some_paths
 ```
 
 ## Stage hunks
@@ -96,7 +96,7 @@ git push
 # With a merge commit
 git checkout master
 git pull
-git checkout some-branch
+git checkout some_branch
 git merge master
 # Fix conflicts
 git push
@@ -114,19 +114,19 @@ git push -f
 # With a revert commit
 git log
 # Find the reference of the commit to undo
-git revert some-reference
+git revert some_reference
 ```
 
 ## Blame
 
 ```shell
-git blame some-paths
+git blame some_paths
 ```
 
 ## Search
 
 ```shell
-git log -p -S "some-string"
+git log -p -S "some_string"
 ```
 
 ## Find the commit that broke something
@@ -134,9 +134,12 @@ git log -p -S "some-string"
 ```shell
 git bisect start
 git bisect bad
-git bisect good some-reference # with reference to when things were known to work
-git bisect bad/good # repeated until the binary search is complete
-git bisect reset # to clean up
+# Add reference to when things were known to work
+git bisect good some_reference
+# Repeated bad/good until the binary search is complete
+git bisect bad/good
+# Clean up
+git bisect reset
 ```
 
 ## Sync cache with an updated .gitignore

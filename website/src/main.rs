@@ -163,10 +163,10 @@ fn markdown_to_html(markdown: &str) -> std::string::String {
                 <header>
                     <nav>
                         <a href='/'>trevordmiller</a>
-                        <a href='/articles'>Articles</a>
-                        <a href='/videos'>Videos</a>
-                        <a href='/code'>Code</a>
-                        <a href='/resume'>Resume</a>
+                        <a href='/articles/'>Articles</a>
+                        <a href='/videos/'>Videos</a>
+                        <a href='/code/'>Code</a>
+                        <a href='/resume/'>Resume</a>
                     </nav>
                 </header>
                 <main>

@@ -3,7 +3,7 @@
 ## View help
 
 ```shell
-man some-thing
+man some_thing
 ```
 
 ## Interrupt a running process
@@ -15,7 +15,7 @@ man some-thing
 ## Run an executable
 
 ```shell
-./some-path<enter>
+./some_path<enter>
 ```
 
 ## Print working directory
@@ -45,19 +45,19 @@ top
 ## Stop a process and allow it to finish (SIGTERM)
 
 ```shell
-kill -15 some-pid
+kill -15 some_pid
 ```
 
 ## Force a process to quit with potential data loss or corruption (SIGKILL)
 
 ```shell
-kill -9 some-pid
+kill -9 some_pid
 ```
 
 ## Quit all spawned processes with a specific name
 
 ```shell
-killall some-process-name
+killall some_process-name
 ```
 
 ## List directory contents
@@ -75,7 +75,7 @@ ls -a
 ## Change directory
 
 ```shell
-cd some-path
+cd some_path
 ```
 
 ## Change to last directory
@@ -87,49 +87,49 @@ cd -
 ## Create directory
 
 ```shell
-mkdir some-directory
+mkdir some_directory
 ```
 
 ## Create file
 
 ```shell
-touch some-file
+touch some_file
 ```
 
 ## Remove directory
 
 ```shell
-rm -rf some-directory
+rm -rf some_directory
 ```
 
 ## Remove file
 
 ```shell
-rm some-file
+rm some_file
 ```
 
 ## Move directory
 
 ```shell
-mv some-directory another-directory
+mv some_directory another-directory
 ```
 
 ## Move file
 
 ```shell
-mv some-directory another-directory
+mv some_directory another-directory
 ```
 
 ## Copy directory
 
 ```shell
-cp -R some-directory another-directory
+cp -R some_directory another-directory
 ```
 
 ## Copy file
 
 ```shell
-cp some-file another-file
+cp some_file another-file
 ```
 
 ## Re-run commands
@@ -144,49 +144,49 @@ Some search
 ## See where an executable is installed
 
 ```shell
-which some-executable
+which some_executable
 ```
 
 ## Pipe output from one command as input to another
 
 ```shell
-some-command | another-command
+some_command | another-command
 ```
 
 ## Redirect output from one command to a file
 
 ```shell
-some-command > some-file
+some_command > some_file
 ```
 
 ## Use file contents in a command
 
 ```shell
-some-file < some-command
+some_file < some_command
 ```
 
 ## Run a command if another is successful
 
 ```shell
-some-command && another-command
+some_command && another-command
 ```
 
 ## File contents
 
 ```shell
-cat some-file
+cat some_file
 ```
 
 ## Page contents
 
 ```shell
-less some-file
+less some_file
 ```
 
 ## Search
 
 ```shell
-grep some-regex
+grep some_regex
 ```
 
 Examples:
@@ -198,25 +198,25 @@ ps -ef | grep systemd
 ## Search ignoring the casing
 
 ```shell
-grep -i some-regex
+grep -i some_regex
 ```
 
 ## Search a path
 
 ```shell
-grep -R some-regex some-path
+grep -R some_regex some_path
 ```
 
 ## Substitute
 
 ```shell
-sed 's/some-regex/some-replacement/g' some-file
+sed 's/some_regex/some_replacement/g' some_file
 ```
 
 ## Send HTTP requests
 
 ```shell
-curl some-url
+curl some_url
 ```
 
 ## Run executable files
@@ -236,7 +236,7 @@ chmod +x some_executable
 ## Work on a remote server
 
 ```shell
-ssh some-remote-server
+ssh some_remote-server
 # Run other unix commands
 exit
 ```
@@ -244,7 +244,7 @@ exit
 ## Run a command on a remote server
 
 ```shell
-ssh some-remote-server "some-command"
+ssh some_remote-server "some_command"
 ```
 
 ## Show who is logged in
@@ -262,7 +262,7 @@ echo "Some text"
 Examples:
 
 ```shell
-echo "Some text to append to file" >> some-file
+echo "Some text to append to file" >> some_file
 ```
 
 ## Check environment variables
@@ -280,54 +280,14 @@ vim
 ### View help
 
 ```shell
-:h some-thing
+:h some_thing
 ```
 
 ### Start
 
 ```shell
-cd some-project-directory-root
+cd some_project-directory-root
 vim
-```
-
-### Switch to a shell
-
-```shell
-:sh
-# Run shell commands
-<ctrl d>
-```
-
-### Search
-
-```shell
-:vim /some-regex/ some-path
-:cn/p # to jump between quickfix results
-:copen # to show all quickfix results
-```
-
-Examples:
-
-```shell
-:vim /test/ **/*
-:vim /fn/ **/*.rs
-:vim /#/ **/.*
-```
-
-### Edit
-
-```shell
-:e some-path
-```
-
-Examples:
-
-```shell
-:e **/*some-file<tab>
-:e src/**/*some-file<tab>
-:e **/*<tab>
-:e src/
-:e .
 ```
 
 ### Write
@@ -342,95 +302,67 @@ Examples:
 :wq
 ```
 
+### Switch to a shell
+
+```shell
+:sh
+# Run shell commands
+<ctrl d>
+```
+
+### Explore directories
+
+```shell
+:e some_directory
+```
+
+Examples:
+
+```shell
+:e src/
+:e .
+```
+
+### Edit files
+
+```shell
+:e some_file
+```
+
+Examples:
+
+```shell
+:e **/*some_file<tab>
+:e src/**/*some_file<tab>
+:e **/*<tab>
+```
+
+### Search project
+
+```shell
+:vim /some_regex/ some_path
+:cn/p # to jump between quickfix results
+:copen # to show all quickfix results
+```
+
+Examples:
+
+```shell
+:vim /test/ **/*
+:vim /fn/ **/*.rs
+:vim /#/ **/.*
+```
+
 ### Page
 
 ```shell
 <ctrl f/b>
 ```
 
-### Search
+### Repeat
 
 ```shell
-/some-regex
-n # to move to the next
-```
-
-### Block
-
-```shell
-{ / }
-```
-
-### Top
-
-```shell
-gg
-```
-
-### Bottom
-
-```shell
-G
-```
-
-### Format
-
-```shell
-=
-```
-
-### Change
-
-```shell
-c
-```
-
-### Delete
-
-```shell
-d
-```
-
-### Yank
-
-```shell
-y
-```
-
-### Put
-
-```shell
-p
-```
-
-### Inside
-
-```shell
-i
-```
-
-### Around
-
-```shell
-a
-```
-
-### Braces
-
-```shell
-{
-```
-
-### Parenthesis
-
-```shell
-(
-```
-
-### Tag
-
-```shell
-t
+.
 ```
 
 ### Undo
@@ -445,24 +377,6 @@ u
 <ctrl r>
 ```
 
-### Put from the clipboard
-
-```shell
-"+p
-```
-
-### Delete to the clipboard
-
-```shell
-"+d
-```
-
-### Yank to the clipboard
-
-```shell
-"+y
-```
-
 ### Split windows
 
 ```shell
@@ -475,7 +389,7 @@ u
 <ctrl w h/j/k/l>
 ```
 
-### Go in/out
+### Go in/out (forward/back)
 
 ```shell
 <ctrl i/o>
@@ -505,7 +419,7 @@ gf
 ### Substitute
 
 ```shell
-:some-range s/some-regex/some-replacement/g
+:some_range s/some_regex/some_replacement/g
 ```
 
 Examples:
@@ -517,20 +431,20 @@ Examples:
 ### Apply commands to each quickfix item
 
 ```shell
-:cdo {command}
+:cdo some_command
 ```
 
 Examples:
 
 ```shell
 # Populate the quickfix with something like :vim[grep]
-:cdo normal dd
+:cdo normal d/foo
 ```
 
 ### Apply commands to each quickfix file
 
 ```shell
-:cfdo {command}
+:cfdo some_command
 ```
 
 Examples:
@@ -546,7 +460,7 @@ Examples:
 qq
 # Complete generic commands for a line
 q
-:some-range normal @q
+:some_range normal @q
 ```
 
 ### Apply generic commands across files (macro)
@@ -562,11 +476,156 @@ q
 ### Apply ex commands to patterns in a file
 
 ```shell
-:some-range g/some-regex/some-command
+:some_range g/some_regex/some_command
 ```
 
 Examples:
 
 ```shell
-:g/deleteMe/d
+:g/delete_me/d
+```
+
+### Compose commands
+
+Operators, motions, text objects etc. can composed in powerful ways like you are talking to the computer in a sentence of what you want to do.
+
+Examples:
+
+```shell
+/foo # search for foo
+d/foo # delete up to foo
+dw # delete word
+c$ # change to end of line
+ci{ # change inside braces
+ya[ # yank around brackets
+"+p # clipboard register put
+=G # format to end of file
+# etc.
+```
+
+#### Search file
+
+```shell
+/some_regex
+n # to move to the next
+```
+
+#### Change
+
+```shell
+c
+```
+
+#### Delete
+
+```shell
+d
+```
+
+#### Yank (copy)
+
+```shell
+y
+```
+
+#### Put (paste)
+
+```shell
+p
+```
+
+#### Inside
+
+```shell
+i
+```
+
+#### Around
+
+```shell
+a
+```
+
+#### Parenthesis
+
+```shell
+(
+```
+
+#### Braces
+
+```shell
+{
+```
+
+#### Brackets
+
+```shell
+[
+```
+
+#### Double quotes
+
+```shell
+"
+```
+
+#### Single quotes
+
+```shell
+'
+```
+
+#### Backtick
+
+```shell
+`
+```
+
+#### Tag
+
+```shell
+t
+```
+
+#### Word
+
+```shell
+w
+```
+
+#### Start of line
+
+```shell
+^
+```
+
+#### End of line
+
+```shell
+$
+```
+
+#### File top
+
+```shell
+gg
+```
+
+#### File bottom
+
+```shell
+G
+```
+
+#### Format
+
+```shell
+=
+```
+
+#### Clipboard register
+
+```shell
+"+
 ```
