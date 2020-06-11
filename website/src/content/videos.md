@@ -1,6 +1,6 @@
 # Videos
 
-My public programming video lessons.
+My public tutorials.
 
 - [Diagnose which commit broke something with git bisect](/public/git-bisect.mp4).
 - [Use semantic versioning with git tag](/public/git-tag.mp4).

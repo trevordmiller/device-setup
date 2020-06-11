@@ -92,11 +92,11 @@ fn generate_articles() {
                     None => panic!("Cannot find a title in {}.", &route),
                 };
                 markdown_links_to_routes
-                    .push(format!("- [{}](/articles/{})", title, route).to_string());
+                    .push(format!("- [{}.](/articles/{})", title, route).to_string());
             }
 
             let markdown_articles_index = format!(
-                "# Articles\nMy thoughts on software development.\n{}",
+                "# Articles\nMy posts on software development.\n{}",
                 markdown_links_to_routes.join("\n")
             );
 
@@ -174,7 +174,7 @@ fn markdown_to_html(markdown: &str) -> std::string::String {
                 </main>
                 <footer>
                     <h2>Get my latest content by email</h2>
-                    <p>I won't send you spam or sell/share your email. Unsubscribe at any time.</p>
+                    <p>I won't sell or share your email. I won't send you spam. You can unsubscribe at any time.</p>
                     <script async data-uid='b00e0e63dc' src='https://trevordmiller.ck.page/b00e0e63dc/index.js'></script>
                 </footer>
               </body>

@@ -66,6 +66,12 @@ cargo check
 rustc --explain some_error_id
 ```
 
+## Include a backtrace on a compilation error
+
+```shell
+RUST_BACKTRACE=1 cargo ...
+```
+
 ## Fix compilation errors that can be fixed automatically
 
 ```shell

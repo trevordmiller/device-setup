@@ -1,6 +1,6 @@
 # Code
 
-My open source code repositories.
+My open source repositories.
 
-- [Personal workspace](https://github.com/trevordmiller/trevordmiller).
+- [trevordmiller: personal workspace](https://github.com/trevordmiller/trevordmiller).
 - [View all](https://github.com/trevordmiller).
