@@ -66,6 +66,12 @@ cargo check
 rustc --explain some_error_id
 ```
 
+## Include a backtrace on a compilation error
+
+```shell
+RUST_BACKTRACE=1 cargo ...
+```
+
 ## Fix compilation errors that can be fixed automatically
 
 ```shell
@@ -96,13 +102,13 @@ cargo clippy
 cargo fmt
 ```
 
-## Generate documentation
+## Generate project documentation
 
 ```shell
 cargo doc
 ```
 
-## View documentation
+## View project documentation
 
 ```shell
 cargo doc --open
@@ -165,15 +171,7 @@ jobs:
 
 - `some_library = "x.y.z"` manually added in `[dependencies]` section of `Cargo.toml`
 - From `crates.io`
-- Updates `Cargo.lock` during the next compile
-
-## Bring a library into scope
-
-```rust
-use some_library::some_module;
-```
-
-- Brings the last item after the `::` into scope on top of the minimal prelude
+- Updates `Cargo.lock` during the next compile (`cargo build`, `cargo run`, `cargo check`, `cargo test`, etc.)
 
 ## Upgrade all dependencies to the latest patch versions
 
@@ -185,6 +183,14 @@ cargo update
 
 - Manually change in `[dependencies]` section of `Cargo.toml` to a different version
 - Updates `Cargo.lock` during the next compile
+
+## Bring a library into scope
+
+```rust
+use some_library::some_module;
+```
+
+- Brings the last item after the `::` into scope on top of the minimal prelude
 
 ## Create a public facing contract
 

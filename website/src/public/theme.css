@@ -1,7 +1,7 @@
 html {
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica,
     Arial, Verdana, sans-serif;
-  color: black;
+  color: #333333;
 }
 
 body {
@@ -9,8 +9,8 @@ body {
 }
 
 header {
-  background: whitesmoke;
-  border-bottom: 1px solid lightgray;
+  background: #f5f5f5;
+  border-bottom: 1px solid #d3d3d3;
 }
 
 header nav {
@@ -22,7 +22,7 @@ header a {
   padding: 1rem;
   font-family: "Courier New", Courier, monospace;
   text-decoration: none;
-  color: dimgray;
+  color: #333333;
   display: block;
 }
 
@@ -40,7 +40,7 @@ header a:first-of-type::after {
   content: "";
   margin: 0 0 0 1ch;
   display: inline-block;
-  background: dimgray;
+  background: #333333;
   width: 1ch;
   height: 1em;
   animation: cursor 800ms infinite;
@@ -60,28 +60,6 @@ header a:first-of-type::after {
   }
 }
 
-main {
-  max-width: 80ch;
-  margin: 0 auto;
-  padding: 1rem;
-}
-
-h2:not(:first-of-type) {
-  margin: 2rem 0 1rem 0;
-  padding: 2rem 0 0 0;
-  border-top: 1px solid lightgray;
-}
-
-pre {
-  overflow: auto;
-}
-
-video {
-  width: 100%;
-  max-height: 100%;
-  background: whitesmoke;
-}
-
 @media screen and (min-width: 80ch) {
   header {
     position: sticky;
@@ -96,4 +74,31 @@ video {
   header a:first-of-type {
     flex: 1;
   }
+}
+
+main {
+  max-width: 80ch;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+main pre {
+  overflow: auto;
+}
+
+main video {
+  width: 100%;
+  max-height: 100%;
+  background: #f5f5f5;
+}
+
+footer {
+  max-width: 80ch;
+  margin: 2rem auto 0 auto;
+  padding: 2rem 1rem 1rem 1rem;
+  border-top: 1px solid #d3d3d3;
+}
+
+footer .formkit-powered-by {
+  display: none !important;
 }

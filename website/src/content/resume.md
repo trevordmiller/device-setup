@@ -1,6 +1,6 @@
 # Resume
 
-My professional background.
+My professional background as a software developer.
 
 ## Experience
 
