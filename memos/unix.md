@@ -310,7 +310,34 @@ vim
 <ctrl d>
 ```
 
-### Search
+### Explore directories
+
+```shell
+:e some_directory
+```
+
+Examples:
+
+```shell
+:e src/
+:e .
+```
+
+### Edit files
+
+```shell
+:e some_file
+```
+
+Examples:
+
+```shell
+:e **/*some_file<tab>
+:e src/**/*some_file<tab>
+:e **/*<tab>
+```
+
+### Search project
 
 ```shell
 :vim /some_regex/ some_path
@@ -326,111 +353,16 @@ Examples:
 :vim /#/ **/.*
 ```
 
-### Edit
-
-```shell
-:e some_path
-```
-
-Examples:
-
-```shell
-:e **/*some_file<tab>
-:e src/**/*some_file<tab>
-:e **/*<tab>
-:e src/
-:e .
-```
-
 ### Page
 
 ```shell
 <ctrl f/b>
 ```
 
-### Search
+### Repeat
 
 ```shell
-/some_regex
-n # to move to the next
-```
-
-### Block
-
-```shell
-{ / }
-```
-
-### Top
-
-```shell
-gg
-```
-
-### Bottom
-
-```shell
-G
-```
-
-### Format
-
-```shell
-=
-```
-
-### Change
-
-```shell
-c
-```
-
-### Delete
-
-```shell
-d
-```
-
-### Yank
-
-```shell
-y
-```
-
-### Put
-
-```shell
-p
-```
-
-### Inside
-
-```shell
-i
-```
-
-### Around
-
-```shell
-a
-```
-
-### Braces
-
-```shell
-{
-```
-
-### Parenthesis
-
-```shell
-(
-```
-
-### Tag
-
-```shell
-t
+.
 ```
 
 ### Undo
@@ -445,24 +377,6 @@ u
 <ctrl r>
 ```
 
-### Put from the clipboard
-
-```shell
-"+p
-```
-
-### Delete to the clipboard
-
-```shell
-"+d
-```
-
-### Yank to the clipboard
-
-```shell
-"+y
-```
-
 ### Split windows
 
 ```shell
@@ -475,7 +389,7 @@ u
 <ctrl w h/j/k/l>
 ```
 
-### Go in/out
+### Go in/out (forward/back)
 
 ```shell
 <ctrl i/o>
@@ -524,7 +438,7 @@ Examples:
 
 ```shell
 # Populate the quickfix with something like :vim[grep]
-:cdo normal dd
+:cdo normal d/foo
 ```
 
 ### Apply commands to each quickfix file
@@ -569,4 +483,149 @@ Examples:
 
 ```shell
 :g/delete_me/d
+```
+
+### Compose commands
+
+Operators, motions, text objects etc. can composed in powerful ways like you are talking to the computer in a sentence of what you want to do.
+
+Examples:
+
+```shell
+/foo # search for foo
+d/foo # delete up to foo
+dw # delete word
+c$ # change to end of line
+ci{ # change inside braces
+ya[ # yank around brackets
+"+p # clipboard register put
+=G # format to end of file
+# etc.
+```
+
+#### Search file
+
+```shell
+/some_regex
+n # to move to the next
+```
+
+#### Change
+
+```shell
+c
+```
+
+#### Delete
+
+```shell
+d
+```
+
+#### Yank (copy)
+
+```shell
+y
+```
+
+#### Put (paste)
+
+```shell
+p
+```
+
+#### Inside
+
+```shell
+i
+```
+
+#### Around
+
+```shell
+a
+```
+
+#### Parenthesis
+
+```shell
+(
+```
+
+#### Braces
+
+```shell
+{
+```
+
+#### Brackets
+
+```shell
+[
+```
+
+#### Double quotes
+
+```shell
+"
+```
+
+#### Single quotes
+
+```shell
+'
+```
+
+#### Backtick
+
+```shell
+`
+```
+
+#### Tag
+
+```shell
+t
+```
+
+#### Word
+
+```shell
+w
+```
+
+#### Start of line
+
+```shell
+^
+```
+
+#### End of line
+
+```shell
+$
+```
+
+#### File top
+
+```shell
+gg
+```
+
+#### File bottom
+
+```shell
+G
+```
+
+#### Format
+
+```shell
+=
+```
+
+#### Clipboard register
+
+```shell
+"+
 ```
