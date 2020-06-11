@@ -2,49 +2,32 @@
 
 - [x] [Rust: A Language for the Next 40 Years](https://www.invidio.us/watch?v=A3AdN7U24iU).
 - [x] [Considering Rust](https://www.invidio.us/watch?v=DnT-LUQgc7s).
-- [ ] [Crash Course - Computer Science](https://www.invidio.us/playlist?list=PL8dPuuaLjXtNlUrzyH5r6jN9ulIgZBpdo).
-  - [ ] Episode 1.
-  - [ ] Episode 2.
-  - [ ] Episode 3.
-  - [ ] Episode 4.
-  - [ ] Episode 5.
-  - [ ] Episode 6.
-  - [ ] Episode 7.
-  - [ ] Episode 8.
-  - [ ] Episode 9.
-  - [ ] Episode 10.
-  - [ ] Episode 11.
-  - [ ] Episode 12.
-  - [ ] Episode 13.
-  - [ ] Episode 14.
-  - [ ] Episode 15.
-  - [ ] Episode 16.
-  - [ ] Episode 17.
-  - [ ] Episode 18.
-  - [ ] Episode 19.
-  - [ ] Episode 20.
-  - [ ] Episode 21.
-  - [ ] Episode 22.
-  - [ ] Episode 23.
-  - [ ] Episode 24.
-  - [ ] Episode 25.
-  - [ ] Episode 26.
-  - [ ] Episode 27.
-  - [ ] Episode 28.
-  - [ ] Episode 29.
-  - [ ] Episode 30.
-  - [ ] Episode 31.
-  - [ ] Episode 32.
-  - [ ] Episode 33.
-  - [ ] Episode 34.
-  - [ ] Episode 35.
-  - [ ] Episode 36.
-  - [ ] Episode 37.
-  - [ ] Episode 38.
-  - [ ] Episode 39.
-  - [ ] Episode 40.
 - [ ] [How Computer Memory Works](https://www.invidio.us/watch?v=XETZoRYdtkw).
 - [ ] [Regular Expressions](https://www.invidio.us/watch?v=528Jc3q86F8).
 - [ ] [Using Regular Expressions](https://www.invidio.us/watch?v=6gddK-cOxYc).
 - [ ] [Parsing Explained](https://www.invidio.us/watch?v=bxpc9Pp5pZM).
 - [ ] [Pointer Power](https://www.invidio.us/watch?v=t5NszbIerYc).
+- [ ] [Programming Loops vs Recursion](https://www.invidio.us/watch?v=HXNhEYqFo0o).
+- [ ] [Boolean Logic & Logic Gates](https://www.invidio.us/watch?v=gI-qXk7XojA).
+- [ ] [Representing Numbers and Letters with Binary](https://www.invidio.us/watch?v=1GSjbWt0c9M).
+- [ ] [How Computers Calculate - the ALU](https://www.invidio.us/watch?v=1I5ZMmrOfnA).
+- [ ] [Registers and RAM](https://www.invidio.us/watch?v=fpnE6UAfbtU).
+- [ ] [The Central Processing Unit (CPU)](https://www.invidio.us/watch?v=FZGugFqdr60).
+- [ ] [Instructions & Programs](https://www.invidio.us/watch?v=zltgXvg6r3k).
+- [ ] [Advanced CPU Designs](https://www.invidio.us/watch?v=rtAlC5J1U40).
+- [ ] [Operating Systems](https://www.invidio.us/watch?v=26QPDBe-NB8).
+- [ ] [Memory & Storage](https://www.invidio.us/watch?v=TQCr9RV7twk).
+- [ ] [Files & File Systems](https://www.invidio.us/watch?v=KN8YgJnShPM).
+- [ ] [Compression](https://www.invidio.us/watch?v=OtDxDvCpPL4).
+- [ ] [Computer Networks](https://www.invidio.us/watch?v=3QhU9jd03a0).
+- [ ] [Algorithms: Binary Search](https://invidio.us/watch?v=P3YID7liBug).
+- [ ] [Algorithms: Quicksort](https://invidio.us/watch?v=SLauY6PpjW4).
+- [ ] [Algorithms: Merge Sort](https://invidio.us/watch?v=KF2j-9iSf4Q).
+- [ ] [Algorithms: Bubble Sort](https://invidio.us/watch?v=6Gv8vg0kcHc).
+- [ ] [Data Structures: Hash Tables](https://invidio.us/watch?v=EgCOq1GtPKk).
+- [ ] [Data Structures: Heaps](https://invidio.us/watch?v=t0Cq6tVNRBA).
+- [ ] [Data Structures: Tries](https://invidio.us/watch?v=zIjfhVPRZCg).
+- [ ] [Data Structures: Trees](https://invidio.us/watch?v=oSWTXtMglKE).
+- [ ] [Data Structures: Binary Search Tree](https://invidio.us/watch?v=i_Q0v_Ct5lY).
+- [ ] [Data Structures: Linked Lists](https://invidio.us/watch?v=njTh_OwMljA).
+- [ ] [Data Structures: Stacks and Queues](https://invidio.us/watch?v=wjI1WNcIntg).
