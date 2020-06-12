@@ -6,10 +6,10 @@
     },
     "assert": {
       "assertions": {
-        "categories:performance": ["error", { "minScore": 1.0 }],
-        "categories:accessibility": ["error", { "minScore": 0.79 }],
-        "categories:best-practices": ["error", { "minScore": 1.0 }],
-        "categories:seo": ["error", { "minScore": 1.0 }],
+        "categories:performance": ["error", { "minScore": 0.80 }],
+        "categories:accessibility": ["error", { "minScore": 0.80 }],
+        "categories:best-practices": ["error", { "minScore": 0.80 }],
+        "categories:seo": ["error", { "minScore": 0.80 }],
         "uses-http2": "off"
       }
     }
