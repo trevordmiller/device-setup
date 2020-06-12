@@ -47,13 +47,13 @@ git diff origin/master
 ## Diff between branches
 
 ```shell
-git diff some_branch..another-branch
+git diff some_branch..another_branch
 ```
 
 ## Diff between tags
 
 ```shell
-git diff some_tag another-tag
+git diff some_tag another_tag
 ```
 
 ## Restore working directory version

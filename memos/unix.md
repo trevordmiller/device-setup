@@ -57,7 +57,7 @@ kill -9 some_pid
 ## Quit all spawned processes with a specific name
 
 ```shell
-killall some_process-name
+killall some_process_name
 ```
 
 ## List directory contents
@@ -111,25 +111,25 @@ rm some_file
 ## Move directory
 
 ```shell
-mv some_directory another-directory
+mv some_directory another_directory
 ```
 
 ## Move file
 
 ```shell
-mv some_directory another-directory
+mv some_directory another_directory
 ```
 
 ## Copy directory
 
 ```shell
-cp -R some_directory another-directory
+cp -R some_directory another_directory
 ```
 
 ## Copy file
 
 ```shell
-cp some_file another-file
+cp some_file another_file
 ```
 
 ## Re-run commands
@@ -150,7 +150,7 @@ which some_executable
 ## Pipe output from one command as input to another
 
 ```shell
-some_command | another-command
+some_command | another_command
 ```
 
 ## Redirect output from one command to a file
@@ -168,7 +168,7 @@ some_file < some_command
 ## Run a command if another is successful
 
 ```shell
-some_command && another-command
+some_command && another_command
 ```
 
 ## File contents
@@ -236,7 +236,7 @@ chmod +x some_executable
 ## Work on a remote server
 
 ```shell
-ssh some_remote-server
+ssh some_remote_server
 # Run other unix commands
 exit
 ```
@@ -244,7 +244,7 @@ exit
 ## Run a command on a remote server
 
 ```shell
-ssh some_remote-server "some_command"
+ssh some_remote_server "some_command"
 ```
 
 ## Show who is logged in
@@ -286,7 +286,7 @@ vim
 ### Start
 
 ```shell
-cd some_project-directory-root
+cd some_project_directory_root
 vim
 ```
 
@@ -487,19 +487,35 @@ Examples:
 
 ### Compose commands
 
-Operators, motions, text objects etc. can composed in powerful ways like you are talking to the computer in a sentence of what you want to do.
+Operators, motions, text objects etc. can be composed like a sentence.
 
 Examples:
 
 ```shell
-/foo # search for foo
-d/foo # delete up to foo
-dw # delete word
-c$ # change to end of line
-ci{ # change inside braces
-ya[ # yank around brackets
-"+p # clipboard register put
-=G # format to end of file
+# search for 'foo'
+/foo
+
+# delete up to 'foo'
+d/foo
+
+# delete word
+dw
+
+# change to end of line
+c$
+
+# change inside braces
+ci{
+
+# yank around brackets
+ya[
+
+# clipboard register put
+"+p
+
+# format to end of file
+=G
+
 # etc.
 ```
 
