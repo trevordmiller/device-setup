@@ -13,7 +13,7 @@ The advantage of using native Vim functionality is that it is portable; it works
 ## Start
 
 ```shell
-cd some_project-directory-root
+cd some_project_directory_root
 vim
 ```
 
@@ -212,21 +212,37 @@ Examples:
 :g/delete_me/d
 ```
 
-## Compose commands
+### Compose commands
 
-Operators, motions, text objects etc. can composed in powerful ways like you are talking to the computer in a sentence of what you want to do.
+Operators, motions, text objects etc. can be composed like a sentence.
 
 Examples:
 
 ```shell
-/foo # search for foo
-d/foo # delete up to foo
-dw # delete word
-c$ # change to end of line
-ci{ # change inside braces
-ya[ # yank around brackets
-"+p # clipboard register put
-=G # format to end of file
+# search for 'foo'
+/foo
+
+# delete up to 'foo'
+d/foo
+
+# delete word
+dw
+
+# change to end of line
+c$
+
+# change inside braces
+ci{
+
+# yank around brackets
+ya[
+
+# clipboard register put
+"+p
+
+# format to end of file
+=G
+
 # etc.
 ```
 
