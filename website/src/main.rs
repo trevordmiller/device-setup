@@ -143,6 +143,110 @@ fn configure() {
 }
 
 fn markdown_to_html(markdown: &str) -> std::string::String {
+    let css = r#"
+        html {
+          font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
+          color: #333333;
+        }
+
+        body {
+          margin: 0;
+        }
+
+        header {
+          background: #f5f5f5;
+          border-bottom: 1px solid #d3d3d3;
+        }
+
+        header nav {
+          max-width: 80ch;
+          margin: 0 auto;
+        }
+
+        header a {
+          padding: 1rem;
+          font-family: "Courier New", Courier, monospace;
+          text-decoration: none;
+          color: #333333;
+          display: block;
+        }
+
+        header a:first-of-type {
+          display: flex;
+          align-items: center;
+        }
+
+        header a:first-of-type::before {
+          content: ">";
+          margin: 0 1ch 0 0;
+        }
+
+        header a:first-of-type::after {
+          content: "";
+          margin: 0 0 0 1ch;
+          display: inline-block;
+          background: #333333;
+          width: 1ch;
+          height: 1em;
+          animation: cursor 800ms infinite;
+        }
+
+        @keyframes cursor {
+          0% {
+            opacity: 0;
+          }
+
+          50% {
+            opacity: 1;
+          }
+
+          to {
+            opacity: 0;
+          }
+        }
+
+        @media screen and (min-width: 80ch) {
+          header {
+            position: sticky;
+            top: 0;
+          }
+
+          header nav {
+            display: flex;
+            align-items: center;
+          }
+
+          header a:first-of-type {
+            flex: 1;
+          }
+        }
+
+        main {
+          max-width: 80ch;
+          margin: 0 auto;
+          padding: 1rem;
+        }
+
+        main pre code {
+          overflow: auto;
+          display: block;
+          padding: 1rem;
+          background: #f5f5f5;
+          border-radius: 3px;
+        }
+
+        footer {
+          max-width: 80ch;
+          margin: 2rem auto 0 auto;
+          padding: 2rem 1rem 1rem 1rem;
+          border-top: 1px solid #d3d3d3;
+        }
+
+        footer .formkit-powered-by {
+          display: none !important;
+        }
+    "#;
+
     let parser = Parser::new_ext(markdown, Options::empty());
     let mut html = String::new();
     html::push_html(&mut html, parser);
@@ -157,7 +261,9 @@ fn markdown_to_html(markdown: &str) -> std::string::String {
                 <meta name='description' content='Personal website.'>
                 <meta charset='utf-8'>
                 <meta name='viewport' content='width=device-width, initial-scale=1'>
-                <link rel='stylesheet' href='/public/theme.css' />
+                <style type='text/css'>
+                    {}
+                </style>
             </head>
             <body>
                 <header>
@@ -180,6 +286,7 @@ fn markdown_to_html(markdown: &str) -> std::string::String {
               </body>
         </html>
     ",
+        css,
         &html
     )
 }
