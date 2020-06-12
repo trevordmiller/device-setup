@@ -1,6 +1,7 @@
 # Articles
 
 - [x] [Vim Grammar](http://takac.github.io/2013/01/30/vim-grammar/).
+- [ ] [Why the developers who use Rust love it so much](https://stackoverflow.blog/2020/06/05/why-the-developers-who-use-rust-love-it-so-much/).
 - [ ] [A half-hour to learn Rust](https://fasterthanli.me/blog/2020/a-half-hour-to-learn-rust/).
 - [ ] [The Rust Programming Language - Understanding Ownership](https://doc.rust-lang.org/book/ch04-00-understanding-ownership.html).
 - [ ] [The Rust Programming Language - Using Structs to Structure Related Data](https://doc.rust-lang.org/book/ch05-00-structs.html).
