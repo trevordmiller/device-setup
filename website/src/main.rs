@@ -225,7 +225,7 @@ fn markdown_to_html(markdown: &str) -> std::string::String {
         footer {
             max-width: 80ch;
             margin: 2rem auto 0 auto;
-            padding: 2rem 1rem 1rem 1rem;
+            padding: 2rem 1rem 2rem 1rem;
             border-top: 1px solid #d3d3d3;
         }
         label, input {
