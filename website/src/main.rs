@@ -185,32 +185,35 @@ fn markdown_to_html(markdown: &str) -> std::string::String {
         }
         @keyframes cursor {
             0% {
-              opacity: 0;
+                opacity: 0;
             }
             50% {
-              opacity: 1;
+                opacity: 1;
             }
             to {
-              opacity: 0;
+                opacity: 0;
             }
         }
         @media screen and (min-width: 80ch) {
             header {
-              position: sticky;
-              top: 0;
+                position: sticky;
+                top: 0;
             }
             header nav {
-              display: flex;
-              align-items: center;
+                display: flex;
+                align-items: center;
             }
             header a:first-of-type {
-              flex: 1;
+                flex: 1;
             }
         }
         main {
             max-width: 80ch;
             margin: 0 auto;
             padding: 1rem;
+        }
+        li {
+            margin-bottom: 1rem;
         }
         pre code {
             overflow: auto;
@@ -228,10 +231,12 @@ fn markdown_to_html(markdown: &str) -> std::string::String {
         label, input {
             display: block;
             font-size: 1rem;
-            margin-bottom: 0.5rem;
+            margin-bottom: 1rem;
         }
         input[type=submit] {
-            padding: 0.5rem; 
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            padding: 1rem; 
             background: #333333; 
             color: #ffffff;
             font-size: 1rem;
