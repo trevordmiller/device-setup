@@ -212,7 +212,7 @@ Examples:
 :g/delete_me/d
 ```
 
-### Compose commands
+## Compose commands
 
 Operators, motions, text objects etc. can be composed like a sentence.
 

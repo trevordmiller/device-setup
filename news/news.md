@@ -1,4 +1,4 @@
-# Subscriptions
+# News
 
 - [Vim Announcements](https://www.vim.org/news/news.php).
 - [Git Rev News](https://git.github.io/rev_news/archive/).
