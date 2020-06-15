@@ -2,6 +2,8 @@
 
 My programming tutorials that are public.
 
+## Git
+
 - [Git bisect: diagnose which commit broke something with git bisect](/public/git-bisect.mp4).
 - [Git tag: use semantic versioning with git tag](/public/git-tag.mp4).
 - [Git rebase: clean up commits with git rebase](/public/git-rebase.mp4).
@@ -25,4 +27,6 @@ My programming tutorials that are public.
 - [Git clone: copy remote repos to local machines with git clone](/public/git-clone.mp4).
 - [Git init: create local repos with git init](/public/git-init.mp4).
 
-_[egghead.io](https://egghead.io/instructors/trevor-miller) has additional tutorials that I no longer work on._
+## Other
+
+[My egghead.io](https://egghead.io/instructors/trevor-miller) has additional tutorials that I no longer work on.

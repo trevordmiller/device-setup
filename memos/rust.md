@@ -1,5 +1,7 @@
 # Rust
 
+Standard Rust tooling and syntax.
+
 ## View documentation
 
 ```shell

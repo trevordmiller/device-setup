@@ -19,23 +19,17 @@ fn clean() {
 
 fn generate() {
     printing::subheading("Generating build directory.");
-    paths::create_dir(&paths::build());
-    generate_public();
     generate_home();
-    generate_code();
     generate_articles();
     generate_videos();
+    generate_code();
     generate_resume();
-}
-
-fn generate_public() {
-    match copy_dir(&paths::public(), &paths::build().join("public")) {
-        Ok(_) => (),
-        Err(error) => panic!("There was a problem: {:?}", error),
-    };
+    generate_public();
 }
 
 fn generate_home() {
+    paths::create_dir(&paths::build());
+
     let markdown_file_contents = match fs::read_to_string(&paths::content().join("index.md")) {
         Ok(contents) => contents,
         Err(error) => panic!("There was a problem: {:?}", error),
@@ -47,25 +41,21 @@ fn generate_home() {
     );
 }
 
-fn generate_code() {
-    let markdown_file_contents = match fs::read_to_string(&paths::content().join("code.md")) {
+fn generate_articles() {
+    paths::create_dir(&paths::build().join("articles"));
+
+    let markdown_file_contents = match fs::read_to_string(&paths::content().join("articles.md")) {
         Ok(contents) => contents,
         Err(error) => panic!("There was a problem: {:?}", error),
     };
 
-    paths::create_dir(&paths::build().join("code"));
     paths::create_file(
-        &paths::build().join("code").join("index.html"),
+        &paths::build().join("articles").join("index.html"),
         &markdown_to_html(&markdown_file_contents),
     );
-}
 
-fn generate_articles() {
-    paths::create_dir(&paths::build().join("articles"));
     match fs::read_dir(&paths::content().join("articles")) {
         Ok(markdown_files) => {
-            let mut markdown_links_to_routes = Vec::new();
-
             for markdown_file in markdown_files {
                 let markdown_file = match &markdown_file {
                     Ok(markdown_file) => markdown_file.path(),
@@ -86,53 +76,59 @@ fn generate_articles() {
                         .join("index.html"),
                     &markdown_to_html(&markdown_file_contents),
                 );
-
-                let title = match markdown_file_contents.lines().next() {
-                    Some(title) => &title[2..],
-                    None => panic!("Cannot find a title in {}.", &route),
-                };
-                markdown_links_to_routes
-                    .push(format!("- [{}.](/articles/{})", title, route).to_string());
             }
-
-            let markdown_articles_index = format!(
-                "# Articles\nMy posts on software development.\n{}",
-                markdown_links_to_routes.join("\n")
-            );
-
-            paths::create_file(
-                &paths::build().join("articles").join("index.html"),
-                &markdown_to_html(&markdown_articles_index),
-            );
         }
         Err(error) => panic!("There was a problem: {:?}", error),
     };
 }
 
 fn generate_videos() {
+    paths::create_dir(&paths::build().join("videos"));
+
     let markdown_file_contents = match fs::read_to_string(&paths::content().join("videos.md")) {
         Ok(contents) => contents,
         Err(error) => panic!("There was a problem: {:?}", error),
     };
 
-    paths::create_dir(&paths::build().join("videos"));
     paths::create_file(
         &paths::build().join("videos").join("index.html"),
         &markdown_to_html(&markdown_file_contents),
     );
 }
 
+fn generate_code() {
+    paths::create_dir(&paths::build().join("code"));
+
+    let markdown_file_contents = match fs::read_to_string(&paths::content().join("code.md")) {
+        Ok(contents) => contents,
+        Err(error) => panic!("There was a problem: {:?}", error),
+    };
+
+    paths::create_file(
+        &paths::build().join("code").join("index.html"),
+        &markdown_to_html(&markdown_file_contents),
+    );
+}
+
 fn generate_resume() {
+    paths::create_dir(&paths::build().join("resume"));
+
     let markdown_file_contents = match fs::read_to_string(&paths::content().join("resume.md")) {
         Ok(contents) => contents,
         Err(error) => panic!("There was a problem: {:?}", error),
     };
 
-    paths::create_dir(&paths::build().join("resume"));
     paths::create_file(
         &paths::build().join("resume").join("index.html"),
         &markdown_to_html(&markdown_file_contents),
     );
+}
+
+fn generate_public() {
+    match copy_dir(&paths::public(), &paths::build().join("public")) {
+        Ok(_) => (),
+        Err(error) => panic!("There was a problem: {:?}", error),
+    };
 }
 
 fn configure() {

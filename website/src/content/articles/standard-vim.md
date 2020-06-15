@@ -1,4 +1,4 @@
-# Standard Vim: how to use Vim without customizations
+# Standard Vim: using Vim without customizations
 
 The purpose of this article is to show useful things that can be done in standard Vim without customizations like plugins, configurations, forks, or GUIs. However, this is not meant to shame using customizations! Customizing can be useful. But I do see Vim users that add customizations based on misunderstandings or popularity rather than to solve an actual problem. I would suggest instead that we try to understand the vanilla options first. Then add customizations for specific cases when we know what we want and what tradeoffs we are making.
 
