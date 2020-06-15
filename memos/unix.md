@@ -1,5 +1,7 @@
 # Unix
 
+Standard POSIX programs and commands.
+
 ## View help
 
 ```shell

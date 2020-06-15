@@ -1,5 +1,7 @@
 # Git
 
+Standard Git commands and workflows.
+
 ## View help
 
 ```shell
