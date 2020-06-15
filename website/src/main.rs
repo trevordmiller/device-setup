@@ -273,11 +273,10 @@ fn markdown_to_html(markdown: &str) -> std::string::String {
                     {}
                 </main>
                 <footer>
-                    <h2>Get my latest content by email</h2>
-                    <p>I won't sell or share your email. I won't send you spam. You can unsubscribe at any time.</p>
+                    <h2>Join my newsletter</h2>
                     <form action='https://trevordmiller.us10.list-manage.com/subscribe/post?u=91fe993c2d93cde48679d6826&amp;id=f7f097d693' method='post' id='mc-embedded-subscribe-form' name='mc-embedded-subscribe-form'>
                         <label for='mce-EMAIL'>Email address:</label>
-                        <input type='email' required value='' name='EMAIL' id='mce-EMAIL'>
+                        <input type='email' required placeholder='Your email' value='' name='EMAIL' id='mce-EMAIL'>
                         <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
                         <div style='position: absolute; left: -5000px;' aria-hidden='true'><input type='text' name='b_91fe993c2d93cde48679d6826_f7f097d693' tabindex='-1' value=''></div>
                         <input type='submit' value='Subscribe' placeholder='you@somewhere.com' name='subscribe' id='mc-embedded-subscribe'>

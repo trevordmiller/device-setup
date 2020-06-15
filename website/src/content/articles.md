@@ -1,19 +1,7 @@
 # Articles
 
-My posts on software development.
+My software development posts.
 
 ## Unix
 
 - [Standard Vim: using Vim without customizations](/articles/standard-vim/).
-
-## Git
-
-// TODO
-
-## Rust
-
-// TODO
-
-## General
-
-// TODO

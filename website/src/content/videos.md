@@ -1,6 +1,6 @@
 # Videos
 
-My programming tutorials that are public.
+My programming tutorials.
 
 ## Git
 
