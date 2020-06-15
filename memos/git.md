@@ -1,6 +1,6 @@
 # Git
 
-Standard Git commands and workflows.
+Standard Git usage.
 
 ## View help
 

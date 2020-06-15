@@ -1,6 +1,6 @@
 # Code
 
-My active open source repositories.
+My open source repositories.
 
 ## Rust
 

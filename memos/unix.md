@@ -1,6 +1,6 @@
 # Unix
 
-Standard POSIX programs and commands.
+Standard Unix usage.
 
 ## View help
 

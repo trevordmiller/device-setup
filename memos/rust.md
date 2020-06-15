@@ -1,6 +1,6 @@
 # Rust
 
-Standard Rust tooling and syntax.
+Standard Rust usage.
 
 ## View documentation
 
