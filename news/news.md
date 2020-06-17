@@ -1,6 +1,6 @@
 # News
 
-Newsletters and channels to help me stay up-to-date.
+My newsletters and channels I follow to help me stay up-to-date.
 
 ## Unix
 

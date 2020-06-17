@@ -1,6 +1,6 @@
 # Content
 
-Articles, documentation, books, and videos to help me increase my knowledge.
+My bookmarked articles, documentation, books, and videos I research to help me increase my knowledge.
 
 ## Unix
 

@@ -1,6 +1,6 @@
 # Git
 
-Standard Git usage.
+My most used terminal commands for Git version control.
 
 ## View help
 

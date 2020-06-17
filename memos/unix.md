@@ -1,6 +1,6 @@
 # Unix
 
-Standard Unix usage.
+My most used terminal commands for Unix-like operating systems.
 
 ## View help
 

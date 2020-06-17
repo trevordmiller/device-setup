@@ -26,7 +26,3 @@ My programming tutorials.
 - [Git commits: capture code history snapshots with git add/commit/push](/public/git-commits.mp4).
 - [Git clone: copy remote repos to local machines with git clone](/public/git-clone.mp4).
 - [Git init: create local repos with git init](/public/git-init.mp4).
-
-## Other
-
-[My egghead.io](https://egghead.io/instructors/trevor-miller) has additional tutorials that I no longer work on.

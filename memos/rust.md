@@ -1,6 +1,6 @@
 # Rust
 
-Standard Rust usage.
+My most used terminal commands and syntax for Rust projects.
 
 ## View documentation
 
