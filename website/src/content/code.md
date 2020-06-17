@@ -4,8 +4,8 @@ My open source repositories.
 
 ## Rust
 
-- [trevordmiller: personal workspace](https://github.com/trevordmiller/trevordmiller).
+- [github.com/trevordmiller/trevordmiller: personal workspace](https://github.com/trevordmiller/trevordmiller).
 
-## Other
+## General
 
-[My GitHub](https://github.com/trevordmiller) has additional repositories that I no longer work on.
+- [github.com/trevordmiller: repositories](https://github.com/trevordmiller).

@@ -1,6 +1,6 @@
 # Unix
 
-Standard Unix usage.
+My most used terminal commands for Unix-like operating systems.
 
 ## View help
 
@@ -185,10 +185,10 @@ cat some_file
 less some_file
 ```
 
-## Search
+## Search for a pattern
 
 ```shell
-grep some_regex
+grep some_pattern
 ```
 
 Examples:
@@ -197,22 +197,22 @@ Examples:
 ps -ef | grep systemd
 ```
 
-## Search ignoring the casing
+## Search for a pattern while ignoring the casing
 
 ```shell
-grep -i some_regex
+grep -i some_pattern
 ```
 
-## Search a path
+## Search for a pattern in a path
 
 ```shell
-grep -R some_regex some_path
+grep -R some_pattern some_path
 ```
 
-## Substitute
+## Substitute a pattern
 
 ```shell
-sed 's/some_regex/some_replacement/g' some_file
+sed 's/some_pattern/some_replacement/g' some_file
 ```
 
 ## Send HTTP requests
@@ -339,10 +339,10 @@ Examples:
 :e **/*<tab>
 ```
 
-### Search project
+### Search project for a pattern
 
 ```shell
-:vim /some_regex/ some_path
+:vim /some_pattern/ some_path
 :cn/p # to jump between quickfix results
 :copen # to show all quickfix results
 ```
@@ -418,10 +418,10 @@ gf
 <ctrl n/p> # to move through list items
 ```
 
-### Substitute
+### Substitute a pattern
 
 ```shell
-:some_range s/some_regex/some_replacement/g
+:some_range s/some_pattern/some_replacement/g
 ```
 
 Examples:
@@ -478,7 +478,7 @@ q
 ### Apply ex commands to patterns in a file
 
 ```shell
-:some_range g/some_regex/some_command
+:some_range g/some_pattern/some_command
 ```
 
 Examples:
@@ -521,10 +521,10 @@ ya[
 # etc.
 ```
 
-#### Search file
+#### Search file for a pattern
 
 ```shell
-/some_regex
+/some_pattern
 n # to move to the next
 ```
 
