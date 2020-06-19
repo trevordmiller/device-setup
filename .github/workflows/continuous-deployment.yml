@@ -1,0 +1,41 @@
+name: Continuous Deployment
+
+on:
+  push:
+    branches:
+      - master
+
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  write:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Build
+        run: cargo run --release
+        working-directory: ./write
+      - name: Deploy
+        if: success()
+        uses: crazy-max/ghaction-github-pages@v2
+        with:
+          build_dir: ./write/build
+          repo: trevordmiller/trevordmiller.github.io
+          target_branch: master
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
+      - name: Audit
+        if: success()
+        uses: treosh/lighthouse-ci-action@v3
+        with:
+          configPath: "./.github/workflows/audit-production.json"
+          temporaryPublicStorage: true
+          urls: |
+            https://trevordmiller.com
+            https://trevordmiller.com/articles/
+            https://trevordmiller.com/articles/standard-vim/
+            https://trevordmiller.com/videos/
+            https://trevordmiller.com/code/
+            https://trevordmiller.com/resume/

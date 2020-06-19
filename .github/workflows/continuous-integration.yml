@@ -1,0 +1,67 @@
+name: Continuous Integration
+
+on:
+  push:
+
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  practice:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Compile
+        run: cargo check
+        working-directory: ./practice
+      - name: Test
+        run: cargo test
+        working-directory: ./practice
+      - name: Lint
+        run: cargo clippy --all-targets -- -D warnings
+        working-directory: ./practice
+      - name: Format
+        run: cargo fmt -- --check
+        working-directory: ./practice
+
+  write:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Compile
+        run: cargo check
+        working-directory: ./write
+      - name: Test
+        run: cargo test
+        working-directory: ./write
+      - name: Lint
+        run: cargo clippy --all-targets -- -D warnings
+        working-directory: ./write
+      - name: Format
+        run: cargo fmt -- --check
+        working-directory: ./write
+      - name: Build
+        run: cargo run --release
+        working-directory: ./write
+      - name: Links
+        uses: peter-evans/link-checker@v1
+        id: links
+        with:
+          args: --document-root ./write/build --exclude https://www.invidio.us --verbose --recursive *
+      - name: Exit
+        run: exit ${{ steps.links.outputs.exit_code }}
+      - name: Audit
+        uses: treosh/lighthouse-ci-action@v3
+        with:
+          configPath: "./.github/workflows/audit-local.json"
+          temporaryPublicStorage: true
+
+  general:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Format
+        run: npx prettier --check . --ignore-path ./.gitignore
