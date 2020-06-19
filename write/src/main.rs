@@ -37,16 +37,13 @@ fn generate_pages() {
 
                 if route == "index" {
                     paths::create_file(
-                        &paths::build()
-                            .join("index.html"),
+                        &paths::build().join("index.html"),
                         &markdown_to_html(&markdown_file_contents),
                     );
                 } else {
                     paths::create_dir(&paths::build().join(route));
                     paths::create_file(
-                        &paths::build()
-                            .join(route)
-                            .join("index.html"),
+                        &paths::build().join(route).join("index.html"),
                         &markdown_to_html(&markdown_file_contents),
                     );
                 }
