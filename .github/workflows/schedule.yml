@@ -14,7 +14,7 @@ jobs:
       - name: Test
         run: |
           website_document="$(curl https://trevordmiller.com)"
-          if [[ $website_document != *"Hello, world!"* ]]; then
+          if [[ $website_document != *"My name is Trevor"* ]]; then
             echo "ERROR: https://trevordmiller.com is not running as expected!";
             exit 1;
           fi

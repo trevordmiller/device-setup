@@ -2,7 +2,7 @@
 
 My most used terminal commands for Unix-like operating systems.
 
-## View help
+## View documentation
 
 ```shell
 man some_thing
@@ -209,10 +209,10 @@ grep -i some_pattern
 grep -R some_pattern some_path
 ```
 
-## Substitute a pattern
+## Substitute a pattern in a path
 
 ```shell
-sed 's/some_pattern/some_replacement/g' some_file
+sed 's/some_pattern/some_replacement/g' some_path
 ```
 
 ## Send HTTP requests
@@ -279,17 +279,17 @@ echo $SOME_VARIABLE
 vim
 ```
 
-### View help
-
-```shell
-:h some_thing
-```
-
 ### Start
 
 ```shell
 cd some_project_directory_root
 vim
+```
+
+### View help
+
+```shell
+:h some_thing
 ```
 
 ### Write
@@ -325,7 +325,7 @@ Examples:
 :e .
 ```
 
-### Edit files
+### Open files
 
 ```shell
 :e some_file
@@ -418,7 +418,7 @@ gf
 <ctrl n/p> # to move through list items
 ```
 
-### Substitute a pattern
+### Substitute a pattern in a range
 
 ```shell
 :some_range s/some_pattern/some_replacement/g

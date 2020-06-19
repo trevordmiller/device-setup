@@ -8,17 +8,17 @@ The purpose of this article is to show useful things that can be done in standar
 
 The advantage of using native Vim functionality is that it is lightweight and portable. Most of these items work on most Unix-like operating systems by default without any extra setup. Although to be fair, a few of these items do rely on newer versions of Vim than you might find on some machines. I would recommend using a package manager to install the latest version of Vim.
 
-## View help
-
-```shell
-:h some_thing
-```
-
 ## Start
 
 ```shell
 cd some_project_directory_root
 vim
+```
+
+## View help
+
+```shell
+:h some_thing
 ```
 
 ## Write
@@ -54,7 +54,7 @@ Examples:
 :e .
 ```
 
-## Edit files
+## Open files
 
 ```shell
 :e some_file
@@ -68,10 +68,10 @@ Examples:
 :e **/*<tab>
 ```
 
-## Search project
+## Search project for a pattern
 
 ```shell
-:vim /some_regex/ some_path
+:vim /some_pattern/ some_path
 :cn/p # to jump between quickfix results
 :copen # to show all quickfix results
 ```
@@ -147,10 +147,10 @@ gf
 <ctrl n/p> # to move through list items
 ```
 
-## Substitute
+## Substitute a pattern in a range
 
 ```shell
-:some_range s/some_regex/some_replacement/g
+:some_range s/some_pattern/some_replacement/g
 ```
 
 Examples:
@@ -207,7 +207,7 @@ q
 ## Apply ex commands to patterns in a file
 
 ```shell
-:some_range g/some_regex/some_command
+:some_range g/some_pattern/some_command
 ```
 
 Examples:
@@ -250,10 +250,10 @@ ya[
 # etc.
 ```
 
-### Search file
+### Search file for a pattern
 
 ```shell
-/some_regex
+/some_pattern
 n # to move to the next
 ```
 

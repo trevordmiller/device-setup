@@ -408,7 +408,7 @@ Examples:
 let is_cool = true;
 ```
 
-# Annotate a type for a unicode value / letter (character type)
+## Annotate a type for a unicode value / letter (character type)
 
 ```rust
 char
