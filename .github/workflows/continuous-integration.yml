@@ -3,11 +3,9 @@ name: Continuous Integration
 on:
   push:
 
-  schedule:
-    - cron: "0 0 * * *"
-
 jobs:
   practice:
+    name: Practice
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -26,6 +24,7 @@ jobs:
         working-directory: ./practice
 
   write:
+    name: Write
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -46,6 +45,7 @@ jobs:
         run: cargo run --release
         working-directory: ./write
       - name: Links
+        if: success()
         uses: peter-evans/link-checker@v1
         id: links
         with:
@@ -55,13 +55,16 @@ jobs:
       - name: Audit
         uses: treosh/lighthouse-ci-action@v3
         with:
-          configPath: "./.github/workflows/audit-local.json"
+          configPath: "./.github/workflows/configuration/write-audit.json"
           temporaryPublicStorage: true
 
   general:
+    name: General
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Lint
+        uses: docker://github/super-linter:v2.0.0
       - name: Format
         run: npx prettier --check . --ignore-path ./.gitignore
