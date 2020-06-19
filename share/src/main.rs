@@ -1,4 +1,3 @@
-use copy_dir::copy_dir;
 use pulldown_cmark::{html, Options, Parser};
 use std::fs;
 
@@ -7,54 +6,21 @@ mod printing;
 
 fn main() {
     printing::heading("Building website.");
-    clean();
-    generate();
-    configure();
-}
 
-fn clean() {
     printing::subheading("Cleaning build directory.");
     paths::remove_dir(&paths::build());
-}
 
-fn generate() {
     printing::subheading("Generating build directory.");
-    generate_home();
-    generate_articles();
-    generate_videos();
-    generate_code();
-    generate_resume();
-    generate_public();
-}
-
-fn generate_home() {
     paths::create_dir(&paths::build());
+    generate_pages();
 
-    let markdown_file_contents = match fs::read_to_string(&paths::content().join("index.md")) {
-        Ok(contents) => contents,
-        Err(error) => panic!("There was a problem: {:?}", error),
-    };
-
-    paths::create_file(
-        &paths::build().join("index.html"),
-        &markdown_to_html(&markdown_file_contents),
-    );
+    printing::subheading("Configuring build directory.");
+    // Adds a CNAME file for the host (GitHub Pages) and registrar (Hover) to use my custom domain name (trevordmiller.com)
+    paths::create_file(&paths::build().join("CNAME"), "trevordmiller.com");
 }
 
-fn generate_articles() {
-    paths::create_dir(&paths::build().join("articles"));
-
-    let markdown_file_contents = match fs::read_to_string(&paths::content().join("articles.md")) {
-        Ok(contents) => contents,
-        Err(error) => panic!("There was a problem: {:?}", error),
-    };
-
-    paths::create_file(
-        &paths::build().join("articles").join("index.html"),
-        &markdown_to_html(&markdown_file_contents),
-    );
-
-    match fs::read_dir(&paths::content().join("articles")) {
+fn generate_pages() {
+    match fs::read_dir(&paths::pages()) {
         Ok(markdown_files) => {
             for markdown_file in markdown_files {
                 let markdown_file = match &markdown_file {
@@ -68,109 +34,51 @@ fn generate_articles() {
                 };
 
                 let route = &paths::file_stem(markdown_file);
-                paths::create_dir(&paths::build().join("articles").join(route));
-                paths::create_file(
-                    &paths::build()
-                        .join("articles")
-                        .join(route)
-                        .join("index.html"),
-                    &markdown_to_html(&markdown_file_contents),
-                );
+
+                if route == "index" {
+                    paths::create_file(
+                        &paths::build()
+                            .join("index.html"),
+                        &markdown_to_html(&markdown_file_contents),
+                    );
+                } else {
+                    paths::create_dir(&paths::build().join(route));
+                    paths::create_file(
+                        &paths::build()
+                            .join(route)
+                            .join("index.html"),
+                        &markdown_to_html(&markdown_file_contents),
+                    );
+                }
             }
         }
         Err(error) => panic!("There was a problem: {:?}", error),
     };
 }
 
-fn generate_videos() {
-    paths::create_dir(&paths::build().join("videos"));
-
-    let markdown_file_contents = match fs::read_to_string(&paths::content().join("videos.md")) {
-        Ok(contents) => contents,
-        Err(error) => panic!("There was a problem: {:?}", error),
-    };
-
-    paths::create_file(
-        &paths::build().join("videos").join("index.html"),
-        &markdown_to_html(&markdown_file_contents),
-    );
-}
-
-fn generate_code() {
-    paths::create_dir(&paths::build().join("code"));
-
-    let markdown_file_contents = match fs::read_to_string(&paths::content().join("code.md")) {
-        Ok(contents) => contents,
-        Err(error) => panic!("There was a problem: {:?}", error),
-    };
-
-    paths::create_file(
-        &paths::build().join("code").join("index.html"),
-        &markdown_to_html(&markdown_file_contents),
-    );
-}
-
-fn generate_resume() {
-    paths::create_dir(&paths::build().join("resume"));
-
-    let markdown_file_contents = match fs::read_to_string(&paths::content().join("resume.md")) {
-        Ok(contents) => contents,
-        Err(error) => panic!("There was a problem: {:?}", error),
-    };
-
-    paths::create_file(
-        &paths::build().join("resume").join("index.html"),
-        &markdown_to_html(&markdown_file_contents),
-    );
-}
-
-fn generate_public() {
-    match copy_dir(&paths::public(), &paths::build().join("public")) {
-        Ok(_) => (),
-        Err(error) => panic!("There was a problem: {:?}", error),
-    };
-}
-
-fn configure() {
-    printing::subheading("Configuring build directory.");
-
-    // Adds a CNAME file for the host (GitHub Pages) and registrar (Hover) to use my custom domain name (trevordmiller.com)
-    paths::create_file(&paths::build().join("CNAME"), "trevordmiller.com");
-}
-
 fn markdown_to_html(markdown: &str) -> std::string::String {
     let css = r#"
-        html {
+        body {
             font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
             color: #333333;
-        }
-        body {
-            margin: 0;
-        }
-        header {
-            background: #f5f5f5;
-            border-bottom: 1px solid #d3d3d3;
-        }
-        header nav {
             max-width: 80ch;
             margin: 0 auto;
+            padding: 1rem;
         }
         header a {
-            padding: 1rem;
+            font-size: 1rem;
             font-family: "Courier New", Courier, monospace;
+            font-weight: normal;
             text-decoration: none;
             color: #333333;
-            display: block;
-        }
-        header a:first-of-type {
             display: flex;
             align-items: center;
         }
-        header a:first-of-type::before {
+        header a::before {
             content: ">";
             margin: 0 1ch 0 0;
         }
-        header a:first-of-type::after {
+        header a::after {
             content: "";
             margin: 0 0 0 1ch;
             display: inline-block;
@@ -190,55 +98,29 @@ fn markdown_to_html(markdown: &str) -> std::string::String {
                 opacity: 0;
             }
         }
-        @media screen and (min-width: 80ch) {
-            header {
-                position: sticky;
-                top: 0;
-            }
-            header nav {
-                display: flex;
-                align-items: center;
-            }
-            header a:first-of-type {
-                flex: 1;
-            }
-        }
-        main {
-            max-width: 80ch;
-            margin: 0 auto;
-            padding: 1rem;
-        }
         li {
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
         }
-        pre code {
+        code {
             overflow: auto;
             display: block;
-            padding: 1rem;
             background: #f5f5f5;
-            border-radius: 3px;
-        }
-        footer {
-            max-width: 80ch;
-            margin: 2rem auto 0 auto;
-            padding: 2rem 1rem 2rem 1rem;
-            border-top: 1px solid #d3d3d3;
+            padding: 1rem;
         }
         label, input {
-            display: block;
             font-size: 1rem;
+            display: block;
             margin-bottom: 1rem;
         }
         input[type=submit] {
+            font-size: 1rem;
+            cursor: pointer;
+            border: 0 none;
             -moz-appearance: none;
             -webkit-appearance: none;
-            padding: 1rem; 
             background: #333333; 
             color: #ffffff;
-            font-size: 1rem;
-            border: 0 none;
-            cursor: pointer;
-            border-radius: 3px; 
+            padding: 0.5rem; 
         }
     "#;
 
@@ -262,11 +144,7 @@ fn markdown_to_html(markdown: &str) -> std::string::String {
             <body>
                 <header>
                     <nav>
-                        <a href='/'>trevordmiller</a>
-                        <a href='/articles/'>Articles</a>
-                        <a href='/videos/'>Videos</a>
-                        <a href='/code/'>Code</a>
-                        <a href='/resume/'>Resume</a>
+                        <h1><a href='/'>trevordmiller</a></h1>
                     </nav>
                 </header>
                 <main>

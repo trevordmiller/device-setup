@@ -63,12 +63,8 @@ pub fn file_stem(file: PathBuf) -> std::string::String {
     }
 }
 
-pub fn public() -> PathBuf {
-    project_root().join("src").join("public")
-}
-
-pub fn content() -> PathBuf {
-    project_root().join("src").join("content")
+pub fn pages() -> PathBuf {
+    project_root().join("src").join("pages")
 }
 
 pub fn build() -> PathBuf {
