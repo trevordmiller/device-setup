@@ -4,20 +4,20 @@
 ///
 /// ```
 /// let empty: Vec<&str> = vec![];
-/// assert_eq!(exercises::anagram::filter_anagrams("diaper", &["hello", "world", "zombies", "pants"]), empty);
-/// assert_eq!(exercises::anagram::filter_anagrams("master", &["stream", "pigeon", "maters"]), &["stream", "maters"]);
-/// assert_eq!(exercises::anagram::filter_anagrams("good", &["dog", "goody"]), empty);
-/// assert_eq!(exercises::anagram::filter_anagrams("listen", &["enlists", "google", "inlets", "banana"]), &["inlets"]);
-/// assert_eq!(exercises::anagram::filter_anagrams("allergy", &["gallery", "ballerina", "regally", "clergy", "largely", "leading"]), &["gallery", "regally", "largely"]);
-/// assert_eq!(exercises::anagram::filter_anagrams("nose", &["Eons", "ONES"]), &["Eons", "ONES"]);
-/// assert_eq!(exercises::anagram::filter_anagrams("mass", &["last"]), empty);
-/// assert_eq!(exercises::anagram::filter_anagrams("Orchestra", &["cashregister", "Carthorse", "radishes"]), &["Carthorse"]);
-/// assert_eq!(exercises::anagram::filter_anagrams("Orchestra", &["cashregister", "carthorse", "radishes"]), &["carthorse"]);
-/// assert_eq!(exercises::anagram::filter_anagrams("orchestra", &["cashregister", "Carthorse", "radishes"]), &["Carthorse"]);
-/// assert_eq!(exercises::anagram::filter_anagrams("go", &["go Go GO"]), empty);
-/// assert_eq!(exercises::anagram::filter_anagrams("tapper", &["patter"]), empty);
-/// assert_eq!(exercises::anagram::filter_anagrams("BANANA", &["BANANA", "Banana", "banana"]), empty);
-/// assert_eq!(exercises::anagram::filter_anagrams("LISTEN", &["Listen", "Silent", "LISTEN"]), &["Silent"]);
+/// assert_eq!(practice::anagram::filter_anagrams("diaper", &["hello", "world", "zombies", "pants"]), empty);
+/// assert_eq!(practice::anagram::filter_anagrams("master", &["stream", "pigeon", "maters"]), &["stream", "maters"]);
+/// assert_eq!(practice::anagram::filter_anagrams("good", &["dog", "goody"]), empty);
+/// assert_eq!(practice::anagram::filter_anagrams("listen", &["enlists", "google", "inlets", "banana"]), &["inlets"]);
+/// assert_eq!(practice::anagram::filter_anagrams("allergy", &["gallery", "ballerina", "regally", "clergy", "largely", "leading"]), &["gallery", "regally", "largely"]);
+/// assert_eq!(practice::anagram::filter_anagrams("nose", &["Eons", "ONES"]), &["Eons", "ONES"]);
+/// assert_eq!(practice::anagram::filter_anagrams("mass", &["last"]), empty);
+/// assert_eq!(practice::anagram::filter_anagrams("Orchestra", &["cashregister", "Carthorse", "radishes"]), &["Carthorse"]);
+/// assert_eq!(practice::anagram::filter_anagrams("Orchestra", &["cashregister", "carthorse", "radishes"]), &["carthorse"]);
+/// assert_eq!(practice::anagram::filter_anagrams("orchestra", &["cashregister", "Carthorse", "radishes"]), &["Carthorse"]);
+/// assert_eq!(practice::anagram::filter_anagrams("go", &["go Go GO"]), empty);
+/// assert_eq!(practice::anagram::filter_anagrams("tapper", &["patter"]), empty);
+/// assert_eq!(practice::anagram::filter_anagrams("BANANA", &["BANANA", "Banana", "banana"]), empty);
+/// assert_eq!(practice::anagram::filter_anagrams("LISTEN", &["Listen", "Silent", "LISTEN"]), &["Silent"]);
 /// ```
 pub fn filter_anagrams<'a>(word: &str, possible_anagrams: &'a [&'a str]) -> Vec<&'a str> {
     fn sort(word: &str) -> Vec<char> {

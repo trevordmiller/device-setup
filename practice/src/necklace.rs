@@ -3,17 +3,17 @@
 /// # Examples
 ///
 /// ```
-/// assert_eq!(exercises::necklace::is_same("nicole", "icolen"), true);
-/// assert_eq!(exercises::necklace::is_same("nicole", "lenico"), true);
-/// assert_eq!(exercises::necklace::is_same("nicole", "coneli"), false);
-/// assert_eq!(exercises::necklace::is_same("aabaaaaabaab", "aabaabaabaaa"), true);
-/// assert_eq!(exercises::necklace::is_same("abc", "cba"), false);
-/// assert_eq!(exercises::necklace::is_same("xxyyy", "xxxyy"), false);
-/// assert_eq!(exercises::necklace::is_same("xyxxz", "xxyxz"), false);
-/// assert_eq!(exercises::necklace::is_same("x", "x"), true);
-/// assert_eq!(exercises::necklace::is_same("x", "xx"), false);
-/// assert_eq!(exercises::necklace::is_same("x", ""), false);
-/// assert_eq!(exercises::necklace::is_same("", ""), true);
+/// assert_eq!(practice::necklace::is_same("nicole", "icolen"), true);
+/// assert_eq!(practice::necklace::is_same("nicole", "lenico"), true);
+/// assert_eq!(practice::necklace::is_same("nicole", "coneli"), false);
+/// assert_eq!(practice::necklace::is_same("aabaaaaabaab", "aabaabaabaaa"), true);
+/// assert_eq!(practice::necklace::is_same("abc", "cba"), false);
+/// assert_eq!(practice::necklace::is_same("xxyyy", "xxxyy"), false);
+/// assert_eq!(practice::necklace::is_same("xyxxz", "xxyxz"), false);
+/// assert_eq!(practice::necklace::is_same("x", "x"), true);
+/// assert_eq!(practice::necklace::is_same("x", "xx"), false);
+/// assert_eq!(practice::necklace::is_same("x", ""), false);
+/// assert_eq!(practice::necklace::is_same("", ""), true);
 /// ```
 pub fn is_same(letters: &str, variation: &str) -> bool {
     if letters == "" {

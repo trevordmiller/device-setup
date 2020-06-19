@@ -3,13 +3,13 @@
 /// # Examples
 ///
 /// ```
-/// assert_eq!(exercises::balanced::is_balanced("xxxyyy"), true);
-/// assert_eq!(exercises::balanced::is_balanced("yyyxxx"), true);
-/// assert_eq!(exercises::balanced::is_balanced("xxxyyyy"), false);
-/// assert_eq!(exercises::balanced::is_balanced("yyxyxxyxxyyyyxxxyxyx"), true);
-/// assert_eq!(exercises::balanced::is_balanced("xyxxxxyyyxyxxyxxyy"), false);
-/// assert_eq!(exercises::balanced::is_balanced(""), true);
-/// assert_eq!(exercises::balanced::is_balanced("x"), false);
+/// assert_eq!(practice::balanced::is_balanced("xxxyyy"), true);
+/// assert_eq!(practice::balanced::is_balanced("yyyxxx"), true);
+/// assert_eq!(practice::balanced::is_balanced("xxxyyyy"), false);
+/// assert_eq!(practice::balanced::is_balanced("yyxyxxyxxyyyyxxxyxyx"), true);
+/// assert_eq!(practice::balanced::is_balanced("xyxxxxyyyxyxxyxxyy"), false);
+/// assert_eq!(practice::balanced::is_balanced(""), true);
+/// assert_eq!(practice::balanced::is_balanced("x"), false);
 /// ```
 pub fn is_balanced(letters: &str) -> bool {
     let size = letters.chars().count();

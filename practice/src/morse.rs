@@ -3,11 +3,11 @@
 /// # Examples
 ///
 /// ```
-/// assert_eq!(exercises::morse::convert_letters("sos"), "...---...");
-/// assert_eq!(exercises::morse::convert_letters("daily"), "-...-...-..-.--");
-/// assert_eq!(exercises::morse::convert_letters("programmer"), ".--..-.-----..-..-----..-.");
-/// assert_eq!(exercises::morse::convert_letters("bits"), "-.....-...");
-/// assert_eq!(exercises::morse::convert_letters("three"), "-.....-...");
+/// assert_eq!(practice::morse::convert_letters("sos"), "...---...");
+/// assert_eq!(practice::morse::convert_letters("daily"), "-...-...-..-.--");
+/// assert_eq!(practice::morse::convert_letters("programmer"), ".--..-.-----..-..-----..-.");
+/// assert_eq!(practice::morse::convert_letters("bits"), "-.....-...");
+/// assert_eq!(practice::morse::convert_letters("three"), "-.....-...");
 /// ```
 pub fn convert_letters(word: &str) -> String {
     word.chars()

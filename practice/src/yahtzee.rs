@@ -3,11 +3,11 @@
 /// # Examples
 ///
 /// ```
-/// assert_eq!(exercises::yahtzee::calculate_maxium_score(vec![2, 3, 5, 5, 6]), 10);
-/// assert_eq!(exercises::yahtzee::calculate_maxium_score(vec![1, 1, 1, 1, 3]), 4);
-/// assert_eq!(exercises::yahtzee::calculate_maxium_score(vec![1, 1, 1, 3, 3]), 6);
-/// assert_eq!(exercises::yahtzee::calculate_maxium_score(vec![1, 2, 3, 4, 5]), 5);
-/// assert_eq!(exercises::yahtzee::calculate_maxium_score(vec![6, 6, 6, 6, 6]), 30);
+/// assert_eq!(practice::yahtzee::calculate_maxium_score(vec![2, 3, 5, 5, 6]), 10);
+/// assert_eq!(practice::yahtzee::calculate_maxium_score(vec![1, 1, 1, 1, 3]), 4);
+/// assert_eq!(practice::yahtzee::calculate_maxium_score(vec![1, 1, 1, 3, 3]), 6);
+/// assert_eq!(practice::yahtzee::calculate_maxium_score(vec![1, 2, 3, 4, 5]), 5);
+/// assert_eq!(practice::yahtzee::calculate_maxium_score(vec![6, 6, 6, 6, 6]), 30);
 /// ```
 pub fn calculate_maxium_score(roll: Vec<usize>) -> usize {
     fn calculate_possible_score(roll: &[usize], number: usize) -> usize {

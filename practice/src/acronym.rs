@@ -3,16 +3,16 @@
 /// # Examples
 ///
 /// ```
-/// assert_eq!(exercises::acronym::abbreviate("Portable Network Graphics"), "PNG");
-/// assert_eq!(exercises::acronym::abbreviate("Ruby on Rails"), "ROR");
-/// assert_eq!(exercises::acronym::abbreviate("First In, First Out"), "FIFO");
-/// assert_eq!(exercises::acronym::abbreviate("GNU Image Manipulation Program"), "GIMP");
-/// assert_eq!(exercises::acronym::abbreviate("Complementary metal-oxide semiconductor"), "CMOS");
-/// assert_eq!(exercises::acronym::abbreviate("Rolling On The Floor Laughing So Hard That My Dogs Came Over And Licked Me"), "ROTFLSHTMDCOALM");
-/// assert_eq!(exercises::acronym::abbreviate("Something - I made up from thin air"), "SIMUFTA");
-/// assert_eq!(exercises::acronym::abbreviate("Halley's Comet"), "HC");
-/// assert_eq!(exercises::acronym::abbreviate("The Road _Not_ Taken"), "TRNT");
-/// assert_eq!(exercises::acronym::abbreviate(""), "");
+/// assert_eq!(practice::acronym::abbreviate("Portable Network Graphics"), "PNG");
+/// assert_eq!(practice::acronym::abbreviate("Ruby on Rails"), "ROR");
+/// assert_eq!(practice::acronym::abbreviate("First In, First Out"), "FIFO");
+/// assert_eq!(practice::acronym::abbreviate("GNU Image Manipulation Program"), "GIMP");
+/// assert_eq!(practice::acronym::abbreviate("Complementary metal-oxide semiconductor"), "CMOS");
+/// assert_eq!(practice::acronym::abbreviate("Rolling On The Floor Laughing So Hard That My Dogs Came Over And Licked Me"), "ROTFLSHTMDCOALM");
+/// assert_eq!(practice::acronym::abbreviate("Something - I made up from thin air"), "SIMUFTA");
+/// assert_eq!(practice::acronym::abbreviate("Halley's Comet"), "HC");
+/// assert_eq!(practice::acronym::abbreviate("The Road _Not_ Taken"), "TRNT");
+/// assert_eq!(practice::acronym::abbreviate(""), "");
 /// ```
 pub fn abbreviate(phrase: &str) -> String {
     if phrase == "" {
