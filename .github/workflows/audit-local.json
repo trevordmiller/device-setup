@@ -1,7 +1,7 @@
 {
   "ci": {
     "collect": {
-      "staticDistDir": "./website/build",
+      "staticDistDir": "./share/build",
       "settings": { "skipAudits": ["uses-http2"] }
     },
     "assert": {

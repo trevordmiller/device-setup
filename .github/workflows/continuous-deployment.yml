@@ -1,3 +1,5 @@
+name: Continuous Deployment
+
 on:
   push:
     branches:
@@ -7,19 +9,19 @@ on:
     - cron: "0 0 * * *"
 
 jobs:
-  website:
+  share:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Build
         run: cargo run --release
-        working-directory: ./website
+        working-directory: ./share
       - name: Deploy
         if: success()
         uses: crazy-max/ghaction-github-pages@v2
         with:
-          build_dir: ./website/build
+          build_dir: ./share/build
           repo: trevordmiller/trevordmiller.github.io
           target_branch: master
         env:
@@ -28,7 +30,7 @@ jobs:
         if: success()
         uses: treosh/lighthouse-ci-action@v3
         with:
-          configPath: "./.github/workflows/production-website.json"
+          configPath: "./.github/workflows/audit-production.json"
           temporaryPublicStorage: true
           urls: |
             https://trevordmiller.com
