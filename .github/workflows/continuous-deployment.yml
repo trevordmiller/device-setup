@@ -34,8 +34,5 @@ jobs:
           temporaryPublicStorage: true
           urls: |
             https://trevordmiller.com
-            https://trevordmiller.com/articles/
-            https://trevordmiller.com/articles/standard-vim/
-            https://trevordmiller.com/videos/
-            https://trevordmiller.com/code/
+            https://trevordmiller.com/standard-vim/
             https://trevordmiller.com/resume/
