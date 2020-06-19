@@ -5,16 +5,16 @@ mod paths;
 mod printing;
 
 fn main() {
-    printing::heading("Building website.");
+    printing::heading("Creating the build directory for my website.");
 
-    printing::subheading("Cleaning build directory.");
+    printing::subheading("Cleaning the build directory.");
     paths::remove_dir(&paths::build());
 
-    printing::subheading("Generating build directory.");
+    printing::subheading("Generating the build directory.");
     paths::create_dir(&paths::build());
     generate_pages();
 
-    printing::subheading("Configuring build directory.");
+    printing::subheading("Configuring the build directory.");
     // Adds a CNAME file for the host (GitHub Pages) and registrar (Hover) to use my custom domain name (trevordmiller.com)
     paths::create_file(&paths::build().join("CNAME"), "trevordmiller.com");
 }

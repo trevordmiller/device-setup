@@ -9,19 +9,19 @@ on:
     - cron: "0 0 * * *"
 
 jobs:
-  share:
+  write:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Build
         run: cargo run --release
-        working-directory: ./share
+        working-directory: ./write
       - name: Deploy
         if: success()
         uses: crazy-max/ghaction-github-pages@v2
         with:
-          build_dir: ./share/build
+          build_dir: ./write/build
           repo: trevordmiller/trevordmiller.github.io
           target_branch: master
         env:
