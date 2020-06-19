@@ -1,0 +1,29 @@
+name: Schedule
+
+on:
+  schedule:
+    - cron: "0 * * * *"
+
+jobs:
+  website:
+    name: Website
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Test
+        run: |
+          website_document="$(curl https://trevordmiller.com)"
+          if [[ $website_document != *"My name is Trevor"* ]]; then
+            echo "ERROR: https://trevordmiller.com is not running as expected!";
+            exit 1;
+          fi
+      - name: Audit
+        uses: treosh/lighthouse-ci-action@v3
+        with:
+          configPath: "./.github/workflows/configuration/website-audit.json"
+          temporaryPublicStorage: true
+          urls: |
+            https://trevordmiller.com
+            https://trevordmiller.com/standard-vim/
+            https://trevordmiller.com/resume/

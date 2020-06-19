@@ -2,7 +2,7 @@
 
 My most used terminal commands for Git version control.
 
-## View help
+## View documentation
 
 ```shell
 git --help
