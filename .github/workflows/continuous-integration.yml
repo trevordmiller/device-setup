@@ -44,11 +44,14 @@ jobs:
         working-directory: ./write
       - name: Build
         run: cargo run --release
-        working-directory: ./write - name: Links uses: peter-evans/link-checker@v1 id: lc
+        working-directory: ./write
+      - name: Links
+        uses: peter-evans/link-checker@v1
+        id: links
         with:
           args: --document-root ./write/build --exclude https://www.invidio.us --verbose --recursive *
       - name: Exit
-        run: exit ${{ steps.lc.outputs.exit_code }}
+        run: exit ${{ steps.links.outputs.exit_code }}
       - name: Audit
         uses: treosh/lighthouse-ci-action@v3
         with:
