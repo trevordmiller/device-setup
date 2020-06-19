@@ -44,7 +44,8 @@ jobs:
         working-directory: ./write
       - name: Build
         run: cargo run --release
-        working-directory: ./write - name: Links uses: peter-evans/link-checker@v1 id: lc with:
+        working-directory: ./write - name: Links uses: peter-evans/link-checker@v1 id: lc
+        with:
           args: --document-root ./write/build --exclude https://www.invidio.us --verbose --recursive *
       - name: Exit
         run: exit ${{ steps.lc.outputs.exit_code }}
