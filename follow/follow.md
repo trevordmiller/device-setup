@@ -2,20 +2,10 @@
 
 My newsletters and channels I follow to help me stay up-to-date.
 
-## Unix
-
+- [tutoriaLinux](https://invidio.us/channel/UCvA_wgsX6eFAOXI8Rbg_WiQ).
 - [Vim Announcements](https://www.vim.org/news/news.php).
-
-## Git
-
 - [Git Rev News](https://git.github.io/rev_news/archive/).
-
-## Rust
-
 - [This Week in Rust](https://this-week-in-rust.org/blog/archives/).
-
-## General
-
 - [StatusCode Weekly](https://weekly.statuscode.com/issues).
 - [Programming Digest](https://programmingdigest.net/digests).
 - [Changelog Weekly](https://changelog.com/weekly/archive).

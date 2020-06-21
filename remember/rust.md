@@ -1,6 +1,6 @@
 # Rust
 
-My most used terminal commands and syntax for Rust projects.
+My reference sheet for Rust.
 
 ## View documentation
 
