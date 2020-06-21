@@ -1,12 +1,6 @@
-# Standard Vim
+# Vim
 
-Using Vim without customizations.
-
-## Introduction
-
-The purpose of this article is to show useful things that can be done in standard Vim without customizations like plugins, configurations, forks, or GUIs. However, this is not meant to shame using customizations! Customizing can be useful. But I do see Vim users that add customizations based on misunderstandings or popularity rather than to solve an actual problem. I would suggest instead that we try to understand the vanilla options first. Then add customizations for specific cases when we know what we want and what tradeoffs we are making.
-
-The advantage of using native Vim functionality is that it is lightweight and portable. Most of these items work on most Unix-like operating systems by default without any extra setup. Although to be fair, a few of these items do rely on newer versions of Vim than you might find on some machines. I would recommend using a package manager to install the latest version of Vim.
+My reference sheet for Vim.
 
 ## View documentation
 

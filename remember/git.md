@@ -1,6 +1,6 @@
 # Git
 
-My most used terminal commands for Git version control.
+My reference sheet for Git.
 
 ## View documentation
 
