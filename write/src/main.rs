@@ -35,16 +35,21 @@ fn generate_pages() {
 
                 let route = &paths::file_stem(markdown_file);
 
+                let title = match markdown_file_contents.lines().next() {
+                    Some(title) => &title[2..],
+                    None => panic!("Cannot find a title in {}.", &route),
+                };
+
                 if route == "index" {
                     paths::create_file(
                         &paths::build().join("index.html"),
-                        &markdown_to_html(&markdown_file_contents),
+                        &markdown_to_html(&markdown_file_contents, &title),
                     );
                 } else {
                     paths::create_dir(&paths::build().join(route));
                     paths::create_file(
                         &paths::build().join(route).join("index.html"),
-                        &markdown_to_html(&markdown_file_contents),
+                        &markdown_to_html(&markdown_file_contents, &title),
                     );
                 }
             }
@@ -53,7 +58,7 @@ fn generate_pages() {
     };
 }
 
-fn markdown_to_html(markdown: &str) -> std::string::String {
+fn markdown_to_html(markdown: &str, title: &str) -> std::string::String {
     let css = r#"
         body {
             max-width: 80ch;
@@ -134,7 +139,7 @@ fn markdown_to_html(markdown: &str) -> std::string::String {
         <!DOCTYPE html>
         <html lang='en-US'>
             <head>
-                <title>trevordmiller.com</title>
+                <title>trevordmiller | {}</title>
                 <meta name='author' content='Trevor D. Miller'>
                 <meta name='description' content='Personal website.'>
                 <meta charset='utf-8'>
@@ -166,7 +171,8 @@ fn markdown_to_html(markdown: &str) -> std::string::String {
             </body>
         </html>
     ",
-        css,
+        &title,
+        &css,
         &html
     )
 }
