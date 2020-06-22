@@ -56,26 +56,40 @@ fn generate_pages() {
 fn markdown_to_html(markdown: &str) -> std::string::String {
     let css = r#"
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
-            color: #333333;
             max-width: 80ch;
             margin: 0 auto;
-            padding: 1rem;
-        }
-        header a {
-            font-size: 1rem;
-            font-family: "Courier New", Courier, monospace;
-            font-weight: normal;
-            text-decoration: none;
+            padding: 1rem 1rem 2rem 1rem;
+            font-family: "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
             color: #333333;
+        }
+        label, input {
+            font-size: 1rem;
+        }
+        input {
+            border-radius: 0;
+            border: 1px solid #d3d3d3;
+        }
+        header, code {
+            font-family: "Courier New", Courier, monospace;
+        }
+        code {
+            overflow: auto;
+            display: block;
+            background: #f5f5f5;
+        }
+        nav a, li, code, input[type=submit] {
+            padding: 0.5rem;
+        }
+        header, nav {
             display: flex;
             align-items: center;
+            flex-wrap: wrap;
         }
-        header a::before {
+        header::before {
             content: ">";
             margin: 0 1ch 0 0;
         }
-        header a::after {
+        header::after {
             content: "";
             margin: 0 0 0 1ch;
             display: inline-block;
@@ -83,6 +97,21 @@ fn markdown_to_html(markdown: &str) -> std::string::String {
             width: 1ch;
             height: 1em;
             animation: cursor 800ms infinite;
+        }
+        main {
+            padding: 1rem 0 2rem 0;
+            margin: 1rem 0 3rem 0;
+            border-top: 1px solid #d3d3d3;
+            border-bottom: 1px solid #d3d3d3;
+        }
+        input[type=submit] {
+            margin-top: 0.5rem;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            cursor: pointer;
+            border: 0 none;
+            background: #333333; 
+            color: #ffffff;
         }
         @keyframes cursor {
             0% {
@@ -94,30 +123,6 @@ fn markdown_to_html(markdown: &str) -> std::string::String {
             to {
                 opacity: 0;
             }
-        }
-        li {
-            margin-bottom: 0.5rem;
-        }
-        code {
-            overflow: auto;
-            display: block;
-            background: #f5f5f5;
-            padding: 1rem;
-        }
-        label, input {
-            font-size: 1rem;
-            display: block;
-            margin-bottom: 1rem;
-        }
-        input[type=submit] {
-            font-size: 1rem;
-            cursor: pointer;
-            border: 0 none;
-            -moz-appearance: none;
-            -webkit-appearance: none;
-            background: #333333; 
-            color: #ffffff;
-            padding: 0.5rem; 
         }
     "#;
 
@@ -139,27 +144,23 @@ fn markdown_to_html(markdown: &str) -> std::string::String {
                 </style>
             </head>
             <body>
-                <header>
-                    <span>trevordmiller</span>
-                    <nav>
-                        <a href='/'>Articles</a>
-                        <a href='/projects/'>Projects</a>
-                        <a href='/about/'>About</a>
-                        <a href='/resume/'>Resume</a>
-                    </nav>
-                </header>
+                <header>trevordmiller</header>
+                <nav>
+                    <a href='/'>Articles</a>
+                    <a href='/about/'>About</a>
+                    <a href='/resume/'>Resume</a>
+                    <a href='/projects/'>Projects</a>
+                </nav>
                 <main>
                     {}
                 </main>
                 <footer>
-                    <h2>Join my newsletter</h2>
-                    <p>Get an email when I publish new content.</p>
                     <form action='https://trevordmiller.us10.list-manage.com/subscribe/post?u=91fe993c2d93cde48679d6826&amp;id=f7f097d693' method='post' id='mc-embedded-subscribe-form' name='mc-embedded-subscribe-form'>
-                        <label for='mce-EMAIL'>Email address:</label>
-                        <input type='email' required placeholder='Your email' value='' name='EMAIL' id='mce-EMAIL'>
+                        <div><label for='mce-EMAIL'>Get an email when I publish new content:</label></div>
+                        <div><input type='email' required placeholder='Your email' value='' name='EMAIL' id='mce-EMAIL'></div>
                         <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
                         <div style='position: absolute; left: -5000px;' aria-hidden='true'><input type='text' name='b_91fe993c2d93cde48679d6826_f7f097d693' tabindex='-1' value=''></div>
-                        <input type='submit' value='Subscribe' placeholder='you@somewhere.com' name='subscribe' id='mc-embedded-subscribe'>
+                        <div><input type='submit' value='Subscribe' placeholder='you@somewhere.com' name='subscribe' id='mc-embedded-subscribe'></div>
                     </form>
                 </footer>
             </body>

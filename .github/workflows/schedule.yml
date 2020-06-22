@@ -23,11 +23,6 @@ jobs:
             echo "ERROR: The individual article pages are not running as expected!";
             exit 1;
           fi
-          projects_page="$(curl https://trevordmiller.com/projects)"
-          if [[ $projects_page != *"My open source code."* ]]; then
-            echo "ERROR: The projects page is not running as expected!";
-            exit 1;
-          fi
           about_page="$(curl https://trevordmiller.com/about)"
           if [[ $about_page != *"My personal background."* ]]; then
             echo "ERROR: The about page is not running as expected!";
@@ -36,6 +31,11 @@ jobs:
           resume_page="$(curl https://trevordmiller.com/resume)"
           if [[ $resume_page != *"My professional background."* ]]; then
             echo "ERROR: The resume page is not running as expected!";
+            exit 1;
+          fi
+          projects_page="$(curl https://trevordmiller.com/projects)"
+          if [[ $projects_page != *"My open source code."* ]]; then
+            echo "ERROR: The projects page is not running as expected!";
             exit 1;
           fi
       - name: Audit
@@ -47,6 +47,6 @@ jobs:
           urls: |
             https://trevordmiller.com
             https://trevordmiller.com/standard-vim/
-            https://trevordmiller.com/projects/
             https://trevordmiller.com/about/
             https://trevordmiller.com/resume/
+            https://trevordmiller.com/projects/
