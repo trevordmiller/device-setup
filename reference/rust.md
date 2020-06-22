@@ -1,6 +1,6 @@
 # Rust
 
-My reference sheet for Rust.
+_My reference sheet for Rust._
 
 ## View documentation
 

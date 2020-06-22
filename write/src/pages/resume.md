@@ -1,6 +1,6 @@
 # Resume
 
-My professional background.
+_My professional background._
 
 ## Experience
 

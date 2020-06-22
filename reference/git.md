@@ -1,6 +1,6 @@
 # Git
 
-My reference sheet for Git.
+_My reference sheet for Git._
 
 ## View documentation
 

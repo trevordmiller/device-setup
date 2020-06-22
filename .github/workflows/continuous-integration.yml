@@ -49,7 +49,7 @@ jobs:
         uses: peter-evans/link-checker@v1
         id: links
         with:
-          args: --document-root ./write/build --exclude https://www.invidio.us --verbose --recursive *
+          args: --document-root ./write/build --exclude https://invidio.us --verbose --recursive *
       - name: Exit
         run: exit ${{ steps.links.outputs.exit_code }}
       - name: Audit

@@ -140,8 +140,12 @@ fn markdown_to_html(markdown: &str) -> std::string::String {
             </head>
             <body>
                 <header>
+                    <span>trevordmiller</span>
                     <nav>
-                        <h1><a href='/'>trevordmiller</a></h1>
+                        <a href='/'>Articles</a>
+                        <a href='/projects/'>Projects</a>
+                        <a href='/about/'>About</a>
+                        <a href='/resume/'>Resume</a>
                     </nav>
                 </header>
                 <main>
@@ -149,6 +153,7 @@ fn markdown_to_html(markdown: &str) -> std::string::String {
                 </main>
                 <footer>
                     <h2>Join my newsletter</h2>
+                    <p>Get an email when I publish new content.</p>
                     <form action='https://trevordmiller.us10.list-manage.com/subscribe/post?u=91fe993c2d93cde48679d6826&amp;id=f7f097d693' method='post' id='mc-embedded-subscribe-form' name='mc-embedded-subscribe-form'>
                         <label for='mce-EMAIL'>Email address:</label>
                         <input type='email' required placeholder='Your email' value='' name='EMAIL' id='mce-EMAIL'>

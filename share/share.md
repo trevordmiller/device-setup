@@ -1,6 +1,6 @@
 # Share
 
-The newsletters, forums, and link aggregations I share with to help others.
+_The newsletters, forums, and link aggregations I share with to help others._
 
 - [My trevordmiller newsletter](https://us10.admin.mailchimp.com).
 - [Commandline subreddit](https://www.reddit.com/r/commandline/submit).
