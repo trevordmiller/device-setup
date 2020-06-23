@@ -1,6 +1,6 @@
 # Standard Vim
 
-Using Vim without customizations.
+_Using Vim without customizations._
 
 ## Introduction
 

@@ -13,9 +13,34 @@ jobs:
         uses: actions/checkout@v2
       - name: Test
         run: |
-          website_document="$(curl https://trevordmiller.com)"
-          if [[ $website_document != *"Join my newsletter"* ]]; then
-            echo "ERROR: https://trevordmiller.com is not running as expected!";
+          articles_route="$(curl https://trevordmiller.com)"
+          if [[ $articles_route != *"My posts about software development."* ]]; then
+            echo "ERROR: The articles route is not working as expected!";
+            exit 1;
+          fi
+          article_route="$(curl https://trevordmiller.com/standard-vim)"
+          if [[ $article_route != *"Using Vim without customizations."* ]]; then
+            echo "ERROR: The article routes are not working as expected!";
+            exit 1;
+          fi
+          about_route="$(curl https://trevordmiller.com/about)"
+          if [[ $about_route != *"My personal background."* ]]; then
+            echo "ERROR: The about route is not working as expected!";
+            exit 1;
+          fi
+          resume_route="$(curl https://trevordmiller.com/resume)"
+          if [[ $resume_route != *"My professional background."* ]]; then
+            echo "ERROR: The resume route is not working as expected!";
+            exit 1;
+          fi
+          projects_route="$(curl https://trevordmiller.com/projects)"
+          if [[ $projects_route != *"My open source projects."* ]]; then
+            echo "ERROR: The projects route is not working as expected!";
+            exit 1;
+          fi
+          rss_route="$(curl -Is https://trevordmiller.com/rss.xml | head -n 1)"
+          if [[ $rss_feed != *"200 OK"* ]]; then
+            echo "ERROR: The rss route is not working as expected!";
             exit 1;
           fi
       - name: Audit
@@ -27,4 +52,6 @@ jobs:
           urls: |
             https://trevordmiller.com
             https://trevordmiller.com/standard-vim/
+            https://trevordmiller.com/about/
             https://trevordmiller.com/resume/
+            https://trevordmiller.com/projects/

@@ -1,12 +1,12 @@
 # Resume
 
-My professional background.
+_My professional background._
 
 ## Experience
 
 ### The Church of Jesus Christ of Latter-day Saints
 
-Software Developer (May 2018 - present).
+Software Developer (May 2018 - Present).
 
 - Developing the core libraries shared across the organization.
 - Contributing to development of software across teams.

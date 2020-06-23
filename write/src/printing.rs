@@ -1,3 +1,4 @@
+use crate::decoration;
 use std::io::{self, Write};
 use termcolor::{Color, ColorChoice, ColorSpec, StandardStream, WriteColor};
 
@@ -9,7 +10,12 @@ pub fn heading(content: &str) {
         Err(error) => panic!("There was a problem: {:?}", error),
     }
 
-    match writeln!(&mut stdout, "\n{}\n{}", content, underline(content, "=")) {
+    match writeln!(
+        &mut stdout,
+        "\n{}\n{}",
+        content,
+        decoration::underline(content, "=")
+    ) {
         Ok(_) => (),
         Err(error) => panic!("There was a problem: {:?}", error),
     }
@@ -28,7 +34,12 @@ pub fn subheading(content: &str) {
         Err(error) => panic!("There was a problem: {:?}", error),
     }
 
-    match writeln!(&mut stdout, "\n{}\n{}", content, underline(content, "-")) {
+    match writeln!(
+        &mut stdout,
+        "\n{}\n{}",
+        content,
+        decoration::underline(content, "-")
+    ) {
         Ok(_) => (),
         Err(error) => panic!("There was a problem: {:?}", error),
     }
@@ -54,20 +65,5 @@ pub fn info(content: String) {
     match writeln!(&mut stdout, "\n{}", content) {
         Ok(_) => (),
         Err(error) => panic!("There was a problem: {:?}", error),
-    }
-}
-
-fn underline(content: &str, symbol: &str) -> String {
-    content.chars().map(|_| symbol).collect()
-}
-
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn test_underline() {
-        assert_eq!(underline("Some line", "="), "=========");
-        assert_eq!(underline("Another line", "-"), "------------");
     }
 }

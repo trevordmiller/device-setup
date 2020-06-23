@@ -1,6 +1,6 @@
 # Rust
 
-My reference sheet for Rust.
+_My reference sheet for Rust._
 
 ## View documentation
 
@@ -223,12 +223,7 @@ mod tests {
     use super::*;
 
     #[test]
-    fn some_test() {
-        assert_eq!(some_function(some_input), some_output);
-    }
-
-    #[test]
-    fn another_test() {
+    fn it_does_some_behavior() {
         assert_eq!(some_function(some_input), some_output);
     }
 }
