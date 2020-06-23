@@ -66,8 +66,12 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_underline() {
+    fn it_underlines_with_equals() {
         assert_eq!(underline("Some line", "="), "=========");
+    }
+
+    #[test]
+    fn it_underlines_with_dashes() {
         assert_eq!(underline("Another line", "-"), "------------");
     }
 }
