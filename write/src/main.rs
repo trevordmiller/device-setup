@@ -35,21 +35,33 @@ fn generate_pages() {
 
                 let route = &paths::file_stem(markdown_file);
 
-                let title = match markdown_file_contents.lines().next() {
-                    Some(title) => &title[2..],
+                let mut lines = markdown_file_contents.lines();
+
+                let title = match lines.next() {
+                    Some(title) => title.replace("# ", ""),
                     None => panic!("Cannot find a title in {}.", &route),
+                };
+
+                match lines.next() {
+                    Some(_) => (),
+                    None => panic!("Cannot find a break between title and description in {}.", &route),
+                };
+
+                let description = match lines.next() {
+                    Some(description) => description.replace("_", ""),
+                    None => panic!("Cannot find a description in {}.", &route),
                 };
 
                 if route == "index" {
                     paths::create_file(
                         &paths::build().join("index.html"),
-                        &markdown_to_html(&markdown_file_contents, &title),
+                        &markdown_to_html(&markdown_file_contents, &title, &description),
                     );
                 } else {
                     paths::create_dir(&paths::build().join(route));
                     paths::create_file(
                         &paths::build().join(route).join("index.html"),
-                        &markdown_to_html(&markdown_file_contents, &title),
+                        &markdown_to_html(&markdown_file_contents, &title, &description),
                     );
                 }
             }
@@ -58,7 +70,7 @@ fn generate_pages() {
     };
 }
 
-fn markdown_to_html(markdown: &str, title: &str) -> std::string::String {
+fn markdown_to_html(markdown: &str, title: &str, description: &str) -> std::string::String {
     let css = r#"
         body {
             max-width: 80ch;
@@ -79,8 +91,7 @@ fn markdown_to_html(markdown: &str, title: &str) -> std::string::String {
             font-family: "Courier New", Courier, monospace;
         }
         main {
-            padding: 1rem 0 2rem 0;
-            margin: 1rem 0 0 0;
+            margin-top: 1rem;
             border-top: 1px solid #d3d3d3;
         }
         header, nav {
@@ -123,8 +134,8 @@ fn markdown_to_html(markdown: &str, title: &str) -> std::string::String {
         <html lang='en-US'>
             <head>
                 <title>trevordmiller | {}</title>
+                <meta name='description' content='{}'>
                 <meta name='author' content='Trevor D. Miller'>
-                <meta name='description' content='Personal website.'>
                 <meta charset='utf-8'>
                 <meta name='viewport' content='width=device-width, initial-scale=1'>
                 <style type='text/css'>
@@ -146,6 +157,7 @@ fn markdown_to_html(markdown: &str, title: &str) -> std::string::String {
         </html>
     ",
         &title,
+        &description,
         &css,
         &html
     )
