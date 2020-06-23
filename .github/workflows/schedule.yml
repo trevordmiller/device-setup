@@ -34,7 +34,7 @@ jobs:
             exit 1;
           fi
           projects_page="$(curl https://trevordmiller.com/projects)"
-          if [[ $projects_page != *"My open source code."* ]]; then
+          if [[ $projects_page != *"My open source projects."* ]]; then
             echo "ERROR: The projects page is not running as expected!";
             exit 1;
           fi
