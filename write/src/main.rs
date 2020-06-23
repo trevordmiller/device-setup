@@ -7,7 +7,7 @@ mod paths;
 mod printing;
 
 fn main() {
-    printing::heading("Creating the build directory for my website.");
+    printing::heading("Creating website build directory.");
 
     printing::subheading("Cleaning the build directory.");
     paths::remove_dir(&paths::build());
@@ -87,7 +87,7 @@ fn generate_pages() {
         .language("en-us".to_string())
         .link("https://trevordmiller.com")
         .title("trevordmiller")
-        .description("RSS feed of articles from https://trevordmiller.com.")
+        .description("trevordmiller RSS feed.")
         .items(rss_items)
         .build() {
             Ok(channel) => channel.to_string(),
@@ -171,7 +171,7 @@ fn markdown_to_html(markdown: &str, title: &str, description: &str) -> std::stri
                 <style type='text/css'>
                     {}
                 </style>
-                <link rel='alternate' type='application/rss+xml' title='trevordmiller RSS Feed' href='/rss.xml'>
+                <link rel='alternate' type='application/rss+xml' title='trevordmiller RSS feed' href='/rss.xml'>
             </head>
             <body>
                 <header>trevordmiller</header>

@@ -13,34 +13,34 @@ jobs:
         uses: actions/checkout@v2
       - name: Test
         run: |
-          articles_page="$(curl https://trevordmiller.com)"
-          if [[ $articles_page != *"My posts about software development."* ]]; then
-            echo "ERROR: The articles index page is not working as expected!";
+          articles_route="$(curl https://trevordmiller.com)"
+          if [[ $articles_route != *"My posts about software development."* ]]; then
+            echo "ERROR: The articles route is not working as expected!";
             exit 1;
           fi
-          article_page="$(curl https://trevordmiller.com/standard-vim)"
-          if [[ $article_page != *"Using Vim without customizations."* ]]; then
-            echo "ERROR: The individual article pages are not working as expected!";
+          article_route="$(curl https://trevordmiller.com/standard-vim)"
+          if [[ $article_route != *"Using Vim without customizations."* ]]; then
+            echo "ERROR: The article routes are not working as expected!";
             exit 1;
           fi
-          about_page="$(curl https://trevordmiller.com/about)"
-          if [[ $about_page != *"My personal background."* ]]; then
-            echo "ERROR: The about page is not working as expected!";
+          about_route="$(curl https://trevordmiller.com/about)"
+          if [[ $about_route != *"My personal background."* ]]; then
+            echo "ERROR: The about route is not working as expected!";
             exit 1;
           fi
-          resume_page="$(curl https://trevordmiller.com/resume)"
-          if [[ $resume_page != *"My professional background."* ]]; then
-            echo "ERROR: The resume page is not working as expected!";
+          resume_route="$(curl https://trevordmiller.com/resume)"
+          if [[ $resume_route != *"My professional background."* ]]; then
+            echo "ERROR: The resume route is not working as expected!";
             exit 1;
           fi
-          projects_page="$(curl https://trevordmiller.com/projects)"
-          if [[ $projects_page != *"My open source projects."* ]]; then
-            echo "ERROR: The projects page is not working as expected!";
+          projects_route="$(curl https://trevordmiller.com/projects)"
+          if [[ $projects_route != *"My open source projects."* ]]; then
+            echo "ERROR: The projects route is not working as expected!";
             exit 1;
           fi
-          rss_feed="$(curl -Is https://trevordmiller.com/rss.xml | head -n 1)"
+          rss_route="$(curl -Is https://trevordmiller.com/rss.xml | head -n 1)"
           if [[ $rss_feed != *"200 OK"* ]]; then
-            echo "ERROR: The rss feed is not working as expected!";
+            echo "ERROR: The rss route is not working as expected!";
             exit 1;
           fi
       - name: Audit
