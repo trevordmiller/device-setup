@@ -15,27 +15,32 @@ jobs:
         run: |
           articles_page="$(curl https://trevordmiller.com)"
           if [[ $articles_page != *"My posts about software development."* ]]; then
-            echo "ERROR: The articles index page is not running as expected!";
+            echo "ERROR: The articles index page is not working as expected!";
             exit 1;
           fi
           article_page="$(curl https://trevordmiller.com/standard-vim)"
           if [[ $article_page != *"Using Vim without customizations."* ]]; then
-            echo "ERROR: The individual article pages are not running as expected!";
+            echo "ERROR: The individual article pages are not working as expected!";
             exit 1;
           fi
           about_page="$(curl https://trevordmiller.com/about)"
           if [[ $about_page != *"My personal background."* ]]; then
-            echo "ERROR: The about page is not running as expected!";
+            echo "ERROR: The about page is not working as expected!";
             exit 1;
           fi
           resume_page="$(curl https://trevordmiller.com/resume)"
           if [[ $resume_page != *"My professional background."* ]]; then
-            echo "ERROR: The resume page is not running as expected!";
+            echo "ERROR: The resume page is not working as expected!";
             exit 1;
           fi
           projects_page="$(curl https://trevordmiller.com/projects)"
           if [[ $projects_page != *"My open source projects."* ]]; then
-            echo "ERROR: The projects page is not running as expected!";
+            echo "ERROR: The projects page is not working as expected!";
+            exit 1;
+          fi
+          rss_feed="$(curl -Is https://trevordmiller.com/rss.xml | head -n 1)"
+          if [[ $rss_feed != *"200 OK"* ]]; then
+            echo "ERROR: The rss feed is not working as expected!";
             exit 1;
           fi
       - name: Audit

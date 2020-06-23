@@ -1,5 +1,7 @@
 use pulldown_cmark::{html, Options, Parser};
 use std::fs;
+use rss::ChannelBuilder;
+use rss::Item;
 
 mod paths;
 mod printing;
@@ -20,6 +22,8 @@ fn main() {
 }
 
 fn generate_pages() {
+    let mut rss_items = Vec::new();
+
     match fs::read_dir(&paths::pages()) {
         Ok(markdown_files) => {
             for markdown_file in markdown_files {
@@ -64,10 +68,36 @@ fn generate_pages() {
                         &markdown_to_html(&markdown_file_contents, &title, &description),
                     );
                 }
+
+
+                let mut rss_item = Item::default();
+                rss_item.set_link(format!("https://trevordmiller.com/{}/", &route));
+                rss_item.set_title(title);
+                rss_item.set_description(description);
+
+                rss_items.push(rss_item)
             }
         }
         Err(error) => panic!("There was a problem: {:?}", error),
     };
+
+    let channel = match ChannelBuilder::default()
+        .language("en-us".to_string())
+        .link("https://trevordmiller.com")
+        .title("trevordmiller")
+        .description("RSS feed for https://trevordmiller.com.")
+        .items(rss_items)
+        .build() {
+            Ok(channel) => channel.to_string(),
+            Err(error) => panic!("There was a problem: {:?}", error),
+        };
+
+    dbg!(&channel);
+
+    paths::create_file(
+        &paths::build().join("rss.xml"),
+        &channel,
+    );
 }
 
 fn markdown_to_html(markdown: &str, title: &str, description: &str) -> std::string::String {
@@ -141,6 +171,7 @@ fn markdown_to_html(markdown: &str, title: &str, description: &str) -> std::stri
                 <style type='text/css'>
                     {}
                 </style>
+                <link rel='alternate' type='application/rss+xml' title='trevordmiller RSS Feed' href='/rss.xml'>
             </head>
             <body>
                 <header>trevordmiller</header>
@@ -149,6 +180,7 @@ fn markdown_to_html(markdown: &str, title: &str, description: &str) -> std::stri
                     <a href='/about/'>About</a>
                     <a href='/resume/'>Resume</a>
                     <a href='/projects/'>Projects</a>
+                    <a href='/rss.xml'>RSS</a>
                 </nav>
                 <main>
                     {}
