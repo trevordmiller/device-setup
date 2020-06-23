@@ -69,13 +69,15 @@ fn generate_pages() {
                     );
                 }
 
+                let is_individual_article = route != "index" && route != "about" && route != "resume" && route != "projects";
 
-                let mut rss_item = Item::default();
-                rss_item.set_link(format!("https://trevordmiller.com/{}/", &route));
-                rss_item.set_title(title);
-                rss_item.set_description(description);
-
-                rss_items.push(rss_item)
+                if is_individual_article {
+                    let mut rss_item = Item::default();
+                    rss_item.set_link(format!("https://trevordmiller.com/{}/", &route));
+                    rss_item.set_title(title);
+                    rss_item.set_description(description);
+                    rss_items.push(rss_item)
+                }
             }
         }
         Err(error) => panic!("There was a problem: {:?}", error),
@@ -85,14 +87,12 @@ fn generate_pages() {
         .language("en-us".to_string())
         .link("https://trevordmiller.com")
         .title("trevordmiller")
-        .description("RSS feed for https://trevordmiller.com.")
+        .description("RSS feed of articles from https://trevordmiller.com.")
         .items(rss_items)
         .build() {
             Ok(channel) => channel.to_string(),
             Err(error) => panic!("There was a problem: {:?}", error),
         };
-
-    dbg!(&channel);
 
     paths::create_file(
         &paths::build().join("rss.xml"),
