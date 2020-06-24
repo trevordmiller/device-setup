@@ -39,7 +39,7 @@ jobs:
             exit 1;
           fi
           rss_route="$(curl -Is https://trevordmiller.com/rss.xml | head -n 1)"
-          if [[ $rss_feed != *"200"* ]]; then
+          if [[ $rss_route != *"200"* ]]; then
             echo "ERROR: The rss route is not working as expected!";
             exit 1;
           fi
