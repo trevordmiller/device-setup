@@ -55,5 +55,5 @@ _My bookmarked documentation, articles, books, and videos I research to help me 
 - [ ] [Linux Sysadmin - How Shell Scripts Work](https://invidio.us/watch?v=U2_MvxnqLRE).
 - [ ] [Linux Sysadmin - PATH](https://invidio.us/watch?v=rJMFxIbDe-g).
 - [ ] [Linux Sysadmin - Service Management](https://invidio.us/watch?v=JX2lxKJC6yI).
-- [ ] [Linux Sysadmin - Watch and Log Command Out[put](https://invidio.us/watch?v=09v8vDOpdYo).
+- [ ] [Linux Sysadmin - Watch and Log Command Output](https://invidio.us/watch?v=09v8vDOpdYo).
 - [ ] [Linux Sysadmin - Top Questions](https://invidio.us/watch?v=l0QGLMwR-lY).
