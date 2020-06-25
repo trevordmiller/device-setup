@@ -83,7 +83,8 @@ fn generate_pages() {
                     rss_item.set_link(format!("https://trevordmiller.com/{}/", &route));
                     rss_item.set_title(title);
                     rss_item.set_description(description);
-                    rss_items.push(rss_item)
+                    rss_item.set_author("Trevor D. Miller".to_string());
+                    rss_items.push(rss_item);
                 }
             }
         }
