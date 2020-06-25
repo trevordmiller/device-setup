@@ -8,5 +8,5 @@ _My open source projects._
 
 ## Past
 
-- See [my open source code on GitHub](https://github.com/trevordmiller).
-- See [my open source video tutorials on egghead.io](http://egghead.io/instructors/trevor-miller).
+- [GitHub: My open source code](https://github.com/trevordmiller).
+- [egghead.io: My open source video tutorials](http://egghead.io/instructors/trevor-miller).
