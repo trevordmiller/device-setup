@@ -1,6 +1,6 @@
 # Research
 
-_My bookmarked documentation, articles, books, and videos I research to help me increase my knowledge._
+_My bookmarked documentation, articles, books, videos, and courses I research to help me increase my knowledge._
 
 - [x] [Vim Grammar](http://takac.github.io/2013/01/30/vim-grammar/).
 - [x] [Rust: A Language for the Next 40 Years](https://invidio.us/watch?v=A3AdN7U24iU).
@@ -57,3 +57,5 @@ _My bookmarked documentation, articles, books, and videos I research to help me 
 - [ ] [Linux Sysadmin - Service Management](https://invidio.us/watch?v=JX2lxKJC6yI).
 - [ ] [Linux Sysadmin - Watch and Log Command Output](https://invidio.us/watch?v=09v8vDOpdYo).
 - [ ] [Linux Sysadmin - Top Questions](https://invidio.us/watch?v=l0QGLMwR-lY).
+- [ ] [Introduction to Linux](https://training.linuxfoundation.org/training/introduction-to-linux/).
+- [ ] [Essentials of Linux System Administration](https://training.linuxfoundation.org/training/essentials-of-linux-system-administration/).

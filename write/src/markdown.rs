@@ -8,21 +8,31 @@ pub fn to_html(markdown: &str, title: &str, description: &str) -> std::string::S
             padding: 1rem 1rem 2rem 1rem;
             font-family: "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
             color: #333333;
+            line-height: 1.5;
         }
         code {
             overflow: auto;
             display: block;
             background: #f5f5f5;
         }
-        nav a, li, code {
+        nav a, code {
             padding: 0.5rem;
         }
         header, code {
             font-family: "Courier New", Courier, monospace;
         }
+        h1 {
+            margin-bottom: 0;
+        }
+        h1 + p {
+            margin-top: 0;
+        }
         main {
             margin-top: 1rem;
             border-top: 1px solid #d3d3d3;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #d3d3d3;
+            margin-bottom: 2rem;
         }
         header, nav {
             display: flex;
@@ -80,11 +90,13 @@ pub fn to_html(markdown: &str, title: &str, description: &str) -> std::string::S
                     <a href='/about/'>About</a>
                     <a href='/resume/'>Resume</a>
                     <a href='/projects/'>Projects</a>
-                    <a href='/rss.xml'>RSS</a>
                 </nav>
                 <main>
                     {}
                 </main>
+                <footer>
+                    <p>If you would like to get updates when I publish new content, you can subscribe to my email list by sending an email to <a href='mailto:trevordmiller+subscribe@groups.io?subject=Subscribe'>trevordmiller+subscribe@groups.io</a>. Or use the RSS feed at <a href='https://trevordmiller.com/rss.xml'>https://trevordmiller.com/rss.xml</a>.</p>
+                </footer>
             </body>
         </html>
     ",
@@ -120,5 +132,13 @@ mod tests {
             true
         );
         assert_eq!(html_document.contains("<li>Some list item.</li>"), true);
+        assert_eq!(
+            html_document.contains("trevordmiller+subscribe@groups.io"),
+            true
+        );
+        assert_eq!(
+            html_document.contains("https://trevordmiller.com/rss.xml"),
+            true
+        );
     }
 }

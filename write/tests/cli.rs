@@ -46,7 +46,7 @@ fn it_creates_website_build_directory() {
         .unwrap()
         .parse()
         .unwrap();
-    assert_eq!(rss_file.contains("<item><title>Standard Vim</title><link>https://trevordmiller.com/standard-vim/</link><description><![CDATA[Using Vim without customizations.]]></description></item>"), true);
+    assert_eq!(rss_file.contains("<item><title>Standard Vim</title><link>https://trevordmiller.com/standard-vim/</link><description><![CDATA[Using Vim without customizations.]]></description><author>Trevor D. Miller</author></item>"), true);
 
     let cname_file: String = fs::read_to_string("./build/CNAME")
         .unwrap()
