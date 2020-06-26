@@ -2,6 +2,9 @@
 
 _My bookmarked documentation, articles, books, videos, and courses I research to help me increase my knowledge._
 
+- [x] [Hacker Laws](https://github.com/dwmkerr/hacker-laws).
+- [x] [Goodbye, Clean Code](https://overreacted.io/goodbye-clean-code/).
+- [x] [Software should be designed to last](https://adlrocha.substack.com/p/adlrocha-software-should-be-designed).
 - [x] [Vim Grammar](http://takac.github.io/2013/01/30/vim-grammar/).
 - [x] [Rust: A Language for the Next 40 Years](https://invidio.us/watch?v=A3AdN7U24iU).
 - [x] [Considering Rust](https://invidio.us/watch?v=DnT-LUQgc7s).
@@ -24,15 +27,14 @@ _My bookmarked documentation, articles, books, videos, and courses I research to
 - [ ] [The Rust Programming Language - Patterns and Matching](https://doc.rust-lang.org/book/ch18-00-patterns.html).
 - [ ] [The Rust Programming Language - Advanced Features](https://doc.rust-lang.org/book/ch19-00-advanced-features.html).
 - [ ] [The Rust Programming Language - Building a Multithreaded Web Server](https://doc.rust-lang.org/book/ch20-00-final-project-a-web-server.html).
-- [ ] [The Rust Programming Language - Appendix](https://doc.rust-lang.org/book/appendix-00.html).
-- [ ] [An Introduction to Unix](http://oliverelliott.org/article/computing/tut_unix/).
-- [ ] [100 Useful Unix Commands](http://oliverelliott.org/article/computing/ref_unix/).
-- [ ] [The beauty of Unix pipelines](https://prithu.xyz/posts/unix-pipeline/).
-- [ ] [The Art of Command Line](https://github.com/jlevy/the-art-of-command-line).
 - [ ] [Operating Systems](https://invidio.us/watch?v=26QPDBe-NB8).
 - [ ] [Memory & Storage](https://invidio.us/watch?v=TQCr9RV7twk).
 - [ ] [Files & File Systems](https://invidio.us/watch?v=KN8YgJnShPM).
 - [ ] [Characters, Symbols and the Unicode Miracle](https://invidio.us/watch?v=MijmeoH9LT4).
+- [ ] [An Introduction to Unix](http://oliverelliott.org/article/computing/tut_unix/).
+- [ ] [100 Useful Unix Commands](http://oliverelliott.org/article/computing/ref_unix/).
+- [ ] [The beauty of Unix pipelines](https://prithu.xyz/posts/unix-pipeline/).
+- [ ] [The Art of Command Line](https://github.com/jlevy/the-art-of-command-line).
 - [ ] [Linux Sysadmin - Commands](https://invidio.us/watch?v=Lbh8Bh_SEzU).
 - [ ] [Linux Sysadmin - Pipes and Redirection](https://invidio.us/watch?v=-Z5tCri-QlI).
 - [ ] [Linux Sysadmin - Filtering Output and Finding Things](https://invidio.us/watch?v=nLa6jAbULe8).
@@ -57,5 +59,22 @@ _My bookmarked documentation, articles, books, videos, and courses I research to
 - [ ] [Linux Sysadmin - Service Management](https://invidio.us/watch?v=JX2lxKJC6yI).
 - [ ] [Linux Sysadmin - Watch and Log Command Output](https://invidio.us/watch?v=09v8vDOpdYo).
 - [ ] [Linux Sysadmin - Top Questions](https://invidio.us/watch?v=l0QGLMwR-lY).
-- [ ] [Introduction to Linux](https://training.linuxfoundation.org/training/introduction-to-linux/).
-- [ ] [Essentials of Linux System Administration](https://training.linuxfoundation.org/training/essentials-of-linux-system-administration/).
+- [ ] [The Linux Foundation - The Linux Foundation](https://training.linuxfoundation.org/training/introduction-to-linux/).
+- [ ] [The Linux Foundation - Linux Philosophy and Concepts](https://training.linuxfoundation.org/training/introduction-to-linux/).
+- [ ] [The Linux Foundation - Linux Basics and System Startup](https://training.linuxfoundation.org/training/introduction-to-linux/).
+- [ ] [The Linux Foundation - Graphical Interface](https://training.linuxfoundation.org/training/introduction-to-linux/).
+- [ ] [The Linux Foundation - System Configuration from the Graphical Interface](https://training.linuxfoundation.org/training/introduction-to-linux/).
+- [ ] [The Linux Foundation - Common Applications](https://training.linuxfoundation.org/training/introduction-to-linux/).
+- [ ] [The Linux Foundation - Command Line Operations](https://training.linuxfoundation.org/training/introduction-to-linux/).
+- [ ] [The Linux Foundation - Finding Linux Documentation](https://training.linuxfoundation.org/training/introduction-to-linux/).
+- [ ] [The Linux Foundation - Processes](https://training.linuxfoundation.org/training/introduction-to-linux/).
+- [ ] [The Linux Foundation - File Operations](https://training.linuxfoundation.org/training/introduction-to-linux/).
+- [ ] [The Linux Foundation - Text Editors](https://training.linuxfoundation.org/training/introduction-to-linux/).
+- [ ] [The Linux Foundation - User Environment](https://training.linuxfoundation.org/training/introduction-to-linux/).
+- [ ] [The Linux Foundation - Manipulating Text](https://training.linuxfoundation.org/training/introduction-to-linux/).
+- [ ] [The Linux Foundation - Network Operations](https://training.linuxfoundation.org/training/introduction-to-linux/).
+- [ ] [The Linux Foundation - The Bash Shell and Basic Scripting](https://training.linuxfoundation.org/training/introduction-to-linux/).
+- [ ] [The Linux Foundation - More on Bash Shell Scripting](https://training.linuxfoundation.org/training/introduction-to-linux/).
+- [ ] [The Linux Foundation - Printing](https://training.linuxfoundation.org/training/introduction-to-linux/).
+- [ ] [The Linux Foundation - Local Security Principles](https://training.linuxfoundation.org/training/introduction-to-linux/).
+- [ ] [The Linux Foundation - Final Exam](https://training.linuxfoundation.org/training/introduction-to-linux/).
