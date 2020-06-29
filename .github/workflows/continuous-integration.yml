@@ -28,7 +28,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: General
-        run: npx prettier --check . --ignore-path ./.gitignore
+        run: npx prettier --check .
 
   links:
     runs-on: ubuntu-latest
