@@ -1,7 +1,0 @@
-[package]
-name = "practice"
-version = "1.0.0"
-authors = ["Trevor D. Miller"]
-edition = "2018"
-
-[dependencies]

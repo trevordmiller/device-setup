@@ -6,20 +6,23 @@ on:
       - master
 
 jobs:
-  website:
-    name: Website
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+        with:
+          submodules: true
+      - name: Install
+        run: curl -s -L https://github.com/getzola/zola/releases/download/v0.11.0/zola-v0.11.0-x86_64-unknown-linux-gnu.tar.gz | sudo tar xvzf - -C /usr/local/bin
       - name: Build
-        run: cargo run --release
-        working-directory: ./write
+        run: zola build && echo "trevordmiller.com" > ./public/CNAME
+        working-directory: ./src/write
       - name: Deploy
         if: success()
         uses: crazy-max/ghaction-github-pages@v2
         with:
-          build_dir: ./write/build
+          build_dir: ./src/write/public
           repo: trevordmiller/trevordmiller.github.io
           target_branch: master
         env:

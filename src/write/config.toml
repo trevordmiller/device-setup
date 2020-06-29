@@ -1,0 +1,9 @@
+base_url = "https://trevordmiller.com"
+title = "trevordmiller"
+description = "My writing about software development."
+default_language = "en"
+highlight_code = true
+theme = "book"
+
+[extra]
+book_number_chapters = false
