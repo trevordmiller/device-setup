@@ -52,7 +52,7 @@ jobs:
       - name: Format
         run: cargo fmt -- --check
       - name: General
-        run: npx prettier --check . --ignore-path ./.gitignore
+        run: npx prettier --check .
 
   links:
     runs-on: ubuntu-latest
