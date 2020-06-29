@@ -4,67 +4,50 @@ on:
   push:
 
 jobs:
-  practice:
-    name: Practice
+  compile:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Compile
-        run: cargo check
-        working-directory: ./practice
-      - name: Test
-        run: cargo test
-        working-directory: ./practice
-      - name: Lint
-        run: cargo clippy --all-targets -- -D warnings
-        working-directory: ./practice
-      - name: Format
-        run: cargo fmt -- --check
-        working-directory: ./practice
-
-  write:
-    name: Write
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Compile
-        run: cargo check
-        working-directory: ./write
-      - name: Test
-        run: cargo test
-        working-directory: ./write
-      - name: Lint
-        run: cargo clippy --all-targets -- -D warnings
-        working-directory: ./write
-      - name: Format
-        run: cargo fmt -- --check
-        working-directory: ./write
       - name: Build
-        run: cargo run --release
-        working-directory: ./write
+        run: echo "TODO"
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: General
+        uses: docker://github/super-linter:v2.0.0
+
+  format:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: General
+        run: npx prettier --check . --ignore-path ./.gitignore
+
+  links:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
       - name: Links
-        if: success()
         uses: peter-evans/link-checker@v1
         id: links
         with:
-          args: --document-root ./write/build --exclude https://invidio.us --verbose --recursive *
+          args: --document-root ./build --verbose --recursive *
       - name: Exit
         run: exit ${{ steps.links.outputs.exit_code }}
-      - name: Audit
-        uses: treosh/lighthouse-ci-action@v3
-        with:
-          configPath: "./.github/workflows/configuration/write-audit.json"
-          temporaryPublicStorage: true
 
-  general:
-    name: General
+  audit:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Lint
-        uses: docker://github/super-linter:v2.0.0
-      - name: Format
-        run: npx prettier --check . --ignore-path ./.gitignore
+      - name: Audit
+        uses: treosh/lighthouse-ci-action@v3
+        with:
+          configPath: "./.github/workflows/configuration/audit-local.json"
+          temporaryPublicStorage: true

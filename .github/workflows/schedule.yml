@@ -5,21 +5,20 @@ on:
     - cron: "0 * * * *"
 
 jobs:
-  website:
-    name: Website
+  health:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Test
+      - name: Health
         run: |
-          articles_route="$(curl https://trevordmiller.com)"
-          if [[ $articles_route != *"My posts about software development."* ]]; then
-            echo "ERROR: The articles route is not working as expected!";
+          home_route="$(curl https://trevordmiller.com)"
+          if [[ $home_route != *"My posts about software development."* ]]; then
+            echo "ERROR: The home route is not working as expected!";
             exit 1;
           fi
-          article_route="$(curl https://trevordmiller.com/standard-vim/)"
-          if [[ $article_route != *"Using Vim without customizations."* ]]; then
+          article_route="$(curl https://trevordmiller.com/programming-principles/)"
+          if [[ $article_route != *"My guiding principles for software development in general."* ]]; then
             echo "ERROR: The article routes are not working as expected!";
             exit 1;
           fi
@@ -38,20 +37,21 @@ jobs:
             echo "ERROR: The projects route is not working as expected!";
             exit 1;
           fi
-          rss_route="$(curl -Is https://trevordmiller.com/rss.xml | head -n 1)"
-          if [[ $rss_route != *"200"* ]]; then
-            echo "ERROR: The rss route is not working as expected!";
-            exit 1;
-          fi
+
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
       - name: Audit
         uses: treosh/lighthouse-ci-action@v3
         with:
-          configPath: "./.github/workflows/configuration/website-audit.json"
+          configPath: "./.github/workflows/configuration/audit-production.json"
           temporaryPublicStorage: true
           runs: 3
           urls: |
             https://trevordmiller.com
-            https://trevordmiller.com/standard-vim/
+            https://trevordmiller.com/programming-principles/
             https://trevordmiller.com/about/
             https://trevordmiller.com/resume/
             https://trevordmiller.com/projects/

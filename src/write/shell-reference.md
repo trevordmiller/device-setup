@@ -1,6 +1,6 @@
-# Unix
+# Shell reference
 
-_My reference sheet for Unix._
+_My reference sheet for system work with Unix-like shells._
 
 ## View documentation
 
@@ -36,12 +36,6 @@ ps
 
 ```shell
 ps -e
-```
-
-## Display processes using the most resources
-
-```shell
-top
 ```
 
 ## Stop a process and allow it to finish (SIGTERM)
@@ -271,4 +265,10 @@ echo "Some text to append to file" >> some_file
 
 ```shell
 echo $SOME_VARIABLE
+```
+
+## Display processes using the most resources
+
+```shell
+top
 ```

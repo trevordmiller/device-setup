@@ -1,6 +1,6 @@
-# Vim
+# Vim reference
 
-_My reference sheet for Vim._
+_My reference sheet for text editing with Vim._
 
 ## View documentation
 

@@ -1,6 +1,6 @@
-# Programming
+# Programming principles
 
-_My reference sheet for programming in general._
+_My guiding principles for software development in general._
 
 ## Principles
 

@@ -6,20 +6,18 @@ on:
       - master
 
 jobs:
-  website:
-    name: Website
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Build
-        run: cargo run --release
-        working-directory: ./write
+        run: echo "TODO"
       - name: Deploy
         if: success()
         uses: crazy-max/ghaction-github-pages@v2
         with:
-          build_dir: ./write/build
+          build_dir: ./build
           repo: trevordmiller/trevordmiller.github.io
           target_branch: master
         env:
