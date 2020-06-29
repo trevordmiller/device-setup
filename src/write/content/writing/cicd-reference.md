@@ -69,7 +69,6 @@ jobs:
 
   audit:
     runs-on: ubuntu-latest
-    needs: compile
     steps:
       - name: Checkout
         uses: actions/checkout@v2
