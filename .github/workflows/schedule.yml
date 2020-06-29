@@ -12,9 +12,9 @@ jobs:
         uses: actions/checkout@v2
       - name: Health
         run: |
-          home_route="$(curl -L https://trevordmiller.com)"
-          if [[ $home_route != *"My writing about software development."* ]]; then
-            echo "ERROR: The home route redirect to /writing/ is not working as expected!";
+          home_route="$(curl https://trevordmiller.com)"
+          if [[ $home_route != *"Redirect"* ]]; then
+            echo "ERROR: The home route is not working as expected!";
             exit 1;
           fi
           writing_route="$(curl https://trevordmiller.com/writing/)"
