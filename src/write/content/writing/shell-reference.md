@@ -1,136 +1,139 @@
-# Shell reference
++++
+title = "Shell reference"
+weight = 3
++++
 
 _My reference sheet for system work with Unix-like shells._
 
 ## View documentation
 
-```shell
+```sh
 man some_thing
 ```
 
 ## Interrupt a running process
 
-```shell
+```sh
 <ctrl c>
 ```
 
 ## Run an executable
 
-```shell
+```sh
 ./some_path<enter>
 ```
 
 ## Print working directory
 
-```shell
+```sh
 pwd
 ```
 
 ## Display own currently running processes
 
-```shell
+```sh
 ps
 ```
 
 ## Display all currently running processes
 
-```shell
+```sh
 ps -e
 ```
 
 ## Stop a process and allow it to finish (SIGTERM)
 
-```shell
+```sh
 kill -15 some_pid
 ```
 
 ## Force a process to quit with potential data loss or corruption (SIGKILL)
 
-```shell
+```sh
 kill -9 some_pid
 ```
 
 ## Quit all spawned processes with a specific name
 
-```shell
+```sh
 killall some_process_name
 ```
 
 ## List directory contents
 
-```shell
+```sh
 ls
 ```
 
 ## List all directory contents
 
-```shell
+```sh
 ls -a
 ```
 
 ## Change directory
 
-```shell
+```sh
 cd some_path
 ```
 
 ## Change to last directory
 
-```shell
+```sh
 cd -
 ```
 
 ## Create directory
 
-```shell
+```sh
 mkdir some_directory
 ```
 
 ## Create file
 
-```shell
+```sh
 touch some_file
 ```
 
 ## Remove directory
 
-```shell
+```sh
 rm -rf some_directory
 ```
 
 ## Remove file
 
-```shell
+```sh
 rm some_file
 ```
 
 ## Move directory
 
-```shell
+```sh
 mv some_directory another_directory
 ```
 
 ## Move file
 
-```shell
+```sh
 mv some_directory another_directory
 ```
 
 ## Copy directory
 
-```shell
+```sh
 cp -R some_directory another_directory
 ```
 
 ## Copy file
 
-```shell
+```sh
 cp some_file another_file
 ```
 
 ## Re-run commands
 
-```shell
+```sh
 <ctrl r>
 Some search
 # <up/down> to move through list of items
@@ -139,91 +142,91 @@ Some search
 
 ## See where an executable is installed
 
-```shell
+```sh
 which some_executable
 ```
 
 ## Pipe output from one command as input to another
 
-```shell
+```sh
 some_command | another_command
 ```
 
 ## Redirect output from one command to a file
 
-```shell
+```sh
 some_command > some_file
 ```
 
 ## Use file contents in a command
 
-```shell
+```sh
 some_file < some_command
 ```
 
 ## Run a command if another is successful
 
-```shell
+```sh
 some_command && another_command
 ```
 
 ## File contents
 
-```shell
+```sh
 cat some_file
 ```
 
 ## Page contents
 
-```shell
+```sh
 less some_file
 ```
 
 ## Search for a pattern
 
-```shell
+```sh
 grep some_pattern
 ```
 
 Examples:
 
-```shell
+```sh
 ps -ef | grep systemd
 ```
 
 ## Search for a pattern while ignoring the casing
 
-```shell
+```sh
 grep -i some_pattern
 ```
 
 ## Search for a pattern in a path
 
-```shell
+```sh
 grep -R some_pattern some_path
 ```
 
 ## Substitute a pattern in a path
 
-```shell
+```sh
 sed 's/some_pattern/some_replacement/g' some_path
 ```
 
 ## Send HTTP requests
 
-```shell
+```sh
 curl some_url
 ```
 
 ## Run executable files
 
-```shell
+```sh
 ./some_executable
 ```
 
 ## Create a shell script
 
-```shell
+```sh
 touch some_executable
 chmod +x some_executable
 # '#!/bin/sh' at top of file and shell commands inside
@@ -231,7 +234,7 @@ chmod +x some_executable
 
 ## Work on a remote server
 
-```shell
+```sh
 ssh some_remote_server
 # Run other unix commands
 exit
@@ -239,36 +242,36 @@ exit
 
 ## Run a command on a remote server
 
-```shell
+```sh
 ssh some_remote_server "some_command"
 ```
 
 ## Show who is logged in
 
-```shell
+```sh
 who
 ```
 
 ## Use text
 
-```shell
+```sh
 echo "Some text"
 ```
 
 Examples:
 
-```shell
+```sh
 echo "Some text to append to file" >> some_file
 ```
 
 ## Check environment variables
 
-```shell
+```sh
 echo $SOME_VARIABLE
 ```
 
 ## Display processes using the most resources
 
-```shell
+```sh
 top
 ```

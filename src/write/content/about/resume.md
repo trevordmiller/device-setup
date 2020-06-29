@@ -1,4 +1,7 @@
-# Resume
++++
+title = "Resume"
+weight = 1
++++
 
 _My professional background._
 

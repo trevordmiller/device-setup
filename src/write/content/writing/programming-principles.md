@@ -1,4 +1,7 @@
-# Programming principles
++++
+title = "Programming principles"
+weight = 1
++++
 
 _My guiding principles for software development in general._
 

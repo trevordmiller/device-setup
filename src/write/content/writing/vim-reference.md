@@ -1,35 +1,38 @@
-# Vim reference
++++
+title = "Vim reference"
+weight = 4
++++
 
 _My reference sheet for text editing with Vim._
 
 ## View documentation
 
-```shell
+```sh
 :h some_thing
 ```
 
 ## Start
 
-```shell
+```sh
 cd some_project_directory_root
 vim
 ```
 
 ## Write
 
-```shell
+```sh
 :w
 ```
 
 ## Write and quit
 
-```shell
+```sh
 :wq
 ```
 
 ## Switch to a shell
 
-```shell
+```sh
 :sh
 # Run shell commands
 <ctrl d>
@@ -37,26 +40,26 @@ vim
 
 ## Explore directories
 
-```shell
+```sh
 :e some_directory
 ```
 
 Examples:
 
-```shell
+```sh
 :e src/
 :e .
 ```
 
 ## Open files
 
-```shell
+```sh
 :e some_file
 ```
 
 Examples:
 
-```shell
+```sh
 :e **/*some_file<tab>
 :e src/**/*some_file<tab>
 :e **/*<tab>
@@ -64,7 +67,7 @@ Examples:
 
 ## Search project for a pattern
 
-```shell
+```sh
 :vim /some_pattern/ some_path
 :cn/p # to jump between quickfix results
 :copen # to show all quickfix results
@@ -72,7 +75,7 @@ Examples:
 
 Examples:
 
-```shell
+```sh
 :vim /test/ **/*
 :vim /fn/ **/*.rs
 :vim /#/ **/.*
@@ -80,108 +83,108 @@ Examples:
 
 ## Page
 
-```shell
+```sh
 <ctrl f/b>
 ```
 
 ## Repeat
 
-```shell
+```sh
 .
 ```
 
 ## Undo
 
-```shell
+```sh
 u
 ```
 
 ## Redo
 
-```shell
+```sh
 <ctrl r>
 ```
 
 ## Split windows
 
-```shell
+```sh
 :vs
 ```
 
 ## Go to window
 
-```shell
+```sh
 <ctrl w h/j/k/l>
 ```
 
 ## Go in/out (forward/back)
 
-```shell
+```sh
 <ctrl i/o>
 ```
 
 ## Go to file
 
-```shell
+```sh
 # Cursor over import
 gf
 ```
 
 ## Complete word
 
-```shell
+```sh
 <ctrl n>
 <ctrl n/p> # to move through list items
 ```
 
 ## Complete line
 
-```shell
+```sh
 <ctrl x><ctrl l>
 <ctrl n/p> # to move through list items
 ```
 
 ## Substitute a pattern in a range
 
-```shell
+```sh
 :some_range s/some_pattern/some_replacement/g
 ```
 
 Examples:
 
-```shell
+```sh
 :%s/foo/bar/gc
 ```
 
 ## Apply commands to each quickfix item
 
-```shell
+```sh
 :cdo some_command
 ```
 
 Examples:
 
-```shell
+```sh
 # Populate the quickfix with something like :vim[grep]
 :cdo normal d/foo
 ```
 
 ## Apply commands to each quickfix file
 
-```shell
+```sh
 :cfdo some_command
 ```
 
 Examples:
 
-```shell
+```sh
 # Populate the quickfix with something like :vim[grep]
 :cfdo %s/foo/bar/g
 ```
 
 ## Apply generic commands across lines in a file (macro)
 
-```shell
+```sh
 qq
 # Complete generic commands for a line
 q
@@ -190,7 +193,7 @@ q
 
 ## Apply generic commands across files (macro)
 
-```shell
+```sh
 qq
 # Complete generic commands for a file
 q
@@ -200,13 +203,13 @@ q
 
 ## Apply ex commands to patterns in a file
 
-```shell
+```sh
 :some_range g/some_pattern/some_command
 ```
 
 Examples:
 
-```shell
+```sh
 :g/delete_me/d
 ```
 
@@ -216,7 +219,7 @@ Operators, motions, text objects etc. can be composed like a sentence.
 
 Examples:
 
-```shell
+```sh
 # search for 'foo'
 /foo
 
@@ -246,127 +249,127 @@ ya[
 
 ## Search file for a pattern
 
-```shell
+```sh
 /some_pattern
 n # to move to the next
 ```
 
 ## Change
 
-```shell
+```sh
 c
 ```
 
 ## Delete
 
-```shell
+```sh
 d
 ```
 
 ## Yank (copy)
 
-```shell
+```sh
 y
 ```
 
 ## Put (paste)
 
-```shell
+```sh
 p
 ```
 
 ## Inside
 
-```shell
+```sh
 i
 ```
 
 ## Around
 
-```shell
+```sh
 a
 ```
 
 ## Parenthesis
 
-```shell
+```sh
 (
 ```
 
 ## Braces
 
-```shell
+```sh
 {
 ```
 
 ## Brackets
 
-```shell
+```sh
 [
 ```
 
 ## Double quotes
 
-```shell
+```sh
 "
 ```
 
 ## Single quotes
 
-```shell
+```sh
 '
 ```
 
 ## Backtick
 
-```shell
+```sh
 `
 ```
 
 ## Tag
 
-```shell
+```sh
 t
 ```
 
 ## Word
 
-```shell
+```sh
 w
 ```
 
 ## Start of line
 
-```shell
+```sh
 ^
 ```
 
 ## End of line
 
-```shell
+```sh
 $
 ```
 
 ## File top
 
-```shell
+```sh
 gg
 ```
 
 ## File bottom
 
-```shell
+```sh
 G
 ```
 
 ## Format
 
-```shell
+```sh
 =
 ```
 
 ## Clipboard register
 
-```shell
+```sh
 "+
 ```

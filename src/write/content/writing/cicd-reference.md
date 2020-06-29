@@ -1,4 +1,7 @@
-# CI/CD reference
++++
+title = "CI/CD reference"
+weight = 2
++++
 
 _My reference sheet for automation with CI/CD._
 
@@ -78,7 +81,7 @@ jobs:
 
 `audit-local.json`
 
-```
+```json
 {
   "ci": {
     "collect": {
@@ -171,7 +174,7 @@ jobs:
 
 `audit-production.json`
 
-```
+```json
 {
   "ci": {
     "assert": {

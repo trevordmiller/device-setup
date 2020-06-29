@@ -11,13 +11,15 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Install
+        run: curl -s -L https://github.com/getzola/zola/releases/download/v0.11.0/zola-v0.11.0-x86_64-unknown-linux-gnu.tar.gz | sudo tar xvzf - -C /usr/local/bin
       - name: Build
-        run: echo "TODO"
+        run: zola build && echo "trevordmiller.com" > ./src/write/public/CNAME
       - name: Deploy
         if: success()
         uses: crazy-max/ghaction-github-pages@v2
         with:
-          build_dir: ./build
+          build_dir: ./public
           repo: trevordmiller/trevordmiller.github.io
           target_branch: master
         env:

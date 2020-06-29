@@ -1,23 +1,26 @@
-# Git reference
++++
+title = "Git reference"
+weight = 5
++++
 
 _My reference sheet for version control with Git._
 
 ## View documentation
 
-```shell
+```sh
 git --help
 ```
 
 ## Setup an existing repository on your local machine
 
-```shell
+```sh
 git clone some_url
 cd some_directory
 ```
 
 ## Create a feature branch
 
-```shell
+```sh
 git checkout some_main_branch
 git pull
 git checkout -b some_branch
@@ -25,25 +28,25 @@ git checkout -b some_branch
 
 ## Check the local repository state
 
-```shell
+```sh
 git status
 ```
 
 ## Show changes in the working directory
 
-```shell
+```sh
 git diff
 ```
 
 ## Undo changes in the working directory
 
-```shell
+```sh
 git clean some_paths
 ```
 
 ## Save changes in the working directory to the staging area
 
-```shell
+```sh
 # By paths
 git add some_paths
 
@@ -56,19 +59,19 @@ git add -p
 
 ## Show changes in the staging area
 
-```shell
+```sh
 git diff --staged
 ```
 
 ## Undo changes in the staging area (back to the working directory)
 
-```shell
+```sh
 git reset HEAD some_paths
 ```
 
 ## Save changes in the staging area to commits
 
-```shell
+```sh
 git commit
 # Opens default editor
 # Fill out commit message
@@ -77,14 +80,14 @@ git commit
 
 ## Show changes in commits
 
-```shell
+```sh
 git fetch
 git diff origin/some_main_branch
 ```
 
 ## Undo commits
 
-```shell
+```sh
 # With a revert commit
 git log
 # Find the reference of the commit to undo
@@ -93,13 +96,13 @@ git revert some_reference
 
 ## Save changes in commits to the remote repository
 
-```shell
+```sh
 git push
 ```
 
 ## Sync a pull request branch with changes in the remote repository
 
-```shell
+```sh
 # With a merge commit
 git checkout some_main_branch
 git pull
@@ -119,37 +122,37 @@ git push -f
 
 ## Show the difference between branches
 
-```shell
+```sh
 git diff some_branch..another_branch
 ```
 
 ## Show the difference between tags
 
-```shell
+```sh
 git diff some_tag another_tag
 ```
 
 ## Find which author made changes to a file
 
-```shell
+```sh
 git blame some_file
 ```
 
 ## Search for changes in the repository history
 
-```shell
+```sh
 git log -p -S "some_pattern"
 ```
 
 ## Search for a pattern across all tracked files in the repository
 
-```shell
+```sh
 git grep some_pattern
 ```
 
 ## Find the commit that broke something
 
-```shell
+```sh
 git bisect start
 git bisect bad
 # Add reference to when things were known to work
