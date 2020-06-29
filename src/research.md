@@ -10,26 +10,35 @@ _My bookmarked documentation, articles, books, videos, and courses I research to
 - [ ] [Memory & Storage](https://invidio.us/watch?v=TQCr9RV7twk).
 - [ ] [Files & File Systems](https://invidio.us/watch?v=KN8YgJnShPM).
 - [ ] [Characters, Symbols and the Unicode Miracle](https://invidio.us/watch?v=MijmeoH9LT4).
+- [ ] [List of Command Line Commands](https://www.codecademy.com/articles/command-line-commands).
 - [ ] [An Introduction to Unix](http://oliverelliott.org/article/computing/tut_unix/).
 - [ ] [100 Useful Unix Commands](http://oliverelliott.org/article/computing/ref_unix/).
 - [ ] [The beauty of Unix pipelines](https://prithu.xyz/posts/unix-pipeline/).
 - [ ] [The Art of Command Line](https://github.com/jlevy/the-art-of-command-line).
-- [ ] [The Linux Foundation - The Linux Foundation](https://training.linuxfoundation.org/training/introduction-to-linux/).
-- [ ] [The Linux Foundation - Linux Philosophy and Concepts](https://training.linuxfoundation.org/training/introduction-to-linux/).
-- [ ] [The Linux Foundation - Linux Basics and System Startup](https://training.linuxfoundation.org/training/introduction-to-linux/).
-- [ ] [The Linux Foundation - Graphical Interface](https://training.linuxfoundation.org/training/introduction-to-linux/).
-- [ ] [The Linux Foundation - System Configuration from the Graphical Interface](https://training.linuxfoundation.org/training/introduction-to-linux/).
-- [ ] [The Linux Foundation - Common Applications](https://training.linuxfoundation.org/training/introduction-to-linux/).
-- [ ] [The Linux Foundation - Command Line Operations](https://training.linuxfoundation.org/training/introduction-to-linux/).
-- [ ] [The Linux Foundation - Finding Linux Documentation](https://training.linuxfoundation.org/training/introduction-to-linux/).
-- [ ] [The Linux Foundation - Processes](https://training.linuxfoundation.org/training/introduction-to-linux/).
-- [ ] [The Linux Foundation - File Operations](https://training.linuxfoundation.org/training/introduction-to-linux/).
-- [ ] [The Linux Foundation - Text Editors](https://training.linuxfoundation.org/training/introduction-to-linux/).
-- [ ] [The Linux Foundation - User Environment](https://training.linuxfoundation.org/training/introduction-to-linux/).
-- [ ] [The Linux Foundation - Manipulating Text](https://training.linuxfoundation.org/training/introduction-to-linux/).
-- [ ] [The Linux Foundation - Network Operations](https://training.linuxfoundation.org/training/introduction-to-linux/).
-- [ ] [The Linux Foundation - The Bash Shell and Basic Scripting](https://training.linuxfoundation.org/training/introduction-to-linux/).
-- [ ] [The Linux Foundation - More on Bash Shell Scripting](https://training.linuxfoundation.org/training/introduction-to-linux/).
-- [ ] [The Linux Foundation - Printing](https://training.linuxfoundation.org/training/introduction-to-linux/).
-- [ ] [The Linux Foundation - Local Security Principles](https://training.linuxfoundation.org/training/introduction-to-linux/).
-- [ ] [The Linux Foundation - Final Exam](https://training.linuxfoundation.org/training/introduction-to-linux/).
+- [ ] [Linux essentials - The Linux Foundation](https://training.linuxfoundation.org/training/introduction-to-linux/).
+- [ ] [Linux essentials - Linux Philosophy and Concepts](https://training.linuxfoundation.org/training/introduction-to-linux/).
+- [ ] [Linux essentials - Linux Basics and System Startup](https://training.linuxfoundation.org/training/introduction-to-linux/).
+- [ ] [Linux essentials - Graphical Interface](https://training.linuxfoundation.org/training/introduction-to-linux/).
+- [ ] [Linux essentials - System Configuration from the Graphical Interface](https://training.linuxfoundation.org/training/introduction-to-linux/).
+- [ ] [Linux essentials - Common Applications](https://training.linuxfoundation.org/training/introduction-to-linux/).
+- [ ] [Linux essentials - Command Line Operations](https://training.linuxfoundation.org/training/introduction-to-linux/).
+- [ ] [Linux essentials - Finding Linux Documentation](https://training.linuxfoundation.org/training/introduction-to-linux/).
+- [ ] [Linux essentials - Processes](https://training.linuxfoundation.org/training/introduction-to-linux/).
+- [ ] [Linux essentials - File Operations](https://training.linuxfoundation.org/training/introduction-to-linux/).
+- [ ] [Linux essentials - Text Editors](https://training.linuxfoundation.org/training/introduction-to-linux/).
+- [ ] [Linux essentials - User Environment](https://training.linuxfoundation.org/training/introduction-to-linux/).
+- [ ] [Linux essentials - Manipulating Text](https://training.linuxfoundation.org/training/introduction-to-linux/).
+- [ ] [Linux essentials - Network Operations](https://training.linuxfoundation.org/training/introduction-to-linux/).
+- [ ] [Linux essentials - The Bash Shell and Basic Scripting](https://training.linuxfoundation.org/training/introduction-to-linux/).
+- [ ] [Linux essentials - More on Bash Shell Scripting](https://training.linuxfoundation.org/training/introduction-to-linux/).
+- [ ] [Linux essentials - Printing](https://training.linuxfoundation.org/training/introduction-to-linux/).
+- [ ] [Linux essentials - Local Security Principles](https://training.linuxfoundation.org/training/introduction-to-linux/).
+- [ ] [Linux essentials - Final Exam](https://training.linuxfoundation.org/training/introduction-to-linux/).
+- [ ] [DevOps essentials - Welcome!](https://training.linuxfoundation.org/training/introduction-to-devops-and-site-reliability-engineering-lfs162).
+- [ ] [DevOps essentials - Introduction](https://training.linuxfoundation.org/training/introduction-to-devops-and-site-reliability-engineering-lfs162).
+- [ ] [DevOps essentials - Cloud](https://training.linuxfoundation.org/training/introduction-to-devops-and-site-reliability-engineering-lfs162).
+- [ ] [DevOps essentials - Containers](https://training.linuxfoundation.org/training/introduction-to-devops-and-site-reliability-engineering-lfs162).
+- [ ] [DevOps essentials - Infrastructure as a Code](https://training.linuxfoundation.org/training/introduction-to-devops-and-site-reliability-engineering-lfs162).
+- [ ] [DevOps essentials - Continuous Integration/Continuous Delivery](https://training.linuxfoundation.org/training/introduction-to-devops-and-site-reliability-engineering-lfs162).
+- [ ] [DevOps essentials - Observability](https://training.linuxfoundation.org/training/introduction-to-devops-and-site-reliability-engineering-lfs162).
+- [ ] [DevOps essentials - Final Exam](https://training.linuxfoundation.org/training/introduction-to-devops-and-site-reliability-engineering-lfs162).
