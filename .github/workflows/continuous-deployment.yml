@@ -14,7 +14,7 @@ jobs:
         with:
           submodules: true
       - name: Install
-        run: sudo apt-get install hugo
+        run: sudo snap install hugo
       - name: Build
         run: hugo
         working-directory: ./src/write
