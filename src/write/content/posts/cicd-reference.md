@@ -5,8 +5,6 @@ title: CI/CD reference
 description: My reference sheet for automation with CI/CD.
 ---
 
-# CI/CD reference
-
 _My reference sheet for automation with CI/CD._
 
 ## Setup continuous integration with a protected branch and merge checks

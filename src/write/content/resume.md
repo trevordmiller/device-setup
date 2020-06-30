@@ -5,8 +5,6 @@ title: Resume
 description: My professional background.
 ---
 
-# Resume
-
 _My professional background._
 
 ## Experience

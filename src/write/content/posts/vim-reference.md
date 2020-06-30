@@ -5,8 +5,6 @@ title: Vim reference
 description: My reference sheet for text editing with Vim.
 ---
 
-# Vim reference
-
 _My reference sheet for text editing with Vim._
 
 ## View documentation

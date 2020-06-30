@@ -5,8 +5,6 @@ title: Git reference
 description: My reference sheet for version control with Git.
 ---
 
-# Git reference
-
 _My reference sheet for version control with Git._
 
 ## View documentation
