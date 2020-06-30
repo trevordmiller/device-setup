@@ -42,7 +42,7 @@ jobs:
         uses: peter-evans/link-checker@v1
         id: links
         with:
-          args: --document-root ./src/write/public --verbose --recursive *
+          args: --document-root ./src/write/public --exclude https://invidio.us --verbose --recursive *
       - name: Exit
         run: exit ${{ steps.links.outputs.exit_code }}
 
