@@ -1,6 +1,6 @@
 ---
 slug: projects
-date: "2019-03-01"
+date: "2020-06-29"
 title: Projects
 description: My open source projects.
 ---

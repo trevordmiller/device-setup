@@ -1,6 +1,6 @@
 ---
 slug: resume
-date: "2019-02-01"
+date: "2020-06-29"
 title: Resume
 description: My professional background.
 ---

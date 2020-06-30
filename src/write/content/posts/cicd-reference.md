@@ -1,6 +1,6 @@
 ---
 slug: cicd-reference
-date: "2020-02-01"
+date: "2020-06-29"
 title: CI/CD reference
 description: My reference sheet for automation with CI/CD.
 ---

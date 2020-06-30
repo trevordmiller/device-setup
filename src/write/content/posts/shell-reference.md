@@ -1,6 +1,6 @@
 ---
 slug: shell-reference
-date: "2020-03-01"
+date: "2020-06-29"
 title: Shell reference
 description: My reference sheet for system work with Unix-like shells.
 ---

@@ -1,6 +1,6 @@
 ---
 slug: vim-reference
-date: "2020-04-01"
+date: "2020-06-29"
 title: Vim reference
 description: My reference sheet for text editing with Vim.
 ---

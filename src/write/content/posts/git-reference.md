@@ -1,6 +1,6 @@
 ---
 slug: git-reference
-date: "2020-05-01"
+date: "2020-06-29"
 title: Git reference
 description: My reference sheet for version control with Git.
 ---
