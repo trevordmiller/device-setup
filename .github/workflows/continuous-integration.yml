@@ -12,9 +12,9 @@ jobs:
         with:
           submodules: true
       - name: Install
-        run: echo "todo install"
+        run: sudo apt-get install hugo
       - name: Build
-        run: echo "todo build"
+        run: hugo
         working-directory: ./src/write
 
   lint:
@@ -54,9 +54,9 @@ jobs:
         with:
           submodules: true
       - name: Install
-        run: echo "todo install"
+        run: sudo apt-get install hugo
       - name: Build
-        run: echo "todo build"
+        run: hugo
         working-directory: ./src/write
       - name: Audit
         uses: treosh/lighthouse-ci-action@v3

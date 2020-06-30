@@ -14,9 +14,9 @@ jobs:
         with:
           submodules: true
       - name: Install
-        run: echo "todo install"
+        run: sudo apt-get install hugo
       - name: Build
-        run: echo "todo build"
+        run: hugo
         working-directory: ./src/write
       - name: Configure
         run: echo "trevordmiller.com" > ./src/write/public/CNAME
