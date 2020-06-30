@@ -1,7 +1,9 @@
-+++
-title = "Projects"
-weight = 2
-+++
+---
+slug: projects
+date: "2020-06-29"
+title: Projects
+description: My open source projects.
+---
 
 _My open source projects._
 

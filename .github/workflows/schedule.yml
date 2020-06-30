@@ -13,23 +13,13 @@ jobs:
       - name: Health
         run: |
           home_route="$(curl https://trevordmiller.com)"
-          if [[ $home_route != *"Redirect"* ]]; then
+          if [[ $home_route != *"My writing about software development."* ]]; then
             echo "ERROR: The home route is not working as expected!";
             exit 1;
           fi
-          writing_route="$(curl https://trevordmiller.com/writing/)"
-          if [[ $writing_route != *"My writing about software development."* ]]; then
-            echo "ERROR: The writing route is not working as expected!";
-            exit 1;
-          fi
-          individual_writing_route="$(curl https://trevordmiller.com/writing/programming-principles/)"
-          if [[ $individual_writing_route != *"My guiding principles for software development in general."* ]]; then
-            echo "ERROR: The individual writing route is not working as expected!";
-            exit 1;
-          fi
-          newsletter_route="$(curl https://trevordmiller.com/newsletter/)"
-          if [[ $newsletter_route != *"My email list."* ]]; then
-            echo "ERROR: The newsletter route is not working as expected!";
+          post_route="$(curl https://trevordmiller.com/programming-principles/)"
+          if [[ $post_route != *"My guiding principles for software development in general."* ]]; then
+            echo "ERROR: A post route is not working as expected!";
             exit 1;
           fi
           about_route="$(curl https://trevordmiller.com/about/)"
@@ -37,12 +27,12 @@ jobs:
             echo "ERROR: The about route is not working as expected!";
             exit 1;
           fi
-          resume_route="$(curl https://trevordmiller.com/about/resume/)"
+          resume_route="$(curl https://trevordmiller.com/resume/)"
           if [[ $resume_route != *"My professional background."* ]]; then
             echo "ERROR: The resume route is not working as expected!";
             exit 1;
           fi
-          projects_route="$(curl https://trevordmiller.com/about/projects/)"
+          projects_route="$(curl https://trevordmiller.com/projects/)"
           if [[ $projects_route != *"My open source projects."* ]]; then
             echo "ERROR: The projects route is not working as expected!";
             exit 1;
@@ -61,9 +51,7 @@ jobs:
           runs: 3
           urls: |
             https://trevordmiller.com
-            https://trevordmiller.com/writing/
-            https://trevordmiller.com/writing/programming-principles/
-            https://trevordmiller.com/newsletter/
+            https://trevordmiller.com/programming-principles/
             https://trevordmiller.com/about/
-            https://trevordmiller.com/about/resume/
-            https://trevordmiller.com/about/projects/
+            https://trevordmiller.com/resume/
+            https://trevordmiller.com/projects/

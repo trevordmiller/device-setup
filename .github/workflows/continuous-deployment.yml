@@ -14,10 +14,12 @@ jobs:
         with:
           submodules: true
       - name: Install
-        run: curl -s -L https://github.com/getzola/zola/releases/download/v0.11.0/zola-v0.11.0-x86_64-unknown-linux-gnu.tar.gz | sudo tar xvzf - -C /usr/local/bin
+        run: sudo snap install hugo
       - name: Build
-        run: zola build && echo "trevordmiller.com" > ./public/CNAME
+        run: hugo
         working-directory: ./src/write
+      - name: Configure
+        run: echo "trevordmiller.com" > ./src/write/public/CNAME
       - name: Deploy
         if: success()
         uses: crazy-max/ghaction-github-pages@v2

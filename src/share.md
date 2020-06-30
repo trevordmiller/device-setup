@@ -1,6 +1,6 @@
 # Share
 
-_The newsletters I share with to help others._
+_My sources I share with to help others._
 
 - [My own email list](mailto:trevordmiller@groups.io).
 - [StatusCode Weekly](mailto:peter@webopsweekly.com).

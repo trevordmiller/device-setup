@@ -12,9 +12,9 @@ jobs:
         with:
           submodules: true
       - name: Install
-        run: curl -s -L https://github.com/getzola/zola/releases/download/v0.11.0/zola-v0.11.0-x86_64-unknown-linux-gnu.tar.gz | sudo tar xvzf - -C /usr/local/bin
+        run: sudo snap install hugo
       - name: Build
-        run: zola build
+        run: hugo
         working-directory: ./src/write
 
   lint:
@@ -42,7 +42,7 @@ jobs:
         uses: peter-evans/link-checker@v1
         id: links
         with:
-          args: --document-root ./src/write/public --verbose --recursive *
+          args: --document-root ./src/write/public --exclude https://invidio.us --verbose --recursive *
       - name: Exit
         run: exit ${{ steps.links.outputs.exit_code }}
 
@@ -54,9 +54,9 @@ jobs:
         with:
           submodules: true
       - name: Install
-        run: curl -s -L https://github.com/getzola/zola/releases/download/v0.11.0/zola-v0.11.0-x86_64-unknown-linux-gnu.tar.gz | sudo tar xvzf - -C /usr/local/bin
+        run: sudo snap install hugo
       - name: Build
-        run: zola build
+        run: hugo
         working-directory: ./src/write
       - name: Audit
         uses: treosh/lighthouse-ci-action@v3

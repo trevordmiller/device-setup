@@ -1,6 +1,6 @@
 # Follow
 
-_My newsletters I follow to help me stay up-to-date._
+_My feeds I follow to help me stay up-to-date._
 
 - [Hacker Newsletter](https://hackernewsletter.com/issues/).
 - [StatusCode Weekly](https://weekly.statuscode.com/issues).

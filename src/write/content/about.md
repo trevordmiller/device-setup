@@ -1,8 +1,9 @@
-+++
-title = "About"
-weight = 3
-sort_by = "weight"
-+++
+---
+slug: about
+date: "2020-06-29"
+title: About
+description: My personal background.
+---
 
 _My personal background._
 

@@ -1,7 +1,9 @@
-+++
-title = "Resume"
-weight = 1
-+++
+---
+slug: resume
+date: "2020-06-29"
+title: Resume
+description: My professional background.
+---
 
 _My professional background._
 

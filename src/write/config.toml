@@ -1,9 +1,43 @@
-base_url = "https://trevordmiller.com"
+baseURL = "https://trevordmiller.com/"
+languageCode = "en-us"
 title = "trevordmiller"
-description = "My writing about software development."
-default_language = "en"
-highlight_code = true
-theme = "book"
+theme = "etch"
+pygmentsCodeFences = true
+pygmentsUseClasses = true
 
-[extra]
-book_number_chapters = false
+[permalinks]
+  posts = "/:title/"
+
+[params]
+  description = "My writing about software development."
+  copyright = "If you would like to get updates when I publish new content, you can subscribe to my email list by sending an email to 'trevordmiller+subscribe@groups.io' with the subject of 'subscribe'."
+  highlight = true
+
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    name = "posts"
+    title = "posts"
+    url = "/"
+    weight = 1
+
+  [[menu.main]]
+    identifier = "about"
+    name = "about"
+    title = "about"
+    url = "/about/"
+    weight = 2
+
+  [[menu.main]]
+    identifier = "resume"
+    name = "resume"
+    title = "resume"
+    url = "/resume/"
+    weight = 3
+
+  [[menu.main]]
+    identifier = "projects"
+    name = "projects"
+    title = "projects"
+    url = "/projects/"
+    weight = 4

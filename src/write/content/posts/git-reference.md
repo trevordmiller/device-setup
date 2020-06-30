@@ -1,7 +1,9 @@
-+++
-title = "Git reference"
-weight = 5
-+++
+---
+slug: git-reference
+date: "2020-06-29"
+title: Git reference
+description: My reference sheet for version control with Git.
+---
 
 _My reference sheet for version control with Git._
 

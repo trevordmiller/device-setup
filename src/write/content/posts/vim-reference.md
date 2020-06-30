@@ -1,7 +1,9 @@
-+++
-title = "Vim reference"
-weight = 4
-+++
+---
+slug: vim-reference
+date: "2020-06-29"
+title: Vim reference
+description: My reference sheet for text editing with Vim.
+---
 
 _My reference sheet for text editing with Vim._
 
