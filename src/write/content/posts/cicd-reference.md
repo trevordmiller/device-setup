@@ -1,7 +1,4 @@
-+++
-title = "CI/CD reference"
-weight = 2
-+++
+# CI/CD reference
 
 _My reference sheet for automation with CI/CD._
 

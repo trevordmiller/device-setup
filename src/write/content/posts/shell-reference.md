@@ -1,7 +1,4 @@
-+++
-title = "Shell reference"
-weight = 3
-+++
+# Shell reference
 
 _My reference sheet for system work with Unix-like shells._
 

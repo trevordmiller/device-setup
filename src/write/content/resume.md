@@ -1,7 +1,4 @@
-+++
-title = "Resume"
-weight = 1
-+++
+# Resume
 
 _My professional background._
 

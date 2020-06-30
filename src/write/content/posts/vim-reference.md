@@ -1,7 +1,4 @@
-+++
-title = "Vim reference"
-weight = 4
-+++
+# Vim reference
 
 _My reference sheet for text editing with Vim._
 

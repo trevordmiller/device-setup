@@ -1,3 +1,0 @@
-[submodule "src/write/themes/book"]
-	path = src/write/themes/book
-	url = https://github.com/getzola/book.git

@@ -1,6 +1,6 @@
 # Research
 
-_My bookmarked documentation, articles, books, videos, and courses I research to help me increase my knowledge._
+_My content I research to help me increase my knowledge._
 
 - [x] [Hacker Laws](https://github.com/dwmkerr/hacker-laws).
 - [x] [Goodbye, Clean Code](https://overreacted.io/goodbye-clean-code/).

@@ -1,8 +1,4 @@
-+++
-title = "About"
-weight = 3
-sort_by = "weight"
-+++
+# About
 
 _My personal background._
 

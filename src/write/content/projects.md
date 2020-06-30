@@ -1,7 +1,4 @@
-+++
-title = "Projects"
-weight = 2
-+++
+# Projects
 
 _My open source projects._
 

@@ -1,7 +1,4 @@
-+++
-title = "Programming principles"
-weight = 1
-+++
+# Programming principles
 
 _My guiding principles for software development in general._
 

@@ -1,7 +1,4 @@
-+++
-title = "Git reference"
-weight = 5
-+++
+# Git reference
 
 _My reference sheet for version control with Git._
 
