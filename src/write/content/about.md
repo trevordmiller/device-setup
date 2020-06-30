@@ -1,3 +1,10 @@
+---
+slug: about
+date: "2019-01-01"
+title: About
+description: My personal background.
+---
+
 # About
 
 _My personal background._

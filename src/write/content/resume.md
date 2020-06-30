@@ -1,3 +1,10 @@
+---
+slug: resume
+date: "2019-02-01"
+title: Resume
+description: My professional background.
+---
+
 # Resume
 
 _My professional background._

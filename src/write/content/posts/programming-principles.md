@@ -1,3 +1,10 @@
+---
+slug: programming-principles
+date: "2020-01-01"
+title: Programming principles
+description: My guiding principles for software development in general.
+---
+
 # Programming principles
 
 _My guiding principles for software development in general._

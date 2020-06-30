@@ -1,3 +1,10 @@
+---
+slug: projects
+date: "2019-03-01"
+title: Projects
+description: My open source projects.
+---
+
 # Projects
 
 _My open source projects._

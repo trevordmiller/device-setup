@@ -1,3 +1,10 @@
+---
+slug: git-reference
+date: "2020-05-01"
+title: Git reference
+description: My reference sheet for version control with Git.
+---
+
 # Git reference
 
 _My reference sheet for version control with Git._

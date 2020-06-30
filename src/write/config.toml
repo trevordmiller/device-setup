@@ -1,6 +1,29 @@
+baseURL = "https://trevordmiller.com"
+languageCode = "en-us"
+title = "trevordmiller"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---
+
 base_url = "https://trevordmiller.com"
 default_language = "en-US"
 title = "trevordmiller"
 description = "My writing about software development."
 footer = "If you would like to get updates when I publish new content, you can subscribe to my email list by sending an email to 'trevordmiller+subscribe@groups.io' with the subject of 'subscribe'."
 highlight_code = true
+
+
+
