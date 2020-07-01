@@ -2,9 +2,7 @@
 
 _My professional background._
 
-## Experience
-
-### The Church of Jesus Christ of Latter-day Saints
+## The Church of Jesus Christ of Latter-day Saints
 
 Software Developer (May 2018 - Present).
 
@@ -17,7 +15,7 @@ Software Developer (May 2018 - Present).
 - Writing tests for public facing behaviors.
 - Improving the execution speed of critical code.
 
-### Roeder Studios
+## Roeder Studios
 
 Software Developer (May 2017 - May 2018).
 
@@ -26,7 +24,7 @@ Software Developer (May 2017 - May 2018).
 - Automated the API layer between components.
 - Introduced tests for critical features for customers.
 
-### egghead.io
+## egghead.io
 
 Director of Instruction (July 2015 - May 2017).
 
@@ -35,14 +33,14 @@ Director of Instruction (July 2015 - May 2017).
 - Built the component library shared across applications.
 - Recorded and published my own courses as a code instructor.
 
-### Domo
+## Domo
 
 Software Developer (September 2015 - October 2016).
 
 - Developed an application for data visualizations.
 - Applied complex logic for visualizations, caching, and async chats.
 
-### The Church of Jesus Christ of Latter-day Saints (ICS)
+## The Church of Jesus Christ of Latter-day Saints (ICS)
 
 Software Developer (March 2014 - September 2015).
 
@@ -51,19 +49,19 @@ Software Developer (March 2014 - September 2015).
 - Built a component library shared across projects.
 - Introduced unit testing to existing code.
 
-### Qualtrics
+## Qualtrics
 
 Software Developer (May 2013 - March 2014).
 
 - Contributed to development of applications for surveys.
 
-### Brigham Young University (Provo)
+## Brigham Young University (Provo)
 
 Software Developer (August 2012 - May 2013).
 
 - Contributed to development of the organization's websites.
 
-### Freelance
+## Freelance
 
 Software Developer (January 2009 - May 2018).
 
@@ -71,13 +69,11 @@ Software Developer (January 2009 - May 2018).
 - Taught code through video courses, conferences, and bootcamps.
 - Developed open source libraries.
 
-## Education
-
-### Brigham Young University
+## Brigham Young University
 
 Computer Science (Fall 2012 - Fall 2013).
 
-### Weber State University
+## Weber State University
 
 Early College (Fall 2007 - Summer 2009).
 

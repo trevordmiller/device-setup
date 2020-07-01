@@ -2,8 +2,6 @@
 
 _My guiding principles for software development in general._
 
-## Principles
-
 - People > ideals.
 - Pros + cons > absolutes.
 - Value > cost.

@@ -9,19 +9,27 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-        with:
-          submodules: true
-      - name: Install
-        run: sudo snap install hugo
-      - name: Build
-        run: hugo
-        working-directory: ./src/write
+      - name: Compile
+        run: cargo check
+        working-directory: ./.github/website
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Test
+        run: cargo test
+        working-directory: ./.github/website
 
   lint:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Lint
+        run: cargo clippy --all-targets -- -D warnings
+        working-directory: ./.github/website
       - name: General
         uses: docker://github/super-linter:v2.0.0
 
@@ -30,36 +38,31 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Format
+        run: cargo fmt -- --check
+        working-directory: ./.github/website
       - name: General
-        run: npx prettier --check .
+        run: npx prettier --check . --ignore-path ./.github/website/.gitignore
 
-  links:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Build
+        run: cargo run --release
+        working-directory: ./.github/website
+      - name: Audit
+        if: success()
+        uses: treosh/lighthouse-ci-action@v3
+        with:
+          configPath: "./.github/configuration/audit-local.json"
+          temporaryPublicStorage: true
       - name: Links
+        if: success()
         uses: peter-evans/link-checker@v1
         id: links
         with:
-          args: --document-root ./src/write/public --exclude https://invidio.us --verbose --recursive *
+          args: --document-root ./.github/website/build --exclude https://invidio.us --verbose --recursive *
       - name: Exit
         run: exit ${{ steps.links.outputs.exit_code }}
-
-  audit:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          submodules: true
-      - name: Install
-        run: sudo snap install hugo
-      - name: Build
-        run: hugo
-        working-directory: ./src/write
-      - name: Audit
-        uses: treosh/lighthouse-ci-action@v3
-        with:
-          configPath: "./.github/workflows/configuration/audit-local.json"
-          temporaryPublicStorage: true

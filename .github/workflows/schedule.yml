@@ -13,7 +13,7 @@ jobs:
       - name: Health
         run: |
           home_route="$(curl https://trevordmiller.com)"
-          if [[ $home_route != *"My writing about software development."* ]]; then
+          if [[ $home_route != *"My posts about software development."* ]]; then
             echo "ERROR: The home route is not working as expected!";
             exit 1;
           fi
@@ -37,6 +37,11 @@ jobs:
             echo "ERROR: The projects route is not working as expected!";
             exit 1;
           fi
+          rss_route="$(curl -Is https://trevordmiller.com/rss.xml | head -n 1)"
+          if [[ $rss_route != *"200"* ]]; then
+            echo "ERROR: The rss route is not working as expected!";
+            exit 1;
+          fi
 
   audit:
     runs-on: ubuntu-latest
@@ -46,7 +51,7 @@ jobs:
       - name: Audit
         uses: treosh/lighthouse-ci-action@v3
         with:
-          configPath: "./.github/workflows/configuration/audit-production.json"
+          configPath: "./.github/configuration/audit-production.json"
           temporaryPublicStorage: true
           runs: 3
           urls: |

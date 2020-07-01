@@ -20,8 +20,6 @@ jobs:
         uses: actions/checkout@v2
       - name: Compile
         run: cargo check
-      - name: Build
-        run: cargo run --release
 
   test:
     runs-on: ubuntu-latest
@@ -51,32 +49,30 @@ jobs:
       - name: General
         run: npx prettier --check .
 
-  links:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Build
+        run: cargo run --release
+      - name: Audit
+	if: success()
+        uses: treosh/lighthouse-ci-action@v3
+        with:
+          configPath: "./audit-local.json"
+          temporaryPublicStorage: true
       - name: Links
+	if: success()
         uses: peter-evans/link-checker@v1
         id: links
         with:
           args: --document-root ./build --verbose --recursive *
       - name: Exit
         run: exit ${{ steps.links.outputs.exit_code }}
-
-  audit:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Audit
-        uses: treosh/lighthouse-ci-action@v3
-        with:
-          configPath: "./audit-local.json"
-          temporaryPublicStorage: true
 ```
 
-`audit-local.json`
+audit-local.json:
 
 ```json
 {
@@ -169,7 +165,7 @@ jobs:
             https://someproject.com/someroute/
 ```
 
-`audit-production.json`
+audit-production.json:
 
 ```json
 {
