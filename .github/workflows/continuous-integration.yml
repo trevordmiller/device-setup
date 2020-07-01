@@ -30,7 +30,7 @@ jobs:
       - name: Lint
         run: cargo clippy --all-targets -- -D warnings
         working-directory: ./.github/website
-      - name: General
+      - name: Fallback
         uses: docker://github/super-linter:v2.0.0
 
   format:
@@ -41,7 +41,7 @@ jobs:
       - name: Format
         run: cargo fmt -- --check
         working-directory: ./.github/website
-      - name: General
+      - name: Fallback
         run: npx prettier --check . --ignore-path ./.github/website/.gitignore
 
   build:

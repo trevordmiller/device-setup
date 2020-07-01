@@ -6,7 +6,7 @@ _My content I research to help me increase my knowledge._
 - [x] [Goodbye, Clean Code](https://overreacted.io/goodbye-clean-code/).
 - [x] [Software should be designed to last](https://adlrocha.substack.com/p/adlrocha-software-should-be-designed).
 - [x] [Vim Grammar](http://takac.github.io/2013/01/30/vim-grammar/).
-- [ ] [Operating Systems](https://invidio.us/watch?v=26QPDBe-NB8).
+- [x] [Operating Systems](https://invidio.us/watch?v=26QPDBe-NB8).
 - [ ] [Memory & Storage](https://invidio.us/watch?v=TQCr9RV7twk).
 - [ ] [Files & File Systems](https://invidio.us/watch?v=KN8YgJnShPM).
 - [ ] [Characters, Symbols and the Unicode Miracle](https://invidio.us/watch?v=MijmeoH9LT4).
