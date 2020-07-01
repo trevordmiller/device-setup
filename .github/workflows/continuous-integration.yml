@@ -58,6 +58,12 @@ jobs:
         with:
           configPath: "./.github/configuration/audit-local.json"
           temporaryPublicStorage: true
+          urls: |
+            http://localhost/
+            http://localhost/programming-principles/
+            http://localhost/about/
+            http://localhost/resume/
+            http://localhost/projects/
       - name: Links
         if: success()
         uses: peter-evans/link-checker@v1
