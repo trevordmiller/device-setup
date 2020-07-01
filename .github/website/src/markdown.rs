@@ -15,8 +15,7 @@ pub fn to_html(markdown: &str, title: &str, description: &str) -> std::string::S
         code {
             overflow-x: auto;
             display: block;
-            background: black;
-            color: white;
+            background: whitesmoke;
             padding: 1rem;
         }
         nav a {
