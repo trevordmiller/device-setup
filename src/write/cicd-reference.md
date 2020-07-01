@@ -57,7 +57,7 @@ jobs:
       - name: Build
         run: cargo run --release
       - name: Audit
-	if: success()
+        if: success()
         uses: treosh/lighthouse-ci-action@v3
         with:
           configPath: "./audit-local.json"
