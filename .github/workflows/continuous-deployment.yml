@@ -11,20 +11,17 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-        with:
-          submodules: true
-      - name: Install
-        run: sudo snap install hugo
       - name: Build
-        run: hugo
-        working-directory: ./src/write
+        run: cargo run --release
+        working-directory: ./.github/website
       - name: Configure
-        run: echo "trevordmiller.com" > ./src/write/public/CNAME
+        if: success()
+        run: echo "trevordmiller.com" > ./.github/website/build/CNAME
       - name: Deploy
         if: success()
         uses: crazy-max/ghaction-github-pages@v2
         with:
-          build_dir: ./src/write/public
+          build_dir: ./.github/website/build
           repo: trevordmiller/trevordmiller.github.io
           target_branch: master
         env:

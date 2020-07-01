@@ -1,9 +1,4 @@
----
-slug: about
-date: "2020-06-29"
-title: About
-description: My personal background.
----
+# About
 
 _My personal background._
 

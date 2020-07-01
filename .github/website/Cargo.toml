@@ -1,0 +1,13 @@
+[package]
+name = "trevordmiller_website"
+version = "1.0.0"
+authors = ["Trevor D. Miller"]
+edition = "2018"
+
+[dependencies]
+termcolor = "1.1.0"
+pulldown-cmark = "0.6.1"
+rss = "1.9.0"
+
+[dev-dependencies]
+assert_cmd = "1.0.1"
