@@ -1,9 +1,4 @@
----
-slug: shell-reference
-date: "2020-06-29"
-title: Shell reference
-description: My reference sheet for system work with Unix-like shells.
----
+# Shell reference
 
 _My reference sheet for system work with Unix-like shells._
 

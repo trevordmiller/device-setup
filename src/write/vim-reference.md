@@ -1,9 +1,4 @@
----
-slug: vim-reference
-date: "2020-06-29"
-title: Vim reference
-description: My reference sheet for text editing with Vim.
----
+# Vim reference
 
 _My reference sheet for text editing with Vim._
 

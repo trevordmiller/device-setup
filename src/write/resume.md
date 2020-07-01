@@ -1,9 +1,4 @@
----
-slug: resume
-date: "2020-06-29"
-title: Resume
-description: My professional background.
----
+# Resume
 
 _My professional background._
 

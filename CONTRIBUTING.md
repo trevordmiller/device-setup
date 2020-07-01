@@ -8,4 +8,4 @@
 
 ## Integrations
 
-All integrations are in GitHub settings.
+All integrations are in GitHub settings and the `.github/` folder.

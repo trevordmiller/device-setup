@@ -1,9 +1,4 @@
----
-slug: cicd-reference
-date: "2020-06-29"
-title: CI/CD reference
-description: My reference sheet for automation with CI/CD.
----
+# CI/CD reference
 
 _My reference sheet for automation with CI/CD._
 
