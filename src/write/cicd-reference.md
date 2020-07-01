@@ -19,7 +19,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Compile
-        run: cargo check
+        run: some_compile
 
   test:
     runs-on: ubuntu-latest
@@ -27,7 +27,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Test
-        run: cargo test
+        run: some_test
 
   lint:
     runs-on: ubuntu-latest
@@ -35,9 +35,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Lint
-        run: cargo clippy --all-targets -- -D warnings
-      - name: General
-        uses: docker://github/super-linter:v2.0.0
+        run: some_lint
 
   format:
     runs-on: ubuntu-latest
@@ -45,9 +43,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Format
-        run: cargo fmt -- --check
-      - name: General
-        run: npx prettier --check .
+        run: some_format
 
   build:
     runs-on: ubuntu-latest
@@ -55,12 +51,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Build
-        run: cargo run --release
+        run: some_build
       - name: Audit
         if: success()
         uses: treosh/lighthouse-ci-action@v3
         with:
-          configPath: "./audit-local.json"
+          configPath: "./.github/configuration/audit-local.json"
           temporaryPublicStorage: true
       - name: Links
         if: success()
@@ -72,7 +68,7 @@ jobs:
         run: exit ${{ steps.links.outputs.exit_code }}
 ```
 
-audit-local.json:
+In .github/configuration/audit-local.json:
 
 ```json
 {
@@ -113,10 +109,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Build
-        run: cargo run --release
+        run: some_build
       - name: Deploy
         if: success()
-        uses: someprovider
+        uses: some_deploy
 ```
 
 ## Setup scheduled checks
@@ -128,36 +124,20 @@ name: Schedule
 
 on:
   schedule:
-    - cron: "0 * * * *"
+    - cron: "0 0 * * *"
 
 jobs:
-  health:
+  e2e:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Health
-        run: |
-          home_route="$(curl https://someproject.com)"
-          if [[ $articles_route != *"Some content."* ]]; then
-            echo "ERROR: The home route is not working as expected!";
-            exit 1;
-          fi
-          some_route="$(curl https://someproject.com/someroute/)"
-          if [[ $about_route != *"Some content."* ]]; then
-            echo "ERROR: The some route is not working as expected!";
-            exit 1;
-          fi
-
-  audit:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+      - name: E2E
+        run: some_e2e
       - name: Audit
         uses: treosh/lighthouse-ci-action@v3
         with:
-          configPath: "./audit-production.json"
+          configPath: "./.github/configuration/audit-production.json"
           temporaryPublicStorage: true
           runs: 3
           urls: |
@@ -165,7 +145,7 @@ jobs:
             https://someproject.com/someroute/
 ```
 
-audit-production.json:
+In .github/configuration/audit-production.json:
 
 ```json
 {
