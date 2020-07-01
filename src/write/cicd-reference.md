@@ -63,7 +63,7 @@ jobs:
           configPath: "./audit-local.json"
           temporaryPublicStorage: true
       - name: Links
-	if: success()
+        if: success()
         uses: peter-evans/link-checker@v1
         id: links
         with:
