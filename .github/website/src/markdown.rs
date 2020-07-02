@@ -24,6 +24,14 @@ pub fn to_html(markdown: &str, title: &str, description: &str) -> std::string::S
         nav a {
             padding: 1ch;
         }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li:before {
+            content: "-";
+            margin-right: 1ch;
+        }
         h1, h2 {
             font-weight: normal;
             font-size: 1rem;
