@@ -7,15 +7,18 @@ pub fn to_html(markdown: &str, title: &str, description: &str) -> std::string::S
             margin: 0 auto;
             padding: 1rem 1rem 2rem 1rem;
             font-size: 1rem;
-            line-height: 1;
+            line-height: 1.5;
         }
         body, code {
             font-family: "Courier New", Courier, monospace;
         }
         code {
+            background: whitesmoke;
+            padding: 0.05rem 0.5rem;
+        }
+        pre code {
             overflow-x: auto;
             display: block;
-            background: whitesmoke;
             padding: 1rem;
         }
         nav a {
@@ -103,7 +106,7 @@ pub fn to_html(markdown: &str, title: &str, description: &str) -> std::string::S
                     {}
                 </main>
                 <footer>
-                    <p>If you would like to get updates when I publish new content, join my email list by sending an email to <u>trevordmiller+subscribe<wbr>@groups.io</u> with a subject of <u>subscribe</u>.</p>
+                    <p>If you would like to get updates when I publish new content, join my email list by sending an email to <code>trevordmiller+subscribe<wbr>@groups.io</code> with a subject of <code>subscribe</code>.</p>
                 </footer>
             </body>
         </html>

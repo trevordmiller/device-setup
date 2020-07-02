@@ -68,7 +68,7 @@ jobs:
         run: exit ${{ steps.links.outputs.exit_code }}
 ```
 
-In .github/configuration/audit-local.json:
+In `.github/configuration/audit-local.json`:
 
 ```json
 {
@@ -145,7 +145,7 @@ jobs:
             https://someproject.com/someroute/
 ```
 
-In .github/configuration/audit-production.json:
+In `.github/configuration/audit-production.json`:
 
 ```json
 {
