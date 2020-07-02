@@ -1,4 +1,4 @@
-# HTTP
+# HTTP reference
 
 _My reference sheet for communication with HTTP._
 
