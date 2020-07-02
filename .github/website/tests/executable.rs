@@ -20,7 +20,7 @@ fn it_creates_website_build_directory() {
         .parse()
         .unwrap();
     assert_eq!(
-        post_file.contains("My guiding principles for software development in general."),
+        post_file.contains("My guiding principles for software development."),
         true
     );
 
@@ -46,5 +46,5 @@ fn it_creates_website_build_directory() {
         .unwrap()
         .parse()
         .unwrap();
-    assert_eq!(rss_file.contains("<item><title>Programming principles</title><link>https://trevordmiller.com/programming-principles/</link><description><![CDATA[My guiding principles for software development in general.]]></description><author>Trevor D. Miller</author></item>"), true);
+    assert_eq!(rss_file.contains("<item><title>Programming principles</title><link>https://trevordmiller.com/programming-principles/</link><description><![CDATA[My guiding principles for software development.]]></description><author>Trevor D. Miller</author></item>"), true);
 }

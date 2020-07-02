@@ -53,27 +53,31 @@ fn generate_pages() {
                 };
 
                 let description = match lines.next() {
-                    Some(description) => description.replace("_", ""),
+                    Some(description) => description.replace("_", "").replace(".", ""),
                     None => panic!("Cannot find a description in {}.", &route),
                 };
 
                 paths::create_dir(&paths::build().join(route));
                 paths::create_file(
                     &paths::build().join(route).join("index.html"),
-                    &markdown::to_html(&markdown_file_contents, &title, &description),
+                    &markdown::to_html(
+                        &markdown_file_contents,
+                        &title,
+                        &format!("{}.", &description).to_string(),
+                    ),
                 );
 
                 let is_post = route != "about" && route != "resume" && route != "projects";
 
                 if is_post {
                     markdown_links_to_routes.push(
-                        format!("- [{}: {}](/{}/)", &title, &description, &route).to_string(),
+                        format!("- [{}: {}](/{}/).", &title, &description, &route).to_string(),
                     );
 
                     let mut rss_item = Item::default();
                     rss_item.set_link(format!("https://trevordmiller.com/{}/", &route));
                     rss_item.set_title(title);
-                    rss_item.set_description(description);
+                    rss_item.set_description(format!("{}.", description));
                     rss_item.set_author("Trevor D. Miller".to_string());
                     rss_items.push(rss_item);
                 }

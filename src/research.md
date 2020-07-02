@@ -15,6 +15,11 @@ _My content I research to help me increase my knowledge._
 - [ ] [100 Useful Unix Commands](http://oliverelliott.org/article/computing/ref_unix/).
 - [ ] [The beauty of Unix pipelines](https://prithu.xyz/posts/unix-pipeline/).
 - [ ] [The Art of Command Line](https://github.com/jlevy/the-art-of-command-line).
+- [ ] [Filtering Output and Finding Things (&&, cut, sort, uniq, wc, grep)](https://www.invidio.us/watch?v=nLa6jAbULe8).
+- [ ] [Scheduling tasks with cron](https://www.invidio.us/watch?v=8j0SWYNglcw).
+- [ ] [Linux package management with apt-get](https://www.invidio.us/watch?v=8P-Vek7Vtgg).
+- [ ] [Top Linux questions](https://www.invidio.us/watch?v=l0QGLMwR-lY).
+- [ ] [Top DevOps questions](https://www.invidio.us/watch?v=GdrjTVDelI0).
 - [ ] [Linux essentials - The Linux Foundation](https://training.linuxfoundation.org/training/introduction-to-linux/).
 - [ ] [Linux essentials - Linux Philosophy and Concepts](https://training.linuxfoundation.org/training/introduction-to-linux/).
 - [ ] [Linux essentials - Linux Basics and System Startup](https://training.linuxfoundation.org/training/introduction-to-linux/).

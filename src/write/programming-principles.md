@@ -1,6 +1,6 @@
 # Programming principles
 
-_My guiding principles for software development in general._
+_My guiding principles for software development._
 
 - People > ideals.
 - Pros + cons > absolutes.

@@ -8,5 +8,6 @@ _My feeds I follow to help me stay up-to-date._
 - [Changelog Weekly](https://changelog.com/weekly/archive).
 - [DevOps Weekly](https://www.devopsweekly.com).
 - [The Linux Foundation](https://www.linuxfoundation.org/resources/blog/).
+- [TutoriaLinux](https://tutorialinux.com).
 - [Vim Announcements](https://www.vim.org/news/news.php).
 - [Git Rev News](https://git.github.io/rev_news/archive/).
