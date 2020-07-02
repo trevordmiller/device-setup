@@ -60,7 +60,11 @@ fn generate_pages() {
                 paths::create_dir(&paths::build().join(route));
                 paths::create_file(
                     &paths::build().join(route).join("index.html"),
-                    &markdown::to_html(&markdown_file_contents, &title, &format!("{}.", &description).to_string()),
+                    &markdown::to_html(
+                        &markdown_file_contents,
+                        &title,
+                        &format!("{}.", &description).to_string(),
+                    ),
                 );
 
                 let is_post = route != "about" && route != "resume" && route != "projects";
