@@ -53,7 +53,7 @@ fn generate_pages() {
                 };
 
                 let description = match lines.next() {
-                    Some(description) => description.replace("_", ""),
+                    Some(description) => description.replace("_", "").replace(".", ""),
                     None => panic!("Cannot find a description in {}.", &route),
                 };
 
@@ -67,13 +67,13 @@ fn generate_pages() {
 
                 if is_post {
                     markdown_links_to_routes.push(
-                        format!("- [{}: {}](/{}/)", &title, &description, &route).to_string(),
+                        format!("- [{}: {}](/{}/).", &title, &description, &route).to_string(),
                     );
 
                     let mut rss_item = Item::default();
                     rss_item.set_link(format!("https://trevordmiller.com/{}/", &route));
                     rss_item.set_title(title);
-                    rss_item.set_description(description);
+                    rss_item.set_description(format!("{}.", description));
                     rss_item.set_author("Trevor D. Miller".to_string());
                     rss_items.push(rss_item);
                 }
