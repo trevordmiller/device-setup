@@ -1,13 +1,13 @@
 # Follow
 
-_My feeds I follow to help me stay up-to-date._
+_My resources I follow to help me stay up-to-date._
 
-- [Hacker Newsletter](https://hackernewsletter.com/issues/).
-- [StatusCode Weekly](https://weekly.statuscode.com/issues).
-- [Programming Digest](https://programmingdigest.net/digests).
-- [Changelog Weekly](https://changelog.com/weekly/archive).
+- [Linux Newsletter](https://www.linux.org).
+- [The Linux Foundation](https://www.linuxfoundation.org).
+- [Vim Announce](https://www.vim.org/maillist.php).
+- [Git Rev News](https://git.github.io/rev_news/rev_news/).
 - [DevOps Weekly](https://www.devopsweekly.com).
-- [The Linux Foundation](https://www.linuxfoundation.org/resources/blog/).
-- [TutoriaLinux](https://tutorialinux.com).
-- [Vim Announcements](https://www.vim.org/news/news.php).
-- [Git Rev News](https://git.github.io/rev_news/archive/).
+- [StatusCode Weekly](https://weekly.statuscode.com).
+- [Changelog Weekly](https://changelog.com/weekly/).
+- [Programming Digest](https://programmingdigest.net).
+- [Hacker Newsletter](https://hackernewsletter.com).

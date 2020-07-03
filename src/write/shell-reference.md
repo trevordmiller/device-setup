@@ -215,6 +215,34 @@ sed 's/some_pattern/some_replacement/g' some_path
 curl some_url
 ```
 
+- Retrieve data with a `GET` request method
+- Submit data with a `POST` request method
+- Replace data with a `PUT` request method
+- Remove data with a `DELETE` request method
+
+HTTP response status codes:
+
+- Informational responses (100–199)
+- Successful responses (200–299)
+- Redirects (300–399)
+- Client errors (400–499)
+- Server errors (500–599)
+
+Common status codes include:
+
+- `200` is a catchall for success
+- `404` means the requested resource is not available
+- `403` means the requester does not have permission to access the requested resource
+- `500` is a catchall for server-side errors
+
+Headers with `Name: value` like:
+
+```http
+Cache-Control: max-age=600
+Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
+Age: 24
+```
+
 ## Run executable files
 
 ```sh
@@ -271,4 +299,75 @@ echo $SOME_VARIABLE
 
 ```sh
 top
+```
+
+## Use package management
+
+On Linux:
+
+```sh
+# Search for a package
+snap find "some search"
+
+# View details about a package
+snap info some_package
+
+# Install packages
+sudo snap install some_package
+
+# List installed packages
+snap list
+
+# Uninstall packages
+sudo snap remove some_package
+```
+
+On macOS:
+
+````sh
+# Search for a package
+brew search some_search
+
+# View details about a package
+brew info some_package
+
+# Install packages
+brew install some_package
+
+# List installed packages
+brew leaves
+
+# Uninstall packages
+brew uninstall some_package
+
+# Install apps
+brew cask install some_app
+
+# List installed apps
+brew cask list
+
+# Uninstall apps
+brew uninstall some_app
+
+# Upgrade all package management
+brew update && brew upgrade ```
+````
+
+## Use the clipboard
+
+On macOS:
+
+```sh
+# Copy to the clipboard
+pbcopy
+
+# Paste from the clipboard
+pbpaste
+```
+
+Examples:
+
+```sh
+echo "Some thing" | pbcopy
+pbpaste > ~/Downloads/somefile.txt
 ```

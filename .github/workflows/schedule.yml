@@ -20,7 +20,7 @@ jobs:
           runs: 3
           urls: |
             https://trevordmiller.com
-            https://trevordmiller.com/programming-principles/
+            https://trevordmiller.com/cicd-reference/
             https://trevordmiller.com/about/
             https://trevordmiller.com/resume/
             https://trevordmiller.com/projects/

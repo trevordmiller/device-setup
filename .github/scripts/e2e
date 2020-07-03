@@ -6,8 +6,8 @@ if [[ $home_route != *"My posts about software development."* ]]; then
   exit 1;
 fi
 
-post_route="$(curl https://trevordmiller.com/programming-principles/)"
-if [[ $post_route != *"My guiding principles for software development."* ]]; then
+post_route="$(curl https://trevordmiller.com/cicd-reference/)"
+if [[ $post_route != *"My reference sheet for automation with CI/CD."* ]]; then
   echo "ERROR: A post route is not working as expected!";
   exit 1;
 fi

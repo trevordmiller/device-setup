@@ -1,25 +1,7 @@
 # Research
 
-_My content I research to help me increase my knowledge._
+_My resources I research to help me increase my knowledge._
 
-- [x] [Hacker Laws](https://github.com/dwmkerr/hacker-laws).
-- [x] [Goodbye, Clean Code](https://overreacted.io/goodbye-clean-code/).
-- [x] [Software should be designed to last](https://adlrocha.substack.com/p/adlrocha-software-should-be-designed).
-- [x] [Vim Grammar](http://takac.github.io/2013/01/30/vim-grammar/).
-- [x] [Operating Systems](https://invidio.us/watch?v=26QPDBe-NB8).
-- [ ] [Memory & Storage](https://invidio.us/watch?v=TQCr9RV7twk).
-- [ ] [Files & File Systems](https://invidio.us/watch?v=KN8YgJnShPM).
-- [ ] [Characters, Symbols and the Unicode Miracle](https://invidio.us/watch?v=MijmeoH9LT4).
-- [ ] [List of Command Line Commands](https://www.codecademy.com/articles/command-line-commands).
-- [ ] [An Introduction to Unix](http://oliverelliott.org/article/computing/tut_unix/).
-- [ ] [100 Useful Unix Commands](http://oliverelliott.org/article/computing/ref_unix/).
-- [ ] [The beauty of Unix pipelines](https://prithu.xyz/posts/unix-pipeline/).
-- [ ] [The Art of Command Line](https://github.com/jlevy/the-art-of-command-line).
-- [ ] [Filtering Output and Finding Things (&&, cut, sort, uniq, wc, grep)](https://www.invidio.us/watch?v=nLa6jAbULe8).
-- [ ] [Scheduling tasks with cron](https://www.invidio.us/watch?v=8j0SWYNglcw).
-- [ ] [Linux package management with apt-get](https://www.invidio.us/watch?v=8P-Vek7Vtgg).
-- [ ] [Top Linux questions](https://www.invidio.us/watch?v=l0QGLMwR-lY).
-- [ ] [Top DevOps questions](https://www.invidio.us/watch?v=GdrjTVDelI0).
 - [ ] [Linux essentials - The Linux Foundation](https://training.linuxfoundation.org/training/introduction-to-linux/).
 - [ ] [Linux essentials - Linux Philosophy and Concepts](https://training.linuxfoundation.org/training/introduction-to-linux/).
 - [ ] [Linux essentials - Linux Basics and System Startup](https://training.linuxfoundation.org/training/introduction-to-linux/).
@@ -47,3 +29,4 @@ _My content I research to help me increase my knowledge._
 - [ ] [DevOps essentials - Continuous Integration/Continuous Delivery](https://training.linuxfoundation.org/training/introduction-to-devops-and-site-reliability-engineering-lfs162).
 - [ ] [DevOps essentials - Observability](https://training.linuxfoundation.org/training/introduction-to-devops-and-site-reliability-engineering-lfs162).
 - [ ] [DevOps essentials - Final Exam](https://training.linuxfoundation.org/training/introduction-to-devops-and-site-reliability-engineering-lfs162).
+- [ ] [POSIX shell commands](https://pubs.opengroup.org/onlinepubs/9699919799/).

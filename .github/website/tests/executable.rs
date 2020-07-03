@@ -15,12 +15,12 @@ fn it_creates_website_build_directory() {
         true
     );
 
-    let post_file: String = fs::read_to_string("./build/programming-principles/index.html")
+    let post_file: String = fs::read_to_string("./build/cicd-reference/index.html")
         .unwrap()
         .parse()
         .unwrap();
     assert_eq!(
-        post_file.contains("My guiding principles for software development."),
+        post_file.contains("My reference sheet for automation with CI/CD."),
         true
     );
 
@@ -46,5 +46,5 @@ fn it_creates_website_build_directory() {
         .unwrap()
         .parse()
         .unwrap();
-    assert_eq!(rss_file.contains("<item><title>Programming principles</title><link>https://trevordmiller.com/programming-principles/</link><description><![CDATA[My guiding principles for software development.]]></description><author>Trevor D. Miller</author></item>"), true);
+    assert_eq!(rss_file.contains("<item><title>CI/CD reference</title><link>https://trevordmiller.com/cicd-reference/</link><description><![CDATA[My reference sheet for automation with CI/CD.]]></description><author>Trevor D. Miller</author></item>"), true);
 }
