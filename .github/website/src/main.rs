@@ -22,7 +22,7 @@ fn generate_pages() {
     let mut markdown_links_to_routes = Vec::new();
     let mut rss_items = Vec::new();
 
-    match fs::read_dir(&paths::posts()) {
+    match fs::read_dir(&paths::writing()) {
         Ok(markdown_files) => {
             for markdown_file in markdown_files {
                 let markdown_file = match &markdown_file {
@@ -82,7 +82,7 @@ fn generate_pages() {
     };
 
     let markdown_index_contents = format!(
-        "# Posts\n_My posts about software development._\n{}",
+        "# Writing\n_My resources I write to help me remember what I learn._\n{}",
         markdown_links_to_routes.join("\n")
     );
 
@@ -90,8 +90,8 @@ fn generate_pages() {
         &paths::build().join("index.html"),
         &markdown::to_html(
             &markdown_index_contents,
-            "Posts",
-            "My posts about software development.",
+            "Writing",
+            "My resources I write to help me remember what I learn.",
         ),
     );
 

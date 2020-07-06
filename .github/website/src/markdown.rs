@@ -49,9 +49,6 @@ pub fn to_html(markdown: &str, title: &str, description: &str) -> std::string::S
             margin-top: 1rem;
             border-top: 1px dashed black;
             padding-top: 2rem;
-            padding-bottom: 2rem;
-            border-bottom: 1px dashed black;
-            margin-bottom: 3rem;
         }
         header, nav {
             display: flex;
@@ -105,17 +102,14 @@ pub fn to_html(markdown: &str, title: &str, description: &str) -> std::string::S
             <body>
                 <header>trevordmiller</header>
                 <nav>
-                    <a href='/'>posts/</a>
-                    <a href='/about/'>about/</a>
-                    <a href='/resume/'>resume/</a>
-                    <a href='/projects/'>projects/</a>
+                    <a href='/'>writing</a>
+                    <a href='/about/'>about</a>
+                    <a href='/resume/'>resume</a>
+                    <a href='/projects/'>projects</a>
                 </nav>
                 <main>
                     {}
                 </main>
-                <footer>
-                    <p>If you would like to get updates when I publish new content, join my email list by sending an email to <code>trevordmiller+subscribe<wbr>@groups.io</code> with a subject of <code>subscribe</code>.</p>
-                </footer>
             </body>
         </html>
     ",
@@ -152,6 +146,5 @@ mod tests {
         );
         assert_eq!(html_document.contains("/rss.xml"), true);
         assert_eq!(html_document.contains("<li>Some list item.</li>"), true);
-        assert_eq!(html_document.contains("trevordmiller+subscribe"), true);
     }
 }

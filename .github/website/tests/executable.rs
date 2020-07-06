@@ -11,16 +11,16 @@ fn it_creates_website_build_directory() {
         .parse()
         .unwrap();
     assert_eq!(
-        home_file.contains("My posts about software development."),
+        home_file.contains("My resources I write to help me remember what I learn."),
         true
     );
 
-    let post_file: String = fs::read_to_string("./build/cicd-reference/index.html")
+    let writing_file: String = fs::read_to_string("./build/cicd-reference/index.html")
         .unwrap()
         .parse()
         .unwrap();
     assert_eq!(
-        post_file.contains("My reference sheet for automation with CI/CD."),
+        writing_file.contains("My reference sheet for automation with CI/CD."),
         true
     );
 

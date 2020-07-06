@@ -1,14 +1,14 @@
 #!/bin/sh
 
 home_route="$(curl https://trevordmiller.com)"
-if [[ $home_route != *"My posts about software development."* ]]; then
+if [[ $home_route != *"My resources I write to help me remember what I learn."* ]]; then
   echo "ERROR: The home route is not working as expected!";
   exit 1;
 fi
 
-post_route="$(curl https://trevordmiller.com/cicd-reference/)"
-if [[ $post_route != *"My reference sheet for automation with CI/CD."* ]]; then
-  echo "ERROR: A post route is not working as expected!";
+writing_route="$(curl https://trevordmiller.com/cicd-reference/)"
+if [[ $writing_route != *"My reference sheet for automation with CI/CD."* ]]; then
+  echo "ERROR: A writing route is not working as expected!";
   exit 1;
 fi
 
