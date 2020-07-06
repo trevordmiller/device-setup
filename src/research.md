@@ -1,7 +1,18 @@
 # Research
 
-_My resources I research to help me increase my knowledge._
+_My resources I research to help me deepen my knowledge._
 
+- [x] [Hacker Laws](https://github.com/dwmkerr/hacker-laws).
+- [x] [Goodbye, Clean Code](https://overreacted.io/goodbye-clean-code/).
+- [ ] [POSIX shell commands](https://tldr.sh).
+- [ ] [DevOps essentials - Welcome!](https://training.linuxfoundation.org/training/introduction-to-devops-and-site-reliability-engineering-lfs162).
+- [ ] [DevOps essentials - Introduction](https://training.linuxfoundation.org/training/introduction-to-devops-and-site-reliability-engineering-lfs162).
+- [ ] [DevOps essentials - Cloud](https://training.linuxfoundation.org/training/introduction-to-devops-and-site-reliability-engineering-lfs162).
+- [ ] [DevOps essentials - Containers](https://training.linuxfoundation.org/training/introduction-to-devops-and-site-reliability-engineering-lfs162).
+- [ ] [DevOps essentials - Infrastructure as a Code](https://training.linuxfoundation.org/training/introduction-to-devops-and-site-reliability-engineering-lfs162).
+- [ ] [DevOps essentials - Continuous Integration/Continuous Delivery](https://training.linuxfoundation.org/training/introduction-to-devops-and-site-reliability-engineering-lfs162).
+- [ ] [DevOps essentials - Observability](https://training.linuxfoundation.org/training/introduction-to-devops-and-site-reliability-engineering-lfs162).
+- [ ] [DevOps essentials - Final Exam](https://training.linuxfoundation.org/training/introduction-to-devops-and-site-reliability-engineering-lfs162).
 - [ ] [Linux essentials - The Linux Foundation](https://training.linuxfoundation.org/training/introduction-to-linux/).
 - [ ] [Linux essentials - Linux Philosophy and Concepts](https://training.linuxfoundation.org/training/introduction-to-linux/).
 - [ ] [Linux essentials - Linux Basics and System Startup](https://training.linuxfoundation.org/training/introduction-to-linux/).
@@ -21,12 +32,3 @@ _My resources I research to help me increase my knowledge._
 - [ ] [Linux essentials - Printing](https://training.linuxfoundation.org/training/introduction-to-linux/).
 - [ ] [Linux essentials - Local Security Principles](https://training.linuxfoundation.org/training/introduction-to-linux/).
 - [ ] [Linux essentials - Final Exam](https://training.linuxfoundation.org/training/introduction-to-linux/).
-- [ ] [DevOps essentials - Welcome!](https://training.linuxfoundation.org/training/introduction-to-devops-and-site-reliability-engineering-lfs162).
-- [ ] [DevOps essentials - Introduction](https://training.linuxfoundation.org/training/introduction-to-devops-and-site-reliability-engineering-lfs162).
-- [ ] [DevOps essentials - Cloud](https://training.linuxfoundation.org/training/introduction-to-devops-and-site-reliability-engineering-lfs162).
-- [ ] [DevOps essentials - Containers](https://training.linuxfoundation.org/training/introduction-to-devops-and-site-reliability-engineering-lfs162).
-- [ ] [DevOps essentials - Infrastructure as a Code](https://training.linuxfoundation.org/training/introduction-to-devops-and-site-reliability-engineering-lfs162).
-- [ ] [DevOps essentials - Continuous Integration/Continuous Delivery](https://training.linuxfoundation.org/training/introduction-to-devops-and-site-reliability-engineering-lfs162).
-- [ ] [DevOps essentials - Observability](https://training.linuxfoundation.org/training/introduction-to-devops-and-site-reliability-engineering-lfs162).
-- [ ] [DevOps essentials - Final Exam](https://training.linuxfoundation.org/training/introduction-to-devops-and-site-reliability-engineering-lfs162).
-- [ ] [POSIX shell commands](https://pubs.opengroup.org/onlinepubs/9699919799/).
