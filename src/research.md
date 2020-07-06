@@ -37,3 +37,4 @@ _My resources I research to help me deepen my knowledge._
 - [ ] [DevOps course - Final exam](https://training.linuxfoundation.org/training/introduction-to-devops-and-site-reliability-engineering-lfs162).
 - [ ] [General article - Clean code](https://overreacted.io/goodbye-clean-code/).
 - [ ] [General article - Programming laws](https://github.com/dwmkerr/hacker-laws/blob/master/README.md).
+- [ ] [General book - Software design](https://www.amazon.com/dp/1732102201).
