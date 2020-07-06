@@ -210,6 +210,14 @@ Examples:
 :g/delete_me/d
 ```
 
+## Re-run commands
+
+```sh
+:some_search
+# <up/down> to move through list of items
+# <enter> to run
+```
+
 ## Compose commands
 
 Operators, motions, text objects etc. can be composed like a sentence.
