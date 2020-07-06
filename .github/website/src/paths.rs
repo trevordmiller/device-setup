@@ -67,7 +67,7 @@ pub fn build() -> PathBuf {
     project_root().join("build")
 }
 
-pub fn posts() -> PathBuf {
+pub fn writing() -> PathBuf {
     project_root()
         .join("..")
         .join("..")
