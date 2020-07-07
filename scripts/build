@@ -1,0 +1,5 @@
+#!/bin/sh
+
+rm -rf ./build
+cp -R src build
+echo "trevordmiller.com" > ./build/CNAME

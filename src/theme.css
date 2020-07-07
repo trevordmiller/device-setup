@@ -1,0 +1,94 @@
+body {
+  max-width: 80ch;
+  margin: 0 auto;
+  padding: 1rem 1rem 2rem 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+body,
+code {
+  font-family: "Courier New", Courier, monospace;
+}
+
+code {
+  background: whitesmoke;
+  padding: 0.05rem 0.5rem;
+}
+
+pre code {
+  overflow-x: auto;
+  display: block;
+  padding: 1rem;
+}
+
+nav a {
+  padding: 1ch;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li:before {
+  content: "-";
+  margin-right: 1ch;
+}
+
+h1,
+h2 {
+  font-weight: normal;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  text-transform: uppercase;
+  margin-top: 0;
+}
+
+h2 {
+  text-decoration: underline;
+  margin-top: 2rem;
+}
+
+main {
+  margin-top: 1rem;
+  border-top: 1px dashed black;
+  padding-top: 2rem;
+}
+
+header,
+nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header::before {
+  content: ">";
+  margin: 0 1ch 0 0;
+}
+
+header::after {
+  content: "";
+  margin: 0 0 0 1ch;
+  display: inline-block;
+  background: black;
+  width: 1ch;
+  height: 1em;
+  animation: cursor 800ms infinite;
+}
+
+@keyframes cursor {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

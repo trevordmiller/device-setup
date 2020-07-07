@@ -4,33 +4,12 @@ on:
   push:
 
 jobs:
-  compile:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Compile
-        run: cargo check
-        working-directory: ./.github/website
-
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Test
-        run: cargo test
-        working-directory: ./.github/website
-
   lint:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Lint
-        run: cargo clippy --all-targets -- -D warnings
-        working-directory: ./.github/website
-      - name: Fallback
         uses: docker://github/super-linter:v2.0.0
 
   format:
@@ -39,10 +18,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Format
-        run: cargo fmt -- --check
-        working-directory: ./.github/website
-      - name: Fallback
-        run: npx prettier --check . --ignore-path ./.github/website/.gitignore
+        run: npx prettier --check . --ignore-path ./.gitignore
 
   build:
     runs-on: ubuntu-latest
@@ -50,8 +26,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Build
-        run: cargo run --release
-        working-directory: ./.github/website
+        run: ./scripts/build
       - name: Audit
         if: success()
         uses: treosh/lighthouse-ci-action@v3
@@ -63,6 +38,6 @@ jobs:
         uses: peter-evans/link-checker@v1
         id: links
         with:
-          args: --document-root ./.github/website/build --verbose --recursive *
+          args: --document-root ./build --verbose --recursive *
       - name: Exit
         run: exit ${{ steps.links.outputs.exit_code }}

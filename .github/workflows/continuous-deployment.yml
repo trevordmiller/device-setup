@@ -12,16 +12,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Build
-        run: cargo run --release
-        working-directory: ./.github/website
-      - name: Configure
-        if: success()
-        run: echo "trevordmiller.com" > ./.github/website/build/CNAME
+        run: ./scripts/build
       - name: Deploy
         if: success()
         uses: crazy-max/ghaction-github-pages@v2
         with:
-          build_dir: ./.github/website/build
+          build_dir: ./build
           repo: trevordmiller/trevordmiller.github.io
           target_branch: master
         env:
