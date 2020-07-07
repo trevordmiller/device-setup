@@ -1,7 +1,7 @@
 {
   "ci": {
     "collect": {
-      "staticDistDir": "./.github/website/build",
+      "staticDistDir": "./build",
       "settings": { "skipAudits": ["uses-http2", "color-contrast"] }
     },
     "assert": {

@@ -1,6 +1,6 @@
 # trevordmiller
 
-_My personal workspace._
+_My personal website._
 
 ## Contributing
 

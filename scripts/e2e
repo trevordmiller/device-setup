@@ -1,0 +1,19 @@
+#!/bin/sh
+
+home_route="$(curl https://trevordmiller.com)"
+if [[ $home_route != *"Well hello there!"* ]]; then
+  echo "ERROR: The home route is not working as expected!";
+  exit 1;
+fi
+
+resume_route="$(curl https://trevordmiller.com/resume/)"
+if [[ $resume_route != *"My professional background."* ]]; then
+  echo "ERROR: The resume route is not working as expected!";
+  exit 1;
+fi
+
+projects_route="$(curl https://trevordmiller.com/projects/)"
+if [[ $projects_route != *"My open source projects."* ]]; then
+  echo "ERROR: The projects route is not working as expected!";
+  exit 1;
+fi

@@ -2,7 +2,7 @@ name: Schedule
 
 on:
   schedule:
-    - cron: "0 * * * *"
+    - cron: "0 0 * * *"
 
 jobs:
   e2e:
@@ -11,7 +11,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: E2E
-        run: ./.github/scripts/e2e
+        run: ./scripts/e2e
       - name: Audit
         uses: treosh/lighthouse-ci-action@v3
         with:
@@ -20,7 +20,5 @@ jobs:
           runs: 3
           urls: |
             https://trevordmiller.com
-            https://trevordmiller.com/cicd-reference/
-            https://trevordmiller.com/about/
             https://trevordmiller.com/resume/
             https://trevordmiller.com/projects/
